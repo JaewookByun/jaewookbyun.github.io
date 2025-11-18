@@ -7,14 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; color: #333; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
         :root { --brand-color: #4f46e5; }
         .text-brand { color: var(--brand-color) !important; }
         .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
         .nav-link:hover { color: var(--brand-color); }
-        .terms-container { background: white; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 3rem 2rem; margin-top: 3rem; margin-bottom: 3rem; }
+        .content-box { background: white; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 3rem 2rem; margin: 3rem auto; max-width: 900px; }
         h1 { font-weight: 700; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #f1f3f5; padding-bottom: 0.5rem; }
+        h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #f1f3f5; padding-bottom: 0.5rem; color: #111; }
+        h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #444; }
+        ul, ol { padding-left: 1.2rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
@@ -25,21 +28,15 @@
                 <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2 object-fit-contain">
                 ChronoLab
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-center mt-3 mt-md-0 align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index-kr.html#features">주요 기능</a></li>
                     <li class="nav-item"><a class="nav-link" href="terms-kr.html">이용약관</a></li>
                     <li class="nav-item"><a class="nav-link text-brand" href="privacy-kr.html">개인정보처리방침</a></li>
                     <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">문의하기</a></li>
-                    
                     <li class="nav-item dropdown ms-md-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            🌐 한국어
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">🌐 한국어</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="privacy.html">English</a></li>
                             <li><a class="dropdown-item" href="privacy-kr.html">한국어</a></li>
@@ -52,71 +49,93 @@
     </nav>
 
     <div class="container">
-        <div class="terms-container mx-auto" style="max-width: 900px;">
+        <div class="content-box">
             <header class="mb-5 border-bottom pb-4">
-                <h1 class="display-6">개인정보 처리방침</h1>
-                <p class="text-muted small">최종 수정일: 2025년 [월] [일]</p>
+                <h1 class="display-6">[섭식이] 개인정보 처리방침</h1>
+                <p class="text-muted small">시행일자: 2025년 [월] [일]</p>
             </header>
 
-            <div class="content">
-                <p class="lead fs-6"><strong>크로노랩</strong>(이하 '회사')은 이용자의 개인정보를 중요시하며, 구글 플레이 정책을 준수합니다. 회사는 <strong>민감한 건강 정보를 서버로 전송하거나 별도로 저장하지 않습니다.</strong></p>
+            <p class="lead">크로노랩(이하 '회사')은(는) 이용자의 개인정보를 중요시하며, "개인정보 보호법" 및 Google Play 개발자 정책을 준수하고 있습니다. 회사는 민감한 건강 정보를 서버로 전송하거나 별도로 저장하지 않음을 원칙으로 합니다.</p>
 
-                <section>
-                    <h2>제 1 조 (처리 목적)</h2>
-                    <ul>
-                        <li><strong>서비스 이용:</strong> Google 계정 간편 로그인 (인증 정보만 확인)</li>
-                        <li><strong>건강 관리:</strong> 기기 내 데이터 및 Health Connect 연동 분석</li>
-                        <li><strong>광고 제공:</strong> AdMob 맞춤형 광고 (무료 이용자 대상)</li>
+            <section>
+                <h2>제1조 (개인정보의 처리 목적)</h2>
+                <ul>
+                    <li><strong>서비스 이용 및 본인 인증:</strong> Google 계정을 이용한 간편 로그인 (식별자만 확인)</li>
+                    <li><strong>건강 관리 서비스 제공:</strong> 기기 내 데이터 및 Health Connect 데이터를 활용한 분석 (기기 내 처리)</li>
+                    <li><strong>커뮤니티 및 서비스 개선:</strong> 운동 루틴 공유, 식품 정보 오류 신고</li>
+                    <li><strong>광고 제공:</strong> AdMob 맞춤형 광고 (무료 이용자 대상)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제2조 (이용 연령 제한)</h2>
+                <p>본 서비스는 만 18세 이상의 성인을 대상으로 합니다. 만 18세 미만 이용자의 가입 사실이 확인될 경우 즉시 해당 계정 및 데이터를 파기합니다.</p>
+            </section>
+
+            <section>
+                <h2>제3조 (수집하는 개인정보의 항목 및 처리 방식)</h2>
+                <ol>
+                    <li><strong>기기 내에서만 처리되는 정보 (서버 전송 X):</strong> 수면, 영양, 체중, 심박수 등 건강 데이터는 앱 내부에서만 처리되며 서버로 전송되지 않습니다.</li>
+                    <li><strong>제한적으로 서버에 전송되는 정보:</strong> 운동 루틴 데이터, 닉네임, 파이어스토어 비식별 ID (공유/제보 시)</li>
+                    <li><strong>자동 수집 정보:</strong> 접속 로그, 기기 정보, 광고 식별자(ADID) (통계적 형태로만 처리)</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>제4조 (Health Connect 데이터의 처리 및 보호)</h2>
+                <p>Health Connect로부터 획득한 데이터는 앱 내에서 기능을 제공하기 위한 목적으로만 사용되며, <strong>회사의 서버로 전송되거나 제3자에게 제공되지 않습니다.</strong></p>
+            </section>
+
+            <section>
+                <h2>제5조 (데이터의 보유 및 이용 기간)</h2>
+                <ul>
+                    <li><strong>기기 내 데이터:</strong> 앱 삭제 시 즉시 소멸</li>
+                    <li><strong>서버 전송 데이터:</strong> 운동 루틴 공유 데이터는 비식별화 조치 후 보존될 수 있으나, 사용자 요청 시 파기됩니다. 오류 제보 데이터는 목적 달성 시 파기됩니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제7조 (개인정보 처리의 위탁)</h2>
+                <p>회사는 원활한 서비스 제공을 위해 다음과 같이 위탁하고 있습니다.</p>
+                <ul class="list-unstyled bg-light p-3 rounded">
+                    <li><strong>Google LLC:</strong> Firebase (인증/DB), Analytics (분석)</li>
+                    <li><strong>Google Play:</strong> 인앱 결제 및 구독 관리</li>
+                    <li><strong>Google AdMob:</strong> 맞춤형 광고 제공</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제9조 (이용자의 권리와 행사 방법)</h2>
+                <p>이용자는 언제든지 데이터 접근 권한을 해제할 수 있습니다. 회원 탈퇴 시 서버의 개인 식별 정보는 파기됩니다. (단, 공유한 루틴 삭제 희망 시 이메일 요청 필요)</p>
+            </section>
+
+            <section>
+                <h2>제10조 (맞춤형 광고)</h2>
+                <p>AdMob은 광고 식별자(ADID)를 수집할 수 있으며, 이용자는 기기 설정(설정 > 보안 및 개인정보 보호 > 광고 > 광고 ID 삭제)에서 수신을 거부할 수 있습니다.</p>
+            </section>
+
+            <section>
+                <h2>제12조 (개인정보 보호책임자)</h2>
+                <div class="bg-light p-3 rounded border">
+                    <ul class="list-unstyled mb-0">
+                        <li><strong>책임자:</strong> 변재욱 (크로노랩 대표)</li>
+                        <li><strong>이메일:</strong> <a href="mailto:chrono.lab.team@gmail.com">chrono.lab.team@gmail.com</a></li>
                     </ul>
-                </section>
+                </div>
+            </section>
 
-                <section>
-                    <h2>제 3 조 (수집 항목 및 처리 방식)</h2>
-                    <ol>
-                        <li><strong>기기 내에서만 처리 (서버 전송 X):</strong> 수면, 영양, 체중, 심박수 등은 스마트폰 내부에서만 처리됩니다.</li>
-                        <li><strong>제한적 서버 전송:</strong> 운동 루틴 공유(운동 데이터), 오류 제보(의견) 시에만 비식별 ID로 전송됩니다.</li>
-                    </ol>
-                </section>
-
-                <section>
-                    <h2>제 4 조 (Health Connect 데이터 보호)</h2>
-                    <p>Health Connect로부터 획득한 데이터는 앱 기능 제공 목적으로만 사용되며, <strong>회사의 서버로 전송되거나 제3자에게 공유되지 않습니다.</strong></p>
-                </section>
-
-                <section>
-                    <h2>제 12 조 (개인정보 보호책임자)</h2>
-                    <div class="bg-light p-3 rounded border">
-                        <ul class="list-unstyled mb-0 small">
-                            <li><strong>책임자:</strong> 변재욱</li>
-                            <li><strong>직위:</strong> 크로노랩 대표</li>
-                            <li><strong>이메일:</strong> <a href="mailto:chrono.lab.team@gmail.com">chrono.lab.team@gmail.com</a></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 pt-4 border-top">
                 <a href="index-kr.html" class="btn btn-outline-primary">홈으로 돌아가기</a>
             </div>
         </div>
     </div>
 
     <footer class="bg-white py-5 border-top">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="mb-3 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold mb-1">ChronoLab</h5>
-                    <small class="text-muted">© 2025 ChronoLab. All rights reserved.</small>
-                </div>
-                <div class="d-flex gap-3">
-                    <a href="terms-kr.html" class="text-decoration-none text-secondary small">이용약관</a>
-                    <a href="privacy-kr.html" class="text-decoration-none text-secondary small">개인정보처리방침</a>
-                    <a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">Contact</a>
-                </div>
-            </div>
+        <div class="container text-center text-md-start d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0"><h5 class="fw-bold mb-1">ChronoLab</h5><small class="text-muted">© 2025 ChronoLab. All rights reserved.</small></div>
+            <div class="d-flex gap-3"><a href="terms-kr.html" class="text-decoration-none text-secondary small">이용약관</a><a href="privacy-kr.html" class="text-decoration-none text-secondary small">개인정보처리방침</a><a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">Contact</a></div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>利用規約 - ソプシギ (摂食)</title>
+    <title>利用規約 - ソプシギ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8f9fa; color: #333; }
-        /* ブランドカラー */
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
         :root { --brand-color: #4f46e5; }
         .text-brand { color: var(--brand-color) !important; }
         .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
         .nav-link:hover { color: var(--brand-color); }
-        .terms-container { background: white; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 3rem 2rem; margin-top: 3rem; margin-bottom: 3rem; }
+        .content-box { background: white; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 3rem 2rem; margin: 3rem auto; max-width: 900px; }
         h1 { font-weight: 700; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #f1f3f5; padding-bottom: 0.5rem; }
-        .disclaimer-box { background-color: #fff5f5; border: 1px solid #ffc9c9; padding: 1.5rem; border-radius: 0.5rem; color: #c92a2a; }
+        h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid #f1f3f5; padding-bottom: 0.5rem; color: #111; }
+        h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #444; }
+        .disclaimer-box { background-color: #fff5f5; border: 1px solid #ffc9c9; padding: 1.5rem; border-radius: 0.5rem; color: #c92a2a; margin-top: 2rem; }
     </style>
 </head>
 <body>
@@ -27,21 +27,15 @@
                 <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2 object-fit-contain">
                 クロノラボ
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-center mt-3 mt-md-0 align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index-jp.html#features">主な機能</a></li>
                     <li class="nav-item"><a class="nav-link text-brand" href="terms-jp.html">利用規約</a></li>
                     <li class="nav-item"><a class="nav-link" href="privacy-jp.html">プライバシー</a></li>
                     <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">お問い合わせ</a></li>
-                    
                     <li class="nav-item dropdown ms-md-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            🌐 日本語
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">🌐 日本語</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="terms.html">English</a></li>
                             <li><a class="dropdown-item" href="terms-kr.html">한국어</a></li>
@@ -54,78 +48,68 @@
     </nav>
 
     <div class="container">
-        <div class="terms-container mx-auto" style="max-width: 900px;">
+        <div class="content-box">
             <header class="mb-5 border-bottom pb-4">
-                <h1 class="display-6">利用規約</h1>
-                <p class="text-muted small">最終更新日: 2025年 [月] [日]</p>
+                <h1 class="display-6">[ソプシギ (摂食)] 利用規約</h1>
+                <p class="text-muted small">施行日: 2025年 [月] [日]</p>
             </header>
 
-            <div class="content">
-                <section>
-                    <h2>第1条（目的）</h2>
-                    <p>本規約は、<strong>クロノラボ</strong>（以下「当社」）が提供するモバイルアプリケーション<strong>ソプシギ (摂食)</strong>および関連サービス（以下「本サービス」）の利用に関し、当社と会員との間の権利、義務、責任事項等を規定することを目的とします。</p>
-                </section>
+            <section>
+                <h2>第1条（目的）</h2>
+                <p>本規約は、<strong>クロノラボ</strong>（以下「当社」）が提供するモバイルアプリケーション<strong>ソプシギ (摂食)</strong>および関連サービスの利用に関し、当社と会員との間の権利、義務、責任事項等を規定することを目的とします。</p>
+            </section>
 
-                <section>
-                    <h2>第4条（サービスの内容）</h2>
-                    <ul>
-                        <li>食事記録および栄養成分分析サービス</li>
-                        <li>スマートウォッチ連動運動コーチング（タイマー、区間分析など）</li>
-                        <li>運動データオーバーレイ（Overlay）生成サービス</li>
-                        <li>AIベースの食事・運動統合デイリーレポートサービス</li>
-                    </ul>
-                </section>
+            <section>
+                <h2>第4条（サービスの内容）</h2>
+                <ul>
+                    <li>食事記録および栄養成分分析</li>
+                    <li>スマートウォッチ連動運動コーチング（タイマー、区間分析等）</li>
+                    <li>運動データオーバーレイ（Overlay）生成</li>
+                    <li>AIベースの食事・運動統合デイリーレポート</li>
+                </ul>
+                <h3>(AIおよびデータ特約)</h3>
+                <p>本サービスの分析機能はGoogleのAIモデルを活用しています。食品情報は<strong>韓国の食品表示基準</strong>に最適化されています。</p>
+            </section>
 
-                <section>
-                    <h2>第5条（有料サービスの利用および決済）</h2>
-                    <ol>
-                        <li>「当社」は、サービスの一部機能（<strong>'ソプシギ (摂食) Pro'</strong>など）を有料で提供する場合があります。</li>
-                        <li>サブスクリプションサービスは<strong>毎月自動的に更新・決済</strong>されます。期間満了の24時間前までに解約しない場合、自動更新されます。</li>
-                    </ol>
-                </section>
+            <section>
+                <h2>第5条（有料サービス）</h2>
+                <p>当社は「ソプシギ (摂食) Pro」等の有料サービスを提供する場合があります。</p>
+                <h3>(サブスクリプション)</h3>
+                <p>サブスクリプションは毎月自動更新されます。期間満了の24時間前までに解約しない場合、料金が請求されます。</p>
+            </section>
 
-                <section>
-                    <h2>第6条（払い戻し）</h2>
-                    <p>アプリ内決済による払い戻しおよび解約は、各アプリマーケット（Google Play、App Store）のポリシーに従います。払い戻しの要請は各マーケットのカスタマーセンターへお問い合わせください。</p>
-                </section>
+            <section>
+                <h2>第6条（払い戻し）</h2>
+                <p>払い戻しは各アプリマーケット（Google Play等）のポリシーに従います。購読の解約はアプリマーケットの管理ページからいつでも可能です。</p>
+            </section>
 
-                <section class="disclaimer-box mt-5">
-                    <h5 class="fw-bold">第11条（免責事項 - 重要）</h5>
-                    <ol class="mb-0">
-                        <li><strong>（医療的助言ではありません）</strong> 「本サービス」が提供する情報は参考資料であり、<strong>専門的な医療または栄養相談に代わるものではありません。</strong></li>
-                        <li><strong>（データの正確性）</strong> 提供される食品情報は100%の正確性を保証するものではありません。</li>
-                        <li><strong>（運動の安全性）</strong> 高強度運動時の事故について、「当社」は故意または重過失がない限り責任を負いません。</li>
-                    </ol>
-                </section>
+            <section class="disclaimer-box">
+                <h2 style="margin-top:0; border:none;">第11条（免責事項 - 重要）</h2>
+                <ol>
+                    <li><strong>（医療的助言ではありません）</strong> 提供される情報は参考資料であり、<strong>専門的な医療助言に代わるものではありません。</strong></li>
+                    <li><strong>（摂食障害の予防）</strong> 本サービスは無理な食事制限を推奨しません。誤った利用による健康上の問題について、当社は責任を負いません。</li>
+                    <li><strong>（データの正確性）</strong> 食品情報の100%の正確性は保証されません。</li>
+                    <li><strong>（運動の安全性）</strong> 高強度運動時の事故について、当社は故意または重過失がない限り責任を負いません。</li>
+                </ol>
+            </section>
 
-                <section>
-                    <h2>第12条（準拠法）</h2>
-                    <p>「当社」と「会員」間で提起された訴訟は、大韓民国法を準拠法とします。</p>
-                </section>
-            </div>
+            <section>
+                <h2>第12条（準拠法）</h2>
+                <p>本規約は、大韓民国法を準拠法とします。</p>
+            </section>
 
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 pt-4 border-top">
                 <a href="index-jp.html" class="btn btn-outline-primary">ホームに戻る</a>
             </div>
         </div>
     </div>
 
     <footer class="bg-white py-5 border-top">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="mb-3 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold mb-1">クロノラボ</h5>
-                    <small class="text-muted">© 2025 ChronoLab. All rights reserved.</small>
-                </div>
-                <div class="d-flex gap-3">
-                    <a href="terms-jp.html" class="text-decoration-none text-secondary small">利用規約</a>
-                    <a href="privacy-jp.html" class="text-decoration-none text-secondary small">プライバシーポリシー</a>
-                    <a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">お問い合わせ</a>
-                </div>
-            </div>
+        <div class="container text-center text-md-start d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0"><h5 class="fw-bold mb-1">クロノラボ</h5><small class="text-muted">© 2025 ChronoLab. All rights reserved.</small></div>
+            <div class="d-flex gap-3"><a href="terms-jp.html" class="text-decoration-none text-secondary small">利用規約</a><a href="privacy-jp.html" class="text-decoration-none text-secondary small">プライバシーポリシー</a><a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">お問い合わせ</a></div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
