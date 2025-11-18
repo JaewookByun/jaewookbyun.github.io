@@ -8,6 +8,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
         body { font-family: 'Noto Sans KR', sans-serif; }
+        
+        /* 캐러셀 이미지 스타일 (페이드 효과) */
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: cover; /* 이미지가 영역을 꽉 채우도록 설정 */
+        }
+        .carousel-image.active {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -29,6 +44,7 @@
 
     <section class="bg-white pt-20 pb-24">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            
             <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
                 
                 <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-6 border border-indigo-100">
@@ -44,7 +60,6 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    
                     <a href="https://docs.google.com/forms/d/1_kmInSpyDnNJBt7Lkb_GCJK7zdeqjg6zAy6rg4n_Vs4" target="_blank" class="bg-indigo-600 text-white px-6 py-3.5 rounded-lg font-bold hover:bg-indigo-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-indigo-200">
                         <span>📝 테스터 신청하기</span>
                     </a>
@@ -57,10 +72,19 @@
                 <p class="text-xs text-gray-400 mt-3">* 테스터 신청 후 승인 메일을 받으셔야 참여 가능합니다.</p>
 
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="w-64 h-96 bg-gray-200 rounded-3xl shadow-2xl flex items-center justify-center text-gray-400">
-                    App Screenshot
+
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl flex flex-col justify-center overflow-hidden z-10">
+                    <div class="w-32 h-8 bg-gray-800 absolute top-0 left-1/2 transform -translate-x-1/2 rounded-b-xl z-20"></div>
+                    
+                    <div class="h-[572px] w-[272px] bg-white overflow-hidden relative rounded-[2rem]" id="app-carousel">
+                        <div class="flex items-center justify-center h-full text-gray-400 animate-pulse bg-gray-100">
+                            Loading...
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-100 rounded-full opacity-50 blur-3xl"></div>
             </div>
         </div>
     </section>
@@ -119,6 +143,46 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // -------------------------------------------------------
+            // [설정] 스크린샷 이미지 개수 (1.png ~ 18.png)
+            const totalImages = 18; 
+            // -------------------------------------------------------
+            
+            const folderPath = 'screenshot/'; // 폴더 경로
+            const intervalTime = 3000; // 3초마다 변경
+
+            const container = document.getElementById('app-carousel');
+            
+            // 이미지 태그 생성 및 주입
+            let imagesMarkup = '';
+            for (let i = 1; i <= totalImages; i++) {
+                // 첫 번째 이미지는 active 클래스 추가 (보이게 설정)
+                const activeClass = i === 1 ? 'active' : '';
+                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${activeClass}" alt="App Screenshot ${i}">`;
+            }
+            container.innerHTML = imagesMarkup;
+
+            // 자동 롤링 로직
+            const images = container.querySelectorAll('.carousel-image');
+            let currentIndex = 0;
+
+            if(images.length > 0) {
+                setInterval(() => {
+                    // 현재 이미지 숨기기
+                    images[currentIndex].classList.remove('active');
+                    
+                    // 다음 인덱스 계산 (무한 루프)
+                    currentIndex = (currentIndex + 1) % images.length;
+                    
+                    // 다음 이미지 보여주기
+                    images[currentIndex].classList.add('active');
+                }, intervalTime);
+            }
+        });
+    </script>
 
 </body>
 </html>
