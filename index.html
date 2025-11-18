@@ -1,378 +1,265 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ChronoLab - 섭식이</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
-
-        body { font-family: 'Noto Sans KR', sans-serif; }
-
-        
-
-        /* 캐러셀 이미지 스타일 수정 */
-
-        .carousel-image {
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 100%;
-
-            opacity: 0;
-
-            transition: opacity 0.8s ease-in-out; /* 전환 속도 약간 더 부드럽게 */
-
-            
-
-            /* 핵심 수정: 이미지를 자르지 않고 비율 유지하며 중앙 정렬 */
-
-            object-fit: contain; 
-
-            padding: 1rem; /* 이미지 주변에 약간의 여백(패딩) 추가 */
-
-        }
-
-        .carousel-image.active {
-
-            opacity: 1;
-
-        }
-
-    </style>
-
-</head>
-
-<body class="bg-gray-50 text-gray-800">
-
-
-
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-
-            <div class="flex items-center space-x-3">
-
-                <img src="https://jaewookbyun.github.io/logo.png" alt="ChronoLab Logo" class="w-10 h-10 object-contain">
-
-                <span class="text-xl font-bold tracking-tight">ChronoLab</span>
-
-            </div>
-
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-
-                <a href="#features" class="hover:text-black transition">주요 기능</a>
-
-                <a href="terms.html" class="hover:text-black transition">이용약관</a>
-
-                <a href="privacy.html" class="hover:text-black transition">개인정보처리방침</a>
-
-                <a href="mailto:chrono.lab.team@gmail.com" class="hover:text-black transition">문의하기</a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <section class="bg-white pt-20 pb-24">
-
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
-
-            
-
-            <div class="md:w-1/2 mb-16 md:mb-0 text-center md:text-left">
-
-                
-
-                <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-6 border border-indigo-100">
-
-                    🚀 현재 내부 베타 테스트 진행 중
-
-                </div>
-
-
-
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-
-                    AI 건강 코치, <span class="text-indigo-600">섭식이</span>
-
-                </h1>
-
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-
-                    식단 기록부터 대사 분석, 워치와 연동된 인터벌 트레이닝까지.<br>
-
-                    가장 먼저 섭식이를 경험하고 피드백을 남겨주세요.
-
-                </p>
-
-                
-
-                <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-
-                    <a href="https://docs.google.com/forms/d/1_kmInSpyDnNJBt7Lkb_GCJK7zdeqjg6zAy6rg4n_Vs4" target="_blank" class="bg-indigo-600 text-white px-6 py-3.5 rounded-lg font-bold hover:bg-indigo-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-indigo-200">
-
-                        <span>📝 테스터 신청하기</span>
-
-                    </a>
-
-
-
-                    <a href="https://play.google.com/apps/internaltest/4700063627383757186" target="_blank" class="bg-white text-gray-700 border border-gray-300 px-6 py-3.5 rounded-lg font-medium hover:bg-gray-50 transition flex items-center justify-center space-x-2">
-
-                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.36,15.08L18.03,16.43L15.64,14.05L20.48,9.21C20.82,9.39 21,9.76 21,10.15V14.14C21,14.53 20.79,14.9 20.36,15.08M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg>
-
-                        <span>테스트 참여하기</span>
-
-                    </a>
-
-                </div>
-
-                <p class="text-xs text-gray-400 mt-3">* 테스터 신청 후 승인 메일을 받으셔야 참여 가능합니다.</p>
-
-
-
-            </div>
-
-
-
-            <div class="md:w-1/2 flex justify-center relative">
-
-                
-
-                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
-
-
-
-                <div class="relative w-[320px] h-[640px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-
-                    
-
-                    <div class="w-full h-full bg-gray-50 relative" id="app-carousel">
-
-                        <div class="flex flex-col items-center justify-center h-full text-gray-400 animate-pulse">
-
-                            <span class="text-2xl mb-2">📷</span>
-
-                            <span class="text-sm">Loading Images...</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1 z-20">
-
-                        <div class="h-1 w-10 bg-gray-300 rounded-full opacity-50"></div>
-
-                    </div>
-
-                </div>
-
-                
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="features" class="py-20 bg-gray-50">
-
-        <div class="max-w-7xl mx-auto px-4">
-
-            <h2 class="text-3xl font-bold text-center mb-16">주요 기능</h2>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="text-indigo-600 mb-4">
-
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4h-4v-4H8m16 0V8a2 2 0 00-2-2h-3a2 2 0 00-2 2v3M4 8H2m2 12h2a2 2 0 002-2v-3M4 8a2 2 0 012-2h3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3">쉬운 식사 기록</h3>
-
-                    <p class="text-gray-600 text-sm leading-relaxed">복잡한 검색 대신 바코드를 찍어보세요. 가공식품부터 신선식품까지, 쉽고 정확하게 식사를 기록할 수 있습니다.</p>
-
-                </div>
-
-
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="text-indigo-600 mb-4">
-
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3">워치 연동 코칭</h3>
-
-                    <p class="text-gray-600 text-sm leading-relaxed">갤럭시 워치 등 Wear OS 기기와 연동하여 심박수 기반 인터벌 트레이닝 타이머와 구간 분석을 제공합니다.</p>
-
-                </div>
-
-
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="text-indigo-600 mb-4">
-
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3">운동 오버레이 공유</h3>
-
-                    <p class="text-gray-600 text-sm leading-relaxed">당신의 열정적인 운동 기록을 멋진 데이터 오버레이 이미지로 생성하여 커뮤니티에 공유해보세요.</p>
-
-                </div>
-
-
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="text-indigo-600 mb-4">
-
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3">AI 일일리포트</h3>
-
-                    <p class="text-gray-600 text-sm leading-relaxed">기록이 쌓일수록 분석은 정교해집니다. 당신의 하루를 기록할수록 더 풍부하고 정확한 AI 분석 리포트를 제공합니다.</p>
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <footer class="bg-white border-t py-10">
-
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-
-            <div class="mb-4 md:mb-0 text-center md:text-left">
-
-                <span class="text-lg font-bold">ChronoLab</span>
-
-                <p class="text-sm text-gray-500 mt-1">© 2025 ChronoLab. All rights reserved.</p>
-
-            </div>
-
-            <div class="flex space-x-6 text-sm text-gray-500">
-
-                <a href="terms.html" class="hover:text-black">서비스 이용약관</a>
-
-                <a href="privacy.html" class="hover:text-black font-bold">개인정보 처리방침</a>
-
-                <a href="mailto:chrono.lab.team@gmail.com" class="hover:text-black">Contact</a>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
     <script>
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // [설정] 스크린샷 이미지 개수 (1.png ~ 18.png)
-
-            const totalImages = 18; 
-
-            
-
-            const folderPath = 'screenshot/'; 
-
-            const intervalTime = 3000; // 3초마다 변경
-
-
-
-            const container = document.getElementById('app-carousel');
-
-            
-
-            // 이미지 태그 생성 및 주입
-
-            let imagesMarkup = '';
-
-            for (let i = 1; i <= totalImages; i++) {
-
-                const activeClass = i === 1 ? 'active' : '';
-
-                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${activeClass}" alt="App Screenshot ${i}">`;
-
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        indigo: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
             }
-
-            container.innerHTML = imagesMarkup;
-
-
-
-            // 자동 롤링 로직
-
-            const images = container.querySelectorAll('.carousel-image');
-
-            let currentIndex = 0;
-
-
-
-            if(images.length > 0) {
-
-                setInterval(() => {
-
-                    images[currentIndex].classList.remove('active');
-
-                    currentIndex = (currentIndex + 1) % images.length;
-
-                    images[currentIndex].classList.add('active');
-
-                }, intervalTime);
-
-            }
-
-        });
-
+        }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <style>
+        /* Tailwind가 로드되지 않아도 적용되는 기본 스타일 (안전장치) */
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
+        
+        /* 스마트폰 목업 고정 스타일 (Tailwind 실패 시 백업) */
+        .phone-mockup {
+            width: 280px;
+            height: 560px;
+            background-color: white;
+            border-radius: 40px;
+            border: 8px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* PC 화면에서는 크기를 키움 (@media 쿼리 사용) */
+        @media (min-width: 768px) {
+            .phone-mockup {
+                width: 320px;
+                height: 640px;
+            }
+        }
+
+        /* 캐러셀 이미지 */
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .carousel-image.active { opacity: 1; }
+
+        /* 모바일 메뉴 */
+        #mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://jaewookbyun.github.io/logo.png" alt="ChronoLab Logo" class="w-10 h-10 object-contain">
+                <span class="text-xl font-bold tracking-tight text-gray-900">ChronoLab</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#features" class="hover:text-indigo-600 transition">주요 기능</a>
+                <a href="terms.html" class="hover:text-indigo-600 transition">이용약관</a>
+                <a href="privacy.html" class="hover:text-indigo-600 transition">개인정보처리방침</a>
+                <a href="mailto:chrono.lab.team@gmail.com" class="hover:text-indigo-600 transition">문의하기</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 flex flex-col space-y-4">
+                <a href="#features" class="text-sm font-medium text-gray-600 hover:text-indigo-600">주요 기능</a>
+                <a href="terms.html" class="text-sm font-medium text-gray-600 hover:text-indigo-600">이용약관</a>
+                <a href="privacy.html" class="text-sm font-medium text-gray-600 hover:text-indigo-600">개인정보처리방침</a>
+                <a href="mailto:chrono.lab.team@gmail.com" class="text-sm font-medium text-gray-600 hover:text-indigo-600">문의하기</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-16 md:pt-20 md:pb-32 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 text-center md:text-left z-10">
+                <span class="inline-block px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-6 border border-indigo-100">
+                    🚀 현재 내부 베타 테스트 진행 중
+                </span>
+
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-900 mb-6 break-keep">
+                    AI 건강 코치, <span class="text-indigo-600">섭식이</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-gray-600 mb-8 leading-relaxed break-keep max-w-lg mx-auto md:mx-0">
+                    식단 기록부터 대사 분석, 워치와 연동된 인터벌 트레이닝까지.<br class="hidden md:block"> 
+                    당신의 건강한 일상을 위한 최고의 파트너를 만나보세요.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                    <a href="https://docs.google.com/forms/d/1_kmInSpyDnNJBt7Lkb_GCJK7zdeqjg6zAy6rg4n_Vs4" target="_blank" class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200 flex items-center justify-center space-x-2">
+                        <span>📝 테스터 신청하기</span>
+                    </a>
+                    <a href="https://play.google.com/apps/internaltest/4700063627383757186" target="_blank" class="bg-white text-gray-700 border border-gray-300 px-8 py-4 rounded-xl font-medium hover:bg-gray-50 transition flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.36,15.08L18.03,16.43L15.64,14.05L20.48,9.21C20.82,9.39 21,9.76 21,10.15V14.14C21,14.53 20.79,14.9 20.36,15.08M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg>
+                        <span>테스트 앱 다운로드</span>
+                    </a>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">* 승인된 계정만 로그인 가능합니다.</p>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center relative z-10">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-200 rounded-full opacity-30 blur-3xl -z-10"></div>
+
+                <div class="phone-mockup bg-white">
+                    <div class="w-full h-full bg-gray-50 relative" id="app-carousel">
+                        <div class="flex flex-col items-center justify-center h-full text-gray-300 animate-pulse">
+                            <span class="text-4xl mb-2">📱</span>
+                            <span class="text-sm">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-3 left-0 right-0 flex justify-center z-20">
+                        <div class="h-1 w-12 bg-gray-300 rounded-full opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">주요 기능</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4h-4v-4H8m16 0V8a2 2 0 00-2-2h-3a2 2 0 00-2 2v3M4 8H2m2 12h2a2 2 0 002-2v-3M4 8a2 2 0 012-2h3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">바코드 식단 기록</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">가공식품 바코드를 찍으면 영양정보가 자동으로 입력됩니다. 복잡한 검색 없이 1초 만에 기록하세요.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">워치 연동 코칭</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">갤럭시 워치와 연동하여 심박수 기반 인터벌 트레이닝을 제공합니다. 운동 효율을 극대화하세요.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">운동 인증샷 공유</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">오늘의 운동 기록을 세련된 오버레이 이미지로 만들어 SNS와 커뮤니티에 즉시 공유할 수 있습니다.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">AI 분석 리포트</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">축적된 데이터를 바탕으로 AI가 영양 밸런스와 운동 패턴을 분석하여 맞춤형 리포트를 발행합니다.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <h4 class="text-lg font-bold text-gray-900">ChronoLab</h4>
+                <p class="text-sm text-gray-500 mt-2">© 2025 ChronoLab. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-8 text-sm text-gray-500">
+                <a href="terms.html" class="hover:text-gray-900 transition">서비스 이용약관</a>
+                <a href="privacy.html" class="hover:text-gray-900 font-bold transition">개인정보 처리방침</a>
+                <a href="mailto:chrono.lab.team@gmail.com" class="hover:text-gray-900 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 모바일 메뉴 토글
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if(menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
+
+            // 캐러셀 로직 (이미지 에러 처리 추가)
+            const totalImages = 18; 
+            const folderPath = 'screenshot/'; 
+            const container = document.getElementById('app-carousel');
+            
+            let imagesMarkup = '';
+            // 테스트를 위해 이미지가 없을 경우를 대비해 alt 텍스트가 보이도록 함
+            for (let i = 1; i <= totalImages; i++) {
+                const activeClass = i === 1 ? 'active' : '';
+                // onerror 핸들러 추가: 이미지가 없으면 숨김
+                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${activeClass}" alt="Screen ${i}" onerror="this.style.display='none'">`;
+            }
+            container.innerHTML = imagesMarkup;
+
+            const images = container.querySelectorAll('.carousel-image');
+            let currentIndex = 0;
+
+            if(images.length > 0) {
+                setInterval(() => {
+                    // 현재 이미지 숨기기
+                    images[currentIndex].classList.remove('active');
+                    
+                    // 다음 이미지 인덱스 계산 (display:none이 아닌 이미지만 순환하도록 로직을 짤 수도 있으나, 일단 단순 순환)
+                    currentIndex = (currentIndex + 1) % images.length;
+                    
+                    // 다음 이미지 보이기
+                    images[currentIndex].classList.add('active');
+                }, 3000);
+            }
+        });
+    </script>
 
 </body>
-
 </html>
-
