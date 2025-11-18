@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoLab - Supsiki</title>
+    <title>ChronoLab - 섭식이</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; overflow-x: hidden; }
-        :root { --brand-color: #4f46e5; --brand-hover: #4338ca; }
+        /* 커스텀 스타일 (부트스트랩 위에 살짝 덮어씌우기) */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8f9fa; /* 회색 배경 */
+            overflow-x: hidden;
+        }
+
+        /* 브랜드 컬러 재정의 (인디고 색상) */
+        :root {
+            --brand-color: #4f46e5;
+            --brand-hover: #4338ca;
+        }
+        
         .text-brand { color: var(--brand-color) !important; }
         .bg-brand { background-color: var(--brand-color) !important; }
-        .btn-brand { background-color: var(--brand-color); color: white; border: none; padding: 12px 24px; font-weight: 700; box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2); }
+        
+        .btn-brand {
+            background-color: var(--brand-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+        }
         .btn-brand:hover { background-color: var(--brand-hover); color: white; transform: translateY(-2px); }
+
+        /* 네비게이션 */
         .navbar { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 1rem 0; }
         .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
         .nav-link:hover { color: var(--brand-color); }
+
+        /* 히어로 섹션 */
         .hero-section { padding: 80px 0; background-color: white; }
-        .phone-frame { width: 280px; height: 560px; background: white; border-radius: 40px; border: 10px solid #f1f3f5; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden; margin: 0 auto; }
-        @media (min-width: 768px) { .phone-frame { width: 320px; height: 640px; border-width: 12px; } }
-        .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s; padding: 1rem; }
+        
+        /* 폰 목업 (반응형 처리) */
+        .phone-frame {
+            width: 280px;
+            height: 560px;
+            background: white;
+            border-radius: 40px;
+            border: 10px solid #f1f3f5;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto; /* 중앙 정렬 */
+        }
+
+        @media (min-width: 768px) {
+            .phone-frame { width: 320px; height: 640px; border-width: 12px; }
+        }
+
+        .carousel-image {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: contain; opacity: 0; transition: opacity 0.5s; padding: 1rem;
+        }
         .carousel-image.active { opacity: 1; }
+
+        /* 카드 호버 효과 */
         .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; height: 100%; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
     </style>
@@ -30,7 +76,7 @@
 
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
                 <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2 object-fit-contain">
                 ChronoLab
             </a>
@@ -40,13 +86,14 @@
             
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-center mt-3 mt-md-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">주요 기능</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms-kr.html">이용약관</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy-kr.html">개인정보처리방침</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">문의하기</a></li>
+                    
                     <li class="nav-item dropdown ms-md-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            🌐 English
+                            🌐 한국어
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="index.html">English</a></li>
@@ -62,27 +109,31 @@
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-md-row">
+                
                 <div class="col-md-6 text-center text-md-start mt-5 mt-md-0">
-                    <span class="badge bg-light text-brand border mb-3 px-3 py-2 rounded-pill">🚀 Beta Test in Progress</span>
-                    <h1 class="display-4 fw-bold mb-4 text-dark">
-                        AI Health Coach, <span class="text-brand">Supsiki</span>
+                    <span class="badge bg-light text-brand border mb-3 px-3 py-2 rounded-pill">🚀 현재 내부 베타 테스트 진행 중</span>
+                    <h1 class="display-4 fw-bold mb-4 text-dark" style="word-break: keep-all;">
+                        AI 건강 코치, <span class="text-brand">섭식이</span>
                     </h1>
-                    <p class="lead text-secondary mb-5">
-                        From meal tracking to metabolic analysis and interval training with your watch.<br class="d-none d-md-block">
-                        Meet the best partner for your healthy daily life.
+                    <p class="lead text-secondary mb-5" style="word-break: keep-all;">
+                        식단 기록부터 대사 분석, 워치와 연동된 인터벌 트레이닝까지.<br class="d-none d-md-block">
+                        당신의 건강한 일상을 위한 최고의 파트너를 만나보세요.
                     </p>
+                    
                     <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
                         <a href="https://docs.google.com/forms/d/1_kmInSpyDnNJBt7Lkb_GCJK7zdeqjg6zAy6rg4n_Vs4" target="_blank" class="btn btn-brand rounded-3">
-                            📝 Apply for Tester
+                            📝 테스터 신청하기
                         </a>
                         <a href="https://play.google.com/apps/internaltest/4700063627383757186" target="_blank" class="btn btn-outline-secondary rounded-3">
-                            <i class="bi bi-google-play me-1"></i> Download App
+                            <i class="bi bi-google-play me-1"></i> 테스트 참여하기
                         </a>
                     </div>
-                    <p class="text-muted small mt-3">* You must receive an approval email after applying.</p>
+                    <p class="text-muted small mt-3">* 테스터 신청 후 승인 메일을 받으셔야 참여 가능합니다.</p>
                 </div>
+
                 <div class="col-md-6 d-flex justify-content-center position-relative">
                     <div class="position-absolute top-50 start-50 translate-middle bg-brand opacity-25 rounded-circle" style="width: 300px; height: 300px; filter: blur(60px); z-index: 0;"></div>
+                    
                     <div class="phone-frame z-1">
                         <div id="appCarouselContainer" class="w-100 h-100 bg-light position-relative">
                             <div class="d-flex flex-column align-items-center justify-content-center h-100 text-secondary">
@@ -93,40 +144,53 @@
                         <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 bg-secondary opacity-25 rounded-pill" style="width: 100px; height: 4px;"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section id="features" class="py-5 bg-light">
         <div class="container py-5">
-            <h2 class="text-center fw-bold mb-5">Key Features</h2>
+            <h2 class="text-center fw-bold mb-5">주요 기능</h2>
+            
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-upc-scan"></i></div>
-                        <h4 class="fw-bold h5">Easy Meal Tracking</h4>
-                        <p class="text-secondary small mb-0">Just scan the barcode. Record processed and fresh foods easily and accurately.</p>
+                        <div class="mb-3 text-brand fs-1">
+                            <i class="bi bi-upc-scan"></i>
+                        </div>
+                        <h4 class="fw-bold h5">쉬운 식사 기록</h4>
+                        <p class="text-secondary small mb-0">복잡한 검색 대신 바코드를 찍어보세요. 가공식품부터 신선식품까지 쉽고 정확하게 기록합니다.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-watch"></i></div>
-                        <h4 class="fw-bold h5">Watch Integration</h4>
-                        <p class="text-secondary small mb-0">Provides heart rate-based interval training timers and analysis via Galaxy Watch.</p>
+                        <div class="mb-3 text-brand fs-1">
+                            <i class="bi bi-watch"></i>
+                        </div>
+                        <h4 class="fw-bold h5">워치 연동 코칭</h4>
+                        <p class="text-secondary small mb-0">갤럭시 워치와 연동하여 심박수 기반 인터벌 트레이닝 타이머와 구간 분석을 제공합니다.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-share"></i></div>
-                        <h4 class="fw-bold h5">Workout Overlay</h4>
-                        <p class="text-secondary small mb-0">Create stunning data overlay images of your workout records and share them.</p>
+                        <div class="mb-3 text-brand fs-1">
+                            <i class="bi bi-share"></i>
+                        </div>
+                        <h4 class="fw-bold h5">운동 오버레이</h4>
+                        <p class="text-secondary small mb-0">당신의 열정적인 운동 기록을 멋진 데이터 오버레이 이미지로 생성하여 커뮤니티에 공유해보세요.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-clipboard-data"></i></div>
-                        <h4 class="fw-bold h5">AI Daily Report</h4>
-                        <p class="text-secondary small mb-0">Get customized reports analyzing your nutritional balance and exercise patterns.</p>
+                        <div class="mb-3 text-brand fs-1">
+                            <i class="bi bi-clipboard-data"></i>
+                        </div>
+                        <h4 class="fw-bold h5">AI 일일리포트</h4>
+                        <p class="text-secondary small mb-0">기록이 쌓일수록 분석은 정교해집니다. 당신의 하루를 분석하여 맞춤형 리포트를 제공합니다.</p>
                     </div>
                 </div>
             </div>
@@ -141,8 +205,8 @@
                     <small class="text-muted">© 2025 ChronoLab. All rights reserved.</small>
                 </div>
                 <div class="d-flex gap-3">
-                    <a href="terms.html" class="text-decoration-none text-secondary small">Terms of Service</a>
-                    <a href="privacy.html" class="text-decoration-none text-dark fw-bold small">Privacy Policy</a>
+                    <a href="terms-kr.html" class="text-decoration-none text-secondary small">이용약관</a>
+                    <a href="privacy-kr.html" class="text-decoration-none text-dark fw-bold small">개인정보처리방침</a>
                     <a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">Contact</a>
                 </div>
             </div>
@@ -150,17 +214,32 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const totalImages = 18; const folderPath = 'screenshot/'; const container = document.getElementById('appCarouselContainer');
+            const totalImages = 18;
+            const folderPath = 'screenshot/';
+            const container = document.getElementById('appCarouselContainer');
+            
             let imagesMarkup = '';
             for (let i = 1; i <= totalImages; i++) {
-                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${i === 1 ? 'active' : ''}" alt="Screen ${i}" onerror="this.style.display='none'">`;
+                const activeClass = i === 1 ? 'active' : '';
+                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${activeClass}" alt="App Screen ${i}" onerror="this.style.display='none'">`;
             }
             container.innerHTML = imagesMarkup;
-            const images = container.querySelectorAll('.carousel-image'); let currentIndex = 0;
-            if(images.length > 0) { setInterval(() => { images[currentIndex].classList.remove('active'); currentIndex = (currentIndex + 1) % images.length; images[currentIndex].classList.add('active'); }, 3000); }
+
+            const images = container.querySelectorAll('.carousel-image');
+            let currentIndex = 0;
+
+            if(images.length > 0) {
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, 3000);
+            }
         });
     </script>
+
 </body>
 </html>
