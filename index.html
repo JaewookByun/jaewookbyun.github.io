@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
         body { font-family: 'Noto Sans KR', sans-serif; }
         
-        /* 캐러셀 이미지 스타일 (페이드 효과) */
+        /* 캐러셀 이미지 스타일 수정 */
         .carousel-image {
             position: absolute;
             top: 0;
@@ -17,8 +17,11 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: cover; /* 이미지가 영역을 꽉 채우도록 설정 */
+            transition: opacity 0.8s ease-in-out; /* 전환 속도 약간 더 부드럽게 */
+            
+            /* 핵심 수정: 이미지를 자르지 않고 비율 유지하며 중앙 정렬 */
+            object-fit: contain; 
+            padding: 1rem; /* 이미지 주변에 약간의 여백(패딩) 추가 */
         }
         .carousel-image.active {
             opacity: 1;
@@ -45,7 +48,7 @@
     <section class="bg-white pt-20 pb-24">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
             
-            <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+            <div class="md:w-1/2 mb-16 md:mb-0 text-center md:text-left">
                 
                 <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-6 border border-indigo-100">
                     🚀 현재 내부 베타 테스트 진행 중
@@ -74,17 +77,23 @@
             </div>
 
             <div class="md:w-1/2 flex justify-center relative">
-                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl flex flex-col justify-center overflow-hidden z-10">
-                    <div class="w-32 h-8 bg-gray-800 absolute top-0 left-1/2 transform -translate-x-1/2 rounded-b-xl z-20"></div>
+                
+                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
+
+                <div class="relative w-[320px] h-[640px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
                     
-                    <div class="h-[572px] w-[272px] bg-white overflow-hidden relative rounded-[2rem]" id="app-carousel">
-                        <div class="flex items-center justify-center h-full text-gray-400 animate-pulse bg-gray-100">
-                            Loading...
+                    <div class="w-full h-full bg-gray-50 relative" id="app-carousel">
+                        <div class="flex flex-col items-center justify-center h-full text-gray-400 animate-pulse">
+                            <span class="text-2xl mb-2">📷</span>
+                            <span class="text-sm">Loading Images...</span>
                         </div>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1 z-20">
+                        <div class="h-1 w-10 bg-gray-300 rounded-full opacity-50"></div>
                     </div>
                 </div>
                 
-                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-100 rounded-full opacity-50 blur-3xl"></div>
             </div>
         </div>
     </section>
@@ -146,12 +155,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // -------------------------------------------------------
             // [설정] 스크린샷 이미지 개수 (1.png ~ 18.png)
             const totalImages = 18; 
-            // -------------------------------------------------------
             
-            const folderPath = 'screenshot/'; // 폴더 경로
+            const folderPath = 'screenshot/'; 
             const intervalTime = 3000; // 3초마다 변경
 
             const container = document.getElementById('app-carousel');
@@ -159,7 +166,6 @@
             // 이미지 태그 생성 및 주입
             let imagesMarkup = '';
             for (let i = 1; i <= totalImages; i++) {
-                // 첫 번째 이미지는 active 클래스 추가 (보이게 설정)
                 const activeClass = i === 1 ? 'active' : '';
                 imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${activeClass}" alt="App Screenshot ${i}">`;
             }
@@ -171,13 +177,8 @@
 
             if(images.length > 0) {
                 setInterval(() => {
-                    // 현재 이미지 숨기기
                     images[currentIndex].classList.remove('active');
-                    
-                    // 다음 인덱스 계산 (무한 루프)
                     currentIndex = (currentIndex + 1) % images.length;
-                    
-                    // 다음 이미지 보여주기
                     images[currentIndex].classList.add('active');
                 }, intervalTime);
             }
