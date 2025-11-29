@@ -35,6 +35,18 @@
         .carousel-image.active { opacity: 1; }
         .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; height: 100%; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+
+        /* QR Link Item Style */
+        .qr-link-item {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #dee2e6;
+        }
+        .qr-link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            border-color: var(--brand-color)!important;
+            background-color: #ffffff !important;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +122,7 @@
             </div>
         </div>
     </section>
-
+    
     <section id="features" class="py-5 bg-light">
         <div class="container py-5">
             <h2 class="text-center fw-bold mb-5">主な機能</h2>
@@ -148,28 +160,56 @@
     </section>
 
     <section id="qr-links" class="py-5 bg-white">
-        <div class="container py-5 text-center">
-            <h2 class="fw-bold mb-5">クイックアクセス (QR)</h2>
-            <div class="row justify-content-center g-4">
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="googleplay.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Google Play QR">
-                    <p class="fw-bold mt-2">アプリ</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="homepage.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Homepage QR">
-                    <p class="fw-bold mt-2">公式サイト</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="supsikitv.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="YouTube QR">
-                    <p class="fw-bold mt-2">ソプシギTV</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="instagram.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Instagram QR">
-                    <p class="fw-bold mt-2">Instagram</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="survey.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Survey QR">
-                    <p class="fw-bold mt-2">ILSアンケート</p>
+        <div class="container py-5">
+            <h2 class="fw-bold mb-5 text-center">Scan & Connect</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    
+                    <a href="https://www.chronolaboratory.com/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="homepage.png" class="rounded border bg-white" width="80" height="80" alt="Homepage QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">公式サイト</h5>
+                            <small class="text-secondary">ChronoLab公式ウェブサイト</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="googleplay.png" class="rounded border bg-white" width="80" height="80" alt="Google Play QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">アプリダウンロード</h5>
+                            <small class="text-secondary">Google Play Store</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="instagram.png" class="rounded border bg-white" width="80" height="80" alt="Instagram QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">Instagram</h5>
+                            <small class="text-secondary">@chronolabcorp</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="supsikitv.png" class="rounded border bg-white" width="80" height="80" alt="YouTube QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">ソプシギTV</h5>
+                            <small class="text-secondary">公式YouTubeチャンネル</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://forms.gle/ggYUwtttnTk5cTNV6" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="survey.png" class="rounded border bg-white" width="80" height="80" alt="Survey QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">ILSアンケート</h5>
+                            <small class="text-secondary">展示会アンケートに参加</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -188,6 +228,9 @@
                     </a>
                     <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-decoration-none text-secondary small">
                         <i class="bi bi-instagram text-danger me-1"></i>Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/jaewook-byun/" target="_blank" class="text-decoration-none text-secondary small">
+                        <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
                     </a>
                     <a href="terms-jp.html" class="text-decoration-none text-secondary small">利用規約</a>
                     <a href="privacy-jp.html" class="text-decoration-none text-secondary small">プライバシーポリシー</a>
@@ -211,5 +254,4 @@
         });
     </script>
 </body>
-
 </html>
