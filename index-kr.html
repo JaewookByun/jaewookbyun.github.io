@@ -20,14 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* 커스텀 스타일 (부트스트랩 위에 살짝 덮어씌우기) */
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f8f9fa; /* 회색 배경 */
+            background-color: #f8f9fa;
             overflow-x: hidden;
         }
 
-        /* 브랜드 컬러 재정의 (인디고 색상) */
         :root {
             --brand-color: #4f46e5;
             --brand-hover: #4338ca;
@@ -46,15 +44,12 @@
         }
         .btn-brand:hover { background-color: var(--brand-hover); color: white; transform: translateY(-2px); }
 
-        /* 네비게이션 */
         .navbar { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 1rem 0; }
         .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
         .nav-link:hover { color: var(--brand-color); }
 
-        /* 히어로 섹션 */
         .hero-section { padding: 80px 0; background-color: white; }
         
-        /* 폰 목업 (반응형 처리) */
         .phone-frame {
             width: 280px;
             height: 560px;
@@ -64,7 +59,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             position: relative;
             overflow: hidden;
-            margin: 0 auto; /* 중앙 정렬 */
+            margin: 0 auto;
         }
 
         @media (min-width: 768px) {
@@ -77,9 +72,20 @@
         }
         .carousel-image.active { opacity: 1; }
 
-        /* 카드 호버 효과 */
         .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; height: 100%; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+
+        /* QR 링크 카드 스타일 (수직 리스트용) */
+        .qr-link-item {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #dee2e6;
+        }
+        .qr-link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            border-color: var(--brand-color)!important;
+            background-color: #ffffff !important;
+        }
     </style>
 </head>
 <body>
@@ -211,28 +217,56 @@
     </section>
 
     <section id="qr-links" class="py-5 bg-white">
-        <div class="container py-5 text-center">
-            <h2 class="fw-bold mb-5">Scan & Connect</h2>
-            <div class="row justify-content-center g-4">
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="googleplay.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Google Play QR">
-                    <p class="fw-bold mt-2">앱 다운로드</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="homepage.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Homepage QR">
-                    <p class="fw-bold mt-2">홈페이지</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="supsikitv.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="YouTube QR">
-                    <p class="fw-bold mt-2">섭식이 TV</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="instagram.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Instagram QR">
-                    <p class="fw-bold mt-2">인스타그램</p>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2">
-                    <img src="survey.png" class="img-fluid mb-2 border rounded shadow-sm p-1" style="max-width: 150px;" alt="Survey QR">
-                    <p class="fw-bold mt-2">ILS 설문조사</p>
+        <div class="container py-5">
+            <h2 class="fw-bold mb-5 text-center">Scan & Connect</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    
+                    <a href="https://www.chronolaboratory.com/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="homepage.png" class="rounded border bg-white" width="80" height="80" alt="Homepage QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">홈페이지</h5>
+                            <small class="text-secondary">ChronoLab 공식 웹사이트</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="googleplay.png" class="rounded border bg-white" width="80" height="80" alt="Google Play QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">앱 다운로드</h5>
+                            <small class="text-secondary">Google Play Store</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="instagram.png" class="rounded border bg-white" width="80" height="80" alt="Instagram QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">인스타그램</h5>
+                            <small class="text-secondary">@chronolabcorp</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="supsikitv.png" class="rounded border bg-white" width="80" height="80" alt="YouTube QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">섭식이 TV</h5>
+                            <small class="text-secondary">공식 유튜브 채널</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
+                    <a href="https://forms.gle/ggYUwtttnTk5cTNV6" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
+                        <img src="survey.png" class="rounded border bg-white" width="80" height="80" alt="Survey QR">
+                        <div class="ms-4 text-start">
+                            <h5 class="fw-bold mb-1">ILS 설문조사</h5>
+                            <small class="text-secondary">전시회 만족도 조사</small>
+                        </div>
+                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -251,6 +285,9 @@
                     </a>
                     <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-decoration-none text-secondary small">
                         <i class="bi bi-instagram text-danger me-1"></i>인스타그램
+                    </a>
+                    <a href="https://www.linkedin.com/in/jaewook-byun/" target="_blank" class="text-decoration-none text-secondary small">
+                        <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
                     </a>
                     <a href="terms-kr.html" class="text-decoration-none text-secondary small">이용약관</a>
                     <a href="privacy-kr.html" class="text-decoration-none text-dark fw-bold small">개인정보처리방침</a>
