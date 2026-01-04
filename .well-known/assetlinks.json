@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.chronolab.supsiki",
+      "sha256_cert_fingerprints": [
+        "DE:54:73:0B:10:92:42:7F:49:FF:FC:EB:63:F9:0A:16:A2:DC:50:06:35:21:BB:10:E6:6E:F4:21:8C:89:C9:3E"
+      ]
+    }
+  }
+]
