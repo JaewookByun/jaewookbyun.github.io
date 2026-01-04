@@ -16,7 +16,16 @@
     <meta name="description" content="Unlock your smartwatch's full potential. Supsiki provides AI-powered diet tracking via barcode scan and auto-sync HIIT workouts for Wear OS. Download for free today.">
     <meta name="keywords" content="Supsiki, Diet App, HIIT Timer, Wear OS App, Galaxy Watch, Calorie Counter, Workout Logger, Intermittent Fasting, AI Health Coach">
     <meta name="author" content="ChronoLab">
-    <link rel="canonical" href="https://www.chronolaboratory.com/">
+    
+    <link rel="canonical" href="https://www.chronolaboratory.com/index.html">
+
+    <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
+    <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
+    <link rel="alternate" hreflang="pt" href="https://www.chronolaboratory.com/index-pt.html" />
+    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
+    <link rel="alternate" hreflang="ja" href="https://www.chronolaboratory.com/index-jp.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://www.chronolaboratory.com/index-tw.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/">
@@ -209,14 +218,40 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
                 <img src="supsiki.png" alt="Logo" width="40" height="40" class="me-2">
                 Supsiki
             </a>
-            <div class="ms-auto">
-                <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
-                    Download App
-                </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    
+                    <div class="dropdown me-2">
+                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            🌐 English
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                            <li><a class="dropdown-item active" href="index.html">English</a></li>
+                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
+                            <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
+                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
+                            <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
+                            <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
+                        <i class="bi bi-megaphone-fill me-1"></i> News
+                    </a>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
+                        Download App
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
