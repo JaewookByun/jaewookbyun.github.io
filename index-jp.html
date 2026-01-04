@@ -2,255 +2,197 @@
 <html lang="ja">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-34XQER4HXY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-34XQER4HXY');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-34XQER4HXY');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>クロノラボ - ソプシギ (摂食)</title>
     
-    <link rel="icon" href="logo.png" type="image/png">
-    
+    <title>Supsiki: ダイエット・HIIT・AIコーチ</title>
+    <meta name="description" content="面倒な記録はもう終わり。スマートウォッチ連携のインターバルトレーニングとバーコード食事記録で、楽しく健康管理。AIがあなたの代謝を分析・コーチングします。">
+    <meta name="keywords" content="Supsiki, ダイエットアプリ, HIITタイマー, スマートウォッチ, Galaxy Watch, カロリー計算, 食事記録, AIコーチ, 筋トレ">
+    <meta name="author" content="ChronoLab">
+    <link rel="canonical" href="https://www.chronolaboratory.com/index-jp.html">
+
+    <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
+    <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
+    <link rel="alternate" hreflang="pt" href="https://www.chronolaboratory.com/index-pt.html" />
+    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
+    <link rel="alternate" hreflang="ja" href="https://www.chronolaboratory.com/index-jp.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://www.chronolaboratory.com/index-tw.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chronolaboratory.com/index-jp.html">
+    <meta property="og:title" content="Supsiki - スマートウォッチを蘇らせよう">
+    <meta property="og:description" content="ホコリを被ったGalaxy Watch、活用できていますか？AIによる科学的なHIIT＆食事管理を始めましょう。">
+    <meta property="og:image" content="https://www.chronolaboratory.com/feature1.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.chronolaboratory.com/index-jp.html">
+    <meta property="twitter:title" content="Supsiki - AIヘルスコーチ">
+    <meta property="twitter:description" content="手首で完結する食事管理とインターバルトレーニング。">
+    <meta property="twitter:image" content="https://www.chronolaboratory.com/feature1.jpg">
+
+    <link rel="icon" href="supsiki.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8f9fa; overflow-x: hidden; }
-        :root { --brand-color: #4f46e5; --brand-hover: #4338ca; }
-        .text-brand { color: var(--brand-color) !important; }
-        .bg-brand { background-color: var(--brand-color) !important; }
-        .btn-brand { background-color: var(--brand-color); color: white; border: none; padding: 12px 24px; font-weight: 700; box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2); }
-        .btn-brand:hover { background-color: var(--brand-hover); color: white; transform: translateY(-2px); }
-        .navbar { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 1rem 0; }
-        .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
-        .nav-link:hover { color: var(--brand-color); }
-        .hero-section { padding: 80px 0; background-color: white; }
-        .phone-frame { width: 280px; height: 560px; background: white; border-radius: 40px; border: 10px solid #f1f3f5; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden; margin: 0 auto; }
-        @media (min-width: 768px) { .phone-frame { width: 320px; height: 640px; border-width: 12px; } }
-        .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s; padding: 1rem; }
-        .carousel-image.active { opacity: 1; }
-        .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; height: 100%; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        /* QR Link Item Style */
-        .qr-link-item {
-            transition: all 0.2s ease-in-out;
-            border: 1px solid #dee2e6;
-        }
-        .qr-link-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-            border-color: var(--brand-color)!important;
-            background-color: #ffffff !important;
-        }
+    <style>
+        :root { --brand-color: #4f46e5; --brand-dark: #3730a3; --text-main: #1f2937; --bg-light: #f3f4f6; }
+        body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
+        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .btn-brand { background-color: var(--brand-color); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
+        .btn-brand:hover { background-color: var(--brand-dark); transform: translateY(-2px); color: white; }
+        .hero-section { padding-top: 120px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
+        .hero-headline { font-size: 3.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .phone-frame { width: 300px; height: 600px; background: #000; border-radius: 40px; border: 12px solid #1f2937; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); margin: 0 auto; z-index: 10; }
+        .shorts-embed { width: 100%; height: 100%; border: none; object-fit: cover; }
+        .sticky-container { position: relative; padding: 100px 0; }
+        .sticky-visual { position: sticky; top: 150px; height: 650px; display: flex; align-items: center; justify-content: center; }
+        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.3; transition: opacity 0.5s; }
+        .step-content.active { opacity: 1; }
+        .screen-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background-color: white; display: flex; align-items: center; justify-content: center; }
+        .screen-content.active { opacity: 1; z-index: 2; }
+        .screen-content img { width: 100%; height: 100%; object-fit: cover; }
+        .video-highlight { background-color: #111; color: white; padding: 100px 0; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
+        @media (max-width: 768px) { .hero-headline { font-size: 2.5rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
     </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-md sticky-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-jp.html">
-                <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2 object-fit-contain">
-                クロノラボ
+                <img src="supsiki.png" alt="Logo" width="40" height="40" class="me-2">
+                Supsiki
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav text-center mt-3 mt-md-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#features">主な機能</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#qr-links">クイックアクセス</a></li>
-                    <li class="nav-item"><a class="nav-link" href="terms-jp.html">利用規約</a></li>
-                    <li class="nav-item"><a class="nav-link" href="privacy-jp.html">プライバシー</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">お問い合わせ</a></li>
-                    <li class="nav-item dropdown ms-md-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            🌐 日本語
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <div class="dropdown me-2">
+                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 日本語</button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
                             <li><a class="dropdown-item" href="index.html">English</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">한국어</a></li>
-                            <li><a class="dropdown-item" href="index-jp.html">日本語</a></li>
+                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
+                            <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
+                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
+                            <li><a class="dropdown-item active" href="index-jp.html">日本語 (Japanese)</a></li>
+                            <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold"><i class="bi bi-megaphone-fill me-1"></i> 最新情報</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">アプリをDL</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 text-center text-md-start mt-5 mt-md-0">
-                    <span class="badge bg-light text-brand border mb-3 px-3 py-2 rounded-pill">🚀 公開テスト進行中 (1000名限定)</span>
-                    <h1 class="display-4 fw-bold mb-4 text-dark">
-                        AIヘルスコーチ、<span class="text-brand">ソプシギ (摂食)</span>
-                    </h1>
-                    <p class="lead text-secondary mb-5">
-                        食事記録から代謝分析、スマートウォッチと連動したインターバルトレーニングまで。<br class="d-none d-md-block">
-                        あなたの健康的な日常のための最高のパートナーです。
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand rounded-3 px-4 py-3 fs-5">
-                            <i class="bi bi-google-play me-2"></i> ダウンロード
-                        </a>
-                    </div>
-                    
-                    <div class="mt-4 p-3 bg-light border rounded-3 text-secondary small text-start d-inline-block">
-                        <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i><strong>公開テストに関するご案内</strong><br>
-                        現在、広告システム(AdMob)の連動作業中のため、一部の機能が制限される場合があります。<br>
-                        予めご了承ください。
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">🚀 2026年 新年チャレンジ</span>
+                    <h1 class="hero-headline mb-4">ホコリを被った<strong>スマートウォッチ</strong>、<br>蘇らせませんか？</h1>
+                    <p class="lead text-secondary mb-5">面倒な記録はAIにお任せ。<br>あなたはトレーニングと食事に集中するだけ。</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center"><i class="bi bi-google-play me-2"></i> Google Play</a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">詳細を見る</a>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center position-relative">
-                    <div class="position-absolute top-50 start-50 translate-middle bg-brand opacity-25 rounded-circle" style="width: 300px; height: 300px; filter: blur(60px); z-index: 0;"></div>
-                    <div class="phone-frame z-1">
-                        <div id="appCarouselContainer" class="w-100 h-100 bg-light position-relative">
-                            <div class="d-flex flex-column align-items-center justify-content-center h-100 text-secondary">
-                                <span class="fs-1">📱</span>
-                                <span>Loading...</span>
-                            </div>
-                        </div>
-                        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 bg-secondary opacity-25 rounded-pill" style="width: 100px; height: 4px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="features" class="py-5 bg-light">
-        <div class="container py-5">
-            <h2 class="text-center fw-bold mb-5">主な機能</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-upc-scan"></i></div>
-                        <h4 class="fw-bold h5">簡単な食事記録</h4>
-                        <p class="text-secondary small mb-0">バーコードをスキャンするだけ。加工食品から生鮮食品まで、簡単かつ正確に記録できます。</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-watch"></i></div>
-                        <h4 class="fw-bold h5">ウォッチ連動コーチング</h4>
-                        <p class="text-secondary small mb-0">Galaxy Watchと連動して、心拍数ベースのインターバルトレーニングタイマーと分析を提供します。</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-share"></i></div>
-                        <h4 class="fw-bold h5">運動オーバーレイ</h4>
-                        <p class="text-secondary small mb-0">あなたの情熱的な運動記録をスタイリッシュなデータオーバーレイ画像として生成し、共有できます。</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-clipboard-data"></i></div>
-                        <h4 class="fw-bold h5">AIデイリーレポート</h4>
-                        <p class="text-secondary small mb-0">記録が積み重なるほど分析は精巧になります。あなたの栄養バランスと運動パターンを分析します。</p>
-                    </div>
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="phone-frame"><iframe class="shorts-embed" src="https://www.youtube.com/embed/Iu1lAzE5lhg?autoplay=1&mute=1&loop=1&playlist=Iu1lAzE5lhg&controls=0&rel=0" title="Smartwatch CPR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="qr-links" class="py-5 bg-white">
-        <div class="container py-5">
-            <h2 class="fw-bold mb-5 text-center">Scan & Connect</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    
-                    <a href="https://www.chronolaboratory.com/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="homepage.png" class="rounded border bg-white" width="80" height="80" alt="Homepage QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">公式サイト</h5>
-                            <small class="text-secondary">ChronoLab公式ウェブサイト</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="googleplay.png" class="rounded border bg-white" width="80" height="80" alt="Google Play QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">アプリダウンロード</h5>
-                            <small class="text-secondary">Google Play Store</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="instagram.png" class="rounded border bg-white" width="80" height="80" alt="Instagram QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">Instagram</h5>
-                            <small class="text-secondary">@chronolabcorp</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="supsikitv.png" class="rounded border bg-white" width="80" height="80" alt="YouTube QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">ソプシギTV</h5>
-                            <small class="text-secondary">公式YouTubeチャンネル</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://forms.gle/ggYUwtttnTk5cTNV6" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="survey.png" class="rounded border bg-white" width="80" height="80" alt="Survey QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">ILSアンケート</h5>
-                            <small class="text-secondary">展示会アンケートに参加</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-white py-5 border-top">
+    <section id="features" class="sticky-container bg-light">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="mb-3 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold mb-1">クロノラボ</h5>
-                    <small class="text-muted">© 2025 ChronoLab. All rights reserved.</small>
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="sticky-visual">
+                        <div class="phone-frame bg-white">
+                            <div class="screen-content active" id="screen-1"><img src="feature1.jpg" alt="HIIT Workout Interface"></div>
+                            <div class="screen-content" id="screen-2"><img src="feature2.jpg" alt="Barcode Meal Tracking"></div>
+                            <div class="screen-content" id="screen-3"><img src="feature3.jpg" alt="AI Health Report"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex gap-3 align-items-center flex-wrap justify-content-center">
-                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-youtube text-danger me-1"></i>YouTube
-                    </a>
-                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-instagram text-danger me-1"></i>Instagram
-                    </a>
-                    <a href="https://www.linkedin.com/in/jaewook-byun/" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
-                    </a>
-                    <a href="terms-jp.html" class="text-decoration-none text-secondary small">利用規約</a>
-                    <a href="privacy-jp.html" class="text-decoration-none text-secondary small">プライバシーポリシー</a>
-                    <a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">お問い合わせ</a>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="step-content active" data-index="1">
+                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-danger"><i class="bi bi-activity"></i></div><h2 class="display-5 fw-bold mb-3">心拍数まで記録する<br>本格HIITトレーニング。</h2><p class="lead text-muted">スマートウォッチと完璧に連携。<br>HIITタイマーや心拍数モニタリングまで。<br>手首のAIコーチがあなたの限界突破をサポートします。</p></div>
+                    </div>
+                    <div class="step-content" data-index="2">
+                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-primary"><i class="bi bi-upc-scan"></i></div><h2 class="display-5 fw-bold mb-3">スキャンするだけ。<br>食事記録は1秒で完了。</h2><p class="lead text-muted">サンドイッチやコンビニ弁当も。<br>検索や入力は不要です。バーコードをスキャンするだけで<br>カロリーと栄養素が自動的に記録されます。</p></div>
+                    </div>
+                    <div class="step-content" data-index="3">
+                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-success"><i class="bi bi-graph-up-arrow"></i></div><h2 class="display-5 fw-bold mb-3">あなたの健康を、<br>AIが毎日分析。</h2><p class="lead text-muted">摂取カロリーと消費カロリーのバランス。<br>代謝分析レポートで、体の変化を<br>毎日確認できます。</p></div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="video-highlight">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">「データ＋動画。編集不要」</h2>
+            <p class="lead text-white-50 mb-5">フィットネスクリエイターやYouTuberのためのキラー機能。<br>心拍数、カロリー、タイマーをトレーニング動画に自動でオーバーレイ表示。</p>
+            <div class="row justify-content-center"><div class="col-lg-10"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/0cx1vOjsAes?rel=0" title="Auto-Sync Heart Rate & Timer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="p-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
+                        <i class="bi bi-youtube position-absolute text-danger opacity-10" style="font-size: 15rem; right: -50px; bottom: -50px; transform: rotate(-15deg);"></i>
+                        <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill"><i class="bi bi-broadcast me-2"></i>最新アップデート</span>
+                        <h2 class="fw-bold mb-3">開発者と直接話そう</h2>
+                        <p class="text-muted mb-4 lead"><strong>YouTubeコミュニティ</strong>で最新ニュースや機能リクエストを受け付けています。<br>ウェブサイトの更新を待たずに、直接ご意見をお聞かせください！</p>
+                        <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-danger btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover"><i class="bi bi-chat-dots-fill me-2"></i> コミュニティへ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-5">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-3">ChronoLab</h5>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:chrono.lab.team@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="text-muted small">© 2026 ChronoLab. All rights reserved.<br><a href="terms.html" class="text-decoration-none text-muted">利用規約</a> | <a href="privacy.html" class="text-decoration-none text-muted">プライバシーポリシー</a></p>
+            <a href="https://www.chronolaboratory.com/" class="btn btn-outline-secondary btn-sm mt-3">Company Home</a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ duration: 800, once: true });
         document.addEventListener('DOMContentLoaded', () => {
-            const totalImages = 18; const folderPath = 'screenshot/'; const container = document.getElementById('appCarouselContainer');
-            let imagesMarkup = '';
-            for (let i = 1; i <= totalImages; i++) {
-                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${i === 1 ? 'active' : ''}" alt="Screen ${i}" onerror="this.style.display='none'">`;
-            }
-            container.innerHTML = imagesMarkup;
-            const images = container.querySelectorAll('.carousel-image'); let currentIndex = 0;
-            if(images.length > 0) { setInterval(() => { images[currentIndex].classList.remove('active'); currentIndex = (currentIndex + 1) % images.length; images[currentIndex].classList.add('active'); }, 3000); }
+            const steps = document.querySelectorAll('.step-content');
+            const screens = document.querySelectorAll('.screen-content');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        steps.forEach(s => s.classList.remove('active'));
+                        entry.target.classList.add('active');
+                        const index = entry.target.getAttribute('data-index');
+                        screens.forEach(s => s.classList.remove('active'));
+                        const activeScreen = document.getElementById(`screen-${index}`);
+                        if(activeScreen) activeScreen.classList.add('active');
+                    }
+                });
+            }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+            steps.forEach(step => observer.observe(step));
         });
     </script>
 </body>
