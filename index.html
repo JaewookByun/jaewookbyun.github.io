@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-34XQER4HXY"></script>
     <script>
@@ -11,18 +11,36 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supsiki - AI Health Coach & Diet HIIT Logger</title>
     
+    <title>Supsiki - AI Health Coach & Diet HIIT Logger</title>
+    <meta name="description" content="Unlock your smartwatch's potential. Supsiki offers AI-powered diet tracking via barcode scan and auto-sync HIIT workouts for Wear OS. Join the open beta.">
+    <meta name="keywords" content="Supsiki, Diet App, HIIT Timer, Wear OS App, Galaxy Watch, Calorie Counter, Workout Logger, Intermittent Fasting, AI Health Coach">
+    <meta name="author" content="ChronoLab">
+    <link rel="canonical" href="https://www.chronolaboratory.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chronolaboratory.com/">
+    <meta property="og:title" content="Supsiki - Dust Off Your Smartwatch">
+    <meta property="og:description" content="Don't let your Galaxy Watch gather dust. Start scientific HIIT & Diet logging with AI. Download now.">
+    <meta property="og:image" content="https://www.chronolaboratory.com/feature1.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.chronolaboratory.com/">
+    <meta property="twitter:title" content="Supsiki - AI Health Coach">
+    <meta property="twitter:description" content="Seamless diet tracking and interval training with your smartwatch.">
+    <meta property="twitter:image" content="https://www.chronolaboratory.com/feature1.jpg">
+
     <link rel="icon" href="supsiki.png" type="image/png">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
+            /* Brand Colors */
             --brand-color: #4f46e5;
             --brand-dark: #3730a3;
             --text-main: #1f2937;
@@ -30,7 +48,8 @@
         }
 
         body {
-            font-family: 'Pretendard', sans-serif;
+            /* Use 'Inter' for a clean, US-tech startup look */
+            font-family: 'Inter', sans-serif;
             color: var(--text-main);
             overflow-x: hidden;
             background-color: #fff;
@@ -80,7 +99,7 @@
         /* Mobile Frame Style */
         .phone-frame {
             width: 300px;
-            height: 600px; /* 9:18 ratio approx */
+            height: 600px; /* Approx 9:18 ratio */
             background: #000;
             border-radius: 40px;
             border: 12px solid #1f2937;
@@ -115,7 +134,7 @@
         }
 
         .step-content {
-            height: 100vh; /* 각 스텝이 충분한 스크롤 영역을 가지도록 */
+            height: 100vh; /* Ensures sufficient scroll area for each step */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -159,7 +178,7 @@
         
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
             border-radius: 20px;
@@ -191,7 +210,7 @@
             </a>
             <div class="ms-auto">
                 <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
-                    앱 다운로드
+                    Download App
                 </a>
             </div>
         </div>
@@ -205,19 +224,19 @@
                         🚀 2026 New Year Challenge
                     </span>
                     <h1 class="hero-headline mb-4">
-                        먼지 쌓인 <strong>스마트 워치</strong>,<br>
-                        심폐소생술 준비됐나요?
+                        Dust Off Your<br><strong>Smartwatch</strong>.<br>
+                        It's Time for a Revival.
                     </h1>
                     <p class="lead text-secondary mb-5">
-                        복잡한 기록은 AI에게 맡기세요.<br>
-                        당신은 운동과 식단에만 집중하면 됩니다.
+                        Stop manual logging. Let AI handle the data.<br>
+                        You just focus on your workout and your meal.
                     </p>
                     <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                         <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center">
-                            <i class="bi bi-google-play me-2"></i> Google Play
+                            <i class="bi bi-google-play me-2"></i> Get on Google Play
                         </a>
                         <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
-                            기능 더보기
+                            Learn More
                         </a>
                     </div>
                 </div>
@@ -243,13 +262,13 @@
                     <div class="sticky-visual">
                         <div class="phone-frame bg-white">
                             <div class="screen-content active" id="screen-1">
-                                <img src="feature1.jpg" alt="Workout" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Watch+Integration'">
+                                <img src="feature1.jpg" alt="HIIT Workout Interface" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Watch+Integration'">
                             </div>
                             <div class="screen-content" id="screen-2">
-                                <img src="feature2.jpg" alt="Meal Tracking" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Easy+Meal+Tracking'">
+                                <img src="feature2.jpg" alt="Barcode Meal Tracking" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Easy+Meal+Tracking'">
                             </div>
                             <div class="screen-content" id="screen-3">
-                                <img src="feature3.jpg" alt="AI Report" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=AI+Daily+Report'">
+                                <img src="feature3.jpg" alt="AI Health Report" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=AI+Daily+Report'">
                             </div>
                         </div>
                     </div>
@@ -260,11 +279,11 @@
                     <div class="step-content active" data-index="1">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-activity"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">심장 박동까지 기록하는<br>인터벌 트레이닝.</h2>
+                            <h2 class="display-5 fw-bold mb-3">Track Every Beat.<br>Master Interval Training.</h2>
                             <p class="lead text-muted">
-                                스마트 워치와 완벽하게 연동됩니다.<br>
-                                HIIT 타이머, 심박수 모니터링까지.<br>
-                                손목 위의 AI 코치가 당신의 한계 돌파를 돕습니다.
+                                Seamless integration with your Smartwatch.<br>
+                                Live HIIT timers and heart rate monitoring right on your wrist.<br>
+                                Your AI coach pushes you past your limits.
                             </p>
                         </div>
                     </div>
@@ -272,11 +291,11 @@
                     <div class="step-content" data-index="2">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-upc-scan"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">바코드만 찍으세요.<br>입력은 1초면 끝.</h2>
+                            <h2 class="display-5 fw-bold mb-3">Just Scan It.<br>Log Meals in Seconds.</h2>
                             <p class="lead text-muted">
-                                오늘 먹은 샌드위치, 편의점 도시락.<br>
-                                일일이 검색하지 마세요. 바코드 스캔 한 번으로<br>
-                                칼로리와 영양 성분이 자동으로 기록됩니다.
+                                Sandwiches, snacks, or convenience foods.<br>
+                                Don't search and type—just scan.<br>
+                                Instantly log calories and macros with a single barcode scan.
                             </p>
                         </div>
                     </div>
@@ -284,11 +303,11 @@
                     <div class="step-content" data-index="3">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-graph-up-arrow"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">오늘 하루,<br>AI가 분석해드립니다.</h2>
+                            <h2 class="display-5 fw-bold mb-3">Your Daily Health,<br>Analyzed by AI.</h2>
                             <p class="lead text-muted">
-                                섭취한 영양소와 소모한 칼로리의 균형.<br>
-                                대사 건강 분석 리포트로 내 몸의 변화를<br>
-                                매일매일 확인하세요.
+                                Balance your intake with your burn.<br>
+                                Get daily metabolic insights and personalized reports<br>
+                                to visualize your body's transformation.
                             </p>
                         </div>
                     </div>
@@ -300,10 +319,10 @@
 
     <section class="video-highlight">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">"편집 없이, 데이터와 영상의 합체"</h2>
+            <h2 class="display-5 fw-bold mb-4">"Data + Video. No Editing Required."</h2>
             <p class="lead text-white-50 mb-5">
-                운동 유튜버, 크리에이터를 위한 Supsiki만의 킬러 기능.<br>
-                심박수, 칼로리, 타이머가 영상 위에 자동으로 입혀집니다.
+                The killer feature for fitness creators and YouTubers.<br>
+                Automatically overlay heart rate, calories, and timers onto your workout videos.
             </p>
             
             <div class="row justify-content-center">
@@ -354,7 +373,7 @@
             // Intersection Observer Setup
             const observerOptions = {
                 root: null,
-                rootMargin: '-50% 0px -50% 0px', // 화면 중앙에 왔을 때 감지
+                rootMargin: '-50% 0px -50% 0px', // Trigger when element hits center of viewport
                 threshold: 0
             };
 
