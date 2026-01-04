@@ -1,256 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-34XQER4HXY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-34XQER4HXY');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoLab - Supsiki</title>
+    <title>Supsiki - AI Health Coach & Diet HIIT Logger</title>
     
     <link rel="icon" href="logo.png" type="image/png">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; overflow-x: hidden; }
-        :root { --brand-color: #4f46e5; --brand-hover: #4338ca; }
-        .text-brand { color: var(--brand-color) !important; }
-        .bg-brand { background-color: var(--brand-color) !important; }
-        .btn-brand { background-color: var(--brand-color); color: white; border: none; padding: 12px 24px; font-weight: 700; box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2); }
-        .btn-brand:hover { background-color: var(--brand-hover); color: white; transform: translateY(-2px); }
-        .navbar { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 1rem 0; }
-        .nav-link { font-weight: 500; color: #6c757d; margin-left: 1rem; }
-        .nav-link:hover { color: var(--brand-color); }
-        .hero-section { padding: 80px 0; background-color: white; }
-        .phone-frame { width: 280px; height: 560px; background: white; border-radius: 40px; border: 10px solid #f1f3f5; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden; margin: 0 auto; }
-        @media (min-width: 768px) { .phone-frame { width: 320px; height: 640px; border-width: 12px; } }
-        .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s; padding: 1rem; }
-        .carousel-image.active { opacity: 1; }
-        .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; height: 100%; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
-        
-        /* QR Link Item Style */
-        .qr-link-item {
-            transition: all 0.2s ease-in-out;
-            border: 1px solid #dee2e6;
+        :root {
+            --brand-color: #4f46e5;
+            --brand-dark: #3730a3;
+            --text-main: #1f2937;
+            --bg-light: #f3f4f6;
         }
-        .qr-link-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-            border-color: var(--brand-color)!important;
-            background-color: #ffffff !important;
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Buttons */
+        .btn-brand {
+            background-color: var(--brand-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+        .btn-brand:hover {
+            background-color: var(--brand-dark);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%);
+            overflow: hidden;
+        }
+        
+        .hero-headline {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Mobile Frame Style */
+        .phone-frame {
+            width: 300px;
+            height: 600px; /* 9:18 ratio approx */
+            background: #000;
+            border-radius: 40px;
+            border: 12px solid #1f2937;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+            z-index: 10;
+        }
+        
+        /* Youtube Shorts Embed inside Phone */
+        .shorts-embed {
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+        }
+
+        /* Interactive Sticky Section */
+        .sticky-container {
+            position: relative;
+            padding: 100px 0;
+        }
+        
+        .sticky-visual {
+            position: sticky;
+            top: 150px;
+            height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-content {
+            height: 100vh; /* 각 스텝이 충분한 스크롤 영역을 가지도록 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0.3;
+            transition: opacity 0.5s;
+        }
+        
+        .step-content.active {
+            opacity: 1;
+        }
+
+        .screen-content {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .screen-content.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        
+        .screen-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Feature Highlight (Video) */
+        .video-highlight {
+            background-color: #111;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-headline { font-size: 2.5rem; }
+            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; }
+            .step-content { height: auto; padding: 40px 0; opacity: 1; }
+            .phone-frame { width: 260px; height: 520px; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md sticky-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2 object-fit-contain">
-                ChronoLab
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+                <img src="https://jaewookbyun.github.io/logo.png" alt="Logo" width="40" height="40" class="me-2">
+                Supsiki
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav text-center mt-3 mt-md-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#qr-links">Scan & Connect</a></li>
-                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:chrono.lab.team@gmail.com">Contact</a></li>
-                    <li class="nav-item dropdown ms-md-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            🌐 English
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="index.html">English</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">한국어</a></li>
-                            <li><a class="dropdown-item" href="index-jp.html">日本語</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="ms-auto">
+                <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
+                    앱 다운로드
+                </a>
             </div>
         </div>
     </nav>
 
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 text-center text-md-start mt-5 mt-md-0">
-                    <span class="badge bg-light text-brand border mb-3 px-3 py-2 rounded-pill">🚀 Open Beta in Progress (Limited to 1000)</span>
-                    <h1 class="display-4 fw-bold mb-4 text-dark">
-                        AI Health Coach, <span class="text-brand">Supsiki</span>
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">
+                        🚀 2026 New Year Challenge
+                    </span>
+                    <h1 class="hero-headline mb-4">
+                        먼지 쌓인 갤럭시 워치,<br>
+                        심폐소생술 준비됐나요?
                     </h1>
                     <p class="lead text-secondary mb-5">
-                        From meal tracking to metabolic analysis and interval training with your watch.<br class="d-none d-md-block">
-                        Meet the best partner for your healthy daily life.
+                        복잡한 기록은 AI에게 맡기세요.<br>
+                        당신은 운동과 식단에만 집중하면 됩니다.
                     </p>
-                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand rounded-3 px-4 py-3 fs-5">
-                            <i class="bi bi-google-play me-2"></i> Download App
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center">
+                            <i class="bi bi-google-play me-2"></i> Google Play
+                        </a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            기능 더보기
                         </a>
                     </div>
-                    
-                    <div class="mt-4 p-3 bg-light border rounded-3 text-secondary small text-start d-inline-block">
-                        <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i><strong>Open Test Notice</strong><br>
-                        Some features may be limited due to ongoing AdMob integration.<br>
-                        Thank you for your understanding.
+                </div>
+                
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="phone-frame">
+                        <iframe class="shorts-embed" 
+                                src="https://www.youtube.com/embed/Iu1lAzE5lhg?autoplay=1&mute=1&loop=1&playlist=Iu1lAzE5lhg&controls=0&rel=0" 
+                                title="Smartwatch CPR" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center position-relative">
-                    <div class="position-absolute top-50 start-50 translate-middle bg-brand opacity-25 rounded-circle" style="width: 300px; height: 300px; filter: blur(60px); z-index: 0;"></div>
-                    <div class="phone-frame z-1">
-                        <div id="appCarouselContainer" class="w-100 h-100 bg-light position-relative">
-                            <div class="d-flex flex-column align-items-center justify-content-center h-100 text-secondary">
-                                <span class="fs-1">📱</span>
-                                <span>Loading...</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="sticky-container bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="sticky-visual">
+                        <div class="phone-frame bg-white">
+                            <div class="screen-content active" id="screen-1">
+                                <img src="screenshot/1.png" alt="Meal Tracking" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Easy+Meal+Tracking'">
+                            </div>
+                            <div class="screen-content" id="screen-2">
+                                <img src="screenshot/5.png" alt="Workout" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=Watch+Integration'">
+                            </div>
+                            <div class="screen-content" id="screen-3">
+                                <img src="screenshot/14.png" alt="AI Report" onerror="this.src='https://placehold.co/300x600/f3f4f6/4f46e5?text=AI+Daily+Report'">
                             </div>
                         </div>
-                        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 bg-secondary opacity-25 rounded-pill" style="width: 100px; height: 4px;"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="features" class="py-5 bg-light">
-        <div class="container py-5">
-            <h2 class="text-center fw-bold mb-5">Key Features</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-upc-scan"></i></div>
-                        <h4 class="fw-bold h5">Easy Meal Tracking</h4>
-                        <p class="text-secondary small mb-0">Just scan the barcode. Record processed and fresh foods easily and accurately.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-watch"></i></div>
-                        <h4 class="fw-bold h5">Watch Integration</h4>
-                        <p class="text-secondary small mb-0">Provides heart rate-based interval training timers and analysis via Galaxy Watch.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-share"></i></div>
-                        <h4 class="fw-bold h5">Workout Overlay</h4>
-                        <p class="text-secondary small mb-0">Create stunning data overlay images of your workout records and share them.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card feature-card p-4 shadow-sm">
-                        <div class="mb-3 text-brand fs-1"><i class="bi bi-clipboard-data"></i></div>
-                        <h4 class="fw-bold h5">AI Daily Report</h4>
-                        <p class="text-secondary small mb-0">Get customized reports analyzing your nutritional balance and exercise patterns.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="qr-links" class="py-5 bg-white">
-        <div class="container py-5">
-            <h2 class="fw-bold mb-5 text-center">Scan & Connect</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
+                <div class="col-lg-6 order-lg-1">
                     
-                    <a href="https://www.chronolaboratory.com/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="homepage.png" class="rounded border bg-white" width="80" height="80" alt="Homepage QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">Homepage</h5>
-                            <small class="text-secondary">ChronoLab Official Site</small>
+                    <div class="step-content active" data-index="1">
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-upc-scan"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">바코드만 찍으세요.<br>입력은 1초면 끝.</h2>
+                            <p class="lead text-muted">
+                                오늘 먹은 샌드위치, 편의점 도시락.<br>
+                                일일이 검색하지 마세요. 바코드 스캔 한 번으로<br>
+                                칼로리와 영양 성분이 자동으로 기록됩니다.
+                            </p>
                         </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
+                    </div>
 
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="googleplay.png" class="rounded border bg-white" width="80" height="80" alt="Google Play QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">App Download</h5>
-                            <small class="text-secondary">Google Play Store</small>
+                    <div class="step-content" data-index="2">
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-danger"><i class="bi bi-activity"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">심장 박동까지 기록하는<br>인터벌 트레이닝.</h2>
+                            <p class="lead text-muted">
+                                갤럭시 워치와 완벽하게 연동됩니다.<br>
+                                HIIT 타이머, 심박수 모니터링까지.<br>
+                                손목 위의 AI 코치가 당신의 한계 돌파를 돕습니다.
+                            </p>
                         </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
+                    </div>
 
-                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="instagram.png" class="rounded border bg-white" width="80" height="80" alt="Instagram QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">Instagram</h5>
-                            <small class="text-secondary">@chronolabcorp</small>
+                    <div class="step-content" data-index="3">
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-success"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">오늘 하루,<br>AI가 분석해드립니다.</h2>
+                            <p class="lead text-muted">
+                                섭취한 영양소와 소모한 칼로리의 균형.<br>
+                                대사 건강 분석 리포트로 내 몸의 변화를<br>
+                                매일매일 확인하세요.
+                            </p>
                         </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="supsikitv.png" class="rounded border bg-white" width="80" height="80" alt="YouTube QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">Supsiki TV</h5>
-                            <small class="text-secondary">Official YouTube Channel</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
-
-                    <a href="https://forms.gle/ggYUwtttnTk5cTNV6" target="_blank" class="qr-link-item d-flex align-items-center p-3 mb-3 bg-light rounded text-decoration-none text-dark">
-                        <img src="survey.png" class="rounded border bg-white" width="80" height="80" alt="Survey QR">
-                        <div class="ms-4 text-start">
-                            <h5 class="fw-bold mb-1">ILS Survey</h5>
-                            <small class="text-secondary">Participate in our survey</small>
-                        </div>
-                        <i class="bi bi-chevron-right ms-auto fs-4 text-muted"></i>
-                    </a>
+                    </div>
 
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-5 border-top">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="mb-3 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold mb-1">ChronoLab</h5>
-                    <small class="text-muted">© 2025 ChronoLab. All rights reserved.</small>
-                </div>
-                <div class="d-flex gap-3 align-items-center flex-wrap justify-content-center">
-                    <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-youtube text-danger me-1"></i>YouTube
-                    </a>
-                    <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-instagram text-danger me-1"></i>Instagram
-                    </a>
-                    <a href="https://www.linkedin.com/in/jaewook-byun/" target="_blank" class="text-decoration-none text-secondary small">
-                        <i class="bi bi-linkedin text-primary me-1"></i>LinkedIn
-                    </a>
-                    <a href="terms.html" class="text-decoration-none text-secondary small">Terms of Service</a>
-                    <a href="privacy.html" class="text-decoration-none text-dark fw-bold small">Privacy Policy</a>
-                    <a href="mailto:chrono.lab.team@gmail.com" class="text-decoration-none text-secondary small">Contact</a>
+    <section class="video-highlight">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">"편집 없이, 데이터와 영상의 합체"</h2>
+            <p class="lead text-white-50 mb-5">
+                운동 유튜버, 크리에이터를 위한 Supsiki만의 킬러 기능.<br>
+                심박수, 칼로리, 타이머가 영상 위에 자동으로 입혀집니다.
+            </p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0cx1vOjsAes?rel=0" 
+                                title="Auto-Sync Heart Rate & Timer" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-5">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-3">ChronoLab</h5>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <a href="https://www.youtube.com/@chronolab-supsiki" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:chrono.lab.team@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="text-muted small">
+                © 2026 ChronoLab. All rights reserved.<br>
+                <a href="terms.html" class="text-decoration-none text-muted">Terms</a> | 
+                <a href="privacy.html" class="text-decoration-none text-muted">Privacy</a>
+            </p>
+            <a href="https://www.chronolaboratory.com/" class="btn btn-outline-secondary btn-sm mt-3">Company Home</a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Init AOS Animation
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Interactive Scroll Logic
         document.addEventListener('DOMContentLoaded', () => {
-            const totalImages = 18; const folderPath = 'screenshot/'; const container = document.getElementById('appCarouselContainer');
-            let imagesMarkup = '';
-            for (let i = 1; i <= totalImages; i++) {
-                imagesMarkup += `<img src="${folderPath}${i}.png" class="carousel-image ${i === 1 ? 'active' : ''}" alt="Screen ${i}" onerror="this.style.display='none'">`;
-            }
-            container.innerHTML = imagesMarkup;
-            const images = container.querySelectorAll('.carousel-image'); let currentIndex = 0;
-            if(images.length > 0) { setInterval(() => { images[currentIndex].classList.remove('active'); currentIndex = (currentIndex + 1) % images.length; images[currentIndex].classList.add('active'); }, 3000); }
+            const steps = document.querySelectorAll('.step-content');
+            const screens = document.querySelectorAll('.screen-content');
+
+            // Intersection Observer Setup
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px', // 화면 중앙에 왔을 때 감지
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Activate Text
+                        steps.forEach(s => s.classList.remove('active'));
+                        entry.target.classList.add('active');
+
+                        // Activate Phone Screen
+                        const index = entry.target.getAttribute('data-index');
+                        screens.forEach(s => s.classList.remove('active'));
+                        
+                        const activeScreen = document.getElementById(`screen-${index}`);
+                        if(activeScreen) activeScreen.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            steps.forEach(step => observer.observe(step));
         });
     </script>
 </body>
