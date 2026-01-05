@@ -1,24 +1,30 @@
-# 📢 Update Notice (v1.0.2.3)
+# 📢 Urgent Update Notice (v1.0.2.4)
 
-Hello from the **Supsiki** Team!
-We have released a new update with new features and bug fixes to improve your experience.
+Hello, this is the developer of **Supsiki**.
 
-## 🛠️ Bug Fixes
-### ✅ Known Issue Resolved (2026-01-04)
-- Fixed major issues reported on **Jan 4, 2026**. You can now use the app in a more stable environment.
+Since the last update, many of you have shown great interest in the newly added **'Stretching Guide', 'Cooldown Guide', and 'AI Workout Analysis'** features.
 
-## ✨ New Features
-### 📢 1. Notice Feature Support
-- You can now check update news and important announcements directly within the app. (This screen you are looking at!)
+I sincerely thank you.
 
-### 🧘 2. Cooldown Guide (AD)
-- Added a **Cooldown Guide** to help you safely lower your heart rate and recover after intense workouts. (Available after watching an ad)
+However, we identified an unfortunate issue where ads were not loading properly in some user environments, preventing access to these useful features even when users wanted to use them.
 
-### 📊 3. Workout Final Analysis (AD)
-- Provides an **AI Precision Analysis Report** based on your performance after finishing a workout. Check your workout efficiency! (Available after watching an ad)
+I apologize for not being able to assist you during the most critical moments—before, during, and after your workouts. We deployed an **urgent hotfix** immediately upon discovering the issue.
 
----
-Thank you for using Supsiki.
-If you have any questions, please feel free to contact us anytime!
+## 🛠️ Hotfix Details
 
-*Jan 5, 2026 - The Supsiki Team*
+### ✅ Ad System & Feature Stabilization
+- **Resolved Connectivity Issues:** Fixed a bug where **'AI Workout Analysis'** and **'Cooldown Guide'** requests would receive no response depending on network environments or regions (including overseas).
+
+## 🗣️ Feedback Channel
+If you experience any inconvenience or have suggestions while using the app, please leave a comment on the **Developer YouTube Community** below.
+
+I promise to **review every single comment with sincerity and respond accordingly**, ensuring not even the smallest suggestion is missed.
+
+👉 [Go to Developer YouTube Community](https://www.youtube.com/@bjw0829/posts)
+
+- **I will monitor more closely and listen more carefully to ensure that not a single user misses out on Supsiki's care.**
+Have a healthy day with Supsiki!
+
+Thank you.
+
+*2026.01.05 from Supsiki*
