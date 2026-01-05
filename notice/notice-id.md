@@ -1,24 +1,30 @@
-# 📢 Pemberitahuan Pembaruan (v1.0.2.3)
+# 📢 Pemberitahuan Pembaruan Mendesak (v1.0.2.4)
 
-Halo dari Tim **Supsiki**!
-Kami telah merilis pembaruan baru dengan fitur tambahan dan perbaikan bug untuk pengalaman yang lebih baik.
+Halo, ini pengembang **Supsiki**.
 
-## 🛠️ Perbaikan Bug
-### ✅ Masalah yang Diketahui Telah Diperbaiki (04-01-2026)
-- Masalah utama yang dilaporkan pada **4 Januari 2026** telah diperbaiki. Sekarang Anda dapat menggunakan aplikasi dengan lebih stabil.
+Sejak pembaruan terakhir, banyak dari Anda telah menunjukkan minat yang besar pada fitur-fitur yang baru ditambahkan yaitu **'Panduan Peregangan', 'Panduan Pendinginan', dan 'Analisis Latihan AI'**.
 
-## ✨ Fitur Baru
-### 📢 1. Fitur Pengumuman
-- Sekarang Anda dapat memeriksa berita pembaruan dan info penting langsung di dalam aplikasi. (Layar yang sedang Anda lihat ini!)
+Saya ucapkan terima kasih banyak.
 
-### 🧘 2. Panduan Pendinginan (AD)
-- **Panduan Pendinginan** (Cooldown) telah ditambahkan untuk membantu menurunkan detak jantung Anda dengan aman setelah latihan intens. (Tersedia setelah menonton iklan)
+Namun, kami menemukan masalah yang disayangkan di mana iklan tidak dimuat dengan benar di lingkungan beberapa pengguna, sehingga fitur-fitur berguna ini tidak dapat digunakan meskipun Anda ingin menggunakannya.
 
-### 📊 3. Analisis Akhir Latihan (AD)
-- Dapatkan **Laporan Analisis AI** yang mendalam berdasarkan performa Anda setelah selesai berolahraga. Cek efisiensi latihan Anda! (Tersedia setelah menonton iklan)
+Saya meminta maaf karena tidak dapat membantu Anda pada saat-saat yang paling penting—sebelum, selama, dan setelah latihan Anda. Kami segera melakukan **perbaikan cepat (hotfix)** begitu masalah ini ditemukan.
 
----
-Terima kasih telah menggunakan Supsiki.
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami!
+## 🛠️ Detail Perbaikan (Hotfix)
 
-*05-01-2026 - Tim Supsiki*
+### ✅ Stabilisasi Sistem Iklan & Fitur
+- **Masalah Konektivitas Teratasi:** Memperbaiki bug di mana permintaan **'Analisis Latihan AI'** dan **'Panduan Pendinginan'** tidak mendapatkan respons tergantung pada lingkungan jaringan atau wilayah (termasuk luar negeri).
+
+## 🗣️ Saluran Komunikasi
+Jika Anda mengalami ketidaknyamanan atau memiliki saran saat menggunakan aplikasi, silakan tinggalkan komentar di **Komunitas YouTube Pengembang** di bawah ini.
+
+Saya berjanji untuk **memeriksa setiap komentar dengan tulus dan menanggapinya**, memastikan tidak ada saran sekecil apa pun yang terlewatkan.
+
+👉 [Buka Komunitas YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
+
+- **Saya akan memantau lebih dekat dan mendengarkan lebih cermat untuk memastikan tidak ada satu pun pengguna yang melewatkan layanan dari Supsiki.**
+Semoga hari Anda sehat bersama Supsiki!
+
+Terima kasih.
+
+*05.01.2026 dari Supsiki*
