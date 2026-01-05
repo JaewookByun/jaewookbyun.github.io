@@ -1,24 +1,30 @@
-# 📢 Aviso de Atualização (v1.0.2.3)
+# 📢 Aviso de Atualização Urgente (v1.0.2.4)
 
-Olá da equipe **Supsiki**!
-Lançamos uma nova atualização com melhorias e correções para aprimorar sua experiência.
+Olá, aqui é o desenvolvedor do **Supsiki**.
 
-## 🛠️ Correções de Bugs
-### ✅ Problema Conhecido Resolvido (04/01/2026)
-- Corrigimos os principais erros relatados em **4 de janeiro de 2026**. O aplicativo está agora mais estável.
+Desde a última atualização, muitos de vocês demonstraram grande interesse nos novos recursos: **'Guia de Alongamento', 'Guia de Resfriamento' e 'Análise de Treino com IA'**.
 
-## ✨ Novas Funcionalidades
-### 📢 1. Suporte a Avisos
-- Agora você pode conferir novidades e anúncios importantes diretamente no aplicativo. (Esta tela que você está vendo!)
+Agradeço sinceramente.
 
-### 🧘 2. Guia de Resfriamento (AD)
-- Adicionamos um **Guia de Resfriamento** (Cooldown) para ajudar a baixar sua frequência cardíaca com segurança após treinos intensos. (Disponível após assistir a um anúncio)
+No entanto, identificamos um problema onde os anúncios não carregavam corretamente no ambiente de alguns usuários, impedindo o uso desses recursos úteis, mesmo quando desejavam utilizá-los.
 
-### 📊 3. Análise Final de Treino (AD)
-- Receba um **Relatório de Análise de IA** detalhado sobre seu desempenho ao finalizar o treino. Verifique a eficiência do seu exercício! (Disponível após assistir a um anúncio)
+Peço desculpas por não ter conseguido ajudar nos momentos mais importantes—antes, durante e depois do treino. Realizamos uma **correção urgente (hotfix)** imediatamente após a descoberta do problema.
 
----
-Obrigado por usar o Supsiki.
-Se tiver dúvidas, entre em contato conosco a qualquer momento!
+## 🛠️ Detalhes da Correção (Hotfix)
 
-*05/01/2026 - Equipe Supsiki*
+### ✅ Estabilização do Sistema de Anúncios e Recursos
+- **Problemas de Conectividade Resolvidos:** Corrigimos um erro onde as solicitações de **'Análise de Treino com IA'** e **'Guia de Resfriamento'** não recebiam resposta dependendo do ambiente de rede ou da região (incluindo no exterior).
+
+## 🗣️ Canal de Comunicação
+Se você enfrentar algum inconveniente ou tiver sugestões ao usar o aplicativo, por favor, deixe um comentário na **Comunidade do Desenvolvedor no YouTube** abaixo.
+
+Prometo **verificar cada comentário com sinceridade e responder**, garantindo que nenhuma sugestão, por menor que seja, passe despercebida.
+
+👉 [Ir para a Comunidade do Desenvolvedor no YouTube](https://www.youtube.com/@bjw0829/posts)
+
+- **Vou monitorar mais de perto e ouvir com mais atenção para garantir que nenhum usuário fique sem os cuidados do Supsiki.**
+Tenha um dia saudável com o Supsiki!
+
+Obrigado.
+
+*05.01.2026 de Supsiki*
