@@ -1,3 +1,5 @@
+[Peninjauan Google Play Store saat ini sedang tertunda. Hal ini akan tercermin dalam pembaruan v1.0.2.4.]
+
 # 📢 Pemberitahuan Pembaruan Mendesak (v1.0.2.4)
 
 Halo, ini pengembang **Supsiki**.
@@ -27,4 +29,4 @@ Semoga hari Anda sehat bersama Supsiki!
 
 Terima kasih.
 
-*05.01.2026 dari Supsiki*
+*06.01.2026 dari Supsiki*
