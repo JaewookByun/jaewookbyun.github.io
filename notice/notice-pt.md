@@ -1,3 +1,5 @@
+[A análise da Google Play Store está atualmente atrasada. Isso será refletido na atualização v1.0.2.4.]
+
 # 📢 Aviso de Atualização Urgente (v1.0.2.4)
 
 Olá, aqui é o desenvolvedor do **Supsiki**.
@@ -27,4 +29,4 @@ Tenha um dia saudável com o Supsiki!
 
 Obrigado.
 
-*05.01.2026 de Supsiki*
+*06.01.2026 de Supsiki*
