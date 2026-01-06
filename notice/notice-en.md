@@ -1,3 +1,5 @@
+[The Google Play Store review is currently delayed. This will be reflected in the v1.0.2.4 update.]
+
 # 📢 Urgent Update Notice (v1.0.2.4)
 
 Hello, this is the developer of **Supsiki**.
@@ -27,4 +29,4 @@ Have a healthy day with Supsiki!
 
 Thank you.
 
-*2026.01.05 from Supsiki*
+*2026.01.06 from Supsiki*
