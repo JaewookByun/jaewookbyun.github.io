@@ -1,32 +1,39 @@
-[The Google Play Store review is currently delayed. This will be reflected in the v1.0.2.4 update.]
+# 📢 Urgent Notice: App Crash Issue & How to Resolve
 
-# 📢 Urgent Update Notice (v1.0.2.4)
+Hello, this is the **Supsiki** developer.
 
-Hello, this is the developer of **Supsiki**.
+First of all, **if you are reading this post, it means your Supsiki app is safe.** You can rest assured! 😄
 
-Since the last update, many of you have shown great interest in the newly added **'Stretching Guide', 'Cooldown Guide', and 'AI Workout Analysis'** features.
+However, some users are currently experiencing crashes (forced termination) immediately upon launching the app. We are sharing this guide to help those affected and to inform you of the solution.
 
-I sincerely thank you.
+## 🚨 Issue & Cause
+In specific versions (v1.0.2.3 ~ v1.0.2.4.1), a **crash occurs during the 'Auto Update' process.**
 
-However, we identified an unfortunate issue where ads were not loading properly in some user environments, preventing access to these useful features even when users wanted to use them.
+To maximize user convenience, we introduced a **'Seamless Update'** feature to load the latest version immediately upon launch. However, **a conflict occurred between the Google Play API's security policy (Intent Lifecycle) and certain device environments.** We have identified the root cause and have already taken action.
 
-I apologize for not being able to assist you during the most critical moments—before, during, and after your workouts. We deployed an **urgent hotfix** immediately upon discovering the issue.
+## 🛠️ Solution (Until v1.0.3 Release)
+We are currently preparing **v1.0.3**, which includes a fundamental fix for this issue along with **new features**.
+However, for the versions currently experiencing this problem, the app cannot recover itself through internal logic (since it crashes on start).
 
-## 🛠️ Hotfix Details
+We apologize for the inconvenience, but **please visit the Google Play Store directly to update manually until v1.0.3 is released.**
 
-### ✅ Ad System & Feature Stabilization
-- **Resolved Connectivity Issues:** Fixed a bug where **'AI Workout Analysis'** and **'Cooldown Guide'** requests would receive no response depending on network environments or regions (including overseas).
+1. Open the **[Google Play Store]** app on your phone.
+2. Search for **'Supsiki'**.
+3. Tap the **[Update]** button.
 
-## 🗣️ Feedback Channel
-If you experience any inconvenience or have suggestions while using the app, please leave a comment on the **Developer YouTube Community** below.
+---
 
-I promise to **review every single comment with sincerity and respond accordingly**, ensuring not even the smallest suggestion is missed.
+## 🗣️ Support & Feedback
+If you experience any inconvenience, have questions about how to use the app, or want to make a suggestion, please let us know through the channel below. We will check everything thoroughly.
 
+### Developer YouTube Community
+We read every comment carefully and reply sincerely.
 👉 [Go to Developer YouTube Community](https://www.youtube.com/@bjw0829/posts)
 
-- **I will monitor more closely and listen more carefully to ensure that not a single user misses out on Supsiki's care.**
-Have a healthy day with Supsiki!
+**We will listen more carefully and ensure that not a single user misses out on Supsiki's care.**
+
+We sincerely apologize once again for the inconvenience.
 
 Thank you.
 
-*2026.01.06 from Supsiki*
+*2026.01.08 Supsiki*
