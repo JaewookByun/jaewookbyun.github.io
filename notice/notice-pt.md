@@ -1,39 +1,40 @@
-# 📢 Aviso Urgente: Problema de Fechamento do App e Solução
+# 🚀 Próxima Atualização v1.0.3: Suporte a Relógios Health Connect (ex: Galaxy Fit)
 
 Olá, aqui é o desenvolvedor do **Supsiki**.
 
-Primeiramente, **se você está lendo esta mensagem, significa que o seu aplicativo Supsiki está seguro.** Pode ficar tranquilo! 😄
+Seguindo nosso aviso de emergência anterior, a prometida **atualização de estabilidade e expansão de recursos (v1.0.3)** está atualmente **em análise pelo Google Play**!
+Salvo problemas maiores, ela estará disponível para você muito em breve. Agradeço sinceramente pela sua paciência e confiança.
 
-No entanto, alguns usuários estão enfrentando problemas de encerramento forçado (*crash*) imediatamente após abrir o aplicativo. Compartilhamos este guia para ajudar os afetados e informar a solução.
+## ✅ O que muda?
 
-## 🚨 Problema e Causa
-Em versões específicas (v1.0.2.3 ~ v1.0.2.4.1), foi confirmado um **erro de fechamento do app durante o processo de 'Atualização Automática'.**
+### 1. Suporte a Relógios Health Connect (ex: Galaxy Fit)
+Tudo bem se o seu relógio não usa Wear OS (como o Galaxy Fit).
+Se o aplicativo do seu relógio (ex: Samsung Health) **envia com sucesso os dados de treino para o Health Connect**, o Supsiki agora pode utilizar esses dados.
 
-Para maximizar a conveniência do usuário, introduzimos o recurso de **'Atualização Fluida' (Seamless Update)** para carregar a versão mais recente assim que o app é aberto. Contudo, **ocorreu um conflito entre a política de segurança da API do Google Play (Ciclo de Vida da Intent) e o ambiente de certos dispositivos.** Já identificamos a causa raiz e tomamos as medidas necessárias.
+### 2. Modo de Treino Híbrido (Relógios sem Wear OS)
+Mesmo que seu relógio não sincronize diretamente com o Supsiki, tente isto:
+**"Use o timer do Supsiki no celular e registre o treino no seu relógio."**
+Assim que os dados chegarem ao Health Connect após o treino, o Supsiki irá mesclá-los com o registro do timer para fornecer uma **análise precisa** e uma imagem de **#TreinoConcluído** (#WorkoutComplete).
 
-## 🛠️ Solução (Até o lançamento da v1.0.3)
-Estamos preparando a **versão v1.0.3**, que incluirá a correção definitiva para este problema, além de **novas funcionalidades**.
-Porém, nas versões que apresentam o problema atualmente, o aplicativo não consegue se recuperar sozinho através da lógica interna (pois fecha ao iniciar).
-
-Pedimos desculpas pelo inconveniente, mas **por favor, visite a Google Play Store diretamente para fazer a atualização manual até que a v1.0.3 seja lançada.**
-
-1. Abra o aplicativo **[Google Play Store]** no seu celular.
-2. Pesquise por **'Supsiki'**.
-3. Toque no botão **[Atualizar]**.
+### 3. Melhorias de Estabilidade e Guia de Atualização
+Corrigimos o problema de falha (crash) da versão anterior.
+**Importante:** Assim que a atualização for lançada, **o aplicativo fechará forçadamente ao abrir devido ao erro.** Pedimos desculpas pelo inconveniente, mas por favor, **abra a Google Play Store diretamente** e toque manualmente em **[Atualizar]**. (Esta é uma correção única!)
 
 ---
 
-## 🗣️ Suporte e Feedback
-Se você estiver enfrentando dificuldades, tiver dúvidas sobre como usar o app ou quiser fazer uma sugestão, por favor, entre em contato através do canal abaixo. Verificaremos tudo com muita atenção.
+## 📢 Precisamos da sua ajuda!
+Ao visualizar registros do Health Connect, você pode ver um nome de pacote bruto (ex: `com.sec.android.app.shealth`) em vez do nome do aplicativo.
+Se você encontrar algum, por favor, relate nos **comentários do YouTube**! Nós o atualizaremos para um nome legível no próximo patch.
 
-### Comunidade do Desenvolvedor no YouTube
-Lemos cada comentário cuidadosamente e respondemos com toda a sinceridade.
+👉 [Relatar via Comentário no YouTube](http://youtube.com/post/UgkxkpEzP7_5MnZt4ZWF2WhLHLjPgEPScdcO?si=zP229-cA0xmktVNo)
+
+## 🗣️ Contato e Feedback
+Se você tiver problemas, dúvidas ou sugestões, entre em contato pelo canal abaixo. Farei o meu melhor para verificar e resolver.
+
+### Comunidade do YouTube do Desenvolvedor
+Leio cada comentário com atenção e tento o meu melhor para responder.
 👉 [Ir para a Comunidade do YouTube](https://www.youtube.com/@bjw0829/posts)
-
-**Vamos ouvir com mais atenção e garantir que nenhum usuário fique sem os cuidados do Supsiki.**
-
-Mais uma vez, pedimos sinceras desculpas pelo transtorno.
 
 Obrigado.
 
-*08.01.2026 Supsiki*
+*16 de Jan de 2026, Desenvolvedor do Supsiki*
