@@ -1,26 +1,25 @@
-# 🌏 Global Service Notice & Upcoming v1.0.3 Update (Under Review)
+# 🌏 Global Service Notice & Upcoming v1.0.4 Update (Under Review)
 
 Hello, this is the **Supsiki** Team.
 
-The promised **stability and feature expansion update (v1.0.3)** is currently **under review by Google Play**! Barring any major issues, it should be available to you very soon. Thank you sincerely for your patience and trust.
+The **v1.0.4 update**, designed to help you build healthy habits, is currently **under review by Google Play**! Barring any major issues, it should be available to you very soon. Thank you sincerely for your patience and trust.
 
 ---
 
 ### ✅ What's Changing?
 
-#### 1. Health Connect Watch Support (e.g., Galaxy Fit)
-* It is okay if your watch does not run Wear OS (like the Galaxy Fit).
-* If your watch app (e.g., Samsung Health) **successfully sends workout data to Health Connect**, Supsiki can now utilize that data.
+#### 1. Interval Training Starter Pack (Beginner Routines)
+* Not sure how to start interval training?
+* We've added **3 simple recommended routines** specifically for beginners. No complex settings—just click and start immediately!
 
-#### 2. Hybrid Workout Mode (Non-Wear OS Watches)
-* Even if your watch doesn't directly sync with Supsiki, try this:
-* **"Use the Supsiki timer on your phone, and track the workout on your watch."**
-* Once the data reaches Health Connect after your workout, Supsiki will merge it with the timer record to provide **precise analysis** and a **#WorkoutComplete** image.
+#### 2. 'Smart Notifications' for Consistency
+* Supsiki will help you stay on track with new alert features:
+* **Morning Alert:** A greeting to start your day with energy and focus on your health.
+* **External Workout Alert:** If a workout from another app (like Samsung Health) is detected via **Health Connect**, Supsiki will notify you so you don't miss a record.
 
-#### 3. Stability Improvements & Update Guide
-* We have improved the crash issues reported in the previous version.
-* **Important:** Once the update is released, **the app will force close upon launch due to an error.**
-* We apologize for the inconvenience, but please **open the Google Play Store directly** and manually tap **[Update]**. (This is a one-time fix!)
+#### 3. Expanded Multilingual Support
+* Supsiki is going global!
+* In addition to existing languages, we now support **German, French, Italian, Spanish, Dutch, Vietnamese, Thai, Malay, and Simplified Chinese.** Enjoy Supsiki with more natural translations worldwide.
 
 ---
 
@@ -55,4 +54,4 @@ The promised **stability and feature expansion update (v1.0.3)** is currently **
 
 Thank you.
 
-*Jan 16, 2026 - The Supsiki Team*
+*Jan 29, 2026 - The Supsiki Team*
