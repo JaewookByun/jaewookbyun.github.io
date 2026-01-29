@@ -1,35 +1,32 @@
-# 🚀 Upcoming v1.0.3 Update: Health Connect Watch Support (e.g., Galaxy Fit)
+# 🚀 v1.0.4 Update Coming Soon: Beginner Workouts, Smart Alerts & Global Expansion
 
 Hello, this is the developer of **Supsiki**.
 
-Following our previous emergency notice, the promised **stability and feature expansion update (v1.0.3)** is currently **under review by Google Play**!
-Barring any major issues, it should be available to you very soon. Thank you sincerely for your patience and trust.
+The **v1.0.4 update**, designed to help you build healthy habits, is currently **under review by Google Play**!
+This version makes it easier for exercise beginners to get started and expands features for users all around the world.
 
-## ✅ What's Changing?
+## ✅ What’s New?
 
-### 1. Health Connect Watch Support (e.g., Galaxy Fit)
-It is okay if your watch does not run Wear OS (like the Galaxy Fit).
-If your watch app (e.g., Samsung Health) **successfully sends workout data to Health Connect**, Supsiki can now utilize that data.
+### 1. Interval Training Starter Pack (Routines for Beginners) 🏃
+"Know interval training is good, but don't know where to start?"
+Don't worry anymore. We've added **3 simple recommended routines** specifically for users who are new to interval training. No complex settings needed—just click and start right away!
 
-### 2. Hybrid Workout Mode (Non-Wear OS Watches)
-Even if your watch doesn't directly sync with Supsiki, try this:
-**"Use the Supsiki timer on your phone, and track the workout on your watch."**
-Once the data reaches Health Connect after your workout, Supsiki will merge it with the timer record to provide **precise analysis** and a **#WorkoutComplete** image.
+### 2. 'Smart Notifications' to Keep You on Track 🔔
+Consistency is key, so Supsiki will make sure you don't forget.
+* **Morning Alert:** A morning greeting to start your day with energy and wish you a healthy day.
+* **External Workout Alert:** If a workout record from another app (like Samsung Health) is detected via **Health Connect**, Supsiki will let you know immediately.
 
-### 3. Stability Improvements & Update Guide
-We have fixed the crash issue from the previous version.
-**Important:** Once the update is released, **the app will force close upon launch due to the error.** We apologize for the inconvenience, but please **open the Google Play Store directly** and manually tap **[Update]**. (This is a one-time fix!)
+### 3. Expanding to the World: Multilingual Support 🌍
+Supsiki now covers Europe and Asia!
+In addition to existing languages, we now support **German, French, Italian, Spanish, Dutch, Vietnamese, Thai, Malay, and Simplified Chinese**. Enjoy Supsiki anywhere in the world with more natural translations.
 
 ---
 
-## 📢 We Need Your Help!
-When viewing Health Connect records, you might see a raw package name (e.g., `com.sec.android.app.shealth`) instead of the app name.
-If you spot one, please report it in the **YouTube comments**! We will update it to a readable name in the next patch.
+## 📢 A Note from the Developer
+This update focuses on lowering the barrier to entry for those starting to exercise for the first time and preparing Supsiki to leap forward as a global service. I hope Supsiki becomes a reliable partner in your daily health journey.
 
-👉 [Report via YouTube Comment](http://youtube.com/post/UgkxkpEzP7_5MnZt4ZWF2WhLHLjPgEPScdcO?si=zP229-cA0xmktVNo)
-
-## 🗣️ Contact & Feedback
-If you have any issues, inquiries, or suggestions, please reach out via the channel below. I will do my best to verify and resolve them.
+## 🗣️ Community & Support
+If you have any inconveniences, questions, or suggestions, please feel free to reach out.
 
 ### Developer YouTube Community
 I read every comment carefully and try my best to respond.
@@ -37,4 +34,4 @@ I read every comment carefully and try my best to respond.
 
 Thank you.
 
-*Jan 16, 2026, Supsiki Developer*
+*2026.01.29 Supsiki*
