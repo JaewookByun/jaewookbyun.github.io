@@ -1,40 +1,37 @@
-# 🚀 Próxima Atualização v1.0.3: Suporte a Relógios Health Connect (ex: Galaxy Fit)
+# 🚀 Atualização v1.0.4 em Breve: Treinos para Iniciantes, Notificações Inteligentes e Expansão Global
 
 Olá, aqui é o desenvolvedor do **Supsiki**.
 
-Seguindo nosso aviso de emergência anterior, a prometida **atualização de estabilidade e expansão de recursos (v1.0.3)** está atualmente **em análise pelo Google Play**!
-Salvo problemas maiores, ela estará disponível para você muito em breve. Agradeço sinceramente pela sua paciência e confiança.
+A atualização **v1.0.4**, projetada para ajudar você a criar hábitos saudáveis, está atualmente **em análise pelo Google Play**!
+Esta versão facilita o início para quem é novo nos exercícios e expande recursos para usuários em todo o mundo.
 
-## ✅ O que muda?
+## ✅ O que há de novo?
 
-### 1. Suporte a Relógios Health Connect (ex: Galaxy Fit)
-Tudo bem se o seu relógio não usa Wear OS (como o Galaxy Fit).
-Se o aplicativo do seu relógio (ex: Samsung Health) **envia com sucesso os dados de treino para o Health Connect**, o Supsiki agora pode utilizar esses dados.
+### 1. Pacote Inicial de Treino Intervalado (Rotinas para Iniciantes) 🏃
+"Sabe que o treino intervalado é bom, mas não sabe por onde começar?"
+Não se preocupe mais. Adicionamos **3 rotinas recomendadas simples** especificamente para usuários que são novos no treino intervalado. Sem configurações complexas — basta clicar e começar imediatamente!
 
-### 2. Modo de Treino Híbrido (Relógios sem Wear OS)
-Mesmo que seu relógio não sincronize diretamente com o Supsiki, tente isto:
-**"Use o timer do Supsiki no celular e registre o treino no seu relógio."**
-Assim que os dados chegarem ao Health Connect após o treino, o Supsiki irá mesclá-los com o registro do timer para fornecer uma **análise precisa** e uma imagem de **#TreinoConcluído** (#WorkoutComplete).
+### 2. 'Notificações Inteligentes' para Manter o Foco 🔔
+A consistência é a chave, então o Supsiki garantirá que você não se esqueça.
+* **Alerta Matinal:** Uma saudação matinal para começar o dia com energia e desejar um dia saudável.
+* **Alerta de Treino Externo:** Se um registro de treino de outro aplicativo (como o Samsung Health) for detectado via **Health Connect**, o Supsiki avisará você imediatamente.
 
-### 3. Melhorias de Estabilidade e Guia de Atualização
-Corrigimos o problema de falha (crash) da versão anterior.
-**Importante:** Assim que a atualização for lançada, **o aplicativo fechará forçadamente ao abrir devido ao erro.** Pedimos desculpas pelo inconveniente, mas por favor, **abra a Google Play Store diretamente** e toque manualmente em **[Atualizar]**. (Esta é uma correção única!)
+### 3. Expandindo para o Mundo: Suporte Multilíngue 🌍
+O Supsiki agora cobre a Europa e a Ásia!
+Além dos idiomas existentes, agora oferecemos suporte a **Alemão, Francês, Italiano, Espanhol, Holandês, Vietnamita, Tailandês, Malaio e Chinês Simplificado**. Aproveite o Supsiki em qualquer lugar do mundo com traduções mais naturais.
 
 ---
 
-## 📢 Precisamos da sua ajuda!
-Ao visualizar registros do Health Connect, você pode ver um nome de pacote bruto (ex: `com.sec.android.app.shealth`) em vez do nome do aplicativo.
-Se você encontrar algum, por favor, relate nos **comentários do YouTube**! Nós o atualizaremos para um nome legível no próximo patch.
+## 📢 Nota do Desenvolvedor
+Esta atualização foca em diminuir a barreira de entrada para quem está começando a se exercitar pela primeira vez e em preparar o Supsiki para avançar como um serviço global. Espero que o Supsiki se torne um parceiro confiável em sua jornada diária de saúde.
 
-👉 [Relatar via Comentário no YouTube](http://youtube.com/post/UgkxkpEzP7_5MnZt4ZWF2WhLHLjPgEPScdcO?si=zP229-cA0xmktVNo)
+## 🗣️ Comunidade e Suporte
+Se tiver algum inconveniente, dúvida ou sugestão, sinta-se à vontade para entrar em contato.
 
-## 🗣️ Contato e Feedback
-Se você tiver problemas, dúvidas ou sugestões, entre em contato pelo canal abaixo. Farei o meu melhor para verificar e resolver.
-
-### Comunidade do YouTube do Desenvolvedor
-Leio cada comentário com atenção e tento o meu melhor para responder.
-👉 [Ir para a Comunidade do YouTube](https://www.youtube.com/@bjw0829/posts)
+### Comunidade do Desenvolvedor no YouTube
+Leio todos os comentários com atenção e faço o meu melhor para responder.
+👉 [Ir para a Comunidade do Desenvolvedor no YouTube](https://www.youtube.com/@bjw0829/posts)
 
 Obrigado.
 
-*16 de Jan de 2026, Desenvolvedor do Supsiki*
+*29.01.2026 Supsiki*
