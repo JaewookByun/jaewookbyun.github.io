@@ -1,40 +1,37 @@
-# 🚀 Update Mendatang v1.0.3: Dukungan Jam Health Connect (cth: Galaxy Fit)
+# 🚀 Pembaruan v1.0.4 Segera Hadir: Latihan Pemula, Notifikasi Cerdas & Ekspansi Global
 
 Halo, ini pengembang **Supsiki**.
 
-Menyusul pemberitahuan darurat kami sebelumnya, **update stabilitas dan perluasan fitur (v1.0.3)** yang dijanjikan saat ini sedang **sedang ditinjau oleh Google Play**!
-Jika tidak ada masalah besar, update ini akan segera tersedia untuk Anda. Terima kasih banyak atas kesabaran dan kepercayaan Anda.
+Pembaruan **v1.0.4**, yang dirancang untuk membantu Anda membangun kebiasaan sehat, saat ini sedang **ditinjau oleh Google Play**!
+Versi ini memudahkan pemula untuk mulai berolahraga dan memperluas fitur untuk pengguna di seluruh dunia.
 
-## ✅ Apa yang Berubah?
+## ✅ Apa yang Baru?
 
-### 1. Dukungan Jam Health Connect (cth: Galaxy Fit)
-Tidak masalah jika jam tangan Anda tidak menjalankan Wear OS (seperti Galaxy Fit).
-Jika aplikasi jam tangan Anda (cth: Samsung Health) **berhasil mengirimkan data latihan ke Health Connect**, Supsiki sekarang dapat menggunakan data tersebut.
+### 1. Paket Awal Latihan Interval (Rutin untuk Pemula) 🏃
+"Tahu latihan interval itu bagus, tapi bingung mulai dari mana?"
+Jangan khawatir lagi. Kami telah menambahkan **3 rutinitas rekomendasi sederhana** khusus untuk pengguna yang baru mengenal latihan interval. Tidak perlu pengaturan rumit—cukup klik dan langsung mulai!
 
-### 2. Mode Latihan Hybrid (Jam Non-Wear OS)
-Meskipun jam tangan Anda tidak sinkron langsung dengan Supsiki, cobalah cara ini:
-**"Gunakan timer Supsiki di HP, dan rekam latihan di jam tangan Anda."**
-Setelah data masuk ke Health Connect usai latihan, Supsiki akan menggabungkannya dengan catatan timer untuk memberikan **analisis presisi** dan gambar **#WorkoutComplete**.
+### 2. 'Notifikasi Cerdas' untuk Menjaga Konsistensi 🔔
+Konsistensi adalah kuncinya, jadi Supsiki akan memastikan Anda tidak lupa.
+* **Sapaan Pagi:** Sapaan pagi untuk memulai hari Anda dengan energi dan mendoakan hari yang sehat bagi Anda.
+* **Peringatan Latihan Eksternal:** Jika catatan latihan dari aplikasi lain (seperti Samsung Health) terdeteksi melalui **Health Connect**, Supsiki akan segera memberi tahu Anda.
 
-### 3. Peningkatan Stabilitas & Panduan Update
-Kami telah memperbaiki masalah crash dari versi sebelumnya.
-**Penting:** Setelah update dirilis, **aplikasi akan menutup paksa (force close) saat dibuka karena error tersebut.** Kami mohon maaf atas ketidaknyamanan ini, namun mohon **buka Google Play Store secara langsung** dan ketuk **[Update]** secara manual. (Ini hanya perlu dilakukan sekali!)
+### 3. Memperluas ke Dunia: Dukungan Multibahasa 🌍
+Supsiki kini mencakup Eropa dan Asia!
+Selain bahasa yang sudah ada, kami kini mendukung **Bahasa Jerman, Prancis, Italia, Spanyol, Belanda, Vietnam, Thailand, Melayu, dan Tionghoa Sederhana**. Nikmati Supsiki di mana saja di dunia dengan terjemahan yang lebih alami.
 
 ---
 
-## 📢 Kami Butuh Bantuan Anda!
-Saat melihat catatan Health Connect, Anda mungkin melihat nama paket mentah (cth: `com.sec.android.app.shealth`) alih-alih nama aplikasinya.
-Jika Anda menemukannya, tolong laporkan di **kolom komentar YouTube**! Kami akan memperbaruinya menjadi nama yang mudah dibaca pada patch berikutnya.
+## 📢 Catatan dari Pengembang
+Pembaruan ini berfokus pada menurunkan hambatan bagi mereka yang baru pertama kali berolahraga dan mempersiapkan Supsiki untuk melangkah maju sebagai layanan global. Saya berharap Supsiki menjadi mitra andalan dalam perjalanan kesehatan harian Anda.
 
-👉 [Lapor via Komentar YouTube](http://youtube.com/post/UgkxkpEzP7_5MnZt4ZWF2WhLHLjPgEPScdcO?si=zP229-cA0xmktVNo)
-
-## 🗣️ Kontak & Masukan
-Jika Anda memiliki masalah, pertanyaan, atau saran, silakan hubungi melalui saluran di bawah ini. Saya akan berusaha sebaik mungkin untuk memverifikasi dan menyelesaikannya.
+## 🗣️ Komunitas & Dukungan
+Jika Anda memiliki ketidaknyamanan, pertanyaan, atau saran, jangan ragu untuk menghubungi kami.
 
 ### Komunitas YouTube Pengembang
-Saya membaca setiap komentar dengan cermat dan berusaha sebaik mungkin untuk menjawabnya.
+Saya membaca setiap komentar dengan cermat dan berusaha sebaik mungkin untuk merespons.
 👉 [Buka Komunitas YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
 
 Terima kasih.
 
-*16 Jan 2026, Pengembang Supsiki*
+*2026.01.29 Supsiki*
