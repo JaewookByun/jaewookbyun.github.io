@@ -1,37 +1,43 @@
-# 🚀 Atualização v1.0.4 em Breve: Treinos para Iniciantes, Notificações Inteligentes e Expansão Global
+# 🥑 Atualização v1.0.5: Recurso de 'Entrada Manual' Adicionado para Usuários Globais!
 
 Olá, aqui é o desenvolvedor do **Supsiki**.
 
-A atualização **v1.0.4**, projetada para ajudar você a criar hábitos saudáveis, está atualmente **em análise pelo Google Play**!
-Esta versão facilita o início para quem é novo nos exercícios e expande recursos para usuários em todo o mundo.
+Você já teve dificuldade para registrar um alimento que não conseguiu encontrar pelo código de barras ou pela busca?
+Para resolver esse inconveniente, especialmente para nossos usuários globais que consomem alimentos não listados no banco de dados coreano, agora oferecemos o suporte ao recurso de **Entrada Manual**!
 
-## ✅ O que há de novo?
+## ✅ Notas de Lançamento
 
-### 1. Pacote Inicial de Treino Intervalado (Rotinas para Iniciantes) 🏃
-"Sabe que o treino intervalado é bom, mas não sabe por onde começar?"
-Não se preocupe mais. Adicionamos **3 rotinas recomendadas simples** especificamente para usuários que são novos no treino intervalado. Sem configurações complexas — basta clicar e começar imediatamente!
+### 1. Não encontrou a comida? Insira manualmente agora! ✍️
+Anteriormente, você só podia registrar via **Código de Barras ou Busca em Coreano**. Qualquer outro alimento precisava ser registrado em aplicativos externos e sincronizado via Health Connect.
+Agora, você pode inserir as informações nutricionais diretamente no Supsiki!
 
-### 2. 'Notificações Inteligentes' para Manter o Foco 🔔
-A consistência é a chave, então o Supsiki garantirá que você não se esqueça.
-* **Alerta Matinal:** Uma saudação matinal para começar o dia com energia e desejar um dia saudável.
-* **Alerta de Treino Externo:** Se um registro de treino de outro aplicativo (como o Samsung Health) for detectado via **Health Connect**, o Supsiki avisará você imediatamente.
+**💡 Dicas do Desenvolvedor!**
+* **A Melhor Ordem:** Para maior precisão, insira os valores do rótulo nutricional nesta ordem: **[Calorias → Carboidratos → Proteínas → Gorduras]**.
+* **Cálculo Automático:** Se não quiser calcular as calorias, insira apenas **[Carboidratos → Proteínas → Gorduras]**. O Supsiki calculará as calorias automaticamente para você.
+* **Amigável ao Global:** Não se preocupe se a embalagem usar **kJ**. O valor será convertido automaticamente para **kcal** quando você o inserir.
 
-### 3. Expandindo para o Mundo: Suporte Multilíngue 🌍
-O Supsiki agora cobre a Europa e a Ásia!
-Além dos idiomas existentes, agora oferecemos suporte a **Alemão, Francês, Italiano, Espanhol, Holandês, Vietnamita, Tailandês, Malaio e Chinês Simplificado**. Aproveite o Supsiki em qualquer lugar do mundo com traduções mais naturais.
+### 2. Sincronização Bidirecional com Health Connect 🔗
+Os dados de refeições inseridos manualmente são sincronizados perfeitamente com outros aplicativos de saúde via **Health Connect**. Registre no Supsiki e verifique seus dados em qualquer lugar.
+
+### 3. Melhoria na Comparação de Produtos ⚖️
+Você sabia que pode comparar até 4 produtos escaneando os códigos de barras? Fizemos pequenas melhorias no recurso de comparação para torná-lo ainda melhor.
+
+### 4. Localização e Correção de Bugs 🛠️
+Refinamos as traduções para nossos usuários globais e corrigimos pequenos bugs para melhorar a estabilidade geral do aplicativo.
 
 ---
 
-## 📢 Nota do Desenvolvedor
-Esta atualização foca em diminuir a barreira de entrada para quem está começando a se exercitar pela primeira vez e em preparar o Supsiki para avançar como um serviço global. Espero que o Supsiki se torne um parceiro confiável em sua jornada diária de saúde.
-
-## 🗣️ Comunidade e Suporte
-Se tiver algum inconveniente, dúvida ou sugestão, sinta-se à vontade para entrar em contato.
+## 🗣️ Canais de Comunicação
+Seu feedback ajuda o Supsiki a crescer. Sinta-se à vontade para entrar em contato a qualquer momento!
 
 ### Comunidade do Desenvolvedor no YouTube
-Leio todos os comentários com atenção e faço o meu melhor para responder.
-👉 [Ir para a Comunidade do Desenvolvedor no YouTube](https://www.youtube.com/@bjw0829/posts)
+Confira os bastidores do desenvolvimento e as últimas novidades.
+👉 [Ir para o YouTube do Desenvolvedor](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram (DM)
+Siga-nos para atualizações e envie um Direct para suporte.
+👉 [Ir para o Instagram](https://www.instagram.com/chronolabcorp/)
 
 Obrigado.
 
-*29.01.2026 Supsiki*
+*3 de fev de 2026. Supsiki*
