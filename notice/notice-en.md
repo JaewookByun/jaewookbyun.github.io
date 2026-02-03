@@ -1,37 +1,43 @@
-# 🚀 v1.0.4 Update Coming Soon: Beginner Workouts, Smart Alerts & Global Expansion
+# 🥑 v1.0.5 Update: 'Manual Meal Entry' Added for Global Users!
 
-Hello, this is the developer of **Supsiki**.
+Hello, this is the **Supsiki** developer.
 
-The **v1.0.4 update**, designed to help you build healthy habits, is currently **under review by Google Play**!
-This version makes it easier for exercise beginners to get started and expands features for users all around the world.
+Have you ever struggled to record food that couldn't be found via barcode or search?
+To solve this inconvenience, especially for our global users who eat foods not listed in the Korean database, we now support a **Manual Entry** feature!
 
-## ✅ What’s New?
+## ✅ Release Notes
 
-### 1. Interval Training Starter Pack (Routines for Beginners) 🏃
-"Know interval training is good, but don't know where to start?"
-Don't worry anymore. We've added **3 simple recommended routines** specifically for users who are new to interval training. No complex settings needed—just click and start right away!
+### 1. Can't find the food? Enter it manually now! ✍️
+Previously, you could only record via **Barcode, Korean Report Number, or Korean Name**. Any other food had to be recorded in external apps and synced via Health Connect.
+Now, you can enter nutritional information directly within Supsiki!
 
-### 2. 'Smart Notifications' to Keep You on Track 🔔
-Consistency is key, so Supsiki will make sure you don't forget.
-* **Morning Alert:** A morning greeting to start your day with energy and wish you a healthy day.
-* **External Workout Alert:** If a workout record from another app (like Samsung Health) is detected via **Health Connect**, Supsiki will let you know immediately.
+**💡 Developer's Tips!**
+* **Best Order:** For the most accuracy, enter values from the nutrition label in this order: **[Calories → Carbs → Protein → Fat]**.
+* **Auto-Calculation:** If you don't want to calculate calories, just enter **[Carbs → Protein → Fat]**. Supsiki will automatically calculate the calories for you.
+* **Global Friendly:** Don't worry if the package uses **kJ**. It automatically converts to **kcal** when you enter it.
 
-### 3. Expanding to the World: Multilingual Support 🌍
-Supsiki now covers Europe and Asia!
-In addition to existing languages, we now support **German, French, Italian, Spanish, Dutch, Vietnamese, Thai, Malay, and Simplified Chinese**. Enjoy Supsiki anywhere in the world with more natural translations.
+### 2. Health Connect Two-Way Sync 🔗
+Your manually entered meal data syncs perfectly with other health management apps via **Health Connect**. Record in Supsiki, and check your data anywhere.
+
+### 3. Multi-Product Comparison Improved ⚖️
+Did you know you can compare up to 4 products by scanning barcodes? We've made slight improvements to the comparison feature to make it even better.
+
+### 4. Localization & Bug Fixes 🛠️
+We have refined translations for our global users and fixed minor bugs to improve overall app stability.
 
 ---
 
-## 📢 A Note from the Developer
-This update focuses on lowering the barrier to entry for those starting to exercise for the first time and preparing Supsiki to leap forward as a global service. I hope Supsiki becomes a reliable partner in your daily health journey.
-
-## 🗣️ Community & Support
-If you have any inconveniences, questions, or suggestions, please feel free to reach out.
+## 🗣️ Communication Channels
+Your feedback helps Supsiki grow. Please feel free to reach out anytime!
 
 ### Developer YouTube Community
-I read every comment carefully and try my best to respond.
-👉 [Go to Developer YouTube Community](https://www.youtube.com/@bjw0829/posts)
+Check out development behind-the-scenes and the latest news.
+👉 [Go to Developer YouTube](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram DM
+Follow us for updates and send us a DM for support.
+👉 [Go to Instagram](https://www.instagram.com/chronolabcorp/)
 
 Thank you.
 
-*2026.01.29 Supsiki*
+*Feb 3, 2026. Supsiki*
