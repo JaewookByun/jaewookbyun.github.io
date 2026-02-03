@@ -1,37 +1,43 @@
-# 🚀 Pembaruan v1.0.4 Segera Hadir: Latihan Pemula, Notifikasi Cerdas & Ekspansi Global
+# 🥑 Update v1.0.5: Fitur 'Input Manual' Ditambahkan untuk Pengguna Global!
 
-Halo, ini pengembang **Supsiki**.
+Halo, saya pengembang **Supsiki**.
 
-Pembaruan **v1.0.4**, yang dirancang untuk membantu Anda membangun kebiasaan sehat, saat ini sedang **ditinjau oleh Google Play**!
-Versi ini memudahkan pemula untuk mulai berolahraga dan memperluas fitur untuk pengguna di seluruh dunia.
+Pernahkah Anda kesulitan mencatat makanan yang tidak dapat ditemukan melalui barcode atau pencarian?
+Untuk mengatasi ketidaknyamanan ini, terutama bagi pengguna global kami yang mengonsumsi makanan yang tidak terdaftar di database Korea, kami kini mendukung fitur **Input Manual**!
 
-## ✅ Apa yang Baru?
+## ✅ Catatan Rilis
 
-### 1. Paket Awal Latihan Interval (Rutin untuk Pemula) 🏃
-"Tahu latihan interval itu bagus, tapi bingung mulai dari mana?"
-Jangan khawatir lagi. Kami telah menambahkan **3 rutinitas rekomendasi sederhana** khusus untuk pengguna yang baru mengenal latihan interval. Tidak perlu pengaturan rumit—cukup klik dan langsung mulai!
+### 1. Makanan tidak ditemukan? Masukkan secara manual sekarang! ✍️
+Sebelumnya, Anda hanya bisa mencatat melalui **Barcode, Nomor Laporan Korea, atau Nama Korea**. Makanan lainnya harus dicatat di aplikasi luar dan disinkronkan via Health Connect.
+Sekarang, Anda bisa memasukkan informasi nutrisi langsung di dalam Supsiki!
 
-### 2. 'Notifikasi Cerdas' untuk Menjaga Konsistensi 🔔
-Konsistensi adalah kuncinya, jadi Supsiki akan memastikan Anda tidak lupa.
-* **Sapaan Pagi:** Sapaan pagi untuk memulai hari Anda dengan energi dan mendoakan hari yang sehat bagi Anda.
-* **Peringatan Latihan Eksternal:** Jika catatan latihan dari aplikasi lain (seperti Samsung Health) terdeteksi melalui **Health Connect**, Supsiki akan segera memberi tahu Anda.
+**💡 Tips dari Developer!**
+* **Urutan Terbaik:** Untuk akurasi maksimal, masukkan nilai dari label nutrisi dengan urutan ini: **[Kalori → Karbo → Protein → Lemak]**.
+* **Hitung Otomatis:** Jika Anda tidak ingin menghitung kalori, cukup masukkan **[Karbo → Protein → Lemak]**. Supsiki akan menghitung kalori secara otomatis untuk Anda.
+* **Ramah Global:** Jangan khawatir jika kemasan makanan menggunakan satuan **kJ**. Angka tersebut akan otomatis dikonversi ke **kcal** saat Anda memasukkannya.
 
-### 3. Memperluas ke Dunia: Dukungan Multibahasa 🌍
-Supsiki kini mencakup Eropa dan Asia!
-Selain bahasa yang sudah ada, kami kini mendukung **Bahasa Jerman, Prancis, Italia, Spanyol, Belanda, Vietnam, Thailand, Melayu, dan Tionghoa Sederhana**. Nikmati Supsiki di mana saja di dunia dengan terjemahan yang lebih alami.
+### 2. Sinkronisasi Dua Arah Health Connect 🔗
+Data makanan yang Anda masukkan secara manual akan tersinkronisasi sempurna dengan aplikasi kesehatan lain melalui **Health Connect**. Catat di Supsiki, dan periksa data Anda di mana saja.
+
+### 3. Peningkatan Perbandingan Produk ⚖️
+Tahukah Anda bahwa Anda bisa membandingkan hingga 4 produk dengan memindai barcode? Kami telah melakukan sedikit peningkatan pada fitur perbandingan agar lebih nyaman digunakan.
+
+### 4. Perbaikan Bahasa & Bug 🛠️
+Kami telah menyempurnakan terjemahan untuk pengguna global kami dan memperbaiki bug kecil untuk meningkatkan stabilitas aplikasi secara keseluruhan.
 
 ---
 
-## 📢 Catatan dari Pengembang
-Pembaruan ini berfokus pada menurunkan hambatan bagi mereka yang baru pertama kali berolahraga dan mempersiapkan Supsiki untuk melangkah maju sebagai layanan global. Saya berharap Supsiki menjadi mitra andalan dalam perjalanan kesehatan harian Anda.
+## 🗣️ Saluran Komunikasi
+Masukan Anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami kapan saja!
 
-## 🗣️ Komunitas & Dukungan
-Jika Anda memiliki ketidaknyamanan, pertanyaan, atau saran, jangan ragu untuk menghubungi kami.
+### Komunitas YouTube Developer
+Lihat cerita di balik layar pengembangan dan berita terbaru.
+👉 [Buka YouTube Developer](https://www.youtube.com/@bjw0829/posts)
 
-### Komunitas YouTube Pengembang
-Saya membaca setiap komentar dengan cermat dan berusaha sebaik mungkin untuk merespons.
-👉 [Buka Komunitas YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
+### Instagram DM
+Ikuti kami untuk update terbaru dan kirim DM untuk bantuan.
+👉 [Buka Instagram](https://www.instagram.com/chronolabcorp/)
 
 Terima kasih.
 
-*2026.01.29 Supsiki*
+*3 Feb 2026. Supsiki*
