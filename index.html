@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DCW9DPCM02');
-</script>
+      gtag('config', 'G-DCW9DPCM02');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +22,27 @@
 
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
-    <link rel="alternate" hreflang="pt" href="https://www.chronolaboratory.com/index-pt.html" />
-    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
     <link rel="alternate" hreflang="ja" href="https://www.chronolaboratory.com/index-jp.html" />
     <link rel="alternate" hreflang="zh-Hant" href="https://www.chronolaboratory.com/index-tw.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.chronolaboratory.com/index-cn.html" />
+    <link rel="alternate" hreflang="zh-HK" href="https://www.chronolaboratory.com/index-hk.html" />
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://www.chronolaboratory.com/index-pt.html" />
+    <link rel="alternate" hreflang="pt-PT" href="https://www.chronolaboratory.com/index-pt-pt.html" />
+    
+    <link rel="alternate" hreflang="es" href="https://www.chronolaboratory.com/index-es.html" />
+    <link rel="alternate" hreflang="es-ES" href="https://www.chronolaboratory.com/index-es-es.html" />
+    
+    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
+    <link rel="alternate" hreflang="ms" href="https://www.chronolaboratory.com/index-ms.html" />
+    <link rel="alternate" hreflang="vi" href="https://www.chronolaboratory.com/index-vi.html" />
+    <link rel="alternate" hreflang="th" href="https://www.chronolaboratory.com/index-th.html" />
+    
+    <link rel="alternate" hreflang="de" href="https://www.chronolaboratory.com/index-de.html" />
+    <link rel="alternate" hreflang="fr" href="https://www.chronolaboratory.com/index-fr.html" />
+    <link rel="alternate" hreflang="it" href="https://www.chronolaboratory.com/index-it.html" />
+    <link rel="alternate" hreflang="nl" href="https://www.chronolaboratory.com/index-nl.html" />
+    
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
     <meta property="og:type" content="website">
@@ -208,6 +224,12 @@
             box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important;
         }
 
+        /* Dropdown Scroll for Many Languages */
+        .scrollable-dropdown {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
         @media (max-width: 768px) {
             .hero-headline { font-size: 2.5rem; }
             .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; }
@@ -236,13 +258,34 @@
                         <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             🌐 English
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
                             <li><a class="dropdown-item active" href="index.html">English</a></li>
                             <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
-                            <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
-                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
                             <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">Chinese</li>
                             <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
+                            <li><a class="dropdown-item" href="index-hk.html">繁體中文 (Hong Kong)</a></li>
+                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (China)</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">European</li>
+                            <li><a class="dropdown-item" href="index-es.html">Español (Latinoamérica)</a></li>
+                            <li><a class="dropdown-item" href="index-es-es.html">Español (España)</a></li>
+                            <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
+                            <li><a class="dropdown-item" href="index-pt-pt.html">Português (Portugal)</a></li>
+                            <li><a class="dropdown-item" href="index-de.html">Deutsch (German)</a></li>
+                            <li><a class="dropdown-item" href="index-fr.html">Français (French)</a></li>
+                            <li><a class="dropdown-item" href="index-it.html">Italiano (Italian)</a></li>
+                            <li><a class="dropdown-item" href="index-nl.html">Nederlands (Dutch)</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">Asian</li>
+                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
+                            <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu</a></li>
+                            <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt (Vietnamese)</a></li>
+                            <li><a class="dropdown-item" href="index-th.html">ไทย (Thai)</a></li>
                         </ul>
                     </div>
 
@@ -469,6 +512,3 @@
     </script>
 </body>
 </html>
-
-
-
