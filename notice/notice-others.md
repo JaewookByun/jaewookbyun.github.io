@@ -1,33 +1,32 @@
-# 🌏 Global Service Notice & Upcoming v1.0.4 Update (Under Review)
+# 🥑 Global Service Notice & v1.0.5 Update: Manual Meal Entry!
 
 Hello, this is the **Supsiki** Team.
 
-The **v1.0.4 update**, designed to help you build healthy habits, is currently **under review by Google Play**! Barring any major issues, it should be available to you very soon. Thank you sincerely for your patience and trust.
+The **v1.0.5 update**, featuring the highly requested **Manual Meal Entry**, is currently rolling out!
+We have introduced this feature to solve the inconvenience for our global users who eat foods not listed in the Korean database. Thank you for your patience and support.
 
 ---
 
 ### ✅ What's Changing?
 
-#### 1. Interval Training Starter Pack (Beginner Routines)
-* Not sure how to start interval training?
-* We've added **3 simple recommended routines** specifically for beginners. No complex settings—just click and start immediately!
+#### 1. Manual Meal Entry Support ✍️
+* Can't find your food via barcode or search? Now you can enter nutritional information directly!
+* **Developer's Tip:**
+    * **Best Order:** Enter values in this order: **[Calories → Carbs → Protein → Fat]**.
+    * **Auto-Calculation:** If you leave Calories empty and enter **[Carbs → Protein → Fat]**, Supsiki calculates calories automatically.
+    * **kJ Support:** Values in **kJ** are automatically converted to **kcal**.
 
-#### 2. 'Smart Notifications' for Consistency
-* Supsiki will help you stay on track with new alert features:
-* **Morning Alert:** A greeting to start your day with energy and focus on your health.
-* **External Workout Alert:** If a workout from another app (like Samsung Health) is detected via **Health Connect**, Supsiki will notify you so you don't miss a record.
+#### 2. Two-Way Sync with Health Connect 🔗
+* Your manually entered meal data now syncs perfectly with other health apps via **Health Connect**.
+* Record in Supsiki, and manage your health data seamlessly across different platforms.
 
-#### 3. Expanded Multilingual Support
-* Supsiki is going global!
-* In addition to existing languages, we now support **German, French, Italian, Spanish, Dutch, Vietnamese, Thai, Malay, and Simplified Chinese.** Enjoy Supsiki with more natural translations worldwide.
+#### 3. Improved Product Comparison ⚖️
+* Did you know you can compare up to 4 products by scanning barcodes?
+* We've made slight improvements to the comparison interface for better usability.
 
----
-
-### 📢 We Need Your Help!
-* When viewing Health Connect records, you might see a raw package name (e.g., `com.sec.android.app.shealth`) instead of the actual app name.
-* If you spot this, please let us know in the **YouTube comments**!
-* We will update it to a readable name in the next patch.
-* 👉 [Report via YouTube Comment](http://youtube.com/post/UgkxkpEzP7_5MnZt4ZWF2WhLHLjPgEPScdcO?si=zP229-cA0xmktVNo)
+#### 4. Localization & Stability 🛠️
+* We have refined translations for **German, French, Italian, Spanish, Portuguese, Dutch, and Asian languages.**
+* Minor bugs have been fixed to ensure smoother performance.
 
 ---
 
@@ -37,7 +36,7 @@ The **v1.0.4 update**, designed to help you build healthy habits, is currently *
 * We plan to gradually expand the availability of AI features as we establish a stable operating model. We kindly ask for your understanding.
 
 ### 💎 Ad Integration for Sustainable Service
-* To maintain and develop the app continuously, we have introduced an **ad system, including interstitial ads**, starting with this version.
+* To maintain and develop the app continuously, we operate an **ad system**.
 * Ads may appear during the app experience or when generating **#WorkoutComplete** images.
 * This transition allows us to keep our core features free while continuing to evolve the app for our users.
 
@@ -51,7 +50,9 @@ The **v1.0.4 update**, designed to help you build healthy habits, is currently *
 ### 🗣️ Contact & Feedback
 * **Developer YouTube Community:** I read every comment carefully and try my best to respond.
     * 👉 [Go to Developer YouTube Community](https://www.youtube.com/@bjw0829/posts)
+* **Instagram DM:** Follow us for updates and send us a DM for support.
+    * 👉 [Go to Instagram](https://www.instagram.com/chronolabcorp/)
 
 Thank you.
 
-*Jan 29, 2026 - The Supsiki Team*
+*Feb 3, 2026 - The Supsiki Team*
