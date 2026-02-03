@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DCW9DPCM02');
-</script>
+      gtag('config', 'G-DCW9DPCM02');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -21,10 +20,28 @@
 
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
-    <link rel="alternate" hreflang="pt" href="https://www.chronolaboratory.com/index-pt.html" />
-    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
     <link rel="alternate" hreflang="ja" href="https://www.chronolaboratory.com/index-jp.html" />
+    
     <link rel="alternate" hreflang="zh-Hant" href="https://www.chronolaboratory.com/index-tw.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.chronolaboratory.com/index-cn.html" />
+    <link rel="alternate" hreflang="zh-HK" href="https://www.chronolaboratory.com/index-hk.html" />
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://www.chronolaboratory.com/index-pt.html" />
+    <link rel="alternate" hreflang="pt-PT" href="https://www.chronolaboratory.com/index-pt-pt.html" />
+    
+    <link rel="alternate" hreflang="es" href="https://www.chronolaboratory.com/index-es.html" />
+    <link rel="alternate" hreflang="es-ES" href="https://www.chronolaboratory.com/index-es-es.html" />
+    
+    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
+    <link rel="alternate" hreflang="ms" href="https://www.chronolaboratory.com/index-ms.html" />
+    <link rel="alternate" hreflang="vi" href="https://www.chronolaboratory.com/index-vi.html" />
+    <link rel="alternate" hreflang="th" href="https://www.chronolaboratory.com/index-th.html" />
+    
+    <link rel="alternate" hreflang="de" href="https://www.chronolaboratory.com/index-de.html" />
+    <link rel="alternate" hreflang="fr" href="https://www.chronolaboratory.com/index-fr.html" />
+    <link rel="alternate" hreflang="it" href="https://www.chronolaboratory.com/index-it.html" />
+    <link rel="alternate" hreflang="nl" href="https://www.chronolaboratory.com/index-nl.html" />
+    
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
     <meta property="og:type" content="website">
@@ -66,6 +83,10 @@
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
+        
+        /* 下拉選單捲動 */
+        .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
+
         @media (max-width: 768px) { .hero-headline { font-size: 2.5rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
     </style>
 </head>
@@ -79,17 +100,40 @@
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    
                     <div class="dropdown me-2">
                         <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 繁體中文</button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
+                            <li><a class="dropdown-item active" href="index-tw.html">繁體中文 (台灣)</a></li>
                             <li><a class="dropdown-item" href="index.html">English</a></li>
                             <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
-                            <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
-                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
                             <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
-                            <li><a class="dropdown-item active" href="index-tw.html">繁體中文 (Taiwan)</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">中文</li>
+                            <li><a class="dropdown-item" href="index-hk.html">繁體中文 (香港)</a></li>
+                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (中國)</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">歐洲語言</li>
+                            <li><a class="dropdown-item" href="index-es.html">Español (中南美洲)</a></li>
+                            <li><a class="dropdown-item" href="index-es-es.html">Español (西班牙)</a></li>
+                            <li><a class="dropdown-item" href="index-pt.html">Português (巴西)</a></li>
+                            <li><a class="dropdown-item" href="index-pt-pt.html">Português (葡萄牙)</a></li>
+                            <li><a class="dropdown-item" href="index-de.html">Deutsch (德語)</a></li>
+                            <li><a class="dropdown-item" href="index-fr.html">Français (法語)</a></li>
+                            <li><a class="dropdown-item" href="index-it.html">Italiano (義大利語)</a></li>
+                            <li><a class="dropdown-item" href="index-nl.html">Nederlands (荷蘭語)</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header text-uppercase small">亞洲語言</li>
+                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia (印尼語)</a></li>
+                            <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu (馬來語)</a></li>
+                            <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt (越南語)</a></li>
+                            <li><a class="dropdown-item" href="index-th.html">ไทย (泰語)</a></li>
                         </ul>
                     </div>
+
                     <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold"><i class="bi bi-megaphone-fill me-1"></i> 最新消息</a>
                     <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">下載 App</a>
                 </div>
@@ -167,7 +211,7 @@
         </div>
     </section>
 
-   <footer class="bg-white py-5">
+    <footer class="bg-white py-5">
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
