@@ -1,43 +1,62 @@
-# 🥑 Update v1.0.5: 'Manuelle Mahlzeitenerfassung' für globale Nutzer!
+# 🥑 Update v1.0.6: Intelligentere KI-Berichte & Profi-Tipps!
 
 Hallo, hier ist der Entwickler von **Supsiki**.
+Dieses Update auf v1.0.6 bringt eine wichtige Verbesserung der Funktion **'Täglicher KI-Bericht'** (AI Daily Report), die Ihren Tag analysiert und Sie besser auf morgen vorbereitet.
 
-Haben Sie schon einmal Schwierigkeiten gehabt, Lebensmittel zu erfassen, die nicht über den Barcode oder die Suche gefunden wurden?
-Um dieses Problem zu lösen – insbesondere für unsere globalen Nutzer, die Lebensmittel essen, die nicht in der koreanischen Datenbank enthalten sind – unterstützen wir jetzt die Funktion **Manuelle Eingabe**!
+## ✅ v1.0.6 Release Notes
 
-## ✅ Release Notes
+### 1. Verbesserter Täglicher KI-Bericht 📊
+Die KI von Supsiki versteht den Kontext jetzt besser. Keine Sorge, wenn Sie vergessen haben, einen Eintrag zu machen, oder wenn einige Watch-Daten fehlen.
+Basierend auf dem Essen und Ihrer Aktivität von heute, sagt sie Ihren **Körperzustand für morgen** jetzt noch präziser voraus!
 
-### 1. Lebensmittel nicht gefunden? Jetzt manuell eingeben! ✍️
-Bisher war die Erfassung nur über **Barcode, koreanische Meldenummer oder koreanischen Namen** möglich. Andere Lebensmittel mussten in externen Apps erfasst und über Health Connect synchronisiert werden.
-Jetzt können Sie Nährwertinformationen direkt in Supsiki eingeben!
-
-**💡 Tipps vom Entwickler!**
-* **Beste Reihenfolge:** Für maximale Genauigkeit geben Sie die Werte vom Etikett in dieser Reihenfolge ein: **[Kalorien → Kohlenhydrate → Protein → Fett]**.
-* **Automatische Berechnung:** Wenn Sie keine Kalorien berechnen möchten, lassen Sie das Feld leer und geben einfach **[Kohlenhydrate → Protein → Fett]** ein. Supsiki berechnet die Kalorien automatisch für Sie.
-* **Global freundlich:** Keine Sorge, wenn auf der Verpackung **kJ** (Kilojoule) steht. Der Wert wird bei der Eingabe automatisch in **kcal** umgerechnet.
-
-### 2. Health Connect Zwei-Wege-Synchronisierung 🔗
-Ihre manuell erfassten Mahlzeitendaten werden über **Health Connect** nahtlos mit anderen Gesundheits-Apps synchronisiert. Erfassen Sie Ihre Daten in Supsiki und prüfen Sie sie überall.
-
-### 3. Produktvergleich verbessert ⚖️
-Wussten Sie, dass Sie durch Scannen von Barcodes bis zu 4 Produkte auf einen Blick vergleichen können? Wir haben die Vergleichsfunktion leicht verbessert, um sie noch nützlicher zu machen.
-
-### 4. Lokalisierung & Fehlerbehebungen 🛠️
-Wir haben die Übersetzungen für unsere globalen Nutzer verfeinert und kleinere Fehler behoben, um die App-Stabilität insgesamt zu verbessern.
+### 2. Fehlerbehebungen & Stabilität 🛠️
+Wir haben kleinere Fehler behoben, um die allgemeine Benutzerfreundlichkeit der App zu verbessern.
 
 ---
+
+## 💡 Moment! Nutzen Sie den 'Tagesbericht' richtig?
+
+Während ich dieses Update vorbereitete, fragte ich mich:
+*"Nutzen die Anwender die Funktion des Tagesberichts eigentlich voll aus?"*
+
+Ich habe den Tagesbericht nicht nur als "Zeugnis" für den Tag entworfen, sondern als **Werkzeug, um den Tag aktiv zu gestalten, indem man ihn zwischendurch überprüft**.
+
+Hier sind einige **[Szenarien für den Tagesbericht]**, die Ihnen helfen, Ihren Tag gesünder zu gestalten.
+
+### 💧 Fall 1: Zu wenig Wasser getrunken
+* **Situation:** Es ist 20 Uhr. Der Bericht sagt: **"Die Wasseraufnahme ist heute gering. Die Stoffwechseleffizienz könnte sinken."**
+* **Handlung:** Trinken Sie sofort ein Glas Wasser und protokollieren Sie es, um Ihren Flüssigkeitshaushalt auszugleichen.
+
+### 💪 Fall 2: Protein gegessen, aber kein Training
+* **Situation:** Sie haben eine herzhafte Mahlzeit mit Fleisch gegessen, aber kein Training aufgezeichnet. Der Bericht analysiert: **"Die Ernährung ist ausreichend, aber ohne Stimulation (Training) ist Muskelwachstum schwierig."**
+* **Handlung:** Machen Sie ein paar schnelle Kniebeugen und Liegestütze im Wohnzimmer und protokollieren Sie es.
+* **Ergebnis:** Wenn Sie den Bericht erneut prüfen, erhalten Sie das Feedback: **"Hervorragend! Das Protein, das Sie gegessen haben, ist nun bereit für den Muskelaufbau."**
+
+### 🍗 Fall 3: Trainiert, aber zu wenig Nährstoffe
+* **Situation:** Sie haben hart trainiert, aber nicht genug gegessen. Der Bericht warnt: **"Protein ist im Vergleich zur Trainingsintensität unzureichend; Muskelabbau ist ein Risiko."**
+* **Handlung:** Essen Sie ein gekochtes Ei oder trinken Sie einen Proteinshake und protokollieren Sie es.
+* **Ergebnis:** Die Nachricht wird positiv: **"Perfektes Timing für die Nährstoffzufuhr. Muskelregenerationsmodus aktiviert."**
+
+### 📉 Fall 4: Unregelmäßige Essenszeiten
+* **Situation:** Stressiger Tag, spätes Mittagessen, schweres Abendessen. Der Bericht rät: **"Die Essensintervalle sind unregelmäßig, was ein Risiko für Blutzuckerspitzen darstellt."**
+* **Handlung:** Heute ist es schwer zu korrigieren, aber folgen Sie dem Rat der KI, um Ihre Frühstückszeit für morgen zu planen und einen Wecker zu stellen.
+
+---
+
+Haben Sie heute schon Ihren Bericht geprüft?
+Ergänzen Sie Fehlendes und **analysieren Sie neu**, um morgen gesünder zu starten.
 
 ## 🗣️ Kommunikationskanäle
 Ihr Feedback hilft Supsiki zu wachsen. Zögern Sie nicht, uns jederzeit zu kontaktieren!
 
 ### Entwickler YouTube-Community
-Schauen Sie hinter die Kulissen der Entwicklung und erfahren Sie die neuesten Nachrichten.
-👉 [Zum Entwickler-YouTube](https://www.youtube.com/@bjw0829/posts)
+Sehen Sie sich die Entwicklung hinter den Kulissen und die neuesten Nachrichten an.
+👉 [Zur Entwickler YouTube-Seite](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Folgen Sie uns für Updates und senden Sie uns eine DM für Support.
-👉 [Zu Instagram gehen](https://www.instagram.com/chronolabcorp/)
+Folgen Sie uns für Updates und senden Sie uns eine DM für Unterstützung.
+👉 [Zu Instagram](https://www.instagram.com/chronolabcorp/)
 
 Vielen Dank.
 
-*3. Feb. 2026. Supsiki*
+*16. Feb. 2026. Ihr Supsiki Team*
