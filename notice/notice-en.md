@@ -1,31 +1,50 @@
-# 🥑 v1.0.5 Update: 'Manual Meal Entry' Added for Global Users!
+# 🥑 v1.0.6 Update: Smarter AI Reports & Pro Tips!
 
 Hello, this is the **Supsiki** developer.
+This v1.0.6 update brings a major enhancement to the **'AI Daily Report'** feature, designed to analyze your day and prepare you for a better tomorrow.
 
-Have you ever struggled to record food that couldn't be found via barcode or search?
-To solve this inconvenience, especially for our global users who eat foods not listed in the Korean database, we now support a **Manual Entry** feature!
+## ✅ v1.0.6 Release Notes
 
-## ✅ Release Notes
+### 1. Enhanced AI Daily Report 📊
+Supsiki's AI now understands context better. Don't worry if you forgot to log a record or if some watch data is missing.
+Based on the food you ate and your activity today, it now predicts your **body's condition for tomorrow** more accurately!
 
-### 1. Can't find the food? Enter it manually now! ✍️
-Previously, you could only record via **Barcode, Korean Report Number, or Korean Name**. Any other food had to be recorded in external apps and synced via Health Connect.
-Now, you can enter nutritional information directly within Supsiki!
-
-**💡 Developer's Tips!**
-* **Best Order:** For the most accuracy, enter values from the nutrition label in this order: **[Calories → Carbs → Protein → Fat]**.
-* **Auto-Calculation:** If you don't want to calculate calories, just enter **[Carbs → Protein → Fat]**. Supsiki will automatically calculate the calories for you.
-* **Global Friendly:** Don't worry if the package uses **kJ**. It automatically converts to **kcal** when you enter it.
-
-### 2. Health Connect Two-Way Sync 🔗
-Your manually entered meal data syncs perfectly with other health management apps via **Health Connect**. Record in Supsiki, and check your data anywhere.
-
-### 3. Multi-Product Comparison Improved ⚖️
-Did you know you can compare up to 4 products by scanning barcodes? We've made slight improvements to the comparison feature to make it even better.
-
-### 4. Localization & Bug Fixes 🛠️
-We have refined translations for our global users and fixed minor bugs to improve overall app stability.
+### 2. Bug Fixes & Stability 🛠️
+We have fixed minor bugs to improve the overall usability of the app.
 
 ---
+
+## 💡 Wait! Are you making the most of the 'Daily Report'?
+
+While preparing this update, I wondered:
+*"Are users utilizing the Daily Report function to its full potential?"*
+
+I designed the Daily Report not just as a final "report card" for the day, but as **a tool to shape a better day by checking it intermittently**.
+
+Here are some **[Daily Report Scenarios]** to help you build a healthier day.
+
+### 💧 Case 1: Low Water Intake
+* **Situation:** It's 8 PM. The report says, **"Water intake is low today. Metabolic efficiency may drop."**
+* **Action:** Drink a glass of water immediately and log it to balance your hydration.
+
+### 💪 Case 2: Ate Protein but No Exercise
+* **Situation:** You ate a hearty meal with meat, but have no workout record. The report analyzes: **"Nutrition is sufficient, but without stimulation (exercise), muscle growth is difficult."**
+* **Action:** Do some quick squats and push-ups in the living room and log it.
+* **Result:** When you check the report again, you get the feedback: **"Excellent! The protein you ate is now ready to be used for muscle synthesis."**
+
+### 🍗 Case 3: Exercised but Low Nutrition
+* **Situation:** You worked out hard but didn't eat enough. The report warns: **"Protein is insufficient compared to workout intensity; muscle loss is a concern."**
+* **Action:** Eat a boiled egg or drink a protein shake and log it.
+* **Result:** The message turns positive: **"Perfect timing for nutrient supply. Muscle recovery mode activated."**
+
+### 📉 Case 4: Irregular Meal Timing
+* **Situation:** Busy day, late lunch, heavy dinner. The report advises: **"Meal intervals are irregular, posing a risk of blood sugar spikes."**
+* **Action:** It's hard to fix today, but follow the AI's advice to plan tomorrow's breakfast time and set an alarm.
+
+---
+
+Have you checked your report today?
+Fill in what's missing, and **re-analyze** to meet a healthier you tomorrow.
 
 ## 🗣️ Communication Channels
 Your feedback helps Supsiki grow. Please feel free to reach out anytime!
@@ -40,4 +59,4 @@ Follow us for updates and send us a DM for support.
 
 Thank you.
 
-*Feb 3, 2026. Supsiki*
+*Feb 16, 2026. Supsiki Team*
