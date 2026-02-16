@@ -1,43 +1,62 @@
-# 🥑 Update v1.0.5: Fitur 'Input Manual' Ditambahkan untuk Pengguna Global!
+# 🥑 Pembaruan v1.0.6: Laporan AI Lebih Cerdas & Tips Pro!
 
-Halo, saya pengembang **Supsiki**.
+Halo, ini pengembang **Supsiki**.
+Pembaruan v1.0.6 ini menghadirkan peningkatan besar pada fitur **'Laporan Harian AI'** (AI Daily Report), yang dirancang untuk menganalisis hari Anda dan mempersiapkan kondisi tubuh yang lebih baik untuk esok hari.
 
-Pernahkah Anda kesulitan mencatat makanan yang tidak dapat ditemukan melalui barcode atau pencarian?
-Untuk mengatasi ketidaknyamanan ini, terutama bagi pengguna global kami yang mengonsumsi makanan yang tidak terdaftar di database Korea, kami kini mendukung fitur **Input Manual**!
+## ✅ Catatan Rilis v1.0.6
 
-## ✅ Catatan Rilis
+### 1. Laporan Harian AI yang Ditingkatkan 📊
+AI Supsiki kini lebih memahami konteks. Jangan khawatir jika Anda lupa mencatat atau ada data jam tangan (watch) yang kurang lengkap.
+Berdasarkan makanan yang Anda makan dan aktivitas hari ini, AI kini memprediksi **kondisi tubuh Anda untuk besok** dengan lebih akurat!
 
-### 1. Makanan tidak ditemukan? Masukkan secara manual sekarang! ✍️
-Sebelumnya, Anda hanya bisa mencatat melalui **Barcode, Nomor Laporan Korea, atau Nama Korea**. Makanan lainnya harus dicatat di aplikasi luar dan disinkronkan via Health Connect.
-Sekarang, Anda bisa memasukkan informasi nutrisi langsung di dalam Supsiki!
-
-**💡 Tips dari Developer!**
-* **Urutan Terbaik:** Untuk akurasi maksimal, masukkan nilai dari label nutrisi dengan urutan ini: **[Kalori → Karbo → Protein → Lemak]**.
-* **Hitung Otomatis:** Jika Anda tidak ingin menghitung kalori, cukup masukkan **[Karbo → Protein → Lemak]**. Supsiki akan menghitung kalori secara otomatis untuk Anda.
-* **Ramah Global:** Jangan khawatir jika kemasan makanan menggunakan satuan **kJ**. Angka tersebut akan otomatis dikonversi ke **kcal** saat Anda memasukkannya.
-
-### 2. Sinkronisasi Dua Arah Health Connect 🔗
-Data makanan yang Anda masukkan secara manual akan tersinkronisasi sempurna dengan aplikasi kesehatan lain melalui **Health Connect**. Catat di Supsiki, dan periksa data Anda di mana saja.
-
-### 3. Peningkatan Perbandingan Produk ⚖️
-Tahukah Anda bahwa Anda bisa membandingkan hingga 4 produk dengan memindai barcode? Kami telah melakukan sedikit peningkatan pada fitur perbandingan agar lebih nyaman digunakan.
-
-### 4. Perbaikan Bahasa & Bug 🛠️
-Kami telah menyempurnakan terjemahan untuk pengguna global kami dan memperbaiki bug kecil untuk meningkatkan stabilitas aplikasi secara keseluruhan.
+### 2. Perbaikan Bug & Stabilitas 🛠️
+Kami telah memperbaiki bug kecil untuk meningkatkan kenyamanan penggunaan aplikasi secara keseluruhan.
 
 ---
 
-## 🗣️ Saluran Komunikasi
-Masukan Anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami kapan saja!
+## 💡 Tunggu! Apakah Anda sudah memanfaatkan 'Laporan Harian' dengan benar?
 
-### Komunitas YouTube Developer
-Lihat cerita di balik layar pengembangan dan berita terbaru.
-👉 [Buka YouTube Developer](https://www.youtube.com/@bjw0829/posts)
+Saat menyiapkan pembaruan ini, saya berpikir:
+*"Apakah pengguna sudah memanfaatkan fungsi Laporan Harian secara maksimal?"*
+
+Saya merancang Laporan Harian bukan hanya sebagai "rapor" akhir hari, tetapi sebagai **alat untuk membentuk hari yang lebih baik dengan mengeceknya di sela-sela aktivitas**.
+
+Berikut adalah **[Skenario Laporan Harian]** untuk membantu Anda membangun hari yang lebih sehat.
+
+### 💧 Kasus 1: Kurang Minum Air
+* **Situasi:** Sudah jam 8 malam. Laporan berkata: **"Asupan air hari ini kurang. Efisiensi metabolisme bisa menurun."**
+* **Tindakan:** Segera minum segelas air dan catat untuk menyeimbangkan hidrasi Anda.
+
+### 💪 Kasus 2: Makan Protein tapi Tidak Olahraga
+* **Situasi:** Anda makan daging yang cukup, tapi tidak ada catatan olahraga. Laporan menganalisis: **"Nutrisi cukup, tapi tanpa stimulasi (olahraga), pertumbuhan otot sulit terjadi."**
+* **Tindakan:** Lakukan squat dan push-up ringan di ruang tamu, lalu catat.
+* **Hasil:** Saat laporan dianalisis ulang, Anda mendapat umpan balik: **"Luar biasa! Protein yang Anda makan kini siap digunakan untuk sintesis otot malam ini."**
+
+### 🍗 Kasus 3: Olahraga Keras tapi Kurang Nutrisi
+* **Situasi:** Anda berolahraga keras tapi makan kurang cukup. Laporan memperingatkan: **"Protein tidak cukup dibandingkan intensitas latihan; ada risiko penyusutan otot."**
+* **Tindakan:** Makan telur rebus atau minum protein shake, lalu catat.
+* **Hasil:** Pesan berubah positif: **"Waktu yang tepat untuk asupan nutrisi. Mode pemulihan otot diaktifkan."**
+
+### 📉 Kasus 4: Jadwal Makan Tidak Teratur
+* **Situasi:** Hari sibuk, makan siang telat, makan malam berlebihan. Laporan menyarankan: **"Jarak antar makan tidak teratur, berisiko menyebabkan lonjakan gula darah."**
+* **Tindakan:** Sulit diperbaiki hari ini, tapi ikuti saran AI untuk merencanakan waktu sarapan besok dan pasang alarm.
+
+---
+
+Sudahkah Anda menekan tombol laporan hari ini?
+Lengkapi apa yang kurang, dan **analisis ulang** untuk menyambut diri Anda yang lebih sehat esok hari.
+
+## 🗣️ Saluran Komunikasi
+Umpan balik Anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami kapan saja!
+
+### Komunitas YouTube Pengembang
+Lihat proses pengembangan di balik layar dan berita terbaru.
+👉 [Buka YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Ikuti kami untuk update terbaru dan kirim DM untuk bantuan.
+Ikuti kami untuk pembaruan dan kirim DM untuk dukungan.
 👉 [Buka Instagram](https://www.instagram.com/chronolabcorp/)
 
 Terima kasih.
 
-*3 Feb 2026. Supsiki*
+*16 Feb 2026. Tim Supsiki*
