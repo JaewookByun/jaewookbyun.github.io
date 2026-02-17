@@ -1,58 +1,56 @@
-# 🥑 Global Service Notice & v1.0.5 Update: Manual Meal Entry!
+# 🥑 v1.0.6 Update: Smarter AI Reports & Pro Tips!
 
 Hello, this is the **Supsiki** Team.
-
-The **v1.0.5 update**, featuring the highly requested **Manual Meal Entry**, is currently rolling out!
-We have introduced this feature to solve the inconvenience for our global users who eat foods not listed in the Korean database. Thank you for your patience and support.
+The **v1.0.6 update** is here! This version focuses on making our core feature, the **'AI Daily Report'**, much smarter to help you plan a healthier tomorrow.
 
 ---
 
-### ✅ What's Changing?
+### ✅ What's New in v1.0.6?
 
-#### 1. Manual Meal Entry Support ✍️
-* Can't find your food via barcode or search? Now you can enter nutritional information directly!
-* **Developer's Tip:**
-    * **Best Order:** Enter values in this order: **[Calories → Carbs → Protein → Fat]**.
-    * **Auto-Calculation:** If you leave Calories empty and enter **[Carbs → Protein → Fat]**, Supsiki calculates calories automatically.
-    * **kJ Support:** Values in **kJ** are automatically converted to **kcal**.
+#### 1. Enhanced AI Daily Report 📊
+* **Context Awareness:** Supsiki's AI now understands your day better. Even if you miss a log or have incomplete watch data, it fills in the gaps.
+* **Better Predictions:** Based on your food intake and activity today, it now predicts your **body's condition for tomorrow** more accurately.
 
-#### 2. Two-Way Sync with Health Connect 🔗
-* Your manually entered meal data now syncs perfectly with other health apps via **Health Connect**.
-* Record in Supsiki, and manage your health data seamlessly across different platforms.
-
-#### 3. Improved Product Comparison ⚖️
-* Did you know you can compare up to 4 products by scanning barcodes?
-* We've made slight improvements to the comparison interface for better usability.
-
-#### 4. Localization & Stability 🛠️
-* We have refined translations for **German, French, Italian, Spanish, Portuguese, Dutch, and Asian languages.**
-* Minor bugs have been fixed to ensure smoother performance.
+#### 2. Bug Fixes & Stability 🛠️
+* We have fixed minor bugs to ensure a smoother experience across all devices.
 
 ---
 
-### 🤖 AI Analysis Feature Availability
-* Supsiki strives to provide personalized health insights powered by **Gemini AI**.
-* Currently, we are in the stage of **validating the feasibility of sustainable AI operations**, focusing on our primary supported regions.
-* We plan to gradually expand the availability of AI features as we establish a stable operating model. We kindly ask for your understanding.
+### 💡 Are you using the 'Daily Report' correctly?
 
-### 💎 Ad Integration for Sustainable Service
-* To maintain and develop the app continuously, we operate an **ad system**.
-* Ads may appear during the app experience or when generating **#WorkoutComplete** images.
-* This transition allows us to keep our core features free while continuing to evolve the app for our users.
+We designed the Daily Report not just as a "final score" for the day, but as a **tool to shape a better day by checking it often**.
+Here are some **Scenarios** to help you get the most out of it:
 
-### ⭐ Premium Subscription (PRO)
-* For an ad-free experience and more powerful tools, consider upgrading to our Premium plan:
-* **Video Export (PRO)**
-* **Advanced AI Specialization**
+* **💧 Low Water Intake:**
+    * **Report:** "Hydration is low. Metabolism might slow down."
+    * **Action:** Drink a glass of water and log it.
+
+* **💪 Protein but No Exercise:**
+    * **Report:** "Good nutrition, but without stimulation (exercise), muscle growth is limited."
+    * **Action:** Do some quick **Squats** or **Push-ups** and log them.
+    * **Result:** Re-analyze to see: "Great! Your protein is now fueling muscle synthesis."
+
+* **🍗 Hard Workout but Low Food:**
+    * **Report:** "Not enough protein for your workout intensity. Risk of muscle loss."
+    * **Action:** Eat a boiled egg or a **Protein Shake** and log it.
+    * **Result:** Re-analyze to see: "Perfect timing! Muscle recovery mode activated."
+
+---
+
+### 💎 Ad Integration & Premium (PRO)
+* **Sustainable Service:** To maintain and develop the app continuously, we operate an ad system. Ads may appear during the app experience.
+* **Premium Subscription:** Upgrade to **PRO** for an ad-free experience, Video Export, and Advanced AI features.
 
 ---
 
 ### 🗣️ Contact & Feedback
-* **Developer YouTube Community:** I read every comment carefully and try my best to respond.
-    * 👉 [Go to Developer YouTube Community](https://www.youtube.com/@bjw0829/posts)
-* **Instagram DM:** Follow us for updates and send us a DM for support.
+Your feedback helps Supsiki grow. Please feel free to reach out anytime!
+
+* **Developer YouTube Community:** Check out development news.
+    * 👉 [Go to Developer YouTube](https://www.youtube.com/@bjw0829/posts)
+* **Instagram DM:** Follow us for updates and support.
     * 👉 [Go to Instagram](https://www.instagram.com/chronolabcorp/)
 
 Thank you.
 
-*Feb 3, 2026 - The Supsiki Team*
+*Feb 16, 2026 - The Supsiki Team*
