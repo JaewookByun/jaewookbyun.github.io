@@ -1,56 +1,64 @@
-# 🥑 Kemas Kini v1.0.6: Laporan AI Lebih Pintar & Tip Pro!
+# 🥑 Kemas Kini v1.0.7: Analisis Dinamik Hidrasi & Natrium
 
 Halo, saya pembangun **Supsiki**.
-Kemas kini v1.0.6 ini membawakan peningkatan besar kepada ciri **'Laporan Harian AI'** (AI Daily Report), yang direka untuk menganalisis hari anda dan menyediakan anda untuk hari esok yang lebih baik.
+Kemas kini v1.0.7 ini memfokuskan kepada dua faktor penting untuk prestasi senaman dan kesihatan anda: **'Hidrasi'** dan **'Natrium'**.
 
-## ✅ Nota Keluaran v1.0.6
+## ✅ Nota Keluaran v1.0.7
 
-### 1. Laporan Harian AI Dipertingkatkan 📊
-AI Supsiki kini lebih memahami konteks. Jangan risau jika anda terlupa merekod sesuatu atau jika data jam tangan tidak lengkap.
-Berdasarkan apa yang anda makan dan aktiviti anda hari ini, ia kini meramalkan **keadaan badan anda untuk esok** dengan lebih tepat!
+### 1. Keseimbangan Tenaga Diperluas: Natrium & Hidrasi 💧
+Kami kini menjejaki **[Natrium & Hidrasi]** di samping analisis karbohidrat, protein, lemak, dan kalori sedia ada.
+Poin utama: Sasaran anda bukan statik. **Keperluan air dan had natrium anda kini menyesuaikan secara dinamik berdasarkan tempoh senaman anda.**
 
-### 2. Pembetulan Pepijat & Kestabilan 🛠️
-Kami telah membetulkan pepijat kecil untuk meningkatkan kebolehgunaan aplikasi secara keseluruhan.
+### 2. Laporan Harian AI Dipertingkatkan 🧠
+**"Anda banyak berpeluh semasa bersenam, jadi pengambilan garam lebih sedikit hari ini tidak mengapa."**
+AI kini mengambil kira intensiti senaman dan kehilangan peluh semasa menganalisis diet anda. Kami telah memperhalusi logik keseluruhan untuk memahami konteks hari anda dengan lebih baik.
 
----
-
-## 💡 Tunggu! Adakah anda memanfaatkan 'Laporan Harian' sepenuhnya?
-
-Semasa menyediakan kemas kini ini, saya terfikir:
-*"Adakah pengguna benar-benar menggunakan potensi penuh fungsi Laporan ini?"*
-
-Saya mereka Laporan Harian bukan sekadar sebagai "kad laporan" di penghujung hari, tetapi sebagai **alat untuk membentuk hari yang lebih baik dengan menyemaknya dari semasa ke semasa**.
-
-Berikut ialah beberapa **[Senario Penggunaan Laporan]** untuk membantu anda membina hari yang lebih sihat.
-
-### 💧 Kes 1: Pengambilan Air Rendah
-* **Situasi:** Jam 8 malam. Laporan berkata: **"Pengambilan air rendah hari ini. Kecekapan metabolisme mungkin menurun."**
-* **Tindakan:** Minum segelas air dengan segera dan rekodkannya untuk mengimbangi hidrasi anda.
-
-### 💪 Kes 2: Makan Protein tapi Tiada Senaman
-* **Situasi:** Anda makan hidangan daging yang banyak, tetapi tiada rekod senaman. Laporan menganalisis: **"Nutrisi cukup, tetapi tanpa rangsangan (senaman), pertumbuhan otot adalah sukar."**
-* **Tindakan:** Lakukan beberapa **Squat** dan **Tekan Tubi (Push-ups)** ringkas di ruang tamu dan rekodkannya.
-* **Hasil:** Apabila dianalisis semula, anda mendapat maklum balas: **"Hebat! Dengan latihan kekuatan yang kuat selepas pengambilan protein, sintesis otot dijangka berlaku sepanjang malam."**
-
-### 🍗 Kes 3: Senaman Berat tapi Kurang Nutrisi
-* **Situasi:** Anda bersenam keras tetapi makan sedikit. Laporan memberi amaran: **"Protein tidak mencukupi berbanding intensiti latihan; risiko kehilangan otot."**
-* **Tindakan:** Makan telur rebus atau minum **protein shake** dan rekodkannya.
-* **Hasil:** Mesej bertukar positif: **"Masa yang tepat untuk bekalan nutrisi. Mod pemulihan otot diaktifkan."**
-
-### 📉 Kes 4: Waktu Makan Tidak Teratur
-* **Situasi:** Hari sibuk, makan tengah hari lewat, makan malam berat. Laporan menasihati: **"Selang masa makan tidak teratur, risiko lonjakan gula (Sugar Spike)."**
-* **Tindakan:** Sukar untuk dibetulkan hari ini, tetapi ikut nasihat AI untuk merancang waktu sarapan esok dan tetapkan penggera.
+### 3. Pembaikan Pepijat & Kestabilan 🛠️
+Kami telah membaiki ralat kecil untuk meningkatkan kestabilan keseluruhan aplikasi.
 
 ---
 
-Adakah anda sudah menyemak butang laporan anda hari ini?
-Isikan apa yang kurang dan gunakan butang **[Analisis Semula]** untuk menemui versi diri anda yang lebih sihat esok.
+## 📺 [Tip] Tiada jam tangan Wear OS (cth: Galaxy Fit)?
+Walaupun anda tidak mempunyai jam tangan pintar Wear OS (seperti Galaxy Fit), anda masih boleh menggunakan ciri Latihan Jeda (Interval Training).
+Sila tonton panduan video ini:
+
+👉 [[Panduan] Latihan Jeda tanpa jam tangan Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 "Keseimbangan Dinamik" yang menyesuaikan dengan anda
+
+Adakah diet "kurang garam" dan "2 liter air" sentiasa menjadi jawapan yang betul?
+Supsiki v1.0.7 menunjukkan **apa yang badan anda sebenarnya perlukan** berdasarkan tahap aktiviti anda.
+
+Berikut adalah beberapa **[Senario Keseimbangan Dinamik]**:
+
+### 🏃 Kes 1: Hari Senaman Berpeluh
+* **Situasi:** Anda melakukan Latihan Jeda Berintensiti Tinggi (HIIT) selama 1 jam.
+* **Perubahan:** Sasaran air harian 2L anda meningkat secara automatik kepada **2.8L** selepas data senaman diseragamkan.
+* **Analisis AI:** **"Kehilangan cecair yang tinggi hari ini. Minum 3 gelas lebih daripada biasa untuk mempercepatkan pemulihan."**
+
+### 🥘 Kes 2: Makan Masin Selepas Lari
+* **Situasi:** Selepas berlari 2 jam, anda makan makanan masin dan paras natrium meningkat.
+* **Perubahan:** "Had dibenarkan" natrium anda meningkat mengikut tempoh senaman. Grafik kekal dalam zon "Optimum" dan bukannya "Amaran".
+* **Analisis AI:** **"Elektrolit hilang semasa latihan panjang. Natrium yang diambil akan membantu pemulihan otot dan bukannya menyebabkan kembung air."**
+
+### 📉 Kes 3: Hidrasi Tidak Mencukupi
+* **Situasi:** Anda hanya minum kopi dan hampir tidak minum air kosong hari ini.
+* **Analisis AI:** **"Hidrasi anda di bawah 50% daripada keperluan badan. Minum segelas air sekarang untuk mengelakkan penurunan kecekapan metabolisme."**
+
+---
+
+Semak tab **[Keseimbangan Tenaga]** sekarang.
+Supsiki menganalisis dengan tepat apa yang badan anda perlukan berdasarkan berapa banyak anda berpeluh hari ini.
+
+---
 
 ## 🗣️ Saluran Komunikasi
-Maklum balas anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami pada bila-bila masa!
+Maklum balas anda membantu Supsiki berkembang. Sila hubungi kami bila-bila masa!
 
 ### Komuniti YouTube Pembangun
-Lihat di sebalik tabir pembangunan dan berita terkini.
+Ketahui proses pembangunan dan berita terkini.
 👉 [Pergi ke YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
@@ -59,4 +67,4 @@ Ikuti kami untuk kemas kini dan hantar DM untuk sokongan.
 
 Terima kasih.
 
-*16 Feb, 2026. Pasukan Supsiki*
+*25.02.2026. Pasukan Supsiki*
