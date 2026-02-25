@@ -1,62 +1,70 @@
-# 🥑 Cập nhật v1.0.6: Báo cáo AI Thông minh hơn & Bí quyết từ Chuyên gia!
+# 🥑 Cập nhật v1.0.7: Phân tích Động về Nước & Natri
 
 Xin chào, tôi là nhà phát triển của **Supsiki**.
-Bản cập nhật v1.0.6 lần này mang đến sự nâng cấp lớn cho tính năng **'Báo cáo Hàng ngày AI'** (AI Daily Report), được thiết kế để phân tích ngày hôm nay và chuẩn bị thể trạng tốt nhất cho bạn vào ngày mai.
+Bản cập nhật v1.0.7 này tập trung vào hai yếu tố quan trọng đối với hiệu suất tập luyện và sức khỏe của bạn: **'Nước' (Hydration)** và **'Natri' (Sodium)**.
 
-## ✅ Chi tiết bản cập nhật v1.0.6
+## ✅ Ghi chú phát hành v1.0.7
 
-### 1. Báo cáo Hàng ngày AI được Cải tiến 📊
-AI của Supsiki giờ đây hiểu ngữ cảnh tốt hơn. Đừng lo nếu bạn quên ghi chép hoặc thiếu một vài dữ liệu từ đồng hồ.
-Dựa trên những gì bạn ăn và vận động hôm nay, AI sẽ dự đoán **trạng thái cơ thể của bạn vào ngày mai** chính xác hơn!
+### 1. Mở rộng Cân bằng Năng lượng: Natri & Nước 💧
+Hiện tại, chúng tôi theo dõi thêm **[Natri & Lượng nước]** bên cạnh các phân tích hiện có về tinh bột (carb), đạm (protein), chất béo (fat) và calo.
+Điểm mấu chốt: Mục tiêu của bạn không cố định. **Nhu cầu nước và giới hạn natri của bạn giờ đây sẽ tự động điều chỉnh linh hoạt dựa trên thời gian tập luyện.**
 
-### 2. Sửa lỗi & Ổn định 🛠️
-Chúng tôi đã sửa các lỗi nhỏ để trải nghiệm ứng dụng mượt mà hơn.
+### 2. Báo cáo Hàng ngày AI Cải tiến 🧠
+**"Bạn đã đổ nhiều mồ hôi khi tập luyện, vì vậy hôm nay ăn mặn hơn một chút cũng không sao."**
+AI hiện tính đến cường độ tập luyện và lượng mồ hôi mất đi khi phân tích chế độ ăn uống của bạn. Chúng tôi đã tinh chỉnh logic để hiểu rõ hơn ngữ cảnh trong ngày của bạn.
 
----
-
-## 💡 Khoan đã! Bạn đã tận dụng hết 'Báo cáo Hàng ngày' chưa?
-
-Trong lúc chuẩn bị bản cập nhật này, tôi tự hỏi:
-*"Liệu người dùng có đang sử dụng hết tiềm năng của tính năng Báo cáo không nhỉ?"*
-
-Tôi thiết kế Báo cáo Hàng ngày không chỉ để là "bảng điểm" cuối ngày, mà là **công cụ để kiến tạo một ngày tốt lành hơn bằng cách kiểm tra nó thường xuyên**.
-
-Dưới đây là **[Các tình huống sử dụng Báo cáo]** thực tế giúp bạn sống khỏe hơn.
-
-### 💧 Trường hợp 1: Uống ít nước
-* **Tình huống:** Đã 8 giờ tối. Báo cáo nhắc: **"Hôm nay bạn uống ít nước quá. Hiệu quả trao đổi chất có thể bị giảm."**
-* **Hành động:** Uống ngay một ly nước và ghi lại để cân bằng độ ẩm cơ thể.
-
-### 💪 Trường hợp 2: Ăn nhiều đạm nhưng không tập
-* **Tình huống:** Bạn ăn bữa thịt nướng no nê nhưng không có ghi chép tập luyện. Báo cáo phân tích: **"Dinh dưỡng thì đủ, nhưng thiếu kích thích (tập luyện) nên khó phát triển cơ bắp."**
-* **Hành động:** Thực hiện vài hiệp **Squat** và **Hít đất (Push-ups)** nhẹ nhàng ngay tại phòng khách rồi ghi lại.
-* **Kết quả:** Khi phân tích lại, bạn nhận được phản hồi: **"Tuyệt vời! Lượng đạm nạp vào giờ đã sẵn sàng để tổng hợp cơ bắp trong đêm nay."**
-
-### 🍗 Trường hợp 3: Tập nặng nhưng ăn ít
-* **Tình huống:** Tập gym hùng hục nhưng ăn uống qua loa. Báo cáo cảnh báo: **"Lượng đạm không đủ so với cường độ tập; cẩn thận nguy cơ mất cơ."**
-* **Hành động:** Ăn một quả trứng luộc hoặc uống một cốc Whey protein rồi ghi lại.
-* **Kết quả:** Thông điệp chuyển sang tích cực: **"Nạp dinh dưỡng đúng thời điểm! Chế độ phục hồi cơ bắp đã được kích hoạt."**
-
-### 📉 Trường hợp 4: Ăn uống thất thường
-* **Tình huống:** Bận rộn, ăn trưa muộn, rồi dồn vào bữa tối. Báo cáo khuyên: **"Khoảng cách giữa các bữa ăn không đều, cẩn thận nguy cơ đường huyết tăng vọt (Sugar Spike)."**
-* **Hành động:** Hôm nay khó sửa rồi, nhưng hãy làm theo lời khuyên của AI: lên kế hoạch giờ ăn sáng ngày mai và đặt báo thức ngay.
+### 3. Sửa lỗi & Ổn định 🛠️
+Chúng tôi đã sửa các lỗi nhỏ để cải thiện độ ổn định chung của ứng dụng.
 
 ---
 
-Bạn đã nhấn nút báo cáo hôm nay chưa?
-Hãy bổ sung những gì còn thiếu và nhấn **[Phân tích lại]** để gặp phiên bản khỏe mạnh hơn của chính mình vào ngày mai.
+## 📺 [Mẹo] Bạn không có đồng hồ Wear OS (ví dụ: Galaxy Fit)?
+Ngay cả khi bạn không sở hữu đồng hồ thông minh Wear OS (như Galaxy Fit), bạn vẫn có thể sử dụng các tính năng Tập luyện Ngắt quãng (Interval Training).
+Hãy xem video hướng dẫn này:
 
-## 🗣️ Kênh liên lạc
-Phản hồi của bạn giúp Supsiki lớn mạnh hơn. Đừng ngần ngại trò chuyện với chúng tôi nhé!
+👉 [[Hướng dẫn] Tập Interval Training không cần đồng hồ Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
 
-### Cộng đồng YouTube Nhà phát triển
-Xem hậu trường phát triển và tin tức mới nhất.
+---
+
+## 💡 "Cân bằng Linh hoạt" thích ứng với bạn
+
+Liệu chế độ ăn "ít muối" và uống "2 lít nước" có luôn là câu trả lời đúng?
+Supsiki v1.0.7 chỉ ra **những gì cơ thể bạn thực sự cần** dựa trên mức độ hoạt động của bạn.
+
+Dưới đây là một số **[Tình huống Cân bằng Linh hoạt]**:
+
+### 🏃 Trường hợp 1: Ngày tập luyện đổ nhiều mồ hôi
+* **Tình huống:** Bạn đã tập HIIT (Cường độ cao ngắt quãng) trong 1 giờ.
+* **Thay đổi:** Mục tiêu nước 2L thông thường của bạn tự động tăng lên **2,8L** sau khi đồng bộ hóa dữ liệu tập luyện.
+* **Phân tích AI:** **"Hôm nay bạn mất nước nhiều. Hãy uống thêm 3 cốc nước so với bình thường để phục hồi nhanh hơn."**
+
+### 🥘 Trường hợp 2: Ăn mặn sau khi chạy bộ
+* **Tình huống:** Sau khi chạy 2 giờ, bạn ăn đồ mặn (như Phở/Bún) và lượng natri tăng cao.
+* **Thay đổi:** "Giới hạn cho phép" của natri tăng lên theo thời gian tập luyện. Biểu đồ vẫn ở vùng "Tối ưu" thay vì "Cảnh báo".
+* **Phân tích AI:** **"Bạn đã mất điện giải trong buổi tập dài. Lượng natri nạp vào sẽ giúp phục hồi cơ bắp thay vì gây tích nước (phù nề)."**
+
+### 📉 Trường hợp 3: Uống không đủ nước
+* **Tình huống:** Hôm nay bạn chỉ uống cà phê và gần như không uống nước lọc.
+* **Phân tích AI:** **"Lượng nước nạp vào dưới 50% nhu cầu cơ thể. Hãy uống một cốc nước ngay bây giờ để tránh giảm hiệu quả trao đổi chất."**
+
+---
+
+Hãy kiểm tra tab **[Cân bằng Năng lượng]** ngay bây giờ.
+Supsiki phân tích chính xác những gì cơ thể bạn cần dựa trên lượng mồ hôi bạn đã đổ hôm nay.
+
+---
+
+## 🗣️ Kênh Giao tiếp
+Phản hồi của bạn giúp Supsiki phát triển. Hãy liên hệ với chúng tôi bất cứ lúc nào!
+
+### Cộng đồng YouTube của Nhà phát triển
+Xem quá trình phát triển và tin tức mới nhất.
 👉 [Đến YouTube Nhà phát triển](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Theo dõi cập nhật và nhắn tin (DM) để được hỗ trợ.
+Theo dõi chúng tôi để cập nhật và gửi tin nhắn DM để được hỗ trợ.
 👉 [Đến Instagram](https://www.instagram.com/chronolabcorp/)
 
-Cảm ơn bạn.
+Xin cảm ơn.
 
-*16/02/2026. Đội ngũ Supsiki*
+*25.02.2026. Đội ngũ Supsiki*
