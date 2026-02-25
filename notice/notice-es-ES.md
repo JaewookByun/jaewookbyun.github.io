@@ -1,62 +1,70 @@
-# 🥑 Actualización v1.0.6: ¡Informes de IA más Inteligentes y Consejos Pro!
+# 🥑 Actualización v1.0.7: Análisis Dinámico de Hidratación y Sodio
 
 Hola, soy el desarrollador de **Supsiki**.
-Esta actualización v1.0.6 trae una mejora importante en la función **'Informe Diario de IA'** (AI Daily Report), diseñada para analizar tu día y prepararte para un mañana mejor.
+Esta actualización v1.0.7 se centra en dos factores clave para tu rendimiento y salud: la **«Hidratación»** y el **«Sodio»**.
 
-## ✅ Notas de la Versión v1.0.6
+## ✅ Notas de la versión v1.0.7
 
-### 1. Informe Diario de IA Mejorado 📊
-La IA de Supsiki ahora entiende mejor el contexto. No te preocupes si olvidaste registrar algo o si faltan algunos datos de tu reloj.
-Basándose en lo que has comido y tu actividad de hoy, ¡ahora predice tu **estado físico para mañana** con mucha más precisión!
+### 1. Nuevo en Balance Energético: Sodio e Hidratación 💧
+Ahora rastreamos **[Sodio e Hidratación]** junto con el análisis existente de carbohidratos, proteínas y calorías.
+Lo más importante: Tu objetivo no es estático. **Tu necesidad de agua y tu límite de sodio se ajustan dinámicamente según la duración de tu entrenamiento.**
 
-### 2. Corrección de Errores y Estabilidad 🛠️
-Hemos corregido pequeños fallos para mejorar la experiencia general de la aplicación.
+### 2. Informe Diario de IA Mejorado 🧠
+**"Has sudado mucho entrenando, así que hoy puedes ingerir un poco más de sal."**
+La IA ahora tiene en cuenta la intensidad del ejercicio y la pérdida de sudor al analizar tu dieta. Hemos refinado la lógica para entender mejor el contexto de tu día.
 
----
-
-## 💡 ¡Espera! ¿Estás aprovechando el 'Informe Diario' al máximo?
-
-Mientras preparaba esta actualización, me pregunté:
-*"¿Los usuarios realmente están utilizando todo el potencial de la función de Informe?"*
-
-He diseñado el Informe Diario no solo como un "boletín de notas" al final del día, sino como una **herramienta para dar forma a un día mejor, consultándolo a ratos**.
-
-Aquí tienes algunos **[Escenarios de Uso del Informe]** para ayudarte a construir un día más saludable.
-
-### 💧 Caso 1: Poca Ingesta de Agua
-* **Situación:** Son las 20:00. El informe dice: **"La ingesta de agua es baja hoy. La eficiencia metabólica podría disminuir."**
-* **Acción:** Bébete un vaso de agua de inmediato y regístralo para equilibrar tu hidratación.
-
-### 💪 Caso 2: Comiste Proteína pero Sin Entrenamiento
-* **Situación:** Has comido bastante carne, pero no hay registro de entrenamiento. El informe analiza: **"Nutrición suficiente, pero sin estímulo (ejercicio), el crecimiento muscular es difícil."**
-* **Acción:** Haz unas **sentadillas y flexiones (push-ups)** rápidas en el salón y regístralo.
-* **Resultado:** Al volver a analizar, recibes el feedback: **"¡Excelente! La proteína ingerida ahora está lista para la síntesis muscular durante la noche."**
-
-### 🍗 Caso 3: Entrenaste Duro pero Poca Nutrición
-* **Situación:** Has entrenado fuerte pero has comido poco. El informe advierte: **"Proteína insuficiente comparada con la intensidad del entrenamiento; riesgo de pérdida muscular."**
-* **Acción:** Cómete un huevo cocido o tómate un **batido de proteínas** y regístralo.
-* **Resultado:** El mensaje cambia a positivo: **"Timing perfecto para la nutrición. Modo de recuperación muscular activado."**
-
-### 📉 Caso 4: Horarios de Comida Irregulares
-* **Situación:** Día ajetreado, comida tarde, cena copiosa. El informe aconseja: **"Intervalos de comida irregulares, riesgo de picos de glucosa."**
-* **Acción:** Es difícil corregirlo hoy, pero sigue el consejo de la IA para planificar tu desayuno de mañana y pon una alarma.
+### 3. Corrección de errores y estabilidad 🛠️
+Hemos corregido pequeños errores para mejorar la estabilidad general de la aplicación.
 
 ---
 
-¿Ya has consultado tu botón de informe hoy?
-Completa lo que falta y usa el botón **[Reanalizar]** para encontrar una versión más saludable de ti mañana.
+## 📺 [Consejo] ¿No tienes un reloj Wear OS (ej. Galaxy Fit)?
+Aunque no tengas un reloj con Wear OS (como el Galaxy Fit), puedes utilizar las funciones de entrenamiento por intervalos.
+Mira esta guía en vídeo:
+
+👉 [[Guía] Entrenamiento por Intervalos sin reloj Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 «Balance Dinámico» que se adapta a ti
+
+¿La dieta "baja en sal" y "2 litros de agua" es siempre la respuesta correcta?
+Supsiki v1.0.7 te muestra **lo que tu cuerpo realmente necesita** basándose en tu nivel de actividad.
+
+Aquí tienes algunos **[Escenarios de Balance Dinámico]**:
+
+### 🏃 Caso 1: Día de entrenamiento intenso
+* **Situación:** Hiciste un entrenamiento HIIT de 1 hora.
+* **Cambio:** Tu objetivo habitual de 2L de agua sube automáticamente a **2,8L** al sincronizar el ejercicio.
+* **Análisis de IA:** **"Hoy has perdido mucho líquido. Bebe 3 vasos más de lo habitual para acelerar tu recuperación."**
+
+### 🥘 Caso 2: Comida salada después de correr
+* **Situación:** Después de correr 2 horas, comiste algo salado y tu nivel de sodio subió.
+* **Cambio:** Tu «límite permitido» de sodio aumenta según la duración del ejercicio. La gráfica se mantiene en la zona «Óptima» en lugar de «Alerta».
+* **Análisis de IA:** **"Perdiste electrolitos durante el entrenamiento largo. El sodio consumido ayudará a la recuperación muscular en lugar de causar retención de líquidos."**
+
+### 📉 Caso 3: Hidratación insuficiente
+* **Situación:** Hoy solo tomaste café y casi nada de agua pura.
+* **Análisis de IA:** **"Tu hidratación está por debajo del 50%. Bebe un vaso de agua ahora para evitar que baje tu eficiencia metabólica."**
+
+---
+
+Comprueba ahora la pestaña **[Balance Energético]**.
+Supsiki analiza exactamente lo que tu cuerpo necesita según cuánto has sudado hoy.
+
+---
 
 ## 🗣️ Canales de Comunicación
-Tu feedback ayuda a Supsiki a crecer. ¡No dudes en hablarnos en cualquier momento!
+Tus comentarios ayudan a Supsiki a crecer. ¡Escríbenos cuando quieras!
 
 ### Comunidad de YouTube del Desarrollador
-Echa un vistazo al "detrás de las cámaras" del desarrollo y las últimas noticias.
+Entérate de las novedades y el proceso de desarrollo.
 👉 [Ir al YouTube del Desarrollador](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Síguenos para actualizaciones y envíanos un DM para soporte.
+Síguenos para actualizaciones y envíanos un mensaje para soporte.
 👉 [Ir a Instagram](https://www.instagram.com/chronolabcorp/)
 
 Gracias.
 
-*16 de Feb, 2026. Equipo Supsiki*
+*25.02.2026. El equipo de Supsiki*
