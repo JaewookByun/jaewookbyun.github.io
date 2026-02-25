@@ -1,57 +1,65 @@
-# 🥑 Update v1.0.6: Slimmere AI-rapporten & Pro-tips!
+# 🥑 Update v1.0.7: Dynamische Analyse van Hydratatie & Natrium
 
-Hallo, hier is de ontwikkelaar van **Supsiki**.
-Deze update v1.0.6 brengt een grote verbetering naar de functie **'AI Dagelijks Rapport'** (AI Daily Report), ontworpen om uw dag te analyseren en u voor te bereiden op een betere dag morgen.
+Hallo, ik ben de ontwikkelaar van **Supsiki**.
+Deze update v1.0.7 richt zich op twee cruciale factoren voor jouw prestaties en gezondheid: **'Hydratatie'** (vochtbalans) en **'Natrium'** (zout).
 
-## ✅ Release Notes v1.0.6
+## ✅ Release Notes v1.0.7
 
-### 1. Verbeterd AI Dagelijks Rapport 📊
-De AI van Supsiki begrijpt de context nu beter. Maakt u zich geen zorgen als u iets bent vergeten te loggen of als er gegevens van uw smartwatch ontbreken.
-Op basis van wat u vandaag heeft gegeten en uw activiteit, voorspelt het nu uw **lichamelijke conditie voor morgen** nog nauwkeuriger!
+### 1. Uitgebreide Energiebalans: Natrium & Hydratatie 💧
+We houden nu ook **[Natrium & Hydratatie]** bij, naast de bestaande analyse van koolhydraten, eiwitten, vetten en calorieën.
+Het belangrijkste punt: Je doel is niet statisch. **Je vochtbehoefte en natriumlimiet passen zich nu dynamisch aan op basis van je trainingsduur.**
 
-### 2. Bugfixes & Stabiliteit 🛠️
-We hebben kleine fouten hersteld om het algemene gebruiksgemak van de app te verbeteren.
+### 2. Verbeterd AI-dagrapport 🧠
+**"Je hebt veel gezweet tijdens het sporten, dus wat extra zout is prima vandaag."**
+De AI houdt nu rekening met de trainingsintensiteit en het zweetverlies bij het analyseren van je voeding. We hebben de logica verfijnd om de context van je dag beter te begrijpen.
 
----
-
-## 💡 Wacht even! Haalt u alles uit het 'Dagelijks Rapport'?
-
-Tijdens het voorbereiden van deze update vroeg ik me af:
-*"Benutten gebruikers de volledige potentie van de Rapport-functie?"*
-
-Ik heb het Dagelijks Rapport niet alleen ontworpen als een "indrapport" aan het einde van de dag, maar als een **tool om uw dag bij te sturen door het tussentijds te controleren**.
-
-Hier zijn enkele **[Scenario's voor het Rapport]** om u te helpen een gezondere dag op te bouwen.
-
-### 💧 Situatie 1: Te weinig water gedronken
-* **Situatie:** Het is 20:00 uur. Het rapport zegt: **"De waterinname is laag vandaag. De metabolische efficiëntie kan dalen."**
-* **Actie:** Drink direct een glas water en log dit om uw hydratatie in balans te brengen.
-
-### 💪 Situatie 2: Wel proteïne gegeten, maar niet gesport
-* **Situatie:** U heeft een stevige maaltijd met vlees gegeten, maar er is geen training gelogd. Het rapport analyseert: **"Voeding is voldoende, maar zonder stimulans (training) is spiergroei lastig."**
-* **Actie:** Doe snel wat **Squats** en **Push-ups** in de woonkamer en log dit.
-* **Resultaat:** Bij het opnieuw analyseren krijgt u de feedback: **"Geweldig! Door de krachttraining na de eiwitinname wordt vannacht spieropbouw verwacht."**
-
-### 🍗 Situatie 3: Hard getraind, maar weinig voeding
-* **Situatie:** U heeft zwaar getraind maar weinig gegeten. Het rapport waarschuwt: **"Proteïne is onvoldoende in vergelijking met de trainingsintensiteit; risico op spierverlies."**
-* **Actie:** Eet een gekookt ei of drink een **Eiwitshake (Protein shake)** en log dit.
-* **Resultaat:** Het bericht wordt positief: **"Perfecte timing voor voeding. Spierherstelmodus geactiveerd."**
-
-### 📉 Situatie 4: Onregelmatige eettijden
-* **Situatie:** Drukke dag, late lunch, zwaar diner. Het rapport adviseert: **"De intervallen tussen maaltijden zijn onregelmatig, risico op een bloedsuikerpiek."**
-* **Actie:** Vandaag lastig te corrigeren, maar volg het advies van de AI om uw ontbijttijd voor morgen te plannen en zet een wekker.
+### 3. Foutoplossingen & Stabiliteit 🛠️
+We hebben kleine fouten opgelost om de algehele stabiliteit van de app te verbeteren.
 
 ---
 
-Heeft u vandaag al op de rapport-knop gedrukt?
-Vul aan wat ontbreekt en gebruik de knop **[Opnieuw analyseren]** om morgen een gezondere versie van uzelf te ontmoeten.
+## 📺 [Tip] Geen Wear OS-horloge (bijv. Galaxy Fit)?
+Zelfs als je geen smartwatch met Wear OS hebt (zoals de Galaxy Fit), kun je de functies voor Intervaltraining gebruiken.
+Bekijk deze videogids:
+
+👉 [[Gids] Intervaltraining zonder Wear OS-horloge](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 "Dynamische Balans" die zich aan jou aanpast
+
+Is een "zoutarm dieet" en "2 liter water" altijd het juiste antwoord?
+Supsiki v1.0.7 laat zien **wat je lichaam écht nodig heeft** op basis van je activiteitsniveau.
+
+Hier zijn enkele **[Scenario's voor Dynamische Balans]**:
+
+### 🏃 Scenario 1: Intensieve training met veel zweet
+* **Situatie:** Je hebt 1 uur High Intensity Interval Training (HIIT) gedaan.
+* **Verandering:** Je standaard waterdoel van 2L stijgt automatisch naar **2,8L** na het synchroniseren van de training.
+* **AI-analyse:** **"Veel vochtverlies vandaag. Drink 3 glazen meer dan normaal om het herstel te versnellen."**
+
+### 🥘 Scenario 2: Zout eten na het hardlopen
+* **Situatie:** Na 2 uur hardlopen heb je zout gegeten, waardoor je natriumniveau steeg.
+* **Verandering:** Je "toegestane limiet" voor natrium stijgt op basis van de trainingsduur. De grafiek blijft in de zone "Optimaal" in plaats van "Waarschuwing".
+* **AI-analyse:** **"Je hebt elektrolyten verloren tijdens de lange training. Het geconsumeerde natrium helpt nu bij spierherstel in plaats van vocht vast te houden."**
+
+### 📉 Scenario 3: Onvoldoende hydratatie
+* **Situatie:** Je hebt vandaag alleen koffie en bijna geen water gedronken.
+* **AI-analyse:** **"Je hydratatie is minder dan 50% van de behoefte. Drink nu een glas water om een daling van je metabolische efficiëntie te voorkomen."**
+
+---
+
+Bekijk nu het tabblad **[Energiebalans]**.
+Supsiki analyseert precies wat je lichaam nodig heeft op basis van hoeveel je vandaag hebt gezweet.
+
+---
 
 ## 🗣️ Communicatiekanalen
-Uw feedback helpt Supsiki groeien. Neem gerust contact met ons op!
+Jouw feedback helpt Supsiki groeien. Neem gerust contact met ons op!
 
 ### YouTube-community van de ontwikkelaar
-Bekijk een kijkje achter de schermen bij de ontwikkeling en het laatste nieuws.
-👉 [Ga naar YouTube van de Ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
+Bekijk het ontwikkelproces en het laatste nieuws.
+👉 [Ga naar YouTube van de ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
 Volg ons voor updates en stuur een DM voor ondersteuning.
@@ -59,4 +67,4 @@ Volg ons voor updates en stuur een DM voor ondersteuning.
 
 Bedankt.
 
-*16 feb. 2026. Het Supsiki Team*
+*25.02.2026. Het Supsiki Team*
