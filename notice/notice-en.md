@@ -1,50 +1,58 @@
-# 🥑 v1.0.6 Update: Smarter AI Reports & Pro Tips!
+# 🥑 Update v1.0.7: Dynamic Hydration & Sodium Analysis
 
 Hello, this is the **Supsiki** developer.
-This v1.0.6 update brings a major enhancement to the **'AI Daily Report'** feature, designed to analyze your day and prepare you for a better tomorrow.
+This v1.0.7 update focuses on two critical factors for fitness performance and health management: **'Hydration'** and **'Sodium'**.
 
-## ✅ v1.0.6 Release Notes
+## ✅ v1.0.7 Release Notes
 
-### 1. Enhanced AI Daily Report 📊
-Supsiki's AI now understands context better. Don't worry if you forgot to log a record or if some watch data is missing.
-Based on the food you ate and your activity today, it now predicts your **body's condition for tomorrow** more accurately!
+### 1. Expanded Energy Balance: Sodium & Hydration 💧
+We now track **[Sodium & Hydration]** alongside the existing carbs, protein, fat, and calorie analysis.
+Crucially, your recommended intake isn't static—**your hydration needs and sodium allowance limit now dynamically adjust based on your workout duration.**
 
-### 2. Bug Fixes & Stability 🛠️
-We have fixed minor bugs to improve the overall usability of the app.
+### 2. Enhanced AI Daily Report 🧠
+**"You sweat a lot during your workout, so a slightly higher sodium intake is okay today."**
+The AI now factors in workout intensity and sweat loss when analyzing your diet. We have refined the overall logic to better understand the context of your day.
 
----
-
-## 💡 Wait! Are you making the most of the 'Daily Report'?
-
-While preparing this update, I wondered:
-*"Are users utilizing the Daily Report function to its full potential?"*
-
-I designed the Daily Report not just as a final "report card" for the day, but as **a tool to shape a better day by checking it intermittently**.
-
-Here are some **[Daily Report Scenarios]** to help you build a healthier day.
-
-### 💧 Case 1: Low Water Intake
-* **Situation:** It's 8 PM. The report says, **"Water intake is low today. Metabolic efficiency may drop."**
-* **Action:** Drink a glass of water immediately and log it to balance your hydration.
-
-### 💪 Case 2: Ate Protein but No Exercise
-* **Situation:** You ate a hearty meal with meat, but have no workout record. The report analyzes: **"Nutrition is sufficient, but without stimulation (exercise), muscle growth is difficult."**
-* **Action:** Do some quick squats and push-ups in the living room and log it.
-* **Result:** When you check the report again, you get the feedback: **"Excellent! The protein you ate is now ready to be used for muscle synthesis."**
-
-### 🍗 Case 3: Exercised but Low Nutrition
-* **Situation:** You worked out hard but didn't eat enough. The report warns: **"Protein is insufficient compared to workout intensity; muscle loss is a concern."**
-* **Action:** Eat a boiled egg or drink a protein shake and log it.
-* **Result:** The message turns positive: **"Perfect timing for nutrient supply. Muscle recovery mode activated."**
-
-### 📉 Case 4: Irregular Meal Timing
-* **Situation:** Busy day, late lunch, heavy dinner. The report advises: **"Meal intervals are irregular, posing a risk of blood sugar spikes."**
-* **Action:** It's hard to fix today, but follow the AI's advice to plan tomorrow's breakfast time and set an alarm.
+### 3. Bug Fixes & Stability 🛠️
+We have fixed reported issues to improve the overall stability of the app.
 
 ---
 
-Have you checked your report today?
-Fill in what's missing, and **re-analyze** to meet a healthier you tomorrow.
+## 📺 [Tip] For Galaxy Fit & Non-Wear OS Users
+Even if you don't have a Wear OS watch (like Galaxy Fit), you can still utilize the Interval Training features.
+Check out this video guide:
+
+👉 [[Guide] Interval Training without a Wear OS Watch](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 'Dynamic Balance' that adapts to you
+
+Is "Low Sodium" and "2L of Water" always the right answer for everyone?
+Supsiki v1.0.7 suggests **what your body actually needs** based on your activity level.
+
+Here are some **[Dynamic Balance Scenarios]**:
+
+### 🏃 Case 1: High-Sweat Workout Day
+* **Situation:** You performed High-Intensity Interval Training (HIIT) for 1 hour.
+* **Change:** Your usual 2L water goal automatically increases to **2.8L** upon syncing the workout record.
+* **AI Analysis:** **"High sweat loss today. You need 3 more glasses of water than usual to aid recovery."**
+
+### 🥘 Case 2: Worried about Sodium after Exercise
+* **Situation:** After a 2-hour run, you ate a salty meal, spiking your sodium intake.
+* **Change:** Your sodium 'allowance limit' increases based on the workout duration, keeping the graph in the 'Optimal' zone instead of 'Warning'.
+* **AI Analysis:** **"Electrolytes were lost during the long workout. The sodium consumed will aid muscle recovery rather than causing bloating."**
+
+### 📉 Case 3: Insufficient Hydration
+* **Situation:** You drank coffee but almost no pure water today.
+* **AI Analysis:** **"Hydration is below 50% of body weight requirements. Drink a glass of water now to prevent a drop in metabolic efficiency."**
+
+---
+
+Check the **[Energy Balance]** tab now.
+Supsiki analyzes exactly what your body needs based on how much you sweated today.
+
+---
 
 ## 🗣️ Communication Channels
 Your feedback helps Supsiki grow. Please feel free to reach out anytime!
@@ -59,4 +67,4 @@ Follow us for updates and send us a DM for support.
 
 Thank you.
 
-*Feb 16, 2026. Supsiki Team*
+*Feb 25, 2026. Supsiki Team*
