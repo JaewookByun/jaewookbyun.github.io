@@ -1,62 +1,70 @@
-# 🥑 Mise à jour v1.0.6 : Rapports IA plus intelligents & Conseils de Pro !
+# 🥑 Mise à jour v1.0.7 : Analyse dynamique de l'hydratation et du sodium
 
-Bonjour, ici le développeur de **Supsiki**.
-Cette mise à jour v1.0.6 apporte une amélioration majeure à la fonctionnalité **'Rapport Quotidien IA'** (AI Daily Report), conçue pour analyser votre journée et vous préparer une meilleure forme pour demain.
+Bonjour, je suis le développeur de **Supsiki**.
+Cette mise à jour v1.0.7 se concentre sur deux facteurs essentiels pour votre performance et votre santé : **« l'Hydratation »** et le **« Sodium »**.
 
-## ✅ Notes de version v1.0.6
+## ✅ Notes de version v1.0.7
 
-### 1. Rapport Quotidien IA Amélioré 📊
-L'IA de Supsiki comprend désormais mieux le contexte. Ne vous inquiétez pas si vous avez oublié d'enregistrer quelque chose ou s'il manque des données de votre montre.
-En se basant sur ce que vous avez mangé et votre activité d'aujourd'hui, elle prédit maintenant votre **état de forme pour demain** avec beaucoup plus de précision !
+### 1. Bilan Énergétique étendu : Sodium & Hydratation 💧
+Nous suivons désormais le **[Sodium et l'Hydratation]** en plus de l'analyse existante (glucides, protéines, lipides, calories).
+Le point clé : Votre objectif n'est pas statique. **Vos besoins en eau et votre seuil de sodium s'ajustent dynamiquement en fonction de la durée de votre entraînement.**
 
-### 2. Correctifs & Stabilité 🛠️
-Nous avons corrigé des bugs mineurs pour améliorer la fluidité générale de l'application.
+### 2. Rapport Quotidien IA amélioré 🧠
+**« Vous avez beaucoup transpiré à l'effort, vous pouvez donc consommer un peu plus de sel aujourd'hui. »**
+L'IA prend désormais en compte l'intensité de l'exercice et la perte de transpiration. Nous avons affiné la logique globale pour mieux comprendre le contexte de votre journée.
 
----
-
-## 💡 Attendez ! Profitez-vous vraiment du 'Rapport Quotidien' ?
-
-En préparant cette mise à jour, je me suis posé la question :
-*"Les utilisateurs exploitent-ils vraiment tout le potentiel du Rapport ?"*
-
-J'ai conçu le Rapport Quotidien non pas comme un simple "bulletin de notes" de fin de journée, mais comme un **outil pour façonner une meilleure journée en le consultant régulièrement**.
-
-Voici quelques **[Scénarios d'utilisation]** pour vous aider à construire une journée plus saine.
-
-### 💧 Cas 1 : Manque d'hydratation
-* **Situation :** Il est 20h. Le rapport indique : **"L'apport en eau est faible aujourd'hui. L'efficacité métabolique pourrait chuter."**
-* **Action :** Buvez immédiatement un verre d'eau et enregistrez-le pour rééquilibrer votre hydratation.
-
-### 💪 Cas 2 : Protéines consommées mais pas de sport
-* **Situation :** Vous avez fait un bon repas riche en viande, mais aucun entraînement n'est enregistré. Le rapport analyse : **"Nutriments suffisants, mais sans stimulus (sport), la croissance musculaire est difficile."**
-* **Action :** Faites quelques **squats et pompes (push-ups)** rapides dans le salon et enregistrez-les.
-* **Résultat :** En relançant l'analyse, vous recevez ce retour : **"Excellent ! Les protéines ingérées sont maintenant prêtes à être utilisées pour la synthèse musculaire cette nuit."**
-
-### 🍗 Cas 3 : Entraînement intense mais peu de nutrition
-* **Situation :** Vous avez travaillé dur à la salle mais peu mangé. Le rapport prévient : **"Protéines insuffisantes par rapport à l'intensité de l'entraînement ; risque de perte musculaire."**
-* **Action :** Mangez un œuf dur ou buvez un **shaker de protéines** et enregistrez-le.
-* **Résultat :** Le message devient positif : **"Timing parfait pour l'apport nutritionnel. Mode récupération musculaire activé."**
-
-### 📉 Cas 4 : Repas irréguliers
-* **Situation :** Journée chargée, déjeuner tardif, dîner copieux. Le rapport conseille : **"Intervalles de repas irréguliers, risque de pic de glycémie (Sugar Spike)."**
-* **Action :** Difficile à corriger aujourd'hui, mais suivez le conseil de l'IA pour planifier l'heure de votre petit-déjeuner de demain et mettez un réveil.
+### 3. Correctifs et stabilité 🛠️
+Nous avons corrigé des erreurs mineures pour améliorer la stabilité globale de l'application.
 
 ---
 
-Avez-vous consulté votre bouton de rapport aujourd'hui ?
-Complétez ce qui manque et utilisez le bouton **[Réanalyser]** pour découvrir une version plus saine de vous-même demain.
+## 📺 [Astuce] Pas de montre Wear OS (ex: Galaxy Fit) ?
+Même si vous ne possédez pas de montre Wear OS (comme la Galaxy Fit), vous pouvez utiliser les fonctions d'entraînement par intervalles.
+Consultez ce guide vidéo :
 
-## 🗣️ Canaux de communication
-Vos retours aident Supsiki à grandir. N'hésitez pas à nous contacter à tout moment !
+👉 [[Guide] Entraînement par intervalles sans montre Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 Le « Bilan Dynamique » qui s'adapte à vous
+
+Le régime « pauvre en sel » et « 2 litres d'eau » est-il toujours la bonne réponse ?
+Supsiki v1.0.7 vous indique **ce dont votre corps a réellement besoin** en fonction de votre activité.
+
+Voici quelques **[Scénarios de Bilan Dynamique]** :
+
+### 🏃 Cas 1 : Séance de sport intense
+* **Situation :** Vous avez fait 1 heure de HIIT (entraînement par intervalles).
+* **Changement :** Votre objectif habituel de 2 L d'eau passe automatiquement à **2,8 L** une fois l'exercice synchronisé.
+* **Analyse IA :** **« Perte hydrique importante aujourd'hui. Buvez 3 verres de plus que d'habitude pour accélérer la récupération. »**
+
+### 🥘 Cas 2 : Repas salé après une course
+* **Situation :** Après avoir couru 2 heures, vous avez mangé un plat salé et votre taux de sodium a grimpé.
+* **Changement :** Votre « seuil autorisé » de sodium augmente selon la durée de l'effort. Le graphique reste dans la zone « Optimale » au lieu de « Alerte ».
+* **Analyse IA :** **« Vous avez perdu des électrolytes durant l'effort long. Le sodium consommé aidera à la récupération musculaire plutôt qu'à causer de la rétention d'eau. »**
+
+### 📉 Cas 3 : Hydratation insuffisante
+* **Situation :** Vous n'avez bu que du café et presque pas d'eau pure aujourd'hui.
+* **Analyse IA :** **« Votre hydratation est inférieure à 50 % de vos besoins. Buvez un verre d'eau maintenant pour éviter une baisse de votre efficacité métabolique. »**
+
+---
+
+Vérifiez dès maintenant l'onglet **[Bilan Énergétique]**.
+Supsiki analyse exactement ce dont votre corps a besoin en fonction de votre transpiration du jour.
+
+---
+
+## 🗣️ Canaux de Communication
+Vos retours aident Supsiki à grandir. N'hésitez pas à nous écrire !
 
 ### Communauté YouTube du Développeur
 Découvrez les coulisses du développement et les dernières nouvelles.
-👉 [Voir le YouTube du Développeur](https://www.youtube.com/@bjw0829/posts)
+👉 [Aller sur la chaîne YouTube](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Suivez-nous pour les mises à jour et envoyez un DM pour obtenir de l'aide.
-👉 [Voir l'Instagram](https://www.instagram.com/chronolabcorp/)
+Suivez-nous pour les mises à jour et envoyez-nous un message pour le support.
+👉 [Aller sur Instagram](https://www.instagram.com/chronolabcorp/)
 
 Merci.
 
-*16 Fév. 2026. L'équipe Supsiki*
+*25.02.2026. L'équipe Supsiki*
