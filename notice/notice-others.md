@@ -1,39 +1,48 @@
-# 🥑 v1.0.6 Update: Smarter AI Reports & Pro Tips!
+# 🥑 v1.0.7 Update: Dynamic Hydration & Sodium!
 
 Hello, this is the **Supsiki** Team.
-The **v1.0.6 update** is here! This version focuses on making our core feature, the **'AI Daily Report'**, much smarter to help you plan a healthier tomorrow.
+The **v1.0.7 update** is here! This version focuses on two critical factors for fitness performance and health: **'Hydration'** and **'Sodium'**. We have upgraded the system to analyze exactly what your body needs based on your sweat loss.
 
 ---
 
-### ✅ What's New in v1.0.6?
+### ✅ What's New in v1.0.7?
 
-#### 1. Enhanced AI Daily Report 📊
-* **Context Awareness:** Supsiki's AI now understands your day better. Even if you miss a log or have incomplete watch data, it fills in the gaps.
-* **Better Predictions:** Based on your food intake and activity today, it now predicts your **body's condition for tomorrow** more accurately.
+#### 1. Expanded Energy Balance 💧
+* **Dynamic Goals:** Your hydration needs and sodium limits are no longer static. They now **automatically adjust based on your workout duration** and intensity.
+* **New Tracking:** You can now track **Sodium** and **Hydration** alongside carbs, protein, fat, and calories.
 
-#### 2. Bug Fixes & Stability 🛠️
+#### 2. Enhanced AI Analysis 🧠
+* **Sweat Context:** The AI now factors in how much you sweated. It understands that a salty meal after a long run is for recovery, not a health risk.
+* **Smarter Feedback:** It provides tailored advice on whether you need more water or electrolytes based on your day's activity.
+
+#### 3. Tip for Non-Wear OS Users 📺
+* Even if you don't have a Wear OS watch (like Galaxy Fit), you can still use **Interval Training**.
+* 👉 **Watch Guide:** [Interval Training without Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+#### 4. Bug Fixes & Stability 🛠️
 * We have fixed minor bugs to ensure a smoother experience across all devices.
 
 ---
 
-### 💡 Are you using the 'Daily Report' correctly?
+### 💡 Is "Low Salt" always the right answer?
 
-We designed the Daily Report not just as a "final score" for the day, but as a **tool to shape a better day by checking it often**.
-Here are some **Scenarios** to help you get the most out of it:
+Supsiki v1.0.7 shows **what your body actually needs** based on your activity level.
+Here are some **Scenarios** of the new **Dynamic Balance**:
 
-* **💧 Low Water Intake:**
-    * **Report:** "Hydration is low. Metabolism might slow down."
-    * **Action:** Drink a glass of water and log it.
+* **🏃 High-Sweat Workout Day:**
+    * **Activity:** 1 hour of High-Intensity Interval Training (HIIT).
+    * **Change:** Your water goal automatically increases from 2L to **2.8L**.
+    * **AI Advice:** "High fluid loss today. Drink 3 more glasses than usual to speed up recovery."
 
-* **💪 Protein but No Exercise:**
-    * **Report:** "Good nutrition, but without stimulation (exercise), muscle growth is limited."
-    * **Action:** Do some quick **Squats** or **Push-ups** and log them.
-    * **Result:** Re-analyze to see: "Great! Your protein is now fueling muscle synthesis."
+* **🥘 Salty Meal After Running:**
+    * **Activity:** You ate a salty meal after a 2-hour run.
+    * **Change:** Your Sodium "allowance limit" increases. The graph stays in the **"Optimal"** zone instead of "Warning".
+    * **AI Analysis:** "Electrolytes lost during the long workout. Sodium is now aiding muscle recovery, not causing bloating."
 
-* **🍗 Hard Workout but Low Food:**
-    * **Report:** "Not enough protein for your workout intensity. Risk of muscle loss."
-    * **Action:** Eat a boiled egg or a **Protein Shake** and log it.
-    * **Result:** Re-analyze to see: "Perfect timing! Muscle recovery mode activated."
+* **📉 Insufficient Hydration:**
+    * **Activity:** Drank only coffee and almost no water.
+    * **Report:** "Hydration is below 50% of needs."
+    * **Action:** Drink a glass of water immediately to prevent a drop in metabolic efficiency.
 
 ---
 
@@ -53,4 +62,4 @@ Your feedback helps Supsiki grow. Please feel free to reach out anytime!
 
 Thank you.
 
-*Feb 16, 2026 - The Supsiki Team*
+*Feb 25, 2026 - The Supsiki Team*
