@@ -1,62 +1,70 @@
-# 🥑 Update v1.0.6: Intelligentere KI-Berichte & Profi-Tipps!
+# 🥑 Update v1.0.7: Dynamische Analyse von Flüssigkeit & Natrium
 
 Hallo, hier ist der Entwickler von **Supsiki**.
-Dieses Update auf v1.0.6 bringt eine wichtige Verbesserung der Funktion **'Täglicher KI-Bericht'** (AI Daily Report), die Ihren Tag analysiert und Sie besser auf morgen vorbereitet.
+Das Update v1.0.7 konzentriert sich auf zwei entscheidende Faktoren für deine Fitness und Gesundheit: **„Flüssigkeitshaushalt“ (Hydration)** und **„Natrium“**.
 
-## ✅ v1.0.6 Release Notes
+## ✅ v1.0.7 Release Notes
 
-### 1. Verbesserter Täglicher KI-Bericht 📊
-Die KI von Supsiki versteht den Kontext jetzt besser. Keine Sorge, wenn Sie vergessen haben, einen Eintrag zu machen, oder wenn einige Watch-Daten fehlen.
-Basierend auf dem Essen und Ihrer Aktivität von heute, sagt sie Ihren **Körperzustand für morgen** jetzt noch präziser voraus!
+### 1. Erweiterte Energiebilanz: Natrium & Flüssigkeit 💧
+Wir tracken jetzt **[Natrium & Flüssigkeit]** zusätzlich zu den bestehenden Analysen für Kohlenhydrate, Proteine, Fette und Kalorien.
+Das Wichtigste dabei: Dein Bedarf ist nicht statisch. **Deine benötigte Flüssigkeitsmenge und dein Natrium-Limit passen sich jetzt dynamisch an deine Trainingsdauer an.**
 
-### 2. Fehlerbehebungen & Stabilität 🛠️
-Wir haben kleinere Fehler behoben, um die allgemeine Benutzerfreundlichkeit der App zu verbessern.
+### 2. Verbesserter AI-Tagesbericht 🧠
+**„Da du heute viel geschwitzt hast, ist eine etwas höhere Salzzufuhr in Ordnung.“**
+Die KI berücksichtigt nun Trainingsintensität und Schweißverlust bei der Analyse deiner Ernährung. Wir haben die Logik verfeinert, um den Kontext deines Tages noch besser zu verstehen.
 
----
-
-## 💡 Moment! Nutzen Sie den 'Tagesbericht' richtig?
-
-Während ich dieses Update vorbereitete, fragte ich mich:
-*"Nutzen die Anwender die Funktion des Tagesberichts eigentlich voll aus?"*
-
-Ich habe den Tagesbericht nicht nur als "Zeugnis" für den Tag entworfen, sondern als **Werkzeug, um den Tag aktiv zu gestalten, indem man ihn zwischendurch überprüft**.
-
-Hier sind einige **[Szenarien für den Tagesbericht]**, die Ihnen helfen, Ihren Tag gesünder zu gestalten.
-
-### 💧 Fall 1: Zu wenig Wasser getrunken
-* **Situation:** Es ist 20 Uhr. Der Bericht sagt: **"Die Wasseraufnahme ist heute gering. Die Stoffwechseleffizienz könnte sinken."**
-* **Handlung:** Trinken Sie sofort ein Glas Wasser und protokollieren Sie es, um Ihren Flüssigkeitshaushalt auszugleichen.
-
-### 💪 Fall 2: Protein gegessen, aber kein Training
-* **Situation:** Sie haben eine herzhafte Mahlzeit mit Fleisch gegessen, aber kein Training aufgezeichnet. Der Bericht analysiert: **"Die Ernährung ist ausreichend, aber ohne Stimulation (Training) ist Muskelwachstum schwierig."**
-* **Handlung:** Machen Sie ein paar schnelle Kniebeugen und Liegestütze im Wohnzimmer und protokollieren Sie es.
-* **Ergebnis:** Wenn Sie den Bericht erneut prüfen, erhalten Sie das Feedback: **"Hervorragend! Das Protein, das Sie gegessen haben, ist nun bereit für den Muskelaufbau."**
-
-### 🍗 Fall 3: Trainiert, aber zu wenig Nährstoffe
-* **Situation:** Sie haben hart trainiert, aber nicht genug gegessen. Der Bericht warnt: **"Protein ist im Vergleich zur Trainingsintensität unzureichend; Muskelabbau ist ein Risiko."**
-* **Handlung:** Essen Sie ein gekochtes Ei oder trinken Sie einen Proteinshake und protokollieren Sie es.
-* **Ergebnis:** Die Nachricht wird positiv: **"Perfektes Timing für die Nährstoffzufuhr. Muskelregenerationsmodus aktiviert."**
-
-### 📉 Fall 4: Unregelmäßige Essenszeiten
-* **Situation:** Stressiger Tag, spätes Mittagessen, schweres Abendessen. Der Bericht rät: **"Die Essensintervalle sind unregelmäßig, was ein Risiko für Blutzuckerspitzen darstellt."**
-* **Handlung:** Heute ist es schwer zu korrigieren, aber folgen Sie dem Rat der KI, um Ihre Frühstückszeit für morgen zu planen und einen Wecker zu stellen.
+### 3. Fehlerbehebungen & Stabilität 🛠️
+Wir haben kleinere Fehler behoben, um die Stabilität der App zu verbessern.
 
 ---
 
-Haben Sie heute schon Ihren Bericht geprüft?
-Ergänzen Sie Fehlendes und **analysieren Sie neu**, um morgen gesünder zu starten.
+## 📺 [Tipp] Für Nutzer ohne Wear OS (z. B. Galaxy Fit)
+Auch wenn du keine Wear OS-Uhr besitzt (sondern z. B. eine Galaxy Fit), kannst du die Intervalltraining-Funktionen nutzen.
+Schau dir dazu diese Videoanleitung an:
+
+👉 [[Guide] Intervalltraining ohne Wear OS-Uhr](https://www.youtube.com/watch?v=JmnGTT78uQM)
+
+---
+
+## 💡 „Dynamische Bilanz“, die sich dir anpasst
+
+Ist „wenig Salz“ und „2 Liter Wasser“ immer die richtige Antwort?
+Supsiki v1.0.7 zeigt dir, **was dein Körper basierend auf deiner Aktivität wirklich braucht.**
+
+Hier sind einige **[Szenarien für die dynamische Bilanz]**:
+
+### 🏃 Szenario 1: Training mit viel Schweißverlust
+* **Situation:** Du hast 1 Stunde lang intensives HIIT-Training gemacht.
+* **Veränderung:** Dein Wasserziel steigt automatisch von 2L auf **2,8L**, sobald das Training synchronisiert ist.
+* **AI-Analyse:** **„Hoher Flüssigkeitsverlust heute. Trink 3 Gläser mehr als üblich, um die Regeneration zu beschleunigen.“**
+
+### 🥘 Szenario 2: Salziges Essen nach dem Lauf
+* **Situation:** Nach einem 2-Stunden-Lauf hast du salzig gegessen, wodurch dein Natriumwert gestiegen ist.
+* **Veränderung:** Dein Natrium-Limit erhöht sich entsprechend der Trainingsdauer. Die Grafik bleibt im „grünen Bereich“ statt „Warnung“ anzuzeigen.
+* **AI-Analyse:** **„Durch das lange Training wurden Elektrolyte verbraucht. Das aufgenommene Natrium hilft jetzt der Muskelregeneration, statt Schwellungen zu verursachen.“**
+
+### 📉 Szenario 3: Zu wenig Wasser getrunken
+* **Situation:** Du hattest heute nur Kaffee und kaum Wasser.
+* **AI-Analyse:** **„Die Flüssigkeitszufuhr liegt unter 50 % des Bedarfs. Trink jetzt ein Glas Wasser, um eine Verlangsamung des Stoffwechsels zu vermeiden.“**
+
+---
+
+Prüfe jetzt den Tab **[Energiebilanz]**.
+Supsiki analysiert genau, was dein Körper braucht – basierend darauf, wie viel du heute geschwitzt hast.
+
+---
 
 ## 🗣️ Kommunikationskanäle
-Ihr Feedback hilft Supsiki zu wachsen. Zögern Sie nicht, uns jederzeit zu kontaktieren!
+Dein Feedback hilft Supsiki zu wachsen. Melde dich jederzeit!
 
-### Entwickler YouTube-Community
-Sehen Sie sich die Entwicklung hinter den Kulissen und die neuesten Nachrichten an.
-👉 [Zur Entwickler YouTube-Seite](https://www.youtube.com/@bjw0829/posts)
+### Entwickler YouTube Community
+Erfahre mehr über die Entwicklung und Neuigkeiten.
+👉 [Zum Entwickler YouTube](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Folgen Sie uns für Updates und senden Sie uns eine DM für Unterstützung.
+Folge uns für Updates und sende uns eine DM für Support.
 👉 [Zu Instagram](https://www.instagram.com/chronolabcorp/)
 
-Vielen Dank.
+Danke.
 
-*16. Feb. 2026. Ihr Supsiki Team*
+*25.02.2026. Dein Supsiki Team*
