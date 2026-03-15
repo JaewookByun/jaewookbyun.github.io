@@ -1,70 +1,83 @@
-# 🥑 Update v1.0.7: Analisis Dinamis Hidrasi & Natrium
+# 🥑 Pembaruan v1.0.8: Free Workout, Pemutar Video Saat Latihan, dan Daftar Latihan Bawaan
 
-Halo, saya pengembang **Supsiki**.
-Update v1.0.7 ini berfokus pada dua faktor kunci untuk performa olahraga dan kesehatan Anda: **'Hidrasi' (Cairan)** dan **'Natrium' (Garam)**.
+Halo, ini tim Supsiki.
+Melampaui fitur pelatihan interval kami yang sudah ada, pembaruan v1.0.8 memperkenalkan **'Free Workout'**—yang dirancang untuk ritme Anda sendiri—dan **'Pemutar Video Saat Latihan'**. Kami mengundang Anda untuk merasakan perjalanan kebugaran yang lebih mendalam dan disempurnakan.
+*v1.0.8 saat ini sedang dalam proses publikasi di Google Play Store; ketersediaan pembaruan mungkin sedikit berbeda tergantung perangkat Anda.*
 
-## ✅ Catatan Rilis v1.0.7
+📢 **Pemberitahuan Awal: Perubahan Nama Aplikasi pada Versi Berikutnya (v1.1.0)**
+Berawal sebagai asisten manajemen diet, nama 'Supsiki' tidak lagi sepenuhnya mencerminkan identitas kami yang terus berkembang sebagai platform kebugaran komprehensif. Oleh karena itu, pada pembaruan besar kami berikutnya, **v1.1.0, aplikasi ini akan resmi berganti nama menjadi 'ChronoFit'**. Kami menantikan lompatan maju ini dengan nama baru, dan kami menghargai antusiasme serta dukungan Anda yang berkelanjutan.
 
-### 1. Perluasan Keseimbangan Energi: Natrium & Hidrasi 💧
-Kami kini melacak **[Natrium & Hidrasi]** selain analisis karbohidrat, protein, lemak, dan kalori yang sudah ada.
-Poin pentingnya: Target Anda tidak statis. **Kebutuhan air dan batas toleransi natrium Anda kini menyesuaikan secara dinamis berdasarkan durasi olahraga.**
+## ✅ Catatan Rilis v1.0.8
 
-### 2. Laporan Harian AI yang Ditingkatkan 🧠
-**"Karena Anda banyak berkeringat saat latihan, sedikit tambahan garam hari ini tidak masalah."**
-AI kini memperhitungkan intensitas latihan dan jumlah keringat yang keluar saat menganalisis diet Anda. Kami telah menyempurnakan logika analisis untuk memahami konteks hari Anda dengan lebih baik.
+### 1. Integrasi YouTube untuk Meningkatkan Kualitas Latihan Anda 📺
+![Pemutar Video Saat Latihan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
 
-### 3. Perbaikan Bug & Stabilitas 🛠️
-Kami telah memperbaiki beberapa masalah kecil untuk meningkatkan stabilitas aplikasi secara keseluruhan.
+<sub>* *Tangkapan layar ini dalam bahasa Inggris. Aplikasi ini sepenuhnya mendukung bahasa Indonesia.*</sub>
 
----
+Kami telah memperkenalkan fitur baru yang memungkinkan Anda menonton video tutorial selama latihan. Dengan mengatur video YouTube pilihan Anda sebelumnya, Anda dapat memverifikasi postur dan bentuk yang benar secara visual saat berlatih.
 
-## 📺 [Tips] Tidak punya jam tangan Wear OS (misal: Galaxy Fit)?
-Meskipun Anda tidak memiliki jam tangan Wear OS (seperti Galaxy Fit), Anda tetap bisa menggunakan fitur Latihan Interval.
-Silakan cek panduan videonya di sini:
+💡 **Catatan untuk Kreator:** Jika Anda adalah seorang kreator kebugaran, Anda dapat menautkan video YouTube Anda sendiri ke data latihan aplikasi untuk memberikan tutorial kepada audiens yang lebih luas.
 
-👉 [[Panduan] Latihan Interval tanpa jam tangan Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+### 2. 463 Latihan Bawaan (Built-in) 💪
+![Daftar Latihan Bawaan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
 
----
+<sub>* *Tangkapan layar ini dalam bahasa Inggris. Aplikasi ini sepenuhnya mendukung bahasa Indonesia.*</sub>
 
-## 💡 "Keseimbangan Dinamis" yang menyesuaikan dengan Anda
+Perpustakaan sistematis berisi 463 latihan telah diintegrasikan, mencakup kalistenik, kettlebell, tas bulgarian (Bulgarian bags), dan mesin gym. Setiap entri merinci metode pelaksanaan yang benar, manfaat yang diharapkan, dan kelompok otot target.
 
-Apakah diet "rendah garam" dan "minum 2 liter air" selalu menjadi jawaban yang benar?
-Supsiki v1.0.7 menunjukkan **apa yang sebenarnya dibutuhkan tubuh Anda** berdasarkan tingkat aktivitas Anda.
+💡 **Pemberitahuan:** Basis data latihan bawaan akan terus diperluas. Jangan ragu untuk menyarankan latihan apa pun yang rutin Anda lakukan atau ingin ditambahkan.
 
-Berikut adalah beberapa **[Skenario Keseimbangan Dinamis]**:
+### 3. Grafik Latihan yang Intuitif dan Peningkatan UI 📊
+![Grafik Latihan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
 
-### 🏃 Kasus 1: Hari Latihan Intens (Banyak Keringat)
-* **Situasi:** Anda melakukan Latihan Interval Intensitas Tinggi (HIIT) selama 1 jam.
-* **Perubahan:** Target air harian 2L Anda otomatis naik menjadi **2,8L** setelah data olahraga disinkronkan.
-* **Analisis AI:** **"Banyak cairan tubuh yang hilang hari ini. Minumlah 3 gelas lebih banyak dari biasanya untuk mempercepat pemulihan."**
+<sub>* *Tangkapan layar ini dalam bahasa Inggris. Aplikasi ini sepenuhnya mendukung bahasa Indonesia.*</sub>
 
-### 🥘 Kasus 2: Makan Asin Setelah Lari
-* **Situasi:** Setelah lari 2 jam, Anda makan makanan asin (seperti Mie/Soto) dan kadar natrium naik.
-* **Perubahan:** "Batas toleransi" natrium Anda meningkat sesuai durasi olahraga. Grafik tetap berada di zona "Optimal", bukan "Peringatan".
-* **Analisis AI:** **"Elektrolit hilang selama latihan panjang. Natrium yang dikonsumsi akan membantu pemulihan otot, bukan menyebabkan perut kembung."**
+Untuk membantu Anda memahami alur pelatihan Anda secara sekilas, kami telah merombak total grafik latihan, termasuk detak jantung, jarak, dan jumlah langkah. Selain itu, UI secara keseluruhan telah disempurnakan dengan cermat untuk menawarkan pengalaman pengguna yang lebih menyenangkan.
 
-### 📉 Kasus 3: Kurang Minum
-* **Situasi:** Anda hanya minum kopi dan hampir tidak minum air putih hari ini.
-* **Analisis AI:** **"Hidrasi Anda di bawah 50% dari kebutuhan. Minumlah segelas air sekarang untuk mencegah penurunan efisiensi metabolisme."**
+### 4. 'Free Workout' yang Disesuaikan dengan Ritme Anda 🏋️
+![Layar Free Workout](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
+
+<sub>* *Tangkapan layar ini dalam bahasa Inggris. Aplikasi ini sepenuhnya mendukung bahasa Indonesia.*</sub>
+
+Kami kini mendukung mode latihan di mana Anda dapat berolahraga sepenuhnya dengan ritme Anda sendiri tanpa dibatasi oleh waktu. Bangun rutinitas Anda sendiri—seperti beralih dari Bench Press ke Dumbbell Press, lalu ke Incline Bench Press—dan catat beban serta repetisi Anda secara bebas dengan istirahat yang cukup.
+
+### 5. Analisis Stimulasi Otot AI yang Canggih 🧠
+Berdasarkan data otot target yang baru dikuantifikasi untuk setiap latihan, AI kami menganalisis secara mendalam beban dan repetisi yang Anda masukkan. Kini Anda dapat merasakan umpan balik yang sangat presisi mengenai kelelahan dan potensi pertumbuhan dari otot yang Anda targetkan.
 
 ---
 
-Cek tab **[Keseimbangan Energi]** sekarang.
-Supsiki menganalisis dengan tepat apa yang tubuh Anda butuhkan berdasarkan seberapa banyak Anda berkeringat hari ini.
+## 💡 Contoh Penggunaan Supsiki yang Lebih Mendalam
+
+Lebih dari sekadar pencatatan sederhana, lihat bagaimana Supsiki menganalisis dan memandu latihan Anda.
+
+### 🏋️ Kasus 1: Fokus pada Latihan Beban (Weight Training)
+* **Situasi:** Anda menggunakan mode Free Workout untuk hari latihan dada (Bench Press, Pec Deck Fly, dll.).
+* **Tindakan:** Tanpa tekanan pengatur waktu, Anda mengambil istirahat yang cukup dan dengan bebas mencatat beban serta repetisi Anda.
+* **Analisis AI:** **"Stimulasi tinggi dikirimkan ke pektoralis mayor dan trisep. Mempertimbangkan volume yang Anda lakukan, asupan protein yang cukup disarankan untuk sintesis otot yang optimal."**
+
+### 🧘 Kasus 2: Mempelajari Gerakan Baru (mis. Kettlebell Swing)
+* **Situasi:** Anda menambahkan latihan baru ke rutinitas Anda tetapi perlu mengonfirmasi postur yang tepat.
+* **Tindakan:** Anda menautkan video tutorial dari pakar terpercaya di dalam aplikasi sebelumnya.
+* **Hasil:** Anda mempertahankan bentuk yang benar dengan menonton video yang diputar di layar selama latihan, memungkinkan Anda untuk berkonsentrasi penuh pada target otot.
+
+---
+
+Mulailah membangun rutinitas Anda sendiri dan mulai sesi pelatihan baru hari ini. 
+Supsiki akan dengan tenang membantu Anda mengubah setiap tetes keringat menjadi hasil yang paling efisien dan bermakna.
 
 ---
 
 ## 🗣️ Saluran Komunikasi
-Masukan Anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami kapan saja!
+Umpan balik Anda membantu Supsiki berkembang. Jangan ragu untuk menghubungi kami kapan saja!
 
 ### Komunitas YouTube Pengembang
-Simak proses pengembangan dan berita terbaru.
-👉 [Buka YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
+Lihat di balik layar pengembangan dan berita terbaru.
+👉 [Pergi ke YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
 
-### Instagram DM
-Ikuti kami untuk update dan kirim DM untuk bantuan.
-👉 [Buka Instagram](https://www.instagram.com/chronolabcorp/)
+### DM Instagram
+Ikuti kami untuk pembaruan dan kirimkan DM untuk dukungan.
+👉 [Pergi ke Instagram](https://www.instagram.com/chronolabcorp/)
 
 Terima kasih.
 
-*25.02.2026. Tim Supsiki*
+*15 Maret 2026. Tim Supsiki*
