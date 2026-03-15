@@ -1,70 +1,83 @@
-# 🥑 Atualização v1.0.7: Análise Dinâmica de Hidratação e Sódio
+# 🥑 Atualização v1.0.8: Treino Livre, Vídeos Durante o Treino e Lista de Exercícios Integrados
 
-Olá, sou o desenvolvedor do **Supsiki**.
-Esta atualização v1.0.7 foca em dois fatores essenciais para sua performance e saúde: **'Hidratação'** e **'Sódio'**.
+Olá, aqui é a equipe Supsiki.
+Indo além dos nossos recursos atuais de treinamento intervalado, a atualização v1.0.8 introduz o **'Treino Livre (Free Workout)'** — projetado para o seu próprio ritmo — e a visualização de **'Vídeos Durante o Treino'**. Convidamos você a experimentar uma jornada de condicionamento físico mais profunda e refinada.
+*A versão v1.0.8 está atualmente em processo de publicação na Google Play Store; a disponibilidade da atualização pode variar um pouco dependendo do seu dispositivo.*
 
-## ✅ Notas da Versão v1.0.7
+📢 **Aviso Prévio: Mudança do Nome do Aplicativo na Próxima Versão (v1.1.0)**
+Iniciando como um assistente de gerenciamento de dieta, o nome 'Supsiki' não reflete mais totalmente nossa identidade em evolução como uma plataforma abrangente de condicionamento físico. Portanto, em nossa próxima grande atualização, a **v1.1.0, o aplicativo será oficialmente renomeado para 'ChronoFit'**. Esperamos dar este próximo passo com um novo nome e agradecemos sua expectativa e apoio contínuos.
 
-### 1. Balanço Energético Expandido: Sódio e Hidratação 💧
-Agora monitoramos **[Sódio e Hidratação]** além da análise existente de carboidratos, proteínas e calorias.
-O ponto principal: Sua meta não é estática. **Sua necessidade de água e seu limite de sódio agora se ajustam dinamicamente com base na duração do seu treino.**
+## ✅ Notas de Lançamento v1.0.8
 
-### 2. Relatório Diário de IA Aprimorado 🧠
-**"Você suou muito no treino, então um pouco mais de sal hoje está liberado."**
-A IA agora considera a intensidade do exercício e a perda de suor ao analisar sua dieta. Refinamos a lógica para entender melhor o contexto do seu dia.
+### 1. Integração com o YouTube para Elevar seu Treinamento 📺
+![Reprodutor de Vídeo durante o Treino](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
 
-### 3. Correções de Bugs e Estabilidade 🛠️
-Corrigimos pequenos erros para melhorar a estabilidade geral do aplicativo.
+<sub>* *A captura de tela está em inglês. O aplicativo é totalmente compatível com o idioma português.*</sub>
 
----
+Introduzimos um novo recurso que permite assistir a vídeos tutoriais durante o treino. Ao configurar seus vídeos preferidos do YouTube com antecedência, você pode verificar visualmente a postura e a execução corretas enquanto treina.
 
-## 📺 [Dica] Não tem um relógio Wear OS (ex: Galaxy Fit)?
-Mesmo que você não tenha um smartwatch com Wear OS (como o Galaxy Fit), você ainda pode usar os recursos de Treino Intervalado.
-Confira este guia em vídeo:
+💡 **Aviso para Criadores:** Se você é um criador de conteúdo fitness, pode vincular seus próprios vídeos do YouTube aos dados de exercícios do aplicativo para fornecer tutoriais a um público mais amplo.
 
-👉 [[Guia] Treino Intervalado sem relógio Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+### 2. 463 Exercícios Integrados 💪
+![Lista de Exercícios Integrados](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
 
----
+<sub>* *A captura de tela está em inglês. O aplicativo é totalmente compatível com o idioma português.*</sub>
 
-## 💡 "Balanço Dinâmico" que se adapta a você
+Uma biblioteca sistemática de 463 exercícios foi integrada, abrangendo calistenia, kettlebells, bulgarian bags e máquinas de academia. Cada item detalha o método de execução correto, os benefícios esperados e os grupos musculares alvo.
 
-Será que dieta "com pouco sal" e "2 litros de água" é sempre a resposta certa?
-O Supsiki v1.0.7 mostra **o que seu corpo realmente precisa** com base no seu nível de atividade.
+💡 **Aviso:** O banco de dados de exercícios integrados será continuamente expandido. Fique à vontade para sugerir quaisquer exercícios que você realiza regularmente ou que gostaria de ver adicionados.
 
-Aqui estão alguns **[Cenários de Balanço Dinâmico]**:
+### 3. Gráficos de Treino Intuitivos e Melhorias na Interface (UI) 📊
+![Gráficos de Treino](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
 
-### 🏃 Caso 1: Treino Intenso com muito suor
-* **Situação:** Você fez 1 hora de HIIT (Treino Intervalado de Alta Intensidade).
-* **Mudança:** Sua meta habitual de 2L de água sobe automaticamente para **2,8L** após sincronizar o treino.
-* **Análise da IA:** **"Perda de líquidos alta hoje. Beba 3 copos a mais que o habitual para acelerar a recuperação."**
+<sub>* *A captura de tela está em inglês. O aplicativo é totalmente compatível com o idioma português.*</sub>
 
-### 🥘 Caso 2: Refeição salgada após correr
-* **Situação:** Depois de correr 2 horas, você comeu algo salgado e o nível de sódio subiu.
-* **Mudança:** Seu "limite permitido" de sódio aumenta conforme a duração do exercício. O gráfico se mantém na zona "Ideal" em vez de "Alerta".
-* **Análise da IA:** **"Você perdeu eletrólitos no treino longo. O sódio consumido ajudará na recuperação muscular em vez de causar inchaço."**
+Para ajudá-lo a compreender o fluxo do seu treinamento de relance, reformulamos completamente os gráficos de treino, incluindo frequência cardíaca, distância e contagem de passos. Além disso, a interface de usuário (UI) geral foi meticulosamente refinada para oferecer uma experiência mais agradável.
 
-### 📉 Caso 3: Hidratação insuficiente
-* **Situação:** Hoje você só tomou café e quase nada de água pura.
-* **Análise da IA:** **"Sua hidratação está abaixo de 50% da necessidade. Beba um copo d'água agora para evitar queda na eficiência metabólica."**
+### 4. 'Treino Livre' Adaptado ao Seu Ritmo 🏋️
+![Tela de Treino Livre](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
+
+<sub>* *A captura de tela está em inglês. O aplicativo é totalmente compatível com o idioma português.*</sub>
+
+Agora oferecemos suporte a um modo de treinamento onde você pode se exercitar totalmente no seu próprio ritmo, sem a restrição de tempo. Construa sua própria rotina — como a transição do Supino Reto para o Supino com Halteres e, em seguida, para o Supino Inclinado — e registre livremente seus pesos e repetições com amplo tempo de descanso.
+
+### 5. Análise Sofisticada de Estimulação Muscular por IA 🧠
+Com base em novos dados quantificados de músculos alvo para cada exercício, nossa IA analisa profundamente os pesos e repetições que você insere. Agora você pode receber um feedback altamente preciso sobre a fadiga e o potencial de crescimento dos músculos trabalhados.
 
 ---
 
-Confira agora a aba **[Balanço Energético]**.
-O Supsiki analisa exatamente o que seu corpo precisa com base em quanto você suou hoje.
+## 💡 Casos de Uso Mais Profundos do Supsiki
+
+Além do simples registro, veja como o Supsiki analisa e orienta o seu treinamento.
+
+### 🏋️ Caso 1: Focando no Treinamento com Pesos (Musculação)
+* **Situação:** Você usa o modo Treino Livre para um dia de peito (Supino Reto, Voador/Pec Deck, etc.).
+* **Ação:** Sem a pressão de um cronômetro, você descansa o tempo suficiente e registra livremente seus pesos e repetições.
+* **Análise da IA:** **"Alta estimulação entregue ao peitoral maior e tríceps. Considerando o volume executado, recomenda-se a ingestão suficiente de proteínas para a síntese muscular ideal."**
+
+### 🧘 Caso 2: Aprendendo um Novo Movimento (ex: Swing com Kettlebell)
+* **Situação:** Você adicionou um novo exercício à sua rotina, mas precisa confirmar a postura exata.
+* **Ação:** Você vincula antecipadamente um vídeo tutorial de um especialista de confiança dentro do aplicativo.
+* **Resultado:** Você mantém a execução correta assistindo ao vídeo reproduzido na tela durante o treino, permitindo que você se concentre totalmente na contração do músculo alvo.
+
+---
+
+Comece a construir sua própria rotina e inicie uma nova sessão de treinamento hoje mesmo. 
+O Supsiki continuará auxiliando silenciosamente a transformar cada gota de suor nos resultados mais eficientes e significativos.
 
 ---
 
 ## 🗣️ Canais de Comunicação
-Seu feedback ajuda o Supsiki a crescer. Fale com a gente quando quiser!
+Seu feedback ajuda o Supsiki a crescer. Fique à vontade para entrar em contato a qualquer momento!
 
-### Comunidade do Desenvolvedor no YouTube
+### Comunidade de Desenvolvedores no YouTube
 Confira os bastidores do desenvolvimento e as últimas novidades.
 👉 [Ir para o YouTube do Desenvolvedor](https://www.youtube.com/@bjw0829/posts)
 
-### Instagram DM
-Siga-nos para atualizações e envie uma DM para suporte.
+### DM no Instagram
+Siga-nos para atualizações e envie-nos uma mensagem direta (DM) para obter suporte.
 👉 [Ir para o Instagram](https://www.instagram.com/chronolabcorp/)
 
 Obrigado.
 
-*25.02.2026. Equipe Supsiki*
+*15 de Março de 2026. Equipe Supsiki*
