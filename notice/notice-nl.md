@@ -1,70 +1,81 @@
-# 🥑 Update v1.0.7: Dynamische Analyse van Hydratatie & Natrium
+# 🥑 Update v1.0.8: Vrije Training, Videospeler tijdens de workout en Ingebouwde Oefeningenbibliotheek
 
-Hallo, ik ben de ontwikkelaar van **Supsiki**.
-Deze update v1.0.7 richt zich op twee cruciale factoren voor jouw prestaties en gezondheid: **'Hydratatie'** (vochtbalans) en **'Natrium'** (zout).
+Hallo, hier is het Supsiki-team.
+Naast onze bestaande intervaltrainingsfuncties, introduceert de v1.0.8-update de **'Vrije Training' (Free Workout)** — ontworpen voor uw eigen tempo — en een **'Videospeler tijdens de workout'**. Wij nodigen u uit om een diepgaandere en verfijndere fitnesservaring te beleven.
+*Versie 1.0.8 is momenteel in afwachting van publicatie in de Google Play Store; de beschikbaarheid van de update kan per apparaat enigszins verschillen.*
 
-## ✅ Release Notes v1.0.7
+📢 **Aankondiging vooraf: Naamsverandering van de app in de volgende versie (v1.1.0)**
+Begonnen als een assistent voor dieetbeheer, dekt de naam 'Supsiki' niet langer onze evoluerende identiteit als een uitgebreid fitnessplatform. Daarom zal de app bij onze volgende grote update, **v1.1.0, officieel worden omgedoopt tot 'ChronoFit'**. Wij kijken ernaar uit om deze volgende stap onder een nieuwe naam te zetten en we waarderen uw voortdurende steun en enthousiasme.
 
-### 1. Uitgebreide Energiebalans: Natrium & Hydratatie 💧
-We houden nu ook **[Natrium & Hydratatie]** bij, naast de bestaande analyse van koolhydraten, eiwitten, vetten en calorieën.
-Het belangrijkste punt: Je doel is niet statisch. **Je vochtbehoefte en natriumlimiet passen zich nu dynamisch aan op basis van je trainingsduur.**
+## ✅ Releaseopmerkingen v1.0.8
 
-### 2. Verbeterd AI-dagrapport 🧠
-**"Je hebt veel gezweet tijdens het sporten, dus wat extra zout is prima vandaag."**
-De AI houdt nu rekening met de trainingsintensiteit en het zweetverlies bij het analyseren van je voeding. We hebben de logica verfijnd om de context van je dag beter te begrijpen.
+### 1. YouTube-integratie om uw training naar een hoger niveau te tillen 📺
+![Videospeler tijdens de workout](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
 
-### 3. Foutoplossingen & Stabiliteit 🛠️
-We hebben kleine fouten opgelost om de algehele stabiliteit van de app te verbeteren.
+<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
 
----
+We hebben een nieuwe functie geïntroduceerd waarmee u tutorialvideo's kunt bekijken tijdens uw workout. Door uw favoriete YouTube-video's vooraf in te stellen, kunt u visueel de juiste houding en uitvoering controleren tijdens het trainen.
+💡 **Opmerking voor Creators:** Als u een fitness-creator bent, kunt u uw eigen YouTube-video's koppelen aan de trainingsgegevens van de app om tutorials aan een breder publiek aan te bieden.
 
-## 📺 [Tip] Geen Wear OS-horloge (bijv. Galaxy Fit)?
-Zelfs als je geen smartwatch met Wear OS hebt (zoals de Galaxy Fit), kun je de functies voor Intervaltraining gebruiken.
-Bekijk deze videogids:
+### 2. 463 Ingebouwde Oefeningen 💪
+![Ingebouwde Oefeningenbibliotheek](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
 
-👉 [[Gids] Intervaltraining zonder Wear OS-horloge](https://www.youtube.com/watch?v=JmnGTT78uQM)
+<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
 
----
+Er is een systematische bibliotheek van 463 oefeningen geïntegreerd, waaronder calisthenics, kettlebells, bulgarian bags en fitnessapparatuur. Elk onderdeel specificeert de correcte uitvoeringsmethode, verwachte voordelen en de doelspiergroepen.
+💡 **Opmerking:** De ingebouwde oefeningendatabase zal continu worden uitgebreid. Voel u vrij om oefeningen voor te stellen die u regelmatig uitvoert of die u graag toegevoegd zou zien.
 
-## 💡 "Dynamische Balans" die zich aan jou aanpast
+### 3. Intuïtieve Trainingsgrafieken en UI-verbeteringen 📊
+![Trainingsgrafieken](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
 
-Is een "zoutarm dieet" en "2 liter water" altijd het juiste antwoord?
-Supsiki v1.0.7 laat zien **wat je lichaam écht nodig heeft** op basis van je activiteitsniveau.
+<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
 
-Hier zijn enkele **[Scenario's voor Dynamische Balans]**:
+Om u te helpen het verloop van uw training in één oogopslag te begrijpen, hebben we de trainingsgrafieken, inclusief hartslag, afstand en stappenteller, volledig vernieuwd. Bovendien is de algehele gebruikersinterface (UI) zorgvuldig verfijnd om een aangenamere gebruikerservaring te bieden.
 
-### 🏃 Scenario 1: Intensieve training met veel zweet
-* **Situatie:** Je hebt 1 uur High Intensity Interval Training (HIIT) gedaan.
-* **Verandering:** Je standaard waterdoel van 2L stijgt automatisch naar **2,8L** na het synchroniseren van de training.
-* **AI-analyse:** **"Veel vochtverlies vandaag. Drink 3 glazen meer dan normaal om het herstel te versnellen."**
+### 4. 'Vrije Training' afgestemd op uw tempo 🏋️
+![Scherm voor Vrije Training](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
 
-### 🥘 Scenario 2: Zout eten na het hardlopen
-* **Situatie:** Na 2 uur hardlopen heb je zout gegeten, waardoor je natriumniveau steeg.
-* **Verandering:** Je "toegestane limiet" voor natrium stijgt op basis van de trainingsduur. De grafiek blijft in de zone "Optimaal" in plaats van "Waarschuwing".
-* **AI-analyse:** **"Je hebt elektrolyten verloren tijdens de lange training. Het geconsumeerde natrium helpt nu bij spierherstel in plaats van vocht vast te houden."**
+<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
 
-### 📉 Scenario 3: Onvoldoende hydratatie
-* **Situatie:** Je hebt vandaag alleen koffie en bijna geen water gedronken.
-* **AI-analyse:** **"Je hydratatie is minder dan 50% van de behoefte. Drink nu een glas water om een daling van je metabolische efficiëntie te voorkomen."**
+We ondersteunen nu een trainingsmodus waarin u volledig in uw eigen tempo kunt trainen, zonder tijdslimieten. Bouw uw eigen routine op — zoals de overgang van Bench Press naar Dumbbell Press en vervolgens naar Incline Bench Press — en registreer in alle vrijheid uw gewichten en herhalingen met voldoende rusttijd.
+
+### 5. Geavanceerde AI-analyse van spierstimulatie 🧠
+Op basis van nieuw gekwantificeerde gegevens van de doelspieren voor elke oefening, analyseert onze AI diepgaand de gewichten en herhalingen die u invoert. U kunt nu uiterst nauwkeurige feedback ontvangen over de vermoeidheid en het groeipotentieel van uw getrainde spieren.
 
 ---
 
-Bekijk nu het tabblad **[Energiebalans]**.
-Supsiki analyseert precies wat je lichaam nodig heeft op basis van hoeveel je vandaag hebt gezweet.
+## 💡 Diepgaandere Supsiki Gebruiksscenario's
+
+Kijk verder dan eenvoudig loggen en ontdek hoe Supsiki uw training analyseert en begeleidt.
+
+### 🏋️ Scenario 1: Focus op Krachttraining (Weight Training)
+* **Situatie:** U gebruikt de Vrije Training-modus voor een borstdag (Bench Press, Pec Deck Fly, enz.).
+* **Actie:** Zonder de druk van een timer neemt u voldoende rust en registreert u vrij uw gewichten en herhalingen.
+* **AI-analyse:** **"Hoge stimulatie geleverd aan de borstspier (pectoralis major) en triceps. Gezien het uitgevoerde volume, wordt voldoende eiwitinname aanbevolen voor een optimale spiersynthese."**
+
+### 🧘 Scenario 2: Een nieuwe beweging leren (bijv. Kettlebell Swing)
+* **Situatie:** U heeft een nieuwe oefening aan uw routine toegevoegd, maar u wilt de exacte houding bevestigen.
+* **Actie:** U koppelt vooraf een tutorialvideo van een vertrouwde expert binnen de app.
+* **Resultaat:** U behoudt de juiste vorm door naar de video op het scherm te kijken tijdens de training, waardoor u zich volledig kunt concentreren op de stimulatie van de doelspier.
+
+---
+
+Begin vandaag nog met het opbouwen van uw eigen routine en start een nieuwe trainingssessie. 
+Supsiki zal u op de achtergrond assisteren om elke zweetdruppel om te zetten in de meest efficiënte en betekenisvolle resultaten.
 
 ---
 
 ## 🗣️ Communicatiekanalen
-Jouw feedback helpt Supsiki groeien. Neem gerust contact met ons op!
+Uw feedback helpt Supsiki te groeien. Neem gerust op elk moment contact met ons op!
 
-### YouTube-community van de ontwikkelaar
-Bekijk het ontwikkelproces en het laatste nieuws.
+### Ontwikkelaar YouTube Community
+Ontdek een kijkje achter de schermen van de ontwikkeling en het laatste nieuws.
 👉 [Ga naar YouTube van de ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Volg ons voor updates en stuur een DM voor ondersteuning.
+Volg ons voor updates en stuur ons een DM voor ondersteuning.
 👉 [Ga naar Instagram](https://www.instagram.com/chronolabcorp/)
 
-Bedankt.
+Dank u wel.
 
-*25.02.2026. Het Supsiki Team*
+*15 maart 2026. Het Supsiki Team*
