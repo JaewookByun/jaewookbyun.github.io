@@ -1,70 +1,81 @@
-# 🥑 Kemas Kini v1.0.7: Analisis Dinamik Hidrasi & Natrium
+# 🥑 Kemas Kini v1.0.8: Latihan Bebas, Pemain Video Semasa Senaman, dan Senarai Latihan Terbina Dalam
 
-Halo, saya pembangun **Supsiki**.
-Kemas kini v1.0.7 ini memfokuskan kepada dua faktor penting untuk prestasi senaman dan kesihatan anda: **'Hidrasi'** dan **'Natrium'**.
+Hai, ini adalah pasukan Supsiki.
+Melangkaui ciri latihan selang seli (interval) kami yang sedia ada, kemas kini v1.0.8 memperkenalkan **'Latihan Bebas' (Free Workout)**—yang direka khusus untuk rentak anda sendiri—dan **'Pemain Video Semasa Senaman'**. Kami menjemput anda untuk merasai pengalaman kecergasan yang lebih mendalam dan diperhalusi.
+*v1.0.8 sedang dalam proses penerbitan di Google Play Store; ketersediaan kemas kini mungkin berbeza mengikut peranti anda.*
 
-## ✅ Nota Keluaran v1.0.7
+📢 **Notis Awal: Perubahan Nama Aplikasi pada Versi Seterusnya (v1.1.0)**
+Bermula sebagai pembantu pengurusan diet, nama 'Supsiki' tidak lagi menggambarkan identiti kami yang semakin berkembang sebagai platform kecergasan yang komprehensif. Oleh itu, melalui kemas kini utama kami yang seterusnya, **v1.1.0, aplikasi ini akan ditukar nama secara rasmi kepada 'ChronoFit'**. Kami mengalu-alukan langkah seterusnya ini dengan nama baharu, dan kami amat menghargai sokongan berterusan anda.
 
-### 1. Keseimbangan Tenaga Diperluas: Natrium & Hidrasi 💧
-Kami kini menjejaki **[Natrium & Hidrasi]** di samping analisis karbohidrat, protein, lemak, dan kalori sedia ada.
-Poin utama: Sasaran anda bukan statik. **Keperluan air dan had natrium anda kini menyesuaikan secara dinamik berdasarkan tempoh senaman anda.**
+## ✅ Nota Keluaran v1.0.8
 
-### 2. Laporan Harian AI Dipertingkatkan 🧠
-**"Anda banyak berpeluh semasa bersenam, jadi pengambilan garam lebih sedikit hari ini tidak mengapa."**
-AI kini mengambil kira intensiti senaman dan kehilangan peluh semasa menganalisis diet anda. Kami telah memperhalusi logik keseluruhan untuk memahami konteks hari anda dengan lebih baik.
+### 1. Integrasi YouTube untuk Meningkatkan Kualiti Latihan Anda 📺
+![Pemain Video Semasa Senaman](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
 
-### 3. Pembaikan Pepijat & Kestabilan 🛠️
-Kami telah membaiki ralat kecil untuk meningkatkan kestabilan keseluruhan aplikasi.
+<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
 
----
+Kami telah memperkenalkan ciri baharu yang membolehkan anda menonton video tutorial semasa bersenam. Dengan menetapkan video YouTube pilihan anda lebih awal, anda boleh mengesahkan postur dan bentuk yang betul secara visual semasa berlatih.
+💡 **Notis untuk Pencipta:** Jika anda seorang pencipta kandungan kecergasan, anda boleh memautkan video YouTube anda sendiri pada data senaman aplikasi untuk menyediakan tutorial kepada khalayak yang lebih luas.
 
-## 📺 [Tip] Tiada jam tangan Wear OS (cth: Galaxy Fit)?
-Walaupun anda tidak mempunyai jam tangan pintar Wear OS (seperti Galaxy Fit), anda masih boleh menggunakan ciri Latihan Jeda (Interval Training).
-Sila tonton panduan video ini:
+### 2. 463 Senaman Terbina Dalam 💪
+![Senarai Latihan Terbina Dalam](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
 
-👉 [[Panduan] Latihan Jeda tanpa jam tangan Wear OS](https://www.youtube.com/watch?v=JmnGTT78uQM)
+<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
 
----
+Satu perpustakaan sistematik yang mengandungi 463 senaman telah disepadukan, merangkumi kalistenik, *kettlebell*, beg *Bulgarian*, dan mesin gim. Setiap entri memperincikan kaedah pelaksanaan yang betul, faedah yang dijangkakan, dan kumpulan otot sasaran.
+💡 **Notis:** Pangkalan data senaman terbina dalam akan dikembangkan secara berterusan. Sila cadangkan sebarang senaman yang sering anda lakukan atau yang ingin anda tambahkan.
 
-## 💡 "Keseimbangan Dinamik" yang menyesuaikan dengan anda
+### 3. Carta Senaman yang Intuitif dan Peningkatan UI 📊
+![Carta Senaman](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
 
-Adakah diet "kurang garam" dan "2 liter air" sentiasa menjadi jawapan yang betul?
-Supsiki v1.0.7 menunjukkan **apa yang badan anda sebenarnya perlukan** berdasarkan tahap aktiviti anda.
+<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
 
-Berikut adalah beberapa **[Senario Keseimbangan Dinamik]**:
+Untuk membantu anda memahami aliran latihan anda sepintas lalu, kami telah merombak carta senaman sepenuhnya, termasuk kadar denyutan jantung, jarak, dan kiraan langkah. Selain itu, antara muka pengguna (UI) keseluruhan telah diperhalusi dengan teliti untuk menawarkan pengalaman yang lebih menyenangkan.
 
-### 🏃 Kes 1: Hari Senaman Berpeluh
-* **Situasi:** Anda melakukan Latihan Jeda Berintensiti Tinggi (HIIT) selama 1 jam.
-* **Perubahan:** Sasaran air harian 2L anda meningkat secara automatik kepada **2.8L** selepas data senaman diseragamkan.
-* **Analisis AI:** **"Kehilangan cecair yang tinggi hari ini. Minum 3 gelas lebih daripada biasa untuk mempercepatkan pemulihan."**
+### 4. 'Latihan Bebas' Disesuaikan dengan Rentak Anda 🏋️
+![Skrin Latihan Bebas](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
 
-### 🥘 Kes 2: Makan Masin Selepas Lari
-* **Situasi:** Selepas berlari 2 jam, anda makan makanan masin dan paras natrium meningkat.
-* **Perubahan:** "Had dibenarkan" natrium anda meningkat mengikut tempoh senaman. Grafik kekal dalam zon "Optimum" dan bukannya "Amaran".
-* **Analisis AI:** **"Elektrolit hilang semasa latihan panjang. Natrium yang diambil akan membantu pemulihan otot dan bukannya menyebabkan kembung air."**
+<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
 
-### 📉 Kes 3: Hidrasi Tidak Mencukupi
-* **Situasi:** Anda hanya minum kopi dan hampir tidak minum air kosong hari ini.
-* **Analisis AI:** **"Hidrasi anda di bawah 50% daripada keperluan badan. Minum segelas air sekarang untuk mengelakkan penurunan kecekapan metabolisme."**
+Kini kami menyokong mod latihan di mana anda boleh bersenam sepenuhnya mengikut rentak anda sendiri tanpa kekangan masa. Bina rutin anda sendiri—seperti beralih dari *Bench Press* ke *Dumbbell Press*, dan kemudian ke *Incline Bench Press*—dan catat beban serta ulangan (*reps*) anda secara bebas dengan masa rehat yang mencukupi.
+
+### 5. Analisis Stimulasi Otot AI yang Canggih 🧠
+Berdasarkan data otot sasaran yang baru dikuantifikasi untuk setiap senaman, AI kami menganalisis beban dan ulangan yang anda masukkan secara mendalam. Anda kini boleh menerima maklum balas yang sangat tepat mengenai keletihan dan potensi pertumbuhan otot yang disasarkan.
 
 ---
 
-Semak tab **[Keseimbangan Tenaga]** sekarang.
-Supsiki menganalisis dengan tepat apa yang badan anda perlukan berdasarkan berapa banyak anda berpeluh hari ini.
+## 💡 Kes Penggunaan Supsiki yang Lebih Mendalam
+
+Lebih daripada sekadar merekod, lihat bagaimana Supsiki menganalisis dan membimbing latihan anda.
+
+### 🏋️ Kes 1: Fokus pada Latihan Beban (*Weight Training*)
+* **Situasi:** Anda menggunakan mod Latihan Bebas untuk hari dada (*Bench Press*, *Pec Deck Fly*, dll.).
+* **Tindakan:** Tanpa tekanan pemasa, anda mengambil rehat yang cukup dan mencatat beban serta ulangan anda secara bebas.
+* **Analisis AI:** **"Stimulasi tinggi diberikan kepada otot pektoralis mejar dan trisep. Mengambil kira volum yang dilakukan, pengambilan protein yang mencukupi disyorkan untuk sintesis otot yang optimum."**
+
+### 🧘 Kes 2: Mempelajari Pergerakan Baharu (cth. *Kettlebell Swing*)
+* **Situasi:** Anda menambahkan senaman baharu pada rutin anda tetapi perlu mengesahkan postur yang tepat.
+* **Tindakan:** Anda memautkan video tutorial daripada pakar yang dipercayai di dalam aplikasi lebih awal.
+* **Hasil:** Anda mengekalkan bentuk yang betul dengan menonton video yang dimainkan pada skrin semasa bersenam, membolehkan anda memberi tumpuan sepenuhnya pada stimulasi otot sasaran.
+
+---
+
+Mula bina rutin anda sendiri dan mulakan sesi latihan baharu hari ini. 
+Supsiki akan membantu anda secara senyap untuk mengubah setiap titisan peluh menjadi hasil yang paling cekap dan bermakna.
 
 ---
 
 ## 🗣️ Saluran Komunikasi
-Maklum balas anda membantu Supsiki berkembang. Sila hubungi kami bila-bila masa!
+Maklum balas anda membantu Supsiki berkembang. Sila hubungi kami pada bila-bila masa!
 
 ### Komuniti YouTube Pembangun
-Ketahui proses pembangunan dan berita terkini.
+Lihat di sebalik tabir pembangunan dan berita terkini.
 👉 [Pergi ke YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
 
-### Instagram DM
-Ikuti kami untuk kemas kini dan hantar DM untuk sokongan.
+### DM Instagram
+Ikuti kami untuk kemas kini dan hantarkan DM untuk sokongan.
 👉 [Pergi ke Instagram](https://www.instagram.com/chronolabcorp/)
 
 Terima kasih.
 
-*25.02.2026. Pasukan Supsiki*
+*15 Mac 2026. Pasukan Supsiki*
