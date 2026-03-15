@@ -1,56 +1,69 @@
-# 🥑 Update v1.0.7: Dynamic Hydration & Sodium Analysis
+# 🥑 v1.0.8 Update: Free Workout, In-Workout Video Player, and Built-in Exercise Library
 
-Hello, this is the **Supsiki** developer.
-This v1.0.7 update focuses on two critical factors for fitness performance and health management: **'Hydration'** and **'Sodium'**.
+Hello, this is the Supsiki team.
+Going beyond our existing interval training features, the v1.0.8 update introduces **'Free Workout'**—designed for your unique pace—and an **'In-Workout Video Player'**. We invite you to experience a deeper, more refined fitness journey.
+*v1.0.8 is currently pending publication on the Google Play Store; update availability may vary slightly by device.*
 
-## ✅ v1.0.7 Release Notes
+📢 **Advance Notice: App Name Change in the Next Version (v1.1.0)**
+Starting as a diet management assistant, the name 'Supsiki' no longer fully captures our evolving identity as a comprehensive fitness platform. Therefore, with our next major update, **v1.1.0, the app will be officially renamed 'ChronoFit'**. We look forward to taking this next leap forward with a new name, and we appreciate your continued anticipation and support.
 
-### 1. Expanded Energy Balance: Sodium & Hydration 💧
-We now track **[Sodium & Hydration]** alongside the existing carbs, protein, fat, and calorie analysis.
-Crucially, your recommended intake isn't static—**your hydration needs and sodium allowance limit now dynamically adjust based on your workout duration.**
+## ✅ v1.0.8 Release Notes
 
-### 2. Enhanced AI Daily Report 🧠
-**"You sweat a lot during your workout, so a slightly higher sodium intake is okay today."**
-The AI now factors in workout intensity and sweat loss when analyzing your diet. We have refined the overall logic to better understand the context of your day.
+### 1. YouTube Integration to Elevate Your Training 📺
+![In-Workout Video Player](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
 
-### 3. Bug Fixes & Stability 🛠️
-We have fixed reported issues to improve the overall stability of the app.
+<sub>* *The screenshot is in English. The app fully supports your local language.*</sub>
 
----
+We have introduced a new feature that allows you to watch tutorial videos during your workout. By setting up your preferred YouTube videos in advance, you can visually verify the correct posture and form while training.
 
-## 📺 [Tip] For Galaxy Fit & Non-Wear OS Users
-Even if you don't have a Wear OS watch (like Galaxy Fit), you can still utilize the Interval Training features.
-Check out this video guide:
+💡 **Note for Creators:** If you are a fitness creator, you can link your own YouTube videos to our exercise data to provide tutorials to a broader audience.
 
-👉 [[Guide] Interval Training without a Wear OS Watch](https://www.youtube.com/watch?v=JmnGTT78uQM)
+### 2. 463 Built-in Exercises 💪
+![Built-in Exercise Library](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
 
----
+<sub>* *The screenshot is in English. The app fully supports your local language.*</sub>
 
-## 💡 'Dynamic Balance' that adapts to you
+A systematic library of 463 exercises has been integrated, encompassing calisthenics, kettlebells, Bulgarian bags, and gym machines. Each entry details the correct execution method, expected benefits, and target muscle groups.
 
-Is "Low Sodium" and "2L of Water" always the right answer for everyone?
-Supsiki v1.0.7 suggests **what your body actually needs** based on your activity level.
+💡 **Notice:** The built-in exercise database will be continuously expanded. Please feel free to suggest any exercises you regularly perform or wish to see added.
 
-Here are some **[Dynamic Balance Scenarios]**:
+### 3. Intuitive Workout Charts and UI Enhancements 📊
+![Workout Charts](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
 
-### 🏃 Case 1: High-Sweat Workout Day
-* **Situation:** You performed High-Intensity Interval Training (HIIT) for 1 hour.
-* **Change:** Your usual 2L water goal automatically increases to **2.8L** upon syncing the workout record.
-* **AI Analysis:** **"High sweat loss today. You need 3 more glasses of water than usual to aid recovery."**
+<sub>* *The screenshot is in English. The app fully supports your local language.*</sub>
 
-### 🥘 Case 2: Worried about Sodium after Exercise
-* **Situation:** After a 2-hour run, you ate a salty meal, spiking your sodium intake.
-* **Change:** Your sodium 'allowance limit' increases based on the workout duration, keeping the graph in the 'Optimal' zone instead of 'Warning'.
-* **AI Analysis:** **"Electrolytes were lost during the long workout. The sodium consumed will aid muscle recovery rather than causing bloating."**
+To help you grasp the flow of your training at a glance, we have completely revamped the workout charts, including heart rate, distance, and step count. Additionally, the overall UI has been meticulously refined to offer a more pleasant user experience.
 
-### 📉 Case 3: Insufficient Hydration
-* **Situation:** You drank coffee but almost no pure water today.
-* **AI Analysis:** **"Hydration is below 50% of body weight requirements. Drink a glass of water now to prevent a drop in metabolic efficiency."**
+### 4. 'Free Workout' Tailored to Your Pace 🏋️
+![Free Workout Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
+
+<sub>* *The screenshot is in English. The app fully supports your local language.*</sub>
+
+We now support a training mode where you can exercise entirely at your own pace without being constrained by time. Build your own routine—such as transitioning from Bench Press to Dumbbell Press, then to Incline Bench Press—and freely log your weights and reps with ample rest.
+
+### 5. Sophisticated AI Muscle Stimulation Analysis 🧠
+Based on newly quantified target muscle data for each exercise, our AI deeply analyzes the weights and reps you input. You can now experience highly precise feedback regarding the fatigue and growth potential of your targeted muscles.
 
 ---
 
-Check the **[Energy Balance]** tab now.
-Supsiki analyzes exactly what your body needs based on how much you sweated today.
+## 💡 Deeper Supsiki Use Cases
+
+Beyond simple logging, see how Supsiki analyzes and guides your training.
+
+### 🏋️ Case 1: Focusing on Weight Training
+* **Situation:** You use the Free Workout mode for a chest day (Bench Press, Pec Deck Fly, etc.).
+* **Action:** Without the pressure of a timer, you take sufficient rest and freely log your weights and reps.
+* **AI Analysis:** **"High stimulation delivered to the pectoralis major and triceps. Considering your performed volume, sufficient protein intake is recommended for optimal muscle synthesis."**
+
+### 🧘 Case 2: Learning a New Movement (e.g., Kettlebell Swing)
+* **Situation:** You added a new exercise to your routine but need to confirm the exact posture.
+* **Action:** You link a tutorial video from a trusted expert within the app beforehand.
+* **Result:** You maintain correct form by watching the video playing on the screen during your workout, allowing you to fully concentrate on the target muscles.
+
+---
+
+Start building your own routine and embark on a new training session today. 
+Supsiki will quietly assist you in turning every drop of sweat into the most efficient and meaningful results.
 
 ---
 
@@ -67,4 +80,4 @@ Follow us for updates and send us a DM for support.
 
 Thank you.
 
-*Feb 25, 2026. Supsiki Team*
+*Mar 15, 2026. The Supsiki Team*
