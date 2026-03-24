@@ -15,7 +15,7 @@
     
     <title>크로노핏(ChronoFit) - AI 인터벌 운동 & 바코드 식단 관리</title>
     <meta name="description" content="스마트 워치 연동 운동부터 바코드 식단 기록까지. 크로노핏(ChronoFit)으로 일상의 피트니스 데이터를 체계적으로 관리하고 분석하세요.">
-    <meta name="keywords" content="크로노핏, ChronoFit, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, Data Fusion">
+    <meta name="keywords" content="크로노핏, ChronoFit, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, Data Fusion, 오운완">
     <meta name="author" content="ChronoLab">
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
 
@@ -79,7 +79,6 @@
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
         
-        /* 긴 드롭다운 메뉴 스크롤 추가 */
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
 
         @media (max-width: 768px) { .hero-headline { font-size: 2.5rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
@@ -163,8 +162,9 @@
                         <div class="phone-frame bg-white">
                             <div class="screen-content active" id="screen-1"><img src="screenshot1.jpg" alt="ChronoFit Wear OS Integration"></div>
                             <div class="screen-content" id="screen-2"><img src="screenshot2.jpg" alt="ChronoFit Hybrid Data Integration"></div>
-                            <div class="screen-content" id="screen-3"><img src="feature2.jpg" alt="ChronoFit Barcode Diet"></div>
-                            <div class="screen-content" id="screen-4"><img src="feature3.jpg" alt="ChronoFit Daily Report"></div>
+                            <div class="screen-content" id="screen-3"><img src="screenshot3.jpg" alt="ChronoFit Social Share Overlay"></div>
+                            <div class="screen-content" id="screen-4"><img src="screenshot4.jpg" alt="ChronoFit Barcode Diet"></div>
+                            <div class="screen-content" id="screen-5"><img src="screenshot5.jpg" alt="ChronoFit Daily Report"></div>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                     
                     <div class="step-content" data-index="2" data-aos="fade-up">
                         <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi- watch"></i></div>
+                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-activity"></i></div>
                             <h2 class="display-5 fw-bold mb-3">스마트 밴드 및<br>비 Wear OS 기기 지원.</h2>
                             <p class="lead text-muted">
                                 갤럭시 핏과 같은 스마트 밴드 및 다양한 피트니스 기기 사용자도<br>
@@ -199,12 +199,27 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-primary"><i class="bi bi-upc-scan"></i></div><h2 class="display-5 fw-bold mb-3">바코드 스캔 기반<br>간편 식단 관리.</h2><p class="lead text-muted">제품의 바코드를 스캔하여 영양 성분을 손쉽게 기록하세요.<br>단순한 칼로리 계산을 넘어 탄수화물, 단백질, 지방 비율과<br>수분, 나트륨 섭취량까지 상세히 분석합니다.</p></div>
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-warning"><i class="bi bi-share"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">운동 기록 시각화 및<br>소셜 미디어 공유.</h2>
+                            <p class="lead text-muted">
+                                성공적인 훈련의 결과를 한 장의 이미지로 기록하세요.<br>
+                                운동 시간, 소모 칼로리, 심박수 등의 핵심 피트니스 데이터를<br>
+                                직관적인 오버레이 스티커 형태로 사진에 추가할 수 있습니다.<br>
+                                완성된 운동 기록을 소셜 미디어 플랫폼에 간편하게 공유하여<br>
+                                지속적인 성장을 위한 동기를 부여해 보세요.
+                            </p>
+                        </div>
                     </div>
+                    
                     <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-success"><i class="bi bi-graph-up-arrow"></i></div><h2 class="display-5 fw-bold mb-3">일일 리포트 및<br>종합 건강 로그.</h2><p class="lead text-muted">하루 동안 소모한 칼로리와 섭취한 영양의 밸런스를 비교합니다.<br>체중, 골격근량, 체지방률 등 주요 건강 지표의<br>변화 추이를 한곳에서 직관적으로 파악하세요.</p></div>
+                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div><h2 class="display-5 fw-bold mb-3">바코드 스캔 기반<br>간편 식단 관리.</h2><p class="lead text-muted">제품의 바코드를 스캔하여 영양 성분을 손쉽게 기록하세요.<br>단순한 칼로리 계산을 넘어 탄수화물, 단백질, 지방 비율과<br>수분, 나트륨 섭취량까지 상세히 분석합니다.</p></div>
+                    </div>
+
+                    <div class="step-content" data-index="5" data-aos="fade-up">
+                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-info"><i class="bi bi-graph-up-arrow"></i></div><h2 class="display-5 fw-bold mb-3">일일 리포트 및<br>종합 건강 로그.</h2><p class="lead text-muted">하루 동안 소모한 칼로리와 섭취한 영양의 밸런스를 비교합니다.<br>체중, 골격근량, 체지방률 등 주요 건강 지표의<br>변화 추이를 한곳에서 직관적으로 파악하세요.</p></div>
                     </div>
                 </div>
             </div>
