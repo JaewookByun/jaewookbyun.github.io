@@ -15,7 +15,7 @@
     
     <title>크로노핏(ChronoFit) - AI 인터벌 운동 & 바코드 식단 관리</title>
     <meta name="description" content="스마트 워치 연동 운동부터 바코드 식단 기록까지. 크로노핏(ChronoFit)으로 일상의 피트니스 데이터를 체계적으로 관리하고 분석하세요.">
-    <meta name="keywords" content="크로노핏, ChronoFit, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, 오운완, 피트니스 크리에이터, 데이터 세그먼테이션, 종합 차트">
+    <meta name="keywords" content="크로노핏, ChronoFit, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, 오운완, 피트니스 크리에이터, 데이터 세그먼테이션, 종합 차트, 에너지 밸런스">
     <meta name="author" content="ChronoLab">
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
 
@@ -77,6 +77,9 @@
         .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
         
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
+        
+        /* 불릿 포인트 아이콘 색상 커스텀 */
+        .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
 
         @media (max-width: 768px) { .hero-headline { font-size: 2.5rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
     </style>
@@ -166,8 +169,7 @@
                             <div class="screen-content" id="screen-7"><img src="screenshot7.jpg" alt="ChronoFit Exercise Database"></div>
                             <div class="screen-content" id="screen-8"><img src="screenshot8.jpg" alt="ChronoFit Interval Segmentation Chart"></div>
                             <div class="screen-content" id="screen-9"><img src="screenshot9.jpg" alt="ChronoFit AI Workout Analysis"></div>
-                            <div class="screen-content" id="screen-10"><img src="screenshot10.jpg" alt="ChronoFit Barcode Diet"></div>
-                            <div class="screen-content" id="screen-11"><img src="screenshot11.jpg" alt="ChronoFit Daily Report"></div>
+                            <div class="screen-content" id="screen-10"><img src="screenshot10.jpg" alt="ChronoFit Daily Report"></div>
                         </div>
                     </div>
                 </div>
@@ -297,12 +299,20 @@
                     </div>
 
                     <div class="step-content" data-index="10" data-aos="fade-up">
-                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div><h2 class="display-5 fw-bold mb-3">바코드 스캔 기반<br>간편 식단 관리.</h2><p class="lead text-muted">제품의 바코드를 스캔하여 영양 성분을 손쉽게 기록하세요.<br>단순한 칼로리 계산을 넘어 탄수화물, 단백질, 지방 비율과<br>수분, 나트륨 섭취량까지 상세히 분석합니다.</p></div>
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-success"><i class="bi bi-clipboard-check"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">기상부터 취침까지,<br>완벽한 일일 리포트.</h2>
+                            <p class="lead text-muted mb-4">
+                                크로노핏의 목표는 기상부터 취침까지 영양 및 수분 섭취, 신체 지표(체중, 근육량, 체지방, 혈당 등), 운동 기록을 꼼꼼히 담아내어 최적의 에너지 밸런스를 갖춘 건강한 하루를 만드는 데 있습니다.
+                            </p>
+                            <ul class="list-unstyled text-muted lead feature-list">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헬스 커넥트 자동 연동:</strong> 타 건강 앱의 수면, 혈압, 체성분 데이터가 손쉽게 동기화되어 기록의 번거로움을 없앱니다.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정밀한 바코드 식사 기록:</strong> 부정확한 수동 입력 대신, 바코드 스캔 한 번으로 세부 영양 성분과 원재료까지 가장 정확하게 기록합니다.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>인터벌 특화 및 AI 분석:</strong> 스마트 워치 연동과 AI 분석이 결합된 체계적인 트레이닝(자유 운동 포함)으로 훈련의 완성도를 높입니다.</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="step-content" data-index="11" data-aos="fade-up">
-                        <div class="ps-lg-5"><div class="fs-1 mb-3 text-info"><i class="bi bi-graph-up-arrow"></i></div><h2 class="display-5 fw-bold mb-3">일일 리포트 및<br>종합 건강 로그.</h2><p class="lead text-muted">하루 동안 소모한 칼로리와 섭취한 영양의 밸런스를 비교합니다.<br>체중, 골격근량, 체지방률 등 주요 건강 지표의<br>변화 추이를 한곳에서 직관적으로 파악하세요.</p></div>
-                    </div>
                 </div>
             </div>
         </div>
