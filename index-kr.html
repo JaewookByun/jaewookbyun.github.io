@@ -74,9 +74,6 @@
         .screen-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background-color: white; display: flex; align-items: center; justify-content: center; }
         .screen-content.active { opacity: 1; z-index: 2; }
         .screen-content img { width: 100%; height: 100%; object-fit: cover; }
-        .video-highlight { background-color: #111; color: white; padding: 100px 0; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
         
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
@@ -163,8 +160,9 @@
                             <div class="screen-content active" id="screen-1"><img src="screenshot1.jpg" alt="ChronoFit Wear OS Integration"></div>
                             <div class="screen-content" id="screen-2"><img src="screenshot2.jpg" alt="ChronoFit Hybrid Data Integration"></div>
                             <div class="screen-content" id="screen-3"><img src="screenshot3.jpg" alt="ChronoFit Social Share Overlay"></div>
-                            <div class="screen-content" id="screen-4"><img src="screenshot4.jpg" alt="ChronoFit Barcode Diet"></div>
-                            <div class="screen-content" id="screen-5"><img src="screenshot5.jpg" alt="ChronoFit Daily Report"></div>
+                            <div class="screen-content" id="screen-4"><img src="screenshot4.jpg" alt="ChronoFit Video Overlay Extraction"></div>
+                            <div class="screen-content" id="screen-5"><img src="screenshot5.jpg" alt="ChronoFit Barcode Diet"></div>
+                            <div class="screen-content" id="screen-6"><img src="screenshot6.jpg" alt="ChronoFit Daily Report"></div>
                         </div>
                     </div>
                 </div>
@@ -213,24 +211,31 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="step-content" data-index="4" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="fs-1 mb-3 text-dark"><i class="bi bi-camera-video"></i></div>
+                            <h2 class="display-5 fw-bold mb-3">피트니스 크리에이터를 위한<br>데이터 오버레이 추출 (PRO).</h2>
+                            <p class="lead text-muted">
+                                운동 영상 편집에 소요되는 복잡한 작업 시간을 혁신적으로 단축합니다.<br>
+                                크로노핏과 함께 운동을 기록하며 촬영에만 집중하세요.<br>
+                                운동 종료 후 타이머, 세션 정보, 실시간 심박수 변화 및 칼로리 소모량 등의<br>
+                                데이터가 시각화된 영상 클립을 간편하게 추출할 수 있습니다.<br>
+                                추출된 오버레이 클립을 편집 중인 영상에 바로 삽입하여<br>
+                                전문가 수준의 피트니스 콘텐츠를 완성해 보세요.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-content" data-index="5" data-aos="fade-up">
                         <div class="ps-lg-5"><div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div><h2 class="display-5 fw-bold mb-3">바코드 스캔 기반<br>간편 식단 관리.</h2><p class="lead text-muted">제품의 바코드를 스캔하여 영양 성분을 손쉽게 기록하세요.<br>단순한 칼로리 계산을 넘어 탄수화물, 단백질, 지방 비율과<br>수분, 나트륨 섭취량까지 상세히 분석합니다.</p></div>
                     </div>
 
-                    <div class="step-content" data-index="5" data-aos="fade-up">
+                    <div class="step-content" data-index="6" data-aos="fade-up">
                         <div class="ps-lg-5"><div class="fs-1 mb-3 text-info"><i class="bi bi-graph-up-arrow"></i></div><h2 class="display-5 fw-bold mb-3">일일 리포트 및<br>종합 건강 로그.</h2><p class="lead text-muted">하루 동안 소모한 칼로리와 섭취한 영양의 밸런스를 비교합니다.<br>체중, 골격근량, 체지방률 등 주요 건강 지표의<br>변화 추이를 한곳에서 직관적으로 파악하세요.</p></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="video-highlight">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">"운동 기록 데이터 오버레이 영상 제작"</h2>
-            <p class="lead text-white-50 mb-5">크로노핏(PRO)만의 강력한 시각화 기능.<br>운동 중 기록된 실시간 심박수, 타이머, 운동 존(Zone) 데이터를 영상 위에 오버레이 형태로 삽입하세요.</p>
-            <div class="row justify-content-center"><div class="col-lg-10"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/0cx1vOjsAes?rel=0" title="Auto-Sync Heart Rate & Timer Overlay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>
         </div>
     </section>
 
