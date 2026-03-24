@@ -5,7 +5,7 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      gtag('js', new Date()); 
 
       gtag('config', 'G-DCW9DPCM02');
     </script>
@@ -13,10 +13,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ChronoFit (クロノフィット) - AI インターバルトレーニング & バーコード食事管理</title>
-    <meta name="description" content="スマートウォッチ連動の運動からバーコード食事記録まで。ChronoFitで日常のフィットネスデータを体系的に管理・分析しましょう。">
-    <meta name="keywords" content="ChronoFit, クロノフィット, ダイエットアプリ, 食事記録, インターバルタイマー, HIIT, Galaxy Watch, Wear OS, スマートバンド, バーコードスキャン, AI分析, 統合データ, ヘルスコネクト, エネルギーバランス, Nutri-Score">
+    <title>ChronoFit - AI 健康コーチ & HIIT 食事記録</title>
+    <meta name="description" content="時間の流れに伴う身体の変化を客観的なデータで記録しましょう。スマートウォッチ連動の運動からバーコード食事記録まで、ChronoFitでフィットネスデータを一元管理。">
+    <meta name="keywords" content="ChronoFit, ダイエットアプリ, HIITタイマー, Wear OS, Galaxy Watch, スマートバンド, バーコードスキャン, AI分析, ヘルスコネクト, データ統合, エネルギーバランス, 栄養分析">
     <meta name="author" content="ChronoLab">
+    
     <link rel="canonical" href="https://www.chronolaboratory.com/index-jp.html">
 
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
@@ -42,16 +43,17 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-jp.html">
     <meta property="og:title" content="ChronoFit - フィットネスデータの進化">
-    <meta property="og:description" content="時間の流れに伴う身体の変化を客観的なデータで記録します。スマートウォッチ連動の運動から食事管理まで、一つのプラットフォームで完結。">
+    <meta property="og:description" content="スマートウォッチ連動の運動からバーコード食事記録まで。AI健康コーチと共に科学的なトレーニングを始めましょう。">
     <meta property="og:image" content="https://www.chronolaboratory.com/screenshot10.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.chronolaboratory.com/index-jp.html">
     <meta property="twitter:title" content="ChronoFit - AI 健康コーチ">
-    <meta property="twitter:description" content="スマートウォッチ連動の運動からバーコード食事記録まで。日常のフィットネスデータを体系的に管理・分析します。">
+    <meta property="twitter:description" content="スマートウォッチ連動の運動からバーコード食事管理まで。日常の健康データを体系的に管理します。">
     <meta property="twitter:image" content="https://www.chronolaboratory.com/screenshot10.jpg">
 
     <link rel="icon" href="supsiki.png" type="image/png">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -75,7 +77,6 @@
         .screen-content.active { opacity: 1; z-index: 2; }
         .screen-content img { width: 100%; height: 100%; object-fit: cover; }
         .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
-        
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
         .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
 
@@ -103,15 +104,13 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
                             <li><a class="dropdown-item active" href="index-jp.html">日本語 (Japanese)</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">韓国語 (Korean)</a></li>
+                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
                             <li><a class="dropdown-item" href="index.html">English</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-header text-uppercase small">Chinese</li>
                             <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
                             <li><a class="dropdown-item" href="index-hk.html">繁體中文 (Hong Kong)</a></li>
                             <li><a class="dropdown-item" href="index-cn.html">简体中文 (China)</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-header text-uppercase small">European</li>
                             <li><a class="dropdown-item" href="index-es.html">Español (Latinoamérica)</a></li>
                             <li><a class="dropdown-item" href="index-es-es.html">Español (España)</a></li>
                             <li><a class="dropdown-item" href="index-pt.html">Português (Brasil)</a></li>
@@ -121,21 +120,14 @@
                             <li><a class="dropdown-item" href="index-it.html">Italiano (Italian)</a></li>
                             <li><a class="dropdown-item" href="index-nl.html">Nederlands (Dutch)</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-header text-uppercase small">Asian</li>
                             <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
                             <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu</a></li>
                             <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt (Vietnamese)</a></li>
                             <li><a class="dropdown-item" href="index-th.html">ไทย (Thai)</a></li>
                         </ul>
                     </div>
-
-                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
-                        <i class="bi bi-megaphone-fill me-1"></i> 最新情報
-                    </a>
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
-                        アプリをダウンロード
-                    </a>
+                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold"><i class="bi bi-megaphone-fill me-1"></i> 最新情報</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">アプリをダウンロード</a>
                 </div>
             </div>
         </div>
@@ -145,35 +137,16 @@
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">
-                        🚀 ChronoFit 正式リリース
-                    </span>
-                    <h1 class="hero-headline mb-4">
-                        時間の流れに伴う身体の変化を、<br><strong>客観的なデータ</strong>で記録しましょう。
-                    </h1>
-                    <p class="lead text-secondary mb-5">
-                        スマートウォッチ連動の運動からバーコード食事記録まで。<br>
-                        分散していたフィットネスデータを一つのプラットフォームに統合します。
-                    </p>
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">🚀 ChronoFit 正式リリース</span>
+                    <h1 class="hero-headline mb-4">時間の流れに伴う身体の変化を、<br><strong>客観的なデータ</strong>で記録しましょう。</h1>
+                    <p class="lead text-secondary mb-5">スマートウォッチ連動の運動からバーコード食事記録まで。<br>分散していたフィットネスデータを一つのプラットフォームに統合します。</p>
                     <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center">
-                            <i class="bi bi-google-play me-2"></i> Google Playで手に入れよう
-                        </a>
-                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
-                            機能を詳しく見る
-                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center"><i class="bi bi-google-play me-2"></i> Google Playで入手</a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">機能を見る</a>
                     </div>
                 </div>
-                
                 <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="phone-frame">
-                        <iframe class="shorts-embed" 
-                                src="https://www.youtube.com/embed/Iu1lAzE5lhg?autoplay=1&mute=1&loop=1&playlist=Iu1lAzE5lhg&controls=0&rel=0" 
-                                title="ChronoFit Preview" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
+                    <div class="phone-frame"><iframe class="shorts-embed" src="https://www.youtube.com/embed/Iu1lAzE5lhg?autoplay=1&mute=1&loop=1&playlist=Iu1lAzE5lhg&controls=0&rel=0" title="ChronoFit Preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
             </div>
         </div>
@@ -185,38 +158,35 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="sticky-visual">
                         <div class="phone-frame bg-white">
-                            <div class="screen-content active" id="screen-1"><img src="screenshot10.jpg" alt="ChronoFit Daily Report Goal"></div>
-                            <div class="screen-content" id="screen-2"><img src="screenshot11.jpg" alt="ChronoFit Energy Balance Tracker"></div>
-                            <div class="screen-content" id="screen-3"><img src="screenshot12.jpg" alt="ChronoFit AI Coach Report"></div>
-                            <div class="screen-content" id="screen-4"><img src="screenshot13.jpg" alt="ChronoFit Barcode Scan"></div>
-                            <div class="screen-content" id="screen-5"><img src="screenshot14.jpg" alt="ChronoFit Food Nutrition Analysis"></div>
-                            <div class="screen-content" id="screen-6"><img src="screenshot15.jpg" alt="ChronoFit Multi Barcode Comparison"></div>
-                            <div class="screen-content" id="screen-7"><img src="screenshot1.jpg" alt="ChronoFit Wear OS Integration"></div>
-                            <div class="screen-content" id="screen-8"><img src="screenshot2.jpg" alt="ChronoFit Hybrid Data Integration"></div>
-                            <div class="screen-content" id="screen-9"><img src="screenshot3.jpg" alt="ChronoFit Social Share Overlay"></div>
-                            <div class="screen-content" id="screen-10"><img src="screenshot4.jpg" alt="ChronoFit Video Overlay Extraction"></div>
-                            <div class="screen-content" id="screen-11"><img src="screenshot5.jpg" alt="ChronoFit Video Guide Integration"></div>
-                            <div class="screen-content" id="screen-12"><img src="screenshot6.jpg" alt="ChronoFit Creator Promotion"></div>
-                            <div class="screen-content" id="screen-13"><img src="screenshot7.jpg" alt="ChronoFit Exercise Database"></div>
-                            <div class="screen-content" id="screen-14"><img src="screenshot8.jpg" alt="ChronoFit Interval Segmentation Chart"></div>
-                            <div class="screen-content" id="screen-15"><img src="screenshot9.jpg" alt="ChronoFit AI Workout Analysis"></div>
+                            <div class="screen-content active" id="screen-1"><img src="screenshot10.jpg" alt="Daily Report"></div>
+                            <div class="screen-content" id="screen-2"><img src="screenshot11.jpg" alt="Energy Balance"></div>
+                            <div class="screen-content" id="screen-3"><img src="screenshot12.jpg" alt="AI Coach Report"></div>
+                            <div class="screen-content" id="screen-4"><img src="screenshot13.jpg" alt="Barcode Scan"></div>
+                            <div class="screen-content" id="screen-5"><img src="screenshot14.jpg" alt="Nutrition Analysis"></div>
+                            <div class="screen-content" id="screen-6"><img src="screenshot15.jpg" alt="Comparison"></div>
+                            <div class="screen-content" id="screen-7"><img src="screenshot1.jpg" alt="Wear OS"></div>
+                            <div class="screen-content" id="screen-8"><img src="screenshot2.jpg" alt="Smart Band"></div>
+                            <div class="screen-content" id="screen-9"><img src="screenshot3.jpg" alt="Social Share"></div>
+                            <div class="screen-content" id="screen-10"><img src="screenshot4.jpg" alt="Overlay Extraction"></div>
+                            <div class="screen-content" id="screen-11"><img src="screenshot5.jpg" alt="Video Guide"></div>
+                            <div class="screen-content" id="screen-12"><img src="screenshot6.jpg" alt="Creator Promotion"></div>
+                            <div class="screen-content" id="screen-13"><img src="screenshot7.jpg" alt="Exercise DB"></div>
+                            <div class="screen-content" id="screen-14"><img src="screenshot8.jpg" alt="Charts"></div>
+                            <div class="screen-content" id="screen-15"><img src="screenshot9.jpg" alt="AI Workout Analysis"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 order-lg-1">
-                    
                     <div class="step-content active" data-index="1" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-clipboard-check"></i></div>
                             <h2 class="display-5 fw-bold mb-3">起床から就寝まで、<br>完璧なデイリーレポート。</h2>
-                            <p class="lead text-muted mb-4">
-                                ChronoFitの目標は、栄養や水分摂取、身体指標（体重、筋肉量、体脂肪、血糖値など）、運動記録を詳細に記録し、最適なエネルギーバランスを備えた健康的な一日を作ることです。
-                            </p>
+                            <p class="lead text-muted mb-4">栄養、水分摂取、身体指標（体重、筋肉量、血糖値など）、運動記録を詳細に捉え、最適なエネルギーバランスを備えた健康的な一日を作ります。</p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>ヘルスコネクト自動同期:</strong> 他の健康アプリの睡眠、血圧、体組成データが簡単に同期され、記録の手間を省きます。</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>正確なバーコード食事記録:</strong> 不正確な手動入力の代わりに、バーコードをスキャンするだけで詳細な栄養成分と原材料まで記録します。</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>インターバル特化＆AI分析:</strong> スマートウォッチ連携とAI分析が統合された体系的なトレーニングで、運動の完成度を高めます。</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>ヘルスコネクト自動同期:</strong> 他のアプリから睡眠や体組成データをシームレスに同期。</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>正確なバーコード記録:</strong> スキャン一つで詳細な栄養成分を即座に記録し、手入力を排除。</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>HIIT & AI分析:</strong> スマートウォッチ連携とAI評価で、トレーニングの質を向上。</li>
                             </ul>
                         </div>
                     </div>
@@ -224,24 +194,16 @@
                     <div class="step-content" data-index="2" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-battery-charging"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">時系列エネルギーバランスと<br>直感的な栄養アニメーション。</h2>
-                            <p class="lead text-muted">
-                                起床直後からの運動、食事、水分摂取の流れを時系列で一目で把握できます。<br>
-                                ユーザーの体組成、基礎代謝、目標に基づいて、カロリーや炭水化物、タンパク質、脂質、水分、ナトリウムの余剰・不足状態をリアルタイムで分析します。<br>
-                                1日の終わりに完璧な栄養バランスを整えられるよう、直感的なアニメーション指標が適切な摂取をガイドします。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">時系列エネルギーバランスと<br>直感的なアニメーション。</h2>
+                            <p class="lead text-muted">起床時からの運動、食事、水分摂取を時系列で追跡。基礎代謝量(BMR)と目標に基づき、リアルタイムの過不足を分析します。直感的なアニメーションが、一日の終わりに完璧なバランスへ導きます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="3" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-robot"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">超パーソナライズ化された<br>AI健康コーチの深層分析レポート。</h2>
-                            <p class="lead text-muted">
-                                単なる記録の要約を超え、収集されたデータに基づいて専門家レベルのカスタマイズされたコーチングを提供します。<br>
-                                五大栄養素のバランス評価とともに、血糖値の安定性や脂肪燃焼効率などを反映した「代謝スコア」を算出します。<br>
-                                レポートの確認タイミングに合わせて、残りの時間の行動ガイドを提示したり、翌日の身体の変化を予測するなど、時間帯ごとの密着フィードバックをご体験ください。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">超パーソナライズ化された<br>AI健康コーチの深層分析。</h2>
+                            <p class="lead text-muted">単なる要約を超え、血糖値の安定性や脂肪燃焼効率を反映した「代謝スコア」を算出。確認する時間帯に合わせたアドバイスや、翌日の身体変化の予測など、密着型フィードバックを提供します。</p>
                         </div>
                     </div>
 
@@ -249,46 +211,31 @@
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div>
                             <h2 class="display-5 fw-bold mb-3">バーコードスキャンによる<br>正確な食品摂取記録。</h2>
-                            <p class="lead text-muted">
-                                手動入力やカメラ画像分析の不正確さから抜け出しましょう。<br>
-                                製品のバーコードを一度スキャンするだけで、詳細な栄養成分と原材料まで最も便利で正確に記録できます。<br>
-                                データの完全性こそが、健康管理の第一歩です。
-                            </p>
+                            <p class="lead text-muted">手入力やカメラ推定の不正確さから解放。バーコードを一度スキャンするだけで、詳細な栄養成分と原材料を正確に記録できます。真の健康管理はデータの正確性から始まります。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="5" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-info-circle"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">食品の精密分析と<br>カスタマイズされた栄養シミュレーション。</h2>
-                            <p class="lead text-muted">
-                                製品のNutri-Scoreと詳細な原材料を分析し、食品の質を多角的に評価します。<br>
-                                摂取前に、個人の食事目標（例：高タンパク重視）に対して各栄養素が占める割合をシミュレーションしてみましょう。<br>
-                                同じカテゴリ内の製品間の体系的な比較を通じて、最適な栄養摂取をガイドします。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">食品の精密分析と<br>カスタム栄養シミュレーション。</h2>
+                            <p class="lead text-muted">Nutri-Scoreと成分分解で食品の質を多角的に評価。摂取前に、個人の食事目標（例：高タンパク）に対する影響をシミュレーションし、最適な選択をガイドします。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="6" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-view-list"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">複数のバーコードスキャンと<br>リアルタイム製品比較。</h2>
-                            <p class="lead text-muted">
-                                類似製品間で悩む必要はもうありません。<br>
-                                複数の製品のバーコードを連続してスキャンし、主要な栄養成分を1つの画面で直感的に比較します。<br>
-                                データに基づく迅速かつ正確な判断で、自分に最も合った食品を即座に選択できます。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">複数バーコードスキャンと<br>リアルタイム製品比較。</h2>
+                            <p class="lead text-muted">類似製品で悩む必要はありません。複数のバーコードを連続スキャンして主要な栄養成分を一覧比較。データに基づき、自分に最も合った食品を即座に選択できます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="7" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-smartwatch"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">専用Wear OSアプリによる<br>リアルタイムトレーニングガイド。</h2>
-                            <p class="lead text-muted">
-                                Galaxy WatchなどのWear OS搭載スマートウォッチに専用アプリをインストールし、心拍数、消費カロリー、運動強度をリアルタイムで完璧に同期・記録します。<br>
-                                設定されたHIITルーティンに合わせて、ウォッチ画面から直感的な運動ガイドを受け取ることができます。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">専用Wear OSアプリによる<br>リアルタイムガイド。</h2>
+                            <p class="lead text-muted">Galaxy Watch等のWear OSウォッチに専用アプリをインストール。心拍数、消費カロリー、強度をリアルタイムで同期・記録。手元のHIITルーティンガイドに従いましょう。</p>
                         </div>
                     </div>
                     
@@ -296,96 +243,65 @@
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-activity"></i></div>
                             <h2 class="display-5 fw-bold mb-3">スマートバンドおよび<br>非Wear OSデバイス対応。</h2>
-                            <p class="lead text-muted">
-                                Galaxy Fitなどのスマートバンドや様々なフィットネスデバイスのユーザーも、ChronoFitの専門的なインターバルトレーニング機能を同様に利用できます。<br>
-                                アプリ内タイマーを使用して運動を行い、デバイスに記録されたデータはヘルスコネクトを通じて統合（Data Fusion）されます。<br>
-                                統合されたデータはインターバルパターンに合わせて自動的にセグメント化され、体系的なAI健康レポートを受け取ることができます。
-                            </p>
+                            <p class="lead text-muted">Galaxy Fit等をお使いの方も、インアプリタイマーとヘルスコネクト連携（データフュージョン）により、体系的なAI分析とリポート機能を利用可能です。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="9" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-share"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">運動記録の視覚化と<br>ソーシャルメディアへの共有。</h2>
-                            <p class="lead text-muted">
-                                成功したトレーニングの結果を一枚の画像として記録しましょう。<br>
-                                運動時間、消費カロリー、心拍数などのコアなフィットネスデータを直感的なオーバレイスティッカーとして写真に追加できます。<br>
-                                完成した運動記録をSNSに簡単に共有し、継続的な成長へのモチベーションを高めてください。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">運動記録の視覚化と<br>SNSへの共有。</h2>
+                            <p class="lead text-muted">成功したトレーニングの結果を一枚の画像に。時間、カロリー、心拍ゾーン等のデータが載った直感的なオーバーステッカーを写真に追加して共有しましょう。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="10" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-dark"><i class="bi bi-camera-video"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">フィットネスクリエイターのための<br>データオーバーレイ抽出 (PRO)。</h2>
-                            <p class="lead text-muted">
-                                運動動画の編集にかかる複雑な作業時間を革新的に短縮します。<br>
-                                ChronoFitで記録しながら、撮影にのみ集中してください。<br>
-                                運動終了後、タイマー、セッション情報、リアルタイムの心拍数の変化や消費カロリーなどのデータが視覚化された動画クリップを簡単に抽出できます。<br>
-                                抽出したクリップを編集中の動画に直接挿入し、プロレベルのフィットネスコンテンツを完成させましょう。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">クリエイターのための<br>データオーバーレイ抽出 (PRO)。</h2>
+                            <p class="lead text-muted">動画編集時間を劇的に短縮。ChronoFitで記録しながら撮影するだけで、タイマーや心拍数が視覚化されたクリップを抽出可能。そのまま編集ソフトへ投入できます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="11" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-youtube"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">リアルタイム動画連動と<br>区間リピートガイド。</h2>
-                            <p class="lead text-muted">
-                                YouTubeなどのフィットネス動画を連動させ、画面を見ながら運動を進めることができます。<br>
-                                必要な特定の区間を繰り返し再生するように設定し、正確な姿勢とペースを維持しながら複雑な動作も完璧に習得できます。<br>
-                                専門家の動きをリアルタイムで確認し、トレーニングの効率を最大化しましょう。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">リアルタイム動画連動と<br>A-Bループガイド。</h2>
+                            <p class="lead text-muted">YouTubeの動画とアプリを連動。特定区間の繰り返し再生設定により、プロの動きをリアルタイムで確認しながら正確な姿勢とペースを習得できます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="12" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-play-btn"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">ユーザー参加型動画キュレーションと<br>クリエイタープロモーション。</h2>
-                            <p class="lead text-muted">
-                                アプリ内でYouTubeを検索、または直接リンクを入力して、お好みの運動動画を簡単に登録できます。<br>
-                                フィットネスクリエイターなら自身のコンテンツを登録し、ユーザーにチャンネルを知らせるPR効果を狙いましょう。<br>
-                                ユーザーの評価（いいね/低評価）を総合して、最も有益な上位50件の検証済み動画のみが露出されるため、良質なコンテンツがさらに際立つ機会を提供します。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">ユーザー参加型動画と<br>クリエイタープロモーション。</h2>
+                            <p class="lead text-muted">お気に入りの動画を登録。クリエイターは自らのコンテンツを宣伝でき、評価の高い上位50本の高品質な動画のみがユーザーへ露出されます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="13" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-secondary"><i class="bi bi-clipboard-data"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">運動データベースと<br>データに基づく精密分析。</h2>
-                            <p class="lead text-muted">
-                                自重トレーニングからケトルベルなどの器具、ジムのマシンに至るまで、必須の運動方法とターゲットとなる筋肉の刺激データを体系的に構築しています。<br>
-                                継続的に更新されるフィットネスライブラリを基に、自身の運動記録を客観的に評価する精巧なデータ分析をご体験ください。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">運動データベースと<br>データ駆動型分析。</h2>
+                            <p class="lead text-muted">自重からジムマシンまで、筋肉への刺激データを網羅。継続的に拡張されるフィットネスライブラリに基づき、ワークアウトログを客観的に評価します。</p>
                         </div>
                     </div>
                     
                     <div class="step-content" data-index="14" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-bar-chart-line"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">インターバルセット別のデータセグメンテーションと<br>総合運動チャート。</h2>
-                            <p class="lead text-muted">
-                                インターバルトレーニングの各セットごとに変化する心拍数、移動距離、歩数データを精密にセグメント化して提供します。<br>
-                                区間ごとに細分化された総合運動チャートを通じて、運動の流れに伴う身体能力を直感的に把握し、より体系的なトレーニング計画を立ててみましょう。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">インターバルセグメント化と<br>詳細なチャート。</h2>
+                            <p class="lead text-muted">セットごとの心拍数、距離、歩数データを精密にセグメント化。一連のワークアウトを通じて、自分の身体能力とスタミナの変化を詳細チャートで把握できます。</p>
                         </div>
                     </div>
 
                     <div class="step-content" data-index="15" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="fs-1 mb-3 text-info"><i class="bi bi-cpu"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">センシングデータに基づく<br>AI運動分析レポート。</h2>
-                            <p class="lead text-muted">
-                                ユーザーが構成した運動の種類、ターゲットとする筋肉の刺激、重量と回数、そしてEMOMやAMRAPなどのトレーニング方式に対する詳細な設定値を記録します。<br>
-                                これをスマートデバイスで測定されたリアルタイムのセンシングデータと組み合わせることで、成果を客観的に診断する総合的なAI分析レポートを受け取ることができます。
-                            </p>
+                            <h2 class="display-5 fw-bold mb-3">センサーデータによる<br>AI運動分析レポート。</h2>
+                            <p class="lead text-muted">種目、ターゲット筋肉、重量、レップ数、訓練方式(EMOM/AMRAP)。これらをデバイスのリアルタイムデータと結合し、AIが身体的パフォーマンスを診断します。</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -397,18 +313,10 @@
                 <div class="col-lg-8">
                     <div class="p-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
                         <i class="bi bi-youtube position-absolute text-danger opacity-10" style="font-size: 15rem; right: -50px; bottom: -50px; transform: rotate(-15deg);"></i>
-                        
-                        <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill">
-                            <i class="bi bi-broadcast me-2"></i>リアルタイムアップデート
-                        </span>
-                        <h2 class="fw-bold mb-3">開発者と直接コミュニケーションを取りましょう</h2>
-                        <p class="text-muted mb-4 lead">
-                            <strong>YouTubeコミュニティ</strong>を通じて、アップデート情報やバグ報告をご確認ください。<br>
-                            機能の要望やご意見をコメントで残していただければ、迅速に反映いたします。
-                        </p>
-                        <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-danger btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover">
-                            <i class="bi bi-chat-dots-fill me-2"></i> コミュニティを訪問する
-                        </a>
+                        <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill"><i class="bi bi-broadcast me-2"></i>リアルタイム更新</span>
+                        <h2 class="fw-bold mb-3">開発者と直接つながる</h2>
+                        <p class="text-muted mb-4 lead"><strong>YouTubeコミュニティ</strong>で最新ニュース、変更ログ、機能リクエストを確認しましょう。皆さんの意見がChronoFitの未来を作ります！</p>
+                        <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-danger btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover"><i class="bi bi-chat-dots-fill me-2"></i> コミュニティを訪問</a>
                     </div>
                 </div>
             </div>
@@ -425,50 +333,33 @@
             </div>
             <p class="text-muted small">
                 © 2025-<span id="current-year"></span> ChronoLab. All rights reserved.<br>
-                <a href="terms-kr.html" class="text-decoration-none text-muted">利用規約</a> | 
-                <a href="privacy-kr.html" class="text-decoration-none text-muted">プライバシーポリシー</a>
+                <a href="terms.html" class="text-decoration-none text-muted">利用規約</a> | 
+                <a href="privacy.html" class="text-decoration-none text-muted">プライバシーポリシー</a>
             </p>
             <a href="https://www.chronolaboratory.com/" class="btn btn-outline-secondary btn-sm mt-3">Company Home</a>
         </div>
-        
-        <script>
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        </script>
+        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
+        AOS.init({ duration: 800, once: true });
         document.addEventListener('DOMContentLoaded', () => {
             const steps = document.querySelectorAll('.step-content');
             const screens = document.querySelectorAll('.screen-content');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '-50% 0px -50% 0px', 
-                threshold: 0
-            };
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         steps.forEach(s => s.classList.remove('active'));
                         entry.target.classList.add('active');
-
                         const index = entry.target.getAttribute('data-index');
                         screens.forEach(s => s.classList.remove('active'));
-                        
                         const activeScreen = document.getElementById(`screen-${index}`);
                         if(activeScreen) activeScreen.classList.add('active');
                     }
                 });
-            }, observerOptions);
-
+            }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
             steps.forEach(step => observer.observe(step));
         });
     </script>
