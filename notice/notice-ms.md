@@ -1,81 +1,45 @@
-# 🥑 Kemas Kini v1.0.8: Latihan Bebas, Pemain Video Semasa Senaman, dan Senarai Latihan Terbina Dalam
+# Kemas Kini ChronoFit v1.1
 
-Hai, ini adalah pasukan Supsiki.
-Melangkaui ciri latihan selang seli (interval) kami yang sedia ada, kemas kini v1.0.8 memperkenalkan **'Latihan Bebas' (Free Workout)**—yang direka khusus untuk rentak anda sendiri—dan **'Pemain Video Semasa Senaman'**. Kami menjemput anda untuk merasai pengalaman kecergasan yang lebih mendalam dan diperhalusi.
-*v1.0.8 sedang dalam proses penerbitan di Google Play Store; ketersediaan kemas kini mungkin berbeza mengikut peranti anda.*
-
-📢 **Notis Awal: Perubahan Nama Aplikasi pada Versi Seterusnya (v1.1.0)**
-Bermula sebagai pembantu pengurusan diet, nama 'Supsiki' tidak lagi menggambarkan identiti kami yang semakin berkembang sebagai platform kecergasan yang komprehensif. Oleh itu, melalui kemas kini utama kami yang seterusnya, **v1.1.0, aplikasi ini akan ditukar nama secara rasmi kepada 'ChronoFit'**. Kami mengalu-alukan langkah seterusnya ini dengan nama baharu, dan kami amat menghargai sokongan berterusan anda.
-
-## ✅ Nota Keluaran v1.0.8
-
-### 1. Integrasi YouTube untuk Meningkatkan Kualiti Latihan Anda 📺
-![Pemain Video Semasa Senaman](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
-
-<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
-
-Kami telah memperkenalkan ciri baharu yang membolehkan anda menonton video tutorial semasa bersenam. Dengan menetapkan video YouTube pilihan anda lebih awal, anda boleh mengesahkan postur dan bentuk yang betul secara visual semasa berlatih.
-💡 **Notis untuk Pencipta:** Jika anda seorang pencipta kandungan kecergasan, anda boleh memautkan video YouTube anda sendiri pada data senaman aplikasi untuk menyediakan tutorial kepada khalayak yang lebih luas.
-
-### 2. 463 Senaman Terbina Dalam 💪
-![Senarai Latihan Terbina Dalam](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
-
-<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
-
-Satu perpustakaan sistematik yang mengandungi 463 senaman telah disepadukan, merangkumi kalistenik, *kettlebell*, beg *Bulgarian*, dan mesin gim. Setiap entri memperincikan kaedah pelaksanaan yang betul, faedah yang dijangkakan, dan kumpulan otot sasaran.
-💡 **Notis:** Pangkalan data senaman terbina dalam akan dikembangkan secara berterusan. Sila cadangkan sebarang senaman yang sering anda lakukan atau yang ingin anda tambahkan.
-
-### 3. Carta Senaman yang Intuitif dan Peningkatan UI 📊
-![Carta Senaman](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
-
-<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
-
-Untuk membantu anda memahami aliran latihan anda sepintas lalu, kami telah merombak carta senaman sepenuhnya, termasuk kadar denyutan jantung, jarak, dan kiraan langkah. Selain itu, antara muka pengguna (UI) keseluruhan telah diperhalusi dengan teliti untuk menawarkan pengalaman yang lebih menyenangkan.
-
-### 4. 'Latihan Bebas' Disesuaikan dengan Rentak Anda 🏋️
-![Skrin Latihan Bebas](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
-
-<sub>* *Tangkapan skrin ini adalah dalam bahasa Inggeris. Aplikasi ini menyokong sepenuhnya bahasa tempatan anda.*</sub>
-
-Kini kami menyokong mod latihan di mana anda boleh bersenam sepenuhnya mengikut rentak anda sendiri tanpa kekangan masa. Bina rutin anda sendiri—seperti beralih dari *Bench Press* ke *Dumbbell Press*, dan kemudian ke *Incline Bench Press*—dan catat beban serta ulangan (*reps*) anda secara bebas dengan masa rehat yang mencukupi.
-
-### 5. Analisis Stimulasi Otot AI yang Canggih 🧠
-Berdasarkan data otot sasaran yang baru dikuantifikasi untuk setiap senaman, AI kami menganalisis beban dan ulangan yang anda masukkan secara mendalam. Anda kini boleh menerima maklum balas yang sangat tepat mengenai keletihan dan potensi pertumbuhan otot yang disasarkan.
+Salam daripada ChronoLab. Fokus utama kemas kini ini adalah penjenamaan semula (*rebranding*) rasmi aplikasi kami.
 
 ---
 
-## 💡 Kes Penggunaan Supsiki yang Lebih Mendalam
+## 1. Penjenamaan Semula Aplikasi: Dari Supsiki kepada ChronoFit
 
-Lebih daripada sekadar merekod, lihat bagaimana Supsiki menganalisis dan membimbing latihan anda.
+Nama rasmi aplikasi kami telah ditukar daripada Supsiki kepada ChronoFit. Keputusan ini diambil untuk menjelaskan hala tuju kami dan mengukuhkan identiti kami sebagai platform kecergasan yang komprehensif, berkembang lebih daripada sekadar pengurusan diet biasa.
 
-### 🏋️ Kes 1: Fokus pada Latihan Beban (*Weight Training*)
-* **Situasi:** Anda menggunakan mod Latihan Bebas untuk hari dada (*Bench Press*, *Pec Deck Fly*, dll.).
-* **Tindakan:** Tanpa tekanan pemasa, anda mengambil rehat yang cukup dan mencatat beban serta ulangan anda secara bebas.
-* **Analisis AI:** **"Stimulasi tinggi diberikan kepada otot pektoralis mejar dan trisep. Mengambil kira volum yang dilakukan, pengambilan protein yang mencukupi disyorkan untuk sintesis otot yang optimum."**
+Walaupun nama sebelumnya mungkin masih dipaparkan di bahagian tertentu dalam sistem, kami akan mengemas kini dan menyelesaikannya secara berperingkat dalam keluaran yang akan datang.
 
-### 🧘 Kes 2: Mempelajari Pergerakan Baharu (cth. *Kettlebell Swing*)
-* **Situasi:** Anda menambahkan senaman baharu pada rutin anda tetapi perlu mengesahkan postur yang tepat.
-* **Tindakan:** Anda memautkan video tutorial daripada pakar yang dipercayai di dalam aplikasi lebih awal.
-* **Hasil:** Anda mengekalkan bentuk yang betul dengan menonton video yang dimainkan pada skrin semasa bersenam, membolehkan anda memberi tumpuan sepenuhnya pada stimulasi otot sasaran.
+## 2. Penstriman Video Semasa Latihan & Konfigurasi Video Tersuai
 
----
+Kini anda boleh menonton video panduan semasa berlatih. 
 
-Mula bina rutin anda sendiri dan mulakan sesi latihan baharu hari ini. 
-Supsiki akan membantu anda secara senyap untuk mengubah setiap titisan peluh menjadi hasil yang paling cekap dan bermakna.
+Dengan menggunakan fungsi carian dalam aplikasi atau YouTube, pengguna boleh menetapkan video tutorial pilihan mereka untuk setiap senaman yang spesifik. Ini membolehkan anda merujuk panduan video secara masa nyata (*real-time*) semasa latihan, bagi memastikan ketepatan postur dan pelaksanaan pergerakan.
+
+![In-Workout Video Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/1.jpg)
+![In-Workout Video Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/2.jpg)
+
+## 3. Sokongan Pendaftaran Video untuk Pencipta Kecergasan (Menyokong 18 Bahasa)
+
+ChronoFit kini menyediakan ciri yang membolehkan pencipta kecergasan (*fitness creators*) mendaftarkan video YouTube mereka sendiri sebagai tutorial representatif untuk senaman tertentu. 
+
+Pada masa ini, ChronoFit menyokong 18 bahasa di seluruh dunia. Seiring dengan pengembangan perkhidmatan dan pertumbuhan pangkalan pengguna global kami, video tutorial yang didaftarkan secara semula jadi akan mendapat pendedahan kepada pengguna di pelbagai negara. Kami menjangkakan ini akan memberikan sumbangan positif jangka panjang dalam meningkatkan jumlah tontonan saluran anda dan mengukuhkan pangkalan pelanggan (*subscriber*) global.
+
+![Creator Video Registration Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/3.jpg)
 
 ---
 
 ## 🗣️ Saluran Komunikasi
-Maklum balas anda membantu Supsiki berkembang. Sila hubungi kami pada bila-bila masa!
+Maklum balas anda membantu ChronoFit untuk terus berkembang. Jangan ragu untuk menghubungi kami pada bila-bila masa.
 
 ### Komuniti YouTube Pembangun
-Lihat di sebalik tabir pembangunan dan berita terkini.
+Lihat di sebalik tabir proses pembangunan dan berita terkini kami.
 👉 [Pergi ke YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
 
 ### DM Instagram
-Ikuti kami untuk kemas kini dan hantarkan DM untuk sokongan.
+Ikuti kami untuk maklumat terkini dan hantarkan mesej langsung (DM) untuk mendapatkan sokongan.
 👉 [Pergi ke Instagram](https://www.instagram.com/chronolabcorp/)
 
 Terima kasih.
 
-*15 Mac 2026. Pasukan Supsiki*
+*26 Mac 2026. ChronoLab*
