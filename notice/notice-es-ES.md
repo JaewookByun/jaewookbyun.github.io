@@ -1,83 +1,45 @@
-# 🥑 Actualización v1.0.8: Entrenamiento Libre, Reproductor de Vídeo y Biblioteca de Ejercicios Integrada
+# Actualización ChronoFit v1.1
 
-Hola, somos el equipo de Supsiki.
-Más allá de nuestras funciones de entrenamiento por intervalos, la actualización v1.0.8 introduce el **'Entrenamiento Libre' (Free Workout)** —diseñado para tu propio ritmo— y un **'Reproductor de Vídeo durante el Entrenamiento'**. Te invitamos a experimentar un viaje de acondicionamiento físico más profundo y refinado.
-*La versión v1.0.8 está actualmente en proceso de publicación en Google Play Store; la disponibilidad de la actualización puede variar ligeramente según el dispositivo.*
-
-📢 **Aviso Previo: Cambio de Nombre de la Aplicación en la Próxima Versión (v1.1.0)**
-Habiendo comenzado como un asistente de gestión de la dieta, el nombre 'Supsiki' ya no refleja completamente nuestra identidad en evolución como una plataforma integral de fitness. Por ello, con nuestra próxima gran actualización, **la v1.1.0, la aplicación pasará a llamarse oficialmente 'ChronoFit'**. Esperamos dar este próximo paso con un nuevo nombre y agradecemos tu continua expectación y apoyo.
-
-## ✅ Notas de la Versión v1.0.8
-
-### 1. Integración con YouTube para Elevar tu Entrenamiento 📺
-![Reproductor de Vídeo durante el Entrenamiento](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
-
-<sub>* *La captura de pantalla está en inglés. La aplicación es totalmente compatible con el idioma español.*</sub>
-
-Hemos introducido una nueva función que te permite ver vídeos tutoriales durante el entrenamiento. Al configurar tus vídeos de YouTube preferidos con antelación, puedes verificar visualmente la postura y la técnica correctas mientras entrenas.
-
-💡 **Aviso para Creadores:** Si eres un creador de contenido de fitness, puedes vincular tus propios vídeos de YouTube a los datos de ejercicios de la aplicación para ofrecer tutoriales a un público más amplio.
-
-### 2. 463 Ejercicios Integrados 💪
-![Biblioteca de Ejercicios Integrada](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
-
-<sub>* *La captura de pantalla está en inglés. La aplicación es totalmente compatible con el idioma español.*</sub>
-
-Se ha integrado una biblioteca sistemática de 463 ejercicios, que abarca calistenia, kettlebells (pesas rusas), sacos búlgaros y máquinas de gimnasio. Cada entrada detalla el método de ejecución correcto, los beneficios esperados y los grupos musculares objetivo.
-
-💡 **Aviso:** La base de datos de ejercicios integrados se ampliará continuamente. No dudes en sugerir cualquier ejercicio que realices habitualmente o que desees que se añada.
-
-### 3. Gráficos de Entrenamiento Intuitivos y Mejoras en la Interfaz (UI) 📊
-![Gráficos de Entrenamiento](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
-
-<sub>* *La captura de pantalla está en inglés. La aplicación es totalmente compatible con el idioma español.*</sub>
-
-Para ayudarte a comprender el flujo de tu entrenamiento de un vistazo, hemos renovado por completo los gráficos de entrenamiento, incluyendo la frecuencia cardíaca, la distancia y el recuento de pasos. Además, la interfaz de usuario (UI) general se ha refinado meticulosamente para ofrecer una experiencia más agradable.
-
-### 4. 'Entrenamiento Libre' Adaptado a tu Ritmo 🏋️
-![Pantalla de Entrenamiento Libre](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
-
-<sub>* *La captura de pantalla está en inglés. La aplicación es totalmente compatible con el idioma español.*</sub>
-
-Ahora ofrecemos un modo de entrenamiento en el que puedes ejercitarte totalmente a tu propio ritmo sin las restricciones del tiempo. Crea tu propia rutina —como pasar del Press de Banca al Press con Mancuernas y, posteriormente, al Press Inclinado— y registra libremente tus pesos y repeticiones con el tiempo de descanso adecuado.
-
-### 5. Sofisticado Análisis de Estimulación Muscular por IA 🧠
-Basándose en nuevos datos cuantificados de los músculos objetivo para cada ejercicio, nuestra IA analiza profundamente los pesos y repeticiones que introduces. Ahora puedes recibir comentarios altamente precisos sobre la fatiga y el potencial de crecimiento de los músculos trabajados.
+Saludos desde ChronoLab. El objetivo principal de esta actualización es la renovación oficial de la marca de nuestra aplicación.
 
 ---
 
-## 💡 Casos de Uso Más Profundos de Supsiki
+## 1. Renovación de la marca de la aplicación: De Supsiki a ChronoFit
 
-Más allá de un simple registro, descubre cómo Supsiki analiza y guía tu entrenamiento.
+El nombre oficial de nuestra aplicación ha cambiado de Supsiki a ChronoFit. Esta decisión se ha tomado para clarificar nuestra dirección y establecer nuestra identidad como una plataforma de fitness integral, evolucionando más allá de la simple gestión de dietas.
 
-### 🏋️ Caso 1: Centrado en el Entrenamiento de Fuerza (Pesas)
-* **Situación:** Utilizas el modo Entrenamiento Libre para un día de pecho (Press de Banca, Pec Deck, etc.).
-* **Acción:** Sin la presión de un temporizador, tomas el descanso necesario y registras libremente tus pesos y repeticiones.
-* **Análisis de la IA:** **"Alta estimulación en el pectoral mayor y los tríceps. Teniendo en cuenta el volumen realizado, se recomienda una ingesta suficiente de proteínas para una síntesis muscular óptima."**
+Aunque el nombre anterior aún pueda aparecer en ciertas áreas del sistema, lo actualizaremos y resolveremos de forma progresiva en las próximas versiones.
 
-### 🧘 Caso 2: Aprendiendo un Nuevo Movimiento (ej. Kettlebell Swing)
-* **Situación:** Has añadido un nuevo ejercicio a tu rutina pero necesitas confirmar la postura exacta.
-* **Acción:** Vinculas con antelación un vídeo tutorial de un experto de confianza dentro de la aplicación.
-* **Resultado:** Mantienes la técnica correcta viendo el vídeo reproducido en la pantalla durante el entrenamiento, lo que te permite concentrarte plenamente en la estimulación del músculo objetivo.
+## 2. Reproducción de vídeo durante el entrenamiento y configuración de vídeo personalizada
+
+Ahora puede visualizar vídeos instructivos mientras entrena. 
+
+Utilizando las funciones de búsqueda de la aplicación o de YouTube, los usuarios pueden preconfigurar un vídeo tutorial de su elección para cada ejercicio específico. Esto le permite consultar la guía en vídeo en tiempo real durante su entrenamiento, garantizando una postura y ejecución precisas.
+
+![In-Workout Video Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/1.jpg)
+![In-Workout Video Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/2.jpg)
+
+## 3. Soporte de registro de vídeo para creadores de fitness (Compatible con 18 idiomas)
+
+ChronoFit ofrece ahora una función que permite a los creadores de fitness registrar sus propios vídeos de YouTube como tutorial representativo para ejercicios específicos. 
+
+Actualmente, ChronoFit es compatible con 18 idiomas a nivel global. A medida que nuestro servicio se expanda y la base de usuarios global crezca, los vídeos tutoriales registrados ganarán visibilidad de forma natural ante usuarios de diversos países. Anticipamos que esto supondrá una contribución positiva a largo plazo para aumentar las visualizaciones de su canal y consolidar una base global de suscriptores.
+
+![Creator Video Registration Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/3.jpg)
 
 ---
 
-Comienza a construir tu propia rutina e inicia una nueva sesión de entrenamiento hoy mismo. 
-Supsiki te asistirá discretamente para transformar cada gota de sudor en los resultados más eficientes y significativos.
+## 🗣️ Canales de comunicación
+Sus comentarios ayudan a ChronoFit a crecer. No dude en ponerse en contacto con nosotros en cualquier momento.
 
----
+### Comunidad de YouTube para desarrolladores
+Descubra los entresijos del desarrollo y las últimas noticias.
+👉 [Ir al YouTube de desarrolladores](https://www.youtube.com/@bjw0829/posts)
 
-## 🗣️ Canales de Comunicación
-Tu opinión ayuda a Supsiki a crecer. ¡No dudes en contactarnos en cualquier momento!
-
-### Comunidad de Desarrolladores en YouTube
-Echa un vistazo a los entresijos del desarrollo y las últimas noticias.
-👉 [Ir al YouTube del Desarrollador](https://www.youtube.com/@bjw0829/posts)
-
-### Mensaje Directo (DM) en Instagram
-Síguenos para estar al día y envíanos un DM si necesitas asistencia.
+### Mensajes directos (MD) en Instagram
+Síganos para estar al tanto de las actualizaciones y envíenos un mensaje directo para obtener soporte técnico.
 👉 [Ir a Instagram](https://www.instagram.com/chronolabcorp/)
 
 Gracias.
 
-*15 de marzo de 2026. El equipo de Supsiki*
+*26 de marzo de 2026. ChronoLab*
