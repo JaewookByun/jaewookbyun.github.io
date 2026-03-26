@@ -1,81 +1,45 @@
-# 🥑 Update v1.0.8: Vrije Training, Videospeler tijdens de workout en Ingebouwde Oefeningenbibliotheek
+# ChronoFit v1.1 Update
 
-Hallo, hier is het Supsiki-team.
-Naast onze bestaande intervaltrainingsfuncties, introduceert de v1.0.8-update de **'Vrije Training' (Free Workout)** — ontworpen voor uw eigen tempo — en een **'Videospeler tijdens de workout'**. Wij nodigen u uit om een diepgaandere en verfijndere fitnesservaring te beleven.
-*Versie 1.0.8 is momenteel in afwachting van publicatie in de Google Play Store; de beschikbaarheid van de update kan per apparaat enigszins verschillen.*
-
-📢 **Aankondiging vooraf: Naamsverandering van de app in de volgende versie (v1.1.0)**
-Begonnen als een assistent voor dieetbeheer, dekt de naam 'Supsiki' niet langer onze evoluerende identiteit als een uitgebreid fitnessplatform. Daarom zal de app bij onze volgende grote update, **v1.1.0, officieel worden omgedoopt tot 'ChronoFit'**. Wij kijken ernaar uit om deze volgende stap onder een nieuwe naam te zetten en we waarderen uw voortdurende steun en enthousiasme.
-
-## ✅ Releaseopmerkingen v1.0.8
-
-### 1. YouTube-integratie om uw training naar een hoger niveau te tillen 📺
-![Videospeler tijdens de workout](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/1.jpg)
-
-<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
-
-We hebben een nieuwe functie geïntroduceerd waarmee u tutorialvideo's kunt bekijken tijdens uw workout. Door uw favoriete YouTube-video's vooraf in te stellen, kunt u visueel de juiste houding en uitvoering controleren tijdens het trainen.
-💡 **Opmerking voor Creators:** Als u een fitness-creator bent, kunt u uw eigen YouTube-video's koppelen aan de trainingsgegevens van de app om tutorials aan een breder publiek aan te bieden.
-
-### 2. 463 Ingebouwde Oefeningen 💪
-![Ingebouwde Oefeningenbibliotheek](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/2.jpg)
-
-<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
-
-Er is een systematische bibliotheek van 463 oefeningen geïntegreerd, waaronder calisthenics, kettlebells, bulgarian bags en fitnessapparatuur. Elk onderdeel specificeert de correcte uitvoeringsmethode, verwachte voordelen en de doelspiergroepen.
-💡 **Opmerking:** De ingebouwde oefeningendatabase zal continu worden uitgebreid. Voel u vrij om oefeningen voor te stellen die u regelmatig uitvoert of die u graag toegevoegd zou zien.
-
-### 3. Intuïtieve Trainingsgrafieken en UI-verbeteringen 📊
-![Trainingsgrafieken](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/3.jpg)
-
-<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
-
-Om u te helpen het verloop van uw training in één oogopslag te begrijpen, hebben we de trainingsgrafieken, inclusief hartslag, afstand en stappenteller, volledig vernieuwd. Bovendien is de algehele gebruikersinterface (UI) zorgvuldig verfijnd om een aangenamere gebruikerservaring te bieden.
-
-### 4. 'Vrije Training' afgestemd op uw tempo 🏋️
-![Scherm voor Vrije Training](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.0.8/4.jpg)
-
-<sub>* *De schermafbeelding is in het Engels. De app wordt volledig ondersteund in het Nederlands.*</sub>
-
-We ondersteunen nu een trainingsmodus waarin u volledig in uw eigen tempo kunt trainen, zonder tijdslimieten. Bouw uw eigen routine op — zoals de overgang van Bench Press naar Dumbbell Press en vervolgens naar Incline Bench Press — en registreer in alle vrijheid uw gewichten en herhalingen met voldoende rusttijd.
-
-### 5. Geavanceerde AI-analyse van spierstimulatie 🧠
-Op basis van nieuw gekwantificeerde gegevens van de doelspieren voor elke oefening, analyseert onze AI diepgaand de gewichten en herhalingen die u invoert. U kunt nu uiterst nauwkeurige feedback ontvangen over de vermoeidheid en het groeipotentieel van uw getrainde spieren.
+Groeten vanuit ChronoLab. De belangrijkste focus van deze update is de officiële rebranding van onze applicatie.
 
 ---
 
-## 💡 Diepgaandere Supsiki Gebruiksscenario's
+## 1. App Rebranding: Van Supsiki naar ChronoFit
 
-Kijk verder dan eenvoudig loggen en ontdek hoe Supsiki uw training analyseert en begeleidt.
+De officiële naam van onze app is gewijzigd van Supsiki naar ChronoFit. Deze beslissing is genomen om onze koers te verduidelijken en onze identiteit als een uitgebreid fitnessplatform te vestigen, dat verder evolueert dan eenvoudig dieetbeheer. 
 
-### 🏋️ Scenario 1: Focus op Krachttraining (Weight Training)
-* **Situatie:** U gebruikt de Vrije Training-modus voor een borstdag (Bench Press, Pec Deck Fly, enz.).
-* **Actie:** Zonder de druk van een timer neemt u voldoende rust en registreert u vrij uw gewichten en herhalingen.
-* **AI-analyse:** **"Hoge stimulatie geleverd aan de borstspier (pectoralis major) en triceps. Gezien het uitgevoerde volume, wordt voldoende eiwitinname aanbevolen voor een optimale spiersynthese."**
+Hoewel de eerdere naam nog op bepaalde plaatsen in het systeem zichtbaar kan zijn, zullen we dit in de komende releases stapsgewijs bijwerken en oplossen.
 
-### 🧘 Scenario 2: Een nieuwe beweging leren (bijv. Kettlebell Swing)
-* **Situatie:** U heeft een nieuwe oefening aan uw routine toegevoegd, maar u wilt de exacte houding bevestigen.
-* **Actie:** U koppelt vooraf een tutorialvideo van een vertrouwde expert binnen de app.
-* **Resultaat:** U behoudt de juiste vorm door naar de video op het scherm te kijken tijdens de training, waardoor u zich volledig kunt concentreren op de stimulatie van de doelspier.
+## 2. Videostreaming tijdens de training & aangepaste videoconfiguratie
 
----
+U kunt nu instructievideo's bekijken tijdens het trainen. 
 
-Begin vandaag nog met het opbouwen van uw eigen routine en start een nieuwe trainingssessie. 
-Supsiki zal u op de achtergrond assisteren om elke zweetdruppel om te zetten in de meest efficiënte en betekenisvolle resultaten.
+Met behulp van de zoekfuncties in de app of via YouTube kunnen gebruikers vooraf een tutorialvideo naar keuze instellen voor elke specifieke oefening. Dit stelt u in staat om de videogids in realtime te raadplegen tijdens uw work-out, wat zorgt voor een nauwkeurige houding en uitvoering.
+
+![In-Workout Video Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/1.jpg)
+![In-Workout Video Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/2.jpg)
+
+## 3. Ondersteuning bij videoregistratie voor fitness-creators (18 talen ondersteund)
+
+ChronoFit biedt nu een functie waarmee fitness-creators hun eigen YouTube-video's kunnen registreren als de representatieve tutorial voor specifieke oefeningen. 
+
+Momenteel ondersteunt ChronoFit wereldwijd 18 talen. Naarmate onze service zich uitbreidt en het wereldwijde gebruikersbestand groeit, zullen de geregistreerde tutorialvideo's op natuurlijke wijze zichtbaar worden voor gebruikers in verschillende landen. Wij verwachten dat dit een langdurige, positieve bijdrage zal leveren aan het verhogen van uw kanaalweergaven en het opbouwen van een wereldwijd abonneebestand.
+
+![Creator Video Registration Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/3.jpg)
 
 ---
 
 ## 🗣️ Communicatiekanalen
-Uw feedback helpt Supsiki te groeien. Neem gerust op elk moment contact met ons op!
+Uw feedback helpt ChronoFit te groeien. Neem gerust op elk gewenst moment contact met ons op.
 
-### Ontwikkelaar YouTube Community
-Ontdek een kijkje achter de schermen van de ontwikkeling en het laatste nieuws.
-👉 [Ga naar YouTube van de ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
+### YouTube-community voor ontwikkelaars
+Krijg een blik achter de schermen van de ontwikkeling en ontdek het laatste nieuws.
+👉 [Ga naar YouTube voor ontwikkelaars](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
 Volg ons voor updates en stuur ons een DM voor ondersteuning.
 👉 [Ga naar Instagram](https://www.instagram.com/chronolabcorp/)
 
-Dank u wel.
+Hartelijk dank.
 
-*15 maart 2026. Het Supsiki Team*
+*26 maart 2026. ChronoLab*
