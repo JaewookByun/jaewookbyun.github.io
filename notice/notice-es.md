@@ -1,45 +1,15 @@
-# Actualización ChronoFit v1.1
+# 🚨 [Aviso urgente] Suspensión temporal de las funciones de análisis por IA
 
-Saludos desde ChronoLab. El enfoque principal de esta actualización es el cambio oficial de la marca de nuestra aplicación.
+Hola, le saluda el equipo de ChronoLab.
 
----
+Lamentamos informarle que nuestro sistema de integración de IA ha sido suspendido temporalmente por las políticas automáticas de seguridad debido a la detección de tráfico (acceso) inusual dentro de la infraestructura de nuestro servidor en la nube.
 
-## 1. Cambio de marca de la aplicación: De Supsiki a ChronoFit
+Como resultado, las funciones de análisis por IA dentro de la aplicación no están disponibles en este momento. Tenga en cuenta que todas las demás funciones principales de la aplicación, excluyendo el análisis por IA, se pueden seguir utilizando con total normalidad.
 
-El nombre oficial de nuestra aplicación cambió de Supsiki a ChronoFit. Tomamos esta decisión para dar claridad a nuestro rumbo y consolidar nuestra identidad como una plataforma de fitness integral, evolucionando más allá de un simple gestor de dietas.
+Le pedimos una sincera disculpa por cualquier inconveniente que esto pueda causar. Nuestro equipo de desarrollo ya está trabajando para identificar la causa raíz y procederá con una actualización de parche para resolver el problema y restaurar el sistema lo antes posible.
 
-Aunque es posible que el nombre anterior siga apareciendo en algunas partes del sistema, trabajaremos para actualizar y solucionar esto de forma gradual en nuestros próximos lanzamientos.
+Haremos todo lo que esté en nuestras manos para recuperar el servicio por completo y ofrecerle una plataforma estable a la brevedad.
 
-## 2. Reproducción de video durante el entrenamiento y configuración personalizada
+Agradecemos enormemente su comprensión.
 
-Ahora puede ver videos instructivos mientras entrena. 
-
-Mediante la función de búsqueda de la aplicación o a través de YouTube, los usuarios pueden preestablecer un video tutorial de su elección para cada ejercicio en particular. Esto le permite consultar la guía en video en tiempo real durante su rutina, asegurando una postura y ejecución precisas.
-
-![In-Workout Video Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/1.jpg)
-![In-Workout Video Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/2.jpg)
-
-## 3. Soporte de registro de videos para creadores de fitness (18 idiomas compatibles)
-
-ChronoFit ahora cuenta con una función que permite a los creadores de contenido de fitness registrar sus propios videos de YouTube como el tutorial representativo de ejercicios específicos. 
-
-Actualmente, ChronoFit tiene soporte para 18 idiomas a nivel mundial. A medida que nuestro servicio se expanda y la base global de usuarios crezca, los videos tutoriales registrados ganarán exposición de forma natural ante usuarios de distintos países. Anticipamos que esto tendrá un impacto positivo a largo plazo para aumentar las vistas de su canal y asegurar una base de suscriptores a nivel global.
-
-![Creator Video Registration Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1/3.jpg)
-
----
-
-## 🗣️ Canales de comunicación
-Sus comentarios ayudan a que ChronoFit siga creciendo. No dude en comunicarse con nosotros en cualquier momento.
-
-### Comunidad de YouTube para desarrolladores
-Conozca el detrás de escena del desarrollo y las noticias más recientes.
-👉 [Ir al canal de YouTube para desarrolladores](https://www.youtube.com/@bjw0829/posts)
-
-### Mensajes directos (DM) en Instagram
-Síganos para recibir actualizaciones y envíenos un DM para obtener soporte.
-👉 [Ir a Instagram](https://www.instagram.com/chronolabcorp/)
-
-Gracias.
-
-*26 de marzo de 2026. ChronoLab*
+*25 de mayo de 2026. ChronoLab*
