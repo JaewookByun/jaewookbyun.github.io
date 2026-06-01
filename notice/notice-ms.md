@@ -1,15 +1,33 @@
-# 🚨 [Notis Segera] Penangguhan Sementara Fungsi Analisis AI
+# Kemas Kini ChronoFit v1.1.2
 
-Halo, kami daripada pasukan ChronoLab.
+Helo, kami dari pasukan ChronoLab.
 
-Kami ingin memaklumkan bahawa sistem integrasi AI kami telah ditangguhkan sementara oleh dasar keselamatan automatik berikutan pengesanan trafik (akses) yang luar biasa dalam infrastruktur pelayan cloud kami.
+Kami telah melaksanakan kemas kini tampalan (*patch*) untuk menyelesaikan isu trafik (akses) tidak normal yang berlaku baru-baru ini dalam infrastruktur pelayan awan kami dan untuk memulihkan kestabilan sistem. Bersama-sama dengan kemas kini tampalan ini, kami telah menaik taraf kepada Kecerdasan Buatan (AI) yang lebih canggih serta meningkatkan keseluruhan Antara Muka Pengguna (UI) semasa senaman.
 
-Oleh itu, fungsi analisis AI dalam aplikasi tidak dapat digunakan buat sementara waktu. Sila ambil maklum bahawa semua fungsi utama aplikasi yang lain, tidak termasuk analisis AI, masih boleh digunakan secara normal seperti biasa.
+---
 
-Kami memohon maaf yang sebesar-besarnya atas sebarang kesulitan yang timbul. Pasukan pembangun kami sedang mengenal pasti punca utama dan akan menjalankan kemas kini tampalan (patch update) untuk menyelesaikan masalah ini serta memulihkan sistem secepat mungkin.
+## 1. Peningkatan Prestasi AI
+Kami telah mempertingkatkan lagi model AI yang menganalisis data senaman anda. Alami sesi senaman yang lebih berkesan melalui bimbingan dan maklum balas AI yang jauh lebih tepat dan mendalam.
 
-Kami akan melakukan usaha terbaik kami untuk memulihkan perkhidmatan sepenuhnya dan menyediakan perkhidmatan yang stabil semula dalam masa terdekat.
+## 2. Peningkatan Keseluruhan UI & Paparan Data
+Kami telah meningkatkan tahap kejelasan (intuitif) pada papan pemuka dan peta yang dipaparkan dalam masa nyata (*real-time*) semasa anda bersenam dengan ketara. Selain itu, kami kini menyokong mod skrin penuh untuk memastikan semua maklumat dapat dipantau dengan pantas.
 
-Terima kasih atas pemahaman anda.
+![Papan Pemuka Skrin Penuh 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Papan Pemuka Skrin Penuh 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*25 Mei 2026. ChronoLab*
+---
+
+## 🗣️ Saluran Komunikasi
+Maklum balas anda amat membantu ChronoFit untuk terus berkembang. Sila hubungi kami pada bila-bila masa!
+
+### Komuniti YouTube Pembangun
+Lihat di sebalik tabir proses pembangunan dan berita terkini.
+👉 [Pergi ke YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
+
+### DM Instagram
+Ikuti kami untuk mendapatkan kemas kini dan hantarkan DM kepada kami jika anda memerlukan sokongan.
+👉 [Pergi ke Instagram](https://www.instagram.com/bjw0829/)
+
+Terima kasih.
+
+*1 Jun 2026. ChronoLab*
