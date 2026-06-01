@@ -1,15 +1,33 @@
-# 🚨 [Pemberitahuan Penting] Penangguhan Sementara Fitur Analisis AI
+# Pembaruan ChronoFit v1.1.2
 
-Halo, kami dari ChronoLab.
+Halo, kami dari tim ChronoLab.
 
-Kami ingin menginformasikan bahwa sistem integrasi AI kami telah ditangguhkan sementara oleh kebijakan keamanan otomatis karena terdeteksinya lalu lintas (akses) yang tidak biasa di dalam infrastruktur server cloud kami.
+Kami telah menerapkan pembaruan *patch* untuk mengatasi masalah lalu lintas (akses) tidak wajar yang terjadi baru-baru ini pada infrastruktur server *cloud* kami dan untuk memulihkan stabilitas sistem. Bersamaan dengan pembaruan ini, kami telah menghadirkan Kecerdasan Buatan (AI) yang lebih canggih serta menyempurnakan UI secara keseluruhan selama latihan.
 
-Oleh karena itu, fitur analisis AI di dalam aplikasi saat ini tidak dapat digunakan. Harap dicatat bahwa semua fitur utama aplikasi lainnya, selain analisis AI, masih dapat digunakan secara normal seperti biasa.
+---
 
-Kami memohon maaf yang sebesar-besarnya atas ketidaknyamanan yang ditimbulkan. Tim pengembang kami saat ini sedang mengidentifikasi penyebab utama dan akan segera melakukan pembaruan (patch update) untuk menyelesaikan masalah ini serta memulihkan sistem secepat mungkin.
+## 1. Peningkatan Performa AI
+Kami telah meningkatkan lebih lanjut model AI yang menganalisis data latihan Anda. Dapatkan pengalaman sesi latihan yang lebih efektif melalui *coaching* dan umpan balik AI yang jauh lebih akurat dan mendalam.
 
-Kami akan melakukan upaya terbaik kami untuk memulihkan layanan sepenuhnya dan menyediakan layanan yang stabil kembali dalam waktu sesingkat-singkatnya.
+## 2. Peningkatan UI Keseluruhan & Perbaikan Tampilan Data
+Kami telah secara signifikan meningkatkan intuitivitas dasbor dan peta yang dapat dilihat secara *real-time* saat berolahraga. Selain itu, kami kini mendukung mode layar penuh (*full-screen*) untuk memastikan semua informasi dapat dipantau hanya dengan sekilas.
 
-Terima kasih atas pengertian Anda.
+![Layar Penuh Dasbor 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Layar Penuh Dasbor 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*25 Mei 2026. ChronoLab*
+---
+
+## 🗣️ Saluran Komunikasi
+Umpan balik Anda sangat membantu perkembangan ChronoFit. Jangan ragu untuk menghubungi kami kapan saja!
+
+### Komunitas YouTube Pengembang
+Lihat di balik layar proses pengembangan dan berita terbaru kami.
+👉 [Kunjungi YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
+
+### DM Instagram
+Ikuti kami untuk informasi pembaruan dan kirimkan DM kepada kami jika Anda membutuhkan bantuan.
+👉 [Kunjungi Instagram](https://www.instagram.com/bjw0829/)
+
+Terima kasih.
+
+*1 Juni 2026. ChronoLab*
