@@ -1,15 +1,33 @@
-# 🚨 [Urgent Notice] Temporary Suspension of AI Analysis Features
+# ChronoFit v1.1.2 Update
 
 Hello, this is ChronoLab.
 
-We would like to inform you that our AI integration system has been temporarily suspended by automatic security policies due to the detection of unusual traffic (access) within our cloud server infrastructure.
+We have applied a patch update to resolve the recent abnormal traffic (access) issues within our cloud server infrastructure and restore system stability. Alongside this patch update, we have upgraded to a more advanced Artificial Intelligence (AI) and improved the overall UI during workouts.
 
-As a result, the AI analysis features within the app are currently unavailable. Please note that all other core features of the app, excluding the AI analysis, can still be used normally as usual.
+---
 
-We sincerely apologize for any inconvenience this may cause. Our development team is currently identifying the root cause and will proceed with a patch update to resolve the issue and restore the system as soon as possible.
+## 1. AI Performance Upgrade
+We have further upgraded the AI model that analyzes your workout data. Experience more effective workout sessions through more precise and in-depth AI coaching and feedback.
 
-We will do our absolute best to fully recover and provide a stable service at the earliest opportunity.
+## 2. Overall UI Enhancements & Data Display Improvements
+We have significantly increased the intuitiveness of the dashboard and map viewed in real-time during workouts. Additionally, we now support a full-screen mode to ensure all information can be taken in at a glance.
 
-Thank you for your understanding.
+![Dashboard Full Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Dashboard Full Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*May 25, 2026. ChronoLab*
+---
+
+## 🗣️ Communication Channels
+Your feedback helps ChronoFit grow. Please feel free to reach out anytime!
+
+### Developer YouTube Community
+Check out development behind-the-scenes and the latest news.
+👉 [Go to Developer YouTube](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram DM
+Follow us for updates and send us a DM for support.
+👉 [Go to Instagram](https://www.instagram.com/bjw0829/)
+
+Thank you.
+
+*June 1, 2026. ChronoLab*
