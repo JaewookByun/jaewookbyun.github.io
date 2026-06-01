@@ -1,15 +1,33 @@
-# 🚨 [Dringend bericht] Tijdelijke opschorting van AI-analysefuncties
+# ChronoFit v1.1.2 Update
 
-Hallo, dit is het team van ChronoLab.
+Hallo, dit is ChronoLab.
 
-Wij willen u informeren dat ons AI-integratiesysteem tijdelijk is opgeschort door automatische beveiligingsrichtlijnen vanwege de detectie van ongebruikelijk verkeer (toegang) binnen onze cloudserver-infrastructuur.
+We hebben een patch-update toegepast om de recente problemen met abnormaal verkeer (toegang) binnen onze cloudserver-infrastructuur op te lossen en de systeemstabiliteit te herstellen. Naast deze patch-update hebben we een upgrade uitgevoerd naar een geavanceerdere kunstmatige intelligentie (AI) en de algehele gebruikersinterface (UI) tijdens work-outs verbeterd.
 
-Als gevolg hiervan zijn de AI-analysefuncties binnen de app momenteel niet beschikbaar. Houd er rekening mee dat alle andere basisfuncties van de app, met uitzondering van de AI-analyse, nog steeds normaal kunnen worden gebruikt zoals gewend.
+---
 
-Onze oprechte excuses voor het eventuele ongemak dat dit kan veroorzaken. Ons ontwikkelingsteam onderzoekt momenteel de exacte oorzaak en zal zo snel mogelijk een patch-update uitvoeren om het probleem op te lossen en het systeem te herstellen.
+## 1. Upgrade van AI-prestaties
+We hebben het AI-model dat uw trainingsgegevens analyseert verder geoptimaliseerd. Ervaar effectievere trainingssessies door nauwkeurigere en diepgaandere AI-coaching en feedback.
 
-We zullen ons uiterste best doen om de service volledig te herstellen en u zo snel mogelijk weer een stabiele dienst te leveren.
+## 2. Algehele UI-verbeteringen & optimalisatie van dataweergave
+We hebben de intuïtiviteit van het dashboard en de kaart, die in realtime worden bekeken tijdens het sporten, aanzienlijk vergroot. Daarnaast ondersteunen we nu een modus voor volledig scherm (full-screen) om ervoor te zorgen dat alle informatie in één oogopslag kan worden opgenomen.
 
-Hartelijk dank voor uw begrip.
+![Dashboard Volledig Scherm 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Dashboard Volledig Scherm 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*25 mei 2026. ChronoLab*
+---
+
+## 🗣️ Communicatiekanalen
+Uw feedback helpt ChronoFit te groeien. Neem gerust op elk moment contact met ons op!
+
+### YouTube-community van de ontwikkelaar
+Neem een kijkje achter de schermen van de ontwikkeling en het laatste nieuws.
+👉 [Ga naar YouTube van de ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram DM
+Volg ons voor updates en stuur ons een DM voor ondersteuning.
+👉 [Ga naar Instagram](https://www.instagram.com/bjw0829/)
+
+Dank u wel.
+
+*1 juni 2026. ChronoLab.*
