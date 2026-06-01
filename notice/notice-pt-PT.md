@@ -1,15 +1,33 @@
-# 🚨 [Aviso Urgente] Suspensão Temporária das Funcionalidades de Análise por IA
+# Atualização ChronoFit v1.1.2
 
-Olá, aqui é a equipa da ChronoLab.
+Olá, daqui é a equipa da ChronoLab.
 
-Gostaríamos de informar que o nosso sistema de integração de IA foi suspenso temporariamente pelas políticas automáticas de segurança devido à deteção de tráfego (acesso) invulgar na infraestrutura dos nossos servidores em nuvem.
+Aplicámos uma atualização (patch) para resolver os recentes problemas de tráfego (acesso) anómalo na nossa infraestrutura de servidores na cloud e restaurar a estabilidade do sistema. Juntamente com esta atualização, integrámos uma Inteligência Artificial (IA) mais avançada e melhorámos a interface de utilizador (UI) global durante os treinos.
 
-Como resultado, as funcionalidades de análise por IA dentro da aplicação estão indisponíveis no momento. Lembramos que todas as outras ferramentas principais da aplicação, excluindo a análise por IA, continuam a funcionar e podem ser utilizadas normalmente.
+---
 
-Pedimos desculpas sinceramente por qualquer inconveniente que esta situação possa causar. A nossa equipa de desenvolvimento está a identificar a causa raiz e lançará uma atualização de correção (patch update) para resolver o problema e restaurar o sistema o mais rapidamente possível.
+## 1. Melhoria no Desempenho da IA
+Aperfeiçoámos ainda mais o modelo de IA que analisa os seus dados de treino. Desfrute de sessões de exercício mais eficazes através de um acompanhamento (coaching) e feedback da IA muito mais precisos e detalhados.
 
-Faremos o nosso absoluto melhor para recuperar totalmente o serviço e oferecer uma plataforma estável o mais breve possível.
+## 2. Melhorias Gerais na UI e Otimização na Exibição de Dados
+Aumentámos significativamente a intuitividade do painel de controlo (dashboard) e do mapa visualizados em tempo real durante os treinos. Além disso, agora suportamos um modo de ecrã inteiro para garantir que todas as informações possam ser vistas de relance.
 
-Agradecemos imensamente a sua compreensão.
+![Dashboard Ecrã Inteiro 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Dashboard Ecrã Inteiro 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*25 de maio de 2026. ChronoLab*
+---
+
+## 🗣️ Canais de Comunicação
+O seu feedback ajuda o ChronoFit a crescer. Não hesite em contactar-nos a qualquer momento!
+
+### Comunidade do Desenvolvedor no YouTube
+Acompanhe os bastidores do desenvolvimento e as últimas novidades.
+👉 [Aceder ao YouTube do Desenvolvedor](https://www.youtube.com/@bjw0829/posts)
+
+### DM no Instagram
+Siga-nos para acompanhar as atualizações e envie-nos uma DM se precisar de assistência.
+👉 [Aceder ao Instagram](https://www.instagram.com/bjw0829/)
+
+Obrigado.
+
+*1 de junho de 2026. ChronoLab.*
