@@ -1,15 +1,33 @@
-# 🚨 [WICHTIGE MITTEILUNG] Temporäre Deaktivierung der KI-Analysefunktionen
+# ChronoFit v1.1.2 Update
 
-Hallo, hier ist das Team von ChronoLab.
+Hallo, hier ist ChronoLab.
 
-Aufgrund ungewöhnlicher Aktivitäten im Bereich unserer Cloud-Server-Infrastruktur wurden unsere KI-gestützten Systeme durch automatisierte Sicherheitsrichtlinien vorübergehend gesperrt.
+Wir haben ein Patch-Update eingespielt, um die jüngsten Probleme mit ungewöhnlichem Datenverkehr (Zugriff) innerhalb unserer Cloud-Server-Infrastruktur zu beheben und die Systemstabilität wiederherzustellen. Zusammen mit diesem Patch-Update haben wir unsere Künstliche Intelligenz (KI) weiterentwickelt und die allgemeine Benutzeroberfläche (UI) während des Trainings verbessert.
 
-Aus diesem Grund stehen die KI-Analysefunktionen innerhalb der App zurzeit leider nicht zur Verfügung. Alle anderen Basisfunktionen der App, die nicht auf der KI-Analyse basieren, können jedoch wie gewohnt uneingeschränkt genutzt werden.
+---
 
-Wir entschuldigen uns aufrichtig für die Unannehmlichkeiten. Unser Entwicklungsteam arbeitet bereits mit Hochdruck an der Ursachenforschung und wird zeitnah ein Patch-Update bereitstellen, um das Problem zu beheben und den normalen Systembetrieb wiederherzustellen.
+## 1. Upgrade der KI-Leistung
+Wir haben das KI-Modell, das Ihre Trainingsdaten analysiert, weiter optimiert. Erleben Sie noch effektivere Trainingseinheiten durch präziseres und fundierteres KI-Coaching sowie detaillierteres Feedback.
 
-Wir setzen alles daran, den Service so schnell wie möglich wieder in gewohnter Stabilität für Sie bereitzustellen.
+## 2. Allgemeine UI-Verbesserungen & optimierte Datenanzeige
+Wir haben die Intuitivität des Dashboards und der Karte, die während des Trainings in Echtzeit angezeigt werden, deutlich erhöht. Darüber hinaus unterstützen wir jetzt einen Vollbildmodus, damit Sie alle Informationen auf einen Blick erfassen können.
 
-Vielen Dank für Ihr Verständnis.
+![Dashboard Vollbild 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
+![Dashboard Vollbild 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
 
-*25. Mai 2026, ChronoLab*
+---
+
+## 🗣️ Kommunikationskanäle
+Ihr Feedback hilft ChronoFit beim Wachsen. Bitte zögern Sie nicht, uns jederzeit zu kontaktieren!
+
+### Entwickler-YouTube-Community
+Erfahren Sie mehr über die Hintergründe der Entwicklung und die neuesten Nachrichten.
+👉 [Zum Entwickler-YouTube-Kanal](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram DM
+Folgen Sie uns für Updates und senden Sie uns eine DM für Support.
+👉 [Zu Instagram](https://www.instagram.com/bjw0829/)
+
+Vielen Dank.
+
+*1. Juni 2026. ChronoLab.*
