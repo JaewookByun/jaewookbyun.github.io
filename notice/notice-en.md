@@ -1,19 +1,24 @@
-# ChronoFit v1.1.2 Update
+# ChronoFit v1.3 Update
 
 Hello, this is ChronoLab.
 
-We have applied a patch update to resolve the recent abnormal traffic (access) issues within our cloud server infrastructure and restore system stability. Alongside this patch update, we have upgraded to a more advanced Artificial Intelligence (AI) and improved the overall UI during workouts.
+In this v1.3 update, we have introduced the new **'Exercise Metronome'** feature, designed to help you precisely control the rhythm and pace of your workouts. Here are the details of this update, aimed at supporting more systematic training.
 
 ---
 
-## 1. AI Performance Upgrade
-We have further upgraded the AI model that analyzes your workout data. Experience more effective workout sessions through more precise and in-depth AI coaching and feedback.
+## 1. Exercise Metronome Feature Added
+Maintaining an accurate tempo is crucial for delivering continuous stimulus to target muscles and preventing injuries. The newly introduced Exercise Metronome provides auditory feedback based on your custom beat and speed settings, guiding you to perform your sets at a consistent pace without wavering.
 
-## 2. Overall UI Enhancements & Data Display Improvements
-We have significantly increased the intuitiveness of the dashboard and map viewed in real-time during workouts. Additionally, we now support a full-screen mode to ensure all information can be taken in at a glance.
+![Exercise Metronome Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/1.jpg)
 
-![Dashboard Full Screen 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
-![Dashboard Full Screen 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
+## 2. Left/Right Alternating & Simultaneous Sound Output
+The most prominent aspect of this metronome feature is the **spatial sound output settings** tailored to different types of workouts. When wearing earphones or headphones, you can choose how the sound is delivered based on the characteristics of your exercise.
+
+* **Left/Right Alternating Output:** You can set the sound to alternate between the left and right sides. This is highly effective for **maintaining a consistent cadence that matches your footstrikes while running**, as well as for keeping accurate timing and balance during alternating weight exercises like Lunges or Alternating Dumbbell Curls.
+* **Simultaneous Output:** When performing bilateral exercises that engage muscles on both sides simultaneously, such as Squats or the Bench Press, the beat sound is outputted from both sides at the same time, enhancing your focus and the consistency of your movements.
+
+> **⚠️ Caution**
+> This feature utilizes synthesizing technology to generate sound. Prolonged listening may cause ear fatigue or affect your hearing, so please be mindful of your volume settings and usage time.
 
 ---
 
@@ -30,4 +35,4 @@ Follow us for updates and send us a DM for support.
 
 Thank you.
 
-*June 1, 2026. ChronoLab*
+*June 14, 2026. ChronoLab.*
