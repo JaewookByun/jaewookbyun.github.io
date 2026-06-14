@@ -1,33 +1,38 @@
-# Kemas Kini ChronoFit v1.1.2
+# Pembaruan ChronoFit v1.3
 
-Helo, kami dari pasukan ChronoLab.
+Selamat sejahtera, kami dari pasukan ChronoLab.
 
-Kami telah melaksanakan kemas kini tampalan (*patch*) untuk menyelesaikan isu trafik (akses) tidak normal yang berlaku baru-baru ini dalam infrastruktur pelayan awan kami dan untuk memulihkan kestabilan sistem. Bersama-sama dengan kemas kini tampalan ini, kami telah menaik taraf kepada Kecerdasan Buatan (AI) yang lebih canggih serta meningkatkan keseluruhan Antara Muka Pengguna (UI) semasa senaman.
+Dalam pembaruan v1.3 ini, kami memperkenalkan ciri baharu **'Metronom Latihan' (Exercise Metronome)**, yang direka untuk membantu anda mengawal ritme dan tempo latihan secara presisi. Berikut adalah butiran pembaruan ini, yang bertujuan untuk menyokong latihan yang lebih sistematik.
 
 ---
 
-## 1. Peningkatan Prestasi AI
-Kami telah mempertingkatkan lagi model AI yang menganalisis data senaman anda. Alami sesi senaman yang lebih berkesan melalui bimbingan dan maklum balas AI yang jauh lebih tepat dan mendalam.
+## 1. Penambahan Ciri Metronom Latihan
+Menjaga tempo yang tepat adalah sangat penting untuk memberikan rangsangan berterusan pada otot sasaran dan mencegah kecederaan. Metronom Latihan yang baharu diperkenalkan ini memberikan maklum balas pendengaran (audio) berdasarkan tetapan rentak dan kelajuan yang anda sesuaikan, membimbing anda untuk melakukan setiap set dengan ritme yang konsisten tanpa ragu.
 
-## 2. Peningkatan Keseluruhan UI & Paparan Data
-Kami telah meningkatkan tahap kejelasan (intuitif) pada papan pemuka dan peta yang dipaparkan dalam masa nyata (*real-time*) semasa anda bersenam dengan ketara. Selain itu, kami kini menyokong mod skrin penuh untuk memastikan semua maklumat dapat dipantau dengan pantas.
+![Paparan Metronom Latihan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/1.jpg)
 
-![Papan Pemuka Skrin Penuh 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
-![Papan Pemuka Skrin Penuh 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
+## 2. Sokongan Output Bunyi Bergantian (Kiri/Kanan) & Serentak
+Aspek paling menonjol bagi ciri metronom ini adalah **tetapan output bunyi spatial** yang disesuaikan dengan pelbagai jenis latihan. Apabila menggunakan earphone atau headphone, anda boleh memilih bagaimana bunyi dialirkan berdasarkan ciri-ciri sukan anda.
+
+* **Output Bergantian Kiri/Kanan:** Anda boleh menetapkan bunyi agar berbunyi bergantian antara sisi kiri dan kanan. Ini sangat berkesan untuk **menjaga irama langkah (cadence) yang konsisten agar sepadan dengan jejak kaki anda semasa berlari (running)**, serta mengekalkan ritme dan keseimbangan yang betul semasa latihan bebanan bergantian seperti lunges atau alternating dumbbell curls.
+* **Output Serentak:** Semasa melakukan latihan bilateral yang melatih otot di kedua-dua belah secara serentak, seperti squats atau bench press, bunyi rentak akan keluar dari kedua-dua belah pada masa yang sama, meningkatkan fokus dan ketekalan gerakan anda.
+
+> **⚠️ Amaran**
+> Ciri ini menggunakan teknologi sintesis untuk menghasilkan bunyi. Mendengar dalam tempoh masa yang lama boleh menyebabkan keletihan telinga atau menjejaskan pendengaran anda, jadi sila ambil perhatian tentang tetapan kelantangan (volume) dan tempoh penggunaan anda.
 
 ---
 
 ## 🗣️ Saluran Komunikasi
-Maklum balas anda amat membantu ChronoFit untuk terus berkembang. Sila hubungi kami pada bila-bila masa!
+Maklum balas anda sangat membantu ChronoFit untuk terus berkembang. Sila hubungi kami pada bila-bila masa!
 
 ### Komuniti YouTube Pembangun
-Lihat di sebalik tabir proses pembangunan dan berita terkini.
-👉 [Pergi ke YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
+Ikuti perkembangan di sebalik tabir proses pembangunan dan berita terkini kami.
+👉 [Buka YouTube Pembangun](https://www.youtube.com/@bjw0829/posts)
 
 ### DM Instagram
-Ikuti kami untuk mendapatkan kemas kini dan hantarkan DM kepada kami jika anda memerlukan sokongan.
-👉 [Pergi ke Instagram](https://www.instagram.com/bjw0829/)
+Ikuti kami untuk mendapatkan pembaruan terkini dan hantarkan DM kepada kami jika anda memerlukan sokongan.
+👉 [Buka Instagram](https://www.instagram.com/bjw0829/)
 
 Terima kasih.
 
-*1 Jun 2026. ChronoLab*
+*14 Jun 2026. ChronoLab.*
