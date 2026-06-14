@@ -1,33 +1,38 @@
-# Aggiornamento ChronoFit v1.1.2
+# Aggiornamento ChronoFit v1.3
 
-Ciao, qui è il team di ChronoLab.
+Ciao, siamo il team di ChronoLab.
 
-Abbiamo applicato una patch di aggiornamento per risolvere i recenti problemi di traffico anomalo (accessi) all'interno dell'infrastruttura dei nostri server cloud e ripristinare la stabilità del sistema. Insieme a questo aggiornamento, abbiamo integrato un'Intelligenza Artificiale (IA) più avanzata e migliorato l'interfaccia utente (UI) generale durante gli allenamenti.
+In questo aggiornamento v1.3 abbiamo introdotto la nuova funzione **'Metronomo di Esercizio' (Exercise Metronome)**, progettata per aiutarti a controllare con precisione il ritmo e il passo dei tuoi allenamenti. Ecco i dettagli di questo aggiornamento, pensato per supportare un allenamento più sistematico.
 
 ---
 
-## 1. Miglioramento delle prestazioni dell'IA
-Abbiamo ulteriormente perfezionato il modello di IA che analizza i dati dei tuoi allenamenti. Sperimenta sessioni di allenamento più efficaci attraverso un coaching e un feedback dell'IA molto più precisi e approfonditi.
+## 1. Aggiunta della funzione Metronomo di Esercizio
+Mantenere un tempo preciso è fondamentale per fornire uno stimolo continuo ai muscoli target e prevenire infortuni. Il nuovo Metronomo di Esercizio offre un feedback uditivo basato sulle tue impostazioni personalizzate di battito e velocità, guidandoti a eseguire le tue serie a un ritmo costante e senza esitazioni.
 
-## 2. Miglioramenti generali della UI e visualizzazione dei dati
-Abbiamo aumentato significativamente l'intuitività della dashboard e della mappa visualizzate in tempo reale durante gli allenamenti. Inoltre, ora supportiamo una modalità a schermo intero per assicurarti di poter consultare tutte le informazioni a colpo d'occhio.
+![Schermata del Metronomo di Esercizio](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/1.jpg)
 
-![Dashboard a schermo intero 1](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/a.png)
-![Dashboard a schermo intero 2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.1.2/b.jpg)
+## 2. Uscita audio alternata (Sinistra/Destra) e simultanea
+L'aspetto più innovativo di questa funzione di metronomo sono le **impostazioni di uscita audio spaziale**, adattate ai diversi tipi di allenamento. Quando indossi gli auricolari o le cuffie, puoi scegliere come viene distribuito il suono in base alle caratteristiche del tuo esercizio.
+
+* **Uscita alternata Sinistra/Destra:** Puoi impostare il suono in modo che si alterni tra il lato sinistro e quello destro. Questo è estremamente efficace per **mantenere una cadenza costante che si sincronizza con i tuoi passi durante la corsa (running)**, così come per mantenere il tempo e l'equilibrio corretti durante gli esercizi con pesi alternati, come gli affondi (Lunges) o il curl alternato con manubri.
+* **Uscita simultanea:** Quando esegui esercizi bilaterali che coinvolgono contemporaneamente i muscoli di entrambi i lati, come gli squat o la panca piana (Bench Press), il suono del battito viene emesso da entrambi i lati nello stesso momento, migliorando la concentrazione e la costanza dei tuoi movimenti.
+
+> **⚠️ Attenzione**
+> Questa funzione utilizza la tecnologia di sintesi per generare il suono. L'ascolto prolungato può causare affaticamento dell'orecchio o influire sull'udito, pertanto ti preghiamo di prestare attenzione alle impostazioni del volume e al tempo di utilizzo.
 
 ---
 
 ## 🗣️ Canali di comunicazione
-Il tuo feedback aiuta ChronoFit a crescere. Non esitare a contattarci in qualsiasi momento!
+I tuoi feedback aiutano ChronoFit a crescere. Non esitare a contattarci in qualsiasi momento!
 
-### Community YouTube dello Sviluppatore
-Scopri il dietro le quinte dello sviluppo e le ultime novità.
-👉 [Vai al YouTube dello Sviluppatore](https://www.youtube.com/@bjw0829/posts)
+### Community YouTube dello sviluppatore
+Dai un'occhiata dietro le quinte dello sviluppo e scopri le ultime novità.
+👉 [Vai al canale YouTube dello sviluppatore](https://www.youtube.com/@bjw0829/posts)
 
-### DM su Instagram
-Seguici per non perderti gli aggiornamenti e inviaci un DM se hai bisogno di assistenza.
-👉 [Vai su Instagram](https://www.instagram.com/bjw0829/)
+### DM di Instagram
+Seguici per rimanere aggiornato e inviaci un messaggio diretto (DM) se hai bisogno di supporto.
+👉 [Vai a Instagram](https://www.instagram.com/bjw0829/)
 
 Grazie.
 
-*1 giugno 2026. ChronoLab*
+*14 giugno 2026. ChronoLab.*
