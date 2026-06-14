@@ -9,7 +9,7 @@ In this v1.3 update, we have introduced the new **'Exercise Metronome'** feature
 ## 1. Exercise Metronome Feature Added
 Maintaining an accurate tempo is crucial for delivering continuous stimulus to target muscles and preventing injuries. The newly introduced Exercise Metronome provides auditory feedback based on your custom beat and speed settings, guiding you to perform your sets at a consistent pace without wavering.
 
-![Exercise Metronome Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/1.jpg)
+![Exercise Metronome Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
 
 ## 2. Left/Right Alternating & Simultaneous Sound Output
 The most prominent aspect of this metronome feature is the **spatial sound output settings** tailored to different types of workouts. When wearing earphones or headphones, you can choose how the sound is delivered based on the characteristics of your exercise.
