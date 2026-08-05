@@ -1,38 +1,41 @@
-# Pembaruan ChronoFit v1.3
+# Pembaruan ChronoFit v1.1.4
 
-Halo, kami dari tim ChronoLab.
+Halo, ini ChronoLab.
 
-Dalam pembaruan v1.3 ini, kami memperkenalkan fitur baru **'Metronom Latihan' (Exercise Metronome)**, yang dirancang untuk membantu Anda mengontrol ritme dan tempo latihan secara presisi. Berikut adalah rincian dari pembaruan ini, yang bertujuan untuk mendukung pelatihan yang lebih sistematis.
+Dalam pembaruan v1.1.4 ini, kami telah meringankan aplikasi secara signifikan untuk pengalaman pengguna yang lebih lancar dan memperkenalkan fitur **'Ringkasan Informasi Makanan'** yang baru dan sangat cepat. Berikut adalah catatan rilis mendetail yang ditujukan untuk meningkatkan kenyamanan Anda.
 
 ---
 
-## 1. Penambahan Fitur Metronom Latihan
-Menjaga tempo yang akurat sangat penting untuk memberikan stimulus berkelanjutan pada otot target dan mencegah cedera. Metronom Latihan yang baru diperkenalkan ini memberikan umpan balik pendengaran (audio) berdasarkan pengaturan ketukan dan kecepatan yang Anda sesuaikan sendiri, memandu Anda untuk melakukan setiap set dengan ritme yang konsisten tanpa ragu.
+## 1. Ringkasan Makanan Multibahasa yang Intuitif (Cek Instan Tanpa Iklan)
+Sebelumnya, pengguna harus memanggil analisis AI secara manual untuk mendapatkan informasi makanan. Sekarang, kami menyediakan basis data ringkasan berkualitas tinggi yang dibangun langsung oleh tim ChronoLab.
 
-![Tampilan Metronom Latihan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
+* **Cepat & Tanpa Iklan:** Tidak perlu lagi menonton iklan reward untuk melihat informasi. Cek ringkasan secara instan segera setelah Anda memindai kode batang.
+* **Deskripsi yang Disesuaikan Secara Budaya:** Baik saat Anda bepergian ke luar negeri atau menemukan bahan asing yang tidak dikenal, kami menjelaskan karakteristik dan rasa makanan menggunakan analogi sempurna yang disesuaikan dengan bahasa dan budaya Anda untuk pemahaman yang intuitif.
 
-## 2. Dukungan Output Suara Bergantian (Kiri/Kanan) & Bersamaan
-Aspek paling menonjol dari fitur metronom ini adalah **pengaturan output suara spasial** yang disesuaikan dengan berbagai jenis latihan. Saat menggunakan earphone atau headphone, Anda dapat memilih bagaimana suara dialirkan berdasarkan karakteristik olahraga Anda.
+![Ringkasan Informasi Makanan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
 
-* **Output Bergantian Kiri/Kanan:** Anda dapat mengatur suara agar berbunyi bergantian antara sisi kiri dan kanan. Ini sangat efektif untuk **menjaga irama langkah (cadence) yang konsisten agar sesuai dengan pijakan kaki Anda saat berlari (running)**, serta menjaga ritme dan keseimbangan yang tepat selama latihan beban bergantian seperti lunges atau alternating dumbbell curls.
-* **Output Bersamaan:** Saat melakukan latihan bilateral yang melatih otot di kedua sisi secara bersamaan, seperti squats atau bench press, suara ketukan akan keluar dari kedua sisi pada waktu yang sama, meningkatkan fokus dan konsistensi gerakan Anda.
+## 2. Aplikasi Lebih Ringan & Penurunan Drastis Biaya Berlangganan 📉
+Untuk mengoptimalkan kinerja aplikasi, kami telah menghapus beberapa fitur AI yang berat, yang secara signifikan meringankan aplikasi secara keseluruhan. Ini sangat mengurangi biaya server yang tidak perlu, dan kami mengembalikan penghematan ini kepada pengguna kami dengan **menurunkan drastis biaya langganan bulanan Premium**.
 
-> **⚠️ Peringatan**
-> Fitur ini menggunakan teknologi sintesis untuk menghasilkan suara. Mendengarkan dalam jangka waktu lama dapat menyebabkan kelelahan telinga atau memengaruhi pendengaran Anda, jadi harap perhatikan pengaturan volume dan durasi penggunaan Anda.
+> **⚠️ Pemberitahuan Pembatalan Massal untuk Perpanjangan Otomatis**
+> Untuk mencegah kebingungan penagihan akibat penurunan harga dan untuk melindungi hak pengguna, **kami telah membatalkan semua perpanjangan langganan otomatis yang ada**. Jika Anda ingin terus menggunakan layanan Premium dengan harga baru yang lebih murah, kami mohon Anda untuk memperbarui langganan Anda secara manual di dalam aplikasi.
+
+## 3. Dukungan Resmi Bahasa Rusia 🇷🇺
+Sejalan dengan ekspansi global ChronoFit, **bahasa Rusia** telah resmi ditambahkan sebagai bahasa yang didukung. Pengguna yang mengatur perangkat mereka ke bahasa Rusia sekarang dapat menikmati semua fitur ChronoFit dengan lancar tanpa kendala bahasa.
 
 ---
 
 ## 🗣️ Saluran Komunikasi
-Umpan balik Anda sangat membantu ChronoFit untuk terus berkembang. Silakan hubungi kami kapan saja!
+Umpan balik Anda membantu ChronoFit berkembang. Jangan ragu untuk menghubungi kami kapan saja!
 
 ### Komunitas YouTube Pengembang
-Intip di balik layar proses pengembangan dan berita terbaru kami.
-👉 [Buka YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
+Lihat di balik layar proses pengembangan dan berita terbaru.
+👉 [Pergi ke YouTube Pengembang](https://www.youtube.com/@bjw0829/posts)
 
-### DM Instagram
-Ikuti kami untuk mendapatkan pembaruan dan kirimkan DM kepada kami jika Anda memerlukan dukungan.
-👉 [Buka Instagram](https://www.instagram.com/bjw0829/)
+### Instagram DM
+Ikuti kami untuk pembaruan dan kirimkan DM untuk dukungan.
+👉 [Pergi ke Instagram](https://www.instagram.com/bjw0829/)
 
 Terima kasih.
 
-*14 Juni 2026. ChronoLab.*
+*5 Agustus 2026. ChronoLab.*
