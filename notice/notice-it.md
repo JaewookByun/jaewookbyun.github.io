@@ -1,38 +1,41 @@
-# Aggiornamento ChronoFit v1.3
+# Aggiornamento ChronoFit v1.1.4
 
-Ciao, siamo il team di ChronoLab.
+Ciao, siamo ChronoLab.
 
-In questo aggiornamento v1.3 abbiamo introdotto la nuova funzione **'Metronomo di Esercizio' (Exercise Metronome)**, progettata per aiutarti a controllare con precisione il ritmo e il passo dei tuoi allenamenti. Ecco i dettagli di questo aggiornamento, pensato per supportare un allenamento più sistematico.
-
----
-
-## 1. Aggiunta della funzione Metronomo di Esercizio
-Mantenere un tempo preciso è fondamentale per fornire uno stimolo continuo ai muscoli target e prevenire infortuni. Il nuovo Metronomo di Esercizio offre un feedback uditivo basato sulle tue impostazioni personalizzate di battito e velocità, guidandoti a eseguire le tue serie a un ritmo costante e senza esitazioni.
-
-![Schermata del Metronomo di Esercizio](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/1.jpg)
-
-## 2. Uscita audio alternata (Sinistra/Destra) e simultanea
-L'aspetto più innovativo di questa funzione di metronomo sono le **impostazioni di uscita audio spaziale**, adattate ai diversi tipi di allenamento. Quando indossi gli auricolari o le cuffie, puoi scegliere come viene distribuito il suono in base alle caratteristiche del tuo esercizio.
-
-* **Uscita alternata Sinistra/Destra:** Puoi impostare il suono in modo che si alterni tra il lato sinistro e quello destro. Questo è estremamente efficace per **mantenere una cadenza costante che si sincronizza con i tuoi passi durante la corsa (running)**, così come per mantenere il tempo e l'equilibrio corretti durante gli esercizi con pesi alternati, come gli affondi (Lunges) o il curl alternato con manubri.
-* **Uscita simultanea:** Quando esegui esercizi bilaterali che coinvolgono contemporaneamente i muscoli di entrambi i lati, come gli squat o la panca piana (Bench Press), il suono del battito viene emesso da entrambi i lati nello stesso momento, migliorando la concentrazione e la costanza dei tuoi movimenti.
-
-> **⚠️ Attenzione**
-> Questa funzione utilizza la tecnologia di sintesi per generare il suono. L'ascolto prolungato può causare affaticamento dell'orecchio o influire sull'udito, pertanto ti preghiamo di prestare attenzione alle impostazioni del volume e al tempo di utilizzo.
+In questo aggiornamento v1.1.4, abbiamo notevolmente alleggerito l'app per un'esperienza utente più fluida e abbiamo introdotto la nuova, velocissima funzione **"Riepilogo Informazioni Alimenti"**. Ecco le note di rilascio dettagliate volte a migliorare la tua comodità.
 
 ---
 
-## 🗣️ Canali di comunicazione
-I tuoi feedback aiutano ChronoFit a crescere. Non esitare a contattarci in qualsiasi momento!
+## 1. Riepilogo Multilingue Intuitivo degli Alimenti (Controllo Istantaneo Senza Pubblicità)
+In precedenza, gli utenti dovevano invocare manualmente l'analisi IA per ottenere informazioni sugli alimenti. Ora, forniamo un database di riepilogo di alta qualità creato direttamente dal team ChronoLab.
 
-### Community YouTube dello sviluppatore
-Dai un'occhiata dietro le quinte dello sviluppo e scopri le ultime novità.
-👉 [Vai al canale YouTube dello sviluppatore](https://www.youtube.com/@bjw0829/posts)
+* **Veloce e Senza Pubblicità:** Non dovrai più guardare annunci con ricompensa per visualizzare le informazioni. Controlla il riepilogo istantaneamente non appena scansioni un codice a barre.
+* **Descrizioni Adattate Culturalmente:** Che tu stia viaggiando all'estero o incontrando ingredienti stranieri sconosciuti, spieghiamo le caratteristiche e i sapori degli alimenti utilizzando analogie perfette su misura per la tua lingua e cultura per una comprensione intuitiva.
 
-### DM di Instagram
-Seguici per rimanere aggiornato e inviaci un messaggio diretto (DM) se hai bisogno di supporto.
-👉 [Vai a Instagram](https://www.instagram.com/bjw0829/)
+![Schermata Riepilogo Informazioni Alimenti](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+
+## 2. Alleggerimento dell'App e Drastica Riduzione della Quota di Abbonamento 📉
+Per ottimizzare le prestazioni dell'app, abbiamo rimosso alcune pesanti funzioni IA, alleggerendo significativamente l'app nel complesso. Ciò ha ridotto notevolmente i costi dei server non necessari e stiamo restituendo questi risparmi ai nostri utenti **abbassando drasticamente la quota di abbonamento mensile Premium**.
+
+> **⚠️ Avviso di Cancellazione di Massa per i Rinnovi Automatici**
+> Per prevenire confusione nella fatturazione dovuta alla riduzione del prezzo e per proteggere i diritti degli utenti, **abbiamo cancellato tutti i rinnovi automatici degli abbonamenti esistenti**. Se desideri continuare a utilizzare il servizio Premium al nuovo prezzo ridotto, ti chiediamo gentilmente di rinnovare manualmente il tuo abbonamento all'interno dell'app.
+
+## 3. Supporto Ufficiale per la Lingua Russa 🇷🇺
+In linea con l'espansione globale di ChronoFit, il **russo** è stato ufficialmente aggiunto come lingua supportata. Gli utenti con i propri dispositivi impostati in russo possono ora sperimentare senza problemi tutte le funzionalità di ChronoFit senza barriere linguistiche.
+
+---
+
+## 🗣️ Canali di Comunicazione
+Il tuo feedback aiuta ChronoFit a crescere. Non esitare a contattarci in qualsiasi momento!
+
+### Community per Sviluppatori su YouTube
+Dai un'occhiata al dietro le quinte dello sviluppo e alle ultime notizie.
+👉 [Vai allo YouTube per Sviluppatori](https://www.youtube.com/@bjw0829/posts)
+
+### Instagram DM
+Seguici per gli aggiornamenti e inviaci un DM per supporto.
+👉 [Vai su Instagram](https://www.instagram.com/bjw0829/)
 
 Grazie.
 
-*14 giugno 2026. ChronoLab.*
+*5 Agosto 2026. ChronoLab.*
