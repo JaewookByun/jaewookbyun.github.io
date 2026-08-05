@@ -12,7 +12,7 @@ In precedenza, gli utenti dovevano invocare manualmente l'analisi IA per ottener
 * **Veloce e Senza Pubblicità:** Non dovrai più guardare annunci con ricompensa per visualizzare le informazioni. Controlla il riepilogo istantaneamente non appena scansioni un codice a barre.
 * **Descrizioni Adattate Culturalmente:** Che tu stia viaggiando all'estero o incontrando ingredienti stranieri sconosciuti, spieghiamo le caratteristiche e i sapori degli alimenti utilizzando analogie perfette su misura per la tua lingua e cultura per una comprensione intuitiva.
 
-![Schermata Riepilogo Informazioni Alimenti](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Schermata Riepilogo Informazioni Alimenti](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-it.jpg)
 
 ## 2. Alleggerimento dell'App e Drastica Riduzione della Quota di Abbonamento 📉
 Per ottimizzare le prestazioni dell'app, abbiamo rimosso alcune pesanti funzioni IA, alleggerendo significativamente l'app nel complesso. Ciò ha ridotto notevolmente i costi dei server non necessari e stiamo restituendo questi risparmi ai nostri utenti **abbassando drasticamente la quota di abbonamento mensile Premium**.
