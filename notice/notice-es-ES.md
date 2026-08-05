@@ -1,38 +1,41 @@
-# Actualización ChronoFit v1.3
+# Actualización de ChronoFit v1.1.4
 
-Hola, aquí el equipo de ChronoLab.
+Hola, somos ChronoLab.
 
-En esta actualización v1.3, hemos introducido la nueva función **'Metrónomo de Ejercicio' (Exercise Metronome)**, diseñada para ayudarte a controlar con precisión el ritmo y el ritmo de tus entrenamientos. A continuación, te presentamos los detalles de esta actualización, orientada a apoyar un entrenamiento más sistemático.
+En esta actualización v1.1.4, hemos aligerado significativamente la aplicación para ofrecer una experiencia más fluida y hemos introducido la nueva y ultrarrápida función de **"Resumen de información de alimentos"**. A continuación, detallamos las novedades diseñadas para mejorar su comodidad.
 
 ---
 
-## 1. Nueva función: Metrónomo de Ejercicio
-Mantener un ritmo preciso es crucial para proporcionar un estímulo continuo a los músculos objetivo y prevenir lesiones. El nuevo Metrónomo de Ejercicio ofrece retroalimentación auditiva basada en tus ajustes personalizados de ritmo y velocidad, guiándote para realizar tus series a un ritmo constante y sin vacilaciones.
+## 1. Resumen intuitivo de alimentos multilingüe (Consulta instantánea sin anuncios)
+Anteriormente, los usuarios debían solicitar manualmente el análisis de IA para obtener información sobre los alimentos. Ahora, ofrecemos una base de datos de resúmenes de alta calidad creada directamente por el equipo de ChronoLab.
 
-![Pantalla del Metrónomo de Ejercicio](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
+* **Rápido y sin anuncios:** Ya no es necesario ver anuncios con recompensa para obtener información. Revise el resumen al instante en cuanto escanee un código de barras.
+* **Descripciones adaptadas culturalmente:** Ya sea que viaje al extranjero o se encuentre con ingredientes desconocidos, explicamos las características y los sabores de los alimentos utilizando analogías perfectas y adaptadas a su idioma y cultura para una comprensión intuitiva.
 
-## 2. Salida de sonido alterna (Izquierda/Derecha) y simultánea
-El aspecto más destacado de esta función de metrónomo son los **ajustes de salida de sonido espacial**, adaptados a los diferentes tipos de entrenamiento. Al usar auriculares, puedes elegir cómo se emite el sonido según las características de tu ejercicio.
+![Resumen de información de alimentos](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
 
-* **Salida alterna izquierda/derecha:** Puedes configurar el sonido para que alterne entre el lado izquierdo y el derecho. Esto es muy eficaz para **mantener una cadencia constante que coincida con tus pisadas al correr**, así como para mantener el ritmo y el equilibrio exactos durante ejercicios con peso alternos como zancadas (Lunges) o curl de bíceps alterno con mancuernas.
-* **Salida simultánea:** Al realizar ejercicios bilaterales que activan los músculos de ambos lados simultáneamente, como sentadillas (Squats) o press de banca (Bench Press), el sonido del ritmo se emite por ambos lados al mismo tiempo, mejorando tu concentración y la consistencia de tus movimientos.
+## 2. Aplicación más ligera y reducción drástica de la cuota de suscripción 📉
+Para optimizar el rendimiento de la aplicación, hemos eliminado algunas funciones pesadas de IA, aligerando significativamente la aplicación en general. Esto ha reducido en gran medida los costes innecesarios de los servidores, y queremos devolver este ahorro a nuestros usuarios **reduciendo drásticamente la cuota de suscripción mensual Premium**.
 
-> **⚠️ Atención**
-> Esta función utiliza tecnología de síntesis para generar el sonido. La escucha prolongada puede causar fatiga auditiva o afectar a tu audición, por lo que te rogamos que tengas en cuenta los ajustes de volumen y el tiempo de uso.
+> **⚠️ Aviso de cancelación masiva de renovaciones automáticas**
+> Para evitar confusiones en la facturación debido a la reducción de precios y para proteger los derechos de los usuarios, **hemos cancelado todas las renovaciones automáticas de las suscripciones existentes**. Si desea seguir utilizando el servicio Premium al nuevo precio rebajado, le rogamos que vuelva a renovar su suscripción manualmente desde la aplicación.
+
+## 3. Soporte oficial para el idioma ruso 🇷🇺
+En línea con la expansión global de ChronoFit, el **ruso** se ha añadido oficialmente como idioma compatible. Los usuarios que tengan sus dispositivos configurados en ruso ahora pueden disfrutar de todas las funciones de ChronoFit sin barreras lingüísticas.
 
 ---
 
 ## 🗣️ Canales de comunicación
-Tus comentarios ayudan a que ChronoFit crezca. ¡No dudes en ponerte en contacto con nosotros en cualquier momento!
+Sus comentarios ayudan a ChronoFit a crecer. ¡No dude en contactarnos en cualquier momento!
 
 ### Comunidad de desarrolladores en YouTube
-Echa un vistazo a los entresijos del desarrollo y a las últimas noticias.
+Eche un vistazo al proceso de desarrollo y a las últimas noticias.
 👉 [Ir al YouTube del desarrollador](https://www.youtube.com/@bjw0829/posts)
 
-### DM de Instagram
-Síguenos para estar al tanto de las actualizaciones y envíanos un DM si necesitas asistencia.
+### Instagram DM
+Síganos para conocer las actualizaciones y envíenos un mensaje directo para obtener soporte.
 👉 [Ir a Instagram](https://www.instagram.com/bjw0829/)
 
-Muchas gracias.
+Gracias.
 
-*14 de junio de 2026. ChronoLab.*
+*5 de agosto de 2026. ChronoLab.*
