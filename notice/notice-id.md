@@ -12,7 +12,7 @@ Sebelumnya, pengguna harus memanggil analisis AI secara manual untuk mendapatkan
 * **Cepat & Tanpa Iklan:** Tidak perlu lagi menonton iklan reward untuk melihat informasi. Cek ringkasan secara instan segera setelah Anda memindai kode batang.
 * **Deskripsi yang Disesuaikan Secara Budaya:** Baik saat Anda bepergian ke luar negeri atau menemukan bahan asing yang tidak dikenal, kami menjelaskan karakteristik dan rasa makanan menggunakan analogi sempurna yang disesuaikan dengan bahasa dan budaya Anda untuk pemahaman yang intuitif.
 
-![Ringkasan Informasi Makanan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Ringkasan Informasi Makanan](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-in.jpg)
 
 ## 2. Aplikasi Lebih Ringan & Penurunan Drastis Biaya Berlangganan 📉
 Untuk mengoptimalkan kinerja aplikasi, kami telah menghapus beberapa fitur AI yang berat, yang secara signifikan meringankan aplikasi secara keseluruhan. Ini sangat mengurangi biaya server yang tidak perlu, dan kami mengembalikan penghematan ini kepada pengguna kami dengan **menurunkan drastis biaya langganan bulanan Premium**.
