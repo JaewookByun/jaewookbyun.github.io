@@ -12,7 +12,7 @@ Auparavant, les utilisateurs devaient appeler manuellement l'analyse IA pour obt
 * **Rapide et sans publicité :** Plus besoin de regarder des publicités avec récompense pour voir les informations. Consultez le résumé instantanément dès que vous scannez un code-barres.
 * **Descriptions adaptées culturellement :** Que vous voyagiez à l'étranger ou que vous rencontriez des ingrédients étrangers inconnus, nous expliquons les caractéristiques et les saveurs des aliments en utilisant des analogies parfaites adaptées à votre langue et à votre culture pour une compréhension intuitive.
 
-![Résumé des informations alimentaires](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Résumé des informations alimentaires](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-fr.jpg)
 
 ## 2. Allègement de l'application et réduction drastique des frais d'abonnement 📉
 Afin d'optimiser les performances de l'application, nous avons supprimé certaines fonctionnalités lourdes d'IA, ce qui a permis d'alléger considérablement l'application dans son ensemble. Cela a considérablement réduit les coûts de serveur inutiles, et nous souhaitons faire profiter de ces économies à nos utilisateurs en **réduisant drastiquement les frais d'abonnement mensuel Premium**.
