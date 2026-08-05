@@ -1,24 +1,28 @@
-# ChronoFit v1.3 Update
+# ChronoFit v1.1.4 Update
 
 Hello, this is ChronoLab.
 
-In this v1.3 update, we have introduced the new **'Exercise Metronome'** feature, designed to help you precisely control the rhythm and pace of your workouts. Here are the details of this update, aimed at supporting more systematic training.
+In this v1.1.4 update, we have significantly lightweighted the app for a smoother user experience and introduced the new, lightning-fast **'Food Summary Information'** feature. Here are the detailed release notes aimed at enhancing your convenience.
 
 ---
 
-## 1. Exercise Metronome Feature Added
-Maintaining an accurate tempo is crucial for delivering continuous stimulus to target muscles and preventing injuries. The newly introduced Exercise Metronome provides auditory feedback based on your custom beat and speed settings, guiding you to perform your sets at a consistent pace without wavering.
+## 1. Intuitive Multilingual Food Summary (Instant Check Without Ads)
+Previously, users had to manually invoke AI analysis to get food information. Now, we provide a high-quality summary database built directly by the ChronoLab team.
 
-![Exercise Metronome Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
+* **Fast & Ad-Free:** No more watching reward ads to view information. Instantly check the summary as soon as you scan a barcode.
+* **Culturally Adapted Descriptions:** Whether you are traveling abroad or encountering unfamiliar foreign ingredients, we explain food characteristics and flavors using perfect analogies tailored to your language and culture for intuitive understanding.
 
-## 2. Left/Right Alternating & Simultaneous Sound Output
-The most prominent aspect of this metronome feature is the **spatial sound output settings** tailored to different types of workouts. When wearing earphones or headphones, you can choose how the sound is delivered based on the characteristics of your exercise.
+![Food Summary Information Screen](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Food Summary Information Screen2](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-ru.jpg)
 
-* **Left/Right Alternating Output:** You can set the sound to alternate between the left and right sides. This is highly effective for **maintaining a consistent cadence that matches your footstrikes while running**, as well as for keeping accurate timing and balance during alternating weight exercises like Lunges or Alternating Dumbbell Curls.
-* **Simultaneous Output:** When performing bilateral exercises that engage muscles on both sides simultaneously, such as Squats or the Bench Press, the beat sound is outputted from both sides at the same time, enhancing your focus and the consistency of your movements.
+## 2. App Lightweighting & Drastic Subscription Fee Reduction 📉
+To optimize app performance, we have removed some heavy AI features, significantly lightening the overall app. This has greatly reduced unnecessary server costs, and we are returning these savings to our users by **drastically lowering the Premium monthly subscription fee**.
 
-> **⚠️ Caution**
-> This feature utilizes synthesizing technology to generate sound. Prolonged listening may cause ear fatigue or affect your hearing, so please be mindful of your volume settings and usage time.
+> **⚠️ Notice of Bulk Cancellation for Auto-Renewals**
+> To prevent billing confusion due to the price reduction and to protect user rights, **we have canceled all existing automatic subscription renewals**. If you wish to continue using the Premium service at the newly reduced price, we kindly ask you to manually renew your subscription within the app.
+
+## 3. Official Russian Language Support 🇷🇺
+In line with ChronoFit's global expansion, **Russian** has been officially added as a supported language. Users with their devices set to Russian can now seamlessly experience all features of ChronoFit without any language barriers.
 
 ---
 
@@ -35,4 +39,4 @@ Follow us for updates and send us a DM for support.
 
 Thank you.
 
-*June 14, 2026. ChronoLab.*
+*August 6, 2026. ChronoLab.*
