@@ -12,7 +12,7 @@ Bisher mussten Benutzer manuell eine KI-Analyse anfordern, um Lebensmittelinform
 * **Schnell & Werbefrei:** Keine Belohnungswerbung mehr nötig, um Informationen anzuzeigen. Rufen Sie die Zusammenfassung sofort beim Scannen des Barcodes ab.
 * **Kulturell angepasste Beschreibungen:** Egal, ob Sie im Ausland reisen oder auf unbekannte ausländische Zutaten stoßen – wir erklären die Eigenschaften und den Geschmack von Lebensmitteln mit perfekten Vergleichen, die auf Ihre Sprache und Kultur abgestimmt sind.
 
-![Lebensmittel-Zusammenfassung](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Lebensmittel-Zusammenfassung](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-de.jpg)
 
 ## 2. App-Verschlankung & Drastische Senkung der Abonnementsgebühren 📉
 Um die App-Performance zu optimieren, haben wir einige schwere KI-Funktionen entfernt und die App insgesamt erheblich schlanker gemacht. Dadurch konnten unnötige Serverkosten stark reduziert werden. Diesen Vorteil geben wir direkt an Sie weiter, indem wir die **monatliche Premium-Abonnementsgebühr drastisch gesenkt** haben.
