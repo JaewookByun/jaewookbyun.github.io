@@ -1,38 +1,41 @@
-# ChronoFit v1.3 Update
+# ChronoFit v1.1.4 Update
 
-Hallo, dit is het team van ChronoLab.
+Hallo, dit is ChronoLab.
 
-In deze v1.3-update introduceren we de nieuwe functie **'Trainingsmetronoom' (Exercise Metronome)**, ontworpen om u te helpen het ritme en tempo van uw trainingen nauwkeurig te beheersen. Hier zijn de details van deze update, die bedoeld is om een meer systematische training te ondersteunen.
+In deze v1.1.4 update hebben we de app aanzienlijk lichter gemaakt voor een soepelere gebruikerservaring en de nieuwe, razendsnelle functie **"Samenvatting Voedingsinformatie"** geïntroduceerd. Hier zijn de gedetailleerde releasenotes om uw gemak te vergroten.
 
 ---
 
-## 1. Trainingsmetronoom-functie toegevoegd
-Het aanhouden van een nauwkeurig tempo is cruciaal voor het leveren van een continue prikkel aan de doelspieren en het voorkomen van blessures. De nieuw geïntroduceerde Trainingsmetronoom biedt auditieve feedback op basis van uw aangepaste maat- en snelheidsinstellingen, zodat u uw sets in een consistent tempo en zonder aarzeling kunt uitvoeren.
+## 1. Intuïtieve meertalige voedingssamenvatting (Direct kijken zonder advertenties)
+Eerder moesten gebruikers handmatig de AI-analyse aanroepen om informatie over voedingsmiddelen te krijgen. Nu bieden we een hoogwaardige samenvattingsdatabase die rechtstreeks door het ChronoLab-team is opgebouwd.
 
-![Scherm van de Trainingsmetronoom](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
+* **Snel & Advertentievrij:** U hoeft geen beloonde advertenties meer te bekijken om informatie te zien. Bekijk de samenvatting direct zodra u een streepjescode scant.
+* **Cultureel aangepaste beschrijvingen:** Of u nu naar het buitenland reist of onbekende buitenlandse ingrediënten tegenkomt, wij leggen de kenmerken en smaken van voedsel uit met perfecte analogieën die zijn afgestemd op uw taal en cultuur voor een intuïtief begrip.
 
-## 2. Afwisselende (Links/Rechts) & gelijktijdige geluidsweergave
-Het meest opvallende aspect van deze metronoomfunctie zijn de **ruimtelijke geluidsinstellingen** die zijn afgestemd op verschillende soorten trainingen. Wanneer u oortjes of een koptelefoon draagt, kunt u kiezen hoe het geluid wordt weergegeven op basis van de kenmerken van uw oefening.
+![Samenvatting Voedingsinformatie](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-nl.jpg)
 
-* **Afwisselende weergave (Links/Rechts):** U kunt het geluid zo instellen dat het afwisselend aan de linker- en rechterkant te horen is. Dit is zeer effectief voor het **behouden van een constante cadans (cadence) die past bij uw voetstappen tijdens het hardlopen (running)**, evenals voor het behouden van de juiste timing en balans tijdens afwisselende gewichtsoefeningen zoals lunges of alternating dumbbell curls.
-* **Gelijktijdige weergave:** Bij het uitvoeren van bilaterale oefeningen waarbij de spieren aan beide kanten tegelijkertijd worden aangesproken, zoals squats of de bench press, wordt het ritmegeluid aan beide kanten tegelijkertijd weergegeven, wat uw focus en de consistentie van uw bewegingen verbetert.
+## 2. App lichter gemaakt & Drastische verlaging van abonnementskosten 📉
+Om de prestaties van de app te optimaliseren, hebben we enkele zware AI-functies verwijderd, waardoor de app in zijn geheel aanzienlijk lichter is geworden. Dit heeft onnodige serverkosten sterk verminderd, en we rekenen deze besparingen door aan onze gebruikers door **de maandelijkse Premium-abonnementsprijs drastisch te verlagen**.
 
-> **⚠️ Let op**
-> Deze functie maakt gebruik van synthesetechnologie om geluid te genereren. Langdurig luisteren kan vermoeidheid van de oren veroorzaken of uw gehoor beïnvloeden. Let daarom goed op uw volume-instellingen en de gebruiksduur.
+> **⚠️ Kennisgeving van massale annulering van automatische verlengingen**
+> Om verwarring bij de facturering door de prijsverlaging te voorkomen en de rechten van gebruikers te beschermen, **hebben we alle automatische verlengingen van bestaande abonnementen geannuleerd**. Als u de Premium-service wilt blijven gebruiken tegen de nieuwe verlaagde prijs, vragen wij u vriendelijk uw abonnement handmatig te verlengen in de app.
+
+## 3. Officiële ondersteuning voor de Russische taal 🇷🇺
+In lijn met de wereldwijde uitbreiding van ChronoFit is het **Russisch** officieel toegevoegd als ondersteunde taal. Gebruikers van wie het apparaat is ingesteld op het Russisch, kunnen nu naadloos genieten van alle functies van ChronoFit zonder taalbarrières.
 
 ---
 
 ## 🗣️ Communicatiekanalen
-Uw feedback helpt ChronoFit te groeien. Neem gerust contact met ons op!
+Uw feedback helpt ChronoFit te groeien. Neem gerust op elk moment contact met ons op!
 
-### YouTube-community van de ontwikkelaar
-Bekijk de blik achter de schermen van de ontwikkeling en het laatste nieuws.
-👉 [Ga naar de YouTube van de ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
+### YouTube-community voor ontwikkelaars
+Neem een kijkje achter de schermen van het ontwikkelingsproces en het laatste nieuws.
+👉 [Ga naar YouTube van ontwikkelaar](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
 Volg ons voor updates en stuur ons een DM voor ondersteuning.
 👉 [Ga naar Instagram](https://www.instagram.com/bjw0829/)
 
-Hartelijk dank.
+Bedankt.
 
-*14 juni 2026. ChronoLab.*
+*5 augustus 2026. ChronoLab.*
