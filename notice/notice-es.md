@@ -12,7 +12,7 @@ Anteriormente, los usuarios debían solicitar manualmente el análisis de IA par
 * **Rápido y sin anuncios:** Ya no es necesario ver anuncios con recompensa para obtener información. Revisa el resumen al instante en cuanto escanees un código de barras.
 * **Descripciones adaptadas culturalmente:** Ya sea que viajes al extranjero o te encuentres con ingredientes desconocidos, explicamos las características y los sabores de los alimentos utilizando analogías perfectas y adaptadas a tu idioma y cultura para una comprensión intuitiva.
 
-![Resumen de información de alimentos](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-en.jpg)
+![Resumen de información de alimentos](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-es.jpg)
 
 ## 2. Aplicación más ligera y reducción drástica de la cuota de suscripción 📉
 Para optimizar el rendimiento de la aplicación, hemos eliminado algunas funciones pesadas de IA, aligerando significativamente la aplicación en general. Esto ha reducido en gran medida los costos innecesarios de los servidores, y queremos devolver este ahorro a nuestros usuarios **reduciendo drásticamente la cuota de suscripción mensual Premium**.
