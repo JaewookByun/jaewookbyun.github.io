@@ -1,38 +1,41 @@
-# Bản Cập Nhật ChronoFit v1.3
+# Cập nhật ChronoFit v1.1.4
 
-Xin chào, chúng tôi là đội ngũ ChronoLab.
+Xin chào, đây là ChronoLab.
 
-Trong bản cập nhật v1.3 lần này, chúng tôi xin giới thiệu tính năng mới **'Máy Đếm Nhịp Tập Luyện' (Exercise Metronome)**, được thiết kế để giúp bạn kiểm soát chính xác nhịp điệu và tốc độ của các buổi tập. Dưới đây là thông tin chi tiết về bản cập nhật này nhằm hỗ trợ bạn tập luyện một cách bài bản và hệ thống hơn.
-
----
-
-## 1. Thêm Tính Năng Máy Đếm Nhịp Tập Luyện
-Duy trì một tốc độ (Tempo) chính xác là yếu tố cốt lõi để kích thích liên tục vào các nhóm cơ mục tiêu và ngăn ngừa chấn thương. Tính năng Máy Đếm Nhịp Tập Luyện mới sẽ cung cấp phản hồi bằng âm thanh dựa trên các cài đặt về nhịp và tốc độ do bạn tùy chỉnh, giúp bạn thực hiện các hiệp đấu (set) với một nhịp điệu nhất quán mà không bị phân tâm.
-
-![Màn hình Máy Đếm Nhịp Tập Luyện](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.3/2.jpg)
-
-## 2. Hỗ Trợ Đầu Ra Âm Thanh Luân Phiên (Trái/Phải) & Đồng Thời
-Điểm nổi bật nhất của tính năng máy đếm nhịp này là **cài đặt đầu ra âm thanh không gian** được tinh chỉnh phù hợp với từng loại hình tập luyện. Khi đeo tai nghe, bạn có thể chọn cách âm thanh phát ra dựa trên đặc điểm của bài tập.
-
-* **Phát Luân Phiên Trái/Phải:** Bạn có thể cài đặt âm thanh phát lần lượt giữa bên trái và bên phải. Tính năng này cực kỳ hiệu quả để **duy trì tần suất sải chân (cadence) ổn định, đồng bộ với mỗi bước chân của bạn khi chạy bộ (running)**, cũng như giữ nhịp và thăng bằng chính xác trong các bài tập tạ luân phiên như Lunges hoặc Alternating Dumbbell Curls.
-* **Phát Đồng Thời Hai Bên:** Khi thực hiện các bài tập tác động đồng thời hai bên (bilateral exercises) đòi hỏi sự tham gia của các nhóm cơ đối xứng như Squats hoặc Bench Press, âm thanh đếm nhịp sẽ phát ra cùng lúc ở cả hai bên tai, giúp tăng cường sự tập trung và tính nhất quán trong từng chuyển động.
-
-> **⚠️ Chú ý**
-> Tính năng này sử dụng công nghệ tổng hợp âm thanh (synthesizing) để tạo ra tín hiệu nhạc nền. Việc nghe trong thời gian dài có thể gây mỏi tai hoặc ảnh hưởng đến thính giác của bạn, vì vậy vui lòng lưu ý điều chỉnh mức âm lượng và thời gian sử dụng hợp lý.
+Trong bản cập nhật v1.1.4 này, chúng tôi đã tinh chỉnh ứng dụng trở nên nhẹ nhàng hơn đáng kể để mang lại trải nghiệm mượt mà hơn và giới thiệu tính năng **'Tóm tắt thông tin thực phẩm'** mới và cực kỳ nhanh chóng. Dưới đây là chi tiết về bản cập nhật nhằm nâng cao sự tiện lợi cho bạn.
 
 ---
 
-## 🗣️ Kênh Truyền Thông
-Mọi ý kiến đóng góp của bạn đều là nền tảng giúp ChronoFit phát triển tốt hơn. Xin vui lòng liên hệ với chúng tôi bất cứ lúc nào!
+## 1. Tóm tắt thực phẩm đa ngôn ngữ trực quan (Kiểm tra tức thì không có quảng cáo)
+Trước đây, người dùng phải gọi phân tích AI theo cách thủ công để xem thông tin thực phẩm. Giờ đây, chúng tôi cung cấp cơ sở dữ liệu tóm tắt chất lượng cao do chính đội ngũ ChronoLab xây dựng.
 
-### Cộng đồng YouTube của Nhà Phát Triển
-Cùng xem những câu chuyện hậu trường phát triển ứng dụng và cập nhật các tin tức mới nhất.
-👉 [Tru cập YouTube của Nhà Phát Triển](https://www.youtube.com/@bjw0829/posts)
+* **Nhanh chóng & Không có quảng cáo:** Không cần xem quảng cáo phần thưởng để xem thông tin nữa. Kiểm tra tóm tắt ngay lập tức khi bạn quét mã vạch.
+* **Mô tả phù hợp với văn hóa:** Cho dù bạn đang đi du lịch nước ngoài hay bắt gặp những nguyên liệu nước ngoài xa lạ, chúng tôi sẽ giải thích đặc điểm và hương vị của thực phẩm bằng cách sử dụng các phép so sánh hoàn hảo, phù hợp với ngôn ngữ và văn hóa của bạn để bạn có thể hiểu một cách trực quan nhất.
+
+![Màn hình tóm tắt thông tin thực phẩm](https://raw.githubusercontent.com/JaewookByun/jaewookbyun.github.io/main/notice/1.4/description-vi.jpg)
+
+## 2. Ứng dụng nhẹ hơn & Giảm mạnh phí đăng ký 📉
+Để tối ưu hóa hiệu suất ứng dụng, chúng tôi đã loại bỏ một số tính năng AI nặng, giúp ứng dụng tổng thể nhẹ hơn đáng kể. Điều này đã giảm thiểu rất nhiều chi phí máy chủ không cần thiết và chúng tôi sẽ hoàn trả khoản tiết kiệm này cho người dùng bằng cách **giảm mạnh phí đăng ký Premium hàng tháng**.
+
+> **⚠️ Thông báo Hủy hàng loạt Tự động gia hạn**
+> Để tránh nhầm lẫn trong quá trình thanh toán do giảm giá và để bảo vệ quyền lợi của người dùng, **chúng tôi đã hủy tất cả các gia hạn đăng ký tự động hiện có**. Nếu bạn muốn tiếp tục sử dụng dịch vụ Premium với mức giá mới đã được giảm, chúng tôi mong bạn vui lòng gia hạn đăng ký theo cách thủ công trong ứng dụng.
+
+## 3. Hỗ trợ chính thức tiếng Nga 🇷🇺
+Cùng với sự mở rộng toàn cầu của ChronoFit, **tiếng Nga** đã chính thức được thêm vào làm ngôn ngữ hỗ trợ. Người dùng cài đặt thiết bị của họ bằng tiếng Nga giờ đây có thể tận hưởng liền mạch tất cả các tính năng của ChronoFit mà không gặp bất kỳ rào cản ngôn ngữ nào.
+
+---
+
+## 🗣️ Kênh liên lạc
+Phản hồi của bạn giúp ChronoFit phát triển. Đừng ngần ngại liên hệ với chúng tôi bất cứ lúc nào!
+
+### Cộng đồng YouTube của nhà phát triển
+Xem hậu trường của quá trình phát triển và những tin tức mới nhất.
+👉 [Đi tới YouTube của nhà phát triển](https://www.youtube.com/@bjw0829/posts)
 
 ### Instagram DM
-Hãy theo dõi chúng tôi để cập nhật các thông tin mới nhất và gửi DM cho chúng tôi nếu bạn cần hỗ trợ.
-👉 [Truy cập Instagram](https://www.instagram.com/bjw0829/)
+Theo dõi chúng tôi để cập nhật và gửi tin nhắn trực tiếp (DM) để được hỗ trợ.
+👉 [Đi tới Instagram](https://www.instagram.com/bjw0829/)
 
-Xin cảm ơn.
+Cảm ơn bạn.
 
-*Ngày 14 tháng 6 năm 2026. ChronoLab.*
+*Ngày 5 tháng 8 năm 2026. ChronoLab.*
