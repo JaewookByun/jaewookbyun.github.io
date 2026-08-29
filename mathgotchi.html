@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DCW9DPCM02');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
+    <meta name="description" content="두 아이를 직접 가르치기 위해 아빠가 만든 무광고 안전 배움터. 시계 바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 아빠가만든앱, ChronoLab, 무광고 어린이앱">
+    <meta name="author" content="ChronoLab">
+    
+    <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chronolaboratory.com/mathgotchi.html">
+    <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
+    <meta property="og:description" content="광고 없이 안전하게! 부모님 목소리로 응원하고 디지털 펫을 키우며 배우는 인터랙티브 시계 공부방.">
+    <meta property="og:image" content="/mathgotchi/icon_1024_white.png">
+
+    <link rel="icon" href="/mathgotchi/icon_1024_white.png" type="image/png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { 
+            --brand-purple: #6C5CE7; 
+            --brand-dark: #4834D4; 
+            --brand-accent: #FF7675;
+            --brand-yellow: #FFEAA7;
+            --text-main: #1E293B; 
+            --text-sub: #475569;
+            --bg-light: #F8FAFC; 
+        }
+        body { font-family: 'Pretendard', 'Inter', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
+        
+        .navbar { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-app-switcher .nav-link {
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+        .nav-app-switcher .nav-link.active {
+            background-color: #FAF5FF;
+            color: var(--brand-purple);
+        }
+        .nav-app-switcher .nav-link:hover:not(.active) {
+            color: var(--brand-purple);
+            background-color: #F8FAFC;
+        }
+
+        .btn-purple { 
+            background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%); 
+            color: white; 
+            padding: 13px 32px; 
+            border-radius: 50px; 
+            font-weight: 800; 
+            transition: all 0.3s; 
+            box-shadow: 0 4px 18px rgba(108, 92, 231, 0.35); 
+        }
+        .btn-purple:hover { transform: translateY(-2px); color: white; box-shadow: 0 8px 24px rgba(108, 92, 231, 0.45); }
+
+        .hero-section { 
+            padding-top: 140px; 
+            padding-bottom: 90px; 
+            background: radial-gradient(circle at 50% 30%, #F3E8FF 0%, #FFFFFF 75%); 
+            overflow: hidden; 
+        }
+        .hero-badge {
+            background: #EDE9FE;
+            color: #6D28D9;
+            font-weight: 800;
+            font-size: 0.88rem;
+            border: 1px solid #DDD6FE;
+        }
+        .hero-headline { 
+            font-size: 3.4rem; 
+            font-weight: 900; 
+            line-height: 1.25; 
+            letter-spacing: -0.02em; 
+            background: linear-gradient(135deg, #1E1B4B 0%, #6C5CE7 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Kid Phone Frame Mockup */
+        .phone-frame { 
+            width: 310px; 
+            height: 620px; 
+            background: #0F172A; 
+            border-radius: 44px; 
+            border: 10px solid #1E293B; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.3); 
+            margin: 0 auto; 
+        }
+        .phone-inner-card {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .sticky-container { position: relative; padding: 100px 0; }
+        .sticky-visual { position: sticky; top: 140px; height: 650px; display: flex; align-items: center; justify-content: center; }
+        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
+        .step-content.active { opacity: 1; }
+        
+        .screen-content { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out; 
+            background-color: white; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            padding: 24px;
+        }
+        .screen-content.active { opacity: 1; z-index: 2; }
+
+        .feature-icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .feature-list i { font-size: 1.25rem; color: var(--brand-purple); }
+
+        @media (max-width: 768px) { 
+            .hero-headline { font-size: 2.4rem; } 
+            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 40px; } 
+            .step-content { height: auto; padding: 40px 0; opacity: 1; } 
+            .phone-frame { width: 270px; height: 540px; } 
+            .hero-section { padding-top: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 네비게이션 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+                <img src="/mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="38" height="38" class="me-2 rounded-3">
+                ChronoLab
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 🌟 앱 스위처 탭 메뉴 -->
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">🏋️ ChronoFit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="mathgotchi.html">⏰ Mathgotchi</a>
+                    </li>
+                </ul>
+
+                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
+                        <i class="bi bi-youtube me-1"></i> Dev Vlog
+                    </a>
+                    <a href="#download" class="btn btn-purple btn-sm px-4">
+                        Download iOS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
+                    <span class="badge hero-badge px-3 py-2 rounded-pill mb-3">
+                        👨‍👧‍👦 아빠가 아이들을 위해 직접 만든 앱
+                    </span>
+                    <h1 class="hero-headline mb-4">
+                        우리 아이 첫 시계 공부,<br>
+                        <strong>매쓰고치</strong>로 신나게!
+                    </h1>
+                    <p class="lead text-secondary mb-5">
+                        직접 시곗바늘을 돌리며 깨치는 시간 개념부터 1분 스피드 퀴즈까지!<br>
+                        엄마·아빠의 목소리로 응원받고, 신비한 동물 파트너를 키우며 스스로 배우는 기쁨을 선물하세요.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start" id="download">
+                        <a href="#" class="btn btn-purple btn-lg d-flex align-items-center">
+                            <i class="bi bi-apple me-2 fs-5"></i> App Store 다운로드
+                        </a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            기능 살펴보기
+                        </a>
+                    </div>
+                    <div class="mt-4 text-muted small">
+                        🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate) 탑재
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="phone-frame">
+                        <div class="phone-inner-card">
+                            <img src="/mathgotchi/icon_1024_white.png" alt="Mathgotchi" width="100" height="100" class="rounded-4 shadow-sm mb-3">
+                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">⭐ 스피드 연산 & 펫 육성</span>
+                            <h4 class="fw-bold mb-1">매쓰고치</h4>
+                            <p class="small text-muted mb-4">Mathgotchi: Kids Time Adventure</p>
+                            
+                            <div class="p-3 bg-white rounded-4 shadow-sm border w-100 text-start">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="fs-4 me-2">🐣</span>
+                                    <div>
+                                        <div class="fw-bold small">신비한 째깍알 부화 중!</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">온기 주기 & 퀴즈 풀이 완료</div>
+                                    </div>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Sticky Feature Sections -->
+    <section id="features" class="sticky-container bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Sticky Visual Mobile Screen Mockup -->
+                <div class="col-lg-6 order-lg-2">
+                    <div class="sticky-visual">
+                        <div class="phone-frame bg-white">
+                            <!-- Screen 1: 시계 탐험 -->
+                            <div class="screen-content active" id="screen-1">
+                                <div class="text-center p-3">
+                                    <div class="fs-1 mb-2">⏰</div>
+                                    <h5 class="fw-bold">시계 읽기 탐험</h5>
+                                    <p class="text-muted small">시침과 분침의 연동 규칙을 손가락으로 돌려보며 직관적으로 깨우쳐요.</p>
+                                    <div class="p-3 bg-light rounded-4 border my-3">
+                                        <div class="fs-3 fw-bold text-primary">03 : 45</div>
+                                        <div class="badge bg-primary text-white mt-1">4시 15분 전</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 2: 1분 스피드 퀴즈 -->
+                            <div class="screen-content" id="screen-2">
+                                <div class="text-center p-3">
+                                    <div class="fs-1 mb-2">⚡</div>
+                                    <h5 class="fw-bold">1분 시계 퀴즈 & 콤보</h5>
+                                    <p class="text-muted small">시간 제한 속에 정답을 맞히고 연속 콤보 대폭발 보너스를 획득하세요!</p>
+                                    <div class="p-3 bg-danger bg-opacity-10 rounded-4 border border-danger my-3">
+                                        <div class="fw-bold text-danger">🔥 7연속 정답 콤보 폭발!!</div>
+                                        <div class="small text-muted mt-1">+14 황금 망고 획득 ✨</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 3: 부모 음성 스튜디오 -->
+                            <div class="screen-content" id="screen-3">
+                                <div class="text-center p-3">
+                                    <div class="fs-1 mb-2">🎙️</div>
+                                    <h5 class="fw-bold">엄마·아빠 목소리 응원</h5>
+                                    <p class="text-muted small">문제를 맞히거나 틀렸을 때 등록된 부모님의 표정 사진과 응원 목소리가 재생됩니다.</p>
+                                    <div class="p-3 bg-purple bg-opacity-10 rounded-4 border my-3 text-start" style="background-color: #FAF5FF;">
+                                        <div class="fw-bold small text-purple" style="color: #6C5CE7;">🎯 정답 맞췄을 때:</div>
+                                        <div class="text-muted small">"우리 OO이 최고! 정말 잘 맞췄어!"</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 4: 파트너 펫 육성 -->
+                            <div class="screen-content" id="screen-4">
+                                <div class="text-center p-3">
+                                    <div class="fs-1 mb-2">🐉</div>
+                                    <h5 class="fw-bold">5단계 파트너 진화</h5>
+                                    <p class="text-muted small">째깍알 &rarr; 아기망고새 &rarr; 망고룡 &rarr; 시간의 청룡 &rarr; 마스터 드래곤!</p>
+                                    <div class="badge bg-success px-3 py-2 rounded-pill my-2">🌱 시간의 청룡 (4단계)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sticky Text Steps -->
+                <div class="col-lg-6 order-lg-1">
+                    <!-- Step 1 -->
+                    <div class="step-content active" data-index="1" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h2 class="display-5 fw-bold mb-3">직접 바늘을 돌리며<br>자연스럽게 익히는 시간.</h2>
+                            <p class="lead text-muted mb-4">
+                                암기식 학습이 아닌, 시침과 분침이 서로 맞물려 움직이는 물리적 연동 규칙을 손가락 터치로 직접 조작하며 이해합니다.
+                            </p>
+                            <ul class="list-unstyled text-muted lead feature-list">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>낮과 밤의 변화:</strong> 24시간 주기에 따른 태양과 달 애니메이션</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>'~분 전' 개념 마스터:</strong> 아이들이 가장 헷갈려하는 분전 읽기 완벽 정복</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-content" data-index="2" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-danger bg-opacity-10 text-danger">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h2 class="display-5 fw-bold mb-3">집중력과 순발력을 깨우는<br>1분 스피드 퀴즈.</h2>
+                            <p class="lead text-muted mb-4">
+                                짧고 굵은 1분 도전으로 아이의 집중력을 극대화합니다. 연속으로 정답을 맞힐 때마다 터지는 콤보 폭발과 보상으로 성취감을 극대화합니다.
+                            </p>
+                            <ul class="list-unstyled text-muted lead feature-list">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>실시간 랭킹왕 명예의 전당:</strong> 가족 및 친구들과 겨루는 기록 경쟁</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>학습 성장 분석 차트:</strong> 회차별 정답률과 문제당 풀이 속도 정밀 기록</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-content" data-index="3" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-purple bg-opacity-10 text-purple" style="background-color: #EDE9FE; color: #6C5CE7;">
+                                <i class="bi bi-mic-fill"></i>
+                            </div>
+                            <h2 class="display-5 fw-bold mb-3">세상에 단 하나뿐인 응원,<br>엄마·아빠 목소리 스튜디오.</h2>
+                            <p class="lead text-muted mb-4">
+                                기계적인 기본 안내음 대신, 정답/오답/시작/종료 4가지 상황별로 부모님의 셀카 표정과 따뜻한 육성을 녹음해 둘 수 있습니다.
+                            </p>
+                            <p class="text-muted">
+                                * 녹음된 사진과 음성 데이터는 외부 서버로 절대 전송되지 않으며, 오직 부모님의 기기 내부에만 안전하게 저장됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-content" data-index="4" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
+                                <i class="bi bi-egg-fried"></i>
+                            </div>
+                            <h2 class="display-5 fw-bold mb-3">공부하고 별을 모아<br>알을 깨고 진화하는 펫.</h2>
+                            <p class="lead text-muted mb-4">
+                                퀴즈를 풀며 모은 과일과 별로 신비한 알에 온기를 주고 태엽을 감아 깨워보세요. 5단계로 성장하는 파트너 드래곤이 아이에게 주도적인 배움의 동기를 부여합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 안전 가치 배너 -->
+    <section class="py-5 bg-white border-top">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold mb-4">부모님이 안심할 수 있는 3대 약속</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="fs-1 mb-2">🚫</div>
+                        <h5 class="fw-bold">100% 무광고 (Ad-Free)</h5>
+                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너/동영상 광고도 일절 싣지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="fs-1 mb-2">🔒</div>
+                        <h5 class="fw-bold">온디바이스 개인정보 보호</h5>
+                        <p class="text-muted small mb-0">회원가입이 필요 없으며 부모 음성 및 셀카는 외부 서버 업로드 없이 오직 스마트폰 내부에만 저장됩니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="fw-bold">부모 안심 확인 (Parental Gate)</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 웹페이지로 이탈하지 못하도록 성인 인증 수학 곱셈 잠금장치를 적용했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-white py-5 border-top">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-3">ChronoLab</h5>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="text-muted small">
+                © 2026 ChronoLab. All rights reserved.<br>
+                <a href="terms.html" class="text-decoration-none text-muted">Terms of Service (이용약관)</a> | 
+                <a href="privacy.html" class="text-decoration-none text-muted">Privacy Policy (개인정보처리방침)</a>
+            </p>
+            <a href="index.html" class="btn btn-outline-secondary btn-sm mt-2">ChronoFit 바로가기</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.step-content');
+            const screens = document.querySelectorAll('.screen-content');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        steps.forEach(s => s.classList.remove('active'));
+                        entry.target.classList.add('active');
+
+                        const index = entry.target.getAttribute('data-index');
+                        screens.forEach(s => s.classList.remove('active'));
+                        
+                        const activeScreen = document.getElementById(`screen-${index}`);
+                        if(activeScreen) activeScreen.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            steps.forEach(step => observer.observe(step));
+        });
+    </script>
+</body>
+</html>
