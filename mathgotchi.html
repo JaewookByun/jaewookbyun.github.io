@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 직접 돌리는 시곗바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 직접 돌리는 시곗바늘 조작, 1분 스피드 퀴즈, 부모님 목소리 응원까지!">
     <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
@@ -173,7 +173,7 @@
             display: block;
         }
 
-        /* 🌟 스티키 기능 소개 비주얼 카드 (4:3 대화면 최적화) */
+        /* 스티키 기능 소개 비주얼 카드 (4:3 비율) */
         .feature-visual-frame { 
             width: 100%; 
             max-width: 520px; 
@@ -209,7 +209,7 @@
         }
         .screen-content.active { opacity: 1; z-index: 2; }
         
-        /* 순수 이미지 전용 스타일 */
+        /* 순수 이미지 렌더링용 스타일 */
         .screen-pure-img {
             width: 100%;
             height: 100%;
@@ -304,8 +304,8 @@
 
                     <!-- 핵심 가치 불릿 리스트 -->
                     <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 파트너 성장:</strong> 매일 퀴즈를 풀고 모은 과일로 알을 깨우는 자기주도 몰입</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>손으로 돌리는 직관적 시계:</strong> 바늘의 물리적 연동 원리로 5분 만에 마스터</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 파트너 진화:</strong> 매일 퀴즈를 풀고 별을 모아 알을 깨우는 자기주도 몰입</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 사진과 실제 육성으로 북돋는 성취감</li>
                     </ul>
                     
@@ -353,8 +353,15 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="sticky-visual">
                         <div class="feature-visual-frame">
-                            <!-- Screen 1: 시계 탐험 -->
-                            <div class="screen-content active p-4" id="screen-1">
+                            <!-- Screen 1: 펫 성장 시스템 (concept_2.jpg 적용) -->
+                            <div class="screen-content active" id="screen-1">
+                                <img src="mathgotchi/concept_2.jpg" 
+                                     alt="매쓰고치 펫 성장 시스템 - 알을 깨고 진화하는 동물 친구들" 
+                                     class="screen-pure-img">
+                            </div>
+
+                            <!-- Screen 2: 시계 읽기 탐험 -->
+                            <div class="screen-content p-4" id="screen-2">
                                 <div class="text-center w-100">
                                     <div class="fs-1 mb-2">⏰</div>
                                     <h5 class="fw-bold mb-2">시계 읽기 탐험</h5>
@@ -364,13 +371,6 @@
                                         <div class="badge bg-primary text-white mt-2 px-3 py-2 rounded-pill">4시 15분 전</div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Screen 2: 펫 성장 시스템 (concept_2.jpg 2398x1792 원본 렌더링) -->
-                            <div class="screen-content" id="screen-2">
-                                <img src="mathgotchi/concept_2.jpg" 
-                                     alt="매쓰고치 펫 성장 시스템 - 알을 깨고 진화하는 동물 친구들" 
-                                     class="screen-pure-img">
                             </div>
 
                             <!-- Screen 3: 1분 스피드 퀴즈 -->
@@ -404,8 +404,27 @@
 
                 <!-- 텍스트 설명 단계 -->
                 <div class="col-lg-6 order-lg-1">
-                    <!-- Step 1: 시계 읽기 -->
+                    <!-- Step 1: 펫 성장 시스템 (concept_2.jpg 매칭) -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
+                                <i class="bi bi-egg-fried"></i>
+                            </div>
+                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
+                            <h2 class="display-5 fw-bold mb-3">알을 깨고 진화하는<br>동물 친구들.</h2>
+                            <p class="lead text-muted mb-4">
+                                매일 퀴즈를 풀고 모은 과일로 파트너를 부화시키고 진화시켜요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
+                            </p>
+                            <ul class="list-unstyled text-muted lead feature-list">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 파트너를 성장시키며 매일 스스로 앱을 켜는 변화</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: 시계 읽기 탐험 -->
+                    <div class="step-content" data-index="2" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
                                 <i class="bi bi-clock-history"></i>
@@ -417,25 +436,6 @@
                             <ul class="list-unstyled text-muted lead feature-list">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>낮과 밤의 변화:</strong> 24시간 주기에 따른 태양과 달 애니메이션</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>'~분 전' 개념 마스터:</strong> 아이들이 가장 어려워하는 분전 읽기 완벽 정복</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: 펫 성장 시스템 (요청 키워드 적용) -->
-                    <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
-                                <i class="bi bi-egg-fried"></i>
-                            </div>
-                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
-                            <h2 class="display-5 fw-bold mb-3">알을 깨고 진화하는<br>동물 친구들.</h2>
-                            <p class="lead text-muted mb-4">
-                                매일 퀴즈를 풀고 모은 과일로 파트너를 부화시키고 진화시켜요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>4단계 진화의 설렘:</strong> 째깍 태엽알(LEVEL 1)부터 삐죽 껍질새, 꼬마 푸른비룡, 전설의 시간의 청룡까지!</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 펫을 키우며 매일 먼저 앱을 켜는 놀라운 변화</li>
                             </ul>
                         </div>
                     </div>
