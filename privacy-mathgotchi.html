@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DCW9DPCM02');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - 매쓰고치 (Mathgotchi)</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-color: #6C5CE7;
+            --brand-dark: #4834D4;
+            --text-main: #333333;
+            --bg-color: #f5f7fa;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 30px 0;
+        }
+        
+        /* 메인 컨텐츠 박스 */
+        .policy-container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 44px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        /* 헤더 스타일 */
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 22px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .header-title-area {
+            flex: 1;
+        }
+        h1 {
+            font-weight: 800;
+            font-size: 1.85rem;
+            color: #111;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.02em;
+        }
+        .date {
+            color: #666;
+            font-size: 0.92rem;
+            margin-bottom: 0;
+        }
+
+        /* 언어 전환 버튼 */
+        .lang-switch {
+            display: flex;
+            background: #EDF2F7;
+            padding: 4px;
+            border-radius: 10px;
+            gap: 4px;
+        }
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #64748B;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: var(--brand-color);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        /* 핵심 안심 원칙 박스 (On-Device & Ad-Free) */
+        .local-first-box {
+            background-color: #FAF5FF;
+            border: 1px solid #E9D8FD;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 36px;
+        }
+        .local-first-box h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #6C5CE7;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .local-first-box p {
+            font-size: 0.94rem;
+            color: #4A5568;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* 섹션 스타일 */
+        section {
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #1A202C;
+            margin-top: 28px;
+            margin-bottom: 14px;
+            border-left: 4px solid var(--brand-color);
+            padding-left: 12px;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: #2D3748;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* 리스트 스타일 */
+        ol, ul {
+            padding-left: 1.3rem;
+            color: #444;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        strong {
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* 연락처 및 보호책임자 박스 */
+        .contact-box {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            font-size: 0.93rem;
+        }
+        .contact-box a {
+            color: var(--brand-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #718096;
+            font-size: 0.88rem;
+        }
+        footer a {
+            color: #718096;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        footer a:hover {
+            color: var(--brand-color);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 576px) {
+            .policy-container {
+                padding: 26px 20px;
+                margin: 0 12px;
+            }
+            h1 { font-size: 1.5rem; }
+            header { flex-direction: column; align-items: stretch; }
+            .lang-switch { align-self: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="policy-container">
+        
+        <!-- 상단 헤더 및 언어 전환 -->
+        <header>
+            <div class="header-title-area">
+                <h1 id="page-title">[매쓰고치] 개인정보 처리방침</h1>
+                <p class="date" id="page-date">시행일자: 2026년 9월 1일</p>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLanguage('ko')">🇰🇷 한국어</button>
+                <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 English</button>
+            </div>
+        </header>
+
+        <!-- ======================================================= -->
+        <!-- 한국어 개인정보 처리방침 본문 -->
+        <!-- ======================================================= -->
+        <div id="content-ko">
+            
+            <div class="local-first-box">
+                <h4>🛡️ 개인정보 보호 및 아동 안심 3대 핵심 원칙</h4>
+                <p>
+                    크로노랩(ChronoLab, 이하 '회사')은 '매쓰고치'(이하 '앱')를 이용하는 아동과 부모님의 프라이버시를 최우선 가치로 여기며, <strong>대한민국 개인정보보호법 및 미국 아동 온라인 사생활 보호법(COPPA) 가이드라인</strong>을 철저히 준수합니다.<br><br>
+                    <strong>※ 핵심 약속: 회사는 어떠한 개인식별정보도 수집하지 않으며, 부모님의 목소리와 사진은 외부 서버로 절대 전송되지 않습니다.</strong>
+                </p>
+            </div>
+
+            <section>
+                <h2>제 1 조 (개인식별정보 미수집 원칙)</h2>
+                <p>본 앱은 회원가입 절차가 없으며, 다음과 같은 개인식별정보(PII)를 일절 수집·저장하거나 외부 서버로 전송하지 않습니다.</p>
+                <ul>
+                    <li>이름, 생년월일, 전화번호, 이메일 주소 등 인적 사항</li>
+                    <li>정밀 위치 정보 (GPS 위치)</li>
+                    <li>기기 고유 식별자 (UDID, IDFA, ADID 등)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제 2 조 (로컬 온디바이스 데이터 처리)</h2>
+                <p>앱의 모든 학습 활동 데이터는 사용자 단말기 내부에서만 안전하게 처리됩니다.</p>
+                <ol>
+                    <li><strong>부모 음성 녹음 및 사진 데이터:</strong> 퀴즈 정답/오답 시 아이를 격려하기 위해 부모님이 직접 등록한 음성 녹음 파일 및 셀프 카메라 사진은 오직 <strong>이용자의 기기 내부 샌드박스 영역에만 보관</strong>되며, 회사 서버나 외부로 절대 업로드되지 않습니다.</li>
+                    <li><strong>학습 진도 및 출석 기록:</strong> 문제 풀이 기록, 획득한 과일 및 파트너 펫 성장 상태는 기기 로컬 스토리지에만 저장되며, 앱 삭제 시 함께 영구 파기됩니다.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>제 3 조 (제3자 광고 및 추적 도구 배제)</h2>
+                <p>본 앱은 <strong>100% 무광고 (Ad-Free)</strong> 안심 교육 서비스입니다.</p>
+                <ul>
+                    <li>어린이의 몰입을 방해하거나 유해 사이트로 연결되는 일체의 배너·전면·동영상 광고를 탑재하지 않습니다.</li>
+                    <li>사용자의 행동 패턴을 추적하고 프로파일링하는 광고 SDK(Google AdMob, Meta Pixel, Unity Ads 등)를 일절 사용하지 않습니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제 4 조 (아동 사생활 보호 및 부모 안심 확인)</h2>
+                <p>회사는 만 14세 미만 아동의 안전한 이용을 위해 다음과 같은 아동 보호 장치를 적용하고 있습니다.</p>
+                <ul>
+                    <li><strong>부모 안심 잠금 (Parental Gate):</strong> 정규 구독 결제, 구매 복원, 외부 고객센터 문의 링크 클릭 등 성인의 확인이 필요한 모든 진입 단계에 곱셈 연산 기반의 성인 인증 게이트를 엄격히 적용합니다.</li>
+                    <li>아동을 대상으로 한 무단 결제 및 외부 웹 브라우저 무단 이탈을 원천적으로 차단합니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>제 5 조 (인앱 결제 및 구독 데이터 처리)</h2>
+                <p>앱 내 모든 정기 구독 결제는 <strong>Apple Inc.(App Store)의 보안 인앱 결제 시스템</strong>을 통해 안전하게 처리됩니다. 회사는 이용자의 신용카드 번호, 결제 계좌 번호 등 민감한 금융 결제 정보를 직접 수집하거나 열람하지 않습니다.</p>
+            </section>
+
+            <section>
+                <h2>제 6 조 (개인정보의 파기)</h2>
+                <p>본 앱은 외부 서버에 개인정보를 보관하지 않으므로, 이용자가 단말기에서 <strong>앱을 삭제(제거)하는 즉시 기기 내에 저장되어 있던 모든 학습 데이터와 부모 커스텀 음성/사진 파일이 영구히 파기</strong>됩니다.</p>
+            </section>
+
+            <section>
+                <h2>제 7 조 (개인정보 보호책임자 및 고객지원)</h2>
+                <p>개인정보 보호 및 앱 이용에 관한 문의사항은 아래로 연락해 주시기 바랍니다.</p>
+                <div class="contact-box">
+                    <strong>크로노랩 (ChronoLab)</strong><br>
+                    • 개인정보 보호책임자: 변재욱 (크로노랩 대표)<br>
+                    • 공식 문의 이메일: <a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 실시간 카카오톡 상담: <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 시행일자: 2026년 9월 1일
+                </div>
+            </section>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- 영문 개인정보 처리방침 본문 (English Privacy Policy) -->
+        <!-- ======================================================= -->
+        <div id="content-en" class="hidden">
+            
+            <div class="local-first-box">
+                <h4>🛡️ Core Principles for Children's Privacy & Safety</h4>
+                <p>
+                    ChronoLab ("Company") is deeply committed to protecting the privacy of children and parents using 'Mathgotchi' in compliance with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and global data privacy standards.<br><br>
+                    <strong>※ Core Commitment: We do NOT collect Personally Identifiable Information (PII), and all parent audio/photo recordings remain strictly on your local device.</strong>
+                </p>
+            </div>
+
+            <section>
+                <h2>1. No Collection of Personal Identifiable Information (PII)</h2>
+                <p>Mathgotchi does not require user registration and never collects, stores, or transmits the following personal information to any external server:</p>
+                <ul>
+                    <li>Names, dates of birth, phone numbers, or email addresses</li>
+                    <li>Precise GPS geolocation data</li>
+                    <li>Persistent device/advertising identifiers (UDID, IDFA, ADID)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Strict On-Device Local Data Storage</h2>
+                <p>All learning progress and custom user data remain strictly localized on the user's device.</p>
+                <ol>
+                    <li><strong>Parent Voice & Photo Recordings:</strong> Audio clips and selfie photos recorded by parents for quiz encouragement are stored exclusively in the device's sandboxed local storage. They are <strong>NEVER uploaded to external cloud servers</strong>.</li>
+                    <li><strong>Study Records:</strong> Quiz progress, earned fruit counts, and pet evolution stages reside solely in the local cache and are permanently deleted upon App removal.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>3. 100% Ad-Free & No Third-Party Trackers</h2>
+                <p>Mathgotchi provides an entirely safe, ad-free learning haven for children.</p>
+                <ul>
+                    <li>No banner ads, interstitial pop-ups, or rewarded video ads are included.</li>
+                    <li>No behavioral analytics, profiling tools, or ad network SDKs (Google AdMob, Meta Pixel, Unity Ads, etc.) are implemented.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Children's Privacy & Parental Gate</h2>
+                <p>We enforce rigorous safeguards to prevent unauthorized access by young children under 13/14.</p>
+                <ul>
+                    <li><strong>Math-Based Parental Gate:</strong> Access to in-app subscriptions, purchases, restore flows, and external support links requires solving a multiplication challenge intended for adults.</li>
+                    <li>Young children are completely prevented from unintentional purchases or unintended external navigation.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. In-App Purchase Processing</h2>
+                <p>All subscription payments are securely processed through <strong>Apple Inc. (App Store)</strong>. The Company never collects, stores, or accesses sensitive financial or payment card credentials.</p>
+            </section>
+
+            <section>
+                <h2>6. Data Retention & Deletion</h2>
+                <p>Since no user data is transferred to cloud servers, simply deleting the App from your iOS device immediately and permanently deletes all local study progress, custom parent voices, and photos.</p>
+            </section>
+
+            <section>
+                <h2>7. Privacy Contact & Customer Support</h2>
+                <p>For any inquiries regarding this Privacy Policy or data security, please contact:</p>
+                <div class="contact-box">
+                    <strong>ChronoLab Privacy Team</strong><br>
+                    • Privacy Officer: Jaewook Byun (Representative, ChronoLab)<br>
+                    • Support Email: <a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 Live KakaoTalk Chat: <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • Effective Date: September 1, 2026
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>
+            © 2026 ChronoLab. All rights reserved.<br>
+            <a href="terms-mathgotchi.html">Terms of Service (이용약관)</a> | 
+            <a href="privacy-mathgotchi.html">Privacy Policy (개인정보처리방침)</a>
+        </p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const koContent = document.getElementById('content-ko');
+            const enContent = document.getElementById('content-en');
+            const pageTitle = document.getElementById('page-title');
+            const pageDate = document.getElementById('page-date');
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            if (lang === 'ko') {
+                koContent.classList.remove('hidden');
+                enContent.classList.add('hidden');
+                pageTitle.textContent = '[매쓰고치] 개인정보 처리방침';
+                pageDate.textContent = '시행일자: 2026년 9월 1일';
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+            } else {
+                koContent.classList.add('hidden');
+                enContent.classList.remove('hidden');
+                pageTitle.textContent = '[Mathgotchi] Privacy Policy';
+                pageDate.textContent = 'Effective Date: September 1, 2026';
+                buttons[0].classList.remove('active');
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
