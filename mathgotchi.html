@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,20 +14,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="두 아이를 직접 가르치기 위해 아빠가 만든 무광고 안전 배움터. 시계 바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 아빠가만든앱, ChronoLab, 무광고 어린이앱">
+    <meta name="description" content="두 아이를 직접 가르치기 위해 아빠가 만든 무광고 안심 배움터. 직접 돌리는 시곗바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 아빠가만든앱, ChronoLab, 무광고 어린이앱, 카카오톡 문의">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
 
+    <!-- Open Graph (SNS 공유 카드) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/mathgotchi.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
     <meta property="og:description" content="광고 없이 안전하게! 부모님 목소리로 응원하고 디지털 펫을 키우며 배우는 인터랙티브 시계 공부방.">
     <meta property="og:image" content="/mathgotchi/icon_1024_white.png">
 
+    <!-- Favicon -->
     <link rel="icon" href="/mathgotchi/icon_1024_white.png" type="image/png">
     
+    <!-- CSS 라이브러리 (Bootstrap 5, Bootstrap Icons, AOS, Web Fonts) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -37,13 +41,14 @@
             --brand-purple: #6C5CE7; 
             --brand-dark: #4834D4; 
             --brand-accent: #FF7675;
-            --brand-yellow: #FFEAA7;
+            --brand-yellow: #FEE500;
             --text-main: #1E293B; 
             --text-sub: #475569;
             --bg-light: #F8FAFC; 
         }
         body { font-family: 'Pretendard', 'Inter', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
         
+        /* 네비게이션 바 */
         .navbar { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .nav-app-switcher .nav-link {
             font-weight: 700;
@@ -62,17 +67,49 @@
             background-color: #F8FAFC;
         }
 
+        /* 버튼 스타일 */
         .btn-purple { 
             background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%); 
             color: white; 
-            padding: 13px 32px; 
+            padding: 13px 28px; 
             border-radius: 50px; 
             font-weight: 800; 
             transition: all 0.3s; 
             box-shadow: 0 4px 18px rgba(108, 92, 231, 0.35); 
+            border: none;
         }
         .btn-purple:hover { transform: translateY(-2px); color: white; box-shadow: 0 8px 24px rgba(108, 92, 231, 0.45); }
 
+        .btn-kakao {
+            background-color: var(--brand-yellow);
+            color: #191919;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .btn-kakao:hover {
+            background-color: #FADA0A;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+
+        .btn-in-review {
+            background: #EDE9FE;
+            color: #5B21B6;
+            border: 1px dashed #7C3AED;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            cursor: default;
+        }
+
+        /* Hero 섹션 */
         .hero-section { 
             padding-top: 140px; 
             padding-bottom: 90px; 
@@ -96,7 +133,7 @@
             -webkit-text-fill-color: transparent; 
         }
 
-        /* Kid Phone Frame Mockup */
+        /* 모바일 기기 목업 프레임 */
         .phone-frame { 
             width: 310px; 
             height: 620px; 
@@ -120,6 +157,7 @@
             text-align: center;
         }
 
+        /* 스티키 인터랙티브 섹션 */
         .sticky-container { position: relative; padding: 100px 0; }
         .sticky-visual { position: sticky; top: 140px; height: 650px; display: flex; align-items: center; justify-content: center; }
         .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
@@ -178,7 +216,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- 🌟 앱 스위처 탭 메뉴 -->
+                <!-- 상단 제품군 탭 전환 -->
                 <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">🏋️ ChronoFit</a>
@@ -189,11 +227,13 @@
                 </ul>
 
                 <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <!-- 카카오톡 1:1 상담 바로가기 -->
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3 shadow-sm d-flex align-items-center">
+                        <i class="bi bi-chat-fill me-1"></i> 1:1 카톡 문의
+                    </a>
+
                     <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
                         <i class="bi bi-youtube me-1"></i> Dev Vlog
-                    </a>
-                    <a href="#download" class="btn btn-purple btn-sm px-4">
-                        Download iOS
                     </a>
                 </div>
             </div>
@@ -216,14 +256,24 @@
                         직접 시곗바늘을 돌리며 깨치는 시간 개념부터 1분 스피드 퀴즈까지!<br>
                         엄마·아빠의 목소리로 응원받고, 신비한 동물 파트너를 키우며 스스로 배우는 기쁨을 선물하세요.
                     </p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start" id="download">
-                        <a href="#" class="btn btn-purple btn-lg d-flex align-items-center">
-                            <i class="bi bi-apple me-2 fs-5"></i> App Store 다운로드
+                    
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-center">
+                        <!-- App Store 심사 등록 중 안내 뱃지 -->
+                        <div class="btn-in-review shadow-sm">
+                            <i class="bi bi-apple me-2 fs-5"></i>
+                            <span>App Store 등록 진행 중 (심사 중)</span>
+                        </div>
+                        
+                        <!-- 카카오톡 1:1 문의방 이동 버튼 -->
+                        <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg shadow-sm d-inline-flex align-items-center">
+                            <i class="bi bi-chat-dots-fill me-2 fs-5"></i> 개발자 1:1 문의
                         </a>
+                        
                         <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
                             기능 살펴보기
                         </a>
                     </div>
+
                     <div class="mt-4 text-muted small">
                         🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate) 탑재
                     </div>
@@ -256,11 +306,11 @@
         </div>
     </section>
 
-    <!-- Interactive Sticky Feature Sections -->
+    <!-- Sticky Interactive Features Section -->
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <!-- Sticky Visual Mobile Screen Mockup -->
+                <!-- 모바일 비주얼 목업 (스크롤 시 활성화) -->
                 <div class="col-lg-6 order-lg-2">
                     <div class="sticky-visual">
                         <div class="phone-frame bg-white">
@@ -298,7 +348,7 @@
                                     <p class="text-muted small">문제를 맞히거나 틀렸을 때 등록된 부모님의 표정 사진과 응원 목소리가 재생됩니다.</p>
                                     <div class="p-3 bg-purple bg-opacity-10 rounded-4 border my-3 text-start" style="background-color: #FAF5FF;">
                                         <div class="fw-bold small text-purple" style="color: #6C5CE7;">🎯 정답 맞췄을 때:</div>
-                                        <div class="text-muted small">"우리 OO이 최고! 정말 잘 맞췄어!"</div>
+                                        <div class="text-muted small">"우리 아이 최고! 정말 잘 맞췄어!"</div>
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +366,7 @@
                     </div>
                 </div>
 
-                <!-- Sticky Text Steps -->
+                <!-- 텍스트 설명 단계 -->
                 <div class="col-lg-6 order-lg-1">
                     <!-- Step 1 -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
@@ -326,11 +376,11 @@
                             </div>
                             <h2 class="display-5 fw-bold mb-3">직접 바늘을 돌리며<br>자연스럽게 익히는 시간.</h2>
                             <p class="lead text-muted mb-4">
-                                암기식 학습이 아닌, 시침과 분침이 서로 맞물려 움직이는 물리적 연동 규칙을 손가락 터치로 직접 조작하며 이해합니다.
+                                단순 암기식이 아닌, 시침과 분침이 서로 맞물려 돌아가는 물리적 연동 규칙을 손가락 터치로 직접 조작하며 이해합니다.
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>낮과 밤의 변화:</strong> 24시간 주기에 따른 태양과 달 애니메이션</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>'~분 전' 개념 마스터:</strong> 아이들이 가장 헷갈려하는 분전 읽기 완벽 정복</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>'~분 전' 개념 마스터:</strong> 아이들이 가장 어려워하는 분전 읽기 완벽 정복</li>
                             </ul>
                         </div>
                     </div>
@@ -343,11 +393,11 @@
                             </div>
                             <h2 class="display-5 fw-bold mb-3">집중력과 순발력을 깨우는<br>1분 스피드 퀴즈.</h2>
                             <p class="lead text-muted mb-4">
-                                짧고 굵은 1분 도전으로 아이의 집중력을 극대화합니다. 연속으로 정답을 맞힐 때마다 터지는 콤보 폭발과 보상으로 성취감을 극대화합니다.
+                                짧고 굵은 1분 도전으로 아이의 집중력을 극대화합니다. 연속으로 정답을 맞힐 때마다 터지는 콤보 폭발과 과일 보상으로 성취감을 높입니다.
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>실시간 랭킹왕 명예의 전당:</strong> 가족 및 친구들과 겨루는 기록 경쟁</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>학습 성장 분석 차트:</strong> 회차별 정답률과 문제당 풀이 속도 정밀 기록</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>실시간 명예의 전당:</strong> 가족 및 친구들과 함께 겨루는 기록 랭킹</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>학습 성장 분석 차트:</strong> 회차별 정답률과 문제당 풀이 속도 정밀 분석</li>
                             </ul>
                         </div>
                     </div>
@@ -360,10 +410,10 @@
                             </div>
                             <h2 class="display-5 fw-bold mb-3">세상에 단 하나뿐인 응원,<br>엄마·아빠 목소리 스튜디오.</h2>
                             <p class="lead text-muted mb-4">
-                                기계적인 기본 안내음 대신, 정답/오답/시작/종료 4가지 상황별로 부모님의 셀카 표정과 따뜻한 육성을 녹음해 둘 수 있습니다.
+                                기계적인 기본 안내음 대신 정답/오답/시작/종료 4가지 상황별로 부모님의 셀카 표정과 따뜻한 육성을 직접 녹음해 둘 수 있습니다.
                             </p>
                             <p class="text-muted">
-                                * 녹음된 사진과 음성 데이터는 외부 서버로 절대 전송되지 않으며, 오직 부모님의 기기 내부에만 안전하게 저장됩니다.
+                                * 등록된 사진과 음성 데이터는 외부 서버로 절대 전송되지 않으며, 부모님의 기기 내부에만 안전하게 보관됩니다.
                             </p>
                         </div>
                     </div>
@@ -376,7 +426,7 @@
                             </div>
                             <h2 class="display-5 fw-bold mb-3">공부하고 별을 모아<br>알을 깨고 진화하는 펫.</h2>
                             <p class="lead text-muted mb-4">
-                                퀴즈를 풀며 모은 과일과 별로 신비한 알에 온기를 주고 태엽을 감아 깨워보세요. 5단계로 성장하는 파트너 드래곤이 아이에게 주도적인 배움의 동기를 부여합니다.
+                                퀴즈를 풀며 모은 과일과 별로 신비한 알에 온기를 주고 태엽을 감아 깨워보세요. 5단계로 진화하는 파트너 드래곤이 아이에게 주도적인 배움의 동기를 부여합니다.
                             </p>
                         </div>
                     </div>
@@ -408,8 +458,27 @@
                     <div class="p-4 rounded-4 bg-light h-100 border">
                         <div class="fs-1 mb-2">🛡️</div>
                         <h5 class="fw-bold">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 웹페이지로 이탈하지 못하도록 성인 인증 수학 곱셈 잠금장치를 적용했습니다.</p>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 수학 곱셈 잠금장치를 적용했습니다.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 개발자 아빠 1:1 카카오톡 소통방 섹션 -->
+    <section class="py-5" style="background-color: #FAF5FF;">
+        <div class="container text-center">
+            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 760px;" data-aos="zoom-in">
+                <div class="fs-1 mb-2">💬</div>
+                <h3 class="fw-bold mb-2 text-dark">개발자 아빠와 직접 이야기해요</h3>
+                <p class="text-muted mb-4">
+                    앱 이용 중 불편한 점, 마스터키 분실, 결제 및 오류 문의, 새로운 학습 기능 제안 등<br>
+                    어떤 이야기든 카카오톡 1:1 문의방으로 편하게 남겨주시면 정성껏 답변드리겠습니다.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg px-5 shadow-sm d-inline-flex align-items-center">
+                        <i class="bi bi-chat-fill me-2 fs-5"></i> 카카오톡 1:1 문의하기 &rarr;
+                    </a>
                 </div>
             </div>
         </div>
@@ -422,6 +491,7 @@
             <div class="d-flex justify-content-center gap-3 mb-4">
                 <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
                 <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="text-secondary fs-4"><i class="bi bi-chat-dots-fill"></i></a>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
             </div>
             <p class="text-muted small">
@@ -433,6 +503,7 @@
         </div>
     </footer>
 
+    <!-- JS 스크립트 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
