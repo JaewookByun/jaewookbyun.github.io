@@ -14,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 부모님 목소리 응원, 주기적으로 확장되는 수학 테마까지! 7일 무료 체험으로 시작하세요.">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, 아이폰목업, ChronoLab, 무광고 어린이앱, 1:1 문의">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험, 7일 무료 체험까지!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
@@ -194,7 +194,56 @@
             display: block;
         }
 
-        /* 📱 Screen 4 전용 iPhone 세로형 프레임 목업 (474x1024 비율) */
+        /* 📱 Screen 3 전용 iPad 가로형 프레임 목업 (concept_5.png) */
+        .ipad-mockup-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #FAF5FF 0%, #EDE9FE 100%);
+            position: relative;
+            padding: 12px;
+        }
+        .ipad-device {
+            width: 95%;
+            aspect-ratio: 4 / 3;
+            background: #0F172A;
+            border-radius: 22px;
+            padding: 8px;
+            box-shadow: 0 16px 36px rgba(108, 92, 231, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ipad-device-camera {
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            transform: translateY(-50%);
+            width: 3.5px;
+            height: 3.5px;
+            background: #334155;
+            border-radius: 50%;
+            z-index: 5;
+        }
+        .ipad-device-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #000;
+        }
+        .ipad-device-screen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 📱 Screen 4 전용 iPhone 세로형 프레임 목업 (concept_4.jpg / 474x1024) */
         .iphone-mockup-wrapper {
             display: flex;
             align-items: center;
@@ -253,6 +302,7 @@
             .step-content { height: auto; padding: 40px 0; opacity: 1; } 
             .hero-graphic-card { max-width: 100%; border-radius: 20px; }
             .feature-visual-frame { max-width: 100%; border-radius: 20px; }
+            .ipad-device { border-radius: 18px; padding: 6px; }
             .iphone-device { height: 90%; border-radius: 28px; border-width: 6px; }
             .hero-section { padding-top: 120px; }
         }
@@ -305,27 +355,27 @@
                     
                     <!-- 스토리 뱃지 -->
                     <span class="badge hero-badge px-3 py-2 rounded-pill mb-3">
-                        👨‍👧‍👦 시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 앱
+                        👨‍👧‍👦 시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 앱[cite: 1]
                     </span>
                     
                     <!-- 메인 헤드라인 -->
                     <h1 class="hero-headline mb-4">
                         시계가 어렵던 아이가<br>
-                        <strong>스스로 퀴즈를 풀기 시작했어요!</strong>
+                        <strong>스스로 퀴즈를 풀기 시작했어요!</strong>[cite: 1]
                     </h1>
                     
                     <!-- 서브 카피 -->
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.1rem;">
-                        시곗바늘을 아무리 설명해도 이해하지 못하고 집중력이 흐트러지던 아이들...<br>
-                        <strong>신비한 동물 파트너(매쓰고치)</strong>를 깨우고 키우며 스스로 배우는 기쁨을 찾았습니다.<br>
-                        억지로 시키지 않아도 먼저 찾는 우리 아이 첫 수학 공부를 신나게 선물해 주세요.
+                        시곗바늘을 아무리 설명해도 이해하지 못하고 집중력이 흐트러지던 아이들...[cite: 1]<br>
+                        <strong>신비한 동물 파트너(매쓰고치)</strong>를 깨우고 키우며 스스로 배우는 기쁨을 찾았습니다[cite: 1].<br>
+                        억지로 시키지 않아도 먼저 찾는 우리 아이 첫 수학 공부를 신나게 선물해 주세요[cite: 1].
                     </p>
 
                     <!-- 핵심 가치 불릿 리스트 -->
                     <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 파트너 진화:</strong> 매일 퀴즈를 풀고 별을 모아 알을 깨우는 자기주도 몰입</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>손으로 돌리는 직관적 시계:</strong> 바늘의 물리적 연동 원리로 5분 만에 마스터</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 사진과 실제 육성으로 북돋는 성취감</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 파트너 진화:</strong> 매일 퀴즈를 풀고 별을 모아 알을 깨우는 자기주도 몰입[cite: 1]</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>손으로 돌리는 직관적 시계:</strong> 바늘의 물리적 연동 원리로 5분 만에 마스터[cite: 1]</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 사진과 실제 육성으로 북돋는 성취감[cite: 1]</li>
                     </ul>
                     
                     <!-- CTA 버튼 및 심사 안내 -->
@@ -345,7 +395,7 @@
                     </div>
 
                     <div class="mt-4 text-muted small">
-                        🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate) 탑재
+                        🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate) 탑재[cite: 1, 2]
                     </div>
                 </div>
                 
@@ -383,17 +433,17 @@
                                      class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 3: 시계 읽기 탐험 & 1분 스피드 퀴즈 -->
-                            <div class="screen-content p-4" id="screen-3">
-                                <div class="text-center w-100">
-                                    <div class="fs-1 mb-2">⏰</div>
-                                    <h5 class="fw-bold mb-2">시계 읽기 탐험 & 1분 퀴즈</h5>
-                                    <p class="text-muted small mb-3">시침과 분침의 연동 규칙을 손가락으로 돌려보며 직관적으로 깨우쳐요.</p>
-                                    <div class="p-4 bg-light rounded-4 border mx-auto" style="max-width: 320px;">
-                                        <div class="fs-2 fw-bold text-primary">03 : 45</div>
-                                        <div class="badge bg-primary text-white mt-2 px-3 py-2 rounded-pill">4시 15분 전 마스터</div>
+                            <!-- Screen 3: 아이패드 목업 프레임 적용 (concept_5.png) -->
+                            <div class="screen-content" id="screen-3">
+                                <div class="ipad-mockup-wrapper">
+                                    <div class="ipad-device">
+                                        <div class="ipad-device-camera"></div>
+                                        <div class="ipad-device-screen">
+                                            <img src="mathgotchi/concept_5.png" 
+                                                 alt="매쓰고치 - 초침부터 태양과 달까지 이해하는 시간의 원리" 
+                                                 class="ipad-device-screen-img">
+                                        </div>
                                     </div>
-                                    <div class="mt-3 text-danger fw-bold small">🔥 1분 스피드 퀴즈로 콤보 폭발 보너스 획득!</div>
                                 </div>
                             </div>
 
@@ -420,15 +470,15 @@
                             <div class="feature-icon-box bg-success bg-opacity-10 text-success">
                                 <i class="bi bi-egg-fried"></i>
                             </div>
-                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
-                            <h2 class="display-5 fw-bold mb-3">알을 깨고 진화하는<br>동물 친구들.</h2>
+                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장[cite: 2]</span>
+                            <h2 class="display-5 fw-bold mb-3">알을 깨고 진화하는<br>동물 친구들.[cite: 2]</h2>
                             <p class="lead text-muted mb-4">
-                                매일 퀴즈를 풀고 모은 과일로 파트너를 부화시키고 진화시켜요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
+                                매일 퀴즈를 풀고 모은 과일로 파트너를 부화시키고 진화시켜요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요[cite: 2].
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 파트너를 성장시키며 매일 스스로 앱을 켜는 변화</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움[cite: 3, 6]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착[cite: 3, 6]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 파트너를 성장시키며 매일 스스로 앱을 켜는 변화[cite: 1, 2]</li>
                             </ul>
                         </div>
                     </div>
@@ -439,34 +489,35 @@
                             <div class="feature-icon-box bg-purple bg-opacity-10 text-purple" style="background-color: #EDE9FE; color: #6C5CE7;">
                                 <i class="bi bi-mic-fill"></i>
                             </div>
-                            <span class="badge bg-purple text-white px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7;">세상에 단 하나뿐인 응원</span>
-                            <h2 class="display-5 fw-bold mb-3">엄마·아빠의 목소리와<br>표정으로 응원해요.</h2>
+                            <span class="badge bg-purple text-white px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7;">세상에 단 하나뿐인 응원[cite: 2]</span>
+                            <h2 class="display-5 fw-bold mb-3">엄마·아빠의 목소리와<br>표정으로 응원해요.[cite: 2]</h2>
                             <p class="lead text-muted mb-4">
-                                문제를 맞히거나 틀렸을 때 부모님의 사진과 음성이 나와요! 아이에게 가장 따뜻하고 특별한 동기부여를 선물하세요.
+                                문제를 맞히거나 틀렸을 때 부모님의 사진과 음성이 나와요! 아이에게 가장 따뜻하고 특별한 동기부여를 선물하세요[cite: 2].
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정답 & 오답 맞춤 표정 썸네일:</strong> 문제를 맞히거나 틀릴 때 부모님의 표정이 팡팡 팝업</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>생생한 육성 응원:</strong> 기계음 대신 엄마·아빠의 다정한 음성으로 북돋는 성취감</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정답 & 오답 맞춤 표정 썸네일:</strong> 문제를 맞히거나 틀릴 때 부모님의 표정이 팡팡 팝업[cite: 2, 4]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>생생한 육성 응원:</strong> 기계음 대신 엄마·아빠의 다정한 음성으로 북돋는 성취감[cite: 1, 2]</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% 안전한 온디바이스:</strong> 등록된 사진과 음성은 외부 서버 업로드 없이 기기 안에만 안전하게 보관</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Step 3: 시계 읽기 탐험 & 1분 스피드 퀴즈 -->
+                    <!-- Step 3: 시계와 시간 (1안 확정 문구 & concept_5.png iPad 목업) -->
                     <div class="step-content" data-index="3" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
                                 <i class="bi bi-clock-history"></i>
                             </div>
-                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">첫 번째 테마: 시계와 시간</span>
-                            <h2 class="display-5 fw-bold mb-3">직접 바늘을 돌리며<br>자연스럽게 익히는 시간.</h2>
+                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">첫 번째 테마: 시계와 시간[cite: 2]</span>
+                            <h2 class="display-5 fw-bold mb-3">초침부터 태양과 달까지,<br>손끝으로 이해하는 시간의 원리.</h2>
                             <p class="lead text-muted mb-4">
-                                단순 암기식이 아닌, 시침과 분침이 서로 맞물려 돌아가는 물리적 연동 규칙을 손가락 터치로 직접 조작하며 이해합니다.
+                                단순 암기식이 아닌, 초침·분침·시침이 서로 맞물려 돌아가는 시계의 물리적 연동 규칙과 하늘의 변화를 손가락으로 직접 조작하며 체득합니다.
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>낮과 밤의 변화 & '~분 전':</strong> 24시간 태양/달 주기와 헷갈리는 분전 읽기 완벽 정복</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>1분 스피드 퀴즈:</strong> 짧고 굵은 1분 도전과 콤보 폭발로 아이의 집중력과 순발력 극대화</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>실시간 명예의 전당:</strong> 가족 및 친구들과 함께 겨루는 랭킹왕 시스템</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>초침·분침·시침의 톱니 연동 원리:</strong> 초침 60초가 모여 분침 1분을 밀고, 분침 60분이 모여 시침 1시간을 이끄는 시간의 인과관계를 직관적으로 이해</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>태양과 달로 깨치는 24시간 & 오전·오후:</strong> 시곗바늘을 돌릴 때마다 태양과 달이 오르내리는 하늘의 변화를 보며 24시간 하루 주기와 오전/오후의 개념을 자연스럽게 습득</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헷갈리는 '~분 전' 완벽 정복:</strong> 정각부터 5분·1분 단위 눈금, 아이들이 가장 어려워하는 '몇 분 전' 읽기까지 단계별 마스터[cite: 3, 4]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>1분 스피드 퀴즈 & 명예의 전당:</strong> 1분 동안 펼쳐지는 짜릿한 연속 콤보 도전과 가족·친구가 함께 겨루는 랭킹왕 시스템[cite: 4]</li>
                             </ul>
                         </div>
                     </div>
@@ -477,15 +528,15 @@
                             <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
                                 <i class="bi bi-stars"></i>
                             </div>
-                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7일 무료 체험 & 정기 업데이트</span>
-                            <h2 class="display-5 fw-bold mb-3">시간과 시계는 첫 시작,<br>더 넓은 수학의 세계로!</h2>
+                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7일 무료 체험 & 정기 업데이트[cite: 2]</span>
+                            <h2 class="display-5 fw-bold mb-3">시간과 시계는 첫 시작,<br>더 넓은 수학의 세계로![cite: 2]</h2>
                             <p class="lead text-muted mb-4">
-                                시간과 시계는 매쓰고치의 첫 시작일 뿐입니다! 도형, 연산, 규칙, 측정 등 유아·초등 교과와 연계된 다양한 수학 개념과 퀴즈 모듈이 주기적으로 계속 추가됩니다.
+                                시간과 시계는 매쓰고치의 첫 시작일 뿐입니다[cite: 2]! 도형, 연산, 규칙, 측정 등 유아·초등 교과와 연계된 다양한 수학 개념과 퀴즈 모듈이 주기적으로 계속 추가됩니다[cite: 2, 5].
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>주기적인 신규 수학 테마 확장:</strong> 시계를 시작으로 계속 늘어나는 스마트 홈스쿨링 콘텐츠</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>부담 없는 7일 무료 체험:</strong> 가볍게 시작하고 아이가 먼저 찾는 즐거운 변화를 직접 확인해 보세요</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>안심 구독 & 손쉬운 해지:</strong> 부모 안심 게이트로 아이 오결제를 방지하며 언제든지 자유롭게 관리</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>주기적인 신규 수학 테마 확장:</strong> 시계를 시작으로 계속 늘어나는 스마트 홈스쿨링 콘텐츠[cite: 2, 5]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>부담 없는 7일 무료 체험:</strong> 가볍게 시작하고 아이가 먼저 찾는 즐거운 변화를 직접 확인해 보세요[cite: 1, 2]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>안심 구독 & 손쉬운 해지:</strong> 부모 안심 게이트로 아이 오결제를 방지하며 언제든지 자유롭게 관리[cite: 2]</li>
                             </ul>
                         </div>
                     </div>
@@ -502,8 +553,8 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 rounded-4 bg-light h-100 border">
                         <div class="fs-1 mb-2">🚫</div>
-                        <h5 class="fw-bold">100% 무광고 (Ad-Free)</h5>
-                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너/동영상 광고도 일절 싣지 않습니다.</p>
+                        <h5 class="fw-bold">100% 무광고 (Ad-Free)[cite: 1, 2]</h5>
+                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너/동영상 광고도 일절 싣지 않습니다[cite: 1, 2].</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -516,8 +567,8 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-4 rounded-4 bg-light h-100 border">
                         <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 잠금장치를 적용했습니다.</p>
+                        <h5 class="fw-bold">부모 안심 확인 (Parental Gate)[cite: 2]</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 잠금장치를 적용했습니다[cite: 2].</p>
                     </div>
                 </div>
             </div>
