@@ -15,7 +15,7 @@
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
     <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험, 7일 무료 체험까지!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
@@ -141,7 +141,7 @@
             background: #FFFFFF;
             border-radius: 26px;
             overflow: hidden;
-            box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.06);
             margin: 0 auto;
         }
         .hero-graphic-img {
@@ -149,9 +149,10 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            image-rendering: -webkit-optimize-contrast;
         }
 
-        /* 스티키 기능 소개 비주얼 카드 공통 */
+        /* 스티키 기능 소개 비주얼 카드 */
         .feature-visual-frame { 
             width: 100%; 
             max-width: 530px; 
@@ -162,6 +163,9 @@
             overflow: hidden; 
             box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06); 
             margin: 0 auto; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* 스티키 인터랙티브 섹션 */
@@ -180,122 +184,40 @@
             transition: opacity 0.5s ease-in-out; 
             background-color: white; 
             display: flex; 
-            flex-direction: column;
             align-items: center; 
             justify-content: center; 
             padding: 0;
+            overflow: hidden;
         }
         .screen-content.active { opacity: 1; z-index: 2; }
         
+        /* 순수 이미지 렌더링 스타일 */
         .screen-pure-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            image-rendering: -webkit-optimize-contrast;
+            transform: translateZ(0);
         }
 
-        /* 📱 Screen 3 전용 iPad 가로형 프레임 목업 (concept_5.png / 2732x2048 정밀 렌더링) */
-        .ipad-mockup-wrapper {
+        /* 세로형 이미지 전용 컨테이너 (concept_4.jpg) */
+        .screen-contain-bg {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            height: 100%;
             background: radial-gradient(circle at 50% 50%, #FAF5FF 0%, #EDE9FE 100%);
-            position: relative;
             padding: 16px;
-            box-sizing: border-box;
         }
-        .ipad-device {
-            width: 100%;
-            max-width: 480px;
-            aspect-ratio: 2732 / 2048;
-            background: #0F172A;
-            border-radius: 22px;
-            padding: 8px;
-            box-shadow: 0 16px 36px rgba(108, 92, 231, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.15);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-        }
-        .ipad-device-camera {
-            position: absolute;
-            top: 50%;
-            left: 2.5px;
-            transform: translateY(-50%);
-            width: 3.5px;
-            height: 3.5px;
-            background: #334155;
-            border-radius: 50%;
-            z-index: 5;
-        }
-        .ipad-device-screen {
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 2732 / 2048;
-            border-radius: 14px;
-            overflow: hidden;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ipad-device-screen-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .screen-contain-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(108, 92, 231, 0.2);
             image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-
-        /* 📱 Screen 4 전용 iPhone 세로형 프레임 목업 (concept_4.jpg / 474x1024) */
-        .iphone-mockup-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, #FAF5FF 0%, #EDE9FE 100%);
-            position: relative;
-            padding: 14px 20px;
-            box-sizing: border-box;
-        }
-        .iphone-device {
-            height: 94%;
-            aspect-ratio: 474 / 1024;
-            background: #0F172A;
-            border-radius: 34px;
-            border: 7px solid #1E293B;
-            box-shadow: 0 18px 40px rgba(108, 92, 231, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-        }
-        .iphone-notch {
-            position: absolute;
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 48px;
-            height: 13px;
-            background: #000000;
-            border-radius: 10px;
-            z-index: 10;
-        }
-        .iphone-screen-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            image-rendering: -webkit-optimize-contrast;
-            transform: translateZ(0);
         }
 
         .feature-icon-box {
@@ -316,8 +238,6 @@
             .step-content { height: auto; padding: 40px 0; opacity: 1; } 
             .hero-graphic-card { max-width: 100%; border-radius: 20px; }
             .feature-visual-frame { max-width: 100%; border-radius: 20px; }
-            .ipad-device { border-radius: 18px; padding: 6px; }
-            .iphone-device { height: 90%; border-radius: 28px; border-width: 6px; }
             .hero-section { padding-top: 120px; }
         }
     </style>
@@ -425,7 +345,7 @@
         </div>
     </section>
 
-    <!-- Sticky Interactive Features Section (4대 핵심 콘셉트) -->
+    <!-- Sticky Interactive Features Section (4대 핵심 콘셉트 - 순수 그래픽 렌더링) -->
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
@@ -447,29 +367,19 @@
                                      class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 3: 아이패드 목업 프레임 적용 (concept_5.png / 2732x2048 정밀 렌더링) -->
+                            <!-- Screen 3: 시계와 시간 원리 (concept_5.png / 2732x2048) -->
                             <div class="screen-content" id="screen-3">
-                                <div class="ipad-mockup-wrapper">
-                                    <div class="ipad-device">
-                                        <div class="ipad-device-camera"></div>
-                                        <div class="ipad-device-screen">
-                                            <img src="mathgotchi/concept_5.png" 
-                                                 alt="매쓰고치 - 초침부터 태양과 달까지 이해하는 시간의 원리" 
-                                                 class="ipad-device-screen-img">
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="mathgotchi/concept_5.png" 
+                                     alt="매쓰고치 - 초침부터 태양과 달까지 이해하는 시간의 원리" 
+                                     class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 4: 아이폰 목업 프레임 적용 (concept_4.jpg / 474x1024) -->
+                            <!-- Screen 4: 지속적인 수학 확장 & 7일 무료 체험 (concept_4.jpg / 474x1024) -->
                             <div class="screen-content" id="screen-4">
-                                <div class="iphone-mockup-wrapper">
-                                    <div class="iphone-device">
-                                        <div class="iphone-notch"></div>
-                                        <img src="mathgotchi/concept_4.jpg" 
-                                             alt="매쓰고치 - 더 넓은 수학의 세계 & 7일 무료 체험" 
-                                             class="iphone-screen-img">
-                                    </div>
+                                <div class="screen-contain-bg">
+                                    <img src="mathgotchi/concept_4.jpg" 
+                                         alt="매쓰고치 - 더 넓은 수학의 세계 & 7일 무료 체험" 
+                                         class="screen-contain-img">
                                 </div>
                             </div>
                         </div>
@@ -516,7 +426,7 @@
                         </div>
                     </div>
 
-                    <!-- Step 3: 시계와 시간 (1안 확정 문구 & concept_5.png iPad 목업) -->
+                    <!-- Step 3: 시계와 시간 (1안 확정 문구 & concept_5.png) -->
                     <div class="step-content" data-index="3" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
@@ -536,7 +446,7 @@
                         </div>
                     </div>
 
-                    <!-- Step 4: 지속적인 수학 개념 확장 & 7일 무료 체험 (concept_4.jpg / iPhone 목업) -->
+                    <!-- Step 4: 지속적인 수학 개념 확장 & 7일 무료 체험 (concept_4.jpg) -->
                     <div class="step-content" data-index="4" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
