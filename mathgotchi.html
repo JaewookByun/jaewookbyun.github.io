@@ -15,7 +15,7 @@
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
     <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 직접 돌리는 시곗바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
@@ -173,22 +173,22 @@
             display: block;
         }
 
-        /* 스마트폰 목업 프레임 */
-        .phone-frame { 
-            width: 300px; 
-            height: 600px; 
-            background: #0F172A; 
-            border-radius: 44px; 
-            border: 10px solid #1E293B; 
+        /* 🌟 스티키 기능 소개 비주얼 카드 (4:3 대화면 최적화) */
+        .feature-visual-frame { 
+            width: 100%; 
+            max-width: 520px; 
+            aspect-ratio: 4 / 3; 
+            background: #FFFFFF; 
+            border-radius: 26px; 
             position: relative; 
             overflow: hidden; 
-            box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.3); 
+            box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06); 
             margin: 0 auto; 
         }
 
         /* 스티키 인터랙티브 섹션 */
         .sticky-container { position: relative; padding: 100px 0; }
-        .sticky-visual { position: sticky; top: 140px; height: 650px; display: flex; align-items: center; justify-content: center; }
+        .sticky-visual { position: sticky; top: 140px; height: 600px; display: flex; align-items: center; justify-content: center; }
         .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
         .step-content.active { opacity: 1; }
         
@@ -205,9 +205,17 @@
             flex-direction: column;
             align-items: center; 
             justify-content: center; 
-            padding: 24px;
+            padding: 0;
         }
         .screen-content.active { opacity: 1; z-index: 2; }
+        
+        /* 순수 이미지 전용 스타일 */
+        .screen-pure-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
         .feature-icon-box {
             width: 64px;
@@ -225,7 +233,7 @@
             .hero-headline { font-size: 2.3rem; } 
             .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 40px; } 
             .step-content { height: auto; padding: 40px 0; opacity: 1; } 
-            .phone-frame { width: 260px; height: 520px; } 
+            .feature-visual-frame { max-width: 100%; border-radius: 20px; }
             .ipad-frame-landscape { max-width: 100%; border-radius: 22px; padding: 8px; }
             .hero-section { padding-top: 120px; }
         }
@@ -322,7 +330,7 @@
                     </div>
                 </div>
                 
-                <!-- 우측 iPad Landscape 목업 프레임 (순수 캡처 이미지만 표시) -->
+                <!-- 우측 iPad Landscape 목업 프레임 -->
                 <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="ipad-frame-landscape">
                         <div class="ipad-camera"></div>
@@ -341,56 +349,53 @@
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <!-- 모바일 비주얼 목업 -->
+                <!-- 비주얼 영역 (4:3 프레임 & 스크롤 동기화) -->
                 <div class="col-lg-6 order-lg-2">
                     <div class="sticky-visual">
-                        <div class="phone-frame bg-white">
+                        <div class="feature-visual-frame">
                             <!-- Screen 1: 시계 탐험 -->
-                            <div class="screen-content active" id="screen-1">
-                                <div class="text-center p-3">
+                            <div class="screen-content active p-4" id="screen-1">
+                                <div class="text-center w-100">
                                     <div class="fs-1 mb-2">⏰</div>
-                                    <h5 class="fw-bold">시계 읽기 탐험</h5>
-                                    <p class="text-muted small">시침과 분침의 연동 규칙을 손가락으로 돌려보며 직관적으로 깨우쳐요.</p>
-                                    <div class="p-3 bg-light rounded-4 border my-3">
-                                        <div class="fs-3 fw-bold text-primary">03 : 45</div>
-                                        <div class="badge bg-primary text-white mt-1">4시 15분 전</div>
+                                    <h5 class="fw-bold mb-2">시계 읽기 탐험</h5>
+                                    <p class="text-muted small mb-3">시침과 분침의 연동 규칙을 손가락으로 돌려보며 직관적으로 깨우쳐요.</p>
+                                    <div class="p-4 bg-light rounded-4 border mx-auto" style="max-width: 320px;">
+                                        <div class="fs-2 fw-bold text-primary">03 : 45</div>
+                                        <div class="badge bg-primary text-white mt-2 px-3 py-2 rounded-pill">4시 15분 전</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Screen 2: 1분 스피드 퀴즈 -->
+                            <!-- Screen 2: 펫 성장 시스템 (concept_2.jpg 2398x1792 원본 렌더링) -->
                             <div class="screen-content" id="screen-2">
-                                <div class="text-center p-3">
+                                <img src="mathgotchi/concept_2.jpg" 
+                                     alt="매쓰고치 펫 성장 시스템 - 알을 깨고 진화하는 동물 친구들" 
+                                     class="screen-pure-img">
+                            </div>
+
+                            <!-- Screen 3: 1분 스피드 퀴즈 -->
+                            <div class="screen-content p-4" id="screen-3">
+                                <div class="text-center w-100">
                                     <div class="fs-1 mb-2">⚡</div>
-                                    <h5 class="fw-bold">1분 시계 퀴즈 & 콤보</h5>
-                                    <p class="text-muted small">시간 제한 속에 정답을 맞히고 연속 콤보 대폭발 보너스를 획득하세요!</p>
-                                    <div class="p-3 bg-danger bg-opacity-10 rounded-4 border border-danger my-3">
-                                        <div class="fw-bold text-danger">🔥 7연속 정답 콤보 폭발!!</div>
-                                        <div class="small text-muted mt-1">+14 황금 망고 획득 ✨</div>
+                                    <h5 class="fw-bold mb-2">1분 시계 퀴즈 & 콤보</h5>
+                                    <p class="text-muted small mb-3">시간 제한 속에 정답을 맞히고 연속 콤보 대폭발 보너스를 획득하세요!</p>
+                                    <div class="p-4 bg-danger bg-opacity-10 rounded-4 border border-danger mx-auto" style="max-width: 320px;">
+                                        <div class="fw-bold text-danger fs-5">🔥 7연속 정답 콤보 폭발!!</div>
+                                        <div class="text-muted mt-2 small">+14 황금 망고 획득 ✨</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Screen 3: 부모 음성 스튜디오 -->
-                            <div class="screen-content" id="screen-3">
-                                <div class="text-center p-3">
+                            <!-- Screen 4: 부모 음성 스튜디오 -->
+                            <div class="screen-content p-4" id="screen-4">
+                                <div class="text-center w-100">
                                     <div class="fs-1 mb-2">🎙️</div>
-                                    <h5 class="fw-bold">엄마·아빠 목소리 응원</h5>
-                                    <p class="text-muted small">문제를 맞히거나 틀렸을 때 등록된 부모님의 표정 사진과 응원 목소리가 재생됩니다.</p>
-                                    <div class="p-3 bg-purple bg-opacity-10 rounded-4 border my-3 text-start" style="background-color: #FAF5FF;">
-                                        <div class="fw-bold small text-purple" style="color: #6C5CE7;">🎯 정답 맞췄을 때:</div>
+                                    <h5 class="fw-bold mb-2">엄마·아빠 목소리 응원</h5>
+                                    <p class="text-muted small mb-3">문제를 맞히거나 틀렸을 때 등록된 부모님의 표정 사진과 응원 목소리가 재생됩니다.</p>
+                                    <div class="p-3 bg-purple bg-opacity-10 rounded-4 border mx-auto text-start" style="background-color: #FAF5FF; max-width: 340px;">
+                                        <div class="fw-bold small mb-1" style="color: #6C5CE7;">🎯 정답 맞췄을 때:</div>
                                         <div class="text-muted small">"우리 아이 최고! 정말 잘 맞췄어!"</div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Screen 4: 파트너 펫 육성 -->
-                            <div class="screen-content" id="screen-4">
-                                <div class="text-center p-3">
-                                    <div class="fs-1 mb-2">🐉</div>
-                                    <h5 class="fw-bold">5단계 파트너 진화</h5>
-                                    <p class="text-muted small">째깍알 &rarr; 아기망고새 &rarr; 망고룡 &rarr; 시간의 청룡 &rarr; 마스터 드래곤!</p>
-                                    <div class="badge bg-success px-3 py-2 rounded-pill my-2">🌱 시간의 청룡 (4단계)</div>
                                 </div>
                             </div>
                         </div>
@@ -399,7 +404,7 @@
 
                 <!-- 텍스트 설명 단계 -->
                 <div class="col-lg-6 order-lg-1">
-                    <!-- Step 1 -->
+                    <!-- Step 1: 시계 읽기 -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
@@ -416,8 +421,27 @@
                         </div>
                     </div>
 
-                    <!-- Step 2 -->
+                    <!-- Step 2: 펫 성장 시스템 (요청 키워드 적용) -->
                     <div class="step-content" data-index="2" data-aos="fade-up">
+                        <div class="ps-lg-5">
+                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
+                                <i class="bi bi-egg-fried"></i>
+                            </div>
+                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
+                            <h2 class="display-5 fw-bold mb-3">알을 깨고 진화하는<br>동물 친구들.</h2>
+                            <p class="lead text-muted mb-4">
+                                매일 퀴즈를 풀고 모은 과일로 파트너를 부화시키고 진화시켜요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
+                            </p>
+                            <ul class="list-unstyled text-muted lead feature-list">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>4단계 진화의 설렘:</strong> 째깍 태엽알(LEVEL 1)부터 삐죽 껍질새, 꼬마 푸른비룡, 전설의 시간의 청룡까지!</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 펫을 키우며 매일 먼저 앱을 켜는 놀라운 변화</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: 1분 스피드 퀴즈 -->
+                    <div class="step-content" data-index="3" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-danger bg-opacity-10 text-danger">
                                 <i class="bi bi-lightning-charge-fill"></i>
@@ -433,8 +457,8 @@
                         </div>
                     </div>
 
-                    <!-- Step 3 -->
-                    <div class="step-content" data-index="3" data-aos="fade-up">
+                    <!-- Step 4: 부모 목소리 스튜디오 -->
+                    <div class="step-content" data-index="4" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-purple bg-opacity-10 text-purple" style="background-color: #EDE9FE; color: #6C5CE7;">
                                 <i class="bi bi-mic-fill"></i>
@@ -445,19 +469,6 @@
                             </p>
                             <p class="text-muted">
                                 * 등록된 사진과 음성 데이터는 외부 서버로 절대 전송되지 않으며, 부모님의 기기 내부에만 안전하게 보관됩니다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
-                                <i class="bi bi-egg-fried"></i>
-                            </div>
-                            <h2 class="display-5 fw-bold mb-3">공부하고 별을 모아<br>알을 깨고 진화하는 펫.</h2>
-                            <p class="lead text-muted mb-4">
-                                퀴즈를 풀며 모은 과일과 별로 신비한 알에 온기를 주고 태엽을 감아 깨워보세요. 5단계로 진화하는 파트너 드래곤이 아이에게 주도적인 배움의 동기를 부여합니다.
                             </p>
                         </div>
                     </div>
