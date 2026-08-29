@@ -136,7 +136,7 @@
         /* iPad Landscape 목업 프레임 */
         .ipad-frame-landscape {
             width: 100%;
-            max-width: 530px;
+            max-width: 540px;
             aspect-ratio: 4 / 3;
             background: #0F172A;
             border-radius: 28px;
@@ -327,7 +327,8 @@
                     <div class="ipad-frame-landscape">
                         <div class="ipad-camera"></div>
                         <div class="ipad-screen">
-                            <img src="/mathgotchi/hero_ipad_preview.png" 
+                            <!-- 1600x1200 컨셉 이미지 적용 (로드 실패 시 폴백 UI 표시) -->
+                            <img src="/mathgotchi/concept_1.png" 
                                  alt="Mathgotchi iPad Experience" 
                                  class="ipad-screen-img"
                                  onerror="this.style.display='none'; document.getElementById('ipad-fallback-ui').style.display='flex';">
