@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>크로노핏(ChronoFit) - AI 인터벌 운동 & 바코드 식단 관리</title>
+    <title>크로노핏(ChronoFit) - AI 인터벌 운동 & 바코드 식단 관리 | ChronoLab</title>
     <meta name="description" content="스마트 워치 연동 운동부터 바코드 식단 기록까지. 크로노핏(ChronoFit)으로 일상의 피트니스 데이터를 체계적으로 관리하고 분석하세요.">
-    <meta name="keywords" content="크로노핏, ChronoFit, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, 다중 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, 오운완, Nutri-Score, 에너지 밸런스">
+    <meta name="keywords" content="크로노핏, ChronoFit, 매쓰고치, Mathgotchi, 다이어트 앱, 식단 기록, 인터벌 타이머, 고강도 인터벌 트레이닝, HIIT, 갤럭시 워치, 갤럭시 핏, Wear OS, 스마트 밴드, 바코드 스캔, 다중 스캔, AI 분석, 데이터 오버레이, 헬스 커넥트, 데이터 통합, 오운완, Nutri-Score, 에너지 밸런스">
     <meta name="author" content="ChronoLab">
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
 
@@ -58,12 +58,52 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        :root { --brand-color: #4f46e5; --brand-dark: #3730a3; --text-main: #1f2937; --bg-light: #f3f4f6; }
+        :root { 
+            --brand-color: #4f46e5; 
+            --brand-dark: #3730a3; 
+            --text-main: #1f2937; 
+            --bg-light: #f3f4f6; 
+            --mathgotchi-color: #6C5CE7;
+        }
         body { font-family: 'Pretendard', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
-        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        
+        /* 🌟 신작 매쓰고치 상단 프로모션 배너 */
+        .top-promo-banner {
+            background: linear-gradient(90deg, #6C5CE7 0%, #4F46E5 100%);
+            color: #ffffff;
+            font-size: 0.88rem;
+            padding: 9px 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .top-promo-banner a {
+            color: #FFEAA7;
+            text-decoration: underline;
+            font-weight: 800;
+            margin-left: 8px;
+        }
+
+        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-app-switcher .nav-link {
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+        .nav-app-switcher .nav-link.active {
+            background-color: #eef2ff;
+            color: var(--brand-color);
+        }
+        .nav-app-switcher .nav-link:hover:not(.active) {
+            color: var(--brand-color);
+            background-color: #f8fafc;
+        }
+
         .btn-brand { background-color: var(--brand-color); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
         .btn-brand:hover { background-color: var(--brand-dark); transform: translateY(-2px); color: white; }
-        .hero-section { padding-top: 120px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
+        .hero-section { padding-top: 140px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
         .hero-headline { font-size: 3.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .phone-frame { width: 300px; height: 600px; background: #000; border-radius: 40px; border: 12px solid #1f2937; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); margin: 0 auto; z-index: 10; }
         .shorts-embed { width: 100%; height: 100%; border: none; object-fit: cover; }
@@ -79,18 +119,48 @@
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
         .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
 
-        @media (max-width: 768px) { .hero-headline { font-size: 2.5rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
+        @media (max-width: 768px) { 
+            .hero-headline { font-size: 2.5rem; } 
+            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } 
+            .step-content { height: auto; padding: 40px 0; opacity: 1; } 
+            .phone-frame { width: 260px; height: 520px; } 
+            .hero-section { padding-top: 130px; }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+
+    <!-- 🌟 신작 매쓰고치 출시 홍보 상단 배너 -->
+    <div class="top-promo-banner fixed-top">
+        <span>✨ <strong>신작 출시:</strong> 우리 아이를 위한 첫 수학 & 시계 공부 앱 <strong>매쓰고치(Mathgotchi)</strong>가 출시되었습니다!</span>
+        <a href="mathgotchi.html">매쓰고치 바로가기 &rarr;</a>
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="top: 38px;">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
-                <img src="supsiki.png" alt="ChronoFit Logo" width="40" height="40" class="me-2">
-                크로노핏
+                <img src="supsiki.png" alt="ChronoFit Logo" width="38" height="38" class="me-2">
+                ChronoLab
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <!-- 🌟 앱 스위처 탭 메뉴 -->
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index-kr.html">🏋️ 크로노핏</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mathgotchi.html">
+                            ⏰ 매쓰고치
+                            <span class="badge bg-danger rounded-pill ms-1" style="font-size: 0.65rem;">NEW</span>
+                        </a>
+                    </li>
+                </ul>
+
                 <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
                     <div class="dropdown me-2">
                         <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 한국어</button>
@@ -128,6 +198,7 @@
         </div>
     </nav>
 
+    <!-- ChronoFit Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
@@ -147,6 +218,7 @@
         </div>
     </section>
 
+    <!-- Sticky Features Section -->
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
@@ -380,6 +452,32 @@
         </div>
     </section>
 
+    <!-- 🌟 패밀리 신작 앱 교차 홍보 카드 (Mathgotchi Spotlight) -->
+    <section class="py-5" style="background: linear-gradient(180deg, #F8FAFC 0%, #EDE9FE 100%);">
+        <div class="container py-4">
+            <div class="row align-items-center bg-white p-4 p-lg-5 rounded-4 shadow-sm border">
+                <div class="col-lg-3 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 140px; border: 1px solid #e2e8f0;">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-up">
+                    <span class="badge text-white px-3 py-2 rounded-pill mb-2" style="background-color: #6C5CE7;">
+                        🐣 크로노랩의 새로운 에듀테크 신작
+                    </span>
+                    <h3 class="fw-bold mb-2 text-dark">매쓰고치 (Mathgotchi)</h3>
+                    <p class="text-muted mb-0">
+                        시계가 어렵던 두 아이를 위해 아빠가 직접 정성껏 만든 100% 무광고 안심 배움터. 손으로 돌리는 시계 탐험, 1분 스피드 퀴즈, 그리고 부모님의 실제 목소리 응원으로 깨우는 신비한 동물 파트너를 만나보세요!
+                    </p>
+                </div>
+                <div class="col-lg-3 text-center text-lg-end" data-aos="fade-left">
+                    <a href="mathgotchi.html" class="btn btn-lg rounded-pill px-4 text-white fw-bold shadow-sm" style="background-color: #6C5CE7;">
+                        매쓰고치 둘러보기 &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 커뮤니티 섹션 -->
     <section class="py-5" style="background-color: #f8fafc;">
         <div class="container">
             <div class="row justify-content-center">
@@ -396,7 +494,8 @@
         </div>
     </section>
 
-    <footer class="bg-white py-5">
+    <!-- 푸터 -->
+    <footer class="bg-white py-5 border-top">
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
@@ -428,6 +527,7 @@
                         entry.target.classList.add('active');
                         const index = entry.target.getAttribute('data-index');
                         screens.forEach(s => s.classList.remove('active'));
+                        
                         const activeScreen = document.getElementById(`screen-${index}`);
                         if(activeScreen) activeScreen.classList.add('active');
                     }
