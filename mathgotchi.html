@@ -25,10 +25,10 @@
     <meta property="og:url" content="https://www.chronolaboratory.com/mathgotchi.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
     <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터.">
-    <meta property="og:image" content="/mathgotchi/icon_1024_white.png">
+    <meta property="og:image" content="mathgotchi/icon_1024_white.png">
 
     <!-- Favicon -->
-    <link rel="icon" href="/mathgotchi/icon_1024_white.png" type="image/png">
+    <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     
     <!-- CSS 라이브러리 (Bootstrap 5, Bootstrap Icons, AOS, Fonts) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -140,7 +140,7 @@
             aspect-ratio: 4 / 3;
             background: #0F172A;
             border-radius: 28px;
-            padding: 11px;
+            padding: 10px;
             box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
             position: relative;
             margin: 0 auto;
@@ -160,7 +160,7 @@
             height: 100%;
             border-radius: 18px;
             overflow: hidden;
-            background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
+            background: #000;
             position: relative;
             display: flex;
             align-items: center;
@@ -237,7 +237,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <img src="/mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="38" height="38" class="me-2 rounded-3">
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="38" height="38" class="me-2 rounded-3">
                 ChronoLab
             </a>
 
@@ -322,47 +322,14 @@
                     </div>
                 </div>
                 
-                <!-- 우측 iPad Landscape 목업 프레임 -->
+                <!-- 우측 iPad Landscape 목업 프레임 (순수 캡처 이미지만 표시) -->
                 <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="ipad-frame-landscape">
                         <div class="ipad-camera"></div>
                         <div class="ipad-screen">
-                            <!-- 1600x1200 컨셉 이미지 적용 (로드 실패 시 폴백 UI 표시) -->
-                            <img src="/mathgotchi/concept_1.png" 
+                            <img src="mathgotchi/concept_1.png" 
                                  alt="Mathgotchi iPad Experience" 
-                                 class="ipad-screen-img"
-                                 onerror="this.style.display='none'; document.getElementById('ipad-fallback-ui').style.display='flex';">
-                            
-                            <div id="ipad-fallback-ui" class="w-100 h-100 p-4 d-flex flex-column justify-content-between text-start" style="display: none; background: linear-gradient(135deg, #FAF5FF 0%, #FFFFFF 100%);">
-                                <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="/mathgotchi/icon_1024_white.png" width="34" height="34" class="rounded-3 me-2">
-                                        <div>
-                                            <div class="fw-bold small">매쓰고치 공부방</div>
-                                            <div class="text-muted" style="font-size: 0.7rem;">아이패드 가로 대화면 최적화</div>
-                                        </div>
-                                    </div>
-                                    <span class="badge bg-purple text-white px-2 py-1 rounded-pill" style="background-color: #6C5CE7; font-size: 0.7rem;">Lv.1 째깍알 보살피기</span>
-                                </div>
-                                <div class="row align-items-center py-2">
-                                    <div class="col-6 text-center">
-                                        <div style="font-size: 4rem;">🐣</div>
-                                        <div class="fw-bold text-primary small">신비한 파트너가 깨어나는 중!</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="p-3 bg-white rounded-3 shadow-sm border">
-                                            <div class="fw-bold text-danger small mb-1">🔥 1분 시계 퀴즈 도전!</div>
-                                            <div class="progress mb-2" style="height: 6px;">
-                                                <div class="progress-bar bg-warning" style="width: 75%;"></div>
-                                            </div>
-                                            <div class="text-muted" style="font-size: 0.68rem;">오늘 모은 황금 망고: 14개 ✨</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-2 bg-light rounded-2 text-center text-muted" style="font-size: 0.72rem;">
-                                    🎙️ 부모님 응원: <em>"우리 아이 최고! 스스로 정말 잘하네!"</em>
-                                </div>
-                            </div>
+                                 class="ipad-screen-img">
                         </div>
                     </div>
                 </div>
