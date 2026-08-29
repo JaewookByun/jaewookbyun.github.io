@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 직접 돌리는 시곗바늘 조작, 1분 스피드 퀴즈, 부모님 목소리 응원까지!">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 직접 돌리는 시곗바늘 조작부터 1분 스피드 퀴즈, 부모님 목소리 응원, 디지털 펫 육성까지!">
     <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
@@ -133,40 +133,18 @@
             -webkit-text-fill-color: transparent; 
         }
 
-        /* iPad Landscape 목업 프레임 */
-        .ipad-frame-landscape {
+        /* Hero 메인 비주얼 카드 */
+        .hero-graphic-card {
             width: 100%;
-            max-width: 540px;
+            max-width: 550px;
             aspect-ratio: 4 / 3;
-            background: #0F172A;
-            border-radius: 28px;
-            padding: 10px;
-            box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
-            position: relative;
+            background: #FFFFFF;
+            border-radius: 26px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(108, 92, 231, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.06);
             margin: 0 auto;
         }
-        .ipad-camera {
-            position: absolute;
-            top: 50%;
-            left: 4px;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 4px;
-            background: #334155;
-            border-radius: 50%;
-        }
-        .ipad-screen {
-            width: 100%;
-            height: 100%;
-            border-radius: 18px;
-            overflow: hidden;
-            background: #000;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ipad-screen-img {
+        .hero-graphic-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -209,7 +187,6 @@
         }
         .screen-content.active { opacity: 1; z-index: 2; }
         
-        /* 순수 이미지 렌더링용 스타일 */
         .screen-pure-img {
             width: 100%;
             height: 100%;
@@ -233,8 +210,8 @@
             .hero-headline { font-size: 2.3rem; } 
             .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 40px; } 
             .step-content { height: auto; padding: 40px 0; opacity: 1; } 
+            .hero-graphic-card { max-width: 100%; border-radius: 20px; }
             .feature-visual-frame { max-width: 100%; border-radius: 20px; }
-            .ipad-frame-landscape { max-width: 100%; border-radius: 22px; padding: 8px; }
             .hero-section { padding-top: 120px; }
         }
     </style>
@@ -330,15 +307,12 @@
                     </div>
                 </div>
                 
-                <!-- 우측 iPad Landscape 목업 프레임 -->
+                <!-- 우측 Hero 메인 그래픽 카드 (concept_1.jpg) -->
                 <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="ipad-frame-landscape">
-                        <div class="ipad-camera"></div>
-                        <div class="ipad-screen">
-                            <img src="mathgotchi/concept_1.png" 
-                                 alt="Mathgotchi iPad Experience" 
-                                 class="ipad-screen-img">
-                        </div>
+                    <div class="hero-graphic-card">
+                        <img src="mathgotchi/concept_1.jpg" 
+                             alt="Mathgotchi Concept" 
+                             class="hero-graphic-img">
                     </div>
                 </div>
             </div>
