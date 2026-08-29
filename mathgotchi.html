@@ -15,7 +15,7 @@
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
     <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 진화하는 동물 파트너, 부모님 목소리 응원, 주기적으로 확장되는 수학 테마까지! 7일 무료 체험으로 시작하세요.">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, 아이패드학습, ChronoLab, 무광고 어린이앱, 1:1 문의">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 파트너성장, 부모응원, 7일무료체험, 아이폰목업, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
@@ -151,7 +151,7 @@
             display: block;
         }
 
-        /* 스티키 기능 소개 비주얼 카드 */
+        /* 스티키 기능 소개 비주얼 카드 공통 */
         .feature-visual-frame { 
             width: 100%; 
             max-width: 530px; 
@@ -194,6 +194,47 @@
             display: block;
         }
 
+        /* 📱 Screen 4 전용 iPhone 세로형 프레임 목업 (474x1024 비율) */
+        .iphone-mockup-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #FAF5FF 0%, #EDE9FE 100%);
+            position: relative;
+            padding: 14px 20px;
+        }
+        .iphone-device {
+            height: 94%;
+            aspect-ratio: 474 / 1024;
+            background: #0F172A;
+            border-radius: 34px;
+            border: 7px solid #1E293B;
+            box-shadow: 0 18px 40px rgba(108, 92, 231, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .iphone-notch {
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 13px;
+            background: #000000;
+            border-radius: 10px;
+            z-index: 10;
+        }
+        .iphone-screen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .feature-icon-box {
             width: 64px;
             height: 64px;
@@ -212,6 +253,7 @@
             .step-content { height: auto; padding: 40px 0; opacity: 1; } 
             .hero-graphic-card { max-width: 100%; border-radius: 20px; }
             .feature-visual-frame { max-width: 100%; border-radius: 20px; }
+            .iphone-device { height: 90%; border-radius: 28px; border-width: 6px; }
             .hero-section { padding-top: 120px; }
         }
     </style>
@@ -323,7 +365,7 @@
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <!-- 비주얼 영역 (4:3 프레임 & 스크롤 동기화) -->
+                <!-- 비주얼 영역 (스크롤 동기화) -->
                 <div class="col-lg-6 order-lg-2">
                     <div class="sticky-visual">
                         <div class="feature-visual-frame">
@@ -355,11 +397,16 @@
                                 </div>
                             </div>
 
-                            <!-- Screen 4: 지속 확장 수학 커리큘럼 & 7일 무료 체험 (concept_4.jpg) -->
+                            <!-- Screen 4: 아이폰 목업 프레임 적용 (concept_4.jpg / 474x1024) -->
                             <div class="screen-content" id="screen-4">
-                                <img src="mathgotchi/concept_4.jpg" 
-                                     alt="매쓰고치 - 끊임없이 확장되는 수학 탐험 & 7일 무료 체험" 
-                                     class="screen-pure-img">
+                                <div class="iphone-mockup-wrapper">
+                                    <div class="iphone-device">
+                                        <div class="iphone-notch"></div>
+                                        <img src="mathgotchi/concept_4.jpg" 
+                                             alt="매쓰고치 - 더 넓은 수학의 세계 & 7일 무료 체험" 
+                                             class="iphone-screen-img">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -424,7 +471,7 @@
                         </div>
                     </div>
 
-                    <!-- Step 4: 지속적인 수학 개념 확장 & 7일 무료 체험 (concept_4.jpg) -->
+                    <!-- Step 4: 지속적인 수학 개념 확장 & 7일 무료 체험 (concept_4.jpg / iPhone 목업) -->
                     <div class="step-content" data-index="4" data-aos="fade-up">
                         <div class="ps-lg-5">
                             <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
