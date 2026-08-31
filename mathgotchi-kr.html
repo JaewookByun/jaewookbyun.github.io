@@ -328,6 +328,13 @@
                         </a>
                     </div>
 
+<div class="text-center text-lg-start mb-4">
+    <button type="button" class="btn btn-outline-success rounded-pill px-4 py-2 fw-bold shadow-sm d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#androidAlphaModal">
+        <i class="bi bi-android2 fs-5"></i>
+        <span>📱 안드로이드 폰을 사용하시나요? (유료 기능 무료 체험)</span>
+    </button>
+</div>
+                    
                     <div class="mt-4 text-muted small">
                         🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate) 탑재
                     </div>
@@ -518,6 +525,130 @@
         </div>
     </section>
 
+<!-- Android Closed Alpha 안내 모달 -->
+<div class="modal fade" id="androidAlphaModal" tabindex="-1" aria-labelledby="androidAlphaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4 border-0 shadow">
+            
+            <!-- 모달 헤더 -->
+            <div class="modal-header border-0 pb-0 pt-4 px-4">
+                <div>
+                    <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">
+                        🎁 안드로이드 얼리버드 특별 혜택
+                    </span>
+                    <h4 class="modal-title fw-bold text-dark" id="androidAlphaModalLabel">
+                        안드로이드에서 매쓰고치를 무료로 먼저 만나보세요!
+                    </h4>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- 모달 본문 -->
+            <div class="modal-body px-4 py-3">
+                <div class="p-3 bg-light rounded-3 mb-4 text-muted small" style="line-height: 1.7;">
+                    👨‍👧‍👦 <strong>안녕하세요! 아이들을 위해 매쓰고치를 개발한 아빠입니다.</strong><br>
+                    현재 Google Play 공식 출시 전 <strong>비공개 알파 테스트</strong>를 진행 중입니다. 구글의 테스트 정책상 <strong>설치 과정이 조금 까다롭고 번거로우실 수 있습니다.</strong><br>
+                    귀한 시간을 내어 참여해 주시는 분들께 감사의 마음을 담아, <strong>정식 출시 전까지 모든 유료 기능을 비용 청구 없이(0원) 무료로 이용</strong>하실 수 있도록 열어두었습니다. 아래 4단계를 차근차근 따라 해 주세요!
+                </div>
+
+                <!-- 4단계 가이드 -->
+                <div class="row g-3">
+                    
+                    <!-- 1단계: 테스터 그룹 가입 -->
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-primary rounded-circle px-2 py-1">1</span>
+                                    <strong class="text-dark">테스터 그룹 가입</strong>
+                                </div>
+                                <p class="text-muted small mb-2">
+                                    스토어 다운로드 권한을 얻기 위해 테스터 그룹에 가입합니다. <strong>[그룹 참여]</strong> 버튼을 눌러주세요.
+                                </p>
+                            </div>
+                            <a href="https://groups.google.com/g/mathgotchi-testers" target="_blank" class="btn btn-outline-primary btn-sm w-100 fw-bold mt-2">
+                                ① 테스터 그룹 가입하기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2단계: 테스터 되기 수락 -->
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-primary rounded-circle px-2 py-1">2</span>
+                                    <strong class="text-dark">테스터 참여 수락</strong>
+                                </div>
+                                <p class="text-muted small mb-2">
+                                    초대 화면에서 파란색 <strong>[Become a tester]</strong> (또는 테스터 되기) 버튼을 클릭합니다.
+                                </p>
+                            </div>
+                            <a href="https://play.google.com/apps/testing/com.chronolab.wooagong" target="_blank" class="btn btn-outline-success btn-sm w-100 fw-bold mt-2">
+                                ② 테스터 수락하기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3단계: Play 스토어 다운로드 -->
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-primary rounded-circle px-2 py-1">3</span>
+                                    <strong class="text-dark">앱 다운로드 받기</strong>
+                                </div>
+                                <p class="text-muted small mb-2">
+                                    Google Play 스토어로 이동하여 <strong>매쓰고치(Mathgotchi)</strong> 앱을 설치합니다.
+                                </p>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-outline-dark btn-sm w-100 fw-bold mt-2">
+                                ③ Play 스토어에서 앱 받기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4단계: 무료 테스트 정기결제 -->
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between" style="border-left: 3px solid #6C5CE7 !important;">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge text-white rounded-circle px-2 py-1" style="background-color: #6C5CE7;">4</span>
+                                    <strong class="text-dark">정기결제 (비용 청구 0원)</strong>
+                                </div>
+                                <p class="text-muted small mb-2">
+                                    앱 내에서 결제를 진행하셔도 <strong>'테스트 결제 모드'</strong>로 동작하여 <strong>실제 비용이 일절 청구되지 않습니다.</strong>
+                                </p>
+                            </div>
+                            <div class="bg-light text-center py-1 rounded text-secondary small fw-bold mt-2">
+                                💳 테스트 카드 연동 (청구 금액 ₩0)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 안내 및 주의사항 -->
+                <div class="alert alert-warning border-0 d-flex align-items-center gap-2 mt-3 mb-0 p-2 text-dark small">
+                    <i class="bi bi-exclamation-triangle-fill text-warning fs-5"></i>
+                    <span><strong>주의:</strong> 1단계 구글 그룹스에 가입한 <strong>구글 계정</strong>과 휴대폰 Play 스토어의 <strong>로그인 계정</strong>이 일치해야 앱 설치가 가능합니다.</span>
+                </div>
+            </div>
+
+            <!-- 모달 푸터 -->
+            <div class="modal-footer border-0 pt-0 pb-4 px-4 d-flex justify-content-between">
+                <span class="small text-muted">
+                    진행 중 막히시면 언제든 문의주세요 👉
+                </span>
+                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm">
+                    <i class="bi bi-chat-fill me-1"></i> 카카오톡 1:1 문의
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
     <!-- 푸터 (terms-mathgotchi.html / privacy-mathgotchi.html 연결 완료) -->
     <footer class="bg-white py-5 border-top">
         <div class="container text-center">
