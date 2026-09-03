@@ -220,8 +220,15 @@
             transform: translateY(-3px); 
             box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2) !important; 
         }
-        .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
-        .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
+        
+        /* 🌐 언어 선택 드롭다운 스타일 (모바일 좌측 잘림 완벽 해결) */
+        .scrollable-dropdown { 
+            max-height: 380px; 
+            overflow-y: auto; 
+            min-width: 220px;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
 
         /* 📱 모바일 및 태블릿 세로모드 전용 최적화 (991.98px 이하) */
         @media (max-width: 991.98px) { 
@@ -241,12 +248,19 @@
             
             .phone-frame { width: 250px; height: 500px; border-radius: 36px; border-width: 10px; } 
             .mobile-w-100 { width: 100%; }
+
+            /* 모바일에서 드롭다운이 화면 왼쪽 바깥으로 나가지 않도록 고정 */
+            .navbar-collapse .dropdown-menu {
+                left: 0 !important;
+                right: auto !important;
+                max-width: calc(100vw - 36px);
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 고정 상단 통합 헤더 (배너와 메뉴의 겹침 원천 방지) -->
+    <!-- 고정 상단 통합 헤더 -->
     <header class="fixed-header-wrapper">
         <div class="top-promo-banner">
             <span>✨ <strong>신작 출시:</strong> 우리 아이를 위한 첫 수학 & 시계 공부 앱 <strong>매쓰고치(Mathgotchi)</strong>가 출시되었습니다!</span>
@@ -278,9 +292,10 @@
                     </ul>
 
                     <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
-                        <div class="dropdown me-2">
+                        <!-- 언어 드롭다운: 모바일 start, PC lg-end 적용 -->
+                        <div class="dropdown me-2 position-relative">
                             <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 한국어</button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
+                            <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 scrollable-dropdown">
                                 <li><a class="dropdown-item active" href="index-kr.html">한국어 (Korean)</a></li>
                                 <li><a class="dropdown-item" href="index.html">English</a></li>
                                 <li><a class="dropdown-item" href="index-jp.html">日本語 (일본어)</a></li>
@@ -670,7 +685,6 @@
         AOS.init({ duration: 800, once: true });
 
         document.addEventListener('DOMContentLoaded', () => {
-            // 데스크톱 화면(992px 이상)에서만 스티키 이미지 전환 인터랙션 활성화
             if (window.innerWidth >= 992) {
                 const steps = document.querySelectorAll('.step-content');
                 const screens = document.querySelectorAll('.screen-content');
