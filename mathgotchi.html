@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mathgotchi - Hands-On Clock & Early Math Adventures | ChronoLab</title>
-    <meta name="description" content="A safe, kid-friendly learning haven created by a dad for his own children who struggled with telling time. Hatch & evolve digital pet companions, record custom parent cheers, and master time-telling from second hands to day-and-night cycles!">
+    <meta name="description" content="A safe, kid-friendly learning haven created by a dad for his own children who struggled with telling time. Hatch & grow animal friends, record custom parent cheers, and master time-telling from second hands to day-and-night cycles!">
     <meta name="keywords" content="Mathgotchi, telling time, clock learning, learn to tell time, early math, elementary math, virtual pets, digital pet evolution, parent voice cheer, 7 day free trial, ChronoLab, ad free kids app, parental gate">
     <meta name="author" content="ChronoLab">
     
@@ -46,7 +46,14 @@
             --text-sub: #475569;
             --bg-light: #F8FAFC; 
         }
-        body { font-family: 'Inter', 'Pretendard', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
+        
+        body { 
+            font-family: 'Inter', 'Pretendard', sans-serif; 
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            background-color: #fff;
+            overflow-wrap: break-word;
+        }
         
         /* Navigation Bar */
         .navbar { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
@@ -101,12 +108,14 @@
             background: #EDE9FE;
             color: #5B21B6;
             border: 1px dashed #7C3AED;
-            padding: 11px 22px;
+            padding: 11px 20px;
             border-radius: 50px;
             font-weight: 800;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             cursor: default;
+            font-size: 0.92rem;
         }
 
         /* Hero Section */
@@ -122,6 +131,8 @@
             font-weight: 800;
             font-size: 0.9rem;
             border: 1px solid #DDD6FE;
+            display: inline-block;
+            line-height: 1.5;
         }
         .hero-headline { 
             font-size: 3.2rem; 
@@ -133,7 +144,7 @@
             -webkit-text-fill-color: transparent; 
         }
 
-        /* Hero Main Graphic Card (concept_en_1.jpg) */
+        /* Hero Graphic Card */
         .hero-graphic-card {
             width: 100%;
             max-width: 560px;
@@ -152,55 +163,58 @@
             image-rendering: -webkit-optimize-contrast;
         }
 
-        /* Sticky Visual Showcase Card */
+        /* Feature Visual Frame */
         .feature-visual-frame { 
             width: 100%; 
             max-width: 530px; 
             aspect-ratio: 4 / 3; 
             background: #FFFFFF; 
-            border-radius: 26px; 
+            border-radius: 24px; 
             position: relative; 
             overflow: hidden; 
-            box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06); 
+            box-shadow: 0 16px 40px -10px rgba(108, 92, 231, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.06); 
             margin: 0 auto; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Sticky Interactive Layout */
-        .sticky-container { position: relative; padding: 100px 0; }
-        .sticky-visual { position: sticky; top: 140px; height: 600px; display: flex; align-items: center; justify-content: center; }
-        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
-        .step-content.active { opacity: 1; }
-        
-        .screen-content { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            opacity: 0; 
-            transition: opacity 0.5s ease-in-out; 
-            background-color: white; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            padding: 0;
-            overflow: hidden;
         }
-        .screen-content.active { opacity: 1; z-index: 2; }
-        
+
+        /* Desktop Sticky Layout (992px and up) */
+        @media (min-width: 992px) {
+            .sticky-container { position: relative; padding: 100px 0; }
+            .sticky-visual { position: sticky; top: 140px; height: 600px; display: flex; align-items: center; justify-content: center; }
+            .step-content { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
+            .step-content.active { opacity: 1; }
+            
+            .screen-content { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                opacity: 0; 
+                transition: opacity 0.5s ease-in-out; 
+                background-color: white; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                padding: 0; 
+                overflow: hidden; 
+            }
+            .screen-content.active { opacity: 1; z-index: 2; }
+            .feature-visual-mobile { display: none !important; }
+        }
+
+        /* Image Rendering Styles */
         .screen-pure-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
             image-rendering: -webkit-optimize-contrast;
-            transform: translateZ(0);
         }
 
-        /* Vertical Image Frame (concept_en_4.jpg) */
+        /* Vertical Image Container (concept_en_4.jpg) */
         .screen-contain-bg {
             width: 100%;
             height: 100%;
@@ -220,24 +234,44 @@
         }
 
         .feature-icon-box {
-            width: 64px;
-            height: 64px;
-            border-radius: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 18px;
         }
         .feature-list i { font-size: 1.25rem; color: var(--brand-purple); }
 
-        @media (max-width: 768px) { 
-            .hero-headline { font-size: 2.2rem; } 
-            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 40px; } 
-            .step-content { height: auto; padding: 40px 0; opacity: 1; } 
-            .hero-graphic-card { max-width: 100%; border-radius: 20px; }
-            .feature-visual-frame { max-width: 100%; border-radius: 20px; }
-            .hero-section { padding-top: 120px; }
+        /* Mobile & Tablet Vertical Optimization (991.98px and below) */
+        @media (max-width: 991.98px) { 
+            .hero-section { padding-top: 110px; padding-bottom: 60px; }
+            .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
+            
+            .desktop-sticky-wrapper { display: none !important; }
+            
+            .feature-visual-mobile { 
+                display: flex !important; 
+                margin-top: 20px;
+                margin-bottom: 24px;
+                max-width: 100%;
+                border-radius: 20px;
+            }
+            
+            .sticky-container { padding: 50px 0; }
+            .step-content { 
+                height: auto !important; 
+                padding: 40px 0 !important; 
+                opacity: 1 !important; 
+                border-bottom: 1px dashed #E2E8F0;
+            }
+            .step-content:last-child { border-bottom: none; }
+            .step-title { font-size: 1.8rem !important; }
+            
+            .hero-graphic-card { max-width: 100%; border-radius: 20px; margin-bottom: 25px; }
+            .mobile-w-100 { width: 100%; }
         }
     </style>
 </head>
@@ -247,17 +281,17 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="38" height="38" class="me-2 rounded-3">
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3">
                 ChronoLab
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- App Switcher Tabs -->
-                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">🏋️ ChronoFit</a>
                     </li>
@@ -266,10 +300,10 @@
                     </li>
                 </ul>
 
-                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                    <!-- Direct Support Link -->
+                <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
+                    <!-- Support Link -->
                     <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3 shadow-sm d-flex align-items-center">
-                        <i class="bi bi-chat-fill me-1"></i> 1:1 Support
+                        <i class="bi bi-chat-fill me-1"></i> Support
                     </a>
 
                     <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
@@ -284,56 +318,64 @@
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
+                <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0" data-aos="fade-up">
                     
                     <!-- Story Badge -->
-                    <span class="badge hero-badge px-3 py-2 rounded-pill mb-3">
+                    <span class="badge hero-badge px-3 py-2 rounded-pill mb-3 text-wrap text-start">
                         👨‍👧‍👦 Crafted with Love by a Father for His Kids Who Struggled with Time
                     </span>
                     
                     <!-- Main Headline -->
-                    <h1 class="hero-headline mb-4">
+                    <h1 class="hero-headline mb-3">
                         From Struggling with Clocks to<br>
                         <strong>Solving Quizzes on Their Own!</strong>
                     </h1>
                     
                     <!-- Subcopy -->
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        No matter how many times clock hands were explained, abstract concepts felt overwhelming and focus quickly faded away...<br>
-                        Everything changed when they discovered their <strong>magical pet companion (Mathgotchi)</strong>.<br>
-                        By nurturing and leveling up their digital partner, learning time transformed into a fun, self-driven adventure.
+                        No matter how many times clock hands were explained, abstract concepts felt overwhelming and focus quickly faded away...<br class="d-none d-md-inline">
+                        Everything changed when they discovered their <strong>magical animal friends</strong>.<br class="d-none d-md-inline">
+                        By nurturing and leveling up their digital companions, learning time transformed into a fun, self-driven adventure.
                     </p>
 
                     <!-- Core Value Bullets -->
                     <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Pet Evolution System:</strong> Solve daily challenges to hatch eggs and watch digital companions grow.</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Hands-On Interactive Clocks:</strong> Master interlocking clock mechanics in just 5 minutes with real physical rotation.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Growing Animal Friends:</strong> Solve daily challenges to hatch eggs and watch companions grow with self-driven focus.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Hands-On Interactive Clock:</strong> Master interlocking clock gear mechanics in just 5 minutes with real physical rotation.</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Mom & Dad's Voice Cheers:</strong> Boost confidence with custom reaction photos and warm voice recordings from parents.</li>
                     </ul>
                     
-                    <!-- CTA Buttons & Review Status -->
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-center">
-                        <div class="btn-in-review shadow-sm">
+                    <!-- CTA Buttons -->
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
+                        <div class="btn-in-review shadow-sm text-center">
                             <i class="bi bi-apple me-2 fs-5"></i>
-                            <span>Currently in App Store Review</span>
+                            <span>App Store Review in Progress</span>
                         </div>
                         
-                        <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg shadow-sm d-inline-flex align-items-center">
+                        <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg shadow-sm d-inline-flex justify-content-center align-items-center">
                             <i class="bi bi-chat-dots-fill me-2 fs-5"></i> Contact Support
                         </a>
                         
-                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4 text-center">
                             Explore Features
                         </a>
                     </div>
 
-                    <div class="mt-4 text-muted small">
-                        🛡️ 100% Ad-Free &bull; Zero Data Collection &bull; Math-Based Parental Gate Included
+                    <!-- Android Early Access Modal Trigger Button -->
+                    <div class="text-center text-lg-start mb-4">
+                        <button type="button" class="btn btn-outline-success rounded-pill px-3 py-2 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center gap-2 text-wrap mobile-w-100" data-bs-toggle="modal" data-bs-target="#androidAlphaModal" style="font-size: 0.92rem;">
+                            <i class="bi bi-android2 fs-5 flex-shrink-0"></i>
+                            <span>📱 Try Free Early Access on Android ($0 Cost)</span>
+                        </button>
+                    </div>
+                    
+                    <div class="text-muted small">
+                        🛡️ 100% Ad-Free &bull; Zero Data Collection &bull; Kid-Safe Parental Gate Included
                     </div>
                 </div>
                 
                 <!-- Hero Graphic Card (concept_en_1.jpg) -->
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
                     <div class="hero-graphic-card">
                         <img src="mathgotchi/concept_en_1.jpg" 
                              alt="Mathgotchi App Concept Overview" 
@@ -348,32 +390,33 @@
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <!-- Visual Showcase (Synchronized Scroll) -->
-                <div class="col-lg-6 order-lg-2">
+                
+                <!-- Desktop Sticky Visual Area -->
+                <div class="col-lg-6 order-lg-2 desktop-sticky-wrapper">
                     <div class="sticky-visual">
                         <div class="feature-visual-frame">
-                            <!-- Screen 1: Pet Evolution System (concept_en_2.jpg) -->
+                            <!-- Screen 1: Pet Growth System -->
                             <div class="screen-content active" id="screen-1">
                                 <img src="mathgotchi/concept_en_2.jpg" 
                                      alt="Mathgotchi Pet Growth System - Hatch and Evolve Animal Friends" 
                                      class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 2: Parent Voice & Reaction Photos (concept_en_3.jpg) -->
+                            <!-- Screen 2: Parent Voice & Reaction Photos -->
                             <div class="screen-content" id="screen-2">
                                 <img src="mathgotchi/concept_en_3.jpg" 
                                      alt="Mathgotchi - Cheered on by Mom and Dad's Voice and Photo Reactions" 
                                      class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 3: Clock & Time Mechanics (concept_en_5.png) -->
+                            <!-- Screen 3: Clock & Time Mechanics -->
                             <div class="screen-content" id="screen-3">
                                 <img src="mathgotchi/concept_en_5.png" 
                                      alt="Mathgotchi - Understanding Time Mechanics from Second Hands to Sun and Moon" 
                                      class="screen-pure-img">
                             </div>
 
-                            <!-- Screen 4: Expanding Math Curriculum & 7-Day Free Trial (concept_en_4.jpg) -->
+                            <!-- Screen 4: Expanding Math Curriculum & 7-Day Free Trial -->
                             <div class="screen-content" id="screen-4">
                                 <div class="screen-contain-bg">
                                     <img src="mathgotchi/concept_en_4.jpg" 
@@ -385,58 +428,77 @@
                     </div>
                 </div>
 
-                <!-- Step-by-Step Feature Descriptions -->
+                <!-- Text Descriptions & Mobile Inline Cards -->
                 <div class="col-lg-6 order-lg-1">
-                    <!-- Step 1: Pet Growth System (concept_en_2.jpg) -->
+                    
+                    <!-- Step 1: Pet Growth System -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="feature-icon-box bg-success bg-opacity-10 text-success">
                                 <i class="bi bi-egg-fried"></i>
                             </div>
                             <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">Rewarding Pet Evolution</span>
-                            <h2 class="display-5 fw-bold mb-3">Hatch and Evolve<br>Adorable Animal Friends.</h2>
-                            <p class="lead text-muted mb-4">
-                                Solve daily math challenges and feed your companion delicious fruit treats! Watch learning motivation blossom through the excitement of growth and care.
+                            <h2 class="display-6 fw-bold mb-3 step-title">Hatch and Evolve<br>Adorable Animal Friends.</h2>
+                            
+                            <!-- Mobile Inline Visual Frame -->
+                            <div class="feature-visual-frame feature-visual-mobile">
+                                <img src="mathgotchi/concept_en_2.jpg" alt="Mathgotchi Pet Growth System" class="screen-pure-img">
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
+                                Solve daily math challenges and collect sweet fruits to hatch and grow your animal friends! Watch learning motivation blossom through the excitement of growth and care.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Mystery Creature Hatching:</strong> Care for egg companions with quiz points and celebrate when they hatch.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Heartwarming Interactions:</strong> Warm the egg, wind gears, feed treats, and build meaningful bonds.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Self-Motivated Learning:</strong> Evolving digital partners turns daily practice into an exciting reward rather than a chore.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Self-Motivated Learning:</strong> Growing animal friends as a reward turns daily practice into an exciting habit rather than a chore.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Step 2: Parent Studio (concept_en_3.jpg) -->
+                    <!-- Step 2: Parent Voice & Reaction Studio -->
                     <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="feature-icon-box bg-purple bg-opacity-10 text-purple" style="background-color: #EDE9FE; color: #6C5CE7;">
+                        <div class="ps-lg-4">
+                            <div class="feature-icon-box" style="background-color: #EDE9FE; color: #6C5CE7;">
                                 <i class="bi bi-mic-fill"></i>
                             </div>
-                            <span class="badge bg-purple text-white px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7;">A One-of-a-Kind Cheerleader</span>
-                            <h2 class="display-5 fw-bold mb-3">Cheered on by Mom & Dad's<br>Real Voice and Smiles.</h2>
-                            <p class="lead text-muted mb-4">
+                            <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7; color: white;">A One-of-a-Kind Cheerleader</span>
+                            <h2 class="display-6 fw-bold mb-3 step-title">Cheered on by Mom & Dad's<br>Real Voice and Smiles.</h2>
+                            
+                            <!-- Mobile Inline Visual Frame -->
+                            <div class="feature-visual-frame feature-visual-mobile">
+                                <img src="mathgotchi/concept_en_3.jpg" alt="Parent Voice & Reaction" class="screen-pure-img">
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
                                 Fun parent photos and recorded voice cheers play dynamically on correct and incorrect answers! Deliver the most personal encouragement imaginable.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Custom Reaction Photos:</strong> Pop-up selfies celebrate high-fives on correct answers and offer warm smiles on retries.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Heartfelt Voice Cheers:</strong> Replace generic audio cues with the loving voices children cherish most.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% Sandboxed On-Device Privacy:</strong> Recorded audio and photos remain strictly on your local device and are NEVER sent to external servers.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% On-Device Privacy:</strong> Recorded audio and photos remain strictly on your local device and are NEVER sent to external servers.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Step 3: Clock & Time Mechanics (concept_en_5.png) -->
+                    <!-- Step 3: Clock & Time Mechanics -->
                     <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
                                 <i class="bi bi-clock-history"></i>
                             </div>
                             <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">Theme 01: Clocks & Time</span>
-                            <h2 class="display-5 fw-bold mb-3">From Second Hands to Sun & Moon,<br>Hands-On Discovery of Time.</h2>
-                            <p class="lead text-muted mb-4">
+                            <h2 class="display-6 fw-bold mb-3 step-title">From Second Hands to Sun & Moon,<br>Hands-On Discovery of Time.</h2>
+                            
+                            <!-- Mobile Inline Visual Frame -->
+                            <div class="feature-visual-frame feature-visual-mobile">
+                                <img src="mathgotchi/concept_en_5.png" alt="Clock Mechanics Discovery" class="screen-pure-img">
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
                                 Beyond dry memorization. Children explore how gear-linked second, minute, and hour hands interact, and watch the sky shift from morning sun to moonlit night.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Interlocking Gear Mechanics:</strong> 60 seconds rotate 1 minute, and 60 minutes advance 1 hour—making time's cause and effect crystal clear.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Sun & Moon 24-Hour Cycle:</strong> Rotating clock hands triggers dynamic sky shifts, effortlessly teaching AM/PM and 24-hour daily rhythms.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Mastering Tricky "Minutes Before":</strong> Progressive mastery from exact hours and 5-minute ticks to challenging "minutes to" concepts.</li>
@@ -445,24 +507,33 @@
                         </div>
                     </div>
 
-                    <!-- Step 4: Expanding Curriculum & 7-Day Free Trial (concept_en_4.jpg) -->
+                    <!-- Step 4: Expanding Curriculum & 7-Day Free Trial -->
                     <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
                                 <i class="bi bi-stars"></i>
                             </div>
                             <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7-Day Free Trial & Regular Updates</span>
-                            <h2 class="display-5 fw-bold mb-3">Telling Time Is Just the Start,<br>Step into a Wider World of Math!</h2>
-                            <p class="lead text-muted mb-4">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Telling Time Is Just the Start,<br>Step into a Wider World of Math!</h2>
+                            
+                            <!-- Mobile Inline Visual Frame -->
+                            <div class="feature-visual-frame feature-visual-mobile">
+                                <div class="screen-contain-bg">
+                                    <img src="mathgotchi/concept_en_4.jpg" alt="Expanding Math Curriculum" class="screen-contain-img">
+                                </div>
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
                                 Time-telling is only our first milestone! Curriculums covering shapes, arithmetic, patterns, and measurements are continuously added to empower early childhood learning.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Ever-Growing Math Themes:</strong> An expanding suite of smart homeschool learning modules building on foundational math.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Zero-Risk 7-Day Free Trial:</strong> Explore with complete peace of mind and watch your child ask to practice math on their own.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Kid-Safe Subscriptions & Easy Cancellation:</strong> Protected by math-based Parental Gates against accidental taps, managed anytime via iOS settings.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Kid-Safe Subscriptions & Easy Management:</strong> Protected by math-based Parental Gates against accidental taps, managed anytime via device settings.</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -470,28 +541,28 @@
 
     <!-- Parent Peace of Mind Section -->
     <section class="py-5 bg-white border-top">
-        <div class="container py-4 text-center">
-            <h2 class="fw-bold mb-4">3 Core Promises for Parent Peace of Mind</h2>
-            <div class="row g-4 justify-content-center">
+        <div class="container py-3 text-center">
+            <h2 class="fw-bold mb-4" style="font-size: 1.9rem;">3 Core Promises for Parent Peace of Mind</h2>
+            <div class="row g-3 g-md-4 justify-content-center">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 rounded-4 bg-light h-100 border">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
                         <div class="fs-1 mb-2">🚫</div>
-                        <h5 class="fw-bold">100% Ad-Free</h5>
-                        <p class="text-muted small mb-0">No banner pop-ups, rewarded video ads, or third-party tracking links to distract young learners or navigate away.</p>
+                        <h5 class="fw-bold mb-2">100% Ad-Free</h5>
+                        <p class="text-muted small mb-0">No banner pop-ups, rewarded video ads, or third-party links to distract young learners or interrupt focus.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4 rounded-4 bg-light h-100 border">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
                         <div class="fs-1 mb-2">🔒</div>
-                        <h5 class="fw-bold">On-Device Privacy</h5>
-                        <p class="text-muted small mb-0">No account creation required. Custom parent photos and voice recordings remain safely inside your device's sandbox.</p>
+                        <h5 class="fw-bold mb-2">On-Device Privacy</h5>
+                        <p class="text-muted small mb-0">No account creation required. Custom parent photos and voice recordings remain safely encrypted inside your device.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 rounded-4 bg-light h-100 border">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
                         <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold">Kid-Safe Parental Gate</h5>
-                        <p class="text-muted small mb-0">Multiplication-based adult verification gates prevent unintended purchases or external navigation by young children.</p>
+                        <h5 class="fw-bold mb-2">Kid-Safe Parental Gate</h5>
+                        <p class="text-muted small mb-0">Math-based adult verification gates prevent unintended purchases or external navigation by young children.</p>
                     </div>
                 </div>
             </div>
@@ -504,12 +575,12 @@
             <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 760px;" data-aos="zoom-in">
                 <div class="fs-1 mb-2">💬</div>
                 <h3 class="fw-bold mb-2 text-dark">Direct Support & Inquiries</h3>
-                <p class="text-muted mb-4">
-                    Have questions about app features, subscription management, error reports, or suggestions for new learning modules?<br>
-                    Reach out anytime and our team will get back to you promptly.
+                <p class="text-muted mb-4" style="line-height: 1.7; font-size: 0.95rem;">
+                    Have questions about app features, subscription management, error reports, or suggestions for new learning modules?<br class="d-none d-md-inline">
+                    Reach out anytime and our development team will get back to you promptly.
                 </p>
                 <div class="d-flex justify-content-center">
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg px-5 shadow-sm d-inline-flex align-items-center">
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg px-4 px-md-5 shadow-sm d-inline-flex align-items-center">
                         <i class="bi bi-chat-fill me-2 fs-5"></i> Open 1:1 Support &rarr;
                     </a>
                 </div>
@@ -517,6 +588,112 @@
         </div>
     </section>
 
+    <!-- Android Closed Alpha Modal (3-Step Guide) -->
+    <div class="modal fade" id="androidAlphaModal" tabindex="-1" aria-labelledby="androidAlphaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content rounded-4 border-0 shadow">
+                
+                <!-- Modal Header -->
+                <div class="modal-header border-0 pb-0 pt-4 px-4">
+                    <div>
+                        <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">
+                            🎁 Android Early Bird Special Access
+                        </span>
+                        <h4 class="modal-title fw-bold text-dark" id="androidAlphaModalLabel" style="font-size: 1.25rem;">
+                            Experience Mathgotchi for Free on Android!
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body px-4 py-3">
+                    <div class="p-3 bg-light rounded-3 mb-3 text-muted small" style="line-height: 1.7;">
+                        👨‍👧‍👦 <strong>Hello! I'm a dad who developed Mathgotchi for my kids.</strong><br>
+                        We are currently running a <strong>Closed Alpha Test</strong> prior to the official Google Play launch. Due to Google's testing policy, <strong>the setup process requires a few quick steps.</strong><br>
+                        Until the official release, all premium features are completely free ($0) with no payment required. Please follow the 3 simple steps below!
+                    </div>
+
+                    <!-- 3-Step Guide (3 Equal Columns) -->
+                    <div class="row g-3">
+                        
+                        <!-- Step 1: Join Tester Group -->
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <span class="badge bg-primary rounded-circle px-2 py-1">1</span>
+                                        <strong class="text-dark">Join Tester Group</strong>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        Join our Google Group to get store download permissions. Click the <strong>[Join group]</strong> button.
+                                    </p>
+                                </div>
+                                <a href="https://groups.google.com/g/mathgotchi-testers" target="_blank" class="btn btn-outline-primary btn-sm w-100 fw-bold mt-2">
+                                    ① Join Group &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Accept Tester Invite -->
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <span class="badge bg-primary rounded-circle px-2 py-1">2</span>
+                                        <strong class="text-dark">Accept Tester Invite</strong>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        On the invitation screen, click the blue <strong>[Become a tester]</strong> button.
+                                    </p>
+                                </div>
+                                <a href="https://play.google.com/apps/testing/com.chronolab.wooagong" target="_blank" class="btn btn-outline-success btn-sm w-100 fw-bold mt-2">
+                                    ② Accept Invite &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Download on Play Store -->
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <span class="badge bg-primary rounded-circle px-2 py-1">3</span>
+                                        <strong class="text-dark">Download on Store</strong>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        Head to Google Play to install <strong>Mathgotchi</strong> and begin your adventure right away.
+                                    </p>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-outline-dark btn-sm w-100 fw-bold mt-2">
+                                    ③ Get the App &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Notice & Caution -->
+                    <div class="alert alert-warning border-0 d-flex align-items-center gap-2 mt-3 mb-0 p-2 text-dark small">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-5 flex-shrink-0"></i>
+                        <span><strong>Note:</strong> The Google account used to join the Google Group (Step 1) must match the account logged into your phone's Play Store.</span>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer border-0 pt-0 pb-4 px-4 d-flex justify-content-between align-items-center">
+                    <span class="small text-muted">
+                        Need assistance? Reach out anytime 👉
+                    </span>
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm">
+                        <i class="bi bi-chat-fill me-1"></i> Contact Support
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
     <!-- Footer -->
     <footer class="bg-white py-5 border-top">
         <div class="container text-center">
@@ -541,31 +718,34 @@
         AOS.init({ duration: 800, once: true });
 
         document.addEventListener('DOMContentLoaded', () => {
-            const steps = document.querySelectorAll('.step-content');
-            const screens = document.querySelectorAll('.screen-content');
+            // Run desktop sticky scroll observer only on large screens
+            if (window.innerWidth >= 992) {
+                const steps = document.querySelectorAll('.step-content');
+                const screens = document.querySelectorAll('.screen-content');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '-50% 0px -50% 0px',
-                threshold: 0
-            };
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '-40% 0px -40% 0px',
+                    threshold: 0
+                };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        steps.forEach(s => s.classList.remove('active'));
-                        entry.target.classList.add('active');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            steps.forEach(s => s.classList.remove('active'));
+                            entry.target.classList.add('active');
 
-                        const index = entry.target.getAttribute('data-index');
-                        screens.forEach(s => s.classList.remove('active'));
-                        
-                        const activeScreen = document.getElementById(`screen-${index}`);
-                        if(activeScreen) activeScreen.classList.add('active');
-                    }
-                });
-            }, observerOptions);
+                            const index = entry.target.getAttribute('data-index');
+                            screens.forEach(s => s.classList.remove('active'));
+                            
+                            const activeScreen = document.getElementById(`screen-${index}`);
+                            if(activeScreen) activeScreen.classList.add('active');
+                        }
+                    });
+                }, observerOptions);
 
-            steps.forEach(step => observer.observe(step));
+                steps.forEach(step => observer.observe(step));
+            }
         });
     </script>
 </body>
