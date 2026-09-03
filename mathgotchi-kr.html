@@ -18,11 +18,11 @@
     <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의">
     <meta name="author" content="ChronoLab">
     
-    <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi.html">
+    <link rel="canonical" href="https://www.chronolaboratory.com/mathgotchi-kr.html">
 
     <!-- Open Graph (SNS 공유 카드) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.chronolaboratory.com/mathgotchi.html">
+    <meta property="og:url" content="https://www.chronolaboratory.com/mathgotchi-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
     <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. 7일 무료 체험으로 시작해보세요.">
     <meta property="og:image" content="mathgotchi/icon_1024_white.png">
@@ -76,7 +76,7 @@
             background-color: #F8FAFC;
         }
 
-        /* 버튼 공통 스타일 */
+        /* 버튼 스타일 */
         .btn-purple { 
             background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%); 
             color: white; 
@@ -181,7 +181,7 @@
             justify-content: center; 
         }
 
-        /* PC용 스티키 레이아웃 설정 (992px 이상) */
+        /* PC용 스티키 레이아웃 (992px 이상) */
         @media (min-width: 992px) {
             .sticky-container { position: relative; padding: 100px 0; }
             .sticky-visual { position: sticky; top: 140px; height: 600px; display: flex; align-items: center; justify-content: center; }
@@ -205,7 +205,6 @@
             }
             .screen-content.active { opacity: 1; z-index: 2; }
             
-            /* PC에서는 각 스텝 내부 인라인 이미지 숨김 */
             .feature-visual-mobile { display: none !important; }
         }
 
@@ -218,7 +217,7 @@
             image-rendering: -webkit-optimize-contrast;
         }
 
-        /* 세로형 이미지 전용 컨테이너 (concept_4.jpg) */
+        /* 세로형 이미지 전용 컨테이너 */
         .screen-contain-bg {
             width: 100%;
             height: 100%;
@@ -254,10 +253,8 @@
             .hero-section { padding-top: 110px; padding-bottom: 60px; }
             .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
             
-            /* PC용 스티키 비주얼 영역 숨김 */
             .desktop-sticky-wrapper { display: none !important; }
             
-            /* 모바일 인라인 비주얼 카드 노출 */
             .feature-visual-mobile { 
                 display: flex !important; 
                 margin-top: 20px;
@@ -277,18 +274,16 @@
             .step-title { font-size: 1.8rem !important; }
             
             .hero-graphic-card { max-width: 100%; border-radius: 20px; margin-bottom: 25px; }
-            
-            /* 모바일 전용 버튼 너비 & 줄바꿈 최적화 */
             .mobile-w-100 { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 상단 네비게이션 -->
+    <!-- 상단 네비게이션 (한글 페이지 전용 라우팅 적용) -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
                 <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3">
                 ChronoLab
             </a>
@@ -298,13 +293,13 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- 상단 제품군 탭 전환 -->
+                <!-- 상단 제품군 탭 전환: index-kr.html / mathgotchi-kr.html -->
                 <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">🏋️ ChronoFit</a>
+                        <a class="nav-link" href="index-kr.html">🏋️ ChronoFit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="mathgotchi.html">⏰ Mathgotchi</a>
+                        <a class="nav-link active" href="mathgotchi-kr.html">⏰ Mathgotchi</a>
                     </li>
                 </ul>
 
@@ -330,18 +325,18 @@
                     
                     <!-- 스토리 뱃지 -->
                     <span class="badge hero-badge px-3 py-2 rounded-pill mb-3 text-wrap text-start">
-                        👨‍👧‍👦 시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 앱
+                        👨‍👧‍👦 시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 앱[cite: 1]
                     </span>
                     
                     <!-- 메인 헤드라인 -->
                     <h1 class="hero-headline mb-3">
                         시계가 어렵던 아이가<br>
-                        <strong>스스로 퀴즈를 풀기 시작했어요!</strong>
+                        <strong>스스로 퀴즈를 풀기 시작했어요!</strong>[cite: 1]
                     </h1>
                     
                     <!-- 서브 카피 -->
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        시곗바늘을 아무리 설명해도 이해하지 못하고 집중력이 흐트러지던 아이들...<br class="d-none d-md-inline">
+                        시곗바늘을 아무리 설명해도 이해하지 못하고 집중력이 흐트러지던 아이들...<br class="d-none d-md-inline">[cite: 1]
                         <strong>신비한 동물 친구</strong>를 깨우고 키우며 스스로 배우는 기쁨을 찾았습니다.<br class="d-none d-md-inline">
                         억지로 시키지 않아도 먼저 찾는 우리 아이 첫 수학 공부를 선물해 주세요.
                     </p>
@@ -349,8 +344,8 @@
                     <!-- 핵심 가치 불릿 리스트 -->
                     <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 친구 키우기:</strong> 매일 퀴즈를 풀고 별을 모아 알을 깨우는 자기주도 몰입</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>손으로 돌리는 직관적 시계:</strong> 바늘의 물리적 연동 원리로 5분 만에 마스터</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 사진과 실제 육성으로 북돋는 성취감</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>손으로 돌리는 직관적 시계:</strong> 바늘의 물리적 연동 원리로 5분 만에 마스터[cite: 1]</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 사진과 실제 육성으로 북돋는 성취감[cite: 1]</li>
                     </ul>
                     
                     <!-- CTA 버튼 그룹 -->
@@ -378,7 +373,7 @@
                     </div>
                     
                     <div class="text-muted small">
-                        🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate)
+                        🛡️ 100% 무광고 &bull; 개인정보 미수집 &bull; 부모 안심 잠금(Parental Gate)[cite: 1, 2]
                     </div>
                 </div>
                 
@@ -445,8 +440,8 @@
                             <div class="feature-icon-box bg-success bg-opacity-10 text-success">
                                 <i class="bi bi-egg-fried"></i>
                             </div>
-                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">알을 깨고 진화하는<br>동물 친구들.</h2>
+                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장[cite: 2]</span>
+                            <h2 class="display-6 fw-bold mb-3 step-title">알을 깨고 진화하는<br>동물 친구들.[cite: 2]</h2>
                             
                             <!-- 모바일 세로모드 전용 비주얼 카드 -->
                             <div class="feature-visual-frame feature-visual-mobile">
@@ -457,8 +452,8 @@
                                 매일 퀴즈를 풀고 모은 과일로 동물 친구를 부화시키고 키워요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움[cite: 3]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착[cite: 3]</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 동물 친구를 성장시키며 매일 스스로 앱을 켜는 변화</li>
                             </ul>
                         </div>
@@ -470,8 +465,8 @@
                             <div class="feature-icon-box" style="background-color: #EDE9FE; color: #6C5CE7;">
                                 <i class="bi bi-mic-fill"></i>
                             </div>
-                            <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7; color: white;">세상에 단 하나뿐인 응원</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">엄마·아빠의 목소리와<br>표정으로 응원해요.</h2>
+                            <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7; color: white;">세상에 단 하나뿐인 응원[cite: 2]</span>
+                            <h2 class="display-6 fw-bold mb-3 step-title">엄마·아빠의 목소리와<br>표정으로 응원해요.[cite: 2]</h2>
                             
                             <!-- 모바일 세로모드 전용 비주얼 카드 -->
                             <div class="feature-visual-frame feature-visual-mobile">
@@ -479,11 +474,11 @@
                             </div>
 
                             <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                문제를 맞히거나 틀렸을 때 부모님의 사진과 음성이 나와요! 아이에게 가장 따뜻하고 특별한 동기부여를 선물하세요.
+                                문제를 맞히거나 틀렸을 때 부모님의 사진과 음성이 나와요! 아이에게 가장 따뜻하고 특별한 동기부여를 선물하세요[cite: 2].
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정답 & 오답 맞춤 표정 팝업:</strong> 문제를 맞히거나 틀릴 때 부모님의 표정이 팡팡 팝업</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>생생한 실제 육성 응원:</strong> 기계음 대신 엄마·아빠의 다정한 음성으로 북돋는 성취감</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정답 & 오답 맞춤 표정 팝업:</strong> 문제를 맞히거나 틀릴 때 부모님의 표정이 팡팡 팝업[cite: 2]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>생생한 실제 육성 응원:</strong> 기계음 대신 엄마·아빠의 다정한 음성으로 북돋는 성취감[cite: 1, 2]</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% 안전한 온디바이스:</strong> 등록된 사진과 음성은 외부 서버 전송 없이 기기 안에만 보관</li>
                             </ul>
                         </div>
@@ -495,7 +490,7 @@
                             <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
                                 <i class="bi bi-clock-history"></i>
                             </div>
-                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">첫 번째 테마: 시계와 시간</span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">첫 번째 테마: 시계와 시간[cite: 2]</span>
                             <h2 class="display-6 fw-bold mb-3 step-title">초침부터 태양과 달까지,<br>손끝으로 이해하는 시간 원리.</h2>
                             
                             <!-- 모바일 세로모드 전용 비주얼 카드 -->
@@ -509,7 +504,7 @@
                             <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>초침·분침·시침 톱니 연동:</strong> 초침 60초가 분침 1분을 밀고, 분침 60분이 시침 1시간을 이끄는 인과관계 습득</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>태양과 달로 깨치는 24시간:</strong> 시곗바늘을 돌릴 때마다 태양과 달이 오르내리며 오전/오후 개념 자연 체화</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헷갈리는 '~분 전' 완벽 정복:</strong> 정각부터 5분·1분 단위 눈금, 가장 어려워하는 '몇 분 전' 읽기 마스터</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헷갈리는 '~분 전' 완벽 정복:</strong> 정각부터 5분·1분 단위 눈금, 가장 어려워하는 '몇 분 전' 읽기 마스터[cite: 3]</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>1분 스피드 퀴즈 & 명예의 전당:</strong> 1분 동안 펼쳐지는 짜릿한 연속 콤보 도전과 가족 랭킹왕 시스템</li>
                             </ul>
                         </div>
@@ -521,8 +516,8 @@
                             <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
                                 <i class="bi bi-stars"></i>
                             </div>
-                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7일 무료 체험 & 정기 업데이트</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">시간과 시계는 첫 시작,<br>더 넓은 수학의 세계로!</h2>
+                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7일 무료 체험 & 정기 업데이트[cite: 2]</span>
+                            <h2 class="display-6 fw-bold mb-3 step-title">시간과 시계는 첫 시작,<br>더 넓은 수학의 세계로![cite: 2]</h2>
                             
                             <!-- 모바일 세로모드 전용 비주얼 카드 -->
                             <div class="feature-visual-frame feature-visual-mobile">
@@ -532,12 +527,12 @@
                             </div>
 
                             <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                시간과 시계는 매쓰고치의 첫 시작일 뿐입니다! 도형, 연산, 규칙, 측정 등 유아·초등 교과와 연계된 다양한 수학 개념과 퀴즈 모듈이 주기적으로 계속 추가됩니다.
+                                시간과 시계는 매쓰고치의 첫 시작일 뿐입니다! 도형, 연산, 규칙, 측정 등 유아·초등 교과와 연계된 다양한 수학 개념과 퀴즈 모듈이 주기적으로 계속 추가됩니다[cite: 2].
                             </p>
                             <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>주기적인 신규 수학 테마 확장:</strong> 시계를 시작으로 계속 늘어나는 홈스쿨링 콘텐츠</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>부담 없는 7일 무료 체험:</strong> 가볍게 시작하고 아이가 먼저 찾는 즐거운 변화를 직접 확인</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>안심 구독 & 손쉬운 관리:</strong> 부모 안심 게이트로 아이 오결제를 방지하며 자유롭게 관리</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>주기적인 신규 수학 테마 확장:</strong> 시계를 시작으로 계속 늘어나는 홈스쿨링 콘텐츠[cite: 2]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>부담 없는 7일 무료 체험:</strong> 가볍게 시작하고 아이가 먼저 찾는 즐거운 변화를 직접 확인[cite: 1, 2]</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>안심 구독 & 손쉬운 관리:</strong> 부모 안심 게이트로 아이 오결제를 방지하며 자유롭게 관리[cite: 2]</li>
                             </ul>
                         </div>
                     </div>
@@ -555,8 +550,8 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
                         <div class="fs-1 mb-2">🚫</div>
-                        <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)</h5>
-                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너 및 동영상 광고도 일절 싣지 않습니다.</p>
+                        <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)[cite: 1, 2]</h5>
+                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너 및 동영상 광고도 일절 싣지 않습니다[cite: 1, 2].</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -569,8 +564,8 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
                         <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금장치를 적용했습니다.</p>
+                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)[cite: 2]</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금장치를 적용했습니다[cite: 2].</p>
                     </div>
                 </div>
             </div>
@@ -596,7 +591,7 @@
         </div>
     </section>
 
-    <!-- Android Closed Alpha 안내 모달 -->
+    <!-- Android Closed Alpha 안내 모달 (3단계 구성) -->
     <div class="modal fade" id="androidAlphaModal" tabindex="-1" aria-labelledby="androidAlphaModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content rounded-4 border-0 shadow">
@@ -619,14 +614,14 @@
                     <div class="p-3 bg-light rounded-3 mb-3 text-muted small" style="line-height: 1.7;">
                         👨‍👧‍👦 <strong>안녕하세요! 아이들을 위해 매쓰고치를 개발한 아빠입니다.</strong><br>
                         현재 Google Play 공식 출시 전 <strong>비공개 알파 테스트</strong>를 진행 중입니다. 구글의 테스트 정책상 <strong>설치 과정이 조금 번거로우실 수 있습니다.</strong><br>
-                        정식 출시 전까지는 모든 유료 기능을 비용 청구 없이(0원) 무료로 이용하실 수 있습니다. 아래 4단계를 차근차근 따라 해 주세요!
+                        정식 출시 전까지는 모든 유료 기능을 별도 결제 없이 무료로 바로 이용하실 수 있습니다. 아래 3단계를 차근차근 따라 해 주세요!
                     </div>
 
-                    <!-- 4단계 가이드 -->
+                    <!-- 3단계 가이드 -->
                     <div class="row g-3">
                         
                         <!-- 1단계: 테스터 그룹 가입 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-2">
@@ -638,13 +633,13 @@
                                     </p>
                                 </div>
                                 <a href="https://groups.google.com/g/mathgotchi-testers" target="_blank" class="btn btn-outline-primary btn-sm w-100 fw-bold mt-2">
-                                    ① 테스터 그룹 가입하기 &rarr;
+                                    ① 그룹 가입하기 &rarr;
                                 </a>
                             </div>
                         </div>
 
                         <!-- 2단계: 테스터 되기 수락 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-2">
@@ -662,7 +657,7 @@
                         </div>
 
                         <!-- 3단계: Play 스토어 다운로드 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-2">
@@ -670,30 +665,12 @@
                                         <strong class="text-dark">앱 다운로드 받기</strong>
                                     </div>
                                     <p class="text-muted small mb-2">
-                                        Google Play 스토어로 이동하여 <strong>매쓰고치(Mathgotchi)</strong> 앱을 설치합니다.
+                                        Google Play 스토어로 이동하여 <strong>매쓰고치(Mathgotchi)</strong> 앱을 설치하고 바로 시작하세요.
                                     </p>
                                 </div>
                                 <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-outline-dark btn-sm w-100 fw-bold mt-2">
-                                    ③ Play 스토어에서 앱 받기 &rarr;
+                                    ③ 앱 받기 &rarr;
                                 </a>
-                            </div>
-                        </div>
-
-                        <!-- 4단계: 무료 테스트 정기결제 -->
-                        <div class="col-md-6">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between" style="border-left: 3px solid #6C5CE7 !important;">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge text-white rounded-circle px-2 py-1" style="background-color: #6C5CE7;">4</span>
-                                        <strong class="text-dark">정기결제 (비용 청구 0원)</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">
-                                        앱 내에서 결제를 진행하셔도 <strong>'테스트 모드'</strong>로 동작하여 <strong>실제 비용이 일절 청구되지 않습니다.</strong>
-                                    </p>
-                                </div>
-                                <div class="bg-light text-center py-1 rounded text-secondary small fw-bold mt-2">
-                                    💳 테스트 카드 연동 (청구 금액 ₩0)
-                                </div>
                             </div>
                         </div>
 
