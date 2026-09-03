@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-DCW9DPCM02');
     </script>
 
@@ -65,9 +64,23 @@
             --bg-light: #f3f4f6; 
             --mathgotchi-color: #6C5CE7;
         }
-        body { font-family: 'Pretendard', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            background-color: #fff;
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
         
-        /* 🌟 신작 매쓰고치 상단 프로모션 배너 */
+        /* 상단 고정 헤더 영역 */
+        .fixed-header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+        }
         .top-promo-banner {
             background: linear-gradient(90deg, #6C5CE7 0%, #4F46E5 100%);
             color: #ffffff;
@@ -81,9 +94,14 @@
             text-decoration: underline;
             font-weight: 800;
             margin-left: 8px;
+            display: inline-block;
         }
 
-        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .navbar { 
+            backdrop-filter: blur(10px); 
+            background: rgba(255, 255, 255, 0.95); 
+            border-bottom: 1px solid rgba(0,0,0,0.05); 
+        }
         .nav-app-switcher .nav-link {
             font-weight: 700;
             font-size: 0.95rem;
@@ -101,120 +119,216 @@
             background-color: #f8fafc;
         }
 
-        .btn-brand { background-color: var(--brand-color); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
-        .btn-brand:hover { background-color: var(--brand-dark); transform: translateY(-2px); color: white; }
-        .hero-section { padding-top: 140px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
-        .hero-headline { font-size: 3.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .phone-frame { width: 300px; height: 600px; background: #000; border-radius: 40px; border: 12px solid #1f2937; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); margin: 0 auto; z-index: 10; }
-        .hero-preview-img { width: 100%; height: 100%; object-fit: cover; }
-        .sticky-container { position: relative; padding: 100px 0; }
-        .sticky-visual { position: sticky; top: 150px; height: 650px; display: flex; align-items: center; justify-content: center; }
-        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.3; transition: opacity 0.5s; }
-        .step-content.active { opacity: 1; }
-        .screen-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background-color: white; display: flex; align-items: center; justify-content: center; }
-        .screen-content.active { opacity: 1; z-index: 2; }
-        .screen-content img { width: 100%; height: 100%; object-fit: cover; }
-        .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2) !important; }
-        
+        .btn-brand { 
+            background-color: var(--brand-color); 
+            color: white; 
+            padding: 12px 30px; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            transition: all 0.3s; 
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); 
+            border: none;
+        }
+        .btn-brand:hover { 
+            background-color: var(--brand-dark); 
+            transform: translateY(-2px); 
+            color: white; 
+        }
+
+        /* Hero 섹션 */
+        .hero-section { 
+            padding-top: 160px; 
+            padding-bottom: 80px; 
+            background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); 
+            overflow: hidden; 
+        }
+        .hero-headline { 
+            font-size: 3.3rem; 
+            font-weight: 900; 
+            line-height: 1.25; 
+            letter-spacing: -0.02em; 
+            background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* 스마트폰 목업 프레임 */
+        .phone-frame { 
+            width: 300px; 
+            height: 600px; 
+            background: #000; 
+            border-radius: 40px; 
+            border: 12px solid #1f2937; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); 
+            margin: 0 auto; 
+            z-index: 10; 
+        }
+        .hero-preview-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        /* PC용 스티키 레이아웃 (992px 이상) */
+        @media (min-width: 992px) {
+            .sticky-container { position: relative; padding: 100px 0; }
+            .sticky-visual { position: sticky; top: 160px; height: 650px; display: flex; align-items: center; justify-content: center; }
+            .step-content { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s; }
+            .step-content.active { opacity: 1; }
+            
+            .screen-content { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                opacity: 0; 
+                transition: opacity 0.5s ease-in-out; 
+                background-color: white; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+            }
+            .screen-content.active { opacity: 1; z-index: 2; }
+            .screen-content img { width: 100%; height: 100%; object-fit: cover; }
+            
+            .phone-frame-mobile { display: none !important; }
+        }
+
+        /* 모바일 인라인 폰 프레임 스타일 */
+        .phone-frame-mobile {
+            width: 250px;
+            height: 500px;
+            background: #000;
+            border-radius: 36px;
+            border: 10px solid #1f2937;
+            overflow: hidden;
+            box-shadow: 0 16px 35px -8px rgba(0, 0, 0, 0.25);
+            margin: 24px auto 28px auto;
+        }
+        .phone-frame-mobile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .custom-hover:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2) !important; 
+        }
         .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
         .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
 
-        @media (max-width: 768px) { 
-            .hero-headline { font-size: 2.5rem; } 
-            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } 
-            .step-content { height: auto; padding: 40px 0; opacity: 1; } 
-            .phone-frame { width: 260px; height: 520px; } 
-            .hero-section { padding-top: 130px; }
+        /* 📱 모바일 및 태블릿 세로모드 전용 최적화 (991.98px 이하) */
+        @media (max-width: 991.98px) { 
+            .hero-section { padding-top: 140px; padding-bottom: 60px; }
+            .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
+            
+            .desktop-sticky-wrapper { display: none !important; }
+            .sticky-container { padding: 40px 0; }
+            .step-content { 
+                height: auto !important; 
+                padding: 40px 0 !important; 
+                opacity: 1 !important; 
+                border-bottom: 1px dashed #E2E8F0;
+            }
+            .step-content:last-child { border-bottom: none; }
+            .step-title { font-size: 1.8rem !important; }
+            
+            .phone-frame { width: 250px; height: 500px; border-radius: 36px; border-width: 10px; } 
+            .mobile-w-100 { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 🌟 신작 매쓰고치 출시 홍보 상단 배너 -->
-    <div class="top-promo-banner fixed-top">
-        <span>✨ <strong>신작 출시:</strong> 우리 아이를 위한 첫 수학 & 시계 공부 앱 <strong>매쓰고치(Mathgotchi)</strong>가 출시되었습니다!</span>
-        <a href="mathgotchi-kr.html">매쓰고치 바로가기 &rarr;</a>
-    </div>
+    <!-- 고정 상단 통합 헤더 (배너와 메뉴의 겹침 원천 방지) -->
+    <header class="fixed-header-wrapper">
+        <div class="top-promo-banner">
+            <span>✨ <strong>신작 출시:</strong> 우리 아이를 위한 첫 수학 & 시계 공부 앱 <strong>매쓰고치(Mathgotchi)</strong>가 출시되었습니다!</span>
+            <a href="mathgotchi-kr.html">매쓰고치 바로가기 &rarr;</a>
+        </div>
 
-    <!-- 네비게이션 바 -->
-    <nav class="navbar navbar-expand-lg fixed-top" style="top: 38px;">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
-                <img src="supsiki.png" alt="ChronoFit Logo" width="38" height="38" class="me-2">
-                ChronoLab
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                
-                <!-- 🌟 앱 스위처 탭 메뉴 -->
-                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index-kr.html">🏋️ 크로노핏</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mathgotchi-kr.html">
-                            ⏰ 매쓰고치
-                            <span class="badge bg-danger rounded-pill ms-1" style="font-size: 0.65rem;">NEW</span>
-                        </a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
+                    <img src="supsiki.png" alt="ChronoFit Logo" width="36" height="36" class="me-2">
+                    ChronoLab
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="메뉴 열기">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    
+                    <!-- 앱 스위처 탭 메뉴 -->
+                    <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index-kr.html">🏋️ 크로노핏</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mathgotchi-kr.html">
+                                ⏰ 매쓰고치
+                                <span class="badge bg-danger rounded-pill ms-1" style="font-size: 0.65rem;">NEW</span>
+                            </a>
+                        </li>
+                    </ul>
 
-                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                    <div class="dropdown me-2">
-                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 한국어</button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
-                            <li><a class="dropdown-item active" href="index-kr.html">한국어 (Korean)</a></li>
-                            <li><a class="dropdown-item" href="index.html">English</a></li>
-                            <li><a class="dropdown-item" href="index-jp.html">日本語 (일본어)</a></li>
-                            
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-tw.html">繁體中文 (대만)</a></li>
-                            <li><a class="dropdown-item" href="index-hk.html">繁體中文 (홍콩)</a></li>
-                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (중국)</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-es.html">Español (중남미)</a></li>
-                            <li><a class="dropdown-item" href="index-es-es.html">Español (스페인)</a></li>
-                            <li><a class="dropdown-item" href="index-pt.html">Português (브라질)</a></li>
-                            <li><a class="dropdown-item" href="index-pt-pt.html">Português (포르투갈)</a></li>
-                            <li><a class="dropdown-item" href="index-de.html">Deutsch (독일어)</a></li>
-                            <li><a class="dropdown-item" href="index-fr.html">Français (프랑스어)</a></li>
-                            <li><a class="dropdown-item" href="index-it.html">Italiano (이탈리아어)</a></li>
-                            <li><a class="dropdown-item" href="index-nl.html">Nederlands (네덜란드어)</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia (인도네시아어)</a></li>
-                            <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu (말레이어)</a></li>
-                            <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt (베트남어)</a></li>
-                            <li><a class="dropdown-item" href="index-th.html">ไทย (태국어)</a></li>
-                        </ul>
+                    <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
+                        <div class="dropdown me-2">
+                            <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">🌐 한국어</button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
+                                <li><a class="dropdown-item active" href="index-kr.html">한국어 (Korean)</a></li>
+                                <li><a class="dropdown-item" href="index.html">English</a></li>
+                                <li><a class="dropdown-item" href="index-jp.html">日本語 (일본어)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-tw.html">繁體中文 (대만)</a></li>
+                                <li><a class="dropdown-item" href="index-hk.html">繁體中文 (홍콩)</a></li>
+                                <li><a class="dropdown-item" href="index-cn.html">简体中文 (중국)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-es.html">Español (중남미)</a></li>
+                                <li><a class="dropdown-item" href="index-es-es.html">Español (스페인)</a></li>
+                                <li><a class="dropdown-item" href="index-pt.html">Português (브라질)</a></li>
+                                <li><a class="dropdown-item" href="index-pt-pt.html">Português (포르투갈)</a></li>
+                                <li><a class="dropdown-item" href="index-de.html">Deutsch (독일어)</a></li>
+                                <li><a class="dropdown-item" href="index-fr.html">Français (프랑스어)</a></li>
+                                <li><a class="dropdown-item" href="index-it.html">Italiano (이탈리아어)</a></li>
+                                <li><a class="dropdown-item" href="index-nl.html">Nederlands (네덜란드어)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia (인도네시아어)</a></li>
+                                <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu (말레이어)</a></li>
+                                <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt (베트남어)</a></li>
+                                <li><a class="dropdown-item" href="index-th.html">ไทย (태국어)</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">앱 다운로드</a>
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">앱 다운로드</a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- ChronoFit Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">🚀 크로노핏(ChronoFit) 정식 출시</span>
-                    <h1 class="hero-headline mb-4">시간의 흐름에 따른 신체의 변화,<br><strong>객관적인 데이터</strong>로 기록하세요.</h1>
-                    <p class="lead text-secondary mb-5">
-                        스마트 워치 연동 운동부터 바코드 식단 기록까지.<br>
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-3">🚀 크로노핏(ChronoFit) 정식 출시</span>
+                    <h1 class="hero-headline mb-3">시간의 흐름에 따른 신체의 변화,<br><strong>객관적인 데이터</strong>로 기록하세요.</h1>
+                    <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
+                        스마트 워치 연동 운동부터 바코드 식단 기록까지.<br class="d-none d-md-inline">
                         파편화된 피트니스 데이터를 하나의 플랫폼으로 통합합니다.<br>
                         <span class="fw-semibold text-dark">앱 경량화를 위해 AI 기능을 제거하고 데이터를 내재화하고 있습니다.</span>
                     </p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center"><i class="bi bi-google-play me-2"></i> Google Play</a>
-                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">기능 알아보기</a>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center justify-content-center"><i class="bi bi-google-play me-2"></i> Google Play</a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4 text-center">기능 알아보기</a>
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
                     <div class="phone-frame"><img src="screenshot10.jpg" alt="ChronoFit Main Preview" class="hero-preview-img"></div>
                 </div>
             </div>
@@ -225,7 +339,9 @@
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 order-lg-2">
+                
+                <!-- PC/태블릿 가로 전용: 스티키 비주얼 영역 -->
+                <div class="col-lg-6 order-lg-2 desktop-sticky-wrapper">
                     <div class="sticky-visual">
                         <div class="phone-frame bg-white">
                             <div class="screen-content active" id="screen-1"><img src="screenshot10.jpg" alt="ChronoFit Daily Report Goal"></div>
@@ -244,16 +360,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 텍스트 설명 및 모바일 인라인 폰 프레임 영역 -->
                 <div class="col-lg-6 order-lg-1">
                     
+                    <!-- Step 1 -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-clipboard-check"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">기상부터 취침까지,<br>완벽한 일일 리포트 & 데이터 통합.</h2>
-                            <p class="lead text-muted mb-4">
+                            <h2 class="display-6 fw-bold mb-3 step-title">기상부터 취침까지,<br>완벽한 일일 리포트 & 데이터 통합.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot10.jpg" alt="ChronoFit Daily Report Goal">
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
                                 크로노핏의 목표는 기상부터 취침까지 영양 및 수분 섭취, 신체 지표(체중, 근육량, 체지방, 혈당 등), 운동 기록을 하나의 체계적인 시스템으로 완벽히 통합하여 최적의 에너지 밸런스를 갖춘 건강한 하루를 만드는 데 있습니다.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헬스 커넥트 자동 연동:</strong> 타 건강 앱의 수면, 혈압, 체성분 데이터가 손쉽게 동기화되어 기록의 번거로움을 없앱니다.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정밀한 바코드 식사 기록:</strong> 부정확한 수동 입력 대신, 바코드 스캔 한 번으로 세부 영양 성분과 원재료까지 가장 정확하게 기록합니다.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>운동 및 신체 데이터 통합:</strong> 스마트 워치 연동 트레이닝, 심박수, 칼로리, 체성분 및 식단 데이터가 유기적으로 통합되어 일상의 모든 피트니스 흐름을 완성합니다.</li>
@@ -261,38 +385,53 @@
                         </div>
                     </div>
 
+                    <!-- Step 2 -->
                     <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-battery-charging"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">시계열 에너지 밸런스와<br>직관적인 영양 애니메이션.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">시계열 에너지 밸런스와<br>직관적인 영양 애니메이션.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot11.jpg" alt="ChronoFit Energy Balance Tracker">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 기상 직후부터의 운동, 식사, 수분 섭취 흐름을 시계열 순으로 한눈에 파악하세요.<br>
-                                사용자의 체성분과 기초대사량, 식단 목표를 기준으로 칼로리, 탄수화물,<br>
-                                단백질, 지방, 수분, 나트륨의 잉여 및 부족 상태를 실시간으로 분석합니다.<br>
-                                하루가 끝날 무렵 완벽한 영양 균형을 맞출 수 있도록,<br>
-                                직관적인 애니메이션 지표가 당신의 올바른 섭취를 가이드합니다.
+                                사용자의 체성분과 기초대사량, 식단 목표를 기준으로 칼로리, 탄수화물, 단백질, 지방, 수분, 나트륨의 잉여 및 부족 상태를 실시간으로 분석합니다.<br>
+                                하루가 끝날 무렵 완벽한 영양 균형을 맞출 수 있도록, 직관적인 애니메이션 지표가 당신의 올바른 섭취를 가이드합니다.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 3 -->
                     <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">바코드 스캔 기반의<br>정확한 식품 섭취 기록.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">바코드 스캔 기반의<br>정확한 식품 섭취 기록.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot13.jpg" alt="ChronoFit Barcode Scan">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 수동 입력이나 카메라 이미지 분석의 부정확함에서 벗어나세요.<br>
-                                제품의 바코드 스캔 한 번으로 원재료와 세부 영양 성분까지<br>
-                                가장 편리하고 정확하게 기록할 수 있습니다.<br>
+                                제품의 바코드 스캔 한 번으로 원재료와 세부 영양 성분까지 가장 편리하고 정확하게 기록할 수 있습니다.<br>
                                 데이터의 무결성이 곧 건강 관리의 시작입니다.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 4 -->
                     <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-info-circle"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">식품 정밀 분석 및<br>맞춤형 영양 시뮬레이션.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">식품 정밀 분석 및<br>맞춤형 영양 시뮬레이션.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot14.jpg" alt="ChronoFit Food Nutrition Analysis">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 제품의 Nutri-Score와 상세 원재료를 분석하여 식품의 질을 다각도로 평가합니다.<br>
                                 섭취 전, 개인의 맞춤형 식단 목표 대비 각 영양소가 차지할 비중을 시뮬레이션해 보세요.<br>
                                 동일 카테고리 내 제품 간의 체계적인 비교를 통해 최적의 영양 섭취를 가이드합니다.
@@ -300,11 +439,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 5 -->
                     <div class="step-content" data-index="5" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-view-list"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">다중 바코드 스캔 및<br>실시간 제품 비교.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">다중 바코드 스캔 및<br>실시간 제품 비교.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot15.jpg" alt="ChronoFit Multi Barcode Comparison">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 유사한 제품 사이에서 더 이상 고민하지 마세요.<br>
                                 여러 제품의 바코드를 연속으로 스캔하여 핵심 영양 성분을 한 화면에서 직관적으로 비교합니다.<br>
                                 데이터에 기반한 빠르고 정확한 판단으로, 나에게 가장 부합하는 식품을 즉각적으로 선택할 수 있습니다.
@@ -312,83 +457,107 @@
                         </div>
                     </div>
 
+                    <!-- Step 6 -->
                     <div class="step-content" data-index="6" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-smartwatch"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">전용 Wear OS 앱을 통한<br>실시간 트레이닝 가이드.</h2>
-                            <p class="lead text-muted">
-                                갤럭시 워치 등 Wear OS 기반 스마트 워치에<br>
-                                크로노핏 전용 앱을 설치하여 심박수, 소모 칼로리,<br>
-                                운동 강도를 실시간으로 완벽하게 연동하고 기록합니다.<br>
-                                설정된 HIIT 루틴에 맞춰 워치 화면에서<br>
-                                직관적인 운동 가이드를 제공받을 수 있습니다.
+                            <h2 class="display-6 fw-bold mb-3 step-title">전용 Wear OS 앱을 통한<br>실시간 트레이닝 가이드.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot1.jpg" alt="ChronoFit Wear OS Integration">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                                갤럭시 워치 등 Wear OS 기반 스마트 워치에 크로노핏 전용 앱을 설치하여 심박수, 소모 칼로리, 운동 강도를 실시간으로 완벽하게 연동하고 기록합니다.<br>
+                                설정된 HIIT 루틴에 맞춰 워치 화면에서 직관적인 운동 가이드를 제공받을 수 있습니다.
                             </p>
                         </div>
                     </div>
-                    
+
+                    <!-- Step 7 -->
                     <div class="step-content" data-index="7" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-activity"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">스마트 밴드 및<br>비 Wear OS 기기 지원.</h2>
-                            <p class="lead text-muted">
-                                갤럭시 핏과 같은 스마트 밴드 및 다양한 피트니스 기기 사용자도<br>
-                                크로노핏의 전문적인 인터벌 트레이닝 기능을 동일하게 이용할 수 있습니다.<br>
-                                앱 내 타이머를 활용해 운동을 수행하고, 기기에 기록된 데이터는<br>
-                                헬스 커넥트를 통해 크로노핏의 시스템으로 통합(Data Fusion)됩니다.<br>
-                                통합된 심박수, 이동거리, 걸음 수 등의 데이터는<br>
-                                사용자의 인터벌 패턴에 맞춰 자동으로 세그먼테이션되어 분석되며,<br>
-                                체계적인 종합 운동 리포트를 제공받을 수 있습니다.
+                            <h2 class="display-6 fw-bold mb-3 step-title">스마트 밴드 및<br>비 Wear OS 기기 지원.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot2.jpg" alt="ChronoFit Hybrid Data Integration">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                                갤럭시 핏과 같은 스마트 밴드 및 다양한 피트니스 기기 사용자도 크로노핏의 전문적인 인터벌 트레이닝 기능을 동일하게 이용할 수 있습니다.<br>
+                                앱 내 타이머를 활용해 운동을 수행하고, 기기에 기록된 데이터는 헬스 커넥트를 통해 크로노핏의 시스템으로 통합(Data Fusion)됩니다.<br>
+                                통합된 심박수, 이동거리, 걸음 수 등의 데이터는 사용자의 인터벌 패턴에 맞춰 자동으로 세그먼테이션되어 분석되며, 체계적인 종합 운동 리포트를 제공받을 수 있습니다.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 8 -->
                     <div class="step-content" data-index="8" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-share"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">운동 기록 시각화 및<br>소셜 미디어 공유.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">운동 기록 시각화 및<br>소셜 미디어 공유.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot3.jpg" alt="ChronoFit Social Share Overlay">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 성공적인 훈련의 결과를 한 장의 이미지로 기록하세요.<br>
-                                운동 시간, 소모 칼로리, 심박수 등의 핵심 피트니스 데이터를<br>
-                                직관적인 오버레이 스티커 형태로 사진에 추가할 수 있습니다.<br>
-                                완성된 운동 기록을 소셜 미디어 플랫폼에 간편하게 공유하여<br>
-                                지속적인 성장을 위한 동기를 부여해 보세요.
+                                운동 시간, 소모 칼로리, 심박수 등의 핵심 피트니스 데이터를 직관적인 오버레이 스티커 형태로 사진에 추가할 수 있습니다.<br>
+                                완성된 운동 기록을 소셜 미디어 플랫폼에 간편하게 공유하여 지속적인 성장을 위한 동기를 부여해 보세요.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 9 -->
                     <div class="step-content" data-index="9" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-dark"><i class="bi bi-camera-video"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">피트니스 크리에이터를 위한<br>데이터 오버레이 추출 (PRO).</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">피트니스 크리에이터를 위한<br>데이터 오버레이 추출 (PRO).</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot4.jpg" alt="ChronoFit Video Overlay Extraction">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 운동 영상 편집에 소요되는 복잡한 작업 시간을 혁신적으로 단축합니다.<br>
                                 크로노핏과 함께 운동을 기록하며 촬영에만 집중하세요.<br>
-                                운동 종료 후 타이머, 세션 정보, 실시간 심박수 변화 및 칼로리 소모량 등의<br>
-                                데이터가 시각화된 영상 클립을 간편하게 추출할 수 있습니다.<br>
-                                추출된 오버레이 클립을 편집 중인 영상에 바로 삽입하여<br>
-                                전문가 수준의 피트니스 콘텐츠를 완성해 보세요.
+                                운동 종료 후 타이머, 세션 정보, 실시간 심박수 변화 및 칼로리 소모량 등의 데이터가 시각화된 영상 클립을 간편하게 추출할 수 있습니다.<br>
+                                추출된 오버레이 클립을 편집 중인 영상에 바로 삽입하여 전문가 수준의 피트니스 콘텐츠를 완성해 보세요.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 10 -->
                     <div class="step-content" data-index="10" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-play-circle"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">실시간 영상 연동 및<br>구간 반복 가이드.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">실시간 영상 연동 및<br>구간 반복 가이드.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot5.jpg" alt="ChronoFit Video Guide Integration">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 피트니스 영상을 연동하여 화면을 보며 운동을 진행할 수 있습니다.<br>
-                                필요한 특정 구간을 반복 재생하도록 설정하여,<br>
-                                정확한 자세와 페이스를 유지하며 복잡한 동작도 완벽하게 숙지할 수 있습니다.<br>
+                                필요한 특정 구간을 반복 재생하도록 설정하여, 정확한 자세와 페이스를 유지하며 복잡한 동작도 완벽하게 숙지할 수 있습니다.<br>
                                 전문가의 동작을 실시간으로 확인하며 훈련의 효율을 극대화해 보세요.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 11 -->
                     <div class="step-content" data-index="11" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-collection-play"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">사용자 참여형 영상 큐레이션 및<br>크리에이터 프로모션.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">사용자 참여형 영상 큐레이션 및<br>크리에이터 프로모션.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot6.jpg" alt="ChronoFit Creator Promotion">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 앱 내에서 원하는 운동 영상을 간편하게 검색하거나 등록할 수 있습니다.<br>
                                 피트니스 크리에이터라면 본인의 콘텐츠를 등록해 크로노핏 사용자들에게 채널을 알리는 홍보 효과를 누려보세요.<br>
                                 사용자들의 평가를 종합하여 가장 유익한 상위 50개의 검증된 영상만이 노출되므로, 양질의 콘텐츠가 더욱 돋보일 수 있는 기회를 제공합니다.
@@ -396,28 +565,36 @@
                         </div>
                     </div>
 
+                    <!-- Step 12 -->
                     <div class="step-content" data-index="12" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-secondary"><i class="bi bi-clipboard-data"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">운동 데이터베이스와<br>데이터 기반의 정밀 분석.</h2>
-                            <p class="lead text-muted">
-                                맨몸 운동부터 케틀벨 등 소도구, 헬스장 머신에 이르기까지<br>
-                                필수적인 운동 방법과 타겟 근육 자극 데이터를 체계적으로 구축하고 있습니다.<br>
-                                지속적으로 업데이트되는 피트니스 라이브러리를 기반으로,<br>
-                                나의 운동 기록을 객관적으로 평가하는 정교한 데이터 분석을 경험해 보세요.
+                            <h2 class="display-6 fw-bold mb-3 step-title">운동 데이터베이스와<br>데이터 기반의 정밀 분석.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot7.jpg" alt="ChronoFit Exercise Database">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                                맨몸 운동부터 케틀벨 등 소도구, 헬스장 머신에 이르기까지 필수적인 운동 방법과 타겟 근육 자극 데이터를 체계적으로 구축하고 있습니다.<br>
+                                지속적으로 업데이트되는 피트니스 라이브러리를 기반으로, 나의 운동 기록을 객관적으로 평가하는 정교한 데이터 분석을 경험해 보세요.
                             </p>
                         </div>
                     </div>
-                    
+
+                    <!-- Step 13 -->
                     <div class="step-content" data-index="13" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-bar-chart-line"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">인터벌 세트별 데이터 세그먼테이션 및<br>종합 운동 차트.</h2>
-                            <p class="lead text-muted">
-                                인터벌 트레이닝의 각 세트마다 변화하는 심박수, 이동 거리, 걸음 수 데이터를<br>
-                                정밀하게 세그먼테이션하여 제공합니다.<br>
-                                구간별로 세분화된 종합 운동 차트를 통해 운동 흐름에 따른 신체 능력을<br>
-                                직관적으로 파악하고, 보다 체계적인 훈련 계획을 수립해 보세요.
+                            <h2 class="display-6 fw-bold mb-3 step-title">인터벌 세트별 데이터 세그먼테이션 및<br>종합 운동 차트.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot8.jpg" alt="ChronoFit Interval Segmentation Chart">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                                인터벌 트레이닝의 각 세트마다 변화하는 심박수, 이동 거리, 걸음 수 데이터를 정밀하게 세그먼테이션하여 제공합니다.<br>
+                                구간별로 세분화된 종합 운동 차트를 통해 운동 흐름에 따른 신체 능력을 직관적으로 파악하고, 보다 체계적인 훈련 계획을 수립해 보세요.
                             </p>
                         </div>
                     </div>
@@ -427,20 +604,20 @@
         </div>
     </section>
 
-    <!-- 🌟 패밀리 신작 앱 교차 홍보 카드 (Mathgotchi Spotlight) -->
+    <!-- 패밀리 신작 앱 교차 홍보 카드 (Mathgotchi Spotlight) -->
     <section class="py-5" style="background: linear-gradient(180deg, #F8FAFC 0%, #EDE9FE 100%);">
         <div class="container py-4">
             <div class="row align-items-center bg-white p-4 p-lg-5 rounded-4 shadow-sm border">
                 <div class="col-lg-3 text-center mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 140px; border: 1px solid #e2e8f0;">
+                    <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 130px; border: 1px solid #e2e8f0;">
                 </div>
                 <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-up">
                     <span class="badge text-white px-3 py-2 rounded-pill mb-2" style="background-color: #6C5CE7;">
                         🐣 크로노랩의 새로운 에듀테크 신작
                     </span>
                     <h3 class="fw-bold mb-2 text-dark">매쓰고치 (Mathgotchi)</h3>
-                    <p class="text-muted mb-0">
-                        시계가 어렵던 두 아이를 위해 아빠가 직접 정성껏 만든 100% 무광고 안심 배움터. 손으로 돌리는 시계 탐험, 1분 스피드 퀴즈, 그리고 부모님의 실제 목소리 응원으로 깨우는 신비한 동물 파트너를 만나보세요!
+                    <p class="text-muted mb-0" style="line-height: 1.7; font-size: 0.95rem;">
+                        시계가 어렵던 두 아이를 위해 아빠가 직접 정성껏 만든 100% 무광고 안심 배움터. 손으로 돌리는 시계 탐험, 1분 스피드 퀴즈, 그리고 부모님의 실제 목소리 응원으로 깨우는 신비한 동물 친구를 만나보세요!
                     </p>
                 </div>
                 <div class="col-lg-3 text-center text-lg-end" data-aos="fade-left">
@@ -457,12 +634,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="p-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
+                    <div class="p-4 p-md-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
                         <i class="bi bi-chat-heart position-absolute text-primary opacity-10" style="font-size: 15rem; right: -50px; bottom: -50px; transform: rotate(-15deg);"></i>
                         <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill"><i class="bi bi-envelope-heart me-2"></i>개발자 직접 소통</span>
-                        <h2 class="fw-bold mb-3">여러분의 소중한 의견을 들려주세요</h2>
-                        <p class="text-muted mb-4 lead">크로노핏은 사용자 여러분의 피드백과 함께 발전합니다.<br>기능 제안이나 문의사항이 있으시면 언제든 편하게 연락해 주세요.</p>
-                        <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-brand btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover"><i class="bi bi-envelope-fill me-2"></i> 문의 메일 보내기</a>
+                        <h2 class="fw-bold mb-3" style="font-size: 1.8rem;">여러분의 소중한 의견을 들려주세요</h2>
+                        <p class="text-muted mb-4 lead" style="font-size: 1rem;">크로노핏은 사용자 여러분의 피드백과 함께 발전합니다.<br>기능 제안이나 문의사항이 있으시면 언제든 편하게 연락해 주세요.</p>
+                        <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-brand btn-lg rounded-pill px-4 px-md-5 fw-bold shadow-sm custom-hover"><i class="bi bi-envelope-fill me-2"></i> 문의 메일 보내기</a>
                     </div>
                 </div>
             </div>
@@ -491,23 +668,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
         document.addEventListener('DOMContentLoaded', () => {
-            const steps = document.querySelectorAll('.step-content');
-            const screens = document.querySelectorAll('.screen-content');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        steps.forEach(s => s.classList.remove('active'));
-                        entry.target.classList.add('active');
-                        const index = entry.target.getAttribute('data-index');
-                        screens.forEach(s => s.classList.remove('active'));
-                        
-                        const activeScreen = document.getElementById(`screen-${index}`);
-                        if(activeScreen) activeScreen.classList.add('active');
-                    }
-                });
-            }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
-            steps.forEach(step => observer.observe(step));
+            // 데스크톱 화면(992px 이상)에서만 스티키 이미지 전환 인터랙션 활성화
+            if (window.innerWidth >= 992) {
+                const steps = document.querySelectorAll('.step-content');
+                const screens = document.querySelectorAll('.screen-content');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            steps.forEach(s => s.classList.remove('active'));
+                            entry.target.classList.add('active');
+
+                            const index = entry.target.getAttribute('data-index');
+                            screens.forEach(s => s.classList.remove('active'));
+                            
+                            const activeScreen = document.getElementById(`screen-${index}`);
+                            if(activeScreen) activeScreen.classList.add('active');
+                        }
+                    });
+                }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+
+                steps.forEach(step => observer.observe(step));
+            }
         });
     </script>
 </body>
