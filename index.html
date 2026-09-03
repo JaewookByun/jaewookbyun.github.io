@@ -66,8 +66,22 @@
             --bg-light: #f3f4f6;
             --mathgotchi-color: #6C5CE7;
         }
-        body { font-family: 'Inter', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            background-color: #fff; 
+            overflow-wrap: break-word;
+        }
         
+        /* Unified Fixed Header Wrapper */
+        .fixed-header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+        }
         .top-promo-banner {
             background: linear-gradient(90deg, #6C5CE7 0%, #4F46E5 100%);
             color: #ffffff;
@@ -81,9 +95,14 @@
             text-decoration: underline;
             font-weight: 800;
             margin-left: 8px;
+            display: inline-block;
         }
 
-        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .navbar { 
+            backdrop-filter: blur(10px); 
+            background: rgba(255, 255, 255, 0.95); 
+            border-bottom: 1px solid rgba(0,0,0,0.05); 
+        }
         .nav-app-switcher .nav-link {
             font-weight: 700;
             font-size: 0.95rem;
@@ -101,132 +120,247 @@
             background-color: #f8fafc;
         }
 
-        .btn-brand { background-color: var(--brand-color); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
-        .btn-brand:hover { background-color: var(--brand-dark); transform: translateY(-2px); color: white; }
-        .hero-section { padding-top: 140px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
-        .hero-headline { font-size: 3.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .phone-frame { width: 300px; height: 600px; background: #000; border-radius: 40px; border: 12px solid #1f2937; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); margin: 0 auto; z-index: 10; }
-        .hero-preview-img { width: 100%; height: 100%; object-fit: cover; }
-        .sticky-container { position: relative; padding: 100px 0; }
-        .sticky-visual { position: sticky; top: 150px; height: 650px; display: flex; align-items: center; justify-content: center; }
-        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.3; transition: opacity 0.5s; }
-        .step-content.active { opacity: 1; }
-        .screen-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background-color: white; display: flex; align-items: center; justify-content: center; }
-        .screen-content.active { opacity: 1; z-index: 2; }
-        .screen-content img { width: 100%; height: 100%; object-fit: cover; }
-        .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2) !important; }
+        .btn-brand { 
+            background-color: var(--brand-color); 
+            color: white; 
+            padding: 12px 30px; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            transition: all 0.3s; 
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); 
+            border: none;
+        }
+        .btn-brand:hover { 
+            background-color: var(--brand-dark); 
+            transform: translateY(-2px); 
+            color: white; 
+        }
         
-        .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
+        /* Hero Section */
+        .hero-section { 
+            padding-top: 160px; 
+            padding-bottom: 80px; 
+            background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); 
+            overflow: hidden; 
+        }
+        .hero-headline { 
+            font-size: 3.3rem; 
+            font-weight: 900; 
+            line-height: 1.25; 
+            letter-spacing: -0.02em; 
+            background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Smartphone Mockup Frame */
+        .phone-frame { 
+            width: 300px; 
+            height: 600px; 
+            background: #000; 
+            border-radius: 40px; 
+            border: 12px solid #1f2937; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); 
+            margin: 0 auto; 
+            z-index: 10; 
+        }
+        .hero-preview-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        /* Desktop Sticky Layout (992px and up) */
+        @media (min-width: 992px) {
+            .sticky-container { position: relative; padding: 100px 0; }
+            .sticky-visual { position: sticky; top: 160px; height: 650px; display: flex; align-items: center; justify-content: center; }
+            .step-content { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s; }
+            .step-content.active { opacity: 1; }
+            
+            .screen-content { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                opacity: 0; 
+                transition: opacity 0.5s ease-in-out; 
+                background-color: white; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+            }
+            .screen-content.active { opacity: 1; z-index: 2; }
+            .screen-content img { width: 100%; height: 100%; object-fit: cover; }
+            
+            .phone-frame-mobile { display: none !important; }
+        }
+
+        /* Mobile Inline Phone Mockup Frame */
+        .phone-frame-mobile {
+            width: 250px;
+            height: 500px;
+            background: #000;
+            border-radius: 36px;
+            border: 10px solid #1f2937;
+            overflow: hidden;
+            box-shadow: 0 16px 35px -8px rgba(0, 0, 0, 0.25);
+            margin: 24px auto 28px auto;
+        }
+        .phone-frame-mobile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .custom-hover:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2) !important; 
+        }
+        
+        /* Language Dropdown Menu */
+        .scrollable-dropdown { 
+            max-height: 380px; 
+            overflow-y: auto; 
+            min-width: 220px;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
         .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
 
-        @media (max-width: 768px) { 
-            .hero-headline { font-size: 2.5rem; } 
-            .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } 
-            .step-content { height: auto; padding: 40px 0; opacity: 1; } 
-            .phone-frame { width: 260px; height: 520px; } 
-            .hero-section { padding-top: 130px; }
+        /* Mobile & Tablet Vertical Optimization (991.98px and below) */
+        @media (max-width: 991.98px) { 
+            .hero-section { padding-top: 140px; padding-bottom: 60px; }
+            .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
+            
+            .desktop-sticky-wrapper { display: none !important; }
+            .sticky-container { padding: 40px 0; }
+            .step-content { 
+                height: auto !important; 
+                padding: 40px 0 !important; 
+                opacity: 1 !important; 
+                border-bottom: 1px dashed #E2E8F0;
+            }
+            .step-content:last-child { border-bottom: none; }
+            .step-title { font-size: 1.8rem !important; }
+            
+            .phone-frame { width: 250px; height: 500px; border-radius: 36px; border-width: 10px; } 
+            .mobile-w-100 { width: 100%; }
+
+            /* Fix dropdown clipping off-screen to the left on mobile */
+            .navbar-collapse .dropdown-menu {
+                left: 0 !important;
+                right: auto !important;
+                max-width: calc(100vw - 36px);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-promo-banner fixed-top">
-        <span>✨ <strong>NEW RELEASE:</strong> Meet our new kids EdTech app <strong>Mathgotchi</strong>!</span>
-        <a href="mathgotchi.html">Discover Mathgotchi &rarr;</a>
-    </div>
+    <!-- Unified Fixed Top Header (Prevents Banner & Nav Overlap) -->
+    <header class="fixed-header-wrapper">
+        <div class="top-promo-banner">
+            <span>✨ <strong>NEW RELEASE:</strong> Meet our new kids EdTech app <strong>Mathgotchi</strong>!</span>
+            <a href="mathgotchi.html">Discover Mathgotchi &rarr;</a>
+        </div>
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="top: 38px;">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <img src="supsiki.png" alt="ChronoFit Logo" width="38" height="38" class="me-2">
-                ChronoLab
-            </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+                    <img src="supsiki.png" alt="ChronoFit Logo" width="36" height="36" class="me-2">
+                    ChronoLab
+                </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">🏋️ ChronoFit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mathgotchi.html">
-                            ⏰ Mathgotchi 
-                            <span class="badge bg-danger rounded-pill ms-1" style="font-size: 0.65rem;">NEW</span>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- App Switcher Tabs -->
+                    <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">🏋️ ChronoFit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mathgotchi.html">
+                                ⏰ Mathgotchi 
+                                <span class="badge bg-danger rounded-pill ms-1" style="font-size: 0.65rem;">NEW</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
+                        <!-- Language Dropdown: start on mobile, end on desktop -->
+                        <div class="dropdown me-2 position-relative">
+                            <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                🌐 English
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 scrollable-dropdown">
+                                <li><a class="dropdown-item active" href="index.html">English</a></li>
+                                <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
+                                <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
+                                <li><a class="dropdown-item" href="index-hk.html">繁體中文 (Hong Kong)</a></li>
+                                <li><a class="dropdown-item" href="index-cn.html">简体中文 (China)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-es.html">Español (Latin America)</a></li>
+                                <li><a class="dropdown-item" href="index-es-es.html">Español (Spain)</a></li>
+                                <li><a class="dropdown-item" href="index-pt.html">Português (Brazil)</a></li>
+                                <li><a class="dropdown-item" href="index-pt-pt.html">Português (Portugal)</a></li>
+                                <li><a class="dropdown-item" href="index-de.html">Deutsch (German)</a></li>
+                                <li><a class="dropdown-item" href="index-fr.html">Français (French)</a></li>
+                                <li><a class="dropdown-item" href="index-it.html">Italiano (Italian)</a></li>
+                                <li><a class="dropdown-item" href="index-nl.html">Nederlands (Dutch)</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
+                                <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu</a></li>
+                                <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt</a></li>
+                                <li><a class="dropdown-item" href="index-th.html">ไทย (Thai)</a></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
+                            Download App
                         </a>
-                    </li>
-                </ul>
-
-                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                    <div class="dropdown me-2">
-                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown">
-                            🌐 English
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
-                            <li><a class="dropdown-item active" href="index.html">English</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
-                            <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
-                            
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-tw.html">繁體中文 (Taiwan)</a></li>
-                            <li><a class="dropdown-item" href="index-hk.html">繁體中文 (Hong Kong)</a></li>
-                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (China)</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-es.html">Español (Latin America)</a></li>
-                            <li><a class="dropdown-item" href="index-es-es.html">Español (Spain)</a></li>
-                            <li><a class="dropdown-item" href="index-pt.html">Português (Brazil)</a></li>
-                            <li><a class="dropdown-item" href="index-pt-pt.html">Português (Portugal)</a></li>
-                            <li><a class="dropdown-item" href="index-de.html">Deutsch (German)</a></li>
-                            <li><a class="dropdown-item" href="index-fr.html">Français (French)</a></li>
-                            <li><a class="dropdown-item" href="index-it.html">Italiano (Italian)</a></li>
-                            <li><a class="dropdown-item" href="index-nl.html">Nederlands (Dutch)</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
-                            <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu</a></li>
-                            <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt</a></li>
-                            <li><a class="dropdown-item" href="index-th.html">ไทย (Thai)</a></li>
-                        </ul>
                     </div>
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">
-                        Download App
-                    </a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- ChronoFit Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-3">
                         🚀 ChronoFit Official Release
                     </span>
-                    <h1 class="hero-headline mb-4">
+                    <h1 class="hero-headline mb-3">
                         Track Your Body's Evolution with <br><strong>Objective Data.</strong>
                     </h1>
-                    <p class="lead text-secondary mb-5">
-                        From smartwatch-synced workouts to barcode diet logging.<br>
+                    <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
+                        From smartwatch-synced workouts to barcode diet logging.<br class="d-none d-md-inline">
                         Unify your fragmented fitness data into one seamless platform.<br>
                         <span class="fw-semibold text-dark">AI features have been removed to make the app lightweight, and all data is processed on-device.</span>
                     </p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center">
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center justify-content-center">
                             <i class="bi bi-google-play me-2"></i> Google Play
                         </a>
-                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4 text-center">
                             Explore Features
                         </a>
                     </div>
                 </div>
                 
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
                     <div class="phone-frame">
                         <img src="screenshot10.jpg" alt="ChronoFit Main Preview" class="hero-preview-img">
                     </div>
@@ -239,7 +373,9 @@
     <section id="features" class="sticky-container bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 order-lg-2">
+                
+                <!-- Desktop Sticky Visual Area -->
+                <div class="col-lg-6 order-lg-2 desktop-sticky-wrapper">
                     <div class="sticky-visual">
                         <div class="phone-frame bg-white">
                             <div class="screen-content active" id="screen-1"><img src="screenshot10.jpg" alt="ChronoFit Daily Report Goal"></div>
@@ -257,16 +393,23 @@
                     </div>
                 </div>
 
+                <!-- Text Descriptions & Mobile Inline Phone Frames -->
                 <div class="col-lg-6 order-lg-1">
                     
+                    <!-- Step 1 -->
                     <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-clipboard-check"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">The Complete Daily Report &<br>Data Integration.</h2>
-                            <p class="lead text-muted mb-4">
+                            <h2 class="display-6 fw-bold mb-3 step-title">The Complete Daily Report &<br>Data Integration.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot10.jpg" alt="ChronoFit Daily Report Goal">
+                            </div>
+
+                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
                                 ChronoFit aims to build a healthy day with optimal energy balance by seamlessly consolidating nutrition, hydration, body metrics (weight, muscle mass, body fat, blood glucose), and workouts into a single platform.
                             </p>
-                            <ul class="list-unstyled text-muted lead feature-list">
+                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Health Connect Auto-Sync:</strong> Effortlessly sync sleep, blood pressure, and body composition data from other health apps.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Precise Barcode Food Logging:</strong> Escape inaccurate manual inputs. Log detailed macronutrients and ingredients instantly with a single scan.</li>
                                 <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Comprehensive Data Fusion:</strong> Connect workout routines, heart rate zones, calories, body metrics, and diet records into one unified timeline.</li>
@@ -274,11 +417,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 2 -->
                     <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-battery-charging"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Time-Series Energy Balance &<br>Intuitive Animations.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Time-Series Energy Balance &<br>Intuitive Animations.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot11.jpg" alt="ChronoFit Energy Balance Tracker">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Track your workouts, meals, and hydration in chronological order from the moment you wake up.<br>
                                 Analyze real-time surplus or deficit for calories, carbs, protein, fat, water, and sodium against your personal basal metabolic rate and fitness goals.<br>
                                 Intuitive animated gauges guide your optimal intake throughout the day.
@@ -286,11 +435,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 3 -->
                     <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Accurate Food Logging<br>via Barcode Scan.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Accurate Food Logging<br>via Barcode Scan.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot13.jpg" alt="ChronoFit Barcode Scan">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Escape manual entry errors and ambiguous photo estimations.<br>
                                 Scan barcodes to log comprehensive nutritional data and ingredient lists directly from verified food databases.<br>
                                 Data integrity is the foundation of effective health management.
@@ -298,11 +453,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 4 -->
                     <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-info-circle"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">In-Depth Food Analysis &<br>Nutrition Simulation.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">In-Depth Food Analysis &<br>Nutrition Simulation.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot14.jpg" alt="ChronoFit Food Nutrition Analysis">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Evaluate food quality from multiple angles using Nutri-Score ratings and detailed ingredient breakdowns.<br>
                                 Before consuming, simulate how each item fits into your daily macronutrient targets.<br>
                                 Make informed choices with systematic product comparisons within the same category.
@@ -310,11 +471,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 5 -->
                     <div class="step-content" data-index="5" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-view-list"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Multi-Barcode Scanning &<br>Real-Time Comparison.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Multi-Barcode Scanning &<br>Real-Time Comparison.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot15.jpg" alt="ChronoFit Multi Barcode Comparison">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 No more hesitating between similar grocery items.<br>
                                 Continuously scan multiple products to compare key macronutrients side-by-side on a single screen.<br>
                                 Make quick, data-driven decisions to select the product that best aligns with your nutrition plan.
@@ -322,11 +489,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 6 -->
                     <div class="step-content" data-index="6" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-danger"><i class="bi bi-smartwatch"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Real-Time Training Guide<br>via Dedicated Wear OS App.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Real-Time Training Guide<br>via Dedicated Wear OS App.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot1.jpg" alt="ChronoFit Wear OS Integration">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Install the dedicated ChronoFit app on your Galaxy Watch or Wear OS smartwatch.<br>
                                 Sync real-time heart rate, active calorie burn, and training intensity seamlessly.<br>
                                 Follow tailored HIIT routines directly on your watch screen with precise interval pacing.
@@ -334,11 +507,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 7 -->
                     <div class="step-content" data-index="7" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-activity"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Smart Band &<br>Non-Wear OS Device Support.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Smart Band &<br>Non-Wear OS Device Support.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot2.jpg" alt="ChronoFit Hybrid Data Integration">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Users of smart bands like Galaxy Fit and other fitness trackers can enjoy the same professional interval training features.<br>
                                 Complete workouts using the in-app timer, while device-recorded metrics automatically integrate through Health Connect (Data Fusion).<br>
                                 Heart rate, distance, and cadence are automatically segmented according to your interval routine for comprehensive workout reporting.
@@ -346,11 +525,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 8 -->
                     <div class="step-content" data-index="8" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-warning"><i class="bi bi-share"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Workout Record Visualization &<br>Social Sharing.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Workout Record Visualization &<br>Social Sharing.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot3.jpg" alt="ChronoFit Social Share Overlay">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Commemorate your training milestones with a single customized photo.<br>
                                 Overlay key workout metrics—duration, calorie burn, heart rate, and cadence—as clean graphic stickers over your workout photos.<br>
                                 Share your progress across social media platforms to stay motivated and inspire others.
@@ -358,11 +543,17 @@
                         </div>
                     </div>
 
+                    <!-- Step 9 -->
                     <div class="step-content" data-index="9" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-dark"><i class="bi bi-camera-video"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Data Overlay Video Extraction<br>for Fitness Creators (PRO).</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Data Overlay Video Extraction<br>for Fitness Creators (PRO).</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot4.jpg" alt="ChronoFit Video Overlay Extraction">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Dramatically reduce workout video editing time.<br>
                                 Simply record your workout with ChronoFit while focusing entirely on your filming.<br>
                                 After your session, export synchronized HUD overlay video clips featuring timers, session stats, real-time heart rate changes, and calorie burn.<br>
@@ -371,22 +562,34 @@
                         </div>
                     </div>
 
+                    <!-- Step 10 -->
                     <div class="step-content" data-index="10" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-secondary"><i class="bi bi-clipboard-data"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Exercise Database &<br>Data-Driven Precision Analysis.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Exercise Database &<br>Data-Driven Precision Analysis.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot7.jpg" alt="ChronoFit Exercise Database">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Explore a structured database covering bodyweight calisthenics, kettlebell drills, and gym machines with target muscle activation mapping.<br>
                                 Powered by our continuously updated fitness library, evaluate your workout performance through objective, empirical metrics.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Step 11 -->
                     <div class="step-content" data-index="11" data-aos="fade-up">
-                        <div class="ps-lg-5">
+                        <div class="ps-lg-4">
                             <div class="fs-1 mb-3 text-primary"><i class="bi bi-bar-chart-line"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">Interval Set Segmentation &<br>Comprehensive Charts.</h2>
-                            <p class="lead text-muted">
+                            <h2 class="display-6 fw-bold mb-3 step-title">Interval Set Segmentation &<br>Comprehensive Charts.</h2>
+                            
+                            <div class="phone-frame-mobile d-lg-none">
+                                <img src="screenshot8.jpg" alt="ChronoFit Interval Segmentation Chart">
+                            </div>
+
+                            <p class="lead text-muted" style="font-size: 1.05rem; line-height: 1.8;">
                                 Review granular heart rate changes, distance covered, and step cadence segmented precisely for every interval set and rest phase.<br>
                                 Visualize your physical capacity across each workout phase with comprehensive charts, empowering you to fine-tune future training plans.
                             </p>
@@ -403,14 +606,14 @@
         <div class="container py-4">
             <div class="row align-items-center bg-white p-4 p-lg-5 rounded-4 shadow-sm border">
                 <div class="col-lg-3 text-center mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 140px; border: 1px solid #e2e8f0;">
+                    <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 130px; border: 1px solid #e2e8f0;">
                 </div>
                 <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-up">
                     <span class="badge text-white px-3 py-2 rounded-pill mb-2" style="background-color: #6C5CE7;">
                         🐣 New EdTech Release from ChronoLab
                     </span>
                     <h3 class="fw-bold mb-2 text-dark">Mathgotchi (매쓰고치)</h3>
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-0" style="line-height: 1.7; font-size: 0.95rem;">
                         A 100% ad-free educational time-learning playground crafted by a dad for his kids. Explore hands-on clock reading, 1-minute speed quizzes, and hatch digital pet companions with custom parent voice cheers!
                     </p>
                 </div>
@@ -428,12 +631,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="p-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
+                    <div class="p-4 p-md-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
                         <i class="bi bi-chat-heart position-absolute text-primary opacity-10" style="font-size: 15rem; right: -50px; bottom: -50px; transform: rotate(-15deg);"></i>
                         <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill"><i class="bi bi-envelope-heart me-2"></i>Direct Developer Contact</span>
-                        <h2 class="fw-bold mb-3">We Value Your Feedback</h2>
-                        <p class="text-muted mb-4 lead">ChronoFit continuously evolves through user feedback and real-world suggestions.<br>Feel free to reach out anytime with feature ideas or questions.</p>
-                        <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-brand btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover"><i class="bi bi-envelope-fill me-2"></i> Contact Us via Email</a>
+                        <h2 class="fw-bold mb-3" style="font-size: 1.8rem;">We Value Your Feedback</h2>
+                        <p class="text-muted mb-4 lead" style="font-size: 1rem;">ChronoFit continuously evolves through user feedback and real-world suggestions.<br>Feel free to reach out anytime with feature ideas or questions.</p>
+                        <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-brand btn-lg rounded-pill px-4 px-md-5 fw-bold shadow-sm custom-hover"><i class="bi bi-envelope-fill me-2"></i> Contact Us via Email</a>
                     </div>
                 </div>
             </div>
@@ -455,7 +658,6 @@
             </p>
             <a href="https://www.chronolaboratory.com/" class="btn btn-outline-secondary btn-sm mt-3">Company Home</a>
         </div>
-        
         <script>
             document.getElementById('current-year').textContent = new Date().getFullYear();
         </script>
@@ -467,31 +669,28 @@
         AOS.init({ duration: 800, once: true });
 
         document.addEventListener('DOMContentLoaded', () => {
-            const steps = document.querySelectorAll('.step-content');
-            const screens = document.querySelectorAll('.screen-content');
+            // Enable sticky crossfade observer only on large desktop screens
+            if (window.innerWidth >= 992) {
+                const steps = document.querySelectorAll('.step-content');
+                const screens = document.querySelectorAll('.screen-content');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '-50% 0px -50% 0px',
-                threshold: 0
-            };
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            steps.forEach(s => s.classList.remove('active'));
+                            entry.target.classList.add('active');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        steps.forEach(s => s.classList.remove('active'));
-                        entry.target.classList.add('active');
+                            const index = entry.target.getAttribute('data-index');
+                            screens.forEach(s => s.classList.remove('active'));
+                            
+                            const activeScreen = document.getElementById(`screen-${index}`);
+                            if(activeScreen) activeScreen.classList.add('active');
+                        }
+                    });
+                }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
-                        const index = entry.target.getAttribute('data-index');
-                        screens.forEach(s => s.classList.remove('active'));
-                        
-                        const activeScreen = document.getElementById(`screen-${index}`);
-                        if(activeScreen) activeScreen.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            steps.forEach(step => observer.observe(step));
+                steps.forEach(step => observer.observe(step));
+            }
         });
     </script>
 </body>
