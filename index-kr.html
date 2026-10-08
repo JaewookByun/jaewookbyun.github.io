@@ -292,7 +292,7 @@
             color: #FFFFFF;
         }
 
-        /* 인터랙티브 웹 시뮬레이터 */
+        /* 인터랙티브 웹 시뮬레이터 공통 레이아웃 */
         .simulator-section {
             padding: 90px 0;
             background: #FFFFFF;
@@ -382,7 +382,6 @@
             gap: 10px;
         }
 
-        /* 야간에도 선명한 가이드 캡슐 배지 */
         .clock-guide-pill {
             position: relative;
             z-index: 5;
@@ -405,38 +404,17 @@
             line-height: 1.4;
         }
 
-        /* 시계 튜토리얼 오버레이 카드 */
-        .clock-result-card-overlay {
-            display: none;
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 25;
-            padding: 16px 14px;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            border-radius: 32px;
-            animation: fadeIn 0.25s ease-out;
-        }
-        .clock-result-card-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100%;
-            text-align: center;
-            margin: auto;
-            width: 100%;
-        }
-
-        /* 2) 세로셈 모눈 보드 */
+        /* 2) 세로셈 모눈 보드 & 대형 카드 전체 오버레이 */
         .math-sim-box {
+            position: relative;
             padding: 30px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 540px;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
         }
         .math-quiz-board {
             position: relative;
@@ -551,21 +529,21 @@
             white-space: nowrap;
         }
 
-        /* 모바일 스크롤 오버레이 */
-        .math-result-card-overlay {
+        /* 📱 카드 전체 범위를 채우는 시원한 대형 오버레이 스타일 (공통) */
+        .large-card-full-overlay {
             display: none;
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             z-index: 25;
-            padding: 16px 14px;
+            padding: 24px 18px;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
-            border-radius: 26px;
+            border-radius: 0 0 32px 32px;
             animation: fadeIn 0.25s ease-out;
         }
-        .math-result-card-content {
+        .large-card-overlay-content {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -574,10 +552,11 @@
             text-align: center;
             margin: auto;
             width: 100%;
+            max-width: 480px;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.96); }
+            from { opacity: 0; transform: scale(0.97); }
             to { opacity: 1; transform: scale(1); }
         }
 
@@ -763,21 +742,17 @@
 
                         <!-- 1) 인터랙티브 시계 시뮬레이터 -->
                         <div id="sim-box-clock" class="clock-sim-box">
-                            <!-- 실시간 하늘 그라데이션 및 천체 캔버스 (해, 달, 별 궤적) -->
                             <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);">
                                 <canvas id="skyCelestialCanvas"></canvas>
                             </div>
                             
-                            <!-- 완구 감성 돔 하이라이트 & 투영 가이드가 적용된 시계 캔버스 -->
                             <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
 
-                            <!-- 실시간 디지털 보드 -->
                             <div class="clock-digital-pill">
                                 <span id="clock-ampm-badge" class="badge bg-primary rounded-pill" style="font-size: 0.85rem;">오후</span>
                                 <span id="clock-digital-time" style="font-family: monospace;">03시 00분</span>
                             </div>
 
-                            <!-- 야간에도 선명한 가이드 캡슐 배지 -->
                             <div class="clock-guide-pill">
                                 <span>👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 하늘의 낮과 밤이 실시간으로 바뀝니다.</span>
                             </div>
@@ -789,32 +764,32 @@
                                 </button>
                             </div>
 
-                            <!-- 📱 분침 배우기 안내 오버레이 (모바일 스크롤 지원) -->
-                            <div id="clockResultOverlay" class="clock-result-card-overlay">
-                                <div class="clock-result-card-content py-2">
+                            <!-- 📱 시계 튜토리얼 대형 카드 오버레이 (카드 전체 범위) -->
+                            <div id="clockResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
                                     <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
                                         ⏰ 시계 읽기의 완벽한 솔루션
                                     </span>
-                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.2rem; line-height: 1.35;">
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
                                         매쓰고치 앱을 다운받아<br>시계 바늘의 원리부터 1분 단위까지 마스터해보세요!
                                     </h4>
                                     
-                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 380px; width: 100%; font-size: 0.85rem; line-height: 1.55;">
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
                                             <strong>🎓 빈틈없는 5단계 튜토리얼:</strong><br>
-                                            <span class="text-muted">분침 예순 칸의 원리부터 구구단 5단 연계까지 차근차근 완성!</span>
+                                            <span class="text-muted">아날로그 시계의 구성 요소, 관계, 흐름, 시침 읽기, 분침 읽기까지 차근차근 완성!</span>
                                         </div>
                                         <div class="mb-2 text-dark">
                                             <strong>💡 친절한 시청각 오답 코칭:</strong><br>
                                             <span class="text-muted">헷갈릴 때 "큰 3에 있으면 5씩 점프해서 15분!" 스스로 깨치는 맞춤 가이드</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🌀 실시간 톱니 연동 & 낮밤 체득:</strong><br>
-                                            <span class="text-muted">바늘을 돌릴 때마다 해와 달이 뜨고 지며 시간의 인과관계를 직관적으로 이해</span>
+                                            <strong>🌀 실시간 톱니 연동:</strong><br>
+                                            <span class="text-muted">시침과 분침이 물리적으로 맞물려 돌아가며 시간의 인과관계를 직관적으로 이해</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🎙️ 부모 목소리 응원 & 동물 친구 성장:</strong><br>
-                                            <span class="text-muted">부모님 사진과 음성으로 성취감을 북돋고, 과일을 모아 펫을 깨우는 자기주도 몰입</span>
+                                            <strong>🐣 과일을 모아 펫을 키우는 자기주도 학습:</strong><br>
+                                            <span class="text-muted">매일 퀴즈를 풀고 모은 과일로 펫을 부화시키고 키우며 스스로 공부하는 습관 완성</span>
                                         </div>
                                     </div>
 
@@ -859,49 +834,9 @@
                                 <div id="canvas-guide" class="canvas-guide-overlay">
                                     ✍️ 위쪽 받아올림 메모부터 아래 정답까지 자유롭게 써보세요!
                                 </div>
-
-                                <!-- 정답 확인 오버레이 -->
-                                <div id="mathResultOverlay" class="math-result-card-overlay">
-                                    <div class="math-result-card-content py-2">
-                                        <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
-                                            🎉 정답: <span id="overlay-ans-text">63</span>
-                                        </span>
-                                        <h4 class="fw-bold text-dark mb-2" style="font-size: 1.2rem; line-height: 1.35;">
-                                            매쓰고치 앱을 다운받아<br>연습장이 필요 없는 진짜 연산 공부를 경험해보세요!
-                                        </h4>
-                                        
-                                        <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 380px; width: 100%; font-size: 0.85rem; line-height: 1.55;">
-                                            <div class="mb-2 text-dark">
-                                                <strong>⚡ 120Hz 초정밀 획인식:</strong><br>
-                                                <span class="text-muted">종이 연습장 없이 화면에 쓱쓱! 아이 손글씨 궤적을 실시간 판별합니다.</span>
-                                            </div>
-                                            <div class="mb-2 text-dark">
-                                                <strong>💡 시각 / 청각 가이드 오답 코칭:</strong><br>
-                                                <span class="text-muted">오답일 때 시각 / 청각 가이드로 아이가 스스로 학습할 수 있도록 도와줍니다.</span>
-                                            </div>
-                                            <div class="mb-2 text-dark">
-                                                <strong>🧮 체계적 연산 로드맵:</strong><br>
-                                                <span class="text-muted">한 자리 수부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈까지 점진적 퀴즈로 완성!</span>
-                                            </div>
-                                            <div class="text-dark">
-                                                <strong>🃏 구구단 시각화 플래시카드:</strong><br>
-                                                <span class="text-muted">단순 암기 대신 면적 분할과 수박 애니메이션으로 원리를 쏙쏙!</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                            <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                                <i class="bi bi-apple me-1"></i> App Store 다운로드
-                                            </a>
-                                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
-                                                다시 쓰기
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
+                            <!-- 하단 조작 액션 바 -->
                             <div class="d-flex gap-2 mt-3" style="max-width: 480px; width: 100%;">
                                 <button class="btn btn-light border rounded-pill flex-grow-1 fw-bold shadow-sm" onclick="clearMathCanvas()">
                                     <i class="bi bi-eraser me-1 text-danger"></i> 필기만 지우기
@@ -910,6 +845,47 @@
                                     <i class="bi bi-check-circle me-1"></i> 정답 확인
                                 </button>
                             </div>
+
+                            <!-- 📱 연산 오버레이: 카드 컨테이너 전체를 시원하게 채우도록 배치 완료 -->
+                            <div id="mathResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
+                                    <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
+                                        🎉 정답: <span id="overlay-ans-text">63</span>
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
+                                        매쓰고치 앱을 다운받아<br>연습장이 필요 없는 진짜 연산 공부를 경험해보세요!
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>⚡ 120Hz 초정밀 획인식:</strong><br>
+                                            <span class="text-muted">종이 연습장 없이 화면에 쓱쓱! 아이 손글씨 궤적을 실시간 판별합니다.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 시각 / 청각 가이드 오답 코칭:</strong><br>
+                                            <span class="text-muted">오답일 때 시각 / 청각 가이드로 아이가 스스로 학습할 수 있도록 도와줍니다.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🧮 체계적 연산 로드맵:</strong><br>
+                                            <span class="text-muted">한 자리 수부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈까지 점진적 퀴즈로 완성!</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🃏 구구단 시각화 플래시카드:</strong><br>
+                                            <span class="text-muted">단순 암기 대신 면적 분할과 수박 애니메이션으로 원리를 쏙쏙!</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store 다운로드
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
+                                            다시 쓰기
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -1085,7 +1061,6 @@
             skyCtx.clearRect(0, 0, w, h);
             const hourFloat = currentHour + currentMinute / 60;
 
-            // 1) 밤하늘 별 그리기
             let nightFactor = 0;
             if (hourFloat >= 20 || hourFloat <= 5) nightFactor = 1;
             else if (hourFloat > 5 && hourFloat < 6.5) nightFactor = (6.5 - hourFloat) / 1.5;
@@ -1100,19 +1075,16 @@
                 });
             }
 
-            // 2) 태양 포물선 궤적 (05:30 ~ 18:30)
             if (hourFloat >= 5.5 && hourFloat <= 18.5) {
                 const sunProgress = (hourFloat - 5.5) / 13;
                 const sunX = w * (0.05 + sunProgress * 0.90);
                 const sunY = h * (0.75 - 0.55 * Math.sin(sunProgress * Math.PI));
 
-                // 외부 광륜
                 skyCtx.beginPath();
                 skyCtx.arc(sunX, sunY, 26, 0, Math.PI * 2);
                 skyCtx.fillStyle = 'rgba(255, 209, 102, 0.22)';
                 skyCtx.fill();
 
-                // 태양 본체
                 skyCtx.beginPath();
                 skyCtx.arc(sunX, sunY, 16, 0, Math.PI * 2);
                 skyCtx.fillStyle = '#FFAA00';
@@ -1124,7 +1096,6 @@
                 skyCtx.fill();
             }
 
-            // 3) 초승달 궤적 (17:30 ~ 06:30)
             const isMoonTime = hourFloat >= 17.5 || hourFloat <= 6.5;
             if (isMoonTime) {
                 const moonHour = hourFloat >= 17.5 ? hourFloat - 17.5 : hourFloat + 6.5;
@@ -1138,7 +1109,6 @@
                 skyCtx.fillStyle = '#FFF3B0';
                 skyCtx.fill();
 
-                // 달 그림자 부분 마스킹 (초승달 연출)
                 skyCtx.globalCompositeOperation = 'destination-out';
                 skyCtx.beginPath();
                 skyCtx.arc(moonX + 7, moonY - 3, 13, 0, Math.PI * 2);
@@ -1147,7 +1117,7 @@
             }
         }
 
-        /* 4. 손으로 돌리는 인터랙티브 시계 (완구 디테일 & 투영 점선 적용) */
+        /* 4. 손으로 돌리는 인터랙티브 시계 */
         const clockCanvas = document.getElementById('interactiveClockCanvas');
         const clockCtx = clockCanvas.getContext('2d');
         const digitalTimeEl = document.getElementById('clock-digital-time');
@@ -1167,7 +1137,6 @@
 
             clockCtx.clearRect(0, 0, w, h);
 
-            // 1) 시계 베이스 다이얼 (방사형 그라데이션)
             const dialGrad = clockCtx.createRadialGradient(cx, cy, 0, cx, cy, r);
             dialGrad.addColorStop(0, '#FFFFFF');
             dialGrad.addColorStop(0.85, '#F8FAFC');
@@ -1178,7 +1147,6 @@
             clockCtx.fillStyle = dialGrad;
             clockCtx.fill();
 
-            // 2) 삼중 클레이 완구 림 (하늘색 & 산호색 & 흰색)
             clockCtx.beginPath();
             clockCtx.arc(cx, cy, r - 4, 0, Math.PI * 2);
             clockCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
@@ -1191,7 +1159,6 @@
             clockCtx.lineWidth = 2.5;
             clockCtx.stroke();
 
-            // 3) 눈금 & 숫자
             const tickTrackRadius = r * 0.88;
             for (let i = 0; i < 60; i++) {
                 const angle = (i * 6 - 90) * (Math.PI / 180);
@@ -1232,7 +1199,6 @@
                 }
             }
 
-            // 각도 계산
             const hourDeg = (currentHour % 12 + currentMinute / 60) * 30;
             const minDeg = currentMinute * 6;
             const hourRad = (hourDeg - 90) * (Math.PI / 180);
@@ -1243,7 +1209,6 @@
             const minLen = r * 0.74;
             const minTail = minLen * 0.18;
 
-            // 4) 바늘 끝 투영 점선 & 가이드 포인트
             const hourProjX = cx + tickTrackRadius * Math.cos(hourRad);
             const hourProjY = cy + tickTrackRadius * Math.sin(hourRad);
             clockCtx.save();
@@ -1278,7 +1243,6 @@
             clockCtx.fillStyle = '#00B894';
             clockCtx.fill();
 
-            // 5) 시침 (그림자, 본체, 꼬리)
             clockCtx.beginPath();
             clockCtx.moveTo(cx - hourTail * Math.cos(hourRad) + 2, cy - hourTail * Math.sin(hourRad) + 3);
             clockCtx.lineTo(cx + hourLen * Math.cos(hourRad) + 2, cy + hourLen * Math.sin(hourRad) + 3);
@@ -1303,7 +1267,6 @@
             clockCtx.lineCap = 'round';
             clockCtx.stroke();
 
-            // 6) 분침 (그림자, 본체, 꼬리)
             clockCtx.beginPath();
             clockCtx.moveTo(cx - minTail * Math.cos(minRad) + 2, cy - minTail * Math.sin(minRad) + 3);
             clockCtx.lineTo(cx + minLen * Math.cos(minRad) + 2, cy + minLen * Math.sin(minRad) + 3);
@@ -1328,7 +1291,6 @@
             clockCtx.lineCap = 'round';
             clockCtx.stroke();
 
-            // 7) 중앙 황금 입체 캡
             clockCtx.beginPath();
             clockCtx.arc(cx, cy, 7.5, 0, Math.PI * 2);
             clockCtx.fillStyle = '#E2E8F0';
@@ -1347,7 +1309,6 @@
             clockCtx.fillStyle = '#FFFFFF';
             clockCtx.fill();
 
-            // 8) 볼록 유리 돔 하이라이트 (Specular Dome Highlight)
             const domeGrad = clockCtx.createLinearGradient(0, cy - r * 0.78, 0, cy - r * 0.22);
             domeGrad.addColorStop(0, 'rgba(255, 255, 255, 0.40)');
             domeGrad.addColorStop(1, 'rgba(255, 255, 255, 0.03)');
@@ -1508,6 +1469,7 @@
 
         window.addEventListener('touchend', () => { isDrawing = false; });
 
+        /* [정답 확인] 클릭 시 카드 전체 오버레이 노출 */
         function submitMathCheck() {
             overlayAnsText.textContent = (quizA + quizB);
             mathResultOverlay.style.display = 'flex';
