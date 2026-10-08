@@ -11,13 +11,13 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
     <!-- 🔍 검색 엔진 최적화 (SEO 메타 태그) -->
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험. App Store 정식 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의, 앱스토어">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험. App Store & Google Play 출시!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의, 앱스토어, 구글플레이">
     <meta name="author" content="ChronoLab">
     
     <!-- 표준 링크 (Canonical) -->
@@ -32,7 +32,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
+    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 출시!">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -43,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta name="twitter:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta name="twitter:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
+    <meta name="twitter:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 출시!">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
 
     <!-- Favicon -->
@@ -90,25 +90,34 @@
             --chronofit-brand: #4F46E5;
         }
         
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
         body { 
             font-family: 'Pretendard', 'Inter', sans-serif; 
             color: var(--text-main); 
-            overflow-x: hidden; 
             background-color: #fff;
             word-break: keep-all;
             overflow-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
         }
         
         /* 상단 고정 네비게이션 바 */
         .navbar { 
             backdrop-filter: blur(12px); 
             background: rgba(255, 255, 255, 0.95); 
-            border-bottom: 1px solid rgba(0,0,0,0.05); 
+            border-bottom: 1px solid rgba(0,0,0,0.06); 
         }
         .nav-app-switcher .nav-link {
             font-weight: 700;
             font-size: 0.95rem;
-            padding: 6px 14px;
+            padding: 7px 14px;
             border-radius: 20px;
             color: #64748b;
             transition: all 0.2s ease;
@@ -122,25 +131,27 @@
             background-color: #F8FAFC;
         }
 
-        /* 버튼 스타일 */
-        .btn-appstore {
+        /* 스토어 다운로드 버튼 공통 */
+        .btn-appstore, .btn-googleplay {
             background-color: #000000;
             color: #FFFFFF !important;
-            padding: 9px 24px;
+            padding: 9px 22px;
             border-radius: 50px;
             font-weight: 800;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             text-decoration: none;
             transition: all 0.2s ease;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
             border: 1px solid #000;
+            min-height: 48px;
         }
-        .btn-appstore:hover {
+        .btn-appstore:hover, .btn-googleplay:hover {
             background-color: #1E293B;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
         }
 
         .btn-kakao {
@@ -148,11 +159,15 @@
             color: #191919;
             font-weight: 800;
             border-radius: 50px;
-            padding: 10px 20px;
+            padding: 9px 18px;
             border: none;
             transition: all 0.2s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
         }
         .btn-kakao:hover {
             background-color: #FADA0A;
@@ -163,7 +178,7 @@
         /* Hero 섹션 */
         .hero-section { 
             padding-top: 130px; 
-            padding-bottom: 90px; 
+            padding-bottom: 80px; 
             background: radial-gradient(circle at 50% 30%, #F3E8FF 0%, #FFFFFF 75%); 
             overflow: hidden; 
         }
@@ -171,9 +186,10 @@
             background: #EDE9FE;
             color: #6D28D9;
             font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             border: 1px solid #DDD6FE;
             display: inline-block;
+            line-height: 1.4;
         }
         .release-pill {
             background: #DCFCE7;
@@ -181,9 +197,11 @@
             font-weight: 800;
             font-size: 0.85rem;
             border: 1px solid #BBF7D0;
+            display: inline-block;
+            line-height: 1.4;
         }
         .hero-headline { 
-            font-size: 3.2rem; 
+            font-size: clamp(1.95rem, 6.5vw, 3.2rem);
             font-weight: 900; 
             line-height: 1.25; 
             letter-spacing: -0.02em; 
@@ -271,14 +289,14 @@
         }
 
         .feature-icon-box {
-            width: 58px;
-            height: 58px;
+            width: 56px;
+            height: 56px;
             border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 18px;
+            font-size: 1.75rem;
+            margin-bottom: 16px;
         }
         .feature-list i { font-size: 1.25rem; color: var(--brand-purple); }
 
@@ -286,22 +304,49 @@
         .scrollable-dropdown { 
             max-height: 380px; 
             overflow-y: auto; 
-            min-width: 200px;
+            min-width: 190px;
             border-radius: 16px;
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
 
-        /* 모바일 최적화 (991.98px 이하) */
+        /* 📱 스마트폰 모바일 최적화 (991.98px 이하) */
         @media (max-width: 991.98px) { 
-            .hero-section { padding-top: 100px; padding-bottom: 60px; }
-            .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
+            .hero-section { padding-top: 105px; padding-bottom: 50px; }
             .desktop-sticky-wrapper { display: none !important; }
-            .feature-visual-mobile { display: flex !important; margin-top: 20px; margin-bottom: 24px; max-width: 100%; border-radius: 20px; }
-            .sticky-container { padding: 40px 0; }
-            .step-content { height: auto !important; padding: 40px 0 !important; opacity: 1 !important; border-bottom: 1px dashed #E2E8F0; }
+            .feature-visual-mobile { 
+                display: flex !important; 
+                margin-top: 20px; 
+                margin-bottom: 24px; 
+                max-width: 100%; 
+                border-radius: 20px; 
+            }
+            .sticky-container { padding: 30px 0; }
+            .step-content { 
+                height: auto !important; 
+                padding: 35px 0 !important; 
+                opacity: 1 !important; 
+                border-bottom: 1px dashed #E2E8F0; 
+            }
             .step-content:last-child { border-bottom: none; }
-            .step-title { font-size: 1.8rem !important; }
-            .navbar-collapse .dropdown-menu { left: 0 !important; right: auto !important; max-width: calc(100vw - 36px); }
+            .step-title { font-size: 1.65rem !important; line-height: 1.35; }
+            .hero-graphic-card { border-radius: 20px; }
+
+            .navbar-collapse {
+                padding-top: 12px;
+                padding-bottom: 16px;
+            }
+            .navbar-collapse .dropdown-menu { 
+                position: static !important;
+                float: none;
+                width: 100%;
+                margin-top: 8px;
+                box-shadow: none;
+                border: 1px solid rgba(0,0,0,0.08);
+            }
+
+            .btn-cta-mobile {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -310,18 +355,18 @@
     <!-- 고정 상단 네비게이션 -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-kr.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index-kr.html">
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="34" height="34" class="me-2 rounded-3">
                 매쓰고치
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="메뉴 열기">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="메뉴 열기">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- 상단 제품군 탭 전환 -->
-                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="index-kr.html">⏰ 매쓰고치</a>
                     </li>
@@ -332,21 +377,21 @@
 
                 <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
                     <!-- 언어 드롭다운 -->
-                    <div class="dropdown me-2 position-relative">
+                    <div class="dropdown position-relative">
                         <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             🌐 한국어
                         </button>
                         <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 scrollable-dropdown">
-                            <li><a class="dropdown-item active" href="index-kr.html">한국어 (Korean)</a></li>
+                            <li><a class="dropdown-item active fw-bold" href="index-kr.html">한국어 (Korean)</a></li>
                             <li><a class="dropdown-item" href="index.html">English</a></li>
                         </ul>
                     </div>
 
                     <!-- 1:1 문의 & 유튜브 바로가기 -->
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3 shadow-sm d-flex align-items-center">
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3">
                         <i class="bi bi-chat-fill me-1"></i> 1:1 문의
                     </a>
-                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
+                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold rounded-pill px-3">
                         <i class="bi bi-youtube me-1"></i> 개발일지
                     </a>
                 </div>
@@ -362,10 +407,10 @@
                     
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 시계가 어렵던 두 아이를 위해 아빠가 직접 만든 앱
+                            👨‍👧‍👦 시계가 어렵던 두 아이를 위해 아빠가 만든 앱
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
-                             App Store 정식 출시
+                            🎉 공식 스토어 정식 출시
                         </span>
                     </div>
                     
@@ -378,16 +423,16 @@
                         지루한 주입식 암기는 이제 그만. 손가락으로 톱니바늘을 직접 돌리며 낮과 밤의 24시간 원리를 체득하고, 매일 퀴즈를 풀며 알을 깨우는 신비한 동물 친구들을 만나보세요!
                     </p>
 
-                    <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
+                    <ul class="list-unstyled text-muted mb-4 text-start d-inline-block ps-1">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>물리적 톱니 연동:</strong> 분침을 돌리면 시침과 하늘의 해/달이 함께 움직이는 직관적 시계</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 다정한 육성과 표정 사진으로 북돋는 최고의 성취감</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 친구 성장 시스템:</strong> 매일 퀴즈 풀이로 과일을 모으고 알을 깨우며 스스로 몰입</li>
                     </ul>
                     
-                    <!-- 다운로드 및 체험 버튼 -->
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-center mb-3">
-                        <!-- 실제 매쓰고치 App Store 링크 적용 -->
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-appstore shadow-sm">
+                    <!-- 공식 다운로드 버튼 그룹 (iOS & Android 정식 릴리즈) -->
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
+                        <!-- Apple App Store -->
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-appstore shadow-sm btn-cta-mobile">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -395,14 +440,17 @@
                             </div>
                         </a>
 
-                        <!-- 안드로이드 체험 안내 버튼 -->
-                        <button type="button" class="btn btn-outline-success rounded-pill px-4 py-2 fw-bold shadow-sm d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#androidAlphaModal" style="height: 48px;">
-                            <i class="bi bi-android2 fs-5"></i>
-                            <span>안드로이드 무료 체험</span>
-                        </button>
+                        <!-- Google Play Store -->
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-googleplay shadow-sm btn-cta-mobile">
+                            <i class="bi bi-google-play fs-3"></i>
+                            <div class="text-start" style="line-height: 1.15;">
+                                <div style="font-size: 0.68rem; opacity: 0.85;">GET IT ON</div>
+                                <div style="font-size: 1.05rem; font-weight: 800;">Google Play</div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="text-muted small mt-3">
+                    <div class="text-muted small mt-2">
                         🛡️ 100% 무광고 &bull; 외부 서버 전송 없는 온디바이스 보안 &bull; 부모 안심 게이트 포함
                     </div>
                 </div>
@@ -549,6 +597,55 @@
         </div>
     </section>
 
+    <!-- 안전 가치 배너 -->
+    <section class="py-5 bg-white border-top">
+        <div class="container py-3 text-center">
+            <h2 class="fw-bold mb-4" style="font-size: 1.85rem;">부모님이 안심할 수 있는 3대 약속</h2>
+            <div class="row g-3 g-md-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
+                        <div class="fs-1 mb-2">🚫</div>
+                        <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)</h5>
+                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너 및 동영상 광고도 일절 싣지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
+                        <div class="fs-1 mb-2">🔒</div>
+                        <h5 class="fw-bold mb-2">온디바이스 개인정보 보호</h5>
+                        <p class="text-muted small mb-0">회원가입이 필요 없으며 부모 음성 및 셀카는 외부 서버 업로드 없이 오직 기기 내부에만 암호화 보관됩니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금장치를 적용했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1:1 문의 섹션 -->
+    <section class="py-5" style="background-color: #FAF5FF;">
+        <div class="container text-center">
+            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 760px;" data-aos="zoom-in">
+                <div class="fs-1 mb-2">💬</div>
+                <h3 class="fw-bold mb-2 text-dark">1:1 문의 및 고객지원</h3>
+                <p class="text-muted mb-4" style="line-height: 1.7; font-size: 0.95rem;">
+                    앱 이용 중 불편한 점, 마스터키 분실, 결제 및 오류 문의, 새로운 학습 기능 제안 등<br class="d-none d-md-inline">
+                    어떤 이야기든 1:1 문의방으로 편하게 남겨주시면 개발자가 직접 정성껏 답변드리겠습니다.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg px-4 px-md-5 shadow-sm d-inline-flex align-items-center">
+                        <i class="bi bi-chat-fill me-2 fs-5"></i> 1:1 카카오톡 문의하기 &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 서브 앱 교차 홍보 카드: 크로노핏 -->
     <section class="py-5" style="background: linear-gradient(180deg, #F8FAFC 0%, #EEF2FF 100%);">
         <div class="container py-4">
@@ -573,81 +670,6 @@
             </div>
         </div>
     </section>
-
-    <!-- 안드로이드 체험 안내 모달 -->
-    <div class="modal fade" id="androidAlphaModal" tabindex="-1" aria-labelledby="androidAlphaModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content rounded-4 border-0 shadow">
-                <div class="modal-header border-0 pb-0 pt-4 px-4">
-                    <div>
-                        <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">
-                            🎁 안드로이드 얼리버드 특별 혜택
-                        </span>
-                        <h4 class="modal-title fw-bold text-dark" id="androidAlphaModalLabel" style="font-size: 1.25rem;">
-                            안드로이드에서 매쓰고치를 무료로 먼저 만나보세요!
-                        </h4>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
-                </div>
-                <div class="modal-body px-4 py-3">
-                    <div class="p-3 bg-light rounded-3 mb-3 text-muted small" style="line-height: 1.7;">
-                        👨‍👧‍👦 <strong>안녕하세요! 아이들을 위해 매쓰고치를 개발한 아빠입니다.</strong><br>
-                        iOS 버전은 공식 출시되었으며, 안드로이드는 현재 <strong>비공개 사전 테스트</strong>를 진행 중입니다. 정식 출시 전까지는 모든 유료 기능을 별도 결제 없이 무료(0원)로 바로 이용하실 수 있습니다. 아래 3단계를 따라 해 주세요!
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">1</span>
-                                        <strong class="text-dark">테스터 그룹 가입</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">스토어 다운로드 권한을 얻기 위해 그룹에 가입합니다.</p>
-                                </div>
-                                <a href="https://groups.google.com/g/mathgotchi-testers" target="_blank" class="btn btn-outline-primary btn-sm w-100 fw-bold mt-2">
-                                    ① 그룹 가입하기 &rarr;
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">2</span>
-                                        <strong class="text-dark">테스터 참여 수락</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">초대 화면에서 <strong>[Become a tester]</strong>를 누릅니다.</p>
-                                </div>
-                                <a href="https://play.google.com/apps/testing/com.chronolab.wooagong" target="_blank" class="btn btn-outline-success btn-sm w-100 fw-bold mt-2">
-                                    ② 테스터 수락하기 &rarr;
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">3</span>
-                                        <strong class="text-dark">앱 다운로드</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">Google Play 스토어에서 <strong>매쓰고치</strong>를 설치합니다.</p>
-                                </div>
-                                <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-outline-dark btn-sm w-100 fw-bold mt-2">
-                                    ③ 앱 받기 &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer border-0 pt-0 pb-4 px-4 d-flex justify-content-between align-items-center">
-                    <span class="small text-muted">진행 중 막히시면 언제든 문의주세요 👉</span>
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm">
-                        <i class="bi bi-chat-fill me-1"></i> 카카오톡 문의
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- 푸터 -->
     <footer class="bg-white py-5 border-top">
