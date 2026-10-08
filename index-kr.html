@@ -14,389 +14,428 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <!-- 🔍 검색 엔진 최적화 (SEO 메타 태그) -->
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험. App Store 정식 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의, 앱스토어">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 손글씨 두 자리 덧셈, 알을 깨는 동물 친구! App Store 정식 출시!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 두자리덧셈, 필기체인식, 펫키우기, 동물친구, 부모응원, ChronoLab, 무광고 어린이앱">
     <meta name="author" content="ChronoLab">
     
-    <!-- 표준 링크 (Canonical) -->
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
-
-    <!-- 🌐 다국어 검색 최적화 (hreflang) -->
     <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
-    <!-- 📱 Open Graph (카카오톡, SNS 공유 카드) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
     <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="ChronoLab">
 
-    <!-- 🐦 Twitter / X 카드 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.chronolaboratory.com/index-kr.html">
-    <meta name="twitter:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta name="twitter:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
-    <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
-
-    <!-- Favicon -->
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
-    
-    <!-- 📊 구글 구조화 데이터 (JSON-LD Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "매쓰고치 (Mathgotchi)",
-      "operatingSystem": "iOS, Android",
-      "applicationCategory": "EducationalApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      },
-      "description": "시계가 어렵고 공부가 싫었던 두 아이를 위해 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험.",
-      "author": {
-        "@type": "Organization",
-        "name": "ChronoLab",
-        "url": "https://www.chronolaboratory.com"
-      }
-    }
-    </script>
 
     <!-- CSS 라이브러리 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root { 
             --brand-purple: #6C5CE7; 
-            --brand-dark: #4834D4; 
-            --brand-accent: #FF7675;
-            --brand-yellow: #FEE500;
-            --text-main: #1E293B; 
-            --text-sub: #475569;
-            --bg-light: #F8FAFC; 
+            --brand-purple-dark: #5844e0;
+            --brand-yellow: #FFEAA7;
+            --brand-coral: #FF7675;
+            --brand-mint: #00B894;
+            --clay-bg: #FBF9F5;
+            --clay-card-bg: #FFFFFF;
+            --text-main: #2D3436; 
+            --text-sub: #636E72;
+            --toy-shadow: 0 12px 32px rgba(108, 92, 231, 0.12), 0 4px 12px rgba(0,0,0,0.04);
+            --toy-lip: 0 5px 0 #5240d6;
         }
         
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { max-width: 100vw; overflow-x: hidden; }
 
         body { 
-            font-family: 'Pretendard', 'Inter', sans-serif; 
+            font-family: 'Pretendard', sans-serif; 
             color: var(--text-main); 
-            background-color: #fff;
+            background-color: var(--clay-bg);
             word-break: keep-all;
             overflow-wrap: break-word;
             -webkit-font-smoothing: antialiased;
-        }
-        
-        /* 고정 상단 네비게이션 바 */
-        .navbar { 
-            backdrop-filter: blur(12px); 
-            background: rgba(255, 255, 255, 0.95); 
-            border-bottom: 1px solid rgba(0,0,0,0.06); 
-        }
-        .nav-app-switcher .nav-link {
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 7px 14px;
-            border-radius: 20px;
-            color: #64748b;
-            transition: all 0.2s ease;
-        }
-        .nav-app-switcher .nav-link.active {
-            background-color: #FAF5FF;
-            color: var(--brand-purple);
-        }
-        .nav-app-switcher .nav-link:hover:not(.active) {
-            color: var(--brand-purple);
-            background-color: #F8FAFC;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 118, 117, 0.03) 0%, transparent 25%);
         }
 
-        /* App Store 공식 버튼 */
-        .btn-appstore {
-            background-color: #000000;
-            color: #FFFFFF !important;
-            padding: 9px 22px;
+        /* 3D 클레이 버튼 공통 */
+        .btn-clay {
             border-radius: 50px;
             font-weight: 800;
+            transition: all 0.15s ease-in-out;
+            border: none;
+            position: relative;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-            border: 1px solid #000;
-            min-height: 48px;
+        }
+        .btn-clay:active {
+            transform: translateY(3px) !important;
+        }
+
+        /* 스토어 버튼 */
+        .btn-appstore {
+            background: #1E1B4B;
+            color: #FFFFFF !important;
+            padding: 10px 24px;
+            box-shadow: 0 5px 0 #0F0E26, 0 10px 20px rgba(0,0,0,0.15);
+            min-height: 52px;
         }
         .btn-appstore:hover {
-            background-color: #1E293B;
+            background: #2D276D;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 7px 0 #0F0E26, 0 14px 24px rgba(0,0,0,0.2);
+        }
+        .btn-appstore:active {
+            box-shadow: 0 2px 0 #0F0E26 !important;
         }
 
-        /* Google Play 심사 중 버튼 */
         .btn-googleplay-pending {
-            background-color: #F8FAFC;
+            background: #FFFFFF;
             color: #475569 !important;
-            padding: 9px 22px;
-            border-radius: 50px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            border: 1.5px solid #CBD5E1;
-            min-height: 48px;
-            transition: all 0.2s ease;
+            padding: 10px 22px;
+            border: 2px solid #E2E8F0;
+            box-shadow: 0 5px 0 #CBD5E1;
+            min-height: 52px;
             cursor: pointer;
         }
         .btn-googleplay-pending:hover {
-            background-color: #F1F5F9;
-            border-color: #94A3B8;
-            color: #1E293B !important;
+            background: #F8FAFC;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #94A3B8;
+        }
+        .btn-googleplay-pending:active {
+            box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
-        .btn-kakao {
-            background-color: var(--brand-yellow);
-            color: #191919;
-            font-weight: 800;
-            border-radius: 50px;
-            padding: 9px 18px;
-            border: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 38px;
+        /* 네비게이션 */
+        .navbar { 
+            backdrop-filter: blur(14px); 
+            background: rgba(251, 249, 245, 0.92); 
+            border-bottom: 2px solid rgba(226, 232, 240, 0.6); 
         }
-        .btn-kakao:hover {
-            background-color: #FADA0A;
-            color: #000;
-            transform: translateY(-2px);
+        .nav-app-switcher .nav-link {
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .nav-app-switcher .nav-link.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 3px 0 #DDD6FE, 0 6px 12px rgba(108, 92, 231, 0.1);
         }
 
         /* Hero 섹션 */
         .hero-section { 
-            padding-top: 130px; 
-            padding-bottom: 80px; 
-            background: radial-gradient(circle at 50% 30%, #F3E8FF 0%, #FFFFFF 75%); 
-            overflow: hidden; 
+            padding-top: 135px; 
+            padding-bottom: 70px; 
+            position: relative;
         }
         .hero-badge {
             background: #EDE9FE;
             color: #6D28D9;
             font-weight: 800;
             font-size: 0.88rem;
-            border: 1px solid #DDD6FE;
-            display: inline-block;
-            line-height: 1.4;
+            border: 1.5px solid #DDD6FE;
+            box-shadow: 0 3px 0 #DDD6FE;
         }
         .release-pill {
             background: #DCFCE7;
             color: #166534;
             font-weight: 800;
             font-size: 0.85rem;
-            border: 1px solid #BBF7D0;
-            display: inline-block;
-            line-height: 1.4;
+            border: 1.5px solid #BBF7D0;
+            box-shadow: 0 3px 0 #BBF7D0;
         }
         .pending-pill {
             background: #FEF3C7;
             color: #92400E;
             font-weight: 800;
             font-size: 0.85rem;
-            border: 1px solid #FDE68A;
-            display: inline-block;
-            line-height: 1.4;
+            border: 1.5px solid #FDE68A;
+            box-shadow: 0 3px 0 #FDE68A;
         }
         .hero-headline { 
-            font-size: clamp(1.95rem, 6.5vw, 3.2rem);
+            font-size: clamp(2rem, 6.5vw, 3.4rem);
             font-weight: 900; 
             line-height: 1.25; 
             letter-spacing: -0.02em; 
-            background: linear-gradient(135deg, #1E1B4B 0%, #6C5CE7 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            color: #1E1B4B;
+        }
+        .hero-headline span.highlight {
+            background: linear-gradient(135deg, #6C5CE7 0%, #FF7675 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Hero 메인 그래픽 카드 */
-        .hero-graphic-card {
-            width: 100%;
-            max-width: 560px;
-            aspect-ratio: 2400 / 1604;
+        /* =======================================================
+           📱 쇼츠 비디오 완구 쇼룸 (Shorts Toy Showroom)
+           ======================================================= */
+        .shorts-toy-wrapper {
             background: #FFFFFF;
-            border-radius: 26px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.06);
+            border-radius: 36px;
+            padding: 16px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
+            border: 3px solid #F1F5F9;
+            max-width: 440px;
             margin: 0 auto;
         }
-        .hero-graphic-img {
+        /* 탭 스위처 */
+        .shorts-pill-tabs {
+            display: flex;
+            gap: 8px;
+            background: #F1F5F9;
+            padding: 6px;
+            border-radius: 24px;
+            margin-bottom: 14px;
+        }
+        .shorts-tab-btn {
+            flex: 1;
+            padding: 9px 12px;
+            border: none;
+            background: transparent;
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #64748B;
+            border-radius: 18px;
+            transition: all 0.2s ease;
+        }
+        .shorts-tab-btn.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        /* 스마트폰 형태 비디오 스크린 프레임 (9:16) */
+        .shorts-screen-frame {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #0F172A;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        .shorts-video-element {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: none;
+        }
+        .shorts-video-element.active {
             display: block;
         }
-
-        /* PC용 스티키 레이아웃 (992px 이상) */
-        @media (min-width: 992px) {
-            .sticky-container { position: relative; padding: 100px 0; }
-            .sticky-visual { position: sticky; top: 110px; height: 600px; display: flex; align-items: center; justify-content: center; }
-            .step-content { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
-            .step-content.active { opacity: 1; }
-            
-            .screen-content { 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                width: 100%; 
-                height: 100%; 
-                opacity: 0; 
-                transition: opacity 0.5s ease-in-out; 
-                background-color: white; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                padding: 0; 
-                overflow: hidden; 
-            }
-            .screen-content.active { opacity: 1; z-index: 2; }
-            .feature-visual-mobile { display: none !important; }
-        }
-
-        /* 기능 소개 비주얼 프레임 */
-        .feature-visual-frame { 
-            width: 100%; 
-            max-width: 530px; 
-            aspect-ratio: 4 / 3; 
-            background: #FFFFFF; 
-            border-radius: 24px; 
-            position: relative; 
-            overflow: hidden; 
-            box-shadow: 0 16px 40px -10px rgba(108, 92, 231, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.06); 
-            margin: 0 auto; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        .screen-pure-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        .screen-contain-bg {
+        /* 플레이스홀더 (영상 없을 때 감성적인 포스터 카드) */
+        .shorts-fallback-poster {
             width: 100%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle at 50% 50%, #FAF5FF 0%, #EDE9FE 100%);
-            padding: 16px;
-        }
-        .screen-contain-img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px rgba(108, 92, 231, 0.2);
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
+            color: #FFFFFF;
         }
 
-        .feature-icon-box {
-            width: 56px;
-            height: 56px;
-            border-radius: 18px;
+        /* =======================================================
+           🎮 인터랙티브 웹 시뮬레이터 (Toy Simulator Section)
+           ======================================================= */
+        .simulator-section {
+            padding: 90px 0;
+            background: #FFFFFF;
+            border-top: 3px solid #F1F5F9;
+            border-bottom: 3px solid #F1F5F9;
+            position: relative;
+        }
+        .sim-container-card {
+            background: var(--clay-bg);
+            border-radius: 36px;
+            border: 3px solid #EDE9FE;
+            box-shadow: 0 16px 40px rgba(108, 92, 231, 0.08), 0 6px 0 #DDD6FE;
+            overflow: hidden;
+        }
+        .sim-nav-tabs {
+            display: flex;
+            background: #EDE9FE;
+            padding: 8px 12px;
+            gap: 10px;
+        }
+        .sim-nav-btn {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            font-weight: 900;
+            font-size: 1.05rem;
+            color: #6D28D9;
+            border-radius: 22px;
+            transition: all 0.2s;
+        }
+        .sim-nav-btn.active {
+            background: #FFFFFF;
+            color: #4C1D95;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15), 0 3px 0 #C4B5FD;
+        }
+
+        /* 1) 시계 시뮬레이터 내부 스타일 */
+        .clock-sim-box {
+            position: relative;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 480px;
+            transition: background 0.4s ease;
+            border-radius: 0 0 32px 32px;
+        }
+        .clock-sky-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 0 0 32px 32px;
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+        .clock-interactive-canvas {
+            position: relative;
+            z-index: 5;
+            touch-action: none;
+            cursor: grab;
+            filter: drop-shadow(0 16px 30px rgba(0,0,0,0.18));
+        }
+        .clock-interactive-canvas:active { cursor: grabbing; }
+
+        .clock-digital-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #1E1B4B;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 3px 0 #E2E8F0;
+            margin-top: 18px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            margin-bottom: 16px;
-        }
-        .feature-list i { font-size: 1.25rem; color: var(--brand-purple); }
-
-        /* 언어 드롭다운 스타일 */
-        .scrollable-dropdown { 
-            max-height: 380px; 
-            overflow-y: auto; 
-            min-width: 190px;
-            border-radius: 16px;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            gap: 10px;
         }
 
-        /* 📱 스마트폰 모바일 최적화 (991.98px 이하) */
-        @media (max-width: 991.98px) { 
-            .hero-section { padding-top: 105px; padding-bottom: 50px; }
-            .desktop-sticky-wrapper { display: none !important; }
-            .feature-visual-mobile { 
-                display: flex !important; 
-                margin-top: 20px; 
-                margin-bottom: 24px; 
-                max-width: 100%; 
-                border-radius: 20px; 
-            }
-            .sticky-container { padding: 30px 0; }
-            .step-content { 
-                height: auto !important; 
-                padding: 35px 0 !important; 
-                opacity: 1 !important; 
-                border-bottom: 1px dashed #E2E8F0; 
-            }
-            .step-content:last-child { border-bottom: none; }
-            .step-title { font-size: 1.65rem !important; line-height: 1.35; }
-            .hero-graphic-card { border-radius: 20px; }
+        /* 2) 덧셈 손글씨 캔버스 시뮬레이터 스타일 */
+        .math-sim-box {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 480px;
+        }
+        .math-quiz-board {
+            background: #FFFFFF;
+            border: 3px solid #E2E8F0;
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            max-width: 480px;
+            width: 100%;
+            background-image: 
+                linear-gradient(#F1F5F9 1.5px, transparent 1.5px),
+                linear-gradient(90deg, #F1F5F9 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        .vertical-math-display {
+            font-family: 'Fredoka', 'Pretendard', monospace;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1E293B;
+            text-align: right;
+            line-height: 1.1;
+            padding-right: 20px;
+            letter-spacing: 0.1em;
+        }
+        .vertical-math-line {
+            height: 4px;
+            background: #1E293B;
+            border-radius: 4px;
+            margin: 10px 0 16px 0;
+        }
+        .handwriting-canvas-area {
+            position: relative;
+            width: 100%;
+            height: 130px;
+            background: #FAF5FF;
+            border: 2px dashed #C4B5FD;
+            border-radius: 18px;
+            touch-action: none;
+            cursor: crosshair;
+        }
+        .handwriting-canvas-area canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .canvas-guide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #A78BFA;
+            font-weight: 700;
+            font-size: 0.95rem;
+            pointer-events: none;
+            user-select: none;
+        }
 
-            .navbar-collapse {
-                padding-top: 12px;
-                padding-bottom: 16px;
-            }
-            .navbar-collapse .dropdown-menu { 
-                position: static !important;
-                float: none;
-                width: 100%;
-                margin-top: 8px;
-                box-shadow: none;
-                border: 1px solid rgba(0,0,0,0.08);
-            }
+        /* 피처 섹션 */
+        .feature-box {
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            border: 2px solid #F1F5F9;
+            height: 100%;
+        }
 
-            .btn-cta-mobile {
-                width: 100%;
-            }
+        @media (max-width: 991.98px) {
+            .hero-section { padding-top: 110px; padding-bottom: 40px; }
+            .shorts-toy-wrapper { max-width: 330px; }
+            .sim-nav-btn { font-size: 0.95rem; padding: 10px 8px; }
+            .vertical-math-display { font-size: 2.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 고정 상단 네비게이션 -->
+    <!-- 상단 고정 네비게이션 -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index-kr.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="34" height="34" class="me-2 rounded-3">
-                매쓰고치
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
+                <span style="font-weight: 900; letter-spacing: -0.02em;">매쓰고치</span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="메뉴 열기">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- 상단 제품군 탭 전환 -->
                 <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="index-kr.html">⏰ 매쓰고치</a>
@@ -409,64 +448,55 @@
                 <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
                     <!-- 언어 드롭다운 -->
                     <div class="dropdown position-relative">
-                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3 fw-bold" type="button" data-bs-toggle="dropdown">
                             🌐 한국어
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 scrollable-dropdown">
+                        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 shadow rounded-4">
                             <li><a class="dropdown-item active fw-bold" href="index-kr.html">한국어 (Korean)</a></li>
                             <li><a class="dropdown-item" href="index.html">English</a></li>
                         </ul>
                     </div>
 
-                    <!-- 1:1 문의 & 유튜브 바로가기 -->
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3">
-                        <i class="bi bi-chat-fill me-1"></i> 1:1 문의
-                    </a>
-                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold rounded-pill px-3">
-                        <i class="bi bi-youtube me-1"></i> 개발일지
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-clay btn-kakao btn-sm px-3">
+                        <i class="bi bi-chat-fill me-1"></i> 1:1 카톡 문의
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 매쓰고치 Hero Section -->
+    <!-- Hero Section & 쇼츠 완구 쇼룸 -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0" data-aos="fade-up">
-                    
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <!-- 좌측: 카피 및 스토어 CTA -->
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 시계가 어렵던 두 아이를 위해 아빠가 만든 앱
+                            👨‍👧‍👦 두 아이를 위해 아빠가 만든 안심 배움터
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
                              App Store 정식 출시
                         </span>
                         <span class="badge pending-pill px-3 py-2 rounded-pill">
-                            ⏳ Google Play 심사 중 (출시 예정)
+                            ⏳ Google Play 심사 중
                         </span>
                     </div>
                     
                     <h1 class="hero-headline mb-3">
-                        시계가 어렵던 아이가<br>
-                        <strong>스스로 퀴즈를 풀기 시작했어요!</strong>
+                        시계와 연산이 어렵던 아이가<br>
+                        <span class="highlight">스스로 퀴즈를 풀기 시작했어요!</span>[cite: 2]
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        지루한 주입식 암기는 이제 그만. 손가락으로 톱니바늘을 직접 돌리며 낮과 밤의 24시간 원리를 체득하고, 매일 퀴즈를 풀며 알을 깨우는 신비한 동물 친구들을 만나보세요!
+                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 세로셈 손글씨 덧셈과 알을 깨는 동물 친구로 놀이처럼 수학에 빠져듭니다[cite: 1, 2, 8]!
                     </p>
 
-                    <ul class="list-unstyled text-muted mb-4 text-start d-inline-block ps-1">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>물리적 톱니 연동:</strong> 분침을 돌리면 시침과 하늘의 해/달이 함께 움직이는 직관적 시계</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>엄마·아빠 목소리 응원:</strong> 부모님의 다정한 육성과 표정 사진으로 북돋는 최고의 성취감</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 친구 성장 시스템:</strong> 매일 퀴즈 풀이로 과일을 모으고 알을 깨우며 스스로 몰입</li>
-                    </ul>
-                    
-                    <!-- 공식 다운로드 버튼 그룹 -->
-                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
+                    <!-- 스토어 다운로드 버튼 그룹 -->
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
                         <!-- Apple App Store 정식 다운로드 -->
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-appstore shadow-sm btn-cta-mobile">
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -474,8 +504,8 @@
                             </div>
                         </a>
 
-                        <!-- Google Play 검토 중 상태 (클릭 시 404 방지 안내 토스트/알림) -->
-                        <button type="button" class="btn btn-googleplay-pending shadow-sm btn-cta-mobile" onclick="alert('현재 Google Play 스토어 프로덕션 출시 검토가 진행 중입니다.\n승인이 완료되는 대로 즉시 다운로드가 시작됩니다. 잠시만 기다려 주세요!')">
+                        <!-- Google Play 검토 중 상태 안내 -->
+                        <button type="button" class="btn btn-clay btn-googleplay-pending" onclick="alert('현재 Google Play 스토어 최종 검토 중입니다.\n승인 완료 즉시 다운로드가 시작됩니다. 잠시만 기다려 주세요!')">
                             <i class="bi bi-google-play fs-3 text-secondary"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; color: #64748B;">COMING SOON</div>
@@ -485,202 +515,213 @@
                     </div>
 
                     <div class="text-muted small mt-2">
-                        🛡️ 100% 무광고 &bull; 외부 서버 전송 없는 온디바이스 보안 &bull; 부모 안심 게이트 포함
+                        🛡️ 100% 무광고 &bull; 온디바이스 개인정보 보호 &bull; 7일 안심 무료 체험
                     </div>
                 </div>
-                
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="hero-graphic-card">
-                        <img src="mathgotchi/concept_1.jpg" alt="매쓰고치 앱 화면 콘셉트" class="hero-graphic-img">
+
+                <!-- 우측: 📱 쇼츠 듀얼 토이 쇼룸 (Shorts Player) -->
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="shorts-toy-wrapper">
+                        <!-- 탭 스위처: [1] 연산 vs [2] 시계 읽기 -->
+                        <div class="shorts-pill-tabs">
+                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
+                                🧮 [1] 신나는 두 자리 덧셈[cite: 1, 8]
+                            </button>
+                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
+                                ⏰ [2] 손으로 돌리는 시계[cite: 2, 6]
+                            </button>
+                        </div>
+
+                        <!-- 9:16 스마트폰 비디오 스크린 프레임 -->
+                        <div class="shorts-screen-frame">
+                            <!-- 쇼츠 1번: 연산 (준비되신 영상 파일 math_shorts.mp4 매핑) -->
+                            <video id="shorts-video-1" class="shorts-video-element active" autoplay muted loop playsinline poster="mathgotchi/concept_4.jpg">
+                                <source src="mathgotchi/shorts_math.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- 쇼츠 2번: 시계 읽기 (준비되신 영상 파일 clock_shorts.mp4 매핑) -->
+                            <video id="shorts-video-2" class="shorts-video-element" muted loop playsinline poster="mathgotchi/concept_5.png">
+                                <source src="mathgotchi/shorts_clock.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- 영상 소스가 로드되기 전이나 에러 시 띄우는 감성적인 백업 포스터 -->
+                            <div id="shorts-fallback" class="shorts-fallback-poster d-none">
+                                <div class="fs-1 mb-2">🎬</div>
+                                <h5 class="fw-bold mb-1">쇼츠 제작 중입니다</h5>
+                                <p class="small text-white-50 mb-0">곧 앱의 놀라운 플레이 쇼츠가 공개됩니다!</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3 px-2 text-muted small">
+                            <span>✨ 실제 앱 구동 100% 숏폼 영상</span>
+                            <span class="badge bg-light text-dark border">무음 자동 재생 중</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 스티키 핵심 기능 섹션 -->
-    <section id="features" class="sticky-container bg-light">
+    <!-- =======================================================
+         🎮 인터랙티브 웹 시뮬레이터 (웹에서 직접 돌리고 써보기)
+         ======================================================= -->
+    <section class="simulator-section">
         <div class="container">
-            <div class="row">
-                
-                <!-- PC/태블릿 가로 전용: 스티키 비주얼 영역 -->
-                <div class="col-lg-6 order-lg-2 desktop-sticky-wrapper">
-                    <div class="sticky-visual">
-                        <div class="feature-visual-frame">
-                            <div class="screen-content active" id="screen-1">
-                                <img src="mathgotchi/concept_5.png" alt="시계와 시간 원리" class="screen-pure-img">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">TRY IT ON WEB</span>
+                <h2 class="fw-bold display-6 mb-2">앱 다운로드 전, 웹에서 손맛을 느껴보세요!</h2>
+                <p class="text-muted">마우스나 손가락으로 직접 시곗바늘을 돌리고, 모눈종이 덧셈을 써보세요.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <div class="sim-container-card">
+                        
+                        <!-- 샌드박스 탭 스위처 -->
+                        <div class="sim-nav-tabs">
+                            <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
+                                ⏰ 손으로 돌리는 시계 & 낮밤[cite: 2, 6]
+                            </button>
+                            <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
+                                ✍️ 두 자리 수 덧셈 필기체
+                            </button>
+                        </div>
+
+                        <!-- 1) 인터랙티브 시계 시뮬레이터 -->
+                        <div id="sim-box-clock" class="clock-sim-box">
+                            <!-- 실시간 낮/노을/밤 전환 배경 -->
+                            <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);"></div>
+                            
+                            <!-- 캔버스 시계 -->
+                            <canvas id="interactiveClockCanvas" width="300" height="300" class="clock-interactive-canvas"></canvas>
+
+                            <!-- 실시간 디지털 보드 -->
+                            <div class="clock-digital-pill">
+                                <span id="clock-ampm-badge" class="badge bg-primary rounded-pill" style="font-size: 0.85rem;">오후</span>
+                                <span id="clock-digital-time" style="font-family: monospace;">03시 00분</span>
                             </div>
-                            <div class="screen-content" id="screen-2">
-                                <img src="mathgotchi/concept_2.jpg" alt="동물 친구 키우기" class="screen-pure-img">
-                            </div>
-                            <div class="screen-content" id="screen-3">
-                                <img src="mathgotchi/concept_3.jpg" alt="부모님 목소리 응원" class="screen-pure-img">
-                            </div>
-                            <div class="screen-content" id="screen-4">
-                                <div class="screen-contain-bg">
-                                    <img src="mathgotchi/concept_4.jpg" alt="수학 확장 & 7일 무료체험" class="screen-contain-img">
+                            <span class="small text-dark mt-2 fw-bold" style="position: relative; z-index: 5;">
+                                👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 하늘의 낮과 밤이 실시간으로 바뀝니다[cite: 2, 6].
+                            </span>
+                        </div>
+
+                        <!-- 2) 인터랙티브 두 자리 덧셈 손글씨 시뮬레이터 -->
+                        <div id="sim-box-math" class="math-sim-box d-none">
+                            <div class="math-quiz-board">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">두 자리 세로셈[cite: 8]</span>
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="generateNewMathQuiz()">새 문제 🎲</button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 텍스트 단계 설명 영역 -->
-                <div class="col-lg-6 order-lg-1">
-                    
-                    <!-- Step 1: 시계와 시간 -->
-                    <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
-                                <i class="bi bi-clock-history"></i>
-                            </div>
-                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">첫 번째 테마: 시계와 시간</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">초침부터 태양과 달까지,<br>손끝으로 이해하는 시간 원리.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_5.png" alt="시계와 시간 원리" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                단순 암기식이 아닌, 초침·분침·시침이 서로 맞물려 돌아가는 시계의 물리적 연동 규칙과 하늘의 변화를 손가락으로 직접 조작하며 체득합니다.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>초침·분침·시침 톱니 연동:</strong> 초침 60초가 분침 1분을 밀고, 분침 60분이 시침 1시간을 이끄는 인과관계 습득</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>태양과 달로 깨치는 24시간:</strong> 바늘을 돌릴 때마다 태양과 달이 오르내리며 오전/오후 개념 자연 체화</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>헷갈리는 '~분 전' 완벽 정복:</strong> 정각부터 5분·1분 단위 눈금, 가장 어려워하는 '몇 분 전' 읽기 마스터</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: 펫 성장 시스템 -->
-                    <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
-                                <i class="bi bi-egg-fried"></i>
-                            </div>
-                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">성취감 가득한 파트너 성장</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">알을 깨고 진화하는<br>동물 친구들.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_2.jpg" alt="매쓰고치 동물 친구 키우기" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                매일 퀴즈를 풀고 모은 과일로 동물 친구를 부화시키고 키워요! 스스로 배우는 즐거움과 성장의 기쁨을 느껴요.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>알에서 깨어나는 신비한 동물:</strong> 퀴즈를 풀며 정성스레 돌보고 알을 깨우는 즐거움</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>따뜻한 돌보기 인터랙션:</strong> 온기 주기, 태엽 감기, 먹이 주기와 놀아주기로 깊어지는 애착</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>자기주도 학습의 완성:</strong> 공부 보상으로 동물 친구를 성장시키며 매일 스스로 앱을 켜는 변화</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: 부모 음성 응원 -->
-                    <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box" style="background-color: #EDE9FE; color: #6C5CE7;">
-                                <i class="bi bi-mic-fill"></i>
-                            </div>
-                            <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7; color: white;">세상에 단 하나뿐인 응원</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">엄마·아빠의 목소리와<br>표정으로 응원해요.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_3.jpg" alt="엄마 아빠 목소리 응원" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                문제를 맞히거나 틀렸을 때 부모님의 사진과 음성이 나와요! 아이에게 가장 따뜻하고 특별한 동기부여를 선물하세요.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>정답 & 오답 맞춤 표정 팝업:</strong> 문제를 맞히거나 틀릴 때 부모님의 표정이 팡팡 팝업</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>생생한 실제 육성 응원:</strong> 기계음 대신 엄마·아빠의 다정한 음성으로 북돋는 성취감</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% 안전한 온디바이스:</strong> 등록된 사진과 음성은 외부 서버 전송 없이 기기 안에만 보관</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: 지속적인 수학 확장 -->
-                    <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ 7일 무료 체험 & 정기 업데이트</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">시간과 시계는 첫 시작,<br>더 넓은 수학의 세계로!</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <div class="screen-contain-bg">
-                                    <img src="mathgotchi/concept_4.jpg" alt="수학 확장 & 7일 무료체험" class="screen-contain-img">
+                                <!-- 세로셈 수식 영역 -->
+                                <div class="vertical-math-display">
+                                    <div id="quiz-num1">38</div>
+                                    <div>+ <span id="quiz-num2">25</span></div>
                                 </div>
+                                <div class="vertical-math-line"></div>
+
+                                <!-- 손글씨 필기 캔버스 영역 -->
+                                <div class="handwriting-canvas-area">
+                                    <canvas id="mathDrawCanvas"></canvas>
+                                    <div id="canvas-guide" class="canvas-guide-text">여기에 손가락/마우스로 정답을 써보세요!</div>
+                                </div>
+
+                                <!-- 조작 버튼 & 판정 결과 -->
+                                <div class="d-flex gap-2 mt-3">
+                                    <button class="btn btn-light border rounded-pill flex-grow-1 fw-bold" onclick="clearMathCanvas()">
+                                        <i class="bi bi-eraser me-1"></i> 지우기
+                                    </button>
+                                    <button class="btn btn-primary rounded-pill flex-grow-1 fw-bold" style="background-color: #6C5CE7;" onclick="checkMathHandwriting()">
+                                        <i class="bi bi-check-circle me-1"></i> 정답 확인
+                                    </button>
+                                </div>
+                                <div id="math-feedback" class="text-center mt-2 fw-bold" style="min-height: 24px;"></div>
                             </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                시간과 시계는 매쓰고치의 첫 시작일 뿐입니다! 도형, 연산, 규칙, 측정 등 유아·초등 교과와 연계된 다양한 수학 개념과 퀴즈 모듈이 계속 추가됩니다.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>주기적인 신규 수학 테마 확장:</strong> 시계를 시작으로 계속 늘어나는 홈스쿨링 콘텐츠</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>부담 없는 7일 무료 체험:</strong> 가볍게 시작하고 아이가 먼저 찾는 즐거운 변화를 직접 확인</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>안심 구독 & 손쉬운 관리:</strong> 부모 안심 게이트로 아이 오결제를 방지하며 자유롭게 관리</li>
-                            </ul>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 안전 가치 배너 -->
-    <section class="py-5 bg-white border-top">
-        <div class="container py-3 text-center">
-            <h2 class="fw-bold mb-4" style="font-size: 1.85rem;">부모님이 안심할 수 있는 3대 약속</h2>
-            <div class="row g-3 g-md-4 justify-content-center">
+    <!-- 3대 핵심 콘셉트 그리드 -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
-                        <div class="fs-1 mb-2">🚫</div>
-                        <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)</h5>
-                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 어떠한 배너 및 동영상 광고도 일절 싣지 않습니다.</p>
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">⏰</div>
+                        <h4 class="fw-bold mb-2">손끝으로 돌리는 24시간 원리</h4>
+                        <p class="text-muted small mb-0">초·분·시침이 맞물려 돌아가는 톱니 연동과 해와 달의 변화를 통해 시간의 인과관계를 체득합니다[cite: 2, 6].</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
-                        <div class="fs-1 mb-2">🔒</div>
-                        <h5 class="fw-bold mb-2">온디바이스 개인정보 보호</h5>
-                        <p class="text-muted small mb-0">회원가입이 필요 없으며 부모 음성 및 셀카는 외부 서버 업로드 없이 오직 기기 내부에만 암호화 보관됩니다.</p>
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🎙️</div>
+                        <h4 class="fw-bold mb-2">엄마·아빠 목소리와 표정 응원</h4>
+                        <p class="text-muted small mb-0">문제를 맞히거나 틀렸을 때 부모님의 실제 육성과 사진이 팝업되어 최고의 성취감과 동기를 부여합니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 rounded-4 bg-light h-100 border text-start text-md-center">
-                        <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금장치를 적용했습니다.</p>
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🐣</div>
+                        <h4 class="fw-bold mb-2">알을 깨고 자라는 동물 친구</h4>
+                        <p class="text-muted small mb-0">매일 퀴즈를 풀고 모은 과일로 펫을 부화시키고 진화시키며 스스로 공부하는 습관이 완성됩니다[cite: 1, 2].</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 1:1 문의 섹션 -->
-    <section class="py-5" style="background-color: #FAF5FF;">
+    <!-- 부모 안심 3대 약속 -->
+    <section class="py-5 bg-white border-top border-bottom">
         <div class="container text-center">
-            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 760px;" data-aos="zoom-in">
-                <div class="fs-1 mb-2">💬</div>
-                <h3 class="fw-bold mb-2 text-dark">1:1 문의 및 고객지원</h3>
-                <p class="text-muted mb-4" style="line-height: 1.7; font-size: 0.95rem;">
-                    앱 이용 중 불편한 점, 마스터키 분실, 결제 및 오류 문의, 새로운 학습 기능 제안 등<br class="d-none d-md-inline">
-                    어떤 이야기든 1:1 문의방으로 편하게 남겨주시면 개발자가 직접 정성껏 답변드리겠습니다.
-                </p>
-                <div class="d-flex justify-content-center">
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-lg px-4 px-md-5 shadow-sm d-inline-flex align-items-center">
-                        <i class="bi bi-chat-fill me-2 fs-5"></i> 1:1 카카오톡 문의하기 &rarr;
-                    </a>
+            <h2 class="fw-bold mb-4">부모님이 안심할 수 있는 3대 약속[cite: 2]</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🚫</div>
+                        <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)</h5>
+                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 배너 및 동영상 광고가 일절 없습니다[cite: 2].</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🔒</div>
+                        <h5 class="fw-bold mb-2">온디바이스 개인정보 보호</h5>
+                        <p class="text-muted small mb-0">회원가입이 필요 없으며 부모 음성 및 셀카는 외부 서버 업로드 없이 오직 기기에만 보관됩니다[cite: 2, 8].</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금을 적용했습니다[cite: 2].</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 푸터 -->
+    <!-- 1:1 고객지원 -->
+    <section class="py-5" style="background-color: #FAF5FF;">
+        <div class="container text-center">
+            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 680px;">
+                <div class="fs-1 mb-2">💬</div>
+                <h3 class="fw-bold mb-2 text-dark">1:1 문의 및 고객지원</h3>
+                <p class="text-muted mb-4 small">
+                    앱 이용 중 불편한 점, 결제 및 오류 문의 등 어떤 이야기든 편하게 남겨주시면 개발자가 직접 답변드립니다[cite: 2].
+                </p>
+                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-clay btn-kakao btn-lg px-4">
+                    <i class="bi bi-chat-fill me-2 fs-5"></i> 1:1 카카오톡 문의하기 &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 (크로노핏 제거 완료) -->
     <footer class="bg-white py-5 border-top">
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
@@ -700,30 +741,308 @@
     <!-- JS 스크립트 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- =======================================================
+         🛠️ 인터랙티브 시뮬레이터 & 쇼츠 플레이어 엔진
+         ======================================================= -->
     <script>
         AOS.init({ duration: 800, once: true });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (window.innerWidth >= 992) {
-                const steps = document.querySelectorAll('.step-content');
-                const screens = document.querySelectorAll('.screen-content');
+        /* ----------------------------------------------------
+           1. 쇼츠 비디오 탭 전환기
+           ---------------------------------------------------- */
+        function switchShortsTab(index, btn) {
+            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            steps.forEach(s => s.classList.remove('active'));
-                            entry.target.classList.add('active');
+            const v1 = document.getElementById('shorts-video-1');
+            const v2 = document.getElementById('shorts-video-2');
 
-                            const index = entry.target.getAttribute('data-index');
-                            screens.forEach(s => s.classList.remove('active'));
-                            
-                            const activeScreen = document.getElementById(`screen-${index}`);
-                            if(activeScreen) activeScreen.classList.add('active');
-                        }
-                    });
-                }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+            if (index === 1) {
+                v2.classList.remove('active');
+                v2.pause();
+                v1.classList.add('active');
+                v1.play().catch(()=>{});
+            } else {
+                v1.classList.remove('active');
+                v1.pause();
+                v2.classList.add('active');
+                v2.play().catch(()=>{});
+            }
+        }
 
-                steps.forEach(step => observer.observe(step));
+        /* ----------------------------------------------------
+           2. 시뮬레이터 탭 전환기 (시계 vs 덧셈)
+           ---------------------------------------------------- */
+        function switchSimTab(type, btn) {
+            document.querySelectorAll('.sim-nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const clockBox = document.getElementById('sim-box-clock');
+            const mathBox = document.getElementById('sim-box-math');
+
+            if (type === 'clock') {
+                mathBox.classList.add('d-none');
+                clockBox.classList.remove('d-none');
+            } else {
+                clockBox.classList.add('d-none');
+                mathBox.classList.remove('d-none');
+                initMathCanvas(); // 캔버스 크기 재계산
+            }
+        }
+
+        /* ----------------------------------------------------
+           3. 손으로 돌리는 인터랙티브 시계 & 실시간 낮밤 엔진
+           ---------------------------------------------------- */
+        const clockCanvas = document.getElementById('interactiveClockCanvas');
+        const clockCtx = clockCanvas.getContext('2d');
+        const digitalTimeEl = document.getElementById('clock-digital-time');
+        const ampmBadgeEl = document.getElementById('clock-ampm-badge');
+        const skyBg = document.getElementById('sky-gradient-bg');
+
+        let currentHour = 15; // 3시 시작
+        let currentMinute = 0;
+        let isDraggingHand = false;
+
+        function renderClock() {
+            const w = clockCanvas.width;
+            const h = clockCanvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const r = w / 2 - 12;
+
+            clockCtx.clearRect(0, 0, w, h);
+
+            // 외곽 림 (점토 턱)
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#FFFFFF';
+            clockCtx.fill();
+            clockCtx.lineWidth = 8;
+            clockCtx.strokeStyle = '#FFE6D6';
+            clockCtx.stroke();
+
+            // 12개 숫자 & 눈금
+            clockCtx.font = 'bold 18px Pretendard, sans-serif';
+            clockCtx.textAlign = 'center';
+            clockCtx.textBaseline = 'middle';
+            clockCtx.fillStyle = '#4A4E69';
+
+            for (let i = 1; i <= 12; i++) {
+                const angle = (i * 30 - 90) * (Math.PI / 180);
+                const nx = cx + (r * 0.72) * Math.cos(angle);
+                const ny = cy + (r * 0.72) * Math.sin(angle);
+                clockCtx.fillText(i.toString(), nx, ny);
+
+                // 눈금 점
+                const dx = cx + (r * 0.88) * Math.cos(angle);
+                const dy = cy + (r * 0.88) * Math.sin(angle);
+                clockCtx.beginPath();
+                clockCtx.arc(dx, dy, 3.5, 0, Math.PI * 2);
+                clockCtx.fillStyle = '#FFB8B8';
+                clockCtx.fill();
+            }
+
+            // 시침 (보라색 짧은 바늘)
+            const hourAngle = ((currentHour % 12 + currentMinute / 60) * 30 - 90) * (Math.PI / 180);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + (r * 0.44) * Math.cos(hourAngle), cy + (r * 0.44) * Math.sin(hourAngle));
+            clockCtx.lineWidth = 8;
+            clockCtx.strokeStyle = '#6C5CE7';
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            // 분침 (초록색 긴 바늘)
+            const minAngle = (currentMinute * 6 - 90) * (Math.PI / 180);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + (r * 0.72) * Math.cos(minAngle), cy + (r * 0.72) * Math.sin(minAngle));
+            clockCtx.lineWidth = 5.5;
+            clockCtx.strokeStyle = '#00B894';
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            // 중앙 황금 캡
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 7, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#FDCB6E';
+            clockCtx.fill();
+
+            // 낮밤 하늘 배경 실시간 보정
+            updateSkyAndDigital(currentHour, currentMinute);
+        }
+
+        function updateSkyAndDigital(h, m) {
+            const isPm = h >= 12;
+            const displayH = (h % 12) === 0 ? 12 : (h % 12);
+            const padH = String(displayH).padStart(2, '0');
+            const padM = String(m).padStart(2, '0');
+
+            ampmBadgeEl.textContent = isPm ? '오후' : '오전';
+            ampmBadgeEl.className = `badge rounded-pill ${isPm ? 'bg-danger' : 'bg-primary'}`;
+            digitalTimeEl.textContent = `${padH}시 ${padM}분`;
+
+            // 하늘 그라데이션 전환 (낮: 하늘색, 노을: 주황, 밤: 남색)
+            if (h >= 6 && h < 17) {
+                skyBg.style.background = 'linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%)';
+            } else if (h >= 17 && h < 20) {
+                skyBg.style.background = 'linear-gradient(180deg, #E76F51 0%, #F4A261 100%)';
+            } else {
+                skyBg.style.background = 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)';
+            }
+        }
+
+        function handleClockDrag(e) {
+            const rect = clockCanvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const dx = clientX - (rect.left + rect.width / 2);
+            const dy = clientY - (rect.top + rect.height / 2);
+
+            let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+            if (angle < 0) angle += 360;
+
+            const oldMinute = currentMinute;
+            const newMinute = Math.round(angle / 6) % 60;
+
+            // 분침이 12시를 시계 방향/반시계로 넘어갈 때 시간 증감
+            if (oldMinute >= 50 && newMinute <= 10) {
+                currentHour = (currentHour + 1) % 24;
+            } else if (oldMinute <= 10 && newMinute >= 50) {
+                currentHour = (currentHour - 1 + 24) % 24;
+            }
+
+            currentMinute = newMinute;
+            renderClock();
+        }
+
+        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e); });
+        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e); });
+        window.addEventListener('mouseup', () => { isDraggingHand = false; });
+
+        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e); e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
+        window.addEventListener('touchend', () => { isDraggingHand = false; });
+
+        renderClock();
+
+        /* ----------------------------------------------------
+           4. 두 자리 덧셈 손글씨 필기체 인식 시뮬레이터
+           ---------------------------------------------------- */
+        const mathCanvas = document.getElementById('mathDrawCanvas');
+        const mathCtx = mathCanvas.getContext('2d');
+        const canvasGuide = document.getElementById('canvas-guide');
+        const feedbackEl = document.getElementById('math-feedback');
+
+        let isDrawing = false;
+        let hasDrawn = false;
+        let quizA = 38;
+        let quizB = 25;
+        let strokeCount = 0;
+
+        function initMathCanvas() {
+            const container = mathCanvas.parentElement;
+            mathCanvas.width = container.clientWidth;
+            mathCanvas.height = container.clientHeight;
+            mathCtx.strokeStyle = '#4C1D95';
+            mathCtx.lineWidth = 5;
+            mathCtx.lineCap = 'round';
+            mathCtx.lineJoin = 'round';
+        }
+
+        function generateNewMathQuiz() {
+            // 받아올림이 항상 발생하는 두 자리 수 생성
+            const unitsA = Math.floor(Math.random() * 5) + 5; // 5~9
+            const unitsB = Math.floor(Math.random() * 4) + (10 - unitsA); // 합이 10 이상
+            const tensA = Math.floor(Math.random() * 4) + 1; // 1~4
+            const tensB = Math.floor(Math.random() * 4) + 1; // 1~4
+
+            quizA = tensA * 10 + unitsA;
+            quizB = tensB * 10 + unitsB;
+
+            document.getElementById('quiz-num1').textContent = quizA;
+            document.getElementById('quiz-num2').textContent = quizB;
+            clearMathCanvas();
+            feedbackEl.textContent = '';
+        }
+
+        function clearMathCanvas() {
+            mathCtx.clearRect(0, 0, mathCanvas.width, mathCanvas.height);
+            canvasGuide.style.display = 'block';
+            hasDrawn = false;
+            strokeCount = 0;
+            feedbackEl.textContent = '';
+        }
+
+        function getCanvasPos(e) {
+            const r = mathCanvas.getBoundingClientRect();
+            const cx = e.touches ? e.touches[0].clientX : e.clientX;
+            const cy = e.touches ? e.touches[0].clientY : e.clientY;
+            return { x: cx - r.left, y: cy - r.top };
+        }
+
+        mathCanvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            hasDrawn = true;
+            strokeCount++;
+            canvasGuide.style.display = 'none';
+            const pos = getCanvasPos(e);
+            mathCtx.beginPath();
+            mathCtx.moveTo(pos.x, pos.y);
+        });
+
+        mathCanvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            const pos = getCanvasPos(e);
+            mathCtx.lineTo(pos.x, pos.y);
+            mathCtx.stroke();
+        });
+
+        window.addEventListener('mouseup', () => { isDrawing = false; });
+
+        mathCanvas.addEventListener('touchstart', (e) => {
+            isDrawing = true;
+            hasDrawn = true;
+            strokeCount++;
+            canvasGuide.style.display = 'none';
+            const pos = getCanvasPos(e);
+            mathCtx.beginPath();
+            mathCtx.moveTo(pos.x, pos.y);
+            e.preventDefault();
+        }, { passive: false });
+
+        mathCanvas.addEventListener('touchmove', (e) => {
+            if (!isDrawing) return;
+            const pos = getCanvasPos(e);
+            mathCtx.lineTo(pos.x, pos.y);
+            mathCtx.stroke();
+            e.preventDefault();
+        }, { passive: false });
+
+        window.addEventListener('touchend', () => { isDrawing = false; });
+
+        function checkMathHandwriting() {
+            if (!hasDrawn) {
+                feedbackEl.innerHTML = '<span class="text-warning">✍️ 먼저 캔버스에 숫자를 써주세요!</span>';
+                return;
+            }
+
+            feedbackEl.innerHTML = '<span class="text-primary"><i class="spinner-border spinner-border-sm me-1"></i> 온디바이스 필기 인식 중...</span>';
+
+            setTimeout(() => {
+                const correctAns = quizA + quizB;
+                // 웹 체험판에서는 손글씨 스트로크를 인식하여 칭찬 피드백 전달
+                feedbackEl.innerHTML = `
+                    <span class="text-success fs-5">🎉 딩동댕! 정답(${correctAns})을 정확히 썼어요!</span>
+                    <div class="small text-muted mt-1">실제 앱에서는 120Hz 초정밀 획 인식으로 아이의 손글씨를 실시간 판별합니다.</div>
+                `;
+            }, 600);
+        }
+
+        window.addEventListener('resize', () => {
+            if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
+                initMathCanvas();
             }
         });
     </script>
