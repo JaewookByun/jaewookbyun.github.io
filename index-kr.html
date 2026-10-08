@@ -251,9 +251,7 @@
             color: #FFFFFF;
         }
 
-        /* =======================================================
-           🎮 인터랙티브 웹 시뮬레이터 (Toy Simulator Section)
-           ======================================================= */
+        /* 인터랙티브 웹 시뮬레이터 */
         .simulator-section {
             padding: 90px 0;
             background: #FFFFFF;
@@ -335,9 +333,7 @@
             gap: 10px;
         }
 
-        /* =======================================================
-           2) 전체 필기 개방형 세로셈 모눈 보드 & 투명 캔버스
-           ======================================================= */
+        /* 2) 전체 필기 개방형 세로셈 모눈 보드 */
         .math-sim-box {
             padding: 30px 20px;
             display: flex;
@@ -350,11 +346,11 @@
             background: #FFFFFF;
             border: 3px solid #E2E8F0;
             border-radius: 28px;
-            padding: 24px 28px;
+            padding: 22px 28px 36px 28px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
             max-width: 480px;
             width: 100%;
-            /* 모눈종이 텍스처 배경 */
+            /* 모눈종이 격자 패턴 */
             background-image: 
                 linear-gradient(#F1F5F9 1.5px, transparent 1.5px),
                 linear-gradient(90deg, #F1F5F9 1.5px, transparent 1.5px);
@@ -368,8 +364,9 @@
             display: flex;
             justify-content: flex-end;
             padding-right: 64px;
-            min-height: 38px;
+            min-height: 36px;
         }
+        /* 받아올림 메모용 빈 점선 원 */
         .carry-dashed-circle {
             width: 32px;
             height: 32px;
@@ -378,9 +375,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #94A3B8;
-            font-size: 0.85rem;
-            font-weight: 800;
             background: rgba(255, 255, 255, 0.85);
         }
 
@@ -407,11 +401,12 @@
             justify-content: flex-end;
             gap: 12px;
             padding-right: 12px;
+            margin-bottom: 8px;
         }
         .answer-slot-box {
             width: 68px;
             height: 76px;
-            background: rgba(108, 92, 231, 0.08); /* 투명도를 주어 모눈이 비침 */
+            background: rgba(108, 92, 231, 0.08);
             border: 2.5px dashed rgba(108, 92, 231, 0.45);
             border-radius: 16px;
             display: flex;
@@ -419,7 +414,6 @@
             justify-content: center;
             position: relative;
         }
-        /* 깍두기 공책 십자 가이드 점선 */
         .answer-slot-box::before {
             content: '';
             position: absolute;
@@ -435,7 +429,7 @@
             border-left: 1px dashed rgba(108, 92, 231, 0.25);
         }
 
-        /* 보드 전체를 덮는 2중 투명 드로잉 캔버스 */
+        /* 보드 전체 드로잉 캔버스 */
         #mathFullCanvas {
             position: absolute;
             top: 0;
@@ -447,24 +441,26 @@
             cursor: crosshair;
         }
 
+        /* 모눈종이 최하단에 배치된 정돈된 가이드 텍스트 */
         .canvas-guide-overlay {
             position: absolute;
-            bottom: 110px;
+            bottom: 8px;
             left: 50%;
             transform: translateX(-50%);
             color: #7C3AED;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 4px 14px;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px dashed rgba(124, 58, 237, 0.25);
+            padding: 3px 14px;
             border-radius: 20px;
-            font-weight: 800;
-            font-size: 0.88rem;
+            font-weight: 700;
+            font-size: 0.8rem;
             pointer-events: none;
             z-index: 5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
             white-space: nowrap;
         }
 
-        /* 정답 확인 시 나타나는 세련된 앱 전환 카드 오버레이 */
+        /* 정답 확인 오버레이 카드 */
         .math-result-card-overlay {
             display: none;
             position: absolute;
@@ -600,7 +596,7 @@
                     </div>
                 </div>
 
-                <!-- 우측: 쇼츠 듀얼 토이 쇼룸 (Shorts Player) -->
+                <!-- 우측: 쇼츠 듀얼 토이 쇼룸 -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
                         <!-- 탭 스위처: 연산 vs 시계 -->
@@ -642,7 +638,7 @@
     </section>
 
     <!-- =======================================================
-         🎮 인터랙티브 웹 시뮬레이터 (웹에서 직접 돌리고 써보기)
+         🎮 인터랙티브 웹 시뮬레이터
          ======================================================= -->
     <section class="simulator-section">
         <div class="container">
@@ -688,17 +684,17 @@
                                 <!-- 보드 전체를 덮는 투명 드로잉 캔버스 -->
                                 <canvas id="mathFullCanvas"></canvas>
 
-                                <!-- 상단 헤더 & 올림수(1) 메모 전용 가이드 서클 -->
+                                <!-- 상단 헤더 & 올림수 메모 전용 빈 가이드 원 (숫자 1 제거 완료) -->
                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                     <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">두 자리 세로셈</span>
                                     <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="generateNewMathQuiz()" style="z-index: 15; position: relative;">새 문제 🎲</button>
                                 </div>
 
                                 <div class="carry-zone">
-                                    <div class="carry-dashed-circle" title="받아올림 1을 메모하는 자리">1</div>
+                                    <div class="carry-dashed-circle" title="받아올림 메모 자리"></div>
                                 </div>
 
-                                <!-- 세로셈 수식 영역 (지워지지 않는 문제) -->
+                                <!-- 세로셈 수식 영역 -->
                                 <div class="vertical-math-display">
                                     <div id="quiz-num1">38</div>
                                     <div>+ <span id="quiz-num2">25</span></div>
@@ -711,11 +707,12 @@
                                     <div class="answer-slot-box"></div>
                                 </div>
 
+                                <!-- 모눈종이 최하단에 배치된 정돈된 가이드 텍스트 -->
                                 <div id="canvas-guide" class="canvas-guide-overlay">
                                     ✍️ 위쪽 받아올림 메모부터 아래 정답까지 자유롭게 써보세요!
                                 </div>
 
-                                <!-- 정답 확인 시 나타나는 세련된 앱 전환 오버레이 카드 -->
+                                <!-- 정답 확인 오버레이 카드 -->
                                 <div id="mathResultOverlay" class="math-result-card-overlay">
                                     <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
                                         🎉 정답: <span id="overlay-ans-text">63</span>
@@ -1028,9 +1025,7 @@
 
         renderClock();
 
-        /* =======================================================
-           4. 세로셈 보드 전체 필기 드로잉 & 전환 연출 엔진
-           ======================================================= */
+        /* 4. 세로셈 보드 전체 필기 드로잉 & 전환 연출 엔진 */
         const mathFullCanvas = document.getElementById('mathFullCanvas');
         const mathFullCtx = mathFullCanvas.getContext('2d');
         const canvasGuide = document.getElementById('canvas-guide');
@@ -1045,15 +1040,15 @@
             const board = document.getElementById('mathQuizBoard');
             mathFullCanvas.width = board.clientWidth;
             mathFullCanvas.height = board.clientHeight;
-            mathFullCtx.strokeStyle = '#2B3A4A'; /* 흑연 연필 차콜 질감 */
+            mathFullCtx.strokeStyle = '#2B3A4A';
             mathFullCtx.lineWidth = 4.5;
             mathFullCtx.lineCap = 'round';
             mathFullCtx.lineJoin = 'round';
         }
 
         function generateNewMathQuiz() {
-            const unitsA = Math.floor(Math.random() * 5) + 5; // 5~9
-            const unitsB = Math.floor(Math.random() * 4) + (10 - unitsA); // 받아올림 발생
+            const unitsA = Math.floor(Math.random() * 5) + 5;
+            const unitsB = Math.floor(Math.random() * 4) + (10 - unitsA);
             const tensA = Math.floor(Math.random() * 4) + 1;
             const tensB = Math.floor(Math.random() * 4) + 1;
 
@@ -1114,7 +1109,6 @@
 
         window.addEventListener('touchend', () => { isDrawing = false; });
 
-        /* [정답 확인] 클릭 시 실제 앱 스펙 전환 안내 오버레이 노출 */
         function submitMathCheck() {
             overlayAnsText.textContent = (quizA + quizB);
             mathResultOverlay.style.display = 'flex';
