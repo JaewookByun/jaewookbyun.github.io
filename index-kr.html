@@ -16,8 +16,8 @@
     
     <!-- 🔍 검색 엔진 최적화 (SEO 메타 태그) -->
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험. App Store & Google Play 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의, 앱스토어, 구글플레이">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 알을 깨고 자라는 동물 친구, 부모님 목소리 응원, 초침부터 태양과 달까지 이해하는 시간 탐험. App Store 정식 출시!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 펫키우기, 동물친구, 부모응원, 7일무료체험, ChronoLab, 무광고 어린이앱, 1:1 문의, 앱스토어">
     <meta name="author" content="ChronoLab">
     
     <!-- 표준 링크 (Canonical) -->
@@ -28,11 +28,11 @@
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
-    <!-- 📱 Open Graph (카카오톡, 페이스북, 인스타그램 공유 카드) -->
+    <!-- 📱 Open Graph (카카오톡, SNS 공유 카드) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 출시!">
+    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -43,14 +43,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta name="twitter:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta name="twitter:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 출시!">
+    <meta name="twitter:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
     
-    <!-- 📊 구글 권장 구조화 데이터 (JSON-LD Schema) -->
+    <!-- 📊 구글 구조화 데이터 (JSON-LD Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -108,7 +108,7 @@
             -webkit-font-smoothing: antialiased;
         }
         
-        /* 상단 고정 네비게이션 바 */
+        /* 고정 상단 네비게이션 바 */
         .navbar { 
             backdrop-filter: blur(12px); 
             background: rgba(255, 255, 255, 0.95); 
@@ -131,8 +131,8 @@
             background-color: #F8FAFC;
         }
 
-        /* 스토어 다운로드 버튼 공통 */
-        .btn-appstore, .btn-googleplay {
+        /* App Store 공식 버튼 */
+        .btn-appstore {
             background-color: #000000;
             color: #FFFFFF !important;
             padding: 9px 22px;
@@ -148,10 +148,33 @@
             border: 1px solid #000;
             min-height: 48px;
         }
-        .btn-appstore:hover, .btn-googleplay:hover {
+        .btn-appstore:hover {
             background-color: #1E293B;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        /* Google Play 심사 중 / 출시 예정 버튼 */
+        .btn-googleplay-pending {
+            background-color: #F8FAFC;
+            color: #475569 !important;
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            border: 1.5px solid #CBD5E1;
+            min-height: 48px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-googleplay-pending:hover {
+            background-color: #F1F5F9;
+            border-color: #94A3B8;
+            color: #1E293B !important;
         }
 
         .btn-kakao {
@@ -197,6 +220,15 @@
             font-weight: 800;
             font-size: 0.85rem;
             border: 1px solid #BBF7D0;
+            display: inline-block;
+            line-height: 1.4;
+        }
+        .pending-pill {
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 800;
+            font-size: 0.85rem;
+            border: 1px solid #FDE68A;
             display: inline-block;
             line-height: 1.4;
         }
@@ -410,7 +442,10 @@
                             👨‍👧‍👦 시계가 어렵던 두 아이를 위해 아빠가 만든 앱
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
-                            🎉 공식 스토어 정식 출시
+                             App Store 정식 출시
+                        </span>
+                        <span class="badge pending-pill px-3 py-2 rounded-pill">
+                            ⏳ Google Play 심사 중 (출시 예정)
                         </span>
                     </div>
                     
@@ -429,9 +464,9 @@
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>동물 친구 성장 시스템:</strong> 매일 퀴즈 풀이로 과일을 모으고 알을 깨우며 스스로 몰입</li>
                     </ul>
                     
-                    <!-- 공식 다운로드 버튼 그룹 (iOS & Android 정식 릴리즈) -->
+                    <!-- 공식 다운로드 버튼 그룹 -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
-                        <!-- Apple App Store -->
+                        <!-- Apple App Store 정식 다운로드 -->
                         <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-appstore shadow-sm btn-cta-mobile">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
@@ -440,14 +475,14 @@
                             </div>
                         </a>
 
-                        <!-- Google Play Store -->
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-googleplay shadow-sm btn-cta-mobile">
-                            <i class="bi bi-google-play fs-3"></i>
+                        <!-- Google Play 검토 중 상태 (클릭 시 404 방지 안내 토스트/알림) -->
+                        <button type="button" class="btn btn-googleplay-pending shadow-sm btn-cta-mobile" onclick="alert('현재 Google Play 스토어 프로덕션 출시 검토가 진행 중입니다.\n승인이 완료되는 대로 즉시 다운로드가 시작됩니다. 잠시만 기다려 주세요!')">
+                            <i class="bi bi-google-play fs-3 text-secondary"></i>
                             <div class="text-start" style="line-height: 1.15;">
-                                <div style="font-size: 0.68rem; opacity: 0.85;">GET IT ON</div>
-                                <div style="font-size: 1.05rem; font-weight: 800;">Google Play</div>
+                                <div style="font-size: 0.68rem; color: #64748B;">COMING SOON</div>
+                                <div style="font-size: 1.02rem; font-weight: 800; color: #1E293B;">Google Play (출시 예정)</div>
                             </div>
-                        </a>
+                        </button>
                     </div>
 
                     <div class="text-muted small mt-2">
