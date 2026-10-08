@@ -11,251 +11,595 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <!-- SEO Meta Tags -->
     <title>Mathgotchi - Hands-On Clock & Early Math Adventures | ChronoLab</title>
-    <meta name="description" content="A safe, kid-friendly learning haven created by a dad for his own children who struggled with telling time. Now officially available on the App Store!">
-    <meta name="keywords" content="Mathgotchi, ChronoLab, clock learning, learn to tell time, early math, virtual pet evolution, parent voice cheer, App Store, iOS, ad free kids app, parental gate">
+    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears and practice scratch-free handwriting column addition. Officially on the App Store!">
+    <meta name="keywords" content="Mathgotchi, ChronoLab, tell time for kids, clock learning, column addition, vertical math, regrouping, handwriting recognition, virtual pet math, ad free kids app, parental gate">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index.html">
-
-    <!-- Multilingual Alternate Links (hreflang) -->
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
-    <!-- Open Graph (SNS Preview) -->
+    <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index.html">
-    <meta property="og:title" content="Mathgotchi - Early Math & Time Adventures for Kids">
-    <meta property="og:description" content="Watch your child go from struggling with clock hands to solving math quizzes on their own! Officially launched on the App Store.">
+    <meta property="og:title" content="Mathgotchi - Hands-On Clock & Early Math Adventures">
+    <meta property="og:description" content="No multiple-choice guessing. Kids write on the screen and spin real clock gears! 100% ad-free & privacy-first.">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="ChronoLab">
 
-    <!-- Twitter / X Cards -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index.html">
     <meta name="twitter:title" content="Mathgotchi - Early Math & Time Adventures for Kids">
-    <meta name="twitter:description" content="Watch your child go from struggling with clock hands to solving math quizzes on their own! Officially launched on the App Store.">
+    <meta name="twitter:description" content="No multiple-choice guessing. Kids write on the screen and spin real clock gears! 100% ad-free & privacy-first.">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
 
-    <!-- Favicon -->
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
 
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Inter:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root { 
             --brand-purple: #6C5CE7; 
-            --brand-dark: #4834D4; 
-            --brand-accent: #FF7675;
-            --brand-yellow: #FEE500;
-            --text-main: #1E293B; 
-            --text-sub: #475569;
-            --bg-light: #F8FAFC; 
-            --chronofit-brand: #4F46E5;
+            --brand-purple-dark: #5844e0;
+            --brand-yellow: #FFEAA7;
+            --brand-coral: #FF7675;
+            --brand-mint: #00B894;
+            --clay-bg: #FBF9F5;
+            --clay-card-bg: #FFFFFF;
+            --text-main: #2D3436; 
+            --text-sub: #636E72;
+            --toy-shadow: 0 12px 32px rgba(108, 92, 231, 0.12), 0 4px 12px rgba(0,0,0,0.04);
+            --toy-lip: 0 5px 0 #5240d6;
         }
         
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { max-width: 100vw; overflow-x: hidden; }
+
         body { 
             font-family: 'Inter', 'Pretendard', sans-serif; 
             color: var(--text-main); 
-            overflow-x: hidden; 
-            background-color: #fff; 
+            background-color: var(--clay-bg);
+            word-break: keep-all;
             overflow-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 118, 117, 0.03) 0%, transparent 25%);
         }
 
-        /* Fixed Navigation Bar */
-        .navbar { 
-            backdrop-filter: blur(12px); 
-            background: rgba(255, 255, 255, 0.95); 
-            border-bottom: 1px solid rgba(0,0,0,0.05); 
-        }
-        .nav-app-switcher .nav-link {
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 6px 14px;
-            border-radius: 20px;
-            color: #64748b;
-            transition: all 0.2s ease;
-        }
-        .nav-app-switcher .nav-link.active {
-            background-color: #FAF5FF;
-            color: var(--brand-purple);
-        }
-        .nav-app-switcher .nav-link:hover:not(.active) {
-            color: var(--brand-purple);
-            background-color: #F8FAFC;
-        }
-
-        /* Buttons */
-        .btn-appstore {
-            background-color: #000000;
-            color: #FFFFFF !important;
-            padding: 9px 24px;
+        /* 3D Clay Button Base */
+        .btn-clay {
             border-radius: 50px;
             font-weight: 800;
+            transition: all 0.15s ease-in-out;
+            border: none;
+            position: relative;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-            border: 1px solid #000;
+            justify-content: center;
         }
-        .btn-appstore:hover {
-            background-color: #1E293B;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        .btn-clay:active {
+            transform: translateY(3px) !important;
         }
 
-        .btn-kakao {
-            background-color: var(--brand-yellow);
-            color: #191919;
+        /* Store Buttons */
+        .btn-appstore {
+            background: #1E1B4B;
+            color: #FFFFFF !important;
+            padding: 10px 24px;
+            box-shadow: 0 5px 0 #0F0E26, 0 10px 20px rgba(0,0,0,0.15);
+            min-height: 52px;
+        }
+        .btn-appstore:hover {
+            background: #2D276D;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #0F0E26, 0 14px 24px rgba(0,0,0,0.2);
+        }
+        .btn-appstore:active {
+            box-shadow: 0 2px 0 #0F0E26 !important;
+        }
+
+        .btn-googleplay-pending {
+            background: #FFFFFF;
+            color: #475569 !important;
+            padding: 10px 22px;
+            border: 2px solid #E2E8F0;
+            box-shadow: 0 5px 0 #CBD5E1;
+            min-height: 52px;
+            cursor: pointer;
+        }
+        .btn-googleplay-pending:hover {
+            background: #F8FAFC;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #94A3B8;
+        }
+        .btn-googleplay-pending:active {
+            box-shadow: 0 2px 0 #CBD5E1 !important;
+        }
+
+        /* Learn Minute Hand Button */
+        .btn-learn-minute {
+            background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
+            color: #FFFFFF !important;
+            padding: 11px 26px;
+            box-shadow: 0 5px 0 #372A99, 0 10px 20px rgba(108, 92, 231, 0.25);
+            font-size: 0.95rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 5;
+        }
+        .btn-learn-minute:hover {
+            background: linear-gradient(135deg, #7C6EF0 0%, #5844E0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #372A99, 0 14px 24px rgba(108, 92, 231, 0.35);
+        }
+        .btn-learn-minute:active {
+            box-shadow: 0 2px 0 #372A99 !important;
+        }
+
+        /* Contact Button */
+        .btn-support-email {
+            background-color: #EDE9FE;
+            color: #6D28D9;
             font-weight: 800;
             border-radius: 50px;
-            padding: 10px 20px;
-            border: none;
+            padding: 9px 18px;
+            border: 1.5px solid #DDD6FE;
             transition: all 0.2s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.1);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
         }
-        .btn-kakao:hover {
-            background-color: #FADA0A;
-            color: #000;
+        .btn-support-email:hover {
+            background-color: #DDD6FE;
+            color: #5B21B6;
             transform: translateY(-2px);
+        }
+
+        /* Navigation Bar */
+        .navbar { 
+            backdrop-filter: blur(14px); 
+            background: rgba(251, 249, 245, 0.92); 
+            border-bottom: 2px solid rgba(226, 232, 240, 0.6); 
+        }
+        .nav-app-switcher .nav-link {
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .nav-app-switcher .nav-link.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 3px 0 #DDD6FE, 0 6px 12px rgba(108, 92, 231, 0.1);
         }
 
         /* Hero Section */
         .hero-section { 
-            padding-top: 130px; 
-            padding-bottom: 90px; 
-            background: radial-gradient(circle at 50% 30%, #F3E8FF 0%, #FFFFFF 75%); 
-            overflow: hidden; 
+            padding-top: 135px; 
+            padding-bottom: 70px; 
+            position: relative;
         }
         .hero-badge {
             background: #EDE9FE;
             color: #6D28D9;
             font-weight: 800;
-            font-size: 0.9rem;
-            border: 1px solid #DDD6FE;
-            display: inline-block;
+            font-size: 0.88rem;
+            border: 1.5px solid #DDD6FE;
+            box-shadow: 0 3px 0 #DDD6FE;
         }
         .release-pill {
             background: #DCFCE7;
             color: #166534;
             font-weight: 800;
             font-size: 0.85rem;
-            border: 1px solid #BBF7D0;
+            border: 1.5px solid #BBF7D0;
+            box-shadow: 0 3px 0 #BBF7D0;
+        }
+        .pending-pill {
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 800;
+            font-size: 0.85rem;
+            border: 1.5px solid #FDE68A;
+            box-shadow: 0 3px 0 #FDE68A;
         }
         .hero-headline { 
-            font-size: 3.2rem; 
+            font-size: clamp(2rem, 6.2vw, 3.4rem);
             font-weight: 900; 
             line-height: 1.25; 
             letter-spacing: -0.02em; 
-            background: linear-gradient(135deg, #1E1B4B 0%, #6C5CE7 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            color: #1E1B4B;
+        }
+        .hero-headline span.highlight {
+            background: linear-gradient(135deg, #6C5CE7 0%, #FF7675 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-graphic-card {
-            width: 100%;
-            max-width: 560px;
-            aspect-ratio: 2400 / 1604;
+        /* Shorts Toy Showroom */
+        .shorts-toy-wrapper {
             background: #FFFFFF;
-            border-radius: 26px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px -10px rgba(108, 92, 231, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.06);
+            border-radius: 36px;
+            padding: 16px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
+            border: 3px solid #F1F5F9;
+            max-width: 460px;
             margin: 0 auto;
         }
-        .hero-graphic-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .shorts-pill-tabs {
+            display: flex;
+            gap: 8px;
+            background: #F1F5F9;
+            padding: 6px;
+            border-radius: 24px;
+            margin-bottom: 14px;
         }
-
-        /* Desktop Sticky Layout */
-        @media (min-width: 992px) {
-            .sticky-container { position: relative; padding: 100px 0; }
-            .sticky-visual { position: sticky; top: 110px; height: 600px; display: flex; align-items: center; justify-content: center; }
-            .step-content { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.25; transition: opacity 0.5s ease; }
-            .step-content.active { opacity: 1; }
-            
-            .screen-content { 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                width: 100%; 
-                height: 100%; 
-                opacity: 0; 
-                transition: opacity 0.5s ease-in-out; 
-                background-color: white; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                overflow: hidden; 
-            }
-            .screen-content.active { opacity: 1; z-index: 2; }
-            .feature-visual-mobile { display: none !important; }
-        }
-
-        .feature-visual-frame { 
-            width: 100%; 
-            max-width: 530px; 
-            aspect-ratio: 4 / 3; 
-            background: #FFFFFF; 
-            border-radius: 24px; 
-            position: relative; 
-            overflow: hidden; 
-            box-shadow: 0 16px 40px -10px rgba(108, 92, 231, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.06); 
-            margin: 0 auto; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        .screen-pure-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        .feature-icon-box {
-            width: 58px;
-            height: 58px;
+        .shorts-tab-btn {
+            flex: 1;
+            padding: 9px 8px;
+            border: none;
+            background: transparent;
+            font-weight: 800;
+            font-size: 0.82rem;
+            color: #64748B;
             border-radius: 18px;
+            transition: all 0.2s ease;
+            line-height: 1.35;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 18px;
         }
-        .feature-list i { font-size: 1.25rem; color: var(--brand-purple); }
+        .shorts-tab-btn.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        .shorts-screen-frame {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #0F172A;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        .shorts-fallback-poster {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
+            color: #FFFFFF;
+        }
 
-        /* Language Dropdown */
-        .scrollable-dropdown { 
-            max-height: 380px; 
-            overflow-y: auto; 
-            min-width: 200px;
+        /* Interactive Web Simulator */
+        .simulator-section {
+            padding: 90px 0;
+            background: #FFFFFF;
+            border-top: 3px solid #F1F5F9;
+            border-bottom: 3px solid #F1F5F9;
+            position: relative;
+        }
+        .sim-container-card {
+            background: var(--clay-bg);
+            border-radius: 36px;
+            border: 3px solid #EDE9FE;
+            box-shadow: 0 16px 40px rgba(108, 92, 231, 0.08), 0 6px 0 #DDD6FE;
+            overflow: hidden;
+        }
+        .sim-nav-tabs {
+            display: flex;
+            background: #EDE9FE;
+            padding: 8px 12px;
+            gap: 10px;
+        }
+        .sim-nav-btn {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            font-weight: 900;
+            font-size: 1.02rem;
+            color: #6D28D9;
+            border-radius: 22px;
+            transition: all 0.2s;
+        }
+        .sim-nav-btn.active {
+            background: #FFFFFF;
+            color: #4C1D95;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15), 0 3px 0 #C4B5FD;
+        }
+
+        /* 1) Clock Simulator */
+        .clock-sim-box {
+            position: relative;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 540px;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
+        }
+        .clock-sky-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 0 0 32px 32px;
+            z-index: 1;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        #skyCelestialCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .clock-interactive-canvas {
+            position: relative;
+            z-index: 5;
+            touch-action: none;
+            cursor: grab;
+            filter: drop-shadow(0 16px 30px rgba(0,0,0,0.18));
+        }
+        .clock-interactive-canvas:active { cursor: grabbing; }
+
+        .clock-digital-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #1E1B4B;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 3px 0 #E2E8F0;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clock-guide-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            padding: 7px 18px;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            display: inline-flex;
+            align-items: center;
+            max-width: 90%;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .clock-guide-pill span {
+            color: #1E293B;
+            font-size: 0.85rem;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        /* 2) Column Addition Simulator */
+        .math-sim-box {
+            position: relative;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 540px;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
+        }
+        .math-quiz-board {
+            position: relative;
+            background: #FFFFFF;
+            border: 3px solid #E2E8F0;
+            border-radius: 28px;
+            padding: 22px 28px 42px 28px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            max-width: 480px;
+            width: 100%;
+            background-image: 
+                linear-gradient(#F1F5F9 1.5px, transparent 1.5px),
+                linear-gradient(90deg, #F1F5F9 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .vertical-math-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 4px auto 0 auto;
+            width: fit-content;
+        }
+
+        .math-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .col-op {
+            width: 44px;
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1E293B;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .col-tens, .col-units {
+            width: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fredoka', 'Inter', monospace;
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: #1E293B;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .carry-row { margin-bottom: 2px; }
+        .carry-row .col-tens { height: 36px; }
+
+        .carry-dashed-circle {
+            width: 34px;
+            height: 34px;
+            border: 2px dashed #94A3B8;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .vertical-math-line {
+            width: 100%;
+            min-width: 220px;
+            height: 4px;
+            background: #1E293B;
+            border-radius: 4px;
+            margin: 8px 0 14px 0;
+        }
+
+        .answer-slot-box {
+            width: 68px;
+            height: 76px;
+            background: rgba(108, 92, 231, 0.08);
+            border: 2.5px dashed rgba(108, 92, 231, 0.5);
             border-radius: 16px;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .answer-slot-box::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed rgba(108, 92, 231, 0.3);
+        }
+        .answer-slot-box::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            border-left: 1px dashed rgba(108, 92, 231, 0.3);
         }
 
-        @media (max-width: 991.98px) { 
-            .hero-section { padding-top: 100px; padding-bottom: 60px; }
-            .hero-headline { font-size: clamp(2rem, 7.5vw, 2.7rem); } 
-            .desktop-sticky-wrapper { display: none !important; }
-            .feature-visual-mobile { display: flex !important; margin-top: 20px; margin-bottom: 24px; max-width: 100%; border-radius: 20px; }
-            .sticky-container { padding: 40px 0; }
-            .step-content { height: auto !important; padding: 40px 0 !important; opacity: 1 !important; border-bottom: 1px dashed #E2E8F0; }
-            .step-content:last-child { border-bottom: none; }
-            .step-title { font-size: 1.8rem !important; }
-            .navbar-collapse .dropdown-menu { left: 0 !important; right: auto !important; max-width: calc(100vw - 36px); }
+        #mathFullCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            touch-action: none;
+            cursor: crosshair;
+        }
+
+        .canvas-guide-overlay {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #7C3AED;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px dashed rgba(124, 58, 237, 0.25);
+            padding: 3px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            pointer-events: none;
+            z-index: 5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            white-space: nowrap;
+        }
+
+        .large-card-full-overlay {
+            display: none;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 25;
+            padding: 24px 18px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 0 0 32px 32px;
+            animation: fadeIn 0.25s ease-out;
+        }
+        .large-card-overlay-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .feature-box {
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            border: 2px solid #F1F5F9;
+            height: 100%;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-section { padding-top: 110px; padding-bottom: 40px; }
+            .shorts-toy-wrapper { max-width: 330px; }
+            .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
+            .math-quiz-board { padding: 18px 20px 38px 20px; }
+            
+            .col-op { width: 36px; font-size: 2.2rem; }
+            .col-tens, .col-units { width: 58px; font-size: 2.7rem; }
+            .math-row { gap: 10px; }
+            .answer-slot-box { width: 58px; height: 66px; }
+            .vertical-math-line { min-width: 180px; }
         }
     </style>
 </head>
@@ -264,18 +608,17 @@
     <!-- Fixed Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3">
-                Mathgotchi
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index.html">
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
+                <span style="font-weight: 900; letter-spacing: -0.02em;">ChronoLab</span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- App Switcher Tabs -->
-                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-3 mt-lg-0">
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">⏰ Mathgotchi</a>
                     </li>
@@ -285,63 +628,55 @@
                 </ul>
 
                 <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
-                    <!-- Language Selector -->
-                    <div class="dropdown me-2 position-relative">
-                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown position-relative">
+                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3 fw-bold" type="button" data-bs-toggle="dropdown">
                             🌐 English
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 scrollable-dropdown">
-                            <li><a class="dropdown-item active" href="index.html">English</a></li>
+                        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 shadow rounded-4">
+                            <li><a class="dropdown-item active fw-bold" href="index.html">English</a></li>
                             <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
                         </ul>
                     </div>
 
-                    <!-- Support Link -->
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm px-3 shadow-sm d-flex align-items-center">
-                        <i class="bi bi-chat-fill me-1"></i> Support
-                    </a>
-                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
-                        <i class="bi bi-youtube me-1"></i> Dev Vlog
+                    <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-sm px-3">
+                        <i class="bi bi-envelope-fill me-1"></i> Contact Support
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Mathgotchi Hero Section -->
+    <!-- Hero Section & Shorts Toy Showroom -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0" data-aos="fade-up">
-                    
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <!-- Left: Headline & Store CTA -->
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 Crafted with Love by a Father for His Kids
+                            👨‍👧‍👦 Crafted with Care by a CS Professor Dad
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
-                             App Store Official
+                             App Store Official Release
+                        </span>
+                        <span class="badge pending-pill px-3 py-2 rounded-pill">
+                            ⏳ Google Play Review in Progress
                         </span>
                     </div>
                     
                     <h1 class="hero-headline mb-3">
-                        From Struggling with Clocks to<br>
-                        <strong>Solving Quizzes on Their Own!</strong>
+                        When traditional drills feel like a chore,<br>
+                        <span class="highlight">Kids start solving math on their own!</span>
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        No more tedious flashcards. Master time-reading by turning real interactive clock gears, feeling the 24-hour day-and-night cycle, and watching animal companions hatch and grow!
+                        Say goodbye to multiple-choice guessing and scratch paper clutter. Spin real interactive clock gears to grasp 24-hour day/night cycles, and write column addition, subtraction, and multiplication directly on screen like real pencil on paper!
                     </p>
 
-                    <ul class="list-unstyled text-muted mb-4 text-start d-inline-block">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Hands-On Gear Physics:</strong> Spin the minute hand to see the hour hand and sky shift in real time.</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Mom & Dad's Voice Cheers:</strong> Encourage your child with custom parent selfies and loving voice notes.</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Pet Companion Evolution:</strong> Solve daily quizzes to collect fruit, warm eggs, and evolve animal buddies.</li>
-                    </ul>
-                    
-                    <!-- Direct CTA Buttons -->
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-center mb-3">
-                        <!-- Actual Mathgotchi App Store Link -->
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-appstore shadow-sm">
+                    <!-- Store Download Buttons -->
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -349,151 +684,321 @@
                             </div>
                         </a>
 
-                        <!-- Android Free Early Access Modal Trigger -->
-                        <button type="button" class="btn btn-outline-success rounded-pill px-4 py-2 fw-bold shadow-sm d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#androidAlphaModal" style="height: 48px;">
-                            <i class="bi bi-android2 fs-5"></i>
-                            <span>Android Free Preview</span>
+                        <button type="button" class="btn btn-clay btn-googleplay-pending" onclick="alert('Google Play version is currently under final review.\nIt will be available for download very soon. Stay tuned!')">
+                            <i class="bi bi-google-play fs-3 text-secondary"></i>
+                            <div class="text-start" style="line-height: 1.15;">
+                                <div style="font-size: 0.68rem; color: #64748B;">COMING SOON</div>
+                                <div style="font-size: 1.02rem; font-weight: 800; color: #1E293B;">Google Play (In Review)</div>
+                            </div>
                         </button>
                     </div>
 
-                    <div class="text-muted small mt-3">
-                        🛡️ 100% Ad-Free &bull; Zero External Server Data Collection &bull; Kid-Safe Parental Gate Included
+                    <div class="text-muted small mt-2">
+                        🛡️ 100% Ad-Free &bull; On-Device Privacy Protection &bull; 7-Day Risk-Free Trial
                     </div>
                 </div>
-                
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="hero-graphic-card">
-                        <img src="mathgotchi/concept_en_1.jpg" alt="Mathgotchi App Concept Overview" class="hero-graphic-img">
+
+                <!-- Right: Shorts Toy Showroom -->
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="shorts-toy-wrapper">
+                        <!-- Tab Buttons -->
+                        <div class="shorts-pill-tabs">
+                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
+                                ✍️ Scratch-Free Handwriting Math
+                            </button>
+                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
+                                ⏰ Telling Time <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">Shorts Coming Soon 🎬</span>
+                            </button>
+                        </div>
+
+                        <!-- 9:16 Screen Frame -->
+                        <div class="shorts-screen-frame">
+                            <!-- Tab 1: Embedded Shorts Video -->
+                            <div id="shorts-box-1" class="w-100 h-100">
+                                <iframe id="shorts-iframe-1" 
+                                        class="w-100 h-100 border-0" 
+                                        src="https://www.youtube.com/embed/72GAK8m6qFQ?autoplay=1&mute=1&loop=1&playlist=72GAK8m6qFQ&playsinline=1&rel=0" 
+                                        title="Mathgotchi Handwriting Math Shorts" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <!-- Tab 2: Clock Shorts In-Production Notice -->
+                            <div id="shorts-box-2" class="shorts-fallback-poster d-none">
+                                <div class="fs-1 mb-2">🎬</div>
+                                <span class="badge bg-primary text-white px-3 py-1 rounded-pill fw-bold mb-2">SHORTS COMING SOON</span>
+                                <h5 class="fw-bold mb-2 text-white">Clock Learning Shorts Video in Production</h5>
+                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.6;">
+                                    <strong>The complete interactive clock feature is already live in the Mathgotchi app!</strong><br>
+                                    Our hands-on video showcasing the 24-hour day/night mechanics will be published soon.
+                                </p>
+                                <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold" onclick="document.querySelector('.simulator-section').scrollIntoView({behavior: 'smooth'})">
+                                    👇 Try the Clock Simulator Below First
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Web Simulator -->
+    <section class="simulator-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">TRY IT ON WEB</span>
+                <h2 class="fw-bold display-6 mb-2">Experience the Hands-On Feel Before Downloading!</h2>
+                <p class="text-muted">Turn the clock hands or write column addition answers with your finger or mouse.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <div class="sim-container-card">
+                        
+                        <!-- Sandbox Nav Tabs -->
+                        <div class="sim-nav-tabs">
+                            <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
+                                ⏰ Hands-On Clock Simulator
+                            </button>
+                            <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
+                                ✍️ Scratch-Free Handwriting Math
+                            </button>
+                        </div>
+
+                        <!-- 1) Interactive Clock Simulator -->
+                        <div id="sim-box-clock" class="clock-sim-box">
+                            <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);">
+                                <canvas id="skyCelestialCanvas"></canvas>
+                            </div>
+                            
+                            <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
+
+                            <div class="clock-digital-pill">
+                                <span id="clock-ampm-badge" class="badge bg-danger rounded-pill" style="font-size: 0.85rem;">PM</span>
+                                <span id="clock-digital-time" style="font-family: monospace;">03:00</span>
+                            </div>
+
+                            <div class="clock-guide-pill">
+                                <span>👆 Drag the green minute hand around! Watch the sky seamlessly shift between day and night.</span>
+                            </div>
+
+                            <!-- Learn Minute Hand Button -->
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
+                                    💡 How to Read the Minute Hand
+                                </button>
+                            </div>
+
+                            <!-- Clock Tutorial Full Overlay -->
+                            <div id="clockResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
+                                        ⏰ The Complete Time-Telling Solution
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
+                                        Download Mathgotchi to master clock hands<br>from hour principles to precise 1-minute steps!
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>🎓 5-Step Progressive Tutorial:</strong><br>
+                                            <span class="text-muted">Clock anatomy, hand relationships, time passage, reading hours, and decoding minutes.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 Friendly Audio-Visual Hints:</strong><br>
+                                            <span class="text-muted">Confused? "When on large 3, count by 5s to 15!" Self-guided interactive coaching.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🌀 Physical Gear Mechanics:</strong><br>
+                                            <span class="text-muted">Interlocking gears move hands in perfect sync, making the cause and effect of time crystal clear.</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🐣 Gamified Pet Companions:</strong><br>
+                                            <span class="text-muted">Solve daily quizzes to collect fruit, hatch eggs, and evolve lovable animal friends!</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> Download on App Store
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeClockOverlay()">
+                                            Back to Clock
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2) Interactive Column Addition Handwriting Simulator -->
+                        <div id="sim-box-math" class="math-sim-box d-none">
+                            <div class="math-quiz-board" id="mathQuizBoard">
+                                
+                                <canvas id="mathFullCanvas"></canvas>
+
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">2-Digit Column Addition</span>
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="generateNewMathQuiz()" style="z-index: 15; position: relative;">New Problem 🎲</button>
+                                </div>
+
+                                <div class="vertical-math-grid">
+                                    <!-- 1. Regrouping / Carry Row -->
+                                    <div class="math-row carry-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens">
+                                            <div class="carry-dashed-circle" title="Regrouping (Carry) Slot"></div>
+                                        </div>
+                                        <div class="col-units"></div>
+                                    </div>
+
+                                    <!-- 2. First Number Row -->
+                                    <div class="math-row num1-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens" id="quiz-tens1">3</div>
+                                        <div class="col-units" id="quiz-units1">8</div>
+                                    </div>
+
+                                    <!-- 3. Second Number Row with '+' Sign -->
+                                    <div class="math-row num2-row">
+                                        <div class="col-op">+</div>
+                                        <div class="col-tens" id="quiz-tens2">2</div>
+                                        <div class="col-units" id="quiz-units2">5</div>
+                                    </div>
+
+                                    <!-- Calculation Line -->
+                                    <div class="vertical-math-line"></div>
+
+                                    <!-- 4. Answer Guide Box Row -->
+                                    <div class="math-row answer-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens">
+                                            <div class="answer-slot-box"></div>
+                                        </div>
+                                        <div class="col-units">
+                                            <div class="answer-slot-box"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="canvas-guide" class="canvas-guide-overlay">
+                                    ✍️ Write freely—from carry-over notes above to answers below!
+                                </div>
+                            </div>
+
+                            <!-- Bottom Action Bar -->
+                            <div class="d-flex gap-2 mt-3" style="max-width: 480px; width: 100%;">
+                                <button class="btn btn-light border rounded-pill flex-grow-1 fw-bold shadow-sm" onclick="clearMathCanvas()">
+                                    <i class="bi bi-eraser me-1 text-danger"></i> Clear Ink
+                                </button>
+                                <button class="btn btn-primary rounded-pill flex-grow-1 fw-bold shadow-sm" style="background-color: #6C5CE7;" onclick="submitMathCheck()">
+                                    <i class="bi bi-check-circle me-1"></i> Check Answer
+                                </button>
+                            </div>
+
+                            <!-- Math Result Overlay -->
+                            <div id="mathResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
+                                    <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
+                                        🎉 Correct Answer: <span id="overlay-ans-text">63</span>
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
+                                        Download Mathgotchi to experience<br>true scratch-free handwriting math!
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>⚡ 120Hz Ultra-Precise Stroke Recognition:</strong><br>
+                                            <span class="text-muted">No scratch paper required. Real-time handwriting recognition tailored for children's pencil strokes.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 Audio-Visual Step-by-Step Coaching:</strong><br>
+                                            <span class="text-muted">Stuck on an answer? Smart prompts guide kids to self-correct and understand the underlying concepts.</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🧮 Progressive Math Curriculum:</strong><br>
+                                            <span class="text-muted">From single-digit addition to 3-digit multi-operand addition, subtraction, and multiplication.</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🃏 Visual Multiplication Flashcards:</strong><br>
+                                            <span class="text-muted">No rote memorization—explore area models and watermelon animations for intuitive understanding.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> Download on App Store
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
+                                            Try Again
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sticky Interactive Features Section -->
-    <section id="features" class="sticky-container bg-light">
-        <div class="container">
-            <div class="row">
-                
-                <!-- Desktop Sticky Visual -->
-                <div class="col-lg-6 order-lg-2 desktop-sticky-wrapper">
-                    <div class="sticky-visual">
-                        <div class="feature-visual-frame">
-                            <div class="screen-content active" id="screen-1">
-                                <img src="mathgotchi/concept_en_5.png" alt="Understanding Time Mechanics" class="screen-pure-img">
-                            </div>
-                            <div class="screen-content" id="screen-2">
-                                <img src="mathgotchi/concept_en_2.jpg" alt="Pet Growth System" class="screen-pure-img">
-                            </div>
-                            <div class="screen-content" id="screen-3">
-                                <img src="mathgotchi/concept_en_3.jpg" alt="Cheered by Parents" class="screen-pure-img">
-                            </div>
-                            <div class="screen-content" id="screen-4">
-                                <img src="mathgotchi/concept_en_4.jpg" alt="Expanding Curriculum" class="screen-pure-img">
-                            </div>
-                        </div>
+    <!-- 3 Core Concepts Grid -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">⏰</div>
+                        <h4 class="fw-bold mb-2">Hands-On 24-Hour Clock</h4>
+                        <p class="text-muted small mb-0">Experience interlocking physical gears and real-time day/night cycles to intuitively master the cause and effect of time.</p>
                     </div>
                 </div>
-
-                <!-- Text Step Descriptions -->
-                <div class="col-lg-6 order-lg-1">
-                    
-                    <!-- Step 1 -->
-                    <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-primary bg-opacity-10 text-primary">
-                                <i class="bi bi-clock-history"></i>
-                            </div>
-                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold mb-2">Theme 01: Clocks & Time</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">From Second Hands to Sun & Moon,<br>Hands-On Discovery of Time.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_en_5.png" alt="Clock Mechanics Discovery" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                Move beyond dry memorization. Children intuitively explore how gear-linked second, minute, and hour hands interact, observing the sky seamlessly transition between sunrise and moonlit night.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Interlocking Gear Mechanics:</strong> 60 minutes advance 1 hour—making cause and effect crystal clear.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>24-Hour Sky Shifts:</strong> Rotating hands dynamically shifts morning sun to nighttime stars.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Mastering Tricky "Minutes To":</strong> Step-by-step guidance for challenging "minutes before" concepts.</li>
-                            </ul>
-                        </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🧮</div>
+                        <h4 class="fw-bold mb-2">Column Math & Visual Flashcards</h4>
+                        <p class="text-muted small mb-0">Build arithmetic confidence with step-by-step 2-digit to 3-digit column addition, subtraction, and visual multiplication.</p>
                     </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-success bg-opacity-10 text-success">
-                                <i class="bi bi-egg-fried"></i>
-                            </div>
-                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">Rewarding Pet Evolution</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">Hatch and Evolve<br>Adorable Animal Friends.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_en_2.jpg" alt="Mathgotchi Pet Growth System" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                Complete daily learning tasks and gather sweet fruits to hatch mystical animal companions! Nurture responsibility and learning enthusiasm.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Mystery Creature Hatching:</strong> Nurture eggs with quiz achievements to celebrate hatching.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Meaningful Interactions:</strong> Warm eggs, wind gears, and feed treats to strengthen companionship.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Self-Driven Routine:</strong> Growing companions turns math time into an anticipated daily habit.</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🎙️</div>
+                        <h4 class="fw-bold mb-2">Parent Voice Cheers & Pet Growth</h4>
+                        <p class="text-muted small mb-0">Cheer on your child with real family photos and voice recordings, while daily quiz rewards hatch and evolve adorable companions.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Step 3 -->
-                    <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box" style="background-color: #EDE9FE; color: #6C5CE7;">
-                                <i class="bi bi-mic-fill"></i>
-                            </div>
-                            <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background-color: #6C5CE7; color: white;">A Personalized Cheerleader</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">Cheered on by Mom & Dad's<br>Real Voice and Smiles.</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_en_3.jpg" alt="Parent Voice & Reaction" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                Custom family selfies and warm voice recordings play when answers are submitted! Deliver genuine emotional support for every math attempt.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Custom Reaction Photos:</strong> Pop-up high-fives and encouraging smiles directly from family.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Warm Voice Prompts:</strong> Replace robotic sound cues with the most trusted voices in their life.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>100% On-Device Privacy:</strong> Media stays encrypted on your device and is NEVER uploaded.</li>
-                            </ul>
-                        </div>
+    <!-- Parent Assurance: 3 Safe Haven Promises -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">3 Commitments to Parents' Peace of Mind</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🚫</div>
+                        <h5 class="fw-bold mb-2">100% Ad-Free (Zero Distractions)</h5>
+                        <p class="text-muted small mb-0">No banner ads, popups, or reward videos to disrupt your child's concentration or expose them to unwanted content.</p>
                     </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-4">
-                            <div class="feature-icon-box bg-warning bg-opacity-10 text-warning" style="color: #D97706 !important;">
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">✨ Free Trial & Continuous Updates</span>
-                            <h2 class="display-6 fw-bold mb-3 step-title">Telling Time Is Just the Start,<br>Step into a Wider World of Math!</h2>
-                            
-                            <div class="feature-visual-frame feature-visual-mobile">
-                                <img src="mathgotchi/concept_en_4.jpg" alt="Expanding Math Curriculum" class="screen-pure-img">
-                            </div>
-
-                            <p class="lead text-muted mb-4" style="font-size: 1.05rem;">
-                                Foundational clock skills pave the way for shapes, arithmetic, patterns, and measurements in upcoming expansions.
-                            </p>
-                            <ul class="list-unstyled text-muted lead feature-list" style="font-size: 1rem;">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Continual Learning Horizons:</strong> Ongoing homeschooling modules advancing core math abilities.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Zero-Risk 7-Day Free Trial:</strong> Explore all capabilities with complete peace of mind.</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>Kid-Safe Parental Control:</strong> Guarded by math-based Parental Gates against accidental taps.</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🔒</div>
+                        <h5 class="fw-bold mb-2">On-Device Privacy First</h5>
+                        <p class="text-muted small mb-0">No account required. Parent audio cheers and selfies stay strictly encrypted on your local device and are NEVER uploaded.</p>
                     </div>
-
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="fw-bold mb-2">Kid-Safe Parental Gate</h5>
+                        <p class="text-muted small mb-0">Equipped with 4-digit math verification locks to prevent children from accidental in-app purchases or leaving the app.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -504,7 +1009,7 @@
         <div class="container py-4">
             <div class="row align-items-center bg-white p-4 p-lg-5 rounded-4 shadow-sm border">
                 <div class="col-lg-3 text-center mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="supsiki.png" alt="ChronoFit Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 120px; border: 1px solid #e2e8f0;">
+                    <img src="supsiki.png" alt="ChronoFit Icon" class="img-fluid rounded-4 shadow-sm" style="max-width: 110px; border: 1px solid #e2e8f0;">
                 </div>
                 <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-up">
                     <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-2">
@@ -512,11 +1017,11 @@
                     </span>
                     <h3 class="fw-bold mb-2 text-dark">ChronoFit</h3>
                     <p class="text-muted mb-0" style="line-height: 1.7; font-size: 0.95rem;">
-                        Unified interval training and barcode diet logging. Sync your Wear OS smartwatch and smart bands to analyze time-series energy balance and track workouts with empirical precision.
+                        Unified interval training and barcode diet logging. Sync your Wear OS smartwatch and smart bands to track time-series energy balance with empirical precision.
                     </p>
                 </div>
                 <div class="col-lg-3 text-center text-lg-end" data-aos="fade-left">
-                    <a href="chronofit.html" class="btn btn-lg rounded-pill px-4 text-white fw-bold shadow-sm" style="background-color: var(--chronofit-brand);">
+                    <a href="chronofit.html" class="btn btn-lg rounded-pill px-4 text-white fw-bold shadow-sm" style="background-color: #4F46E5;">
                         Explore ChronoFit &rarr;
                     </a>
                 </div>
@@ -524,80 +1029,21 @@
         </div>
     </section>
 
-    <!-- Android Closed Alpha Modal -->
-    <div class="modal fade" id="androidAlphaModal" tabindex="-1" aria-labelledby="androidAlphaModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content rounded-4 border-0 shadow">
-                <div class="modal-header border-0 pb-0 pt-4 px-4">
-                    <div>
-                        <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill fw-bold mb-2">
-                            🎁 Android Early Access ($0 Cost)
-                        </span>
-                        <h4 class="modal-title fw-bold text-dark" id="androidAlphaModalLabel" style="font-size: 1.25rem;">
-                            Try Mathgotchi for Free on Android!
-                        </h4>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-4 py-3">
-                    <div class="p-3 bg-light rounded-3 mb-3 text-muted small" style="line-height: 1.7;">
-                        👨‍👧‍👦 <strong>Hello! I'm a dad who developed Mathgotchi for my kids.</strong><br>
-                        While the iOS version is officially released, Android is currently running in Closed Preview. Follow the 3 steps below to download and try it completely free ($0)!
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">1</span>
-                                        <strong class="text-dark">Join Group</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">Join our Google Group to unlock store download permissions.</p>
-                                </div>
-                                <a href="https://groups.google.com/g/mathgotchi-testers" target="_blank" class="btn btn-outline-primary btn-sm w-100 fw-bold mt-2">
-                                    ① Join Group &rarr;
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">2</span>
-                                        <strong class="text-dark">Accept Invite</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">Click <strong>[Become a tester]</strong> on the invitation page.</p>
-                                </div>
-                                <a href="https://play.google.com/apps/testing/com.chronolab.wooagong" target="_blank" class="btn btn-outline-success btn-sm w-100 fw-bold mt-2">
-                                    ② Accept Invite &rarr;
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 bg-white border rounded-3 h-100 shadow-sm d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary rounded-circle px-2 py-1">3</span>
-                                        <strong class="text-dark">Install App</strong>
-                                    </div>
-                                    <p class="text-muted small mb-2">Install <strong>Mathgotchi</strong> directly from Google Play.</p>
-                                </div>
-                                <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" class="btn btn-outline-dark btn-sm w-100 fw-bold mt-2">
-                                    ③ Get App &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer border-0 pt-0 pb-4 px-4 d-flex justify-content-between align-items-center">
-                    <span class="small text-muted">Need help? Reach out anytime 👉</span>
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-kakao btn-sm">
-                        <i class="bi bi-chat-fill me-1"></i> Contact Support
-                    </a>
-                </div>
+    <!-- 1:1 Customer Support -->
+    <section class="py-5" style="background-color: #FAF5FF;">
+        <div class="container text-center">
+            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 680px;">
+                <div class="fs-1 mb-2">💬</div>
+                <h3 class="fw-bold mb-2 text-dark">1:1 Inquiries & Support</h3>
+                <p class="text-muted mb-4 small">
+                    Have questions about app usage, billing, or suggestions? Reach out directly and the developer will assist you promptly.
+                </p>
+                <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-lg px-4">
+                    <i class="bi bi-envelope-fill me-2 fs-5"></i> Email Developer Support &rarr;
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-white py-5 border-top">
@@ -605,51 +1051,518 @@
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
                 <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
-                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="text-secondary fs-4"><i class="bi bi-chat-dots-fill"></i></a>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
             </div>
-            <p class="text-muted small mb-2">
+            <p class="text-muted small mb-0">
                 © 2026 ChronoLab. All rights reserved.<br>
                 <a href="terms-mathgotchi.html" class="text-decoration-none text-muted">Terms of Service</a> | 
                 <a href="privacy-mathgotchi.html" class="text-decoration-none text-muted">Privacy Policy</a>
             </p>
-            <div class="mt-3">
-                <a href="chronofit.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
-                    🏋️ Explore ChronoFit
-                </a>
-            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Simulator & Shorts Engine -->
     <script>
         AOS.init({ duration: 800, once: true });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (window.innerWidth >= 992) {
-                const steps = document.querySelectorAll('.step-content');
-                const screens = document.querySelectorAll('.screen-content');
+        /* 1. Shorts Video Tab Switcher */
+        function switchShortsTab(index, btn) {
+            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            steps.forEach(s => s.classList.remove('active'));
-                            entry.target.classList.add('active');
+            const box1 = document.getElementById('shorts-box-1');
+            const box2 = document.getElementById('shorts-box-2');
 
-                            const index = entry.target.getAttribute('data-index');
-                            screens.forEach(s => s.classList.remove('active'));
-                            
-                            const activeScreen = document.getElementById(`screen-${index}`);
-                            if(activeScreen) activeScreen.classList.add('active');
-                        }
-                    });
-                }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+            if (index === 1) {
+                box2.classList.add('d-none');
+                box1.classList.remove('d-none');
+            } else {
+                box1.classList.add('d-none');
+                box2.classList.remove('d-none');
+            }
+        }
 
-                steps.forEach(step => observer.observe(step));
+        /* 2. Simulator Tab Switcher (Clock vs Column Math) */
+        function switchSimTab(type, btn) {
+            document.querySelectorAll('.sim-nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const clockBox = document.getElementById('sim-box-clock');
+            const mathBox = document.getElementById('sim-box-math');
+
+            if (type === 'clock') {
+                mathBox.classList.add('d-none');
+                clockBox.classList.remove('d-none');
+                renderCelestialSky();
+            } else {
+                clockBox.classList.add('d-none');
+                mathBox.classList.remove('d-none');
+                initMathFullCanvas();
+            }
+        }
+
+        /* 3. Celestial Canvas (Sun, Moon, Stars) */
+        const skyCanvas = document.getElementById('skyCelestialCanvas');
+        const skyCtx = skyCanvas.getContext('2d');
+        const stars = [
+            { x: 0.12, y: 0.22, r: 2.2, p: 0.1 },
+            { x: 0.25, y: 0.45, r: 2.8, p: 0.4 },
+            { x: 0.38, y: 0.18, r: 1.8, p: 0.7 },
+            { x: 0.62, y: 0.32, r: 3.2, p: 0.2 },
+            { x: 0.75, y: 0.16, r: 2.0, p: 0.9 },
+            { x: 0.88, y: 0.38, r: 2.6, p: 0.5 },
+            { x: 0.50, y: 0.52, r: 1.8, p: 0.6 }
+        ];
+
+        function resizeSkyCanvas() {
+            const container = skyCanvas.parentElement;
+            skyCanvas.width = container.clientWidth;
+            skyCanvas.height = container.clientHeight;
+        }
+
+        function renderCelestialSky() {
+            const w = skyCanvas.width;
+            const h = skyCanvas.height;
+            if (!w || !h) return;
+
+            skyCtx.clearRect(0, 0, w, h);
+            const hourFloat = currentHour + currentMinute / 60;
+
+            let nightFactor = 0;
+            if (hourFloat >= 20 || hourFloat <= 5) nightFactor = 1;
+            else if (hourFloat > 5 && hourFloat < 6.5) nightFactor = (6.5 - hourFloat) / 1.5;
+            else if (hourFloat > 18.5 && hourFloat < 20) nightFactor = (hourFloat - 18.5) / 1.5;
+
+            if (nightFactor > 0) {
+                stars.forEach(s => {
+                    skyCtx.beginPath();
+                    skyCtx.arc(w * s.x, h * s.y, s.r, 0, Math.PI * 2);
+                    skyCtx.fillStyle = `rgba(255, 255, 255, ${0.85 * nightFactor})`;
+                    skyCtx.fill();
+                });
+            }
+
+            if (hourFloat >= 5.5 && hourFloat <= 18.5) {
+                const sunProgress = (hourFloat - 5.5) / 13;
+                const sunX = w * (0.05 + sunProgress * 0.90);
+                const sunY = h * (0.75 - 0.55 * Math.sin(sunProgress * Math.PI));
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 26, 0, Math.PI * 2);
+                skyCtx.fillStyle = 'rgba(255, 209, 102, 0.22)';
+                skyCtx.fill();
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 16, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFAA00';
+                skyCtx.fill();
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 12, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF0A8';
+                skyCtx.fill();
+            }
+
+            const isMoonTime = hourFloat >= 17.5 || hourFloat <= 6.5;
+            if (isMoonTime) {
+                const moonHour = hourFloat >= 17.5 ? hourFloat - 17.5 : hourFloat + 6.5;
+                const moonProgress = moonHour / 13;
+                const moonX = w * (0.08 + moonProgress * 0.84);
+                const moonY = h * (0.72 - 0.50 * Math.sin(moonProgress * Math.PI));
+
+                skyCtx.save();
+                skyCtx.beginPath();
+                skyCtx.arc(moonX, moonY, 15, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF3B0';
+                skyCtx.fill();
+
+                skyCtx.globalCompositeOperation = 'destination-out';
+                skyCtx.beginPath();
+                skyCtx.arc(moonX + 7, moonY - 3, 13, 0, Math.PI * 2);
+                skyCtx.fill();
+                skyCtx.restore();
+            }
+        }
+
+        /* 4. Interactive Analog Clock Engine */
+        const clockCanvas = document.getElementById('interactiveClockCanvas');
+        const clockCtx = clockCanvas.getContext('2d');
+        const digitalTimeEl = document.getElementById('clock-digital-time');
+        const ampmBadgeEl = document.getElementById('clock-ampm-badge');
+        const skyBg = document.getElementById('sky-gradient-bg');
+
+        let currentHour = 15;
+        let currentMinute = 0;
+        let isDraggingHand = false;
+
+        function renderClock() {
+            const w = clockCanvas.width;
+            const h = clockCanvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const r = w / 2 - 14;
+
+            clockCtx.clearRect(0, 0, w, h);
+
+            const dialGrad = clockCtx.createRadialGradient(cx, cy, 0, cx, cy, r);
+            dialGrad.addColorStop(0, '#FFFFFF');
+            dialGrad.addColorStop(0.85, '#F8FAFC');
+            dialGrad.addColorStop(1, '#EFF6FF');
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r, 0, Math.PI * 2);
+            clockCtx.fillStyle = dialGrad;
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 4, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+            clockCtx.lineWidth = 3;
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 1.5, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(255, 118, 117, 0.35)';
+            clockCtx.lineWidth = 2.5;
+            clockCtx.stroke();
+
+            const tickTrackRadius = r * 0.88;
+            for (let i = 0; i < 60; i++) {
+                const angle = (i * 6 - 90) * (Math.PI / 180);
+                const isFiveMin = (i % 5 === 0);
+                const tickLen = isFiveMin ? r * 0.08 : r * 0.04;
+
+                const isCurMin = (i === currentMinute);
+                const isCurHour = (i === (currentHour % 12) * 5);
+
+                clockCtx.beginPath();
+                const outerX = cx + tickTrackRadius * Math.cos(angle);
+                const outerY = cy + tickTrackRadius * Math.sin(angle);
+                const innerX = cx + (tickTrackRadius - tickLen) * Math.cos(angle);
+                const innerY = cy + (tickTrackRadius - tickLen) * Math.sin(angle);
+
+                clockCtx.moveTo(innerX, innerY);
+                clockCtx.lineTo(outerX, outerY);
+                clockCtx.lineWidth = isFiveMin ? 2.5 : 1.2;
+                clockCtx.lineCap = 'round';
+
+                if (isCurMin) clockCtx.strokeStyle = '#00B894';
+                else if (isCurHour) clockCtx.strokeStyle = '#5843E4';
+                else clockCtx.strokeStyle = isFiveMin ? '#334155' : '#CBD5E1';
+                clockCtx.stroke();
+
+                if (isFiveMin) {
+                    const hourVal = (i === 0) ? 12 : i / 5;
+                    const isSelectedHour = (hourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    const numRadius = r * 0.65;
+                    const numX = cx + numRadius * Math.cos(angle);
+                    const numY = cy + numRadius * Math.sin(angle);
+
+                    clockCtx.font = isSelectedHour ? '900 20px Inter, Pretendard' : '800 17px Inter, Pretendard';
+                    clockCtx.textAlign = 'center';
+                    clockCtx.textBaseline = 'middle';
+                    clockCtx.fillStyle = isSelectedHour ? '#5843E4' : '#1E293B';
+                    clockCtx.fillText(hourVal.toString(), numX, numY);
+                }
+            }
+
+            const hourDeg = (currentHour % 12 + currentMinute / 60) * 30;
+            const minDeg = currentMinute * 6;
+            const hourRad = (hourDeg - 90) * (Math.PI / 180);
+            const minRad = (minDeg - 90) * (Math.PI / 180);
+
+            const hourLen = r * 0.46;
+            const hourTail = hourLen * 0.22;
+            const minLen = r * 0.74;
+            const minTail = minLen * 0.18;
+
+            const hourProjX = cx + tickTrackRadius * Math.cos(hourRad);
+            const hourProjY = cy + tickTrackRadius * Math.sin(hourRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.lineTo(hourProjX, hourProjY);
+            clockCtx.strokeStyle = 'rgba(88, 67, 228, 0.55)';
+            clockCtx.lineWidth = 1.5;
+            clockCtx.stroke();
+            clockCtx.restore();
+
+            clockCtx.beginPath();
+            clockCtx.arc(hourProjX, hourProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#5843E4';
+            clockCtx.fill();
+
+            const minProjX = cx + tickTrackRadius * Math.cos(minRad);
+            const minProjY = cy + tickTrackRadius * Math.sin(minRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.lineTo(minProjX, minProjY);
+            clockCtx.strokeStyle = 'rgba(0, 184, 148, 0.65)';
+            clockCtx.lineWidth = 1.5;
+            clockCtx.stroke();
+            clockCtx.restore();
+
+            clockCtx.beginPath();
+            clockCtx.arc(minProjX, minProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#00B894';
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - hourTail * Math.cos(hourRad) + 2, cy - hourTail * Math.sin(hourRad) + 3);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad) + 2, cy + hourLen * Math.sin(hourRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.12)';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - hourTail * Math.cos(hourRad), cy - hourTail * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#3B28B0';
+            clockCtx.lineWidth = 6;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#5843E4';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - minTail * Math.cos(minRad) + 2, cy - minTail * Math.sin(minRad) + 3);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad) + 2, cy + minLen * Math.sin(minRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.1)';
+            clockCtx.lineWidth = 5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - minTail * Math.cos(minRad), cy - minTail * Math.sin(minRad));
+            clockCtx.strokeStyle = '#008C70';
+            clockCtx.lineWidth = 3.5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.strokeStyle = '#00B894';
+            clockCtx.lineWidth = 4.8;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 7.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#E2E8F0';
+            clockCtx.fill();
+
+            const capGrad = clockCtx.createRadialGradient(cx, cy, 1, cx, cy, 6);
+            capGrad.addColorStop(0, '#FECA57');
+            capGrad.addColorStop(1, '#F39C12');
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 5.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = capGrad;
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx - 1.5, cy - 1.5, 1.8, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#FFFFFF';
+            clockCtx.fill();
+
+            const domeGrad = clockCtx.createLinearGradient(0, cy - r * 0.78, 0, cy - r * 0.22);
+            domeGrad.addColorStop(0, 'rgba(255, 255, 255, 0.40)');
+            domeGrad.addColorStop(1, 'rgba(255, 255, 255, 0.03)');
+
+            clockCtx.save();
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx - r * 0.45, cy - r * 0.78, cx + r * 0.45, cy - r * 0.78, cx + r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx + r * 0.40, cy - r * 0.62, cx - r * 0.40, cy - r * 0.62, cx - r * 0.72, cy - r * 0.28);
+            clockCtx.closePath();
+            clockCtx.fillStyle = domeGrad;
+            clockCtx.fill();
+            clockCtx.restore();
+
+            updateSkyAndDigital(currentHour, currentMinute);
+        }
+
+        function updateSkyAndDigital(h, m) {
+            const isPm = h >= 12;
+            const displayH = (h % 12 === 0) ? 12 : (h % 12);
+            const padH = String(displayH).padStart(2, '0');
+            const padM = String(m).padStart(2, '0');
+
+            ampmBadgeEl.textContent = isPm ? 'PM' : 'AM';
+            ampmBadgeEl.className = `badge rounded-pill ${isPm ? 'bg-danger' : 'bg-primary'}`;
+            digitalTimeEl.textContent = `${padH}:${padM}`;
+
+            if (h >= 6 && h < 17) {
+                skyBg.style.background = 'linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%)';
+            } else if (h >= 17 && h < 20) {
+                skyBg.style.background = 'linear-gradient(180deg, #E76F51 0%, #F4A261 100%)';
+            } else {
+                skyBg.style.background = 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)';
+            }
+
+            renderCelestialSky();
+        }
+
+        function handleClockDrag(e) {
+            const rect = clockCanvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const dx = clientX - (rect.left + rect.width / 2);
+            const dy = clientY - (rect.top + rect.height / 2);
+
+            let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+            if (angle < 0) angle += 360;
+
+            const oldMinute = currentMinute;
+            const newMinute = Math.round(angle / 6) % 60;
+
+            if (oldMinute >= 50 && newMinute <= 10) {
+                currentHour = (currentHour + 1) % 24;
+            } else if (oldMinute <= 10 && newMinute >= 50) {
+                currentHour = (currentHour - 1 + 24) % 24;
+            }
+
+            currentMinute = newMinute;
+            renderClock();
+        }
+
+        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e); });
+        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e); });
+        window.addEventListener('mouseup', () => { isDraggingHand = false; });
+
+        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e); e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
+        window.addEventListener('touchend', () => { isDraggingHand = false; });
+
+        function showClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'flex';
+        }
+        function closeClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'none';
+        }
+
+        /* 5. Column Addition Handwriting Engine */
+        const mathFullCanvas = document.getElementById('mathFullCanvas');
+        const mathFullCtx = mathFullCanvas.getContext('2d');
+        const canvasGuide = document.getElementById('canvas-guide');
+        const mathResultOverlay = document.getElementById('mathResultOverlay');
+        const overlayAnsText = document.getElementById('overlay-ans-text');
+
+        let isDrawing = false;
+        let quizA = 38;
+        let quizB = 25;
+
+        function initMathFullCanvas() {
+            const board = document.getElementById('mathQuizBoard');
+            mathFullCanvas.width = board.clientWidth;
+            mathFullCanvas.height = board.clientHeight;
+            mathFullCtx.strokeStyle = '#2B3A4A';
+            mathFullCtx.lineWidth = 4.5;
+            mathFullCtx.lineCap = 'round';
+            mathFullCtx.lineJoin = 'round';
+        }
+
+        function generateNewMathQuiz() {
+            const unitsA = Math.floor(Math.random() * 5) + 5;
+            const unitsB = Math.floor(Math.random() * 4) + (10 - unitsA);
+            const tensA = Math.floor(Math.random() * 4) + 1;
+            const tensB = Math.floor(Math.random() * 4) + 1;
+
+            quizA = tensA * 10 + unitsA;
+            quizB = tensB * 10 + unitsB;
+
+            document.getElementById('quiz-tens1').textContent = tensA;
+            document.getElementById('quiz-units1').textContent = unitsA;
+            document.getElementById('quiz-tens2').textContent = tensB;
+            document.getElementById('quiz-units2').textContent = unitsB;
+
+            clearMathCanvas();
+            closeResultOverlay();
+        }
+
+        function clearMathCanvas() {
+            mathFullCtx.clearRect(0, 0, mathFullCanvas.width, mathFullCanvas.height);
+            canvasGuide.style.display = 'block';
+        }
+
+        function getFullCanvasPos(e) {
+            const r = mathFullCanvas.getBoundingClientRect();
+            const cx = e.touches ? e.touches[0].clientX : e.clientX;
+            const cy = e.touches ? e.touches[0].clientY : e.clientY;
+            return { x: cx - r.left, y: cy - r.top };
+        }
+
+        mathFullCanvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            canvasGuide.style.display = 'none';
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.beginPath();
+            mathFullCtx.moveTo(pos.x, pos.y);
+        });
+
+        mathFullCanvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.lineTo(pos.x, pos.y);
+            mathFullCtx.stroke();
+        });
+
+        window.addEventListener('mouseup', () => { isDrawing = false; });
+
+        mathFullCanvas.addEventListener('touchstart', (e) => {
+            isDrawing = true;
+            canvasGuide.style.display = 'none';
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.beginPath();
+            mathFullCtx.moveTo(pos.x, pos.y);
+            e.preventDefault();
+        }, { passive: false });
+
+        mathFullCanvas.addEventListener('touchmove', (e) => {
+            if (!isDrawing) return;
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.lineTo(pos.x, pos.y);
+            mathFullCtx.stroke();
+            e.preventDefault();
+        }, { passive: false });
+
+        window.addEventListener('touchend', () => { isDrawing = false; });
+
+        function submitMathCheck() {
+            overlayAnsText.textContent = (quizA + quizB);
+            mathResultOverlay.style.display = 'flex';
+        }
+
+        function closeResultOverlay() {
+            mathResultOverlay.style.display = 'none';
+        }
+
+        window.addEventListener('resize', () => {
+            resizeSkyCanvas();
+            renderCelestialSky();
+            if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
+                initMathFullCanvas();
             }
         });
+
+        // Initialize On Load
+        resizeSkyCanvas();
+        renderClock();
     </script>
 </body>
 </html>
