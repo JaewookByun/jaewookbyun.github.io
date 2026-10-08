@@ -122,6 +122,47 @@
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
+        /* 분침 배우기 버튼 */
+        .btn-learn-minute {
+            background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
+            color: #FFFFFF !important;
+            padding: 11px 26px;
+            box-shadow: 0 5px 0 #372A99, 0 10px 20px rgba(108, 92, 231, 0.25);
+            font-size: 0.95rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 5;
+        }
+        .btn-learn-minute:hover {
+            background: linear-gradient(135deg, #7C6EF0 0%, #5844E0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #372A99, 0 14px 24px rgba(108, 92, 231, 0.35);
+        }
+        .btn-learn-minute:active {
+            box-shadow: 0 2px 0 #372A99 !important;
+        }
+
+        .btn-kakao {
+            background-color: var(--brand-yellow);
+            color: #191919;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 9px 18px;
+            border: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+        }
+        .btn-kakao:hover {
+            background-color: #FADA0A;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
         /* 네비게이션 */
         .navbar { 
             backdrop-filter: blur(14px); 
@@ -297,16 +338,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 520px;
-            transition: background 0.4s ease;
+            min-height: 540px;
             border-radius: 0 0 32px 32px;
+            overflow: hidden;
         }
         .clock-sky-bg {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             border-radius: 0 0 32px 32px;
             z-index: 1;
+            overflow: hidden;
             transition: background 0.3s ease;
+        }
+        #skyCelestialCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
         }
         .clock-interactive-canvas {
             position: relative;
@@ -327,10 +376,58 @@
             font-weight: 900;
             color: #1E1B4B;
             box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 3px 0 #E2E8F0;
-            margin-top: 18px;
+            margin-top: 16px;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        /* 야간에도 선명한 가이드 캡슐 배지 */
+        .clock-guide-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            padding: 7px 18px;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            display: inline-flex;
+            align-items: center;
+            max-width: 90%;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .clock-guide-pill span {
+            color: #1E293B;
+            font-size: 0.85rem;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        /* 시계 튜토리얼 오버레이 카드 */
+        .clock-result-card-overlay {
+            display: none;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 25;
+            padding: 16px 14px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 32px;
+            animation: fadeIn 0.25s ease-out;
+        }
+        .clock-result-card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            text-align: center;
+            margin: auto;
+            width: 100%;
         }
 
         /* 2) 세로셈 모눈 보드 */
@@ -339,7 +436,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 520px;
+            min-height: 540px;
         }
         .math-quiz-board {
             position: relative;
@@ -454,7 +551,7 @@
             white-space: nowrap;
         }
 
-        /* 📱 모바일 스크롤 완벽 대응 정답 확인 오버레이 */
+        /* 모바일 스크롤 오버레이 */
         .math-result-card-overlay {
             display: none;
             position: absolute;
@@ -603,7 +700,6 @@
                 <!-- 우측: 쇼츠 듀얼 토이 쇼룸 -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
-                        <!-- 탭 스위처: 연산 vs 시계 -->
                         <div class="shorts-pill-tabs">
                             <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
                                 ✍️ 찍지 않고 직접 쓰는 사각사각 손글씨 연산
@@ -613,7 +709,6 @@
                             </button>
                         </div>
 
-                        <!-- 9:16 비디오 스크린 프레임 -->
                         <div class="shorts-screen-frame">
                             <video id="shorts-video-1" class="shorts-video-element active" autoplay muted loop playsinline poster="mathgotchi/concept_4.jpg">
                                 <source src="mathgotchi/shorts_math.mp4" type="video/mp4">
@@ -659,7 +754,7 @@
                         <!-- 샌드박스 탭 스위처 -->
                         <div class="sim-nav-tabs">
                             <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
-                                ⏰ 손으로 돌리는 시계 & 낮밤
+                                ⏰ 손으로 이해하는 시계
                             </button>
                             <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
                                 ✍️ 연습장 없는 사각사각 필기 연산
@@ -668,17 +763,71 @@
 
                         <!-- 1) 인터랙티브 시계 시뮬레이터 -->
                         <div id="sim-box-clock" class="clock-sim-box">
-                            <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);"></div>
+                            <!-- 실시간 하늘 그라데이션 및 천체 캔버스 (해, 달, 별 궤적) -->
+                            <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);">
+                                <canvas id="skyCelestialCanvas"></canvas>
+                            </div>
                             
-                            <canvas id="interactiveClockCanvas" width="300" height="300" class="clock-interactive-canvas"></canvas>
+                            <!-- 완구 감성 돔 하이라이트 & 투영 가이드가 적용된 시계 캔버스 -->
+                            <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
 
+                            <!-- 실시간 디지털 보드 -->
                             <div class="clock-digital-pill">
                                 <span id="clock-ampm-badge" class="badge bg-primary rounded-pill" style="font-size: 0.85rem;">오후</span>
                                 <span id="clock-digital-time" style="font-family: monospace;">03시 00분</span>
                             </div>
-                            <span class="small text-dark mt-2 fw-bold" style="position: relative; z-index: 5;">
-                                👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 하늘의 낮과 밤이 실시간으로 바뀝니다.
-                            </span>
+
+                            <!-- 야간에도 선명한 가이드 캡슐 배지 -->
+                            <div class="clock-guide-pill">
+                                <span>👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 하늘의 낮과 밤이 실시간으로 바뀝니다.</span>
+                            </div>
+
+                            <!-- 분침 읽는 법 배우기 버튼 -->
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
+                                    💡 분침 읽는 법 배우기
+                                </button>
+                            </div>
+
+                            <!-- 📱 분침 배우기 안내 오버레이 (모바일 스크롤 지원) -->
+                            <div id="clockResultOverlay" class="clock-result-card-overlay">
+                                <div class="clock-result-card-content py-2">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
+                                        ⏰ 시계 읽기의 완벽한 솔루션
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.2rem; line-height: 1.35;">
+                                        매쓰고치 앱을 다운받아<br>시계 바늘의 원리부터 1분 단위까지 마스터해보세요!
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 380px; width: 100%; font-size: 0.85rem; line-height: 1.55;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>🎓 빈틈없는 5단계 튜토리얼:</strong><br>
+                                            <span class="text-muted">분침 예순 칸의 원리부터 구구단 5단 연계까지 차근차근 완성!</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 친절한 시청각 오답 코칭:</strong><br>
+                                            <span class="text-muted">헷갈릴 때 "큰 3에 있으면 5씩 점프해서 15분!" 스스로 깨치는 맞춤 가이드</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🌀 실시간 톱니 연동 & 낮밤 체득:</strong><br>
+                                            <span class="text-muted">바늘을 돌릴 때마다 해와 달이 뜨고 지며 시간의 인과관계를 직관적으로 이해</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🎙️ 부모 목소리 응원 & 동물 친구 성장:</strong><br>
+                                            <span class="text-muted">부모님 사진과 음성으로 성취감을 북돋고, 과일을 모아 펫을 깨우는 자기주도 몰입</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store 다운로드
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeClockOverlay()">
+                                            다시 시계 돌리기
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- 2) 인터랙티브 두 자리 덧셈 전체 필기 개방형 시뮬레이터 -->
@@ -711,7 +860,7 @@
                                     ✍️ 위쪽 받아올림 메모부터 아래 정답까지 자유롭게 써보세요!
                                 </div>
 
-                                <!-- 📱 모바일 스크롤 완벽 대응 정답 확인 오버레이 -->
+                                <!-- 정답 확인 오버레이 -->
                                 <div id="mathResultOverlay" class="math-result-card-overlay">
                                     <div class="math-result-card-content py-2">
                                         <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
@@ -721,7 +870,6 @@
                                             매쓰고치 앱을 다운받아<br>연습장이 필요 없는 진짜 연산 공부를 경험해보세요!
                                         </h4>
                                         
-                                        <!-- 커리큘럼 & 기능 홍보 카드 (순서 및 문구 재배열 완료) -->
                                         <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 380px; width: 100%; font-size: 0.85rem; line-height: 1.55;">
                                             <div class="mb-2 text-dark">
                                                 <strong>⚡ 120Hz 초정밀 획인식:</strong><br>
@@ -754,7 +902,6 @@
 
                             </div>
 
-                            <!-- 하단 조작 액션 바 -->
                             <div class="d-flex gap-2 mt-3" style="max-width: 480px; width: 100%;">
                                 <button class="btn btn-light border rounded-pill flex-grow-1 fw-bold shadow-sm" onclick="clearMathCanvas()">
                                     <i class="bi bi-eraser me-1 text-danger"></i> 필기만 지우기
@@ -903,6 +1050,7 @@
             if (type === 'clock') {
                 mathBox.classList.add('d-none');
                 clockBox.classList.remove('d-none');
+                renderCelestialSky();
             } else {
                 clockBox.classList.add('d-none');
                 mathBox.classList.remove('d-none');
@@ -910,7 +1058,96 @@
             }
         }
 
-        /* 3. 손으로 돌리는 인터랙티브 시계 & 실시간 낮밤 엔진 */
+        /* 3. 천체 캔버스 (해, 달, 별 궤적 엔진) */
+        const skyCanvas = document.getElementById('skyCelestialCanvas');
+        const skyCtx = skyCanvas.getContext('2d');
+        const stars = [
+            { x: 0.12, y: 0.22, r: 2.2, p: 0.1 },
+            { x: 0.25, y: 0.45, r: 2.8, p: 0.4 },
+            { x: 0.38, y: 0.18, r: 1.8, p: 0.7 },
+            { x: 0.62, y: 0.32, r: 3.2, p: 0.2 },
+            { x: 0.75, y: 0.16, r: 2.0, p: 0.9 },
+            { x: 0.88, y: 0.38, r: 2.6, p: 0.5 },
+            { x: 0.50, y: 0.52, r: 1.8, p: 0.6 }
+        ];
+
+        function resizeSkyCanvas() {
+            const container = skyCanvas.parentElement;
+            skyCanvas.width = container.clientWidth;
+            skyCanvas.height = container.clientHeight;
+        }
+
+        function renderCelestialSky() {
+            const w = skyCanvas.width;
+            const h = skyCanvas.height;
+            if (!w || !h) return;
+
+            skyCtx.clearRect(0, 0, w, h);
+            const hourFloat = currentHour + currentMinute / 60;
+
+            // 1) 밤하늘 별 그리기
+            let nightFactor = 0;
+            if (hourFloat >= 20 || hourFloat <= 5) nightFactor = 1;
+            else if (hourFloat > 5 && hourFloat < 6.5) nightFactor = (6.5 - hourFloat) / 1.5;
+            else if (hourFloat > 18.5 && hourFloat < 20) nightFactor = (hourFloat - 18.5) / 1.5;
+
+            if (nightFactor > 0) {
+                stars.forEach(s => {
+                    skyCtx.beginPath();
+                    skyCtx.arc(w * s.x, h * s.y, s.r, 0, Math.PI * 2);
+                    skyCtx.fillStyle = `rgba(255, 255, 255, ${0.85 * nightFactor})`;
+                    skyCtx.fill();
+                });
+            }
+
+            // 2) 태양 포물선 궤적 (05:30 ~ 18:30)
+            if (hourFloat >= 5.5 && hourFloat <= 18.5) {
+                const sunProgress = (hourFloat - 5.5) / 13;
+                const sunX = w * (0.05 + sunProgress * 0.90);
+                const sunY = h * (0.75 - 0.55 * Math.sin(sunProgress * Math.PI));
+
+                // 외부 광륜
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 26, 0, Math.PI * 2);
+                skyCtx.fillStyle = 'rgba(255, 209, 102, 0.22)';
+                skyCtx.fill();
+
+                // 태양 본체
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 16, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFAA00';
+                skyCtx.fill();
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 12, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF0A8';
+                skyCtx.fill();
+            }
+
+            // 3) 초승달 궤적 (17:30 ~ 06:30)
+            const isMoonTime = hourFloat >= 17.5 || hourFloat <= 6.5;
+            if (isMoonTime) {
+                const moonHour = hourFloat >= 17.5 ? hourFloat - 17.5 : hourFloat + 6.5;
+                const moonProgress = moonHour / 13;
+                const moonX = w * (0.08 + moonProgress * 0.84);
+                const moonY = h * (0.72 - 0.50 * Math.sin(moonProgress * Math.PI));
+
+                skyCtx.save();
+                skyCtx.beginPath();
+                skyCtx.arc(moonX, moonY, 15, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF3B0';
+                skyCtx.fill();
+
+                // 달 그림자 부분 마스킹 (초승달 연출)
+                skyCtx.globalCompositeOperation = 'destination-out';
+                skyCtx.beginPath();
+                skyCtx.arc(moonX + 7, moonY - 3, 13, 0, Math.PI * 2);
+                skyCtx.fill();
+                skyCtx.restore();
+            }
+        }
+
+        /* 4. 손으로 돌리는 인터랙티브 시계 (완구 디테일 & 투영 점선 적용) */
         const clockCanvas = document.getElementById('interactiveClockCanvas');
         const clockCtx = clockCanvas.getContext('2d');
         const digitalTimeEl = document.getElementById('clock-digital-time');
@@ -926,66 +1163,211 @@
             const h = clockCanvas.height;
             const cx = w / 2;
             const cy = h / 2;
-            const r = w / 2 - 12;
+            const r = w / 2 - 14;
 
             clockCtx.clearRect(0, 0, w, h);
 
+            // 1) 시계 베이스 다이얼 (방사형 그라데이션)
+            const dialGrad = clockCtx.createRadialGradient(cx, cy, 0, cx, cy, r);
+            dialGrad.addColorStop(0, '#FFFFFF');
+            dialGrad.addColorStop(0.85, '#F8FAFC');
+            dialGrad.addColorStop(1, '#EFF6FF');
+
             clockCtx.beginPath();
             clockCtx.arc(cx, cy, r, 0, Math.PI * 2);
-            clockCtx.fillStyle = '#FFFFFF';
+            clockCtx.fillStyle = dialGrad;
             clockCtx.fill();
-            clockCtx.lineWidth = 8;
-            clockCtx.strokeStyle = '#FFE6D6';
+
+            // 2) 삼중 클레이 완구 림 (하늘색 & 산호색 & 흰색)
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 4, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+            clockCtx.lineWidth = 3;
             clockCtx.stroke();
 
-            clockCtx.font = 'bold 18px Pretendard, sans-serif';
-            clockCtx.textAlign = 'center';
-            clockCtx.textBaseline = 'middle';
-            clockCtx.fillStyle = '#4A4E69';
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 1.5, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(255, 118, 117, 0.35)';
+            clockCtx.lineWidth = 2.5;
+            clockCtx.stroke();
 
-            for (let i = 1; i <= 12; i++) {
-                const angle = (i * 30 - 90) * (Math.PI / 180);
-                const nx = cx + (r * 0.72) * Math.cos(angle);
-                const ny = cy + (r * 0.72) * Math.sin(angle);
-                clockCtx.fillText(i.toString(), nx, ny);
+            // 3) 눈금 & 숫자
+            const tickTrackRadius = r * 0.88;
+            for (let i = 0; i < 60; i++) {
+                const angle = (i * 6 - 90) * (Math.PI / 180);
+                const isFiveMin = (i % 5 === 0);
+                const tickLen = isFiveMin ? r * 0.08 : r * 0.04;
 
-                const dx = cx + (r * 0.88) * Math.cos(angle);
-                const dy = cy + (r * 0.88) * Math.sin(angle);
+                const isCurMin = (i === currentMinute);
+                const isCurHour = (i === (currentHour % 12) * 5);
+
                 clockCtx.beginPath();
-                clockCtx.arc(dx, dy, 3.5, 0, Math.PI * 2);
-                clockCtx.fillStyle = '#FFB8B8';
-                clockCtx.fill();
+                const outerX = cx + tickTrackRadius * Math.cos(angle);
+                const outerY = cy + tickTrackRadius * Math.sin(angle);
+                const innerX = cx + (tickTrackRadius - tickLen) * Math.cos(angle);
+                const innerY = cy + (tickTrackRadius - tickLen) * Math.sin(angle);
+
+                clockCtx.moveTo(innerX, innerY);
+                clockCtx.lineTo(outerX, outerY);
+                clockCtx.lineWidth = isFiveMin ? 2.5 : 1.2;
+                clockCtx.lineCap = 'round';
+
+                if (isCurMin) clockCtx.strokeStyle = '#00B894';
+                else if (isCurHour) clockCtx.strokeStyle = '#5843E4';
+                else clockCtx.strokeStyle = isFiveMin ? '#334155' : '#CBD5E1';
+                clockCtx.stroke();
+
+                if (isFiveMin) {
+                    const hourVal = (i === 0) ? 12 : i / 5;
+                    const isSelectedHour = (hourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    const numRadius = r * 0.65;
+                    const numX = cx + numRadius * Math.cos(angle);
+                    const numY = cy + numRadius * Math.sin(angle);
+
+                    clockCtx.font = isSelectedHour ? '900 20px Pretendard' : '800 17px Pretendard';
+                    clockCtx.textAlign = 'center';
+                    clockCtx.textBaseline = 'middle';
+                    clockCtx.fillStyle = isSelectedHour ? '#5843E4' : '#1E293B';
+                    clockCtx.fillText(hourVal.toString(), numX, numY);
+                }
             }
 
-            const hourAngle = ((currentHour % 12 + currentMinute / 60) * 30 - 90) * (Math.PI / 180);
-            clockCtx.beginPath();
-            clockCtx.moveTo(cx, cy);
-            clockCtx.lineTo(cx + (r * 0.44) * Math.cos(hourAngle), cy + (r * 0.44) * Math.sin(hourAngle));
-            clockCtx.lineWidth = 8;
-            clockCtx.strokeStyle = '#6C5CE7';
-            clockCtx.lineCap = 'round';
-            clockCtx.stroke();
+            // 각도 계산
+            const hourDeg = (currentHour % 12 + currentMinute / 60) * 30;
+            const minDeg = currentMinute * 6;
+            const hourRad = (hourDeg - 90) * (Math.PI / 180);
+            const minRad = (minDeg - 90) * (Math.PI / 180);
 
-            const minAngle = (currentMinute * 6 - 90) * (Math.PI / 180);
+            const hourLen = r * 0.46;
+            const hourTail = hourLen * 0.22;
+            const minLen = r * 0.74;
+            const minTail = minLen * 0.18;
+
+            // 4) 바늘 끝 투영 점선 & 가이드 포인트
+            const hourProjX = cx + tickTrackRadius * Math.cos(hourRad);
+            const hourProjY = cy + tickTrackRadius * Math.sin(hourRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
             clockCtx.beginPath();
-            clockCtx.moveTo(cx, cy);
-            clockCtx.lineTo(cx + (r * 0.72) * Math.cos(minAngle), cy + (r * 0.72) * Math.sin(minAngle));
-            clockCtx.lineWidth = 5.5;
-            clockCtx.strokeStyle = '#00B894';
-            clockCtx.lineCap = 'round';
+            clockCtx.moveTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.lineTo(hourProjX, hourProjY);
+            clockCtx.strokeStyle = 'rgba(88, 67, 228, 0.55)';
+            clockCtx.lineWidth = 1.5;
             clockCtx.stroke();
+            clockCtx.restore();
 
             clockCtx.beginPath();
-            clockCtx.arc(cx, cy, 7, 0, Math.PI * 2);
-            clockCtx.fillStyle = '#FDCB6E';
+            clockCtx.arc(hourProjX, hourProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#5843E4';
             clockCtx.fill();
+
+            const minProjX = cx + tickTrackRadius * Math.cos(minRad);
+            const minProjY = cy + tickTrackRadius * Math.sin(minRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.lineTo(minProjX, minProjY);
+            clockCtx.strokeStyle = 'rgba(0, 184, 148, 0.65)';
+            clockCtx.lineWidth = 1.5;
+            clockCtx.stroke();
+            clockCtx.restore();
+
+            clockCtx.beginPath();
+            clockCtx.arc(minProjX, minProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#00B894';
+            clockCtx.fill();
+
+            // 5) 시침 (그림자, 본체, 꼬리)
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - hourTail * Math.cos(hourRad) + 2, cy - hourTail * Math.sin(hourRad) + 3);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad) + 2, cy + hourLen * Math.sin(hourRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.12)';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - hourTail * Math.cos(hourRad), cy - hourTail * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#3B28B0';
+            clockCtx.lineWidth = 6;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#5843E4';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            // 6) 분침 (그림자, 본체, 꼬리)
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - minTail * Math.cos(minRad) + 2, cy - minTail * Math.sin(minRad) + 3);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad) + 2, cy + minLen * Math.sin(minRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.1)';
+            clockCtx.lineWidth = 5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - minTail * Math.cos(minRad), cy - minTail * Math.sin(minRad));
+            clockCtx.strokeStyle = '#008C70';
+            clockCtx.lineWidth = 3.5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.strokeStyle = '#00B894';
+            clockCtx.lineWidth = 4.8;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            // 7) 중앙 황금 입체 캡
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 7.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#E2E8F0';
+            clockCtx.fill();
+
+            const capGrad = clockCtx.createRadialGradient(cx, cy, 1, cx, cy, 6);
+            capGrad.addColorStop(0, '#FECA57');
+            capGrad.addColorStop(1, '#F39C12');
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 5.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = capGrad;
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx - 1.5, cy - 1.5, 1.8, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#FFFFFF';
+            clockCtx.fill();
+
+            // 8) 볼록 유리 돔 하이라이트 (Specular Dome Highlight)
+            const domeGrad = clockCtx.createLinearGradient(0, cy - r * 0.78, 0, cy - r * 0.22);
+            domeGrad.addColorStop(0, 'rgba(255, 255, 255, 0.40)');
+            domeGrad.addColorStop(1, 'rgba(255, 255, 255, 0.03)');
+
+            clockCtx.save();
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx - r * 0.45, cy - r * 0.78, cx + r * 0.45, cy - r * 0.78, cx + r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx + r * 0.40, cy - r * 0.62, cx - r * 0.40, cy - r * 0.62, cx - r * 0.72, cy - r * 0.28);
+            clockCtx.closePath();
+            clockCtx.fillStyle = domeGrad;
+            clockCtx.fill();
+            clockCtx.restore();
 
             updateSkyAndDigital(currentHour, currentMinute);
         }
 
         function updateSkyAndDigital(h, m) {
             const isPm = h >= 12;
-            const displayH = (h % 12) === 0 ? 12 : (h % 12);
+            const displayH = (h % 12 === 0) ? 12 : (h % 12);
             const padH = String(displayH).padStart(2, '0');
             const padM = String(m).padStart(2, '0');
 
@@ -1000,6 +1382,8 @@
             } else {
                 skyBg.style.background = 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)';
             }
+
+            renderCelestialSky();
         }
 
         function handleClockDrag(e) {
@@ -1033,9 +1417,14 @@
         window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
         window.addEventListener('touchend', () => { isDraggingHand = false; });
 
-        renderClock();
+        function showClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'flex';
+        }
+        function closeClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'none';
+        }
 
-        /* 4. 세로셈 보드 전체 필기 드로잉 & 전환 연출 엔진 */
+        /* 5. 세로셈 보드 전체 필기 드로잉 & 전환 연출 엔진 */
         const mathFullCanvas = document.getElementById('mathFullCanvas');
         const mathFullCtx = mathFullCanvas.getContext('2d');
         const canvasGuide = document.getElementById('canvas-guide');
@@ -1129,10 +1518,16 @@
         }
 
         window.addEventListener('resize', () => {
+            resizeSkyCanvas();
+            renderCelestialSky();
             if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
                 initMathFullCanvas();
             }
         });
+
+        // 초기 실행
+        resizeSkyCanvas();
+        renderClock();
     </script>
 </body>
 </html>
