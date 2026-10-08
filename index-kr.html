@@ -15,8 +15,8 @@
     <meta name="robots" content="index, follow">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 손글씨 두 자리 덧셈, 알을 깨는 동물 친구! App Store 정식 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 두자리덧셈, 필기체인식, 펫키우기, 동물친구, 부모응원, ChronoLab, 무광고 어린이앱">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 덧셈·뺄셈·곱셈과 구구단 플래시카드, 알을 깨는 동물 친구! App Store 정식 출시!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 두자리덧셈, 세자리덧셈, 곱셈, 구구단, 플래시카드, 필기체인식, 펫키우기, 동물친구, 부모응원, ChronoLab, 무광고 어린이앱">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
@@ -333,7 +333,7 @@
             gap: 10px;
         }
 
-        /* 2) 전체 필기 개방형 세로셈 모눈 보드 */
+        /* 2) 세로셈 모눈 보드 */
         .math-sim-box {
             padding: 30px 20px;
             display: flex;
@@ -346,11 +346,10 @@
             background: #FFFFFF;
             border: 3px solid #E2E8F0;
             border-radius: 28px;
-            padding: 22px 28px 36px 28px;
+            padding: 22px 28px 40px 28px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
             max-width: 480px;
             width: 100%;
-            /* 모눈종이 격자 패턴 */
             background-image: 
                 linear-gradient(#F1F5F9 1.5px, transparent 1.5px),
                 linear-gradient(90deg, #F1F5F9 1.5px, transparent 1.5px);
@@ -359,14 +358,12 @@
             user-select: none;
         }
 
-        /* 세로셈 보드 레이아웃 */
         .carry-zone {
             display: flex;
             justify-content: flex-end;
             padding-right: 64px;
             min-height: 36px;
         }
-        /* 받아올림 메모용 빈 점선 원 */
         .carry-dashed-circle {
             width: 32px;
             height: 32px;
@@ -395,7 +392,6 @@
             margin: 12px 0 16px 0;
         }
 
-        /* 보라색 반투명 정답 슬롯 박스 (모눈 투과) */
         .answer-slots-container {
             display: flex;
             justify-content: flex-end;
@@ -429,7 +425,6 @@
             border-left: 1px dashed rgba(108, 92, 231, 0.25);
         }
 
-        /* 보드 전체 드로잉 캔버스 */
         #mathFullCanvas {
             position: absolute;
             top: 0;
@@ -441,7 +436,6 @@
             cursor: crosshair;
         }
 
-        /* 모눈종이 최하단에 배치된 정돈된 가이드 텍스트 */
         .canvas-guide-overlay {
             position: absolute;
             bottom: 8px;
@@ -460,22 +454,31 @@
             white-space: nowrap;
         }
 
-        /* 정답 확인 오버레이 카드 */
+        /* 📱 모바일 스크롤 완벽 대응 정답 확인 오버레이 */
         .math-result-card-overlay {
             display: none;
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            z-index: 20;
-            padding: 24px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 25;
+            padding: 16px 14px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
             border-radius: 26px;
             animation: fadeIn 0.25s ease-out;
         }
+        .math-result-card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            text-align: center;
+            margin: auto;
+            width: 100%;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.96); }
             to { opacity: 1; transform: scale(1); }
@@ -498,6 +501,7 @@
             .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
             .vertical-math-display { font-size: 2.6rem; }
             .answer-slot-box { width: 56px; height: 64px; }
+            .math-quiz-board { padding: 18px 20px 38px 20px; }
         }
     </style>
 </head>
@@ -569,7 +573,7 @@
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 세로셈 손글씨 덧셈과 알을 깨는 동물 친구로 놀이처럼 수학에 빠져듭니다!
+                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 한 자리부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈, 구구단 플래시카드까지 놀이처럼 수학에 빠져듭니다!
                     </p>
 
                     <!-- 스토어 다운로드 버튼 그룹 -->
@@ -681,10 +685,8 @@
                         <div id="sim-box-math" class="math-sim-box d-none">
                             <div class="math-quiz-board" id="mathQuizBoard">
                                 
-                                <!-- 보드 전체를 덮는 투명 드로잉 캔버스 -->
                                 <canvas id="mathFullCanvas"></canvas>
 
-                                <!-- 상단 헤더 & 올림수 메모 전용 빈 가이드 원 (숫자 1 제거 완료) -->
                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                     <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">두 자리 세로셈</span>
                                     <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="generateNewMathQuiz()" style="z-index: 15; position: relative;">새 문제 🎲</button>
@@ -694,51 +696,59 @@
                                     <div class="carry-dashed-circle" title="받아올림 메모 자리"></div>
                                 </div>
 
-                                <!-- 세로셈 수식 영역 -->
                                 <div class="vertical-math-display">
                                     <div id="quiz-num1">38</div>
                                     <div>+ <span id="quiz-num2">25</span></div>
                                 </div>
                                 <div class="vertical-math-line"></div>
 
-                                <!-- 보라색 반투명 정답 슬롯 박스 (모눈 투과) -->
                                 <div class="answer-slots-container">
                                     <div class="answer-slot-box"></div>
                                     <div class="answer-slot-box"></div>
                                 </div>
 
-                                <!-- 모눈종이 최하단에 배치된 정돈된 가이드 텍스트 -->
                                 <div id="canvas-guide" class="canvas-guide-overlay">
                                     ✍️ 위쪽 받아올림 메모부터 아래 정답까지 자유롭게 써보세요!
                                 </div>
 
-                                <!-- 정답 확인 오버레이 카드 -->
+                                <!-- 📱 모바일 스크롤 완벽 대응 정답 확인 오버레이 -->
                                 <div id="mathResultOverlay" class="math-result-card-overlay">
-                                    <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
-                                        🎉 정답: <span id="overlay-ans-text">63</span>
-                                    </span>
-                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">
-                                        매쓰고치 앱을 다운받아<br>연습장이 필요 없는 연산 공부를 경험해보세요!
-                                    </h4>
-                                    
-                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 360px; font-size: 0.88rem; line-height: 1.6;">
-                                        <div class="mb-2 text-dark">
-                                            <strong>⚡ 120Hz 초정밀 획 인식:</strong><br>
-                                            <span class="text-muted">아이의 손글씨 궤적을 실시간으로 또렷하게 판별합니다.</span>
+                                    <div class="math-result-card-content py-2">
+                                        <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
+                                            🎉 정답: <span id="overlay-ans-text">63</span>
+                                        </span>
+                                        <h4 class="fw-bold text-dark mb-2" style="font-size: 1.2rem; line-height: 1.35;">
+                                            매쓰고치 앱을 다운받아<br>연습장이 필요 없는 진짜 연산 공부를 경험해보세요!
+                                        </h4>
+                                        
+                                        <!-- 커리큘럼 & 기능 홍보 카드 -->
+                                        <div class="p-3 bg-light rounded-4 text-start mb-3" style="max-width: 380px; width: 100%; font-size: 0.85rem; line-height: 1.55;">
+                                            <div class="mb-2 text-dark">
+                                                <strong>🧮 체계적인 연산 로드맵:</strong><br>
+                                                <span class="text-muted">한 자리 수부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈까지 점진적 퀴즈로 완성!</span>
+                                            </div>
+                                            <div class="mb-2 text-dark">
+                                                <strong>🃏 구구단 시각화 플래시카드:</strong><br>
+                                                <span class="text-muted">단순 암기 대신 면적 분할과 수박 애니메이션으로 원리를 쏙쏙!</span>
+                                            </div>
+                                            <div class="mb-2 text-dark">
+                                                <strong>⚡ 120Hz 초정밀 획 인식:</strong><br>
+                                                <span class="text-muted">종이 연습장 없이 화면에 쓱쓱! 아이 손글씨 궤적을 실시간 판별합니다.</span>
+                                            </div>
+                                            <div class="text-dark">
+                                                <strong>🎙️ 시청각 맞춤 오답 코칭:</strong><br>
+                                                <span class="text-muted">오답일 때 시각 가이드와 부모 음성으로 아이 스스로 고치도록 돕습니다.</span>
+                                            </div>
                                         </div>
-                                        <div class="text-dark">
-                                            <strong>🎙️ 다정한 시청각 오답 코칭:</strong><br>
-                                            <span class="text-muted">오답일 때 시각 가이드와 부모 음성으로 아이 스스로 고치도록 돕습니다.</span>
-                                        </div>
-                                    </div>
 
-                                    <div class="d-flex gap-2">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                            <i class="bi bi-apple me-1"></i> App Store 다운로드
-                                        </a>
-                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
-                                            다시 쓰기
-                                        </button>
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                            <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                                <i class="bi bi-apple me-1"></i> App Store 다운로드
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
+                                                다시 쓰기
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -761,29 +771,29 @@
         </div>
     </section>
 
-    <!-- 3대 핵심 콘셉트 그리드 -->
+    <!-- 3대 핵심 콘셉트 그리드 (커리큘럼 홍보 강화) -->
     <section class="py-5">
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-box">
                         <div class="fs-1 mb-3">⏰</div>
-                        <h4 class="fw-bold mb-2">손끝으로 돌리는 24시간 원리</h4>
-                        <p class="text-muted small mb-0">초·분·시침이 맞물려 돌아가는 톱니 연동과 해와 달의 변화를 통해 시간의 인과관계를 체득합니다.</p>
+                        <h4 class="fw-bold mb-2">손끝으로 돌리는 24시간 시계</h4>
+                        <p class="text-muted small mb-0">초·분·시침이 맞물려 돌아가는 물리적 톱니 연동과 낮밤 변화를 통해 시간의 인과관계를 체득합니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🎙️</div>
-                        <h4 class="fw-bold mb-2">엄마·아빠 목소리와 표정 응원</h4>
-                        <p class="text-muted small mb-0">문제를 맞히거나 틀렸을 때 부모님의 실제 육성과 사진이 팝업되어 최고의 성취감과 동기를 부여합니다.</p>
+                        <div class="fs-1 mb-3">🧮</div>
+                        <h4 class="fw-bold mb-2">체계적 연산 & 구구단 플래시카드</h4>
+                        <p class="text-muted small mb-0">한 자리부터 세 자리 수 3개 덧셈, 뺄셈, 곱셈 및 면적 분할 구구단 플래시카드로 탄탄한 연산 체력을 길러줍니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🐣</div>
-                        <h4 class="fw-bold mb-2">알을 깨고 자라는 동물 친구</h4>
-                        <p class="text-muted small mb-0">매일 퀴즈를 풀고 모은 과일로 펫을 부화시키고 진화시키며 스스로 공부하는 습관이 완성됩니다.</p>
+                        <div class="fs-1 mb-3">🎙️</div>
+                        <h4 class="fw-bold mb-2">부모 목소리 응원 & 동물 펫 성장</h4>
+                        <p class="text-muted small mb-0">엄마·아빠의 실제 육성과 사진 응원으로 성취감을 높이고, 매일 과일을 모아 펫을 키우며 자기주도 습관을 완성합니다.</p>
                     </div>
                 </div>
             </div>
