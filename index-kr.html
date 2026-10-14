@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 덧셈·뺄셈·곱셈과 구구단 플래시카드, 알을 깨는 동물 친구! App Store 정식 출시!">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 덧셈·뺄셈·곱셈과 구구단 플래시카드, 알을 깨는 동물 친구! App Store & Google Play 정식 출시!">
     <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 두자리덧셈, 세자리덧셈, 곱셈, 구구단, 플래시카드, 필기체인식, 펫키우기, 동물친구, 부모응원, ChronoLab, 무광고 어린이앱">
     <meta name="author" content="ChronoLab">
     
@@ -28,7 +28,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store 정식 출시!">
+    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 정식 출시!">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_1.jpg">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="ChronoLab">
@@ -82,6 +82,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
+            text-decoration: none;
         }
         .btn-clay:active {
             transform: translateY(3px) !important;
@@ -104,21 +106,22 @@
             box-shadow: 0 2px 0 #0F0E26 !important;
         }
 
-        .btn-googleplay-pending {
+        .btn-googleplay {
             background: #FFFFFF;
-            color: #475569 !important;
-            padding: 10px 22px;
+            color: #1E1B4B !important;
+            padding: 10px 24px;
             border: 2px solid #E2E8F0;
-            box-shadow: 0 5px 0 #CBD5E1;
+            box-shadow: 0 5px 0 #CBD5E1, 0 10px 20px rgba(0,0,0,0.08);
             min-height: 52px;
             cursor: pointer;
         }
-        .btn-googleplay-pending:hover {
+        .btn-googleplay:hover {
             background: #F8FAFC;
+            border-color: #CBD5E1;
             transform: translateY(-2px);
-            box-shadow: 0 7px 0 #94A3B8;
+            box-shadow: 0 7px 0 #94A3B8, 0 14px 24px rgba(0,0,0,0.12);
         }
-        .btn-googleplay-pending:active {
+        .btn-googleplay:active {
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
@@ -204,14 +207,6 @@
             font-size: 0.85rem;
             border: 1.5px solid #BBF7D0;
             box-shadow: 0 3px 0 #BBF7D0;
-        }
-        .pending-pill {
-            background: #FEF3C7;
-            color: #92400E;
-            font-weight: 800;
-            font-size: 0.85rem;
-            border: 1.5px solid #FDE68A;
-            box-shadow: 0 3px 0 #FDE68A;
         }
         .hero-headline { 
             font-size: clamp(2rem, 6.5vw, 3.4rem);
@@ -640,8 +635,8 @@
                         <span class="badge release-pill px-3 py-2 rounded-pill">
                              App Store 정식 출시
                         </span>
-                        <span class="badge pending-pill px-3 py-2 rounded-pill">
-                            ⏳ Google Play 심사 중
+                        <span class="badge release-pill px-3 py-2 rounded-pill">
+                            ▶ Google Play 정식 출시
                         </span>
                     </div>
                     
@@ -656,7 +651,7 @@
 
                     <!-- 스토어 다운로드 버튼 그룹 -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-clay btn-appstore">
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -664,13 +659,13 @@
                             </div>
                         </a>
 
-                        <button type="button" class="btn btn-clay btn-googleplay-pending" onclick="alert('현재 Google Play 스토어 최종 검토 중입니다.\n승인 완료 즉시 다운로드가 시작됩니다. 잠시만 기다려 주세요!')">
-                            <i class="bi bi-google-play fs-3 text-secondary"></i>
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-googleplay">
+                            <i class="bi bi-google-play fs-3" style="color: #00B894;"></i>
                             <div class="text-start" style="line-height: 1.15;">
-                                <div style="font-size: 0.68rem; color: #64748B;">COMING SOON</div>
-                                <div style="font-size: 1.02rem; font-weight: 800; color: #1E293B;">Google Play (출시 예정)</div>
+                                <div style="font-size: 0.68rem; color: #64748B;">다운로드</div>
+                                <div style="font-size: 1.05rem; font-weight: 800; color: #1E1B4B;">Google Play</div>
                             </div>
-                        </button>
+                        </a>
                     </div>
 
                     <div class="text-muted small mt-2">
@@ -807,8 +802,11 @@
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                            <i class="bi bi-apple me-1"></i> App Store 다운로드
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
                                         </a>
                                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeClockOverlay()">
                                             다시 시계 돌리기
@@ -913,8 +911,11 @@
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                            <i class="bi bi-apple me-1"></i> App Store 다운로드
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
                                         </a>
                                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
                                             다시 쓰기
