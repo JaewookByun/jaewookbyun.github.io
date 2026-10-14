@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow">
     
     <title>Mathgotchi - Hands-On Clock & Early Math Adventures | ChronoLab</title>
-    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears and practice scratch-free handwriting column addition. Officially on the App Store!">
+    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears and practice scratch-free handwriting column addition. Officially on the App Store & Google Play!">
     <meta name="keywords" content="Mathgotchi, ChronoLab, tell time for kids, clock learning, column addition, vertical math, regrouping, handwriting recognition, virtual pet math, ad free kids app, parental gate">
     <meta name="author" content="ChronoLab">
     
@@ -89,6 +89,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
+            text-decoration: none;
         }
         .btn-clay:active {
             transform: translateY(3px) !important;
@@ -111,21 +113,22 @@
             box-shadow: 0 2px 0 #0F0E26 !important;
         }
 
-        .btn-googleplay-pending {
+        .btn-googleplay {
             background: #FFFFFF;
-            color: #475569 !important;
-            padding: 10px 22px;
+            color: #1E1B4B !important;
+            padding: 10px 24px;
             border: 2px solid #E2E8F0;
-            box-shadow: 0 5px 0 #CBD5E1;
+            box-shadow: 0 5px 0 #CBD5E1, 0 10px 20px rgba(0,0,0,0.08);
             min-height: 52px;
             cursor: pointer;
         }
-        .btn-googleplay-pending:hover {
+        .btn-googleplay:hover {
             background: #F8FAFC;
+            border-color: #CBD5E1;
             transform: translateY(-2px);
-            box-shadow: 0 7px 0 #94A3B8;
+            box-shadow: 0 7px 0 #94A3B8, 0 14px 24px rgba(0,0,0,0.12);
         }
-        .btn-googleplay-pending:active {
+        .btn-googleplay:active {
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
@@ -212,14 +215,6 @@
             font-size: 0.85rem;
             border: 1.5px solid #BBF7D0;
             box-shadow: 0 3px 0 #BBF7D0;
-        }
-        .pending-pill {
-            background: #FEF3C7;
-            color: #92400E;
-            font-weight: 800;
-            font-size: 0.85rem;
-            border: 1.5px solid #FDE68A;
-            box-shadow: 0 3px 0 #FDE68A;
         }
         .hero-headline { 
             font-size: clamp(2rem, 6.2vw, 3.4rem);
@@ -660,8 +655,8 @@
                         <span class="badge release-pill px-3 py-2 rounded-pill">
                              App Store Official Release
                         </span>
-                        <span class="badge pending-pill px-3 py-2 rounded-pill">
-                            ⏳ Google Play Review in Progress
+                        <span class="badge release-pill px-3 py-2 rounded-pill">
+                            ▶ Google Play Official Release
                         </span>
                     </div>
                     
@@ -676,7 +671,7 @@
 
                     <!-- Store Download Buttons -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-clay btn-appstore">
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -684,13 +679,13 @@
                             </div>
                         </a>
 
-                        <button type="button" class="btn btn-clay btn-googleplay-pending" onclick="alert('Google Play version is currently under final review.\nIt will be available for download very soon. Stay tuned!')">
-                            <i class="bi bi-google-play fs-3 text-secondary"></i>
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-googleplay">
+                            <i class="bi bi-google-play fs-3" style="color: #00B894;"></i>
                             <div class="text-start" style="line-height: 1.15;">
-                                <div style="font-size: 0.68rem; color: #64748B;">COMING SOON</div>
-                                <div style="font-size: 1.02rem; font-weight: 800; color: #1E293B;">Google Play (In Review)</div>
+                                <div style="font-size: 0.68rem; color: #64748B;">GET IT ON</div>
+                                <div style="font-size: 1.05rem; font-weight: 800; color: #1E1B4B;">Google Play</div>
                             </div>
-                        </button>
+                        </a>
                     </div>
 
                     <div class="text-muted small mt-2">
@@ -822,8 +817,11 @@
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                            <i class="bi bi-apple me-1"></i> Download on App Store
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
                                         </a>
                                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeClockOverlay()">
                                             Back to Clock
@@ -928,8 +926,11 @@
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
-                                            <i class="bi bi-apple me-1"></i> Download on App Store
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
                                         </a>
                                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
                                             Try Again
