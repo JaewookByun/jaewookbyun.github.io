@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>매쓰고치 (Mathgotchi) - 스토어 이동 중...</title>
     
-    <!-- SNS 공유 시 깔끔하게 보이도록 OG 태그 설정 -->
+    <!-- SNS 공유 시 깔끔하게 노출되는 Open Graph 태그 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chronolaboratory.com/go.html">
     <meta property="og:title" content="매쓰고치 - 우리아이 첫 수학·시계 공부방">
     <meta property="og:description" content="바늘을 직접 돌리는 시계 탐험과 손글씨 세로셈 연산! App Store & Google Play 무료 체험">
-    <meta property="og:url" content="https://www.chronolaboratory.com/go.html">
+    <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/icon_1024_white.png">
 
-    <!-- 1. Google Analytics (GA4: G-DCW9DPCM02) 탑재 -->
+    <!-- 1. Google Analytics (GA4: G-DCW9DPCM02) 연동 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,7 +26,7 @@
                         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
             var isAndroid = /android/i.test(ua);
 
-            // 들어온 링크의 UTM 파라미터(예: ?utm_source=ig_ad)가 있다면 그대로 유지해서 전달
+            // 유입될 때 붙어온 UTM 꼬리표(?utm_source=...)를 그대로 유지하여 전달
             var queryParams = window.location.search;
             var defaultAndroidUtm = "?utm_source=smart_link&utm_medium=redirect&utm_campaign=mathgotchi";
 
@@ -33,10 +35,11 @@
 
             if (isIOS) {
                 targetPlatform = "ios_appstore";
-                targetUrl = "https://apps.apple.com/kr/app/id6806621843";
+                targetUrl = "https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843"; // 정식 앱스토어 링크 적용
             } else if (isAndroid) {
                 targetPlatform = "android_playstore";
-                targetUrl = "https://play.google.com/store/apps/details?id=com.chronolab.wooagong";
+                targetUrl = "https://play.google.com/store/apps/details?id=com.chronolab.wooagong" + 
+                            (queryParams ? queryParams : defaultAndroidUtm);
             }
 
             var redirected = false;
@@ -47,10 +50,10 @@
                 }
             }
 
-            // 2. 안전장치: 네트워크가 느려도 최대 0.6초 뒤에는 무조건 스토어로 이동
+            // 안전장치: 네트워크 지연 시 최대 0.6초 뒤 강제 스토어 이동
             setTimeout(doRedirect, 600);
 
-            // 3. GA4에 어떤 OS 유저가 어느 스토어로 갔는지 기록 후 즉시 이동
+            // GA4에 플랫폼 유입 로그를 기록한 직후 리다이렉트 실행
             gtag('event', 'store_redirect', {
                 'destination_platform': targetPlatform,
                 'destination_url': targetUrl,
@@ -61,7 +64,7 @@
 
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: #F8FAFC;
             color: #334155;
             display: flex;
@@ -73,8 +76,8 @@
             text-align: center;
         }
         .loader {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border: 4px solid #E2E8F0;
             border-top: 4px solid #6C5CE7;
             border-radius: 50%;
@@ -82,11 +85,17 @@
             margin-bottom: 16px;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .btn-manual {
-            margin-top: 20px;
+        .manual-btn {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 10px 20px;
+            background-color: #6C5CE7;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 20px;
             font-size: 13px;
-            color: #64748B;
-            text-decoration: underline;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
         }
     </style>
 </head>
@@ -94,5 +103,10 @@
     <div class="loader"></div>
     <div style="font-weight: 700; font-size: 16px;">매쓰고치 스토어로 이동 중입니다...</div>
     <div style="font-size: 13px; color: #64748B; margin-top: 6px;">잠시만 기다려 주세요.</div>
+    
+    <!-- 인앱 브라우저 등의 이유로 자동 이동이 지연될 때 수동으로 누를 수 있는 안전장치 버튼 -->
+    <a href="https://www.chronolaboratory.com/index-kr.html" class="manual-btn" onclick="window.location.reload(); return false;">
+        페이지가 안 넘어가면 여기를 누르세요
+    </a>
 </body>
 </html>
