@@ -128,7 +128,7 @@
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
-        /* 분침 배우기 및 주요 액션 버튼 */
+        /* 주요 액션 버튼 */
         .btn-learn-minute {
             background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
             color: #FFFFFF !important;
@@ -272,7 +272,7 @@
             box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
         }
 
-        /* 🖨️ v1.4 맞춤형 PDF 문제은행 생성 파트 */
+        /* 🖨️ v1.4 맞춤형 PDF 문제은행 생성 파트 (무한 확장 대응 UI) */
         .pdf-showcase-section {
             padding: 85px 0;
             background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
@@ -328,6 +328,17 @@
             font-weight: 800;
             transition: all 0.15s ease;
             box-shadow: 0 3px 0 #E2E8F0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pdf-subject-btn .count-pill {
+            background: #E2E8F0;
+            color: #475569;
+            font-size: 0.72rem;
+            padding: 1px 7px;
+            border-radius: 20px;
+            font-weight: 900;
         }
         .pdf-subject-btn:hover, .pdf-subject-btn.active {
             background: var(--brand-purple);
@@ -336,48 +347,68 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 0 #4834D4, 0 8px 16px rgba(108, 92, 231, 0.25);
         }
-        .pdf-pattern-bar {
+        .pdf-subject-btn.active .count-pill,
+        .pdf-subject-btn:hover .count-pill {
+            background: rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+        }
+
+        /* 단계 & 번호 무한 확장 컨트롤 바 */
+        .pdf-selector-toolbar {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
             padding: 12px 16px;
             background: #F8FAFC;
             border-radius: 22px;
             border: 1.5px solid #E2E8F0;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-        .pdf-pattern-btn {
+        .pdf-select-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+        .pdf-select-box {
+            background-color: #FFFFFF;
+            border: 2px solid #CBD5E1;
+            border-radius: 14px;
+            padding: 7px 32px 7px 14px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #1E293B;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #E2E8F0;
+        }
+        .pdf-select-box:focus {
+            border-color: var(--brand-purple);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+        }
+        .pdf-nav-btn {
             background: #FFFFFF;
             color: #334155;
             border: 1.5px solid #CBD5E1;
-            border-radius: 50px;
-            padding: 6px 15px;
+            border-radius: 14px;
+            padding: 7px 13px;
             font-size: 0.84rem;
             font-weight: 800;
             transition: all 0.15s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            box-shadow: 0 2px 0 #E2E8F0;
         }
-        .pdf-pattern-btn .stage-badge {
+        .pdf-nav-btn:hover:not(:disabled) {
             background: #EDE9FE;
             color: var(--brand-purple);
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.76rem;
-            font-weight: 900;
+            border-color: #C4B5FD;
         }
-        .pdf-pattern-btn:hover, .pdf-pattern-btn.active {
-            background: #FFF1F2;
-            color: #E11D48;
-            border-color: #FDA4AF;
-            box-shadow: 0 3px 8px rgba(225, 29, 72, 0.12);
+        .pdf-nav-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
         }
-        .pdf-pattern-btn.active .stage-badge {
-            background: #E11D48;
-            color: #FFFFFF;
-        }
+
         .pdf-paper-stage {
             background: #F1F5F9;
             border-radius: 24px;
@@ -783,6 +814,7 @@
             .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
+            .pdf-selector-toolbar { justify-content: center; }
             .tablet-video-card { padding: 12px; border-radius: 24px; }
             .tablet-screen-16x10 { border-radius: 16px; }
             .chapter-jump-btn { font-size: 0.78rem; padding: 6px 11px; }
@@ -868,7 +900,7 @@
                         지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 사칙연산(덧셈·뺄셈·곱셈·나눗셈) 손글씨 풀이부터 집에서 무제한 뽑아 쓰는 맞춤형 PDF 학습지까지 놀이처럼 수학에 빠져듭니다!
                     </p>
 
-                    <!-- 스토어 다운로드 버튼 그룹 (하단 온보딩 버튼 제거 완료) -->
+                    <!-- 스토어 다운로드 버튼 그룹 -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
                         <a href="https://apps.apple.com/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
@@ -1001,21 +1033,52 @@
                 </div>
             </div>
 
-            <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동) -->
+            <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동 · add_122_123 등 무한 확장 대응) -->
             <div class="pdf-library-card" data-aos="zoom-in">
-                <!-- 1. 과목별 탭 -->
+                <!-- 1. 과목별 탭 (JS가 보유 파일 수와 함께 동적 렌더링) -->
                 <div class="pdf-subject-tabs" id="pdf-subject-tabs">
-                    <button type="button" class="pdf-subject-btn active" onclick="selectPdfSubject('덧셈', this)">➕ 덧셈</button>
-                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('뺄셈', this)">➖ 뺄셈</button>
-                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('곱셈', this)">✖️ 곱셈</button>
-                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('나눗셈', this)">➗ 나눗셈</button>
-                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('시계', this)">⏰ 시계</button>
-                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('전체', this)">📚 전체 보기</button>
+                    <button type="button" class="pdf-subject-btn active" data-subj="add" onclick="selectPdfSubject('add', this)">
+                        ➕ 덧셈 <span class="count-pill" id="count-add">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="sub" onclick="selectPdfSubject('sub', this)">
+                        ➖ 뺄셈 <span class="count-pill" id="count-sub">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="mul" onclick="selectPdfSubject('mul', this)">
+                        ✖️ 곱셈 <span class="count-pill" id="count-mul">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="div" onclick="selectPdfSubject('div', this)">
+                        ➗ 나눗셈 <span class="count-pill" id="count-div">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn d-none" id="tab-btn-clock" data-subj="clock" onclick="selectPdfSubject('clock', this)">
+                        ⏰ 시계 <span class="count-pill" id="count-clock">0</span>
+                    </button>
                 </div>
 
-                <!-- 2. 선택된 과목의 단계·패턴 리스트 바 -->
-                <div class="pdf-pattern-bar" id="pdf-pattern-bar">
-                    <!-- JS가 pdf-ko 폴더의 종류_단계_번호.pdf 목록을 파싱하여 버튼을 자동 생성합니다 -->
+                <!-- 2. 단계(Stage) & 번호(Number) 무한 확장 컨트롤 바 -->
+                <div class="pdf-selector-toolbar">
+                    <div class="pdf-select-group">
+                        <label for="pdf-stage-select" class="small fw-bold text-secondary mb-0">단계 선택</label>
+                        <select id="pdf-stage-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfStageChange()">
+                            <!-- JS가 1단계 ~ N단계를 자연수 순서로 자동 채움 -->
+                        </select>
+
+                        <label for="pdf-num-select" class="small fw-bold text-secondary mb-0 ms-1">유형 번호</label>
+                        <select id="pdf-num-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfNumberChange()">
+                            <!-- JS가 해당 단계의 #1 ~ #N 번호를 자연수 순서로 자동 채움 -->
+                        </select>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" id="pdf-prev-btn" class="pdf-nav-btn" onclick="stepPdfItem(-1)" title="이전 학습지">
+                            <i class="bi bi-chevron-left"></i> 이전
+                        </button>
+                        <button type="button" id="pdf-random-btn" class="pdf-nav-btn" onclick="pickRandomPdfItem()" title="랜덤 샘플 보기">
+                            🎲 랜덤
+                        </button>
+                        <button type="button" id="pdf-next-btn" class="pdf-nav-btn" onclick="stepPdfItem(1)" title="다음 학습지">
+                            다음 <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 3. 실제 PDF 렌더링 스테이지 (1p 문제지 + 2p 답안지) -->
@@ -1026,7 +1089,7 @@
                             <div class="pdf-sheet-box">
                                 <div class="d-flex justify-content-between align-items-center mb-2 px-1">
                                     <span class="badge bg-dark rounded-pill px-3 py-1">📄 1페이지 : 학생용 문제지</span>
-                                    <span class="text-muted small fw-bold" id="current-pdf-title">덧셈 1단계 (유형 1)</span>
+                                    <span class="text-muted small fw-bold font-monospace" id="current-pdf-title">add_1_1.pdf</span>
                                 </div>
                                 <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="클릭하면 원본 PDF가 새 창에서 열립니다">
                                     <canvas id="pdfCanvasPage1"></canvas>
@@ -1055,13 +1118,13 @@
                 <!-- 4. 하단 인쇄 및 원본 다운로드 액션 바 -->
                 <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
                     <span class="text-muted small">
-                        💡 위 학습지 이미지를 클릭하거나 우측 버튼을 눌러 지금 바로 인쇄해 보세요!
+                        💡 위 학습지 화면을 클릭하거나 우측 버튼을 눌러 지금 바로 인쇄해 보세요!
                     </span>
                     <div class="d-flex flex-wrap gap-2">
-                        <a id="pdf-open-btn" href="pdf-ko/덧셈_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
+                        <a id="pdf-open-btn" href="pdf-ko/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
                             <i class="bi bi-printer-fill"></i> 원본 PDF 크게 보기 · 인쇄하기
                         </a>
-                        <a id="pdf-download-btn" href="pdf-ko/덧셈_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
+                        <a id="pdf-download-btn" href="pdf-ko/add_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
                             <i class="bi bi-download"></i> 파일 저장
                         </a>
                     </div>
@@ -1070,7 +1133,7 @@
         </div>
     </section>
 
-    <!-- 🎬 v1.3 신규 온보딩 & 시계 공부 풀버전 영상 섹션 (그대로 유지) -->
+    <!-- 🎬 v1.3 신규 온보딩 & 시계 공부 풀버전 영상 섹션 -->
     <section id="onboarding-video-section" class="longform-showcase-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
@@ -1446,118 +1509,235 @@
         AOS.init({ duration: 800, once: true });
 
         /* =========================================================================
-           0. v1.4 PDF 문제은행 엔진 (pdf-ko 폴더 & '종류_단계_번호.pdf' 파서)
+           0. v1.4 PDF 문제은행 엔진 (add_1_1 ~ add_122_123 무한 확장 대응)
            ========================================================================= */
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         const PDF_FOLDER = 'pdf-ko';
 
         /**
-         * pdf-ko 폴더에 넣어두신 PDF 파일 목록입니다.
-         * 파일명 규칙: 종류_단계_번호.pdf (예: 덧셈_1_1.pdf, 뺄셈_2_1.pdf, 뺄셈_2_2.pdf)
-         * 새로운 파일을 추가하실 때 이 배열에 파일명을 적어주시거나,
-         * 아래 GITHUB_REPO_PATH에 저장소 경로('아이디/레포이름')를 적어두시면 폴더 내 모든 PDF를 자동으로 읽어옵니다.
+         * 📌 1) 기본 등록된 PDF 파일 목록입니다.
+         * 파일명 규칙: prefix_stage_num.pdf (예: add_1_1.pdf, sub_1_1.pdf, mul_1_1.pdf, div_1_1.pdf, add_122_123.pdf)
+         * 확장자(.pdf)를 붙여서 적거나 생략('add_1_1')해서 적어도 모두 자동 인식합니다.
          */
-        const GITHUB_REPO_PATH = ''; // 예: 'chronolab/chronolab.github.io' (비워두면 아래 배열을 사용합니다)
         let PDF_KO_FILE_LIST = [
-            '덧셈_1_1.pdf',
-            '뺄셈_2_1.pdf',
-            '뺄셈_2_2.pdf',
-            '곱셈_3_1.pdf',
-            '나눗셈_4_1.pdf',
-            '시계_5_1.pdf'
+            'add_1_1.pdf',
+            'sub_1_1.pdf',
+            'mul_1_1.pdf',
+            'div_1_1.pdf'
         ];
 
+        /**
+         * 📌 2) 대량 파일 범위 자동 추가 헬퍼 (원하실 때 주석 해제하여 수백 개를 한 줄로 등록 가능)
+         * 사용법: addPdfRange('add', 단계번호, 시작번호, 끝번호)
+         * 예시: addPdfRange('add', 122, 1, 123); -> add_122_1.pdf 부터 add_122_123.pdf 까지 자동 등록
+         */
+        function addPdfRange(prefix, stage, startNum, endNum) {
+            for (let n = startNum; n <= endNum; n++) {
+                PDF_KO_FILE_LIST.push(`${prefix}_${stage}_${n}.pdf`);
+            }
+        }
+
+        const SUBJECT_LABEL_KO = {
+            'add': '덧셈',
+            'sub': '뺄셈',
+            'mul': '곱셈',
+            'div': '나눗셈',
+            'clock': '시계'
+        };
+
         let parsedPdfCatalog = [];
-        let currentSelectedSubject = '덧셈';
+        let currentSubjectKey = 'add';
+        let currentFilteredList = [];
+        let currentItemIndex = 0;
         let currentPdfUrl = '';
 
-        // '종류_단계_번호.pdf' 규칙 파싱 함수
-        function parsePdfFileName(fileName) {
-            const clean = fileName.replace(/\.pdf$/i, '').trim();
-            const parts = clean.split('_');
-            const subject = parts[0] || '기타';
-            const stage = parseInt(parts[1] || '1', 10);
-            const pattern = parseInt(parts[2] || '1', 10);
+        // 'add_122_123.pdf' 또는 'add_122_123' 정규식 파서 (자릿수 무제한 지원)
+        function parsePdfFileName(rawEntry) {
+            let cleanEntry = rawEntry.trim().split('/').pop();
+            if (!cleanEntry) return null;
+            if (!cleanEntry.toLowerCase().endsWith('.pdf')) {
+                cleanEntry += '.pdf';
+            }
+
+            // prefix_stage_num.pdf 매칭 (예: add_1_1.pdf, add_122_123.pdf)
+            const match = cleanEntry.match(/^([a-zA-Z]+)_(\d+)_(\d+)\.pdf$/i);
+            if (!match) return null;
+
+            const rawPrefix = match[1].toLowerCase();
+            const stageNum = parseInt(match[2], 10); // 1 ~ 999999+
+            const patternNum = parseInt(match[3], 10); // 1 ~ 999999+
+
+            const subjectKey = SUBJECT_LABEL_KO[rawPrefix] ? rawPrefix : 'add';
+            const subjectKo = SUBJECT_LABEL_KO[subjectKey] || rawPrefix;
 
             return {
-                fileName: fileName,
-                url: `${PDF_FOLDER}/${encodeURI(fileName)}`,
-                subject: subject,
-                stage: isNaN(stage) ? 1 : stage,
-                pattern: isNaN(pattern) ? 1 : pattern,
-                displayTitle: `${subject} ${isNaN(stage) ? 1 : stage}단계 · 유형 ${isNaN(pattern) ? 1 : pattern}`
+                fileName: cleanEntry,
+                url: `${PDF_FOLDER}/${cleanEntry}`,
+                subjectKey: subjectKey,
+                subjectKo: subjectKo,
+                stage: stageNum,
+                num: patternNum,
+                displayTitle: `${subjectKo} ${stageNum}단계 · #${patternNum} (${cleanEntry})`
             };
         }
 
-        function buildPdfCatalog(fileList) {
-            const subjectOrder = { '덧셈': 1, '뺄셈': 2, '곱셈': 3, '나눗셈': 4, '시계': 5 };
-            parsedPdfCatalog = fileList
-                .filter(f => f.toLowerCase().endsWith('.pdf'))
+        // 자연수 크기순 정렬 (1 -> 2 -> 10 -> 122 순으로 정렬 보장)
+        function buildPdfCatalog(rawList) {
+            const uniqueSet = new Set(rawList.map(s => s.trim()).filter(Boolean));
+            const subjectOrder = { 'add': 1, 'sub': 2, 'mul': 3, 'div': 4, 'clock': 5 };
+
+            parsedPdfCatalog = Array.from(uniqueSet)
                 .map(parsePdfFileName)
+                .filter(Boolean)
                 .sort((a, b) => {
-                    const orderA = subjectOrder[a.subject] || 99;
-                    const orderB = subjectOrder[b.subject] || 99;
-                    if (orderA !== orderB) return orderA - orderB;
+                    const ordA = subjectOrder[a.subjectKey] || 99;
+                    const ordB = subjectOrder[b.subjectKey] || 99;
+                    if (ordA !== ordB) return ordA - ordB;
                     if (a.stage !== b.stage) return a.stage - b.stage;
-                    return a.pattern - b.pattern;
+                    return a.num - b.num;
                 });
+
+            // 각 과목 탭 우측의 파일 개수 배지 업데이트
+            ['add', 'sub', 'mul', 'div', 'clock'].forEach(subj => {
+                const count = parsedPdfCatalog.filter(x => x.subjectKey === subj).length;
+                const badgeEl = document.getElementById(`count-${subj}`);
+                if (badgeEl) badgeEl.textContent = count;
+                if (subj === 'clock') {
+                    const clockTab = document.getElementById('tab-btn-clock');
+                    if (clockTab) clockTab.classList.toggle('d-none', count === 0);
+                }
+            });
         }
 
         async function initPdfLibrary() {
-            // GitHub 레포 경로가 설정된 경우 pdf-ko 폴더를 자동 스캔
-            if (GITHUB_REPO_PATH) {
-                try {
-                    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO_PATH}/contents/${PDF_FOLDER}`);
-                    if (res.ok) {
-                        const items = await res.json();
-                        const discovered = items
-                            .filter(item => item.type === 'file' && item.name.toLowerCase().endsWith('.pdf'))
-                            .map(item => item.name);
+            // 1순위: pdf-ko/list.txt 파일이 있으면 자동으로 읽어와 무제한 목록 구성
+            try {
+                const listRes = await fetch(`${PDF_FOLDER}/list.txt`, { cache: 'no-cache' });
+                if (listRes.ok) {
+                    const text = await listRes.text();
+                    const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+                    if (lines.length > 0) {
+                        PDF_KO_FILE_LIST = lines;
+                    }
+                }
+            } catch (e) {
+                // list.txt가 없으면 다음 단계로 진행
+            }
+
+            // 2순위: 로컬 개발 서버 디렉토리 리스팅이 켜져 있으면 폴더 내 PDF 자동 스캔
+            try {
+                const dirRes = await fetch(`./${PDF_FOLDER}/`);
+                if (dirRes.ok) {
+                    const htmlText = await dirRes.text();
+                    const matches = [...htmlText.matchAll(/href=["']([^"']+\.pdf)["']/gi)];
+                    if (matches.length > 0) {
+                        const discovered = matches.map(m => m[1].split('/').pop());
                         if (discovered.length > 0) {
-                            PDF_KO_FILE_LIST = discovered;
+                            PDF_KO_FILE_LIST = [...new Set([...PDF_KO_FILE_LIST, ...discovered])];
                         }
                     }
-                } catch (e) {
-                    console.warn('GitHub 폴더 자동 스캔 생략, 기본 리스트 사용:', e);
                 }
+            } catch (e) {
+                // 정적 호스팅 환경에서는 기본 PDF_KO_FILE_LIST 사용
             }
 
             buildPdfCatalog(PDF_KO_FILE_LIST);
-            const firstSubject = parsedPdfCatalog.length > 0 ? parsedPdfCatalog[0].subject : '덧셈';
-            selectPdfSubject(firstSubject, document.querySelector('.pdf-subject-btn'));
+            selectPdfSubject('add', document.querySelector('.pdf-subject-btn[data-subj="add"]'));
         }
 
-        function selectPdfSubject(subject, btnEl) {
-            currentSelectedSubject = subject;
+        function selectPdfSubject(subjectKey, btnEl) {
+            currentSubjectKey = subjectKey;
             if (btnEl) {
                 document.querySelectorAll('#pdf-subject-tabs .pdf-subject-btn').forEach(b => b.classList.remove('active'));
                 btnEl.classList.add('active');
             }
 
-            const filtered = (subject === '전체')
-                ? parsedPdfCatalog
-                : parsedPdfCatalog.filter(item => item.subject === subject);
+            currentFilteredList = parsedPdfCatalog.filter(item => item.subjectKey === subjectKey);
+            const stageSelect = document.getElementById('pdf-stage-select');
+            const numSelect = document.getElementById('pdf-num-select');
 
-            const patternBar = document.getElementById('pdf-pattern-bar');
-            patternBar.innerHTML = '';
-
-            if (filtered.length === 0) {
-                patternBar.innerHTML = `<span class="text-muted small py-1">아직 '${subject}' 카테고리에 등록된 PDF 파일이 없습니다.</span>`;
+            if (currentFilteredList.length === 0) {
+                stageSelect.innerHTML = '<option value="">등록된 단계 없음</option>';
+                numSelect.innerHTML = '<option value="">-</option>';
+                updateNavButtons();
                 return;
             }
 
-            filtered.forEach((item, idx) => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = `pdf-pattern-btn ${idx === 0 ? 'active' : ''}`;
-                const prefix = (subject === '전체') ? `${item.subject} ` : '';
-                btn.innerHTML = `<span class="stage-badge">${prefix}${item.stage}단계</span> <span>유형 ${item.pattern}</span>`;
-                btn.onclick = () => loadPdfItem(item, btn);
-                patternBar.appendChild(btn);
-            });
+            // 해당 과목에 존재하는 모든 단계(Stage)를 중복 없이 오름차순 추출 (예: 1, 2, ... 122)
+            const stages = [...new Set(currentFilteredList.map(item => item.stage))].sort((a, b) => a - b);
+            stageSelect.innerHTML = stages.map(st => `<option value="${st}">${st}단계</option>`).join('');
 
-            loadPdfItem(filtered[0], patternBar.querySelector('.pdf-pattern-btn'));
+            populatePdfNumbersForStage(stages[0]);
+        }
+
+        function populatePdfNumbersForStage(stageNum, targetPatternNum = null) {
+            const numSelect = document.getElementById('pdf-num-select');
+            const stageItems = currentFilteredList
+                .filter(item => item.stage === stageNum)
+                .sort((a, b) => a.num - b.num);
+
+            numSelect.innerHTML = stageItems
+                .map(item => `<option value="${item.num}">#${item.num} (${item.fileName})</option>`)
+                .join('');
+
+            const chosenItem = (targetPatternNum !== null)
+                ? (stageItems.find(x => x.num === targetPatternNum) || stageItems[0])
+                : stageItems[0];
+
+            if (chosenItem) {
+                numSelect.value = chosenItem.num;
+                currentItemIndex = currentFilteredList.indexOf(chosenItem);
+                loadPdfItem(chosenItem);
+            }
+        }
+
+        function onPdfStageChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            if (!isNaN(stageVal)) {
+                populatePdfNumbersForStage(stageVal);
+            }
+        }
+
+        function onPdfNumberChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            const numVal = parseInt(document.getElementById('pdf-num-select').value, 10);
+            const foundIdx = currentFilteredList.findIndex(x => x.stage === stageVal && x.num === numVal);
+            if (foundIdx !== -1) {
+                currentItemIndex = foundIdx;
+                loadPdfItem(currentFilteredList[foundIdx]);
+            }
+        }
+
+        function stepPdfItem(delta) {
+            if (currentFilteredList.length === 0) return;
+            const nextIdx = currentItemIndex + delta;
+            if (nextIdx < 0 || nextIdx >= currentFilteredList.length) return;
+
+            const nextItem = currentFilteredList[nextIdx];
+            document.getElementById('pdf-stage-select').value = nextItem.stage;
+            populatePdfNumbersForStage(nextItem.stage, nextItem.num);
+        }
+
+        function pickRandomPdfItem() {
+            if (currentFilteredList.length <= 1) return;
+            let randIdx = currentItemIndex;
+            while (randIdx === currentItemIndex) {
+                randIdx = Math.floor(Math.random() * currentFilteredList.length);
+            }
+            const randItem = currentFilteredList[randIdx];
+            document.getElementById('pdf-stage-select').value = randItem.stage;
+            populatePdfNumbersForStage(randItem.stage, randItem.num);
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('pdf-prev-btn');
+            const nextBtn = document.getElementById('pdf-next-btn');
+            const randBtn = document.getElementById('pdf-random-btn');
+
+            if (prevBtn) prevBtn.disabled = (currentItemIndex <= 0);
+            if (nextBtn) nextBtn.disabled = (currentItemIndex >= currentFilteredList.length - 1);
+            if (randBtn) randBtn.disabled = (currentFilteredList.length <= 1);
         }
 
         async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
@@ -1570,11 +1750,8 @@
             await page.render({ canvasContext: ctx, viewport: viewport }).promise;
         }
 
-        async function loadPdfItem(item, btnEl) {
-            if (btnEl) {
-                document.querySelectorAll('#pdf-pattern-bar .pdf-pattern-btn').forEach(b => b.classList.remove('active'));
-                btnEl.classList.add('active');
-            }
+        async function loadPdfItem(item) {
+            updateNavButtons();
 
             currentPdfUrl = item.url;
             document.getElementById('current-pdf-title').textContent = item.displayTitle;
@@ -1597,8 +1774,8 @@
                     colPage2.classList.add('d-none');
                 }
             } catch (err) {
-                console.warn('PDF 로드 안내:', err);
-                statusMsg.textContent = `📂 '${PDF_FOLDER}/${item.fileName}' 파일을 업로드하시면 이곳에 즉시 문제지와 풀이집이 표시됩니다.`;
+                console.warn('PDF 로드 확인:', err);
+                statusMsg.innerHTML = `📂 <code>${item.url}</code> 파일을 찾지 못했습니다. <code>${PDF_FOLDER}/</code> 폴더 안에 <strong>${item.fileName}</strong> 파일이 들어있는지 확인해 주세요.`;
                 statusMsg.classList.remove('d-none');
             }
         }
