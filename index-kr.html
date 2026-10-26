@@ -15,8 +15,8 @@
     <meta name="robots" content="index, follow">
     
     <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 덧셈·뺄셈·곱셈과 구구단 플래시카드, 알을 깨는 동물 친구! App Store & Google Play 정식 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 두자리덧셈, 세자리덧셈, 곱셈, 구구단, 플래시카드, 필기체인식, 펫키우기, 동물친구, 부모응원, ChronoLab, 무광고 어린이앱">
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 사칙연산(덧셈·뺄셈·곱셈·나눗셈), 무제한 PDF 문제지·풀이집 출력, 알을 깨는 동물 친구! App Store & Google Play 정식 출시!">
+    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 수학학습지, PDF문제집, 덧셈, 뺄셈, 곱셈, 나눗셈, 구구단, 플래시카드, 필기체인식, 펫키우기, 부모응원, ChronoLab, 무광고 어린이앱">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
@@ -28,7 +28,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
     <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta property="og:description" content="시계가 어렵던 아이가 스스로 퀴즈를 풀기 시작했어요! 100% 무광고 안심 배움터. App Store & Google Play 정식 출시!">
+    <meta property="og:description" content="시계와 사칙연산 손글씨 풀이부터 집에서 무제한 뽑아 쓰는 맞춤형 PDF 문제지·풀이집까지! 100% 무광고 안심 배움터.">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_0.jpg">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="ChronoLab">
@@ -41,6 +41,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- PDF.js 라이브러리 (실물 PDF 렌더링용) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <style>
         :root { 
@@ -125,29 +128,7 @@
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
-        /* 히어로 온보딩 영상 스크롤 버튼 */
-        .btn-watch-onboarding {
-            background: #EDE9FE;
-            color: #5B21B6 !important;
-            border: 2px solid #DDD6FE;
-            padding: 9px 20px;
-            font-size: 0.9rem;
-            font-weight: 800;
-            border-radius: 50px;
-            box-shadow: 0 4px 0 #C4B5FD;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            transition: all 0.15s ease;
-        }
-        .btn-watch-onboarding:hover {
-            background: #DDD6FE;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 0 #A78BFA;
-        }
-
-        /* 분침 배우기 버튼 */
+        /* 분침 배우기 및 주요 액션 버튼 */
         .btn-learn-minute {
             background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
             color: #FFFFFF !important;
@@ -289,6 +270,146 @@
             overflow: hidden;
             position: relative;
             box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+
+        /* 🖨️ v1.4 맞춤형 PDF 문제은행 생성 파트 */
+        .pdf-showcase-section {
+            padding: 85px 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
+            border-top: 3px solid #EDE9FE;
+            position: relative;
+        }
+        .pdf-spec-pill {
+            background: #FFFFFF;
+            border: 2px solid #EDE9FE;
+            border-radius: 20px;
+            padding: 14px 18px;
+            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.06), 0 3px 0 #EDE9FE;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .pdf-spec-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #F3EEFF;
+            color: var(--brand-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .pdf-library-card {
+            background: #FFFFFF;
+            border-radius: 36px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.14), 0 6px 0 #DDD6FE;
+            border: 3px solid #EDE9FE;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .pdf-subject-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+        .pdf-subject-btn {
+            background: #F8FAFC;
+            color: #475569;
+            border: 2px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 9px 20px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            box-shadow: 0 3px 0 #E2E8F0;
+        }
+        .pdf-subject-btn:hover, .pdf-subject-btn.active {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+            border-color: var(--brand-purple-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 #4834D4, 0 8px 16px rgba(108, 92, 231, 0.25);
+        }
+        .pdf-pattern-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            border-radius: 22px;
+            border: 1.5px solid #E2E8F0;
+            margin-bottom: 20px;
+        }
+        .pdf-pattern-btn {
+            background: #FFFFFF;
+            color: #334155;
+            border: 1.5px solid #CBD5E1;
+            border-radius: 50px;
+            padding: 6px 15px;
+            font-size: 0.84rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pdf-pattern-btn .stage-badge {
+            background: #EDE9FE;
+            color: var(--brand-purple);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.76rem;
+            font-weight: 900;
+        }
+        .pdf-pattern-btn:hover, .pdf-pattern-btn.active {
+            background: #FFF1F2;
+            color: #E11D48;
+            border-color: #FDA4AF;
+            box-shadow: 0 3px 8px rgba(225, 29, 72, 0.12);
+        }
+        .pdf-pattern-btn.active .stage-badge {
+            background: #E11D48;
+            color: #FFFFFF;
+        }
+        .pdf-paper-stage {
+            background: #F1F5F9;
+            border-radius: 24px;
+            padding: 20px;
+            border: 2px solid #E2E8F0;
+        }
+        .pdf-sheet-box {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #E2E8F0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pdf-canvas-wrap {
+            position: relative;
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px;
+            border: 1px solid #F1F5F9;
+            cursor: zoom-in;
+        }
+        .pdf-canvas-wrap canvas {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* v1.3 롱폼 온보딩 & 시계 공부 쇼케이스 섹션 */
@@ -660,6 +781,8 @@
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
             .shorts-toy-wrapper { max-width: 330px; }
             .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .pdf-library-card { padding: 14px; border-radius: 24px; }
+            .pdf-paper-stage { padding: 12px; }
             .tablet-video-card { padding: 12px; border-radius: 24px; }
             .tablet-screen-16x10 { border-radius: 16px; }
             .chapter-jump-btn { font-size: 0.78rem; padding: 6px 11px; }
@@ -742,10 +865,10 @@
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 한 자리부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈, 구구단 플래시카드까지 놀이처럼 수학에 빠져듭니다!
+                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 사칙연산(덧셈·뺄셈·곱셈·나눗셈) 손글씨 풀이부터 집에서 무제한 뽑아 쓰는 맞춤형 PDF 학습지까지 놀이처럼 수학에 빠져듭니다!
                     </p>
 
-                    <!-- 스토어 다운로드 버튼 그룹 (국가 무관 글로벌 App Store 주소 적용) -->
+                    <!-- 스토어 다운로드 버튼 그룹 (하단 온보딩 버튼 제거 완료) -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
                         <a href="https://apps.apple.com/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
@@ -761,14 +884,6 @@
                                 <div style="font-size: 0.68rem; color: #64748B;">다운로드</div>
                                 <div style="font-size: 1.05rem; font-weight: 800; color: #1E1B4B;">Google Play</div>
                             </div>
-                        </a>
-                    </div>
-
-                    <!-- 신규 v1.3 온보딩 & 시계 공부 풀버전 영상 바로가기 버튼 -->
-                    <div class="mb-2">
-                        <a href="#onboarding-video-section" class="btn-watch-onboarding">
-                            <i class="bi bi-play-circle-fill text-danger fs-5"></i>
-                            <span>이 영상만 봐도 시계를 읽기 시작합니다 (v1.3 온보딩 공개) &darr;</span>
                         </a>
                     </div>
 
@@ -829,7 +944,133 @@
         </div>
     </section>
 
-    <!-- 🎬 v1.3 신규 온보딩 & 시계 공부 풀버전 영상 섹션 -->
+    <!-- 🖨️ v1.4 신규: 맞춤형 PDF 문제은행 생성 파트 -->
+    <section id="pdf-bank-section" class="pdf-showcase-section">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
+                    🖨️ v1.4 대규모 업데이트 &bull; 무제한 PDF 문제은행 오픈
+                </span>
+                <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.3;">
+                    어린아이에게 태블릿으로만 가르치기 꺼려지시죠?<br>
+                    <span style="color: var(--brand-purple);">종이 문제지로도 자유롭게 뽑을 수 있도록 준비했습니다</span>
+                </h2>
+                <p class="text-muted mx-auto mb-4" style="max-width: 720px; line-height: 1.75; font-size: 1.02rem;">
+                    화면에서 원리를 깨친 뒤에는 연필을 쥐고 종이 위에서 차분하게 연습해 보세요.<br class="d-none d-md-inline">
+                    가정용 프린터에서 가장 편하게 출력하실 수 있도록 세세한 설정까지 빈틈없이 담았습니다.
+                </p>
+
+                <!-- 4대 핵심 맞춤 설정 안내 그리드 -->
+                <div class="row g-3 justify-content-center mx-auto mb-4 text-start" style="max-width: 980px;">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">📐</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">A4 ~ A0 · 가로/세로</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">용지 규격과 방향 자유 선택</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🔢</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">문항 수 · 배치 조절</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">한 장에 들어갈 문제 수 설정</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">💡</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">맞춤형 시각 도움 추가</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">받아올림·어림셈 보조 가이드</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🖍️</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">빨간펜 답안지 동시 출력</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">풀이 과정이 담긴 정답지 포함</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동) -->
+            <div class="pdf-library-card" data-aos="zoom-in">
+                <!-- 1. 과목별 탭 -->
+                <div class="pdf-subject-tabs" id="pdf-subject-tabs">
+                    <button type="button" class="pdf-subject-btn active" onclick="selectPdfSubject('덧셈', this)">➕ 덧셈</button>
+                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('뺄셈', this)">➖ 뺄셈</button>
+                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('곱셈', this)">✖️ 곱셈</button>
+                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('나눗셈', this)">➗ 나눗셈</button>
+                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('시계', this)">⏰ 시계</button>
+                    <button type="button" class="pdf-subject-btn" onclick="selectPdfSubject('전체', this)">📚 전체 보기</button>
+                </div>
+
+                <!-- 2. 선택된 과목의 단계·패턴 리스트 바 -->
+                <div class="pdf-pattern-bar" id="pdf-pattern-bar">
+                    <!-- JS가 pdf-ko 폴더의 종류_단계_번호.pdf 목록을 파싱하여 버튼을 자동 생성합니다 -->
+                </div>
+
+                <!-- 3. 실제 PDF 렌더링 스테이지 (1p 문제지 + 2p 답안지) -->
+                <div class="pdf-paper-stage">
+                    <div class="row g-3 justify-content-center" id="pdf-pages-row">
+                        <!-- 1페이지: 학생용 문제지 -->
+                        <div class="col-md-6" id="pdf-col-page1">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-dark rounded-pill px-3 py-1">📄 1페이지 : 학생용 문제지</span>
+                                    <span class="text-muted small fw-bold" id="current-pdf-title">덧셈 1단계 (유형 1)</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="클릭하면 원본 PDF가 새 창에서 열립니다">
+                                    <canvas id="pdfCanvasPage1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2페이지: 빨간펜 답안지·풀이집 -->
+                        <div class="col-md-6" id="pdf-col-page2">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ 2페이지 : 풀이집 · 답안지</span>
+                                    <span class="text-danger small fw-bold">풀이 과정 & 정답 자동 표기</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="클릭하면 원본 PDF가 새 창에서 열립니다">
+                                    <canvas id="pdfCanvasPage2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 로딩/안내 메시지 영역 -->
+                    <div id="pdf-status-msg" class="text-center text-muted small py-2 d-none"></div>
+                </div>
+
+                <!-- 4. 하단 인쇄 및 원본 다운로드 액션 바 -->
+                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
+                    <span class="text-muted small">
+                        💡 위 학습지 이미지를 클릭하거나 우측 버튼을 눌러 지금 바로 인쇄해 보세요!
+                    </span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a id="pdf-open-btn" href="pdf-ko/덧셈_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
+                            <i class="bi bi-printer-fill"></i> 원본 PDF 크게 보기 · 인쇄하기
+                        </a>
+                        <a id="pdf-download-btn" href="pdf-ko/덧셈_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
+                            <i class="bi bi-download"></i> 파일 저장
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎬 v1.3 신규 온보딩 & 시계 공부 풀버전 영상 섹션 (그대로 유지) -->
     <section id="onboarding-video-section" class="longform-showcase-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
@@ -1074,12 +1315,12 @@
                                             <span class="text-muted">오답일 때 시각 / 청각 가이드로 아이가 스스로 학습할 수 있도록 도와줍니다.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🧮 체계적 연산 로드맵:</strong><br>
-                                            <span class="text-muted">한 자리 수부터 세 자리 수 세 개 덧셈, 뺄셈, 곱셈까지 점진적 퀴즈로 완성!</span>
+                                            <strong>🧮 체계적 사칙연산 로드맵:</strong><br>
+                                            <span class="text-muted">덧셈, 뺄셈, 곱셈, 나눗셈과 무제한 PDF 문제지·풀이집 출력까지 하나로 완성!</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🃏 구구단 시각화 플래시카드:</strong><br>
-                                            <span class="text-muted">단순 암기 대신 면적 분할과 수박 애니메이션으로 원리를 쏙쏙!</span>
+                                            <strong>🃏 구구단 플래시카드 & 2048 퍼즐:</strong><br>
+                                            <span class="text-muted">단순 암기 대신 면적 분할과 거듭제곱 수 퍼즐로 수 감각을 쏙쏙!</span>
                                         </div>
                                     </div>
 
@@ -1118,8 +1359,8 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-box">
                         <div class="fs-1 mb-3">🧮</div>
-                        <h4 class="fw-bold mb-2">체계적 연산 & 구구단 플래시카드</h4>
-                        <p class="text-muted small mb-0">한 자리부터 세 자리 수 3개 덧셈, 뺄셈, 곱셈 및 면적 분할 구구단 플래시카드로 탄탄한 연산 체력을 길러줍니다.</p>
+                        <h4 class="fw-bold mb-2">사칙연산 & 무제한 PDF 학습지</h4>
+                        <p class="text-muted small mb-0">덧셈·뺄셈·곱셈·나눗셈 손글씨 풀이는 물론, 맞춤형 PDF 문제지와 빨간펜 풀이집을 무제한 인쇄할 수 있습니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
@@ -1156,7 +1397,7 @@
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🛡️</div>
                         <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 성인 인증 4자리 잠금을 적용했습니다.</p>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 구구단 부모 확인 잠금을 적용했습니다.</p>
                     </div>
                 </div>
             </div>
@@ -1200,9 +1441,173 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- 시뮬레이터 & 쇼츠 & 롱폼 챕터 엔진 -->
+    <!-- PDF 문제은행 뷰어 & 시뮬레이터 & 쇼츠 & 롱폼 챕터 엔진 -->
     <script>
         AOS.init({ duration: 800, once: true });
+
+        /* =========================================================================
+           0. v1.4 PDF 문제은행 엔진 (pdf-ko 폴더 & '종류_단계_번호.pdf' 파서)
+           ========================================================================= */
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const PDF_FOLDER = 'pdf-ko';
+
+        /**
+         * pdf-ko 폴더에 넣어두신 PDF 파일 목록입니다.
+         * 파일명 규칙: 종류_단계_번호.pdf (예: 덧셈_1_1.pdf, 뺄셈_2_1.pdf, 뺄셈_2_2.pdf)
+         * 새로운 파일을 추가하실 때 이 배열에 파일명을 적어주시거나,
+         * 아래 GITHUB_REPO_PATH에 저장소 경로('아이디/레포이름')를 적어두시면 폴더 내 모든 PDF를 자동으로 읽어옵니다.
+         */
+        const GITHUB_REPO_PATH = ''; // 예: 'chronolab/chronolab.github.io' (비워두면 아래 배열을 사용합니다)
+        let PDF_KO_FILE_LIST = [
+            '덧셈_1_1.pdf',
+            '뺄셈_2_1.pdf',
+            '뺄셈_2_2.pdf',
+            '곱셈_3_1.pdf',
+            '나눗셈_4_1.pdf',
+            '시계_5_1.pdf'
+        ];
+
+        let parsedPdfCatalog = [];
+        let currentSelectedSubject = '덧셈';
+        let currentPdfUrl = '';
+
+        // '종류_단계_번호.pdf' 규칙 파싱 함수
+        function parsePdfFileName(fileName) {
+            const clean = fileName.replace(/\.pdf$/i, '').trim();
+            const parts = clean.split('_');
+            const subject = parts[0] || '기타';
+            const stage = parseInt(parts[1] || '1', 10);
+            const pattern = parseInt(parts[2] || '1', 10);
+
+            return {
+                fileName: fileName,
+                url: `${PDF_FOLDER}/${encodeURI(fileName)}`,
+                subject: subject,
+                stage: isNaN(stage) ? 1 : stage,
+                pattern: isNaN(pattern) ? 1 : pattern,
+                displayTitle: `${subject} ${isNaN(stage) ? 1 : stage}단계 · 유형 ${isNaN(pattern) ? 1 : pattern}`
+            };
+        }
+
+        function buildPdfCatalog(fileList) {
+            const subjectOrder = { '덧셈': 1, '뺄셈': 2, '곱셈': 3, '나눗셈': 4, '시계': 5 };
+            parsedPdfCatalog = fileList
+                .filter(f => f.toLowerCase().endsWith('.pdf'))
+                .map(parsePdfFileName)
+                .sort((a, b) => {
+                    const orderA = subjectOrder[a.subject] || 99;
+                    const orderB = subjectOrder[b.subject] || 99;
+                    if (orderA !== orderB) return orderA - orderB;
+                    if (a.stage !== b.stage) return a.stage - b.stage;
+                    return a.pattern - b.pattern;
+                });
+        }
+
+        async function initPdfLibrary() {
+            // GitHub 레포 경로가 설정된 경우 pdf-ko 폴더를 자동 스캔
+            if (GITHUB_REPO_PATH) {
+                try {
+                    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO_PATH}/contents/${PDF_FOLDER}`);
+                    if (res.ok) {
+                        const items = await res.json();
+                        const discovered = items
+                            .filter(item => item.type === 'file' && item.name.toLowerCase().endsWith('.pdf'))
+                            .map(item => item.name);
+                        if (discovered.length > 0) {
+                            PDF_KO_FILE_LIST = discovered;
+                        }
+                    }
+                } catch (e) {
+                    console.warn('GitHub 폴더 자동 스캔 생략, 기본 리스트 사용:', e);
+                }
+            }
+
+            buildPdfCatalog(PDF_KO_FILE_LIST);
+            const firstSubject = parsedPdfCatalog.length > 0 ? parsedPdfCatalog[0].subject : '덧셈';
+            selectPdfSubject(firstSubject, document.querySelector('.pdf-subject-btn'));
+        }
+
+        function selectPdfSubject(subject, btnEl) {
+            currentSelectedSubject = subject;
+            if (btnEl) {
+                document.querySelectorAll('#pdf-subject-tabs .pdf-subject-btn').forEach(b => b.classList.remove('active'));
+                btnEl.classList.add('active');
+            }
+
+            const filtered = (subject === '전체')
+                ? parsedPdfCatalog
+                : parsedPdfCatalog.filter(item => item.subject === subject);
+
+            const patternBar = document.getElementById('pdf-pattern-bar');
+            patternBar.innerHTML = '';
+
+            if (filtered.length === 0) {
+                patternBar.innerHTML = `<span class="text-muted small py-1">아직 '${subject}' 카테고리에 등록된 PDF 파일이 없습니다.</span>`;
+                return;
+            }
+
+            filtered.forEach((item, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `pdf-pattern-btn ${idx === 0 ? 'active' : ''}`;
+                const prefix = (subject === '전체') ? `${item.subject} ` : '';
+                btn.innerHTML = `<span class="stage-badge">${prefix}${item.stage}단계</span> <span>유형 ${item.pattern}</span>`;
+                btn.onclick = () => loadPdfItem(item, btn);
+                patternBar.appendChild(btn);
+            });
+
+            loadPdfItem(filtered[0], patternBar.querySelector('.pdf-pattern-btn'));
+        }
+
+        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const page = await pdfDoc.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.8 });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+        }
+
+        async function loadPdfItem(item, btnEl) {
+            if (btnEl) {
+                document.querySelectorAll('#pdf-pattern-bar .pdf-pattern-btn').forEach(b => b.classList.remove('active'));
+                btnEl.classList.add('active');
+            }
+
+            currentPdfUrl = item.url;
+            document.getElementById('current-pdf-title').textContent = item.displayTitle;
+            document.getElementById('pdf-open-btn').href = item.url;
+            document.getElementById('pdf-download-btn').href = item.url;
+            document.getElementById('pdf-download-btn').setAttribute('download', item.fileName);
+
+            const statusMsg = document.getElementById('pdf-status-msg');
+            const colPage2 = document.getElementById('pdf-col-page2');
+            statusMsg.classList.add('d-none');
+
+            try {
+                const pdfDoc = await pdfjsLib.getDocument(item.url).promise;
+                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1');
+
+                if (pdfDoc.numPages >= 2) {
+                    colPage2.classList.remove('d-none');
+                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2');
+                } else {
+                    colPage2.classList.add('d-none');
+                }
+            } catch (err) {
+                console.warn('PDF 로드 안내:', err);
+                statusMsg.textContent = `📂 '${PDF_FOLDER}/${item.fileName}' 파일을 업로드하시면 이곳에 즉시 문제지와 풀이집이 표시됩니다.`;
+                statusMsg.classList.remove('d-none');
+            }
+        }
+
+        function openCurrentPdfInNewTab() {
+            if (currentPdfUrl) {
+                window.open(currentPdfUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
 
         /* 1. 쇼츠 비디오 탭 전환기 (1번: 연산 유튜브 쇼츠 / 2번: 시계 유튜브 쇼츠) */
         function switchShortsTab(index, btn) {
@@ -1728,6 +2133,7 @@
         // 초기 실행
         resizeSkyCanvas();
         renderClock();
+        initPdfLibrary();
     </script>
 </body>
 </html>
