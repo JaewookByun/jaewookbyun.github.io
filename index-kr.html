@@ -1035,7 +1035,7 @@
 
             <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동 · add_122_123 등 무한 확장 대응) -->
             <div class="pdf-library-card" data-aos="zoom-in">
-                <!-- 1. 과목별 탭 (JS가 보유 파일 수와 함께 동적 렌더링) -->
+                <!-- 1. 5대 과목별 탭 (덧셈 / 뺄셈 / 곱셈 / 나눗셈 / 시계 상시 노출) -->
                 <div class="pdf-subject-tabs" id="pdf-subject-tabs">
                     <button type="button" class="pdf-subject-btn active" data-subj="add" onclick="selectPdfSubject('add', this)">
                         ➕ 덧셈 <span class="count-pill" id="count-add">1</span>
@@ -1049,8 +1049,8 @@
                     <button type="button" class="pdf-subject-btn" data-subj="div" onclick="selectPdfSubject('div', this)">
                         ➗ 나눗셈 <span class="count-pill" id="count-div">1</span>
                     </button>
-                    <button type="button" class="pdf-subject-btn d-none" id="tab-btn-clock" data-subj="clock" onclick="selectPdfSubject('clock', this)">
-                        ⏰ 시계 <span class="count-pill" id="count-clock">0</span>
+                    <button type="button" class="pdf-subject-btn" id="tab-btn-clock" data-subj="clock" onclick="selectPdfSubject('clock', this)">
+                        ⏰ 시계 <span class="count-pill" id="count-clock">1</span>
                     </button>
                 </div>
 
@@ -1509,7 +1509,7 @@
         AOS.init({ duration: 800, once: true });
 
         /* =========================================================================
-           0. v1.4 PDF 문제은행 엔진 (add_1_1 ~ add_122_123 무한 확장 대응)
+           0. v1.4 PDF 문제은행 엔진 (add_1_1 ~ clock_1_1 및 add_122_123 무한 확장 대응)
            ========================================================================= */
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
@@ -1517,19 +1517,20 @@
 
         /**
          * 📌 1) 기본 등록된 PDF 파일 목록입니다.
-         * 파일명 규칙: prefix_stage_num.pdf (예: add_1_1.pdf, sub_1_1.pdf, mul_1_1.pdf, div_1_1.pdf, add_122_123.pdf)
-         * 확장자(.pdf)를 붙여서 적거나 생략('add_1_1')해서 적어도 모두 자동 인식합니다.
+         * 파일명 규칙: prefix_stage_num.pdf (예: add_1_1.pdf, sub_1_1.pdf, mul_1_1.pdf, div_1_1.pdf, clock_1_1.pdf)
+         * 확장자(.pdf)를 붙여서 적거나 생략('clock_1_1')해서 적어도 모두 자동 인식합니다.
          */
         let PDF_KO_FILE_LIST = [
             'add_1_1.pdf',
             'sub_1_1.pdf',
             'mul_1_1.pdf',
-            'div_1_1.pdf'
+            'div_1_1.pdf',
+            'clock_1_1.pdf'
         ];
 
         /**
          * 📌 2) 대량 파일 범위 자동 추가 헬퍼 (원하실 때 주석 해제하여 수백 개를 한 줄로 등록 가능)
-         * 사용법: addPdfRange('add', 단계번호, 시작번호, 끝번호)
+         * 사용법: addPdfRange('add' | 'sub' | 'mul' | 'div' | 'clock', 단계번호, 시작번호, 끝번호)
          * 예시: addPdfRange('add', 122, 1, 123); -> add_122_1.pdf 부터 add_122_123.pdf 까지 자동 등록
          */
         function addPdfRange(prefix, stage, startNum, endNum) {
@@ -1552,7 +1553,7 @@
         let currentItemIndex = 0;
         let currentPdfUrl = '';
 
-        // 'add_122_123.pdf' 또는 'add_122_123' 정규식 파서 (자릿수 무제한 지원)
+        // 'add_122_123.pdf' 또는 'clock_1_1' 정규식 파서 (자릿수 무제한 지원)
         function parsePdfFileName(rawEntry) {
             let cleanEntry = rawEntry.trim().split('/').pop();
             if (!cleanEntry) return null;
@@ -1560,7 +1561,7 @@
                 cleanEntry += '.pdf';
             }
 
-            // prefix_stage_num.pdf 매칭 (예: add_1_1.pdf, add_122_123.pdf)
+            // prefix_stage_num.pdf 매칭 (예: add_1_1.pdf, clock_1_1.pdf, add_122_123.pdf)
             const match = cleanEntry.match(/^([a-zA-Z]+)_(\d+)_(\d+)\.pdf$/i);
             if (!match) return null;
 
@@ -1603,10 +1604,6 @@
                 const count = parsedPdfCatalog.filter(x => x.subjectKey === subj).length;
                 const badgeEl = document.getElementById(`count-${subj}`);
                 if (badgeEl) badgeEl.textContent = count;
-                if (subj === 'clock') {
-                    const clockTab = document.getElementById('tab-btn-clock');
-                    if (clockTab) clockTab.classList.toggle('d-none', count === 0);
-                }
             });
         }
 
@@ -1618,7 +1615,7 @@
                     const text = await listRes.text();
                     const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith('#'));
                     if (lines.length > 0) {
-                        PDF_KO_FILE_LIST = lines;
+                        PDF_KO_FILE_LIST = [...new Set([...PDF_KO_FILE_LIST, ...lines])];
                     }
                 }
             } catch (e) {
