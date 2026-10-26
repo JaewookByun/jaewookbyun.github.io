@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <title>Mathgotchi - Hands-On Clock & Early Math Adventures | ChronoLab</title>
-    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears and practice scratch-free handwriting column addition. Officially on the App Store & Google Play!">
-    <meta name="keywords" content="Mathgotchi, ChronoLab, tell time for kids, clock learning, column addition, vertical math, regrouping, handwriting recognition, virtual pet math, ad free kids app, parental gate">
+    <title>Mathgotchi - Hands-On Clock, Early Math & Printable PDF Worksheets | ChronoLab</title>
+    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears, solve arithmetic (+, −, ×, ÷) on screen, and print unlimited custom PDF worksheets & red-pen answer keys!">
+    <meta name="keywords" content="Mathgotchi, ChronoLab, tell time for kids, clock learning, printable math worksheets, PDF math drills, column addition, subtraction, multiplication, division, regrouping, handwriting recognition, virtual pet math, ad free kids app">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index.html">
@@ -27,8 +27,8 @@
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index.html">
-    <meta property="og:title" content="Mathgotchi - Hands-On Clock & Early Math Adventures">
-    <meta property="og:description" content="No multiple-choice guessing. Kids write on the screen and spin real clock gears! 100% ad-free & privacy-first.">
+    <meta property="og:title" content="Mathgotchi - Hands-On Clock, Early Math & Printable Worksheets">
+    <meta property="og:description" content="No multiple-choice guessing! Kids write on screen, spin real clock gears, and print unlimited custom PDF worksheets with step-by-step solution keys.">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="ChronoLab">
@@ -36,8 +36,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index.html">
-    <meta name="twitter:title" content="Mathgotchi - Early Math & Time Adventures for Kids">
-    <meta name="twitter:description" content="No multiple-choice guessing. Kids write on the screen and spin real clock gears! 100% ad-free & privacy-first.">
+    <meta name="twitter:title" content="Mathgotchi - Early Math, Time & Printable PDF Worksheets">
+    <meta name="twitter:description" content="No multiple-choice guessing! Kids write on screen, spin real clock gears, and print unlimited custom PDF worksheets.">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
 
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
@@ -48,6 +48,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Inter:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- PDF.js Library (Live PDF Worksheet Renderer) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <style>
         :root { 
@@ -132,7 +135,7 @@
             box-shadow: 0 2px 0 #CBD5E1 !important;
         }
 
-        /* Learn Minute Hand Button */
+        /* Learn Minute Hand & Primary Action Button */
         .btn-learn-minute {
             background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
             color: #FFFFFF !important;
@@ -287,6 +290,177 @@
             text-align: center;
             background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
             color: #FFFFFF;
+        }
+
+        /* 🖨️ v1.4 Printable PDF Worksheet Bank Section */
+        .pdf-showcase-section {
+            padding: 85px 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
+            border-top: 3px solid #EDE9FE;
+            position: relative;
+        }
+        .pdf-spec-pill {
+            background: #FFFFFF;
+            border: 2px solid #EDE9FE;
+            border-radius: 20px;
+            padding: 14px 18px;
+            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.06), 0 3px 0 #EDE9FE;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .pdf-spec-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #F3EEFF;
+            color: var(--brand-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .pdf-library-card {
+            background: #FFFFFF;
+            border-radius: 36px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.14), 0 6px 0 #DDD6FE;
+            border: 3px solid #EDE9FE;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .pdf-subject-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+        .pdf-subject-btn {
+            background: #F8FAFC;
+            color: #475569;
+            border: 2px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 9px 20px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            box-shadow: 0 3px 0 #E2E8F0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pdf-subject-btn .count-pill {
+            background: #E2E8F0;
+            color: #475569;
+            font-size: 0.72rem;
+            padding: 1px 7px;
+            border-radius: 20px;
+            font-weight: 900;
+        }
+        .pdf-subject-btn:hover, .pdf-subject-btn.active {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+            border-color: var(--brand-purple-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 #4834D4, 0 8px 16px rgba(108, 92, 231, 0.25);
+        }
+        .pdf-subject-btn.active .count-pill,
+        .pdf-subject-btn:hover .count-pill {
+            background: rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+        }
+
+        /* Infinite Stage & Worksheet Selector Toolbar */
+        .pdf-selector-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            border-radius: 22px;
+            border: 1.5px solid #E2E8F0;
+            margin-bottom: 18px;
+        }
+        .pdf-select-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+        .pdf-select-box {
+            background-color: #FFFFFF;
+            border: 2px solid #CBD5E1;
+            border-radius: 14px;
+            padding: 7px 32px 7px 14px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #1E293B;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #E2E8F0;
+        }
+        .pdf-select-box:focus {
+            border-color: var(--brand-purple);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+        }
+        .pdf-nav-btn {
+            background: #FFFFFF;
+            color: #334155;
+            border: 1.5px solid #CBD5E1;
+            border-radius: 14px;
+            padding: 7px 13px;
+            font-size: 0.84rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            box-shadow: 0 2px 0 #E2E8F0;
+        }
+        .pdf-nav-btn:hover:not(:disabled) {
+            background: #EDE9FE;
+            color: var(--brand-purple);
+            border-color: #C4B5FD;
+        }
+        .pdf-nav-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .pdf-paper-stage {
+            background: #F1F5F9;
+            border-radius: 24px;
+            padding: 20px;
+            border: 2px solid #E2E8F0;
+        }
+        .pdf-sheet-box {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #E2E8F0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pdf-canvas-wrap {
+            position: relative;
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px;
+            border: 1px solid #F1F5F9;
+            cursor: zoom-in;
+        }
+        .pdf-canvas-wrap canvas {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Interactive Web Simulator */
@@ -587,6 +761,9 @@
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
             .shorts-toy-wrapper { max-width: 330px; }
             .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .pdf-library-card { padding: 14px; border-radius: 24px; }
+            .pdf-paper-stage { padding: 12px; }
+            .pdf-selector-toolbar { justify-content: center; }
             .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
             .math-quiz-board { padding: 18px 20px 38px 20px; }
             
@@ -666,7 +843,7 @@
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        Say goodbye to multiple-choice guessing and scratch paper clutter. Spin real interactive clock gears to grasp 24-hour day/night cycles, and write column addition, subtraction, and multiplication directly on screen like real pencil on paper!
+                        Say goodbye to multiple-choice guessing and scratch paper clutter. Spin real interactive clock gears to grasp 24-hour day/night cycles, write arithmetic (+, &minus;, &times;, &divide;) directly on screen, and print unlimited custom PDF worksheets at home!
                     </p>
 
                     <!-- Store Download Buttons -->
@@ -736,6 +913,163 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- 🖨️ v1.4 New: Unlimited Printable PDF Worksheet Bank -->
+    <section id="pdf-bank-section" class="pdf-showcase-section">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
+                    🖨️ v1.4 Major Update &bull; Unlimited Printable PDF Worksheet Bank
+                </span>
+                <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.3;">
+                    Hesitant about screen-only learning for young kids?<br>
+                    <span style="color: var(--brand-purple);">Freely print custom paper worksheets at home!</span>
+                </h2>
+                <p class="text-muted mx-auto mb-4" style="max-width: 740px; line-height: 1.75; font-size: 1.02rem;">
+                    After grasping concepts interactively on screen, let your child practice calmly with a real pencil on paper.<br class="d-none d-md-inline">
+                    Every detail is thoughtfully designed to make printing at home effortless and customizable.
+                </p>
+
+                <!-- 4 Key Customization Highlights -->
+                <div class="row g-3 justify-content-center mx-auto mb-4 text-start" style="max-width: 980px;">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">📐</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">A4 to A0 &bull; Orientation</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Portrait or landscape sizes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🔢</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">Problem Count Control</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Adjust problems per page</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">💡</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">Visual Scaffolding</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Carry-over &amp; estimation boxes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🖍️</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">Red-Pen Solution Keys</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Full step-by-step working</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live PDF Worksheet Showroom (Connected to 'pdf/' folder & 'pdf/list.txt') -->
+            <div class="pdf-library-card" data-aos="zoom-in">
+                <!-- 1. 5 Subject Tabs -->
+                <div class="pdf-subject-tabs" id="pdf-subject-tabs">
+                    <button type="button" class="pdf-subject-btn active" data-subj="add" onclick="selectPdfSubject('add', this)">
+                        ➕ Addition <span class="count-pill" id="count-add">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="sub" onclick="selectPdfSubject('sub', this)">
+                        ➖ Subtraction <span class="count-pill" id="count-sub">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="mul" onclick="selectPdfSubject('mul', this)">
+                        ✖️ Multiplication <span class="count-pill" id="count-mul">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="div" onclick="selectPdfSubject('div', this)">
+                        ➗ Division <span class="count-pill" id="count-div">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" id="tab-btn-clock" data-subj="clock" onclick="selectPdfSubject('clock', this)">
+                        ⏰ Clock <span class="count-pill" id="count-clock">1</span>
+                    </button>
+                </div>
+
+                <!-- 2. Stage & Worksheet Number Selector Toolbar -->
+                <div class="pdf-selector-toolbar">
+                    <div class="pdf-select-group">
+                        <label for="pdf-stage-select" class="small fw-bold text-secondary mb-0">Stage</label>
+                        <select id="pdf-stage-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfStageChange()">
+                            <!-- Populated dynamically in natural numeric order (Stage 1 ~ Stage N) -->
+                        </select>
+
+                        <label for="pdf-num-select" class="small fw-bold text-secondary mb-0 ms-1">Worksheet #</label>
+                        <select id="pdf-num-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfNumberChange()">
+                            <!-- Populated dynamically (#1 ~ #N) -->
+                        </select>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" id="pdf-prev-btn" class="pdf-nav-btn" onclick="stepPdfItem(-1)" title="Previous Worksheet">
+                            <i class="bi bi-chevron-left"></i> Prev
+                        </button>
+                        <button type="button" id="pdf-random-btn" class="pdf-nav-btn" onclick="pickRandomPdfItem()" title="Pick Random Sample">
+                            🎲 Random
+                        </button>
+                        <button type="button" id="pdf-next-btn" class="pdf-nav-btn" onclick="stepPdfItem(1)" title="Next Worksheet">
+                            Next <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Dual Page Live PDF Stage (Page 1: Worksheet / Page 2: Red-Pen Solution Key) -->
+                <div class="pdf-paper-stage">
+                    <div class="row g-3 justify-content-center" id="pdf-pages-row">
+                        <!-- Page 1: Student Worksheet -->
+                        <div class="col-md-6" id="pdf-col-page1">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-dark rounded-pill px-3 py-1">📄 Page 1 : Student Worksheet</span>
+                                    <span class="text-muted small fw-bold font-monospace" id="current-pdf-title">add_1_1.pdf</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="Click to open full PDF in a new tab">
+                                    <canvas id="pdfCanvasPage1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Page 2: Red-Pen Solution Key -->
+                        <div class="col-md-6" id="pdf-col-page2">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ Page 2 : Red-Pen Solution Key</span>
+                                    <span class="text-danger small fw-bold">Step-by-Step Working Included</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="Click to open full PDF in a new tab">
+                                    <canvas id="pdfCanvasPage2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status / Loading Message -->
+                    <div id="pdf-status-msg" class="text-center text-muted small py-2 d-none"></div>
+                </div>
+
+                <!-- 4. Bottom Print & Download Action Bar -->
+                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
+                    <span class="text-muted small">
+                        💡 Click any worksheet page above or use the buttons on the right to print right away—no sign-up needed!
+                    </span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a id="pdf-open-btn" href="pdf/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
+                            <i class="bi bi-printer-fill"></i> Open Full PDF &bull; Print
+                        </a>
+                        <a id="pdf-download-btn" href="pdf/add_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
+                            <i class="bi bi-download"></i> Save PDF
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -916,12 +1250,12 @@
                                             <span class="text-muted">Stuck on an answer? Smart prompts guide kids to self-correct and understand the underlying concepts.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🧮 Progressive Math Curriculum:</strong><br>
-                                            <span class="text-muted">From single-digit addition to 3-digit multi-operand addition, subtraction, and multiplication.</span>
+                                            <strong>🧮 Complete 4-Operation Curriculum &amp; Printable PDFs:</strong><br>
+                                            <span class="text-muted">Addition, subtraction, multiplication, division, and unlimited custom PDF worksheets with solution keys!</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🃏 Visual Multiplication Flashcards:</strong><br>
-                                            <span class="text-muted">No rote memorization—explore area models and watermelon animations for intuitive understanding.</span>
+                                            <strong>🃏 Visual Flashcards &amp; 2048 Math Puzzle:</strong><br>
+                                            <span class="text-muted">Explore area models, watermelon animations, and powers-of-two puzzles for intuitive number sense.</span>
                                         </div>
                                     </div>
 
@@ -960,14 +1294,14 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-box">
                         <div class="fs-1 mb-3">🧮</div>
-                        <h4 class="fw-bold mb-2">Column Math & Visual Flashcards</h4>
-                        <p class="text-muted small mb-0">Build arithmetic confidence with step-by-step 2-digit to 3-digit column addition, subtraction, and visual multiplication.</p>
+                        <h4 class="fw-bold mb-2">Complete Math &amp; Printable PDFs</h4>
+                        <p class="text-muted small mb-0">Master all 4 operations (+, &minus;, &times;, &divide;) with on-screen handwriting, plus print unlimited custom PDF worksheets and red-pen answer keys.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-box">
                         <div class="fs-1 mb-3">🎙️</div>
-                        <h4 class="fw-bold mb-2">Parent Voice Cheers & Pet Growth</h4>
+                        <h4 class="fw-bold mb-2">Parent Voice Cheers &amp; Pet Growth</h4>
                         <p class="text-muted small mb-0">Cheer on your child with real family photos and voice recordings, while daily quiz rewards hatch and evolve adorable companions.</p>
                     </div>
                 </div>
@@ -998,7 +1332,7 @@
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🛡️</div>
                         <h5 class="fw-bold mb-2">Kid-Safe Parental Gate</h5>
-                        <p class="text-muted small mb-0">Equipped with 4-digit math verification locks to prevent children from accidental in-app purchases or leaving the app.</p>
+                        <p class="text-muted small mb-0">Equipped with math verification locks to prevent children from accidental in-app purchases or leaving the app.</p>
                     </div>
                 </div>
             </div>
@@ -1010,7 +1344,7 @@
         <div class="container text-center">
             <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 680px;">
                 <div class="fs-1 mb-2">💬</div>
-                <h3 class="fw-bold mb-2 text-dark">1:1 Inquiries & Support</h3>
+                <h3 class="fw-bold mb-2 text-dark">1:1 Inquiries &amp; Support</h3>
                 <p class="text-muted mb-4 small">
                     Have questions about app usage, billing, or suggestions? Reach out directly and the developer will assist you promptly.
                 </p>
@@ -1041,9 +1375,274 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Simulator & Shorts Engine -->
+    <!-- PDF Worksheet Bank & Simulator & Shorts Engine -->
     <script>
         AOS.init({ duration: 800, once: true });
+
+        /* =========================================================================
+           0. v1.4 Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
+           ========================================================================= */
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const PDF_FOLDER = 'pdf';
+
+        /**
+         * 📌 1) Default fallback PDF list (Automatically overridden/merged with pdf/list.txt)
+         */
+        let PDF_EN_FILE_LIST = [
+            'add_1_1.pdf',
+            'sub_1_1.pdf',
+            'mul_1_1.pdf',
+            'div_1_1.pdf',
+            'clock_1_1.pdf'
+        ];
+
+        function addPdfRange(prefix, stage, startNum, endNum) {
+            for (let n = startNum; n <= endNum; n++) {
+                PDF_EN_FILE_LIST.push(`${prefix}_${stage}_${n}.pdf`);
+            }
+        }
+
+        const SUBJECT_LABEL_EN = {
+            'add': 'Addition',
+            'sub': 'Subtraction',
+            'mul': 'Multiplication',
+            'div': 'Division',
+            'clock': 'Clock'
+        };
+
+        let parsedPdfCatalog = [];
+        let currentSubjectKey = 'add';
+        let currentFilteredList = [];
+        let currentItemIndex = 0;
+        let currentPdfUrl = '';
+
+        // Parses 'add_122_123.pdf' or 'clock_1_1' with unlimited digits
+        function parsePdfFileName(rawEntry) {
+            let cleanEntry = rawEntry.trim().split('/').pop();
+            if (!cleanEntry) return null;
+            if (!cleanEntry.toLowerCase().endsWith('.pdf')) {
+                cleanEntry += '.pdf';
+            }
+
+            const match = cleanEntry.match(/^([a-zA-Z]+)_(\d+)_(\d+)\.pdf$/i);
+            if (!match) return null;
+
+            const rawPrefix = match[1].toLowerCase();
+            const stageNum = parseInt(match[2], 10);
+            const patternNum = parseInt(match[3], 10);
+
+            const subjectKey = SUBJECT_LABEL_EN[rawPrefix] ? rawPrefix : 'add';
+            const subjectEn = SUBJECT_LABEL_EN[subjectKey] || rawPrefix;
+
+            return {
+                fileName: cleanEntry,
+                url: `${PDF_FOLDER}/${cleanEntry}`,
+                subjectKey: subjectKey,
+                subjectEn: subjectEn,
+                stage: stageNum,
+                num: patternNum,
+                displayTitle: `${subjectEn} Stage ${stageNum} · #${patternNum} (${cleanEntry})`
+            };
+        }
+
+        // Natural numeric sort (1 -> 2 -> 10 -> 122)
+        function buildPdfCatalog(rawList) {
+            const uniqueSet = new Set(rawList.map(s => s.trim()).filter(Boolean));
+            const subjectOrder = { 'add': 1, 'sub': 2, 'mul': 3, 'div': 4, 'clock': 5 };
+
+            parsedPdfCatalog = Array.from(uniqueSet)
+                .map(parsePdfFileName)
+                .filter(Boolean)
+                .sort((a, b) => {
+                    const ordA = subjectOrder[a.subjectKey] || 99;
+                    const ordB = subjectOrder[b.subjectKey] || 99;
+                    if (ordA !== ordB) return ordA - ordB;
+                    if (a.stage !== b.stage) return a.stage - b.stage;
+                    return a.num - b.num;
+                });
+
+            ['add', 'sub', 'mul', 'div', 'clock'].forEach(subj => {
+                const count = parsedPdfCatalog.filter(x => x.subjectKey === subj).length;
+                const badgeEl = document.getElementById(`count-${subj}`);
+                if (badgeEl) badgeEl.textContent = count;
+            });
+        }
+
+        async function initPdfLibrary() {
+            // Priority 1: Load 'pdf/list.txt' automatically
+            try {
+                const listRes = await fetch(`${PDF_FOLDER}/list.txt`, { cache: 'no-cache' });
+                if (listRes.ok) {
+                    const text = await listRes.text();
+                    const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+                    if (lines.length > 0) {
+                        PDF_EN_FILE_LIST = [...new Set([...PDF_EN_FILE_LIST, ...lines])];
+                    }
+                }
+            } catch (e) {
+                // Proceed if list.txt is not reachable
+            }
+
+            // Priority 2: Auto-discover directory listing on local dev server
+            try {
+                const dirRes = await fetch(`./${PDF_FOLDER}/`);
+                if (dirRes.ok) {
+                    const htmlText = await dirRes.text();
+                    const matches = [...htmlText.matchAll(/href=["']([^"']+\.pdf)["']/gi)];
+                    if (matches.length > 0) {
+                        const discovered = matches.map(m => m[1].split('/').pop());
+                        if (discovered.length > 0) {
+                            PDF_EN_FILE_LIST = [...new Set([...PDF_EN_FILE_LIST, ...discovered])];
+                        }
+                    }
+                }
+            } catch (e) {
+                // Ignore on static hosting
+            }
+
+            buildPdfCatalog(PDF_EN_FILE_LIST);
+            selectPdfSubject('add', document.querySelector('.pdf-subject-btn[data-subj="add"]'));
+        }
+
+        function selectPdfSubject(subjectKey, btnEl) {
+            currentSubjectKey = subjectKey;
+            if (btnEl) {
+                document.querySelectorAll('#pdf-subject-tabs .pdf-subject-btn').forEach(b => b.classList.remove('active'));
+                btnEl.classList.add('active');
+            }
+
+            currentFilteredList = parsedPdfCatalog.filter(item => item.subjectKey === subjectKey);
+            const stageSelect = document.getElementById('pdf-stage-select');
+            const numSelect = document.getElementById('pdf-num-select');
+
+            if (currentFilteredList.length === 0) {
+                stageSelect.innerHTML = '<option value="">No stages available</option>';
+                numSelect.innerHTML = '<option value="">-</option>';
+                updateNavButtons();
+                return;
+            }
+
+            const stages = [...new Set(currentFilteredList.map(item => item.stage))].sort((a, b) => a - b);
+            stageSelect.innerHTML = stages.map(st => `<option value="${st}">Stage ${st}</option>`).join('');
+
+            populatePdfNumbersForStage(stages[0]);
+        }
+
+        function populatePdfNumbersForStage(stageNum, targetPatternNum = null) {
+            const numSelect = document.getElementById('pdf-num-select');
+            const stageItems = currentFilteredList
+                .filter(item => item.stage === stageNum)
+                .sort((a, b) => a.num - b.num);
+
+            numSelect.innerHTML = stageItems
+                .map(item => `<option value="${item.num}">#${item.num} (${item.fileName})</option>`)
+                .join('');
+
+            const chosenItem = (targetPatternNum !== null)
+                ? (stageItems.find(x => x.num === targetPatternNum) || stageItems[0])
+                : stageItems[0];
+
+            if (chosenItem) {
+                numSelect.value = chosenItem.num;
+                currentItemIndex = currentFilteredList.indexOf(chosenItem);
+                loadPdfItem(chosenItem);
+            }
+        }
+
+        function onPdfStageChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            if (!isNaN(stageVal)) {
+                populatePdfNumbersForStage(stageVal);
+            }
+        }
+
+        function onPdfNumberChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            const numVal = parseInt(document.getElementById('pdf-num-select').value, 10);
+            const foundIdx = currentFilteredList.findIndex(x => x.stage === stageVal && x.num === numVal);
+            if (foundIdx !== -1) {
+                currentItemIndex = foundIdx;
+                loadPdfItem(currentFilteredList[foundIdx]);
+            }
+        }
+
+        function stepPdfItem(delta) {
+            if (currentFilteredList.length === 0) return;
+            const nextIdx = currentItemIndex + delta;
+            if (nextIdx < 0 || nextIdx >= currentFilteredList.length) return;
+
+            const nextItem = currentFilteredList[nextIdx];
+            document.getElementById('pdf-stage-select').value = nextItem.stage;
+            populatePdfNumbersForStage(nextItem.stage, nextItem.num);
+        }
+
+        function pickRandomPdfItem() {
+            if (currentFilteredList.length <= 1) return;
+            let randIdx = currentItemIndex;
+            while (randIdx === currentItemIndex) {
+                randIdx = Math.floor(Math.random() * currentFilteredList.length);
+            }
+            const randItem = currentFilteredList[randIdx];
+            document.getElementById('pdf-stage-select').value = randItem.stage;
+            populatePdfNumbersForStage(randItem.stage, randItem.num);
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('pdf-prev-btn');
+            const nextBtn = document.getElementById('pdf-next-btn');
+            const randBtn = document.getElementById('pdf-random-btn');
+
+            if (prevBtn) prevBtn.disabled = (currentItemIndex <= 0);
+            if (nextBtn) nextBtn.disabled = (currentItemIndex >= currentFilteredList.length - 1);
+            if (randBtn) randBtn.disabled = (currentFilteredList.length <= 1);
+        }
+
+        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const page = await pdfDoc.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.8 });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+        }
+
+        async function loadPdfItem(item) {
+            updateNavButtons();
+
+            currentPdfUrl = item.url;
+            document.getElementById('current-pdf-title').textContent = item.displayTitle;
+            document.getElementById('pdf-open-btn').href = item.url;
+            document.getElementById('pdf-download-btn').href = item.url;
+            document.getElementById('pdf-download-btn').setAttribute('download', item.fileName);
+
+            const statusMsg = document.getElementById('pdf-status-msg');
+            const colPage2 = document.getElementById('pdf-col-page2');
+            statusMsg.classList.add('d-none');
+
+            try {
+                const pdfDoc = await pdfjsLib.getDocument(item.url).promise;
+                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1');
+
+                if (pdfDoc.numPages >= 2) {
+                    colPage2.classList.remove('d-none');
+                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2');
+                } else {
+                    colPage2.classList.add('d-none');
+                }
+            } catch (err) {
+                console.warn('PDF Load Notice:', err);
+                statusMsg.innerHTML = `📂 Could not find <code>${item.url}</code>. Please make sure <strong>${item.fileName}</strong> is placed inside the <code>${PDF_FOLDER}/</code> directory.`;
+                statusMsg.classList.remove('d-none');
+            }
+        }
+
+        function openCurrentPdfInNewTab() {
+            if (currentPdfUrl) {
+                window.open(currentPdfUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
 
         /* 1. Shorts Video Tab Switcher */
         function switchShortsTab(index, btn) {
@@ -1539,6 +2138,7 @@
         // Initialize On Load
         resizeSkyCanvas();
         renderClock();
+        initPdfLibrary();
     </script>
 </body>
 </html>
