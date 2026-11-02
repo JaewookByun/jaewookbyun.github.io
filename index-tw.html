@@ -1,366 +1,2150 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant-TW">
 <head>
+    <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW9DPCM02"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date()); 
-
+      gtag('js', new Date());
       gtag('config', 'G-DCW9DPCM02');
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="robots" content="index, follow">
     
-    <title>ChronoFit - AI 健康教練 & 條碼飲食紀錄 & 間歇訓練</title>
-    <meta name="description" content="透過客觀數據記錄身體的進化。從智慧手錶連動運動到條碼飲食紀錄，ChronoFit 將碎片化的健身數據整合為單一平台。">
-    <meta name="keywords" content="ChronoFit, 減肥 App, 飲食紀錄, 間歇計時器, HIIT, Galaxy Watch, Wear OS, 智慧手環, 條碼掃描, AI 分析, 健康連結, Health Connect, 能量平衡, Nutri-Score">
+    <title>Mathgotchi - 互動齒輪時鐘、兒童手寫數學與可列印 PDF 練習卷 | ChronoLab</title>
+    <meta name="description" content="由資工系教授爸爸為孩子打造的 100% 無廣告安心學習天地。親手撥動 24 小時連動齒輪學看時鐘、在螢幕上直接手寫四則運算（+、−、×、÷），並無限列印客製化 PDF 數學練習卷與紅筆詳解！">
+    <meta name="keywords" content="Mathgotchi, ChronoLab, 認識時鐘, 學看時間, 兒童數學, 國小數學, 可列印數學練習卷, PDF學習單, 直式加法, 減法, 乘法, 除法, 進位借位, 手寫辨識, 電子雞養成, 無廣告兒童App">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index-tw.html">
-
     <link rel="alternate" hreflang="en" href="https://www.chronolaboratory.com/index.html" />
     <link rel="alternate" hreflang="ko" href="https://www.chronolaboratory.com/index-kr.html" />
     <link rel="alternate" hreflang="ja" href="https://www.chronolaboratory.com/index-jp.html" />
     <link rel="alternate" hreflang="zh-Hant" href="https://www.chronolaboratory.com/index-tw.html" />
     <link rel="alternate" hreflang="zh-Hans" href="https://www.chronolaboratory.com/index-cn.html" />
-    <link rel="alternate" hreflang="zh-HK" href="https://www.chronolaboratory.com/index-hk.html" />
-    <link rel="alternate" hreflang="pt-BR" href="https://www.chronolaboratory.com/index-pt.html" />
-    <link rel="alternate" hreflang="pt-PT" href="https://www.chronolaboratory.com/index-pt-pt.html" />
-    <link rel="alternate" hreflang="es" href="https://www.chronolaboratory.com/index-es.html" />
-    <link rel="alternate" hreflang="es-ES" href="https://www.chronolaboratory.com/index-es-es.html" />
-    <link rel="alternate" hreflang="id" href="https://www.chronolaboratory.com/index-id.html" />
-    <link rel="alternate" hreflang="ms" href="https://www.chronolaboratory.com/index-ms.html" />
-    <link rel="alternate" hreflang="vi" href="https://www.chronolaboratory.com/index-vi.html" />
-    <link rel="alternate" hreflang="th" href="https://www.chronolaboratory.com/index-th.html" />
-    <link rel="alternate" hreflang="de" href="https://www.chronolaboratory.com/index-de.html" />
-    <link rel="alternate" hreflang="fr" href="https://www.chronolaboratory.com/index-fr.html" />
-    <link rel="alternate" hreflang="it" href="https://www.chronolaboratory.com/index-it.html" />
-    <link rel="alternate" hreflang="nl" href="https://www.chronolaboratory.com/index-nl.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.chronolaboratory.com/index.html" />
 
+    <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-tw.html">
-    <meta property="og:title" content="ChronoFit - 健身數據的進化">
-    <meta property="og:description" content="結合智慧手錶運動與條碼飲食紀錄。與 AI 健康教練一起開始科學化的訓練。">
-    <meta property="og:image" content="https://www.chronolaboratory.com/screenshot10.jpg">
+    <meta property="og:title" content="Mathgotchi - 互動齒輪時鐘、手寫數學與可列印 PDF 練習卷">
+    <meta property="og:description" content="告別選擇題亂猜！孩子在螢幕上直接手寫計算、轉動真實齒輪時鐘，還能無限列印附紅筆詳解的客製化 PDF 練習卷。">
+    <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="ChronoLab">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.chronolaboratory.com/index-tw.html">
-    <meta property="twitter:title" content="ChronoFit - AI 健康教練">
-    <meta property="twitter:description" content="從智慧手錶運動到條碼飲食紀錄，專業管理您的日常健身數據。">
-    <meta property="twitter:image" content="https://www.chronolaboratory.com/screenshot10.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.chronolaboratory.com/index-tw.html">
+    <meta name="twitter:title" content="Mathgotchi - 兒童手寫數學、互動時鐘與可列印 PDF 練習卷">
+    <meta name="twitter:description" content="告別選擇題亂猜！孩子在螢幕上直接手寫計算、轉動真實齒輪時鐘，還能無限列印客製化 PDF 練習卷。">
+    <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
 
-    <link rel="icon" href="supsiki.png" type="image/png">
-    
+    <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
+    <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
+
+    <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;800;900&family=Pretendard:wght@400;600;700;800;900&family=Inter:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style>
-        :root { --brand-color: #4f46e5; --brand-dark: #3730a3; --text-main: #1f2937; --bg-light: #f3f4f6; }
-        body { font-family: 'Noto Sans TC', sans-serif; color: var(--text-main); overflow-x: hidden; background-color: #fff; }
-        .navbar { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .btn-brand { background-color: var(--brand-color); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
-        .btn-brand:hover { background-color: var(--brand-dark); transform: translateY(-2px); color: white; }
-        .hero-section { padding-top: 120px; padding-bottom: 80px; background: radial-gradient(circle at 50% 50%, #eef2ff 0%, #ffffff 70%); overflow: hidden; }
-        .hero-headline { font-size: 3.5rem; font-weight: 900; line-height: 1.3; letter-spacing: -0.02em; background: linear-gradient(135deg, #1f2937 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .phone-frame { width: 300px; height: 600px; background: #000; border-radius: 40px; border: 12px solid #1f2937; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); margin: 0 auto; z-index: 10; }
-        .shorts-embed { width: 100%; height: 100%; border: none; object-fit: cover; }
-        .sticky-container { position: relative; padding: 100px 0; }
-        .sticky-visual { position: sticky; top: 150px; height: 650px; display: flex; align-items: center; justify-content: center; }
-        .step-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.3; transition: opacity 0.5s; }
-        .step-content.active { opacity: 1; }
-        .screen-content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background-color: white; display: flex; align-items: center; justify-content: center; }
-        .screen-content.active { opacity: 1; z-index: 2; }
-        .screen-content img { width: 100%; height: 100%; object-fit: cover; }
-        .custom-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2) !important; }
-        .scrollable-dropdown { max-height: 400px; overflow-y: auto; }
-        .feature-list i { font-size: 1.2rem; color: var(--brand-color); }
+    <!-- PDF.js Library (Live PDF Worksheet Renderer) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
-        @media (max-width: 768px) { .hero-headline { font-size: 2.2rem; } .sticky-visual { position: relative; top: 0; height: auto; margin-bottom: 50px; } .step-content { height: auto; padding: 40px 0; opacity: 1; } .phone-frame { width: 260px; height: 520px; } }
+    <style>
+        :root { 
+            --brand-purple: #6C5CE7; 
+            --brand-purple-dark: #5844e0;
+            --brand-yellow: #FFEAA7;
+            --brand-coral: #FF7675;
+            --brand-mint: #00B894;
+            --clay-bg: #FBF9F5;
+            --clay-card-bg: #FFFFFF;
+            --text-main: #2D3436; 
+            --text-sub: #636E72;
+            --toy-shadow: 0 12px 32px rgba(108, 92, 231, 0.12), 0 4px 12px rgba(0,0,0,0.04);
+            --toy-lip: 0 5px 0 #5240d6;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { max-width: 100vw; overflow-x: hidden; }
+
+        body { 
+            font-family: 'Noto Sans TC', 'Inter', 'Pretendard', sans-serif; 
+            color: var(--text-main); 
+            background-color: var(--clay-bg);
+            word-break: keep-all;
+            overflow-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 118, 117, 0.03) 0%, transparent 25%);
+        }
+
+        /* 3D Clay Button Base */
+        .btn-clay {
+            border-radius: 50px;
+            font-weight: 800;
+            transition: all 0.15s ease-in-out;
+            border: none;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .btn-clay:active {
+            transform: translateY(3px) !important;
+        }
+
+        /* Store Buttons */
+        .btn-appstore {
+            background: #1E1B4B;
+            color: #FFFFFF !important;
+            padding: 10px 24px;
+            box-shadow: 0 5px 0 #0F0E26, 0 10px 20px rgba(0,0,0,0.15);
+            min-height: 52px;
+        }
+        .btn-appstore:hover {
+            background: #2D276D;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #0F0E26, 0 14px 24px rgba(0,0,0,0.2);
+        }
+        .btn-appstore:active {
+            box-shadow: 0 2px 0 #0F0E26 !important;
+        }
+
+        .btn-googleplay {
+            background: #FFFFFF;
+            color: #1E1B4B !important;
+            padding: 10px 24px;
+            border: 2px solid #E2E8F0;
+            box-shadow: 0 5px 0 #CBD5E1, 0 10px 20px rgba(0,0,0,0.08);
+            min-height: 52px;
+            cursor: pointer;
+        }
+        .btn-googleplay:hover {
+            background: #F8FAFC;
+            border-color: #CBD5E1;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #94A3B8, 0 14px 24px rgba(0,0,0,0.12);
+        }
+        .btn-googleplay:active {
+            box-shadow: 0 2px 0 #CBD5E1 !important;
+        }
+
+        /* Learn Minute Hand & Primary Action Button */
+        .btn-learn-minute {
+            background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
+            color: #FFFFFF !important;
+            padding: 11px 26px;
+            box-shadow: 0 5px 0 #372A99, 0 10px 20px rgba(108, 92, 231, 0.25);
+            font-size: 0.95rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 5;
+        }
+        .btn-learn-minute:hover {
+            background: linear-gradient(135deg, #7C6EF0 0%, #5844E0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #372A99, 0 14px 24px rgba(108, 92, 231, 0.35);
+        }
+        .btn-learn-minute:active {
+            box-shadow: 0 2px 0 #372A99 !important;
+        }
+
+        /* Contact Button */
+        .btn-support-email {
+            background-color: #EDE9FE;
+            color: #6D28D9;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 9px 18px;
+            border: 1.5px solid #DDD6FE;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+        }
+        .btn-support-email:hover {
+            background-color: #DDD6FE;
+            color: #5B21B6;
+            transform: translateY(-2px);
+        }
+
+        /* Navigation Bar */
+        .navbar { 
+            backdrop-filter: blur(14px); 
+            background: rgba(251, 249, 245, 0.92); 
+            border-bottom: 2px solid rgba(226, 232, 240, 0.6); 
+        }
+        .nav-app-switcher .nav-link {
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .nav-app-switcher .nav-link.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 3px 0 #DDD6FE, 0 6px 12px rgba(108, 92, 231, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section { 
+            padding-top: 135px; 
+            padding-bottom: 70px; 
+            position: relative;
+        }
+        .hero-badge {
+            background: #EDE9FE;
+            color: #6D28D9;
+            font-weight: 800;
+            font-size: 0.88rem;
+            border: 1.5px solid #DDD6FE;
+            box-shadow: 0 3px 0 #DDD6FE;
+        }
+        .release-pill {
+            background: #DCFCE7;
+            color: #166534;
+            font-weight: 800;
+            font-size: 0.85rem;
+            border: 1.5px solid #BBF7D0;
+            box-shadow: 0 3px 0 #BBF7D0;
+        }
+        .hero-headline { 
+            font-size: clamp(2rem, 6.2vw, 3.3rem);
+            font-weight: 900; 
+            line-height: 1.3; 
+            letter-spacing: -0.02em; 
+            color: #1E1B4B;
+        }
+        .hero-headline span.highlight {
+            background: linear-gradient(135deg, #6C5CE7 0%, #FF7675 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Shorts Toy Showroom */
+        .shorts-toy-wrapper {
+            background: #FFFFFF;
+            border-radius: 36px;
+            padding: 16px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
+            border: 3px solid #F1F5F9;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+        .shorts-pill-tabs {
+            display: flex;
+            gap: 8px;
+            background: #F1F5F9;
+            padding: 6px;
+            border-radius: 24px;
+            margin-bottom: 14px;
+        }
+        .shorts-tab-btn {
+            flex: 1;
+            padding: 9px 8px;
+            border: none;
+            background: transparent;
+            font-weight: 800;
+            font-size: 0.82rem;
+            color: #64748B;
+            border-radius: 18px;
+            transition: all 0.2s ease;
+            line-height: 1.35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .shorts-tab-btn.active {
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        .shorts-screen-frame {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #0F172A;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        .shorts-fallback-poster {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
+            color: #FFFFFF;
+        }
+
+        /* 🖨️ v1.4 Printable PDF Worksheet Bank Section */
+        .pdf-showcase-section {
+            padding: 85px 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
+            border-top: 3px solid #EDE9FE;
+            position: relative;
+        }
+        .pdf-spec-pill {
+            background: #FFFFFF;
+            border: 2px solid #EDE9FE;
+            border-radius: 20px;
+            padding: 14px 18px;
+            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.06), 0 3px 0 #EDE9FE;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .pdf-spec-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #F3EEFF;
+            color: var(--brand-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .pdf-library-card {
+            background: #FFFFFF;
+            border-radius: 36px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.14), 0 6px 0 #DDD6FE;
+            border: 3px solid #EDE9FE;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .pdf-subject-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+        .pdf-subject-btn {
+            background: #F8FAFC;
+            color: #475569;
+            border: 2px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 9px 20px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            box-shadow: 0 3px 0 #E2E8F0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pdf-subject-btn .count-pill {
+            background: #E2E8F0;
+            color: #475569;
+            font-size: 0.72rem;
+            padding: 1px 7px;
+            border-radius: 20px;
+            font-weight: 900;
+        }
+        .pdf-subject-btn:hover, .pdf-subject-btn.active {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+            border-color: var(--brand-purple-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 #4834D4, 0 8px 16px rgba(108, 92, 231, 0.25);
+        }
+        .pdf-subject-btn.active .count-pill,
+        .pdf-subject-btn:hover .count-pill {
+            background: rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+        }
+
+        /* Infinite Stage & Worksheet Selector Toolbar */
+        .pdf-selector-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            border-radius: 22px;
+            border: 1.5px solid #E2E8F0;
+            margin-bottom: 18px;
+        }
+        .pdf-select-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+        .pdf-select-box {
+            background-color: #FFFFFF;
+            border: 2px solid #CBD5E1;
+            border-radius: 14px;
+            padding: 7px 32px 7px 14px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #1E293B;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #E2E8F0;
+        }
+        .pdf-select-box:focus {
+            border-color: var(--brand-purple);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+        }
+        .pdf-nav-btn {
+            background: #FFFFFF;
+            color: #334155;
+            border: 1.5px solid #CBD5E1;
+            border-radius: 14px;
+            padding: 7px 13px;
+            font-size: 0.84rem;
+            font-weight: 800;
+            transition: all 0.15s ease;
+            box-shadow: 0 2px 0 #E2E8F0;
+        }
+        .pdf-nav-btn:hover:not(:disabled) {
+            background: #EDE9FE;
+            color: var(--brand-purple);
+            border-color: #C4B5FD;
+        }
+        .pdf-nav-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .pdf-paper-stage {
+            background: #F1F5F9;
+            border-radius: 24px;
+            padding: 20px;
+            border: 2px solid #E2E8F0;
+        }
+        .pdf-sheet-box {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #E2E8F0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pdf-canvas-wrap {
+            position: relative;
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px;
+            border: 1px solid #F1F5F9;
+            cursor: zoom-in;
+        }
+        .pdf-canvas-wrap canvas {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Interactive Web Simulator */
+        .simulator-section {
+            padding: 90px 0;
+            background: #FFFFFF;
+            border-top: 3px solid #F1F5F9;
+            border-bottom: 3px solid #F1F5F9;
+            position: relative;
+        }
+        .sim-container-card {
+            background: var(--clay-bg);
+            border-radius: 36px;
+            border: 3px solid #EDE9FE;
+            box-shadow: 0 16px 40px rgba(108, 92, 231, 0.08), 0 6px 0 #DDD6FE;
+            overflow: hidden;
+        }
+        .sim-nav-tabs {
+            display: flex;
+            background: #EDE9FE;
+            padding: 8px 12px;
+            gap: 10px;
+        }
+        .sim-nav-btn {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            font-weight: 900;
+            font-size: 1.02rem;
+            color: #6D28D9;
+            border-radius: 22px;
+            transition: all 0.2s;
+        }
+        .sim-nav-btn.active {
+            background: #FFFFFF;
+            color: #4C1D95;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15), 0 3px 0 #C4B5FD;
+        }
+
+        /* 1) Clock Simulator */
+        .clock-sim-box {
+            position: relative;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 540px;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
+        }
+        .clock-sky-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 0 0 32px 32px;
+            z-index: 1;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        #skyCelestialCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .clock-interactive-canvas {
+            position: relative;
+            z-index: 5;
+            touch-action: none;
+            cursor: grab;
+            filter: drop-shadow(0 16px 30px rgba(0,0,0,0.18));
+        }
+        .clock-interactive-canvas:active { cursor: grabbing; }
+
+        .clock-digital-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #1E1B4B;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 3px 0 #E2E8F0;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clock-guide-pill {
+            position: relative;
+            z-index: 5;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            padding: 7px 18px;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            display: inline-flex;
+            align-items: center;
+            max-width: 90%;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .clock-guide-pill span {
+            color: #1E293B;
+            font-size: 0.85rem;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        /* 2) Column Addition Simulator */
+        .math-sim-box {
+            position: relative;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 540px;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
+        }
+        .math-quiz-board {
+            position: relative;
+            background: #FFFFFF;
+            border: 3px solid #E2E8F0;
+            border-radius: 28px;
+            padding: 22px 28px 42px 28px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            max-width: 480px;
+            width: 100%;
+            background-image: 
+                linear-gradient(#F1F5F9 1.5px, transparent 1.5px),
+                linear-gradient(90deg, #F1F5F9 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .vertical-math-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 4px auto 0 auto;
+            width: fit-content;
+        }
+
+        .math-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .col-op {
+            width: 44px;
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1E293B;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .col-tens, .col-units {
+            width: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fredoka', 'Inter', monospace;
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: #1E293B;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .carry-row { margin-bottom: 2px; }
+        .carry-row .col-tens { height: 36px; }
+
+        .carry-dashed-circle {
+            width: 34px;
+            height: 34px;
+            border: 2px dashed #94A3B8;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .vertical-math-line {
+            width: 100%;
+            min-width: 220px;
+            height: 4px;
+            background: #1E293B;
+            border-radius: 4px;
+            margin: 8px 0 14px 0;
+        }
+
+        .answer-slot-box {
+            width: 68px;
+            height: 76px;
+            background: rgba(108, 92, 231, 0.08);
+            border: 2.5px dashed rgba(108, 92, 231, 0.5);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .answer-slot-box::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed rgba(108, 92, 231, 0.3);
+        }
+        .answer-slot-box::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            border-left: 1px dashed rgba(108, 92, 231, 0.3);
+        }
+
+        #mathFullCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            touch-action: none;
+            cursor: crosshair;
+        }
+
+        .canvas-guide-overlay {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #7C3AED;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px dashed rgba(124, 58, 237, 0.25);
+            padding: 3px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            pointer-events: none;
+            z-index: 5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            white-space: nowrap;
+        }
+
+        .large-card-full-overlay {
+            display: none;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 25;
+            padding: 24px 18px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 0 0 32px 32px;
+            animation: fadeIn 0.25s ease-out;
+        }
+        .large-card-overlay-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .feature-box {
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
+            border: 2px solid #F1F5F9;
+            height: 100%;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-section { padding-top: 110px; padding-bottom: 40px; }
+            .shorts-toy-wrapper { max-width: 330px; }
+            .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .pdf-library-card { padding: 14px; border-radius: 24px; }
+            .pdf-paper-stage { padding: 12px; }
+            .pdf-selector-toolbar { justify-content: center; }
+            .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
+            .math-quiz-board { padding: 18px 20px 38px 20px; }
+            
+            .col-op { width: 36px; font-size: 2.2rem; }
+            .col-tens, .col-units { width: 58px; font-size: 2.7rem; }
+            .math-row { gap: 10px; }
+            .answer-slot-box { width: 58px; height: 66px; }
+            .vertical-math-line { min-width: 180px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Fixed Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index-tw.html">
-                <img src="supsiki.png" alt="Logo" width="40" height="40" class="me-2">
-                ChronoFit
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index-tw.html">
+                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
+                <span style="font-weight: 900; letter-spacing: -0.02em;">ChronoLab</span>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="ms-auto d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                    <div class="dropdown me-2">
-                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            🌐 繁體中文 (台灣)
+                <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index-tw.html">⏰ Mathgotchi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chronofit.html">🏋️ ChronoFit</a>
+                    </li>
+                </ul>
+
+                <div class="ms-auto d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
+                    <div class="dropdown position-relative">
+                        <button class="btn btn-light dropdown-toggle btn-sm rounded-pill border px-3 fw-bold" type="button" data-bs-toggle="dropdown">
+                            🌐 繁體中文
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 scrollable-dropdown">
-                            <li><a class="dropdown-item active" href="index-tw.html">繁體中文 (Taiwan)</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
+                        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 shadow rounded-4">
                             <li><a class="dropdown-item" href="index.html">English</a></li>
+                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
                             <li><a class="dropdown-item" href="index-jp.html">日本語 (Japanese)</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-hk.html">繁體中文 (Hong Kong)</a></li>
-                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (China)</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-es.html">Español</a></li>
-                            <li><a class="dropdown-item" href="index-pt.html">Português</a></li>
-                            <li><a class="dropdown-item" href="index-de.html">Deutsch</a></li>
-                            <li><a class="dropdown-item" href="index-fr.html">Français</a></li>
-                            <li><a class="dropdown-item" href="index-it.html">Italiano</a></li>
-                            <li><a class="dropdown-item" href="index-nl.html">Nederlands</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index-id.html">Bahasa Indonesia</a></li>
-                            <li><a class="dropdown-item" href="index-ms.html">Bahasa Melayu</a></li>
-                            <li><a class="dropdown-item" href="index-vi.html">Tiếng Việt</a></li>
-                            <li><a class="dropdown-item" href="index-th.html">ไทย</a></li>
+                            <li><a class="dropdown-item active fw-bold" href="index-tw.html">繁體中文 (Traditional Chinese)</a></li>
+                            <li><a class="dropdown-item" href="index-cn.html">简体中文 (Simplified Chinese)</a></li>
                         </ul>
                     </div>
-                    <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-outline-danger btn-sm fw-bold"><i class="bi bi-megaphone-fill me-1"></i> 最新消息</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-sm">下載應用程式</a>
+
+                    <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-sm px-3">
+                        <i class="bi bi-envelope-fill me-1"></i> 聯絡客服
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section & Shorts Toy Showroom -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0" data-aos="fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill mb-4">🚀 ChronoFit 正式發布</span>
-                    <h1 class="hero-headline mb-4">記錄身體隨時間的演變，<br>請使用<strong>客觀數據</strong>。</h1>
-                    <p class="lead text-secondary mb-5">從智慧手錶連動運動到條碼飲食紀錄。<br>將碎片化的健身數據整合至單一無縫平台。</p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.supsiki" target="_blank" class="btn btn-brand btn-lg d-flex align-items-center"><i class="bi bi-google-play me-2"></i> Google Play 下載</a>
-                        <a href="#features" class="btn btn-outline-dark btn-lg rounded-pill px-4">探索功能</a>
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <!-- Left: Headline & Store CTA -->
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
+                        <span class="badge hero-badge px-3 py-2 rounded-pill">
+                            👨‍👧‍👦 資工系教授爸爸用心打造
+                        </span>
+                        <span class="badge release-pill px-3 py-2 rounded-pill">
+                             App Store 正式上架
+                        </span>
+                        <span class="badge release-pill px-3 py-2 rounded-pill">
+                            ▶ Google Play 正式上架
+                        </span>
+                    </div>
+                    
+                    <h1 class="hero-headline mb-3">
+                        當枯燥的算術練習變得像遊戲，<br>
+                        <span class="highlight">孩子開始主動愛上解題！</span>
+                    </h1>
+                    
+                    <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
+                        告別選擇題盲目亂猜與滿桌凌亂的計算紙！親手撥動真實感連動齒輪，輕鬆理解 24 小時日夜變化；在螢幕上直接手寫四則運算（+、&minus;、&times;、&divide;），還能在家無限列印客製化 PDF 數學練習卷！
+                    </p>
+
+                    <!-- Store Download Buttons -->
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
+                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
+                            <i class="bi bi-apple fs-3"></i>
+                            <div class="text-start" style="line-height: 1.15;">
+                                <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
+                                <div style="font-size: 1.05rem; font-weight: 800;">App Store</div>
+                            </div>
+                        </a>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-googleplay">
+                            <i class="bi bi-google-play fs-3" style="color: #00B894;"></i>
+                            <div class="text-start" style="line-height: 1.15;">
+                                <div style="font-size: 0.68rem; color: #64748B;">GET IT ON</div>
+                                <div style="font-size: 1.05rem; font-weight: 800; color: #1E1B4B;">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="text-muted small mt-2">
+                        🛡️ 100% 無廣告 &bull; 裝置端隱私加密保護 &bull; 7 天免費安心試用
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="phone-frame"><iframe class="shorts-embed" src="https://www.youtube.com/embed/Iu1lAzE5lhg?autoplay=1&mute=1&loop=1&playlist=Iu1lAzE5lhg&controls=0&rel=0" title="ChronoFit Preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                <!-- Right: Shorts Toy Showroom -->
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="shorts-toy-wrapper">
+                        <!-- Tab Buttons -->
+                        <div class="shorts-pill-tabs">
+                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
+                                ✍️ 免計算紙・直式手寫運算
+                            </button>
+                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
+                                ⏰ 認識時鐘 <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">短片製作中 🎬</span>
+                            </button>
+                        </div>
+
+                        <!-- 9:16 Screen Frame -->
+                        <div class="shorts-screen-frame">
+                            <!-- Tab 1: Embedded Shorts Video -->
+                            <div id="shorts-box-1" class="w-100 h-100">
+                                <iframe id="shorts-iframe-1" 
+                                        class="w-100 h-100 border-0" 
+                                        src="https://www.youtube.com/embed/yHDBDWX4_KU?autoplay=1&mute=1&loop=1&playlist=yHDBDWX4_KU&playsinline=1&rel=0" 
+                                        title="國小數學：換了平板學習，卻還是離不開計算紙嗎？" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <!-- Tab 2: Clock Shorts In-Production Notice -->
+                            <div id="shorts-box-2" class="shorts-fallback-poster d-none">
+                                <div class="fs-1 mb-2">🎬</div>
+                                <span class="badge bg-primary text-white px-3 py-1 rounded-pill fw-bold mb-2">SHORTS COMING SOON</span>
+                                <h5 class="fw-bold mb-2 text-white">互動時鐘教學短片製作中</h5>
+                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.6;">
+                                    <strong>完整的互動時鐘功能已在 Mathgotchi App 中正式上線！</strong><br>
+                                    展示 24 小時日夜與齒輪連動的實機操作短片即將公開。
+                                </p>
+                                <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold" onclick="document.querySelector('.simulator-section').scrollIntoView({behavior: 'smooth'})">
+                                    👇 先在下方體驗網頁版時鐘模擬器
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 🖨️ v1.4 New: Unlimited Printable PDF Worksheet Bank -->
+    <section id="pdf-bank-section" class="pdf-showcase-section">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
+                    🖨️ v1.4 重大更新 &bull; 無限可列印 PDF 數學練習題庫
+                </span>
+                <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.35;">
+                    擔心孩子長時間盯著螢幕嗎？<br>
+                    <span style="color: var(--brand-purple);">在家輕鬆列印客製化紙本練習卷！</span>
+                </h2>
+                <p class="text-muted mx-auto mb-4" style="max-width: 740px; line-height: 1.75; font-size: 1.02rem;">
+                    先透過螢幕互動理解數學原理，再讓孩子拿起鉛筆在紙上靜心練習。<br class="d-none d-md-inline">
+                    從紙張尺寸到步驟詳解，每個細節都為居家列印量身打造。
+                </p>
+
+                <!-- 4 Key Customization Highlights -->
+                <div class="row g-3 justify-content-center mx-auto mb-4 text-start" style="max-width: 980px;">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">📐</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">A4 至 A0 &bull; 直向/橫向</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">支援各種紙張尺寸與方向</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🔢</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">自由調整每頁題數</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">依孩子專注力設定題目密度</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">💡</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">視覺化輔助引導格</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">進位、借位與估商提示框</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="pdf-spec-pill">
+                            <div class="pdf-spec-icon">🖍️</div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">紅筆步驟詳解卷</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">完整呈現每一步計算過程</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live PDF Worksheet Showroom (Connected to 'pdf/' folder & 'pdf/list.txt') -->
+            <div class="pdf-library-card" data-aos="zoom-in">
+                <!-- 1. 5 Subject Tabs -->
+                <div class="pdf-subject-tabs" id="pdf-subject-tabs">
+                    <button type="button" class="pdf-subject-btn active" data-subj="add" onclick="selectPdfSubject('add', this)">
+                        ➕ 加法 <span class="count-pill" id="count-add">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="sub" onclick="selectPdfSubject('sub', this)">
+                        ➖ 減法 <span class="count-pill" id="count-sub">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="mul" onclick="selectPdfSubject('mul', this)">
+                        ✖️ 乘法 <span class="count-pill" id="count-mul">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" data-subj="div" onclick="selectPdfSubject('div', this)">
+                        ➗ 除法 <span class="count-pill" id="count-div">1</span>
+                    </button>
+                    <button type="button" class="pdf-subject-btn" id="tab-btn-clock" data-subj="clock" onclick="selectPdfSubject('clock', this)">
+                        ⏰ 時鐘 <span class="count-pill" id="count-clock">1</span>
+                    </button>
+                </div>
+
+                <!-- 2. Stage & Worksheet Number Selector Toolbar -->
+                <div class="pdf-selector-toolbar">
+                    <div class="pdf-select-group">
+                        <label for="pdf-stage-select" class="small fw-bold text-secondary mb-0">階段 (Stage)</label>
+                        <select id="pdf-stage-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfStageChange()">
+                            <!-- Populated dynamically in natural numeric order (Stage 1 ~ Stage N) -->
+                        </select>
+
+                        <label for="pdf-num-select" class="small fw-bold text-secondary mb-0 ms-1">練習卷編號 #</label>
+                        <select id="pdf-num-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfNumberChange()">
+                            <!-- Populated dynamically (#1 ~ #N) -->
+                        </select>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" id="pdf-prev-btn" class="pdf-nav-btn" onclick="stepPdfItem(-1)" title="上一份練習卷">
+                            <i class="bi bi-chevron-left"></i> 上一份
+                        </button>
+                        <button type="button" id="pdf-random-btn" class="pdf-nav-btn" onclick="pickRandomPdfItem()" title="隨機挑選範例">
+                            🎲 隨機挑選
+                        </button>
+                        <button type="button" id="pdf-next-btn" class="pdf-nav-btn" onclick="stepPdfItem(1)" title="下一份練習卷">
+                            下一份 <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Dual Page Live PDF Stage (Page 1: Worksheet / Page 2: Red-Pen Solution Key) -->
+                <div class="pdf-paper-stage">
+                    <div class="row g-3 justify-content-center" id="pdf-pages-row">
+                        <!-- Page 1: Student Worksheet -->
+                        <div class="col-md-6" id="pdf-col-page1">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-dark rounded-pill px-3 py-1">📄 第 1 頁：學生練習卷</span>
+                                    <span class="text-muted small fw-bold font-monospace" id="current-pdf-title">add_1_1.pdf</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="點擊在新分頁開啟完整 PDF">
+                                    <canvas id="pdfCanvasPage1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Page 2: Red-Pen Solution Key -->
+                        <div class="col-md-6" id="pdf-col-page2">
+                            <div class="pdf-sheet-box">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ 第 2 頁：紅筆詳解答案卷</span>
+                                    <span class="text-danger small fw-bold">附完整計算過程與步驟</span>
+                                </div>
+                                <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="點擊在新分頁開啟完整 PDF">
+                                    <canvas id="pdfCanvasPage2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status / Loading Message -->
+                    <div id="pdf-status-msg" class="text-center text-muted small py-2 d-none"></div>
+                </div>
+
+                <!-- 4. Bottom Print & Download Action Bar -->
+                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
+                    <span class="text-muted small">
+                        💡 點擊上方練習卷畫面或右側按鈕，免註冊即可立即開啟列印！
+                    </span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a id="pdf-open-btn" href="pdf/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
+                            <i class="bi bi-printer-fill"></i> 開啟完整 PDF &bull; 列印
+                        </a>
+                        <a id="pdf-download-btn" href="pdf/add_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
+                            <i class="bi bi-download"></i> 儲存 PDF
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="sticky-container bg-light">
+    <!-- Interactive Web Simulator -->
+    <section class="simulator-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="sticky-visual">
-                        <div class="phone-frame bg-white">
-                            <div class="screen-content active" id="screen-1"><img src="screenshot10.jpg" alt="Daily Report"></div>
-                            <div class="screen-content" id="screen-2"><img src="screenshot11.jpg" alt="Energy Balance"></div>
-                            <div class="screen-content" id="screen-3"><img src="screenshot12.jpg" alt="AI Coach Report"></div>
-                            <div class="screen-content" id="screen-4"><img src="screenshot13.jpg" alt="Barcode Scan"></div>
-                            <div class="screen-content" id="screen-5"><img src="screenshot14.jpg" alt="Nutrition Analysis"></div>
-                            <div class="screen-content" id="screen-6"><img src="screenshot15.jpg" alt="Comparison"></div>
-                            <div class="screen-content" id="screen-7"><img src="screenshot1.jpg" alt="Wear OS"></div>
-                            <div class="screen-content" id="screen-8"><img src="screenshot2.jpg" alt="Smart Band"></div>
-                            <div class="screen-content" id="screen-9"><img src="screenshot3.jpg" alt="Social Share"></div>
-                            <div class="screen-content" id="screen-10"><img src="screenshot4.jpg" alt="Overlay Extraction"></div>
-                            <div class="screen-content" id="screen-11"><img src="screenshot5.jpg" alt="Video Guide"></div>
-                            <div class="screen-content" id="screen-12"><img src="screenshot6.jpg" alt="Creator Promotion"></div>
-                            <div class="screen-content" id="screen-13"><img src="screenshot7.jpg" alt="Exercise DB"></div>
-                            <div class="screen-content" id="screen-14"><img src="screenshot8.jpg" alt="Charts"></div>
-                            <div class="screen-content" id="screen-15"><img src="screenshot9.jpg" alt="AI Workout Analysis"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 order-lg-1">
-                    <div class="step-content active" data-index="1" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-success"><i class="bi bi-clipboard-check"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">從起床到入睡，<br>最完整的每日報告。</h2>
-                            <p class="lead text-muted mb-4">ChronoFit 的目標是精確捕捉您的營養、水分攝取、身體指標（體重、肌肉量、血糖等）以及運動紀錄，打造擁有最佳能量平衡的健康一天。</p>
-                            <ul class="list-unstyled text-muted lead feature-list">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>健康連結自動同步：</strong> 輕鬆同步來自其他 App 的睡眠、血壓及體組成數據。</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>精準條碼紀錄：</strong> 透過單次掃描立即紀錄精確營養與成分，消除手動輸入錯誤。</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i><strong>間歇訓練與 AI 分析：</strong> 結合智慧手錶連動與全面的 AI 評估，提升您的訓練成效。</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="2" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-warning"><i class="bi bi-battery-charging"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">時間序列能量平衡與<br>直觀動畫指引。</h2>
-                            <p class="lead text-muted">起床後即依時間順序追蹤運動、餐飲及水分攝取。我們根據您的基礎代謝率(BMR)與飲食目標，即時分析熱量及營養盈虧。讓直觀的動畫引導您在一天結束前達到完美平衡。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="3" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-robot"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">超個性化 AI 健康教練<br>深度分析報告。</h2>
-                            <p class="lead text-muted">超越簡單的紀錄摘要。根據收集的數據提供專家級指導，產出包含血糖穩定性、脂肪燃燒效率等的「代謝評分」。體驗依查看時間提供的貼身反饋與明日身體變化的預測。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="4" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-success"><i class="bi bi-upc-scan"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">條碼掃描驅動的<br>精準食品紀錄。</h2>
-                            <p class="lead text-muted">擺脫手動輸入或影像辨識的誤差。只需掃描產品條碼，即可精確紀錄詳細營養成分與原料清單。真正的健康管理，從數據的完整性開始。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="5" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-danger"><i class="bi bi-info-circle"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">食品精密分析與<br>量身定制營養模擬。</h2>
-                            <p class="lead text-muted">結合 Nutri-Score 與詳細成分分析來評估食品品質。攝取前，可模擬產品對個人飲食目標（如高蛋白需求）的影響比重，引導您做出最佳攝取決策。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="6" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-view-list"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">多重條碼掃描與<br>實時產品對比。</h2>
-                            <p class="lead text-muted">不再為相似產品猶豫不決。連續掃描多個條碼，在單一螢幕直觀對比核心營養成分。基於數據的快速判斷，助您立即選擇最符合需求的食品。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="7" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-danger"><i class="bi bi-smartwatch"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">專用 Wear OS 應用程式<br>實時訓練引導。</h2>
-                            <p class="lead text-muted">在智慧手錶安裝專屬 App，實時同步心率、熱量消耗與強度。遵循手錶上的直觀引導，與您自定義的 HIIT 課表完美同步。</p>
-                        </div>
-                    </div>
-                    
-                    <div class="step-content" data-index="8" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-activity"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">支援智慧手環與<br>非 Wear OS 設備。</h2>
-                            <p class="lead text-muted">Galaxy Fit 等手環使用者同樣能享受專業功能。搭配 App 內計時器，透過 Health Connect 進行數據融合(Data Fusion)，AI 將自動根據運動段落進行分析。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="9" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-warning"><i class="bi bi-share"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">運動紀錄視覺化與<br>社群媒體分享。</h2>
-                            <p class="lead text-muted">將成功的訓練成果化為影像紀錄。直接在照片添加包含時間、熱量與心率區間的直觀疊加貼紙，輕鬆分享，激勵自己與他人。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="10" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-dark"><i class="bi bi-camera-video"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">數據疊加影片提取<br>健身創作者專屬 (PRO)。</h2>
-                            <p class="lead text-muted">革命性縮短影片剪輯時間。專注於拍攝運動，ChronoFit 可提取包含計時器、心率與熱量的視覺化數據片段，直接放入剪輯時間軸完成專業內容。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="11" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-danger"><i class="bi bi-youtube"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">實時影片連動與<br>A-B 段落重複引導。</h2>
-                            <p class="lead text-muted">連結 YouTube 影片，邊看邊練。設定特定片段循環播放，掌握正確姿勢與節奏，確保完美執行每個複雜動作。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="12" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-play-btn"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">使用者參與型策展與<br>創作者推廣。</h2>
-                            <p class="lead text-muted">自行註冊喜歡的運動影片。創作者可藉此推廣頻道，系統將依社群評價僅展示前 50 名優質內容，讓高品質內容被看見。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="13" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-secondary"><i class="bi bi-clipboard-data"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">運動資料庫與<br>基於數據的精準分析。</h2>
-                            <p class="lead text-muted">從徒手到重訓器材，我們建立完整的運動方法與目標肌肉刺激數據庫，提供客觀精確的成效評分。體驗專業的數據分析報告。</p>
-                        </div>
-                    </div>
-                    
-                    <div class="step-content" data-index="14" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-primary"><i class="bi bi-bar-chart-line"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">組別數據細分與<br>綜合運動圖表。</h2>
-                            <p class="lead text-muted">精確區分間歇訓練每組的心率、距離與步數，透過細分圖表掌握全場表現與體能變化，幫助您建立更系統化的訓練計畫。</p>
-                        </div>
-                    </div>
-
-                    <div class="step-content" data-index="15" data-aos="fade-up">
-                        <div class="ps-lg-5">
-                            <div class="fs-1 mb-3 text-info"><i class="bi bi-cpu"></i></div>
-                            <h2 class="display-5 fw-bold mb-3">結合感測數據的<br>AI 運動分析報告。</h2>
-                            <p class="lead text-muted">整合運動類型、負重次數、EMOM/AMRAP 模式與裝置實時感測數據，由 AI 產出全面客觀的身體性能診斷報告。</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">網頁版即時體驗</span>
+                <h2 class="fw-bold display-6 mb-2">下載前，先在網頁上親手體驗看看！</h2>
+                <p class="text-muted">用手指或滑鼠撥動時鐘指針，或在方格紙上直接手寫直式加法。</p>
             </div>
-        </div>
-    </section>
 
-    <section class="py-5" style="background-color: #f8fafc;">
-        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="p-5 rounded-4 text-center border shadow-sm bg-white position-relative overflow-hidden">
-                        <i class="bi bi-youtube position-absolute text-danger opacity-10" style="font-size: 15rem; right: -50px; bottom: -50px; transform: rotate(-15deg);"></i>
-                        <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill"><i class="bi bi-broadcast me-2"></i>實時更新</span>
-                        <h2 class="fw-bold mb-3">與開發者直接交流</h2>
-                        <p class="text-muted mb-4 lead">透過 <strong>YouTube 社群</strong> 獲取最新更新、回報問題或提出建議。<br>您的意見將直接影響 ChronoFit 的未來！</p>
-                        <a href="https://www.youtube.com/@bjw0829/posts" target="_blank" class="btn btn-danger btn-lg rounded-pill px-5 fw-bold shadow-sm custom-hover"><i class="bi bi-chat-dots-fill me-2"></i> 造訪社群頁面</a>
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <div class="sim-container-card">
+                        
+                        <!-- Sandbox Nav Tabs -->
+                        <div class="sim-nav-tabs">
+                            <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
+                                ⏰ 互動齒輪時鐘模擬器
+                            </button>
+                            <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
+                                ✍️ 免計算紙・直式手寫運算
+                            </button>
+                        </div>
+
+                        <!-- 1) Interactive Clock Simulator -->
+                        <div id="sim-box-clock" class="clock-sim-box">
+                            <div id="sky-gradient-bg" class="clock-sky-bg" style="background: linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%);">
+                                <canvas id="skyCelestialCanvas"></canvas>
+                            </div>
+                            
+                            <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
+
+                            <div class="clock-digital-pill">
+                                <span id="clock-ampm-badge" class="badge bg-danger rounded-pill" style="font-size: 0.85rem;">下午</span>
+                                <span id="clock-digital-time" style="font-family: monospace;">03:00</span>
+                            </div>
+
+                            <div class="clock-guide-pill">
+                                <span>👆 試著拖曳綠色分針轉圈！觀察時針連動與天空日夜的流暢變化。</span>
+                            </div>
+
+                            <!-- Learn Minute Hand Button -->
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
+                                    💡 如何教孩子看懂分針？
+                                </button>
+                            </div>
+
+                            <!-- Clock Tutorial Full Overlay -->
+                            <div id="clockResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
+                                        ⏰ 認識時間的完整學習方案
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
+                                        立即下載 Mathgotchi，從整點原理<br>到 1 分鐘精細刻度，輕鬆學會看時鐘！
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>🎓 5 階段循序漸進教學：</strong><br>
+                                            <span class="text-muted">時鐘構造、長短針關係、時間流逝、認識整點，到精準讀出每一分鐘。</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 貼心語音與視覺提示：</strong><br>
+                                            <span class="text-muted">搞混了嗎？「指著大數字 3 時，5 個一數就是 15 分！」引導孩子自己找出答案。</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🌀 真實物理齒輪連動：</strong><br>
+                                            <span class="text-muted">分針與時針透過齒輪精密咬合同步轉動，讓時間的因果關係一目了然。</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🐣 電子寵物養成夥伴：</strong><br>
+                                            <span class="text-muted">每天解題收集果實、孵出神祕彩蛋，陪伴可愛動物夥伴一起進化成長！</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeClockOverlay()">
+                                            返回時鐘
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2) Interactive Column Addition Handwriting Simulator -->
+                        <div id="sim-box-math" class="math-sim-box d-none">
+                            <div class="math-quiz-board" id="mathQuizBoard">
+                                
+                                <canvas id="mathFullCanvas"></canvas>
+
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">二位數直式加法</span>
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="generateNewMathQuiz()" style="z-index: 15; position: relative;">換一題 🎲</button>
+                                </div>
+
+                                <div class="vertical-math-grid">
+                                    <!-- 1. Regrouping / Carry Row -->
+                                    <div class="math-row carry-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens">
+                                            <div class="carry-dashed-circle" title="進位記錄格"></div>
+                                        </div>
+                                        <div class="col-units"></div>
+                                    </div>
+
+                                    <!-- 2. First Number Row -->
+                                    <div class="math-row num1-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens" id="quiz-tens1">3</div>
+                                        <div class="col-units" id="quiz-units1">8</div>
+                                    </div>
+
+                                    <!-- 3. Second Number Row with '+' Sign -->
+                                    <div class="math-row num2-row">
+                                        <div class="col-op">+</div>
+                                        <div class="col-tens" id="quiz-tens2">2</div>
+                                        <div class="col-units" id="quiz-units2">5</div>
+                                    </div>
+
+                                    <!-- Calculation Line -->
+                                    <div class="vertical-math-line"></div>
+
+                                    <!-- 4. Answer Guide Box Row -->
+                                    <div class="math-row answer-row">
+                                        <div class="col-op"></div>
+                                        <div class="col-tens">
+                                            <div class="answer-slot-box"></div>
+                                        </div>
+                                        <div class="col-units">
+                                            <div class="answer-slot-box"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="canvas-guide" class="canvas-guide-overlay">
+                                    ✍️ 請自由手寫——上方小圓圈可記進位，下方方格寫答案！
+                                </div>
+                            </div>
+
+                            <!-- Bottom Action Bar -->
+                            <div class="d-flex gap-2 mt-3" style="max-width: 480px; width: 100%;">
+                                <button class="btn btn-light border rounded-pill flex-grow-1 fw-bold shadow-sm" onclick="clearMathCanvas()">
+                                    <i class="bi bi-eraser me-1 text-danger"></i> 清除筆跡
+                                </button>
+                                <button class="btn btn-primary rounded-pill flex-grow-1 fw-bold shadow-sm" style="background-color: #6C5CE7;" onclick="submitMathCheck()">
+                                    <i class="bi bi-check-circle me-1"></i> 對答案
+                                </button>
+                            </div>
+
+                            <!-- Math Result Overlay -->
+                            <div id="mathResultOverlay" class="large-card-full-overlay">
+                                <div class="large-card-overlay-content py-2">
+                                    <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
+                                        🎉 正確答案：<span id="overlay-ans-text">63</span>
+                                    </span>
+                                    <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
+                                        下載 Mathgotchi，體驗真正免計算紙的<br>AI 手寫直式數學練習！
+                                    </h4>
+                                    
+                                    <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
+                                        <div class="mb-2 text-dark">
+                                            <strong>⚡ 120Hz 超精準筆跡辨識：</strong><br>
+                                            <span class="text-muted">不需另外準備計算紙！專為兒童書寫習慣最佳化的即時數字手寫辨識。</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>💡 語音與視覺分步引導：</strong><br>
+                                            <span class="text-muted">卡關了嗎？智慧提示一步步引導孩子自我訂正，真正理解進位與借位原理。</span>
+                                        </div>
+                                        <div class="mb-2 text-dark">
+                                            <strong>🧮 完整四則運算課綱 &amp; 可列印 PDF：</strong><br>
+                                            <span class="text-muted">涵蓋加、減、乘、除直式運算，還能無限列印客製化 PDF 練習卷與紅筆詳解！</span>
+                                        </div>
+                                        <div class="text-dark">
+                                            <strong>🃏 視覺化九九乘法閃卡 &amp; 2048 數學益智：</strong><br>
+                                            <span class="text-muted">透過面積模型、切西瓜動畫與次方益智遊戲，培養直覺數感。</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
+                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                            <i class="bi bi-apple me-1"></i> App Store
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
+                                            <i class="bi bi-google-play me-1"></i> Google Play
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
+                                            再試一次
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-5">
+    <!-- 3 Core Concepts Grid -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">⏰</div>
+                        <h4 class="fw-bold mb-2">親手撥動的 24 小時制時鐘</h4>
+                        <p class="text-muted small mb-0">透過真實齒輪咬合連動與日夜天空變化，讓孩子用指尖直覺領悟時間運轉的因果關係。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🧮</div>
+                        <h4 class="fw-bold mb-2">手寫四則運算 &amp; 可列印 PDF</h4>
+                        <p class="text-muted small mb-0">在螢幕上直接手寫練習加、減、乘、除直式計算，並可無限列印客製化 PDF 練習卷與紅筆詳解。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div class="fs-1 mb-3">🎙️</div>
+                        <h4 class="fw-bold mb-2">爸媽語音應援 &amp; 寵物養成</h4>
+                        <p class="text-muted small mb-0">用爸媽真實的笑容照片與溫暖錄音為孩子加油，每日解題還能孵化並養成可愛的動物夥伴。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Assurance: 3 Safe Haven Promises -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">給家長的 3 大安心承諾</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🚫</div>
+                        <h5 class="fw-bold mb-2">100% 無廣告（零干擾學習）</h5>
+                        <p class="text-muted small mb-0">絕無橫幅廣告、彈出視窗或獎勵影片，不打斷孩子的專注力，更不會接觸到不當內容。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🔒</div>
+                        <h5 class="fw-bold mb-2">裝置端隱私加密保護</h5>
+                        <p class="text-muted small mb-0">免註冊帳號。家長錄製的加油語音與照片僅加密儲存於您的手機或平板內，絕不連網上傳。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="fw-bold mb-2">兒童安全家長鎖（Parental Gate）</h5>
+                        <p class="text-muted small mb-0">內建乘除法驗證家長鎖，防止孩子誤觸購買或跳轉至外部連結，讓家長百分百放心。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1:1 Customer Support -->
+    <section class="py-5" style="background-color: #FAF5FF;">
+        <div class="container text-center">
+            <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 680px;">
+                <div class="fs-1 mb-2">💬</div>
+                <h3 class="fw-bold mb-2 text-dark">1:1 客服與問題回報</h3>
+                <p class="text-muted mb-4 small">
+                    對 App 使用、訂閱或新功能有任何疑問與建議嗎？歡迎直接來信，開發者爸爸將親自為您解答。
+                </p>
+                <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-lg px-4">
+                    <i class="bi bi-envelope-fill me-2 fs-5"></i> 寫信給開發者客服 &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-5 border-top">
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
                 <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
-                <a href="https://www.instagram.com/chronolabcorp/" target="_blank" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
             </div>
-            <p class="text-muted small">
-                © 2025-<span id="current-year"></span> ChronoLab. All rights reserved.<br>
-                <a href="terms.html" class="text-decoration-none text-muted">服務條款</a> | 
-                <a href="privacy.html" class="text-decoration-none text-muted">隱私權政策</a>
+            <p class="text-muted small mb-0">
+                © 2026 ChronoLab. All rights reserved.<br>
+                <a href="terms-mathgotchi.html" class="text-decoration-none text-muted">服務條款</a> | 
+                <a href="privacy-mathgotchi.html" class="text-decoration-none text-muted">隱私權政策</a>
             </p>
-            <a href="https://www.chronolaboratory.com/" class="btn btn-outline-secondary btn-sm mt-3">公司首頁</a>
         </div>
-        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
     </footer>
 
+    <!-- JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- PDF Worksheet Bank & Simulator & Shorts Engine -->
     <script>
         AOS.init({ duration: 800, once: true });
-        document.addEventListener('DOMContentLoaded', () => {
-            const steps = document.querySelectorAll('.step-content');
-            const screens = document.querySelectorAll('.screen-content');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        steps.forEach(s => s.classList.remove('active'));
-                        entry.target.classList.add('active');
-                        const index = entry.target.getAttribute('data-index');
-                        screens.forEach(s => s.classList.remove('active'));
-                        const activeScreen = document.getElementById(`screen-${index}`);
-                        if(activeScreen) activeScreen.classList.add('active');
-                    }
+
+        /* =========================================================================
+           0. v1.4 Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
+           ========================================================================= */
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const PDF_FOLDER = 'pdf';
+
+        /**
+         * 📌 1) Default fallback PDF list (Automatically overridden/merged with pdf/list.txt)
+         */
+        let PDF_EN_FILE_LIST = [
+            'add_1_1.pdf',
+            'sub_1_1.pdf',
+            'mul_1_1.pdf',
+            'div_1_1.pdf',
+            'clock_1_1.pdf'
+        ];
+
+        function addPdfRange(prefix, stage, startNum, endNum) {
+            for (let n = startNum; n <= endNum; n++) {
+                PDF_EN_FILE_LIST.push(`${prefix}_${stage}_${n}.pdf`);
+            }
+        }
+
+        const SUBJECT_LABEL_TW = {
+            'add': '加法',
+            'sub': '減法',
+            'mul': '乘法',
+            'div': '除法',
+            'clock': '時鐘'
+        };
+
+        let parsedPdfCatalog = [];
+        let currentSubjectKey = 'add';
+        let currentFilteredList = [];
+        let currentItemIndex = 0;
+        let currentPdfUrl = '';
+
+        // Parses 'add_122_123.pdf' or 'clock_1_1' with unlimited digits
+        function parsePdfFileName(rawEntry) {
+            let cleanEntry = rawEntry.trim().split('/').pop();
+            if (!cleanEntry) return null;
+            if (!cleanEntry.toLowerCase().endsWith('.pdf')) {
+                cleanEntry += '.pdf';
+            }
+
+            const match = cleanEntry.match(/^([a-zA-Z]+)_(\d+)_(\d+)\.pdf$/i);
+            if (!match) return null;
+
+            const rawPrefix = match[1].toLowerCase();
+            const stageNum = parseInt(match[2], 10);
+            const patternNum = parseInt(match[3], 10);
+
+            const subjectKey = SUBJECT_LABEL_TW[rawPrefix] ? rawPrefix : 'add';
+            const subjectLabel = SUBJECT_LABEL_TW[subjectKey] || rawPrefix;
+
+            return {
+                fileName: cleanEntry,
+                url: `${PDF_FOLDER}/${cleanEntry}`,
+                subjectKey: subjectKey,
+                subjectEn: subjectLabel,
+                stage: stageNum,
+                num: patternNum,
+                displayTitle: `${subjectLabel} 第 ${stageNum} 階段 · #${patternNum} (${cleanEntry})`
+            };
+        }
+
+        // Natural numeric sort (1 -> 2 -> 10 -> 122)
+        function buildPdfCatalog(rawList) {
+            const uniqueSet = new Set(rawList.map(s => s.trim()).filter(Boolean));
+            const subjectOrder = { 'add': 1, 'sub': 2, 'mul': 3, 'div': 4, 'clock': 5 };
+
+            parsedPdfCatalog = Array.from(uniqueSet)
+                .map(parsePdfFileName)
+                .filter(Boolean)
+                .sort((a, b) => {
+                    const ordA = subjectOrder[a.subjectKey] || 99;
+                    const ordB = subjectOrder[b.subjectKey] || 99;
+                    if (ordA !== ordB) return ordA - ordB;
+                    if (a.stage !== b.stage) return a.stage - b.stage;
+                    return a.num - b.num;
                 });
-            }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
-            steps.forEach(step => observer.observe(step));
+
+            ['add', 'sub', 'mul', 'div', 'clock'].forEach(subj => {
+                const count = parsedPdfCatalog.filter(x => x.subjectKey === subj).length;
+                const badgeEl = document.getElementById(`count-${subj}`);
+                if (badgeEl) badgeEl.textContent = count;
+            });
+        }
+
+        async function initPdfLibrary() {
+            // Priority 1: Load 'pdf/list.txt' automatically
+            try {
+                const listRes = await fetch(`${PDF_FOLDER}/list.txt`, { cache: 'no-cache' });
+                if (listRes.ok) {
+                    const text = await listRes.text();
+                    const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+                    if (lines.length > 0) {
+                        PDF_EN_FILE_LIST = [...new Set([...PDF_EN_FILE_LIST, ...lines])];
+                    }
+                }
+            } catch (e) {
+                // Proceed if list.txt is not reachable
+            }
+
+            // Priority 2: Auto-discover directory listing on local dev server
+            try {
+                const dirRes = await fetch(`./${PDF_FOLDER}/`);
+                if (dirRes.ok) {
+                    const htmlText = await dirRes.text();
+                    const matches = [...htmlText.matchAll(/href=["']([^"']+\.pdf)["']/gi)];
+                    if (matches.length > 0) {
+                        const discovered = matches.map(m => m[1].split('/').pop());
+                        if (discovered.length > 0) {
+                            PDF_EN_FILE_LIST = [...new Set([...PDF_EN_FILE_LIST, ...discovered])];
+                        }
+                    }
+                }
+            } catch (e) {
+                // Ignore on static hosting
+            }
+
+            buildPdfCatalog(PDF_EN_FILE_LIST);
+            selectPdfSubject('add', document.querySelector('.pdf-subject-btn[data-subj="add"]'));
+        }
+
+        function selectPdfSubject(subjectKey, btnEl) {
+            currentSubjectKey = subjectKey;
+            if (btnEl) {
+                document.querySelectorAll('#pdf-subject-tabs .pdf-subject-btn').forEach(b => b.classList.remove('active'));
+                btnEl.classList.add('active');
+            }
+
+            currentFilteredList = parsedPdfCatalog.filter(item => item.subjectKey === subjectKey);
+            const stageSelect = document.getElementById('pdf-stage-select');
+            const numSelect = document.getElementById('pdf-num-select');
+
+            if (currentFilteredList.length === 0) {
+                stageSelect.innerHTML = '<option value="">尚無階段資料</option>';
+                numSelect.innerHTML = '<option value="">-</option>';
+                updateNavButtons();
+                return;
+            }
+
+            const stages = [...new Set(currentFilteredList.map(item => item.stage))].sort((a, b) => a - b);
+            stageSelect.innerHTML = stages.map(st => `<option value="${st}">第 ${st} 階段 (Stage ${st})</option>`).join('');
+
+            populatePdfNumbersForStage(stages[0]);
+        }
+
+        function populatePdfNumbersForStage(stageNum, targetPatternNum = null) {
+            const numSelect = document.getElementById('pdf-num-select');
+            const stageItems = currentFilteredList
+                .filter(item => item.stage === stageNum)
+                .sort((a, b) => a.num - b.num);
+
+            numSelect.innerHTML = stageItems
+                .map(item => `<option value="${item.num}">#${item.num} (${item.fileName})</option>`)
+                .join('');
+
+            const chosenItem = (targetPatternNum !== null)
+                ? (stageItems.find(x => x.num === targetPatternNum) || stageItems[0])
+                : stageItems[0];
+
+            if (chosenItem) {
+                numSelect.value = chosenItem.num;
+                currentItemIndex = currentFilteredList.indexOf(chosenItem);
+                loadPdfItem(chosenItem);
+            }
+        }
+
+        function onPdfStageChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            if (!isNaN(stageVal)) {
+                populatePdfNumbersForStage(stageVal);
+            }
+        }
+
+        function onPdfNumberChange() {
+            const stageVal = parseInt(document.getElementById('pdf-stage-select').value, 10);
+            const numVal = parseInt(document.getElementById('pdf-num-select').value, 10);
+            const foundIdx = currentFilteredList.findIndex(x => x.stage === stageVal && x.num === numVal);
+            if (foundIdx !== -1) {
+                currentItemIndex = foundIdx;
+                loadPdfItem(currentFilteredList[foundIdx]);
+            }
+        }
+
+        function stepPdfItem(delta) {
+            if (currentFilteredList.length === 0) return;
+            const nextIdx = currentItemIndex + delta;
+            if (nextIdx < 0 || nextIdx >= currentFilteredList.length) return;
+
+            const nextItem = currentFilteredList[nextIdx];
+            document.getElementById('pdf-stage-select').value = nextItem.stage;
+            populatePdfNumbersForStage(nextItem.stage, nextItem.num);
+        }
+
+        function pickRandomPdfItem() {
+            if (currentFilteredList.length <= 1) return;
+            let randIdx = currentItemIndex;
+            while (randIdx === currentItemIndex) {
+                randIdx = Math.floor(Math.random() * currentFilteredList.length);
+            }
+            const randItem = currentFilteredList[randIdx];
+            document.getElementById('pdf-stage-select').value = randItem.stage;
+            populatePdfNumbersForStage(randItem.stage, randItem.num);
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('pdf-prev-btn');
+            const nextBtn = document.getElementById('pdf-next-btn');
+            const randBtn = document.getElementById('pdf-random-btn');
+
+            if (prevBtn) prevBtn.disabled = (currentItemIndex <= 0);
+            if (nextBtn) nextBtn.disabled = (currentItemIndex >= currentFilteredList.length - 1);
+            if (randBtn) randBtn.disabled = (currentFilteredList.length <= 1);
+        }
+
+        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const page = await pdfDoc.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.8 });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+        }
+
+        async function loadPdfItem(item) {
+            updateNavButtons();
+
+            currentPdfUrl = item.url;
+            document.getElementById('current-pdf-title').textContent = item.displayTitle;
+            document.getElementById('pdf-open-btn').href = item.url;
+            document.getElementById('pdf-download-btn').href = item.url;
+            document.getElementById('pdf-download-btn').setAttribute('download', item.fileName);
+
+            const statusMsg = document.getElementById('pdf-status-msg');
+            const colPage2 = document.getElementById('pdf-col-page2');
+            statusMsg.classList.add('d-none');
+
+            try {
+                const pdfDoc = await pdfjsLib.getDocument(item.url).promise;
+                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1');
+
+                if (pdfDoc.numPages >= 2) {
+                    colPage2.classList.remove('d-none');
+                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2');
+                } else {
+                    colPage2.classList.add('d-none');
+                }
+            } catch (err) {
+                console.warn('PDF Load Notice:', err);
+                statusMsg.innerHTML = `📂 找不到 <code>${item.url}</code>。請確認 <strong>${item.fileName}</strong> 已放置於 <code>${PDF_FOLDER}/</code> 資料夾內。`;
+                statusMsg.classList.remove('d-none');
+            }
+        }
+
+        function openCurrentPdfInNewTab() {
+            if (currentPdfUrl) {
+                window.open(currentPdfUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
+
+        /* 1. Shorts Video Tab Switcher */
+        function switchShortsTab(index, btn) {
+            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const box1 = document.getElementById('shorts-box-1');
+            const box2 = document.getElementById('shorts-box-2');
+
+            if (index === 1) {
+                box2.classList.add('d-none');
+                box1.classList.remove('d-none');
+            } else {
+                box1.classList.add('d-none');
+                box2.classList.remove('d-none');
+            }
+        }
+
+        /* 2. Simulator Tab Switcher (Clock vs Column Math) */
+        function switchSimTab(type, btn) {
+            document.querySelectorAll('.sim-nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const clockBox = document.getElementById('sim-box-clock');
+            const mathBox = document.getElementById('sim-box-math');
+
+            if (type === 'clock') {
+                mathBox.classList.add('d-none');
+                clockBox.classList.remove('d-none');
+                renderCelestialSky();
+            } else {
+                clockBox.classList.add('d-none');
+                mathBox.classList.remove('d-none');
+                initMathFullCanvas();
+            }
+        }
+
+        /* 3. Celestial Canvas (Sun, Moon, Stars) */
+        const skyCanvas = document.getElementById('skyCelestialCanvas');
+        const skyCtx = skyCanvas.getContext('2d');
+        const stars = [
+            { x: 0.12, y: 0.22, r: 2.2, p: 0.1 },
+            { x: 0.25, y: 0.45, r: 2.8, p: 0.4 },
+            { x: 0.38, y: 0.18, r: 1.8, p: 0.7 },
+            { x: 0.62, y: 0.32, r: 3.2, p: 0.2 },
+            { x: 0.75, y: 0.16, r: 2.0, p: 0.9 },
+            { x: 0.88, y: 0.38, r: 2.6, p: 0.5 },
+            { x: 0.50, y: 0.52, r: 1.8, p: 0.6 }
+        ];
+
+        function resizeSkyCanvas() {
+            const container = skyCanvas.parentElement;
+            skyCanvas.width = container.clientWidth;
+            skyCanvas.height = container.clientHeight;
+        }
+
+        function renderCelestialSky() {
+            const w = skyCanvas.width;
+            const h = skyCanvas.height;
+            if (!w || !h) return;
+
+            skyCtx.clearRect(0, 0, w, h);
+            const hourFloat = currentHour + currentMinute / 60;
+
+            let nightFactor = 0;
+            if (hourFloat >= 20 || hourFloat <= 5) nightFactor = 1;
+            else if (hourFloat > 5 && hourFloat < 6.5) nightFactor = (6.5 - hourFloat) / 1.5;
+            else if (hourFloat > 18.5 && hourFloat < 20) nightFactor = (hourFloat - 18.5) / 1.5;
+
+            if (nightFactor > 0) {
+                stars.forEach(s => {
+                    skyCtx.beginPath();
+                    skyCtx.arc(w * s.x, h * s.y, s.r, 0, Math.PI * 2);
+                    skyCtx.fillStyle = `rgba(255, 255, 255, ${0.85 * nightFactor})`;
+                    skyCtx.fill();
+                });
+            }
+
+            if (hourFloat >= 5.5 && hourFloat <= 18.5) {
+                const sunProgress = (hourFloat - 5.5) / 13;
+                const sunX = w * (0.05 + sunProgress * 0.90);
+                const sunY = h * (0.75 - 0.55 * Math.sin(sunProgress * Math.PI));
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 26, 0, Math.PI * 2);
+                skyCtx.fillStyle = 'rgba(255, 209, 102, 0.22)';
+                skyCtx.fill();
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 16, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFAA00';
+                skyCtx.fill();
+
+                skyCtx.beginPath();
+                skyCtx.arc(sunX, sunY, 12, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF0A8';
+                skyCtx.fill();
+            }
+
+            const isMoonTime = hourFloat >= 17.5 || hourFloat <= 6.5;
+            if (isMoonTime) {
+                const moonHour = hourFloat >= 17.5 ? hourFloat - 17.5 : hourFloat + 6.5;
+                const moonProgress = moonHour / 13;
+                const moonX = w * (0.08 + moonProgress * 0.84);
+                const moonY = h * (0.72 - 0.50 * Math.sin(moonProgress * Math.PI));
+
+                skyCtx.save();
+                skyCtx.beginPath();
+                skyCtx.arc(moonX, moonY, 15, 0, Math.PI * 2);
+                skyCtx.fillStyle = '#FFF3B0';
+                skyCtx.fill();
+
+                skyCtx.globalCompositeOperation = 'destination-out';
+                skyCtx.beginPath();
+                skyCtx.arc(moonX + 7, moonY - 3, 13, 0, Math.PI * 2);
+                skyCtx.fill();
+                skyCtx.restore();
+            }
+        }
+
+        /* 4. Interactive Analog Clock Engine */
+        const clockCanvas = document.getElementById('interactiveClockCanvas');
+        const clockCtx = clockCanvas.getContext('2d');
+        const digitalTimeEl = document.getElementById('clock-digital-time');
+        const ampmBadgeEl = document.getElementById('clock-ampm-badge');
+        const skyBg = document.getElementById('sky-gradient-bg');
+
+        let currentHour = 15;
+        let currentMinute = 0;
+        let isDraggingHand = false;
+
+        function renderClock() {
+            const w = clockCanvas.width;
+            const h = clockCanvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const r = w / 2 - 14;
+
+            clockCtx.clearRect(0, 0, w, h);
+
+            const dialGrad = clockCtx.createRadialGradient(cx, cy, 0, cx, cy, r);
+            dialGrad.addColorStop(0, '#FFFFFF');
+            dialGrad.addColorStop(0.85, '#F8FAFC');
+            dialGrad.addColorStop(1, '#EFF6FF');
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r, 0, Math.PI * 2);
+            clockCtx.fillStyle = dialGrad;
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 4, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+            clockCtx.lineWidth = 3;
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, r - 1.5, 0, Math.PI * 2);
+            clockCtx.strokeStyle = 'rgba(255, 118, 117, 0.35)';
+            clockCtx.lineWidth = 2.5;
+            clockCtx.stroke();
+
+            const tickTrackRadius = r * 0.88;
+            for (let i = 0; i < 60; i++) {
+                const angle = (i * 6 - 90) * (Math.PI / 180);
+                const isFiveMin = (i % 5 === 0);
+                const tickLen = isFiveMin ? r * 0.08 : r * 0.04;
+
+                const isCurMin = (i === currentMinute);
+                const isCurHour = (i === (currentHour % 12) * 5);
+
+                clockCtx.beginPath();
+                const outerX = cx + tickTrackRadius * Math.cos(angle);
+                const outerY = cy + tickTrackRadius * Math.sin(angle);
+                const innerX = cx + (tickTrackRadius - tickLen) * Math.cos(angle);
+                const innerY = cy + (tickTrackRadius - tickLen) * Math.sin(angle);
+
+                clockCtx.moveTo(innerX, innerY);
+                clockCtx.lineTo(outerX, outerY);
+                clockCtx.lineWidth = isFiveMin ? 2.5 : 1.2;
+                clockCtx.lineCap = 'round';
+
+                if (isCurMin) clockCtx.strokeStyle = '#00B894';
+                else if (isCurHour) clockCtx.strokeStyle = '#5843E4';
+                else clockCtx.strokeStyle = isFiveMin ? '#334155' : '#CBD5E1';
+                clockCtx.stroke();
+
+                if (isFiveMin) {
+                    const hourVal = (i === 0) ? 12 : i / 5;
+                    const isSelectedHour = (hourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    const numRadius = r * 0.65;
+                    const numX = cx + numRadius * Math.cos(angle);
+                    const numY = cy + numRadius * Math.sin(angle);
+
+                    clockCtx.font = isSelectedHour ? '900 20px Inter, Pretendard' : '800 17px Inter, Pretendard';
+                    clockCtx.textAlign = 'center';
+                    clockCtx.textBaseline = 'middle';
+                    clockCtx.fillStyle = isSelectedHour ? '#5843E4' : '#1E293B';
+                    clockCtx.fillText(hourVal.toString(), numX, numY);
+                }
+            }
+
+            const hourDeg = (currentHour % 12 + currentMinute / 60) * 30;
+            const minDeg = currentMinute * 6;
+            const hourRad = (hourDeg - 90) * (Math.PI / 180);
+            const minRad = (minDeg - 90) * (Math.PI / 180);
+
+            const hourLen = r * 0.46;
+            const hourTail = hourLen * 0.22;
+            const minLen = r * 0.74;
+            const minTail = minLen * 0.18;
+
+            const hourProjX = cx + tickTrackRadius * Math.cos(hourRad);
+            const hourProjY = cy + tickTrackRadius * Math.sin(hourRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.lineTo(hourProjX, hourProjY);
+            clockCtx.strokeStyle = 'rgba(88, 67, 228, 0.55)';
+            clockCtx.lineWidth = 1.5;
+            clockCtx.stroke();
+            clockCtx.restore();
+
+            clockCtx.beginPath();
+            clockCtx.arc(hourProjX, hourProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#5843E4';
+            clockCtx.fill();
+
+            const minProjX = cx + tickTrackRadius * Math.cos(minRad);
+            const minProjY = cy + tickTrackRadius * Math.sin(minRad);
+            clockCtx.save();
+            clockCtx.setLineDash([3, 3]);
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.lineTo(minProjX, minProjY);
+            clockCtx.strokeStyle = 'rgba(0, 184, 148, 0.65)';
+            clockCtx.lineWidth = 1.5;
+            clockCtx.stroke();
+            clockCtx.restore();
+
+            clockCtx.beginPath();
+            clockCtx.arc(minProjX, minProjY, 3, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#00B894';
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - hourTail * Math.cos(hourRad) + 2, cy - hourTail * Math.sin(hourRad) + 3);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad) + 2, cy + hourLen * Math.sin(hourRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.12)';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - hourTail * Math.cos(hourRad), cy - hourTail * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#3B28B0';
+            clockCtx.lineWidth = 6;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + hourLen * Math.cos(hourRad), cy + hourLen * Math.sin(hourRad));
+            clockCtx.strokeStyle = '#5843E4';
+            clockCtx.lineWidth = 7;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - minTail * Math.cos(minRad) + 2, cy - minTail * Math.sin(minRad) + 3);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad) + 2, cy + minLen * Math.sin(minRad) + 3);
+            clockCtx.strokeStyle = 'rgba(0,0,0,0.1)';
+            clockCtx.lineWidth = 5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx - minTail * Math.cos(minRad), cy - minTail * Math.sin(minRad));
+            clockCtx.strokeStyle = '#008C70';
+            clockCtx.lineWidth = 3.5;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx, cy);
+            clockCtx.lineTo(cx + minLen * Math.cos(minRad), cy + minLen * Math.sin(minRad));
+            clockCtx.strokeStyle = '#00B894';
+            clockCtx.lineWidth = 4.8;
+            clockCtx.lineCap = 'round';
+            clockCtx.stroke();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 7.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#E2E8F0';
+            clockCtx.fill();
+
+            const capGrad = clockCtx.createRadialGradient(cx, cy, 1, cx, cy, 6);
+            capGrad.addColorStop(0, '#FECA57');
+            capGrad.addColorStop(1, '#F39C12');
+            clockCtx.beginPath();
+            clockCtx.arc(cx, cy, 5.5, 0, Math.PI * 2);
+            clockCtx.fillStyle = capGrad;
+            clockCtx.fill();
+
+            clockCtx.beginPath();
+            clockCtx.arc(cx - 1.5, cy - 1.5, 1.8, 0, Math.PI * 2);
+            clockCtx.fillStyle = '#FFFFFF';
+            clockCtx.fill();
+
+            const domeGrad = clockCtx.createLinearGradient(0, cy - r * 0.78, 0, cy - r * 0.22);
+            domeGrad.addColorStop(0, 'rgba(255, 255, 255, 0.40)');
+            domeGrad.addColorStop(1, 'rgba(255, 255, 255, 0.03)');
+
+            clockCtx.save();
+            clockCtx.beginPath();
+            clockCtx.moveTo(cx - r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx - r * 0.45, cy - r * 0.78, cx + r * 0.45, cy - r * 0.78, cx + r * 0.72, cy - r * 0.28);
+            clockCtx.bezierCurveTo(cx + r * 0.40, cy - r * 0.62, cx - r * 0.40, cy - r * 0.62, cx - r * 0.72, cy - r * 0.28);
+            clockCtx.closePath();
+            clockCtx.fillStyle = domeGrad;
+            clockCtx.fill();
+            clockCtx.restore();
+
+            updateSkyAndDigital(currentHour, currentMinute);
+        }
+
+        function updateSkyAndDigital(h, m) {
+            const isPm = h >= 12;
+            const displayH = (h % 12 === 0) ? 12 : (h % 12);
+            const padH = String(displayH).padStart(2, '0');
+            const padM = String(m).padStart(2, '0');
+
+            ampmBadgeEl.textContent = isPm ? '下午' : '上午';
+            ampmBadgeEl.className = `badge rounded-pill ${isPm ? 'bg-danger' : 'bg-primary'}`;
+            digitalTimeEl.textContent = `${padH}:${padM}`;
+
+            if (h >= 6 && h < 17) {
+                skyBg.style.background = 'linear-gradient(180deg, #70B6FF 0%, #FFF9F2 100%)';
+            } else if (h >= 17 && h < 20) {
+                skyBg.style.background = 'linear-gradient(180deg, #E76F51 0%, #F4A261 100%)';
+            } else {
+                skyBg.style.background = 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)';
+            }
+
+            renderCelestialSky();
+        }
+
+        function handleClockDrag(e) {
+            const rect = clockCanvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const dx = clientX - (rect.left + rect.width / 2);
+            const dy = clientY - (rect.top + rect.height / 2);
+
+            let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+            if (angle < 0) angle += 360;
+
+            const oldMinute = currentMinute;
+            const newMinute = Math.round(angle / 6) % 60;
+
+            if (oldMinute >= 50 && newMinute <= 10) {
+                currentHour = (currentHour + 1) % 24;
+            } else if (oldMinute <= 10 && newMinute >= 50) {
+                currentHour = (currentHour - 1 + 24) % 24;
+            }
+
+            currentMinute = newMinute;
+            renderClock();
+        }
+
+        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e); });
+        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e); });
+        window.addEventListener('mouseup', () => { isDraggingHand = false; });
+
+        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e); e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
+        window.addEventListener('touchend', () => { isDraggingHand = false; });
+
+        function showClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'flex';
+        }
+        function closeClockOverlay() {
+            document.getElementById('clockResultOverlay').style.display = 'none';
+        }
+
+        /* 5. Column Addition Handwriting Engine */
+        const mathFullCanvas = document.getElementById('mathFullCanvas');
+        const mathFullCtx = mathFullCanvas.getContext('2d');
+        const canvasGuide = document.getElementById('canvas-guide');
+        const mathResultOverlay = document.getElementById('mathResultOverlay');
+        const overlayAnsText = document.getElementById('overlay-ans-text');
+
+        let isDrawing = false;
+        let quizA = 38;
+        let quizB = 25;
+
+        function initMathFullCanvas() {
+            const board = document.getElementById('mathQuizBoard');
+            mathFullCanvas.width = board.clientWidth;
+            mathFullCanvas.height = board.clientHeight;
+            mathFullCtx.strokeStyle = '#2B3A4A';
+            mathFullCtx.lineWidth = 4.5;
+            mathFullCtx.lineCap = 'round';
+            mathFullCtx.lineJoin = 'round';
+        }
+
+        function generateNewMathQuiz() {
+            const unitsA = Math.floor(Math.random() * 5) + 5;
+            const unitsB = Math.floor(Math.random() * 4) + (10 - unitsA);
+            const tensA = Math.floor(Math.random() * 4) + 1;
+            const tensB = Math.floor(Math.random() * 4) + 1;
+
+            quizA = tensA * 10 + unitsA;
+            quizB = tensB * 10 + unitsB;
+
+            document.getElementById('quiz-tens1').textContent = tensA;
+            document.getElementById('quiz-units1').textContent = unitsA;
+            document.getElementById('quiz-tens2').textContent = tensB;
+            document.getElementById('quiz-units2').textContent = unitsB;
+
+            clearMathCanvas();
+            closeResultOverlay();
+        }
+
+        function clearMathCanvas() {
+            mathFullCtx.clearRect(0, 0, mathFullCanvas.width, mathFullCanvas.height);
+            canvasGuide.style.display = 'block';
+        }
+
+        function getFullCanvasPos(e) {
+            const r = mathFullCanvas.getBoundingClientRect();
+            const cx = e.touches ? e.touches[0].clientX : e.clientX;
+            const cy = e.touches ? e.touches[0].clientY : e.clientY;
+            return { x: cx - r.left, y: cy - r.top };
+        }
+
+        mathFullCanvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            canvasGuide.style.display = 'none';
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.beginPath();
+            mathFullCtx.moveTo(pos.x, pos.y);
         });
+
+        mathFullCanvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.lineTo(pos.x, pos.y);
+            mathFullCtx.stroke();
+        });
+
+        window.addEventListener('mouseup', () => { isDrawing = false; });
+
+        mathFullCanvas.addEventListener('touchstart', (e) => {
+            isDrawing = true;
+            canvasGuide.style.display = 'none';
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.beginPath();
+            mathFullCtx.moveTo(pos.x, pos.y);
+            e.preventDefault();
+        }, { passive: false });
+
+        mathFullCanvas.addEventListener('touchmove', (e) => {
+            if (!isDrawing) return;
+            const pos = getFullCanvasPos(e);
+            mathFullCtx.lineTo(pos.x, pos.y);
+            mathFullCtx.stroke();
+            e.preventDefault();
+        }, { passive: false });
+
+        window.addEventListener('touchend', () => { isDrawing = false; });
+
+        function submitMathCheck() {
+            overlayAnsText.textContent = (quizA + quizB);
+            mathResultOverlay.style.display = 'flex';
+        }
+
+        function closeResultOverlay() {
+            mathResultOverlay.style.display = 'none';
+        }
+
+        window.addEventListener('resize', () => {
+            resizeSkyCanvas();
+            renderCelestialSky();
+            if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
+                initMathFullCanvas();
+            }
+        });
+
+        // Initialize On Load
+        resizeSkyCanvas();
+        renderClock();
+        initPdfLibrary();
     </script>
 </body>
 </html>
