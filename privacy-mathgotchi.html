@@ -17,7 +17,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -28,7 +28,7 @@
         }
 
         body {
-            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            font-family: 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans SC', 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.75;
@@ -56,6 +56,7 @@
         }
         .header-title-area {
             flex: 1;
+            min-width: 240px;
         }
         h1 {
             font-weight: 800;
@@ -72,6 +73,7 @@
 
         .lang-switch {
             display: flex;
+            flex-wrap: wrap;
             background: #EDF2F7;
             padding: 4px;
             border-radius: 10px;
@@ -80,13 +82,14 @@
         .lang-btn {
             border: none;
             background: transparent;
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 8px;
             font-size: 13px;
             font-weight: 700;
             color: #64748B;
             cursor: pointer;
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
         .lang-btn.active {
             background: #ffffff;
@@ -209,22 +212,25 @@
 
     <div class="policy-container">
         
-        <!-- 상단 헤더 및 언어 전환 -->
+        <!-- 상단 헤더 및 5개 국어 언어 전환 -->
         <header>
             <div class="header-title-area">
                 <h1 id="page-title">[매쓰고치] 개인정보 처리방침</h1>
                 <p class="date" id="page-date">시행일자: 2026년 8월 29일</p>
             </div>
             <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLanguage('ko')">🇰🇷 한국어</button>
-                <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 English</button>
+                <button class="lang-btn active" data-lang="ko" onclick="setLanguage('ko')">🇰🇷 한국어</button>
+                <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇺🇸 English</button>
+                <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">🇯🇵 日本語</button>
+                <button class="lang-btn" data-lang="zh-tw" onclick="setLanguage('zh-tw')">🇹🇼 繁體中文</button>
+                <button class="lang-btn" data-lang="zh-cn" onclick="setLanguage('zh-cn')">🇨🇳 简体中文</button>
             </div>
         </header>
 
         <!-- ======================================================= -->
-        <!-- 한국어 개인정보 처리방침 본문 -->
+        <!-- 1. 한국어 개인정보 처리방침 본문 (Korean) -->
         <!-- ======================================================= -->
-        <div id="content-ko">
+        <div id="content-ko" class="lang-content">
             
             <div class="local-first-box">
                 <h4>🛡️ 개인정보 보호 및 아동 안심 3대 핵심 원칙</h4>
@@ -278,7 +284,7 @@
 
             <section>
                 <h2>제 5 조 (인앱 결제 및 구독 데이터 처리)</h2>
-                <p>앱 내 모든 정기 구독 결제는 <strong>Apple Inc. (App Store)의 보안 인앱 결제 시스템</strong>을 통해 안전하게 처리됩니다. 회사는 이용자의 신용카드 번호, 결제 계좌 번호 등 민감한 금융 결제 정보를 직접 수집하거나 열람하지 않습니다.</p>
+                <p>앱 내 모든 정기 구독 결제는 <strong>Apple Inc. (App Store) 또는 Google Play의 보안 인앱 결제 시스템</strong>을 통해 안전하게 처리됩니다. 회사는 이용자의 신용카드 번호, 결제 계좌 번호 등 민감한 금융 결제 정보를 직접 수집하거나 열람하지 않습니다.</p>
             </section>
 
             <section>
@@ -306,9 +312,9 @@
         </div>
 
         <!-- ======================================================= -->
-        <!-- 영문 개인정보 처리방침 본문 (English Privacy Policy) -->
+        <!-- 2. 영문 개인정보 처리방침 본문 (English) -->
         <!-- ======================================================= -->
-        <div id="content-en" class="hidden">
+        <div id="content-en" class="lang-content hidden">
             
             <div class="local-first-box">
                 <h4>🛡️ Core Principles for Children's Privacy & Safety</h4>
@@ -362,7 +368,7 @@
 
             <section>
                 <h2>5. In-App Purchase Processing</h2>
-                <p>All subscription payments are securely processed through <strong>Apple Inc. (App Store)</strong>. The Company never collects, stores, or accesses sensitive financial or payment card credentials.</p>
+                <p>All subscription payments are securely processed through <strong>Apple Inc. (App Store) or Google Play</strong>. The Company never collects, stores, or accesses sensitive financial or payment card credentials.</p>
             </section>
 
             <section>
@@ -389,6 +395,259 @@
             </section>
         </div>
 
+        <!-- ======================================================= -->
+        <!-- 3. 일본어 개인정보 처리방침 본문 (Japanese) -->
+        <!-- ======================================================= -->
+        <div id="content-ja" class="lang-content hidden">
+            
+            <div class="local-first-box">
+                <h4>🛡️ 個人情報保護およびお子さまの安心に関する3大原則</h4>
+                <p>
+                    ChronoLab（以下「当社」）は、「マスゴチ (Mathgotchi)」（以下「本アプリ」）をご利用になるお子さまと保護者のプライバシーを最優先とし、日本の個人情報保護法、韓国個人情報保護法、および米国児童オンラインプライバシー保護法（COPPA）のガイドラインを厳格に遵守いたします。
+                </p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 個人識別情報（PII）の非収集：</strong>会員登録手続きはなく、氏名、メールアドレス、電話番号、広告識別子（IDFA等）を一切収集・保存いたしません。</li>
+                    <li><strong>2. 100% 端末内（オンデバイス）保存：</strong>保護者の応援ボイスや写真は外部サーバーへ送信されず、お使いの端末内の安全な領域にのみ保存されます。</li>
+                    <li><strong>3. 100% 広告なし＆保護者あんしんロック（Parental Gate）：</strong>広告や追跡ツールは一切なく、お子さまによる誤課金や外部サイトへの移動を防止します。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第1条（個人識別情報の非収集原則）</h2>
+                <p>本アプリには会員登録やアカウント作成の手続きがなく、以下のような個人識別情報（PII）を一切収集・保存せず、外部サーバーへ送信することもありません。</p>
+                <ul>
+                    <li>氏名、生年月日、電話番号、メールアドレスなどの個人属性情報</li>
+                    <li>詳細な位置情報（GPS位置情報）</li>
+                    <li>ユーザー追跡用の広告識別子（UDID、IDFA、GAIDなど）</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第2条（端末内オンデバイスでのデータ処理）</h2>
+                <p>本アプリのすべての学習履歴およびカスタムデータは、ユーザーの端末内部でのみ安全に処理されます。</p>
+                <ol>
+                    <li><strong>保護者の録音音声および写真データ：</strong>クイズの正解・不正解時にお子さまを励ますために保護者が登録した録音ファイルやセルフィー写真は、<strong>お使いの端末内部のサンドボックス（Sandbox）保護領域にのみ保管</strong>され、当社サーバーや外部へアップロードされることは一切ありません。</li>
+                    <li><strong>学習進捗および記録：</strong>問題解答の履歴、獲得したフルーツ、およびパートナーペットの成長状態は端末のローカルストレージにのみ保存され、アプリをアンインストール（削除）すると同時に永久に破棄されます。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第3条（第三者広告および追跡ツールの排除）</h2>
+                <p>本アプリは<strong>100% 広告なし（Ad-Free）</strong>の安心な知育・教育サービスです。</p>
+                <ul>
+                    <li>お子さまの集中を妨げたり、有害なサイトへ誘導したりするバナー広告・全面広告・動画広告を一切掲載しません。</li>
+                    <li>ユーザーの行動パターンを追跡・分析するサードパーティ製の広告SDK（Google AdMob、Meta Pixel、Unity Adsなど）を一切搭載していません。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第4条（児童のプライバシー保護および保護者確認ロック）</h2>
+                <p>当社は、13歳（韓国基準14歳）未満のお子さまが安全にご利用いただけるよう、以下の児童保護措置を適用しています。</p>
+                <ul>
+                    <li><strong>保護者あんしんロック（Parental Gate）：</strong>定期サブスクリプションの決済、購入の復元、外部サポートリンクへのアクセスなど、保護者の確認が必要なすべての画面移行時に、大人向けの認証ロック（かけ算問題またはPINロック）を厳格に適用しています。</li>
+                    <li>お子さまによる意図しない課金や、外部Webブラウザへの勝手な移動を根本から遮断します。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第5条（アプリ内課金およびサブスクリプションの処理）</h2>
+                <p>本アプリ内のすべての定期サブスクリプション決済は、<strong>Apple Inc.（App Store）または Google Play の安全なアプリ内課金システム</strong>を通じて処理されます。当社がユーザーのクレジットカード番号や口座番号などの機密決済情報を直接収集・閲覧することはありません。</p>
+            </section>
+
+            <section>
+                <h2>第6条（データの保持および破棄）</h2>
+                <p>本アプリは外部サーバーに個人情報を保管しないため、ユーザーが端末から<strong>本アプリをアンインストール（削除）した時点で、端末内に保存されていたすべての学習記録および保護者の録音音声・写真ファイルは即座に永久削除</strong>されます。</p>
+            </section>
+
+            <section>
+                <h2>第7条（プライバシーポリシーの変更および告知）</h2>
+                <p>本プライバシーポリシーは、法令またはサービス内容の変更に伴い改定される場合があります。本アプリは会員登録やメールアドレスの収集を行わないため、改定が生じる場合は適用日の少なくとも7日前までに<strong>本公式Webページ（privacy-mathgotchi.html）を通じてのみ</strong>告知いたします。</p>
+            </section>
+
+            <section>
+                <h2>第8条（個人情報保護責任者およびお問い合わせ）</h2>
+                <p>個人情報保護および本アプリのご利用に関するお問い合わせは、下記までご連絡ください。</p>
+                <div class="contact-box">
+                    <strong>ChronoLab（クロノラボ）</strong><br>
+                    • 個人情報保護責任者：Jaewook Byun（ChronoLab 代表）<br>
+                    • 通信販売業届出：届出済（大韓民国）<br>
+                    • 公式サポートメール：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 カカオトーク相談：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 施行日：2026年8月29日
+                </div>
+            </section>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- 4. 대만 번체 개인정보 처리방침 본문 (Traditional Chinese) -->
+        <!-- ======================================================= -->
+        <div id="content-zh-tw" class="lang-content hidden">
+            
+            <div class="local-first-box">
+                <h4>🛡️ 個人資料保護與兒童安心 3 大核心原則</h4>
+                <p>
+                    ChronoLab（以下簡稱「本公司」）高度重視使用「Mathgotchi」（以下簡稱「本應用」）之孩童與家長的隱私權，並嚴格遵守個人資料保護法及美國《兒童網路隱私保護法》（COPPA）之規範。
+                </p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 不蒐集個人識別資訊（PII）：</strong>無需註冊會員，絕不蒐集或儲存姓名、電子郵件、電話號碼或廣告識別碼（IDFA）。</li>
+                    <li><strong>2. 100% 本機端（On-Device）儲存：</strong>家長錄製的加油語音與照片僅安全保存在裝置內部，絕不上傳至外部伺服器。</li>
+                    <li><strong>3. 100% 無廣告 & 家長安全鎖（Parental Gate）：</strong>無任何第三方廣告與追蹤工具，並透過成人驗證鎖防止孩童誤觸付款或離開應用。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第 1 條（不蒐集個人識別資訊原則）</h2>
+                <p>本應用無需註冊帳號或建立會員資料，且絕不蒐集、儲存或向任何外部伺服器傳輸以下個人識別資訊（PII）：</p>
+                <ul>
+                    <li>姓名、出生年月日、電話號碼、電子郵件地址等個人基本資料</li>
+                    <li>精確地理位置資訊（GPS 定位資料）</li>
+                    <li>用於追蹤使用者的裝置或廣告識別碼（UDID、IDFA、GAID 等）</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 2 條（本機端 On-Device 資料處理）</h2>
+                <p>本應用的所有學習活動與自訂資料均僅在使用者的裝置內部安全處理。</p>
+                <ol>
+                    <li><strong>家長錄音與照片資料：</strong>家長為了在測驗答對或答錯時鼓勵孩子而親自錄製的語音檔案與自拍照片，僅<strong>儲存在使用者裝置內部的沙盒（Sandbox）安全區域</strong>，絕不會上傳至本公司伺服器或外部雲端。</li>
+                    <li><strong>學習進度與紀錄：</strong>答題紀錄、獲得的水果數量以及動物夥伴的進化狀態僅儲存在本機儲存空間中，當您從裝置上移除（解除安裝）本應用時，所有資料將一併永久刪除。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 3 條（排除第三方廣告與追蹤工具）</h2>
+                <p>本應用為 <strong>100% 無廣告（Ad-Free）</strong>的安心兒童教育服務。</p>
+                <ul>
+                    <li>絕不包含任何會干擾孩子專注力或誘導至不當網站的橫幅、蓋版或影片廣告。</li>
+                    <li>絕不內建任何用於分析或追蹤使用者行為的第三方廣告 SDK（如 Google AdMob、Meta Pixel、Unity Ads 等）。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 4 條（兒童隱私保護與家長安全鎖）</h2>
+                <p>為確保未滿 13/14 歲孩童的安全使用體驗，本公司採取以下嚴格的保護機制：</p>
+                <ul>
+                    <li><strong>家長安全鎖（Parental Gate）：</strong>在進入訂閱付款、恢復購買、或點擊外部客服連結等所有需要成人確認的步驟前，皆嚴格套用成人驗證機制（乘法題目驗證或家長 PIN 碼）。</li>
+                    <li>從源頭防止孩童發生非預期的應用程式內購買或誤觸外部網頁連結。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 5 條（應用程式內購買與訂閱處理）</h2>
+                <p>本應用內的所有定期訂閱付款均透過 <strong>Apple Inc.（App Store）或 Google Play 的安全內購系統</strong>處理。本公司絕不會直接蒐集、儲存或調閱使用者的信用卡號或銀行帳戶等敏感財務資訊。</p>
+            </section>
+
+            <section>
+                <h2>第 6 條（資料之保留與銷毀）</h2>
+                <p>由於本應用不會在外部伺服器保存任何個人資料，當使用者從裝置中<strong>刪除（解除安裝）本應用時，儲存在裝置內的所有學習紀錄與家長自訂語音、照片檔案將立即且永久銷毀</strong>。</p>
+            </section>
+
+            <section>
+                <h2>第 7 條（隱私權政策之修訂與公告）</h2>
+                <p>本隱私權政策可能因應法令或服務功能變更而修訂。由於本應用不進行會員註冊亦不蒐集電子郵件，若有修訂事項，將於生效日至少 7 天前<strong>僅透過本官方網頁（privacy-mathgotchi.html）</strong>進行公告。</p>
+            </section>
+
+            <section>
+                <h2>第 8 條（個人資料保護負責人與客戶支援）</h2>
+                <p>若您對本隱私權政策或應用使用有任何疑問，請透過以下方式與我們聯繫：</p>
+                <div class="contact-box">
+                    <strong>ChronoLab 隱私保護團隊</strong><br>
+                    • 個人資料保護負責人：Jaewook Byun（ChronoLab 代表）<br>
+                    • 營業登記類別：通訊販售業申報完成（大韓民國）<br>
+                    • 官方客服信箱：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 即時 KakaoTalk 諮詢：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 生效日期：2026年8月29日
+                </div>
+            </section>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- 5. 중국 간체 개인정보 처리방침 본문 (Simplified Chinese) -->
+        <!-- 앱 이름: 麦斯之茧 : 儿童数学探险 -->
+        <!-- ======================================================= -->
+        <div id="content-zh-cn" class="lang-content hidden">
+            
+            <div class="local-first-box">
+                <h4>🛡️ 个人信息保护与儿童安心 3 大核心原则</h4>
+                <p>
+                    ChronoLab（以下简称“本公司”）将使用“麦斯之茧 : 儿童数学探险”（以下简称“本应用”）的儿童与家长的隐私视为最高价值，并严格遵守个人信息保护相关法律法规及《儿童在线隐私保护法》（COPPA）准则。
+                </p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 不收集个人身份信息（PII）：</strong>无需注册账号，绝不收集或存储姓名、电子邮箱、电话号码或广告标识符（IDFA）。</li>
+                    <li><strong>2. 100% 本地端（On-Device）存储：</strong>家长录制的鼓励语音与照片仅安全保存在设备内部，绝不上传至外部服务器。</li>
+                    <li><strong>3. 100% 无广告 & 家长安全锁（Parental Gate）：</strong>无任何第三方广告与追踪工具，并通过成人验证锁防止儿童误触付款或跳转外部链接。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第 1 条（不收集个人身份信息原则）</h2>
+                <p>本应用无需注册会员或创建账户，且绝不收集、存储或向任何外部服务器传输以下个人身份信息（PII）：</p>
+                <ul>
+                    <li>姓名、出生日期、电话号码、电子邮箱地址等个人基本信息</li>
+                    <li>精确地理位置信息（GPS 定位数据）</li>
+                    <li>用于追踪用户的设备或广告标识符（UDID、IDFA、GAID 等）</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 2 条（本地端 On-Device 数据处理）</h2>
+                <p>本应用的所有学习活动与自定义数据均仅在用户的设备内部安全处理。</p>
+                <ol>
+                    <li><strong>家长录音与照片数据：</strong>家长为了在测验答对或答错时鼓励孩子而亲自录制的语音文件与自拍照片，仅<strong>存储在用户设备内部的沙盒（Sandbox）安全区域</strong>，绝不会上传至本公司服务器或外部云端。</li>
+                    <li><strong>学习进度与记录：</strong>答题记录、获得的水果数量以及动物伙伴的进化状态仅存储在本地存储空间中，当您从设备上卸载（删除）本应用时，所有数据将一并永久销毁。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 3 条（排除第三方广告与追踪工具）</h2>
+                <p>本应用为 <strong>100% 无广告（Ad-Free）</strong>的安心儿童教育服务。</p>
+                <ul>
+                    <li>绝不包含任何会干扰孩子注意力或诱导至不良网站的横幅、插屏或视频广告。</li>
+                    <li>绝不集成任何用于分析或追踪用户行为的第三方广告 SDK（如 Google AdMob、Meta Pixel、Unity Ads 等）。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 4 条（儿童隐私保护与家长安全锁）</h2>
+                <p>为保障未满 13/14 周岁儿童的安全使用，本公司采取以下严格的保护机制：</p>
+                <ul>
+                    <li><strong>家长安全锁（Parental Gate）：</strong>在进入订阅付款、恢复购买、或点击外部客服链接等所有需要成人确认的步骤前，均严格启用成人验证机制（乘法题目验证或家长 PIN 码）。</li>
+                    <li>从源头防止儿童发生非预期的应用内购买或误触外部网页浏览器。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>第 5 条（应用内购买与订阅处理）</h2>
+                <p>本应用内的所有定期订阅付款均通过 <strong>Apple Inc.（App Store）或 Google Play 的安全应用内购买系统</strong>处理。本公司绝不会直接收集、存储或查阅用户的银行卡号或支付账户等敏感财务信息。</p>
+            </section>
+
+            <section>
+                <h2>第 6 条（个人信息的保留与销毁）</h2>
+                <p>由于本应用不会在外部服务器保存任何个人信息，当用户从设备中<strong>删除（卸载）本应用时，存储在设备内的所有学习记录与家长自定义语音、照片文件将立即且永久销毁</strong>。</p>
+            </section>
+
+            <section>
+                <h2>第 7 条（隐私政策之修订与公告）</h2>
+                <p>本隐私政策可能根据法律法规或服务功能变更而修订。由于本应用不进行会员注册亦不收集电子邮箱，若有修订事项，将于生效日至少 7 天前<strong>仅通过本官方网页（privacy-mathgotchi.html）</strong>进行公告。</p>
+            </section>
+
+            <section>
+                <h2>第 8 条（个人信息保护负责人与客户支持）</h2>
+                <p>如您对本隐私政策或应用使用有任何疑问，请通过以下方式与我们联系：</p>
+                <div class="contact-box">
+                    <strong>ChronoLab 隐私保护团队（麦斯之茧 : 儿童数学探险）</strong><br>
+                    • 个人信息保护负责人：Jaewook Byun（ChronoLab 代表）<br>
+                    • 营业登记类别：通信销售业申报完成（大韩民国）<br>
+                    • 官方客服邮箱：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 实时 KakaoTalk 咨询：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 生效日期：2026年8月29日
+                </div>
+            </section>
+        </div>
+
     </div>
 
     <footer>
@@ -400,29 +659,74 @@
     </footer>
 
     <script>
-        function setLanguage(lang) {
-            const koContent = document.getElementById('content-ko');
-            const enContent = document.getElementById('content-en');
-            const pageTitle = document.getElementById('page-title');
-            const pageDate = document.getElementById('page-date');
-            const buttons = document.querySelectorAll('.lang-btn');
-
-            if (lang === 'ko') {
-                koContent.classList.remove('hidden');
-                enContent.classList.add('hidden');
-                pageTitle.textContent = '[매쓰고치] 개인정보 처리방침';
-                pageDate.textContent = '시행일자: 2026년 8월 29일';
-                buttons[0].classList.add('active');
-                buttons[1].classList.remove('active');
-            } else {
-                koContent.classList.add('hidden');
-                enContent.classList.remove('hidden');
-                pageTitle.textContent = '[Mathgotchi] Privacy Policy';
-                pageDate.textContent = 'Effective Date: August 29, 2026';
-                buttons[0].classList.remove('active');
-                buttons[1].classList.add('active');
+        const i18nMeta = {
+            'ko': {
+                docTitle: '개인정보 처리방침 - 매쓰고치 (Mathgotchi)',
+                pageTitle: '[매쓰고치] 개인정보 처리방침',
+                pageDate: '시행일자: 2026년 8월 29일',
+                htmlLang: 'ko'
+            },
+            'en': {
+                docTitle: 'Privacy Policy - Mathgotchi',
+                pageTitle: '[Mathgotchi] Privacy Policy',
+                pageDate: 'Effective Date: August 29, 2026',
+                htmlLang: 'en'
+            },
+            'ja': {
+                docTitle: 'プライバシーポリシー - マスゴチ (Mathgotchi)',
+                pageTitle: '[マスゴチ] プライバシーポリシー',
+                pageDate: '施行日：2026年8月29日',
+                htmlLang: 'ja'
+            },
+            'zh-tw': {
+                docTitle: '隱私權政策 - Mathgotchi',
+                pageTitle: '[Mathgotchi] 隱私權政策',
+                pageDate: '生效日期：2026年8月29日',
+                htmlLang: 'zh-Hant'
+            },
+            'zh-cn': {
+                docTitle: '隐私政策 - 麦斯之茧 : 儿童数学探险',
+                pageTitle: '[麦斯之茧 : 儿童数学探险] 隐私政策',
+                pageDate: '生效日期：2026年8月29日',
+                htmlLang: 'zh-Hans'
             }
+        };
+
+        function setLanguage(lang) {
+            const targetLang = i18nMeta[lang] ? lang : 'ko';
+            const meta = i18nMeta[targetLang];
+
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+
+            const activeContent = document.getElementById('content-' + targetLang);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+
+            document.title = meta.docTitle;
+            document.documentElement.lang = meta.htmlLang;
+            document.getElementById('page-title').textContent = meta.pageTitle;
+            document.getElementById('page-date').textContent = meta.pageDate;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === targetLang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
         }
+
+        // URL 쿼리 파라미터(?lang=ja, ?lang=zh-tw, ?lang=zh-cn, ?lang=en) 지원
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const queryLang = params.get('lang');
+            if (queryLang && i18nMeta[queryLang.toLowerCase()]) {
+                setLanguage(queryLang.toLowerCase());
+            }
+        });
     </script>
 </body>
 </html>
