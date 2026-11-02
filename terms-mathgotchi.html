@@ -17,7 +17,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -28,7 +28,7 @@
         }
 
         body {
-            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            font-family: 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans SC', 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.75;
@@ -56,6 +56,7 @@
         }
         .header-title-area {
             flex: 1;
+            min-width: 240px;
         }
         h1 {
             font-weight: 800;
@@ -72,6 +73,7 @@
 
         .lang-switch {
             display: flex;
+            flex-wrap: wrap;
             background: #EDF2F7;
             padding: 4px;
             border-radius: 10px;
@@ -80,13 +82,14 @@
         .lang-btn {
             border: none;
             background: transparent;
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 8px;
             font-size: 13px;
             font-weight: 700;
             color: #64748B;
             cursor: pointer;
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
         .lang-btn.active {
             background: #ffffff;
@@ -199,6 +202,7 @@
         footer a {
             color: #718096;
             text-decoration: none;
+            margin: 0 8px;
         }
         footer a:hover {
             color: var(--brand-color);
@@ -223,22 +227,25 @@
 
     <div class="policy-container">
         
-        <!-- 헤더 및 언어 전환 -->
+        <!-- 헤더 및 5개 국어 언어 전환 -->
         <header>
             <div class="header-title-area">
                 <h1 id="page-title">[매쓰고치] 서비스 이용약관</h1>
                 <p class="date" id="page-date">시행일자: 2026년 8월 29일</p>
             </div>
             <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLanguage('ko')">🇰🇷 한국어</button>
-                <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 English</button>
+                <button class="lang-btn active" data-lang="ko" onclick="setLanguage('ko')">🇰🇷 한국어</button>
+                <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇺🇸 English</button>
+                <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">🇯🇵 日本語</button>
+                <button class="lang-btn" data-lang="zh-tw" onclick="setLanguage('zh-tw')">🇹🇼 繁體中文</button>
+                <button class="lang-btn" data-lang="zh-cn" onclick="setLanguage('zh-cn')">🇨🇳 简体中文</button>
             </div>
         </header>
 
         <!-- ======================================================= -->
-        <!-- 한국어 약관 본문 -->
+        <!-- 1. 한국어 약관 본문 (Korean) -->
         <!-- ======================================================= -->
-        <div id="content-ko">
+        <div id="content-ko" class="lang-content">
             
             <div class="app-notice">
                 <h4>⏰ 아동 안심 교육 환경 및 구독 운영 안내</h4>
@@ -278,23 +285,23 @@
             <section>
                 <h2>제 4 조 (구독 요금 및 결제)</h2>
                 <ol>
-                    <li>구독 결제는 구매 확인 시 이용자의 <strong>Apple ID (App Store) 계정</strong>으로 청구됩니다.</li>
+                    <li>구독 결제는 구매 확인 시 이용자의 <strong>Apple ID (App Store) 또는 Google Play 계정</strong>으로 청구됩니다.</li>
                     <li><strong>(무료 체험 프로모션)</strong> 7일 무료 체험 프로모션이 제공되는 경우, 무료 체험 기간 종료 최소 24시간 전에 취소하지 않으면 정규 월간 구독 요금이 자동으로 청구됩니다.</li>
                     <li><strong>(자동 갱신)</strong> 구독은 현재 구독 기간 만료 최소 24시간 전에 자동 갱신을 해제하지 않으면 동일한 가격 및 기간으로 자동 갱신됩니다.</li>
-                    <li>결제 금액, 청구 통화 및 청구 주기는 결제 시 앱 내 화면 및 Apple App Store 결제 승인 창에 명시된 금액과 조건(해당 지역 세금 포함)에 따릅니다.</li>
+                    <li>결제 금액, 청구 통화 및 청구 주기는 결제 시 앱 내 화면 및 앱 스토어 결제 승인 창에 명시된 금액과 조건(해당 지역 세금 포함)에 따릅니다.</li>
                 </ol>
             </section>
 
             <section>
                 <h2>제 5 조 (구독 관리 및 해지)</h2>
-                <p>회원은 언제든지 iOS 기기의 <strong>[설정] &gt; [Apple ID 계정] &gt; [구독]</strong> 메뉴에서 활성 구독 상태를 확인하고 언제든지 자동 갱신을 해지하거나 관리할 수 있습니다.</p>
+                <p>회원은 언제든지 iOS 기기의 <strong>[설정] &gt; [Apple ID 계정] &gt; [구독]</strong> 메뉴(또는 Google Play의 정기 결제 관리 메뉴)에서 활성 구독 상태를 확인하고 언제든지 자동 갱신을 해지하거나 관리할 수 있습니다.</p>
             </section>
 
             <section>
                 <h2>제 6 조 (청약철회 및 환불 정책)</h2>
                 <ol>
-                    <li>앱 내 인앱 결제 및 구독에 대한 청약철회 및 환불은 <strong>Apple의 '미디어 서비스 이용약관' 및 환불 정책</strong>에 따릅니다.</li>
-                    <li>회사는 Apple의 결제 시스템을 거치지 않은 임의의 직접 환불 권한을 보유하지 않으므로, 환불 요청은 Apple 지원 페이지를 통하여 진행하셔야 합니다.</li>
+                    <li>앱 내 인앱 결제 및 구독에 대한 청약철회 및 환불은 <strong>Apple의 '미디어 서비스 이용약관' 또는 Google Play 환불 정책</strong>에 따릅니다.</li>
+                    <li>회사는 앱 스토어의 결제 시스템을 거치지 않은 임의의 직접 환불 권한을 보유하지 않으므로, 환불 요청은 Apple 또는 Google 지원 페이지를 통하여 진행하셔야 합니다.</li>
                 </ol>
             </section>
 
@@ -317,7 +324,7 @@
                     <li><strong>(불가항력 및 시스템 오류)</strong> 회사는 천재지변, 기기 고장, OS 오류 등 불가항력적인 사유로 인한 서비스 일시 중단에 대해 책임을 지지 않습니다.</li>
                     <li><strong>(앱 업데이트 및 로컬 데이터 면책)</strong> 본 앱은 개인정보 보호를 위한 로컬 온디바이스(On-Device) 저장 방식으로 동작합니다. 서비스 기능 개선 및 콘텐츠 추가를 위한 <strong>앱 업데이트, 데이터베이스 구조 변경(Schema Migration), 기기 변경 또는 앱 삭제로 인한 로컬 데이터(학습 기록, 펫 성장 데이터, 부모 커스텀 음성·사진)의 소실 및 초기화</strong>에 대하여 회사의 고의 또는 중대한 과실이 없는 한 회사는 일체의 복구 책임을 부담하지 않습니다.</li>
                     <li><strong>(보호자의 지도·감독 및 전적인 관리 책임)</strong> 본 앱은 아동용 교육 콘텐츠로서, <strong>아동의 이용 여부, 이용 시간, 사용 빈도 및 학습 환경에 대한 관리와 지도는 전적으로 법정대리인(보호자)의 자율적인 판단과 책임하에 이루어집니다.</strong> 보호자의 지도·감독 소홀이나 방치로 인해 발생한 과도한 기기 사용, 과몰입 등 제반 문제에 대해 회사는 일체의 책임을 지지 않습니다.</li>
-                    <li><strong>(유료 구독 권한의 영구 보존)</strong> 제2항의 로컬 데이터 소실과 무관하게 회원의 <strong>유료 구독 자격 및 결제 내역은 Apple ID 계정에 안전하게 귀속</strong>되어, 앱 재설치 또는 업데이트 후에도 [구매 복원]을 통해 정상적으로 복구 및 유지됩니다.</li>
+                    <li><strong>(유료 구독 권한의 영구 보존)</strong> 제2항의 로컬 데이터 소실과 무관하게 회원의 <strong>유료 구독 자격 및 결제 내역은 Apple ID 또는 Google 계정에 안전하게 귀속</strong>되어, 앱 재설치 또는 업데이트 후에도 [구매 복원]을 통해 정상적으로 복구 및 유지됩니다.</li>
                 </ol>
             </section>
 
@@ -336,9 +343,9 @@
         </div>
 
         <!-- ======================================================= -->
-        <!-- 영문 약관 본문 (English Terms of Use) -->
+        <!-- 2. 영문 약관 본문 (English) -->
         <!-- ======================================================= -->
-        <div id="content-en" class="hidden">
+        <div id="content-en" class="lang-content hidden">
             
             <div class="app-notice">
                 <h4>⏰ Safe Educational Environment & Subscription Terms</h4>
@@ -377,21 +384,21 @@
             <section>
                 <h2>4. Billing, Free Trial & Auto-Renewal</h2>
                 <ol>
-                    <li>Payment will be charged to your <strong>Apple ID account</strong> upon confirmation of purchase.</li>
+                    <li>Payment will be charged to your <strong>Apple ID or Google Play account</strong> upon confirmation of purchase.</li>
                     <li><strong>(Free Trial)</strong> If a 7-day free trial is offered, it will automatically renew to a paid monthly subscription unless canceled at least 24 hours before the trial ends.</li>
                     <li><strong>(Auto-Renewal)</strong> Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing cycle.</li>
-                    <li>Subscription prices, currencies, and billing terms are determined by the amounts displayed on the in-app purchase screen and Apple App Store confirmation sheet.</li>
+                    <li>Subscription prices, currencies, and billing terms are determined by the amounts displayed on the in-app purchase screen and App Store confirmation sheet.</li>
                 </ol>
             </section>
 
             <section>
                 <h2>5. Subscription Management & Cancellation</h2>
-                <p>You can manage or cancel your active subscription anytime in your iOS device settings via <strong>[Settings] &gt; [Apple ID] &gt; [Subscriptions]</strong>.</p>
+                <p>You can manage or cancel your active subscription anytime in your iOS device settings via <strong>[Settings] &gt; [Apple ID] &gt; [Subscriptions]</strong> (or in Google Play Subscriptions settings).</p>
             </section>
 
             <section>
                 <h2>6. Refund Policy</h2>
-                <p>All in-app purchases, subscription cancellations, and refund requests are processed directly by Apple according to <strong>Apple's Media Services Terms and Conditions</strong>. The Company does not hold authority to issue direct manual refunds outside of Apple's system.</p>
+                <p>All in-app purchases, subscription cancellations, and refund requests are processed directly by Apple or Google according to <strong>Apple's Media Services Terms and Conditions or Google Play's Refund Policy</strong>. The Company does not hold authority to issue direct manual refunds outside of the store billing system.</p>
             </section>
 
             <section>
@@ -413,7 +420,7 @@
                     <li><strong>(Force Majeure)</strong> The Company shall not be liable for service interruptions caused by natural disasters, hardware failures, or operating system anomalies.</li>
                     <li><strong>(App Updates & Local Storage)</strong> Operating on an on-device local storage principle, the Company assumes no liability for the loss or reset of local study records, digital pet progress, or custom parent recordings resulting from <strong>app updates, database schema migrations, device changes, or app uninstallation</strong>, except in cases of intentional misconduct or gross negligence.</li>
                     <li><strong>(Parental Guidance & Discretion)</strong> The App is an educational tool intended to be used <strong>under the sole discretion, supervision, and active guidance of a parent or legal guardian.</strong> The determination of appropriate screen time, usage duration, and usage environment rests entirely with the guardian. The Company assumes no responsibility or liability for excessive screen time or unsupervised use by children.</li>
-                    <li><strong>(Subscription Entitlements)</strong> Regardless of local data status, all <strong>active subscription entitlements remain permanently associated with your Apple ID</strong> and can be restored at any time via the [Restore Purchases] feature.</li>
+                    <li><strong>(Subscription Entitlements)</strong> Regardless of local data status, all <strong>active subscription entitlements remain permanently associated with your Apple ID or Google account</strong> and can be restored at any time via the [Restore Purchases] feature.</li>
                 </ol>
             </section>
 
@@ -431,6 +438,307 @@
             </section>
         </div>
 
+        <!-- ======================================================= -->
+        <!-- 3. 일본어 약관 본문 (Japanese) -->
+        <!-- ======================================================= -->
+        <div id="content-ja" class="lang-content hidden">
+            
+            <div class="app-notice">
+                <h4>⏰ お子さまの安心な学習環境およびサブスクリプションのご案内</h4>
+                <p>「マスゴチ (Mathgotchi)」は、お子さまの楽しい学びと保護者の皆さまの安心を最優先に設計された幼児・小学生向けの知育・算数サービスです。</p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 100% 広告なし（Ad-Free）：</strong>学習への集中を妨げたり、有害なコンテンツへ誘導したりする第三者広告は一切表示されません。</li>
+                    <li><strong>2. 端末内（オンデバイス）保存：</strong>保護者の録音ボイスや写真は当社サーバーへ送信されず、お使いの端末内にのみ安全に保管されます。</li>
+                    <li><strong>3. 保護者あんしんロック（Parental Gate）：</strong>お子さまによる誤課金や外部リンクへの移動を防ぐため、大人向けの確認ロックを適用しています。</li>
+                    <li><strong>4. 7日間無料トライアル：</strong>定期サブスクリプション開始前に、7日間すべての学習コンテンツを無料でお試しいただけます。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第1条（目的）</h2>
+                <p>本規約は、ChronoLab（以下「当社」）が開発・提供するモバイルアプリケーション「マスゴチ (Mathgotchi)」（以下「本アプリ」）のサービス利用およびサブスクリプションに関して、当社と利用者（以下「会員」）との間の権利、義務、および責任事項を定めることを目的とします。</p>
+            </section>
+
+            <section>
+                <h2>第2条（用語の定義およびサービス内容）</h2>
+                <ol>
+                    <li><strong>「サービス」</strong>とは、当社が本アプリを通じて提供する時計の読み方学習、計算クイズ、動物パートナー育成、保護者のカスタム音声・写真による応援機能、および今後追加されるすべての学習コンテンツを意味します。</li>
+                    <li><strong>「会員」</strong>とは、本規約に同意の上でサービスを利用する法定代理人（保護者）およびお子さまを意味します。</li>
+                    <li><strong>「サブスクリプション」</strong>とは、定期決済を通じて、当社が提供するすべてのプレミアム学習コンテンツを制限なく利用できる権限を意味します。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第3条（規約の掲示・改定および告知方法）</h2>
+                <ol>
+                    <li>当社は、本規約の内容を会員が容易に確認できるよう、公式Webページ（terms-mathgotchi.html）に常時掲示します。</li>
+                    <li>当社は、関連法令に違反しない範囲で本規約を改定することがあります。</li>
+                    <li><strong>（告知方法の明示）</strong>本アプリは、利用者の個人情報保護のため会員登録手続きやメールアドレスの収集を行わないオンデバイス（端末内完結型）サービスです。そのため、本規約が改定される場合、当社は適用日の少なくとも7日前から<strong>本公式Webページ（terms-mathgotchi.html）を通じてのみ</strong>改定内容および適用日を明示的に告知いたします。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第4条（サブスクリプション料金および決済）</h2>
+                <ol>
+                    <li>サブスクリプションの決済は、購入確認時に利用者の<strong>Apple ID（App Store）または Google Play アカウント</strong>に請求されます。</li>
+                    <li><strong>（無料トライアル）</strong>7日間の無料トライアルが提供される場合、トライアル期間終了の少なくとも24時間前にキャンセルしない限り、通常の月額サブスクリプション料金が自動的に請求されます。</li>
+                    <li><strong>（自動更新）</strong>サブスクリプションは、現在の購読期間終了の少なくとも24時間前に自動更新をオフにしない限り、同一の価格および期間で自動的に更新されます。</li>
+                    <li>決済金額、請求通貨、および請求サイクルは、決済時にアプリ内画面およびApp Store／Google Playの決済確認画面に表示される金額と条件（該当地域の税金を含む）に従います。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第5条（サブスクリプションの管理および解約）</h2>
+                <p>会員はいつでも、iOS端末の<strong>［設定］&gt;［Apple ID］&gt;［サブスクリプション］</strong>メニュー（またはGoogle Playの定期購入管理メニュー）から有効なサブスクリプション状態を確認し、自動更新の解約や管理を行うことができます。</p>
+            </section>
+
+            <section>
+                <h2>第6条（キャンセルおよび返金ポリシー）</h2>
+                <ol>
+                    <li>アプリ内課金およびサブスクリプションのキャンセル・返金は、<strong>Appleの「Appleメディアサービス利用規約」またはGoogle Playの返金ポリシー</strong>に従います。</li>
+                    <li>当社は各アプリストアの決済システムを介さない独自の直接返金権限を有していないため、返金のご要望はAppleまたはGoogleのサポートページを通じてお手続きいただく必要があります。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第7条（コンテンツの権利および保護）</h2>
+                <ol>
+                    <li>本アプリ内のすべてのキャラクター、視覚デザイン、サウンド、クイズ、およびソフトウェアソースコードに関する知的財産権は当社に帰属します。</li>
+                    <li>会員が直接登録した保護者の録音音声ファイルおよび写真データの権利は会員に帰属し、当該データは外部サーバーへ送信されることなく会員の端末内ローカルストレージにのみ保管されます。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第8条（個人情報保護およびお子さまの安全）</h2>
+                <p>当社は会員の個人識別情報（PII）をサーバーに収集しないことを原則とし、詳細は公式の<strong>［プライバシーポリシー］</strong>に従います。また、児童保護のために保護者あんしんロック（Parental Gate）を厳格に運用しています。</p>
+            </section>
+
+            <section class="disclaimer-box">
+                <h2 class="disclaimer-title">第9条（免責事項および責任の制限）</h2>
+                <ol>
+                    <li><strong>（不可抗力およびシステムエラー）</strong>当社は、天災地変、端末の故障、OSの不具合など不可抗力的な事由によるサービスの一時中断について責任を負いません。</li>
+                    <li><strong>（アプリアップデートおよびローカルデータに関する免責）</strong>本アプリは個人情報保護のため、端末内（オンデバイス）保存方式で動作します。機能改善やコンテンツ追加に伴う<strong>アプリのアップデート、データベース構造の変更（スキーママイグレーション）、機種変更、またはアプリのアンインストール（削除）によって生じたローカルデータ（学習履歴、ペット育成データ、保護者の録音音声・写真）の消失および初期化</strong>について、当社の故意または重過失がない限り、当社は一切の復旧責任を負いません。</li>
+                    <li><strong>（保護者の指導・監督および管理責任）</strong>本アプリはお子さま向けの教育コンテンツであり、<strong>お子さまの利用有無、利用時間、利用頻度、および学習環境の管理・指導は、すべて法定代理人（保護者）の自主的な判断と責任のもとで行われるものとします。</strong>保護者の指導・監督の不足や放置によって生じた過度な端末使用や使いすぎ等の諸問題について、当社は一切の責任を負いません。</li>
+                    <li><strong>（有料サブスクリプション権限の永続的保持）</strong>第2項のローカルデータの消失にかかわらず、会員の<strong>有料サブスクリプション資格および決済履歴はApple IDまたはGoogleアカウントに安全に紐付けられており</strong>、アプリの再インストールやアップデート後も［購入の復元］機能を通じて正常に復元・維持されます。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第10条（事業者情報およびお問い合わせ）</h2>
+                <div class="support-card">
+                    <strong>ChronoLab（クロノラボ）</strong><br>
+                    • 事業者名：ChronoLab（クロノラボ）<br>
+                    • 代表者：Jaewook Byun<br>
+                    • 通信販売業届出：届出済（大韓民国）<br>
+                    • 公式サポートメール：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 カカオトーク相談：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 施行日：2026年8月29日
+                </div>
+            </section>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- 4. 대만 번체 약관 본문 (Traditional Chinese) -->
+        <!-- ======================================================= -->
+        <div id="content-zh-tw" class="lang-content hidden">
+            
+            <div class="app-notice">
+                <h4>⏰ 兒童安心學習環境與訂閱服務說明</h4>
+                <p>「Mathgotchi」是以孩子的快樂學習與家長的安心為最高原則所設計的幼兒與國小數學教育服務。</p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 100% 無廣告（Ad-Free）：</strong>絕不刊登任何會干擾學習專注力或誘導至不當內容的第三方廣告。</li>
+                    <li><strong>2. 本機端（On-Device）儲存：</strong>家長錄製的加油語音與照片僅安全保存在您的裝置內，絕不傳送至公司伺服器。</li>
+                    <li><strong>3. 家長安全鎖（Parental Gate）：</strong>內建成人驗證鎖定機制，防止孩童誤觸付款或跳轉至外部連結。</li>
+                    <li><strong>4. 7 天免費試用優惠：</strong>在正式開始訂閱前，可免費暢享 7 天所有學習內容。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第 1 條（目的）</h2>
+                <p>本服務條款旨在規範 ChronoLab（以下簡稱「本公司」）所開發及提供之行動應用程式「Mathgotchi」（以下簡稱「本應用」）的服務使用與訂閱相關事宜，並明確定義本公司與使用者（以下簡稱「會員」）之間的權利、義務與責任。</p>
+            </section>
+
+            <section>
+                <h2>第 2 條（名詞定義與服務內容）</h2>
+                <ol>
+                    <li><strong>「服務」</strong>係指本公司透過本應用所提供之兒童認識時鐘、數學四則運算測驗、動物夥伴養成、家長自訂語音／照片加油功能，以及未來持續擴充之所有學習內容。</li>
+                    <li><strong>「會員」</strong>係指同意本條款並使用本服務之法定代理人（父母或監護人）及孩童。</li>
+                    <li><strong>「訂閱」</strong>係指透過定期付款，於有效期間內無限制使用本公司所提供之所有進階學習內容的權限。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 3 條（條款之揭示、修訂與公告方式）</h2>
+                <ol>
+                    <li>本公司將本條款內容常態揭示於官方網頁（terms-mathgotchi.html），以便會員隨時查閱。</li>
+                    <li>本公司得於不違反相關法令之範圍內修訂本條款。</li>
+                    <li><strong>（公告方式說明）</strong>為保護使用者隱私，本應用為無需註冊會員亦不蒐集電子郵件之本機端（On-Device）服務。因此，若本條款有所修訂，本公司將於修訂條款生效日至少 7 天前，<strong>僅透過本官方網頁（terms-mathgotchi.html）</strong>明確公告修訂內容與生效日期。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 4 條（訂閱費用與付款）</h2>
+                <ol>
+                    <li>訂閱費用將於確認購買時，透過使用者的 <strong>Apple ID（App Store）或 Google Play 帳戶</strong>進行扣款。</li>
+                    <li><strong>（免費試用優惠）</strong>若提供 7 天免費試用，除非在免費試用期結束至少 24 小時前取消訂閱，否則系統將自動轉為正式月費訂閱並進行扣款。</li>
+                    <li><strong>（自動續訂）</strong>除非在當期訂閱期間屆滿至少 24 小時前關閉自動續訂功能，否則訂閱將以相同價格與週期自動續訂。</li>
+                    <li>實際付款金額、計價幣別與扣款週期，皆以購買時應用內畫面及 App Store／Google Play 付款確認視窗所顯示之金額與條件（含當地稅金）為準。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 5 條（訂閱管理與取消）</h2>
+                <p>會員隨時可於 iOS 裝置的<strong>「設定」&gt;「Apple ID」&gt;「訂閱項目」</strong>選單（或 Google Play 的「定期付款」選單）中查看目前的訂閱狀態，並隨時管理或取消自動續訂。</p>
+            </section>
+
+            <section>
+                <h2>第 6 條（退訂與退款政策）</h2>
+                <ol>
+                    <li>本應用內之購買與訂閱的退訂及退款事宜，均依循 <strong>Apple《媒體服務條款與約定》或 Google Play 退款政策</strong>辦理。</li>
+                    <li>本公司並無跳過應用商店付款系統直接進行人工退款之權限，如需申請退款，請透過 Apple 或 Google 官方客服支援頁面辦理。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 7 條（內容權利與保護）</h2>
+                <ol>
+                    <li>本應用內之所有角色、視覺設計、音效、題庫及軟體原始碼之智慧財產權均歸本公司所有。</li>
+                    <li>會員親自錄製與登錄之家長語音檔案及照片資料的權利歸屬於會員本人，且該資料僅保存在會員裝置的本機儲存空間中，絕不會傳送至外部伺服器。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 8 條（個人資料保護與兒童安全）</h2>
+                <p>本公司堅持不向伺服器蒐集會員個人識別資訊（PII）之原則，詳細內容請參閱官方<strong>《隱私權政策》</strong>。此外，為保護兒童安全，本應用嚴格實施家長安全鎖（Parental Gate）機制。</p>
+            </section>
+
+            <section class="disclaimer-box">
+                <h2 class="disclaimer-title">第 9 條（免責聲明與責任限制）</h2>
+                <ol>
+                    <li><strong>（不可抗力與系統異常）</strong>因天災、裝置故障、作業系統異常等不可抗力事由所導致之服務暫時中斷，本公司不負賠償責任。</li>
+                    <li><strong>（應用更新與本機資料免責）</strong>本應用採用保護隱私之本機端（On-Device）儲存方式運作。除本公司有故意或重大過失外，因改善服務功能或新增內容所進行之<strong>應用程式更新、資料庫結構變更（Schema Migration）、更換裝置或移除應用程式，進而導致本機資料（學習紀錄、寵物養成進度、家長自訂語音與照片）遺失或重置</strong>，本公司概不負資料復原之責任。</li>
+                    <li><strong>（家長之指導監督與管理責任）</strong>本應用為兒童教育內容，<strong>孩童是否使用、使用時間長短、使用頻率及學習環境之管理與指導，完全由法定代理人（家長或監護人）自主判斷並負起完全責任。</strong>因家長疏於指導監督或放任不管而導致之過度使用裝置或沉迷等問題，本公司概不負責。</li>
+                    <li><strong>（付費訂閱權限之永久保留）</strong>無論第 2 項之本機資料是否遺失，會員的<strong>付費訂閱資格與購買紀錄均安全綁定於您的 Apple ID 或 Google 帳戶中</strong>，重新安裝或更新應用程式後，皆可透過「恢復購買」功能正常復原並繼續使用。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 10 條（企業資訊與客戶支援）</h2>
+                <div class="support-card">
+                    <strong>ChronoLab 客戶支援團隊</strong><br>
+                    • 公司名稱：ChronoLab<br>
+                    • 代表人：Jaewook Byun<br>
+                    • 營業登記類別：通訊販售業申報完成（大韓民國）<br>
+                    • 官方客服信箱：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 即時 KakaoTalk 諮詢：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 生效日期：2026年8月29日
+                </div>
+            </section>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- 5. 중국 간체 약관 본문 (Simplified Chinese) -->
+        <!-- 앱 이름: 麦斯之茧 : 儿童数学探险 -->
+        <!-- ======================================================= -->
+        <div id="content-zh-cn" class="lang-content hidden">
+            
+            <div class="app-notice">
+                <h4>⏰ 儿童安心教育环境与订阅服务说明</h4>
+                <p>“麦斯之茧 : 儿童数学探险”（Mathgotchi）是以孩子的快乐学习与家长的安心为最高原则而设计的幼儿及小学数学教育服务。</p>
+                <hr style="opacity: 0.15; margin: 12px 0;">
+                <ul>
+                    <li><strong>1. 100% 无广告（Ad-Free）：</strong>绝不刊登任何会干扰学习专注力或诱导至不良内容的第三方广告。</li>
+                    <li><strong>2. 本地端（On-Device）存储：</strong>家长录制的鼓励语音与照片仅安全保存在您的设备内，绝不上传至公司服务器。</li>
+                    <li><strong>3. 家长安全锁（Parental Gate）：</strong>内置成人验证锁定机制，防止儿童误触付款或跳转至外部链接。</li>
+                    <li><strong>4. 7 天免费试用特惠：</strong>在正式开始订阅前，可免费畅享 7 天所有学习内容。</li>
+                </ul>
+            </div>
+
+            <section>
+                <h2>第 1 条（目的）</h2>
+                <p>本服务条款旨在规范 ChronoLab（以下简称“本公司”）所开发及提供的移动应用程序“麦斯之茧 : 儿童数学探险”（以下简称“本应用”）的服务使用与订阅相关事宜，并明确规定本公司与用户（以下简称“会员”）之间的权利、义务与责任。</p>
+            </section>
+
+            <section>
+                <h2>第 2 条（术语定义与服务内容）</h2>
+                <ol>
+                    <li><strong>“服务”</strong>是指本公司通过本应用提供的儿童认识时钟、数学四则运算测验、动物伙伴养成、家长自定义语音／照片加油功能，以及未来持续新增的所有学习内容。</li>
+                    <li><strong>“会员”</strong>是指同意本条款并使用本服务的法定代理人（父母等监护人）及儿童。</li>
+                    <li><strong>“订阅”</strong>是指通过定期付款，在有效期内无限制使用本公司提供的所有高级学习内容的权限。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 3 条（条款的公示、修订与通知方式）</h2>
+                <ol>
+                    <li>本公司将本条款内容常年公示在官方网页（terms-mathgotchi.html）上，以便会员随时查阅。</li>
+                    <li>本公司可在不违反相关法律法规的范围内修订本条款。</li>
+                    <li><strong>（通知方式说明）</strong>为保护用户隐私，本应用是不进行会员注册也不收集电子邮箱的本地端（On-Device）服务。因此，若本条款发生修订，本公司将于修订条款生效日至少 7 天前，<strong>仅通过本官方网页（terms-mathgotchi.html）</strong>明确公告修订内容与生效日期。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 4 条（订阅费用与付款）</h2>
+                <ol>
+                    <li>订阅费用将在确认购买时，从用户的 <strong>Apple ID（App Store）或 Google Play 账户</strong>中扣除。</li>
+                    <li><strong>（免费试用优惠）</strong>若提供 7 天免费试用，除非在免费试用期结束至少 24 小时前取消订阅，否则系统将自动转为正式月度订阅并扣取费用。</li>
+                    <li><strong>（自动续订）</strong>除非在当前订阅期届满至少 24 小时前关闭自动续订功能，否则订阅将以相同的价格和周期自动续订。</li>
+                    <li>实际付款金额、计价币种与扣款周期，均以购买时应用内界面及 App Store／Google Play 付款确认弹窗所显示的金额与条件（含当地税费）为准。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 5 条（订阅管理与取消）</h2>
+                <p>会员随时可在 iOS 设备的<strong>“设置”&gt;“Apple ID”&gt;“订阅”</strong>菜单（或 Google Play 的定期付款管理菜单）中查看当前的订阅状态，并随时管理或取消自动续订。</p>
+            </section>
+
+            <section>
+                <h2>第 6 条（退订与退款政策）</h2>
+                <ol>
+                    <li>本应用内的购买与订阅之退订及退款事宜，均遵循 <strong>Apple《Apple 媒体服务条款和条件》或 Google Play 退款政策</strong>执行。</li>
+                    <li>本公司不具备绕过应用商店支付系统直接进行人工退款的权限，如需申请退款，请通过 Apple 或 Google 官方支持页面办理。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 7 条（内容权利与保护）</h2>
+                <ol>
+                    <li>本应用内的所有角色、视觉设计、音效、题库及软件源代码的知识产权均归本公司所有。</li>
+                    <li>会员亲自录制与上传的家长语音文件及照片数据的权利归会员本人所有，且该数据仅保存在会员设备的本地存储空间中，绝不会发送至外部服务器。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 8 条（个人信息保护与儿童安全）</h2>
+                <p>本公司坚持不在服务器上收集会员个人身份信息（PII）的原则，详细内容请参阅官方<strong>《隐私政策》</strong>。此外，为保护儿童安全，本应用严格运行家长安全锁（Parental Gate）机制。</p>
+            </section>
+
+            <section class="disclaimer-box">
+                <h2 class="disclaimer-title">第 9 条（免责声明与责任限制）</h2>
+                <ol>
+                    <li><strong>（不可抗力与系统异常）</strong>因自然灾害、设备故障、操作系统异常等不可抗力原因导致的服务暂时中断，本公司不承担赔偿责任。</li>
+                    <li><strong>（应用更新与本地数据免责）</strong>本应用采用保护隐私的本地端（On-Device）存储方式运行。除非本公司存在故意或重大过失，否则因优化服务功能或新增内容而进行的<strong>应用更新、数据库结构变更（Schema Migration）、更换设备或卸载（删除）应用，进而导致本地数据（学习记录、宠物养成进度、家长自定义语音与照片）丢失或重置</strong>，本公司概不承担任何恢复责任。</li>
+                    <li><strong>（家长的指导监督与全面管理责任）</strong>本应用为儿童教育内容，<strong>儿童是否使用、使用时长、使用频率及学习环境的管理与指导，完全由法定代理人（家长或监护人）自主判断并承担全部责任。</strong>因家长疏于指导监督或放任不管而导致的过度使用设备、沉迷等一切问题，本公司概不负责。</li>
+                    <li><strong>（付费订阅权限的永久保留）</strong>无论第 2 款所述的本地数据是否丢失，会员的<strong>付费订阅资格与购买记录均安全绑定在您的 Apple ID 或 Google 账户名下</strong>，在重新安装或更新应用后，均可通过“恢复购买”功能正常恢复并继续使用。</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>第 10 条（开发者信息与客户支持）</h2>
+                <div class="support-card">
+                    <strong>ChronoLab 客户支持团队（麦斯之茧 : 儿童数学探险）</strong><br>
+                    • 开发者名称：ChronoLab<br>
+                    • 代表人：Jaewook Byun<br>
+                    • 营业登记类别：通信销售业申报完成（大韩民国）<br>
+                    • 官方客服邮箱：<a href="mailto:chrono.lab.sole@gmail.com">chrono.lab.sole@gmail.com</a><br>
+                    • 1:1 实时 KakaoTalk 咨询：<a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank">https://open.kakao.com/o/sqj5v6Ki</a><br>
+                    • 生效日期：2026年8月29日
+                </div>
+            </section>
+        </div>
+
     </div>
 
     <footer>
@@ -442,29 +750,74 @@
     </footer>
 
     <script>
-        function setLanguage(lang) {
-            const koContent = document.getElementById('content-ko');
-            const enContent = document.getElementById('content-en');
-            const pageTitle = document.getElementById('page-title');
-            const pageDate = document.getElementById('page-date');
-            const buttons = document.querySelectorAll('.lang-btn');
-
-            if (lang === 'ko') {
-                koContent.classList.remove('hidden');
-                enContent.classList.add('hidden');
-                pageTitle.textContent = '[매쓰고치] 서비스 이용약관';
-                pageDate.textContent = '시행일자: 2026년 8월 29일';
-                buttons[0].classList.add('active');
-                buttons[1].classList.remove('active');
-            } else {
-                koContent.classList.add('hidden');
-                enContent.classList.remove('hidden');
-                pageTitle.textContent = '[Mathgotchi] Terms of Service';
-                pageDate.textContent = 'Effective Date: August 29, 2026';
-                buttons[0].classList.remove('active');
-                buttons[1].classList.add('active');
+        const i18nMeta = {
+            'ko': {
+                docTitle: '서비스 이용약관 - 매쓰고치 (Mathgotchi)',
+                pageTitle: '[매쓰고치] 서비스 이용약관',
+                pageDate: '시행일자: 2026년 8월 29일',
+                htmlLang: 'ko'
+            },
+            'en': {
+                docTitle: 'Terms of Service - Mathgotchi',
+                pageTitle: '[Mathgotchi] Terms of Service',
+                pageDate: 'Effective Date: August 29, 2026',
+                htmlLang: 'en'
+            },
+            'ja': {
+                docTitle: 'サービス利用規約 - マスゴチ (Mathgotchi)',
+                pageTitle: '[マスゴチ] サービス利用規約',
+                pageDate: '施行日：2026年8月29日',
+                htmlLang: 'ja'
+            },
+            'zh-tw': {
+                docTitle: '服務條款 - Mathgotchi',
+                pageTitle: '[Mathgotchi] 服務條款',
+                pageDate: '生效日期：2026年8月29日',
+                htmlLang: 'zh-Hant'
+            },
+            'zh-cn': {
+                docTitle: '服务条款 - 麦斯之茧 : 儿童数学探险',
+                pageTitle: '[麦斯之茧 : 儿童数学探险] 服务条款',
+                pageDate: '生效日期：2026年8月29日',
+                htmlLang: 'zh-Hans'
             }
+        };
+
+        function setLanguage(lang) {
+            const targetLang = i18nMeta[lang] ? lang : 'ko';
+            const meta = i18nMeta[targetLang];
+
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+
+            const activeContent = document.getElementById('content-' + targetLang);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+
+            document.title = meta.docTitle;
+            document.documentElement.lang = meta.htmlLang;
+            document.getElementById('page-title').textContent = meta.pageTitle;
+            document.getElementById('page-date').textContent = meta.pageDate;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === targetLang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
         }
+
+        // URL 쿼리 파라미터(?lang=ja, ?lang=zh-tw, ?lang=zh-cn, ?lang=en) 지원
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const queryLang = params.get('lang');
+            if (queryLang && i18nMeta[queryLang.toLowerCase()]) {
+                setLanguage(queryLang.toLowerCase());
+            }
+        });
     </script>
 </body>
 </html>
