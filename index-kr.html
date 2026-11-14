@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <title>Mathgotchi (매쓰고치) - 우리아이 첫 시계 & 수학 탐험 | ChronoLab</title>
-    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 아빠가 정성껏 만든 안심 배움터. 손으로 돌리는 시계, 사칙연산(덧셈·뺄셈·곱셈·나눗셈), 무제한 PDF 문제지·풀이집 출력, 알을 깨는 동물 친구! App Store & Google Play 정식 출시!">
-    <meta name="keywords" content="매쓰고치, Mathgotchi, 시계공부, 시계읽기, 유아수학, 초등수학, 수학학습지, PDF문제집, 덧셈, 뺄셈, 곱셈, 나눗셈, 구구단, 플래시카드, 필기체인식, 펫키우기, 부모응원, ChronoLab, 무광고 어린이앱">
+    <title>매쓰고치 (MathCoco) - 우리아이 첫 시계 & 수학 공부방 | ChronoLab</title>
+    <meta name="description" content="시계가 어렵고 공부가 싫었던 두 아이를 위해 컴공과 교수 아빠가 직접 만든 무광고 안심 공부방. 손으로 돌리는 시계와 시간 계산(v1.6), 화면에 직접 쓰는 사칙연산 세로셈, 무제한 PDF 문제지·빨간펜 풀이집 출력과 펫 키우기까지!">
+    <meta name="keywords" content="매쓰고치, MathCoco, 시계공부, 시계읽기, 시간계산, 유아수학, 초등수학, 사칙연산, 세로셈, 수학학습지, PDF문제집, 덧셈, 뺄셈, 곱셈, 나눗셈, 구구단, 플래시카드, 손글씨연산, 2048, 펫키우기, ChronoLab, 무광고 어린이앱">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index-kr.html">
@@ -27,14 +27,44 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-kr.html">
-    <meta property="og:title" content="매쓰고치 (Mathgotchi) - 우리아이 첫 수학 & 시간 탐험">
-    <meta property="og:description" content="시계와 사칙연산 손글씨 풀이부터 집에서 무제한 뽑아 쓰는 맞춤형 PDF 문제지·풀이집까지! 100% 무광고 안심 배움터.">
+    <meta property="og:title" content="매쓰고치 (MathCoco) - 우리아이 첫 시계 & 수학 공부방">
+    <meta property="og:description" content="보기 찍기 ZERO! 손으로 돌리는 시계와 시간 계산(v1.6), 직접 쓰는 사칙연산 세로셈, 집에서 무제한 뽑아 쓰는 맞춤형 PDF 학습지·빨간펜 풀이집까지!">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_0.jpg">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="ChronoLab">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.chronolaboratory.com/index-kr.html">
+    <meta name="twitter:title" content="매쓰고치 (MathCoco) - 우리아이 첫 시계 & 수학 공부방">
+    <meta name="twitter:description" content="손으로 돌리는 시계와 시간 계산(v1.6), 화면에 직접 쓰는 사칙연산, 무제한 PDF 문제지·빨간펜 풀이집 출력까지! 100% 무광고 안심 공부방.">
+    <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_0.jpg">
+
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
+
+    <!-- 구조화 데이터 (Schema.org SoftwareApplication) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "매쓰고치 (MathCoco)",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "iOS, iPadOS, Android",
+      "inLanguage": "ko",
+      "description": "유아·초등 어린이를 위한 100% 무광고 시계 읽기·시간 계산 및 손글씨 사칙연산 수학 공부방. 맞춤형 PDF 학습지 및 빨간펜 풀이집 무제한 인쇄 지원.",
+      "author": {
+        "@type": "Organization",
+        "name": "ChronoLab",
+        "url": "https://www.chronolaboratory.com/index-kr.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
 
     <!-- CSS 라이브러리 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -199,7 +229,7 @@
             background: #EDE9FE;
             color: #6D28D9;
             font-weight: 800;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             border: 1.5px solid #DDD6FE;
             box-shadow: 0 3px 0 #DDD6FE;
         }
@@ -207,9 +237,17 @@
             background: #DCFCE7;
             color: #166534;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.84rem;
             border: 1.5px solid #BBF7D0;
             box-shadow: 0 3px 0 #BBF7D0;
+        }
+        .new-v16-pill {
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 800;
+            font-size: 0.84rem;
+            border: 1.5px solid #FDE68A;
+            box-shadow: 0 3px 0 #FDE68A;
         }
         .hero-headline { 
             font-size: clamp(2rem, 6.5vw, 3.4rem);
@@ -272,7 +310,7 @@
             box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
         }
 
-        /* 🖨️ v1.4 맞춤형 PDF 문제은행 생성 파트 (무한 확장 대응 UI) */
+        /* 맞춤형 PDF 문제은행 생성 파트 */
         .pdf-showcase-section {
             padding: 85px 0;
             background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
@@ -443,7 +481,7 @@
             display: block;
         }
 
-        /* v1.3 롱폼 온보딩 & 시계 공부 쇼케이스 섹션 */
+        /* 롱폼 온보딩 & 시계 공부 쇼케이스 섹션 */
         .longform-showcase-section {
             padding: 85px 0;
             background: linear-gradient(180deg, #FBF9F5 0%, #F3EEFF 100%);
@@ -560,7 +598,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 540px;
+            min-height: 550px;
             border-radius: 0 0 32px 32px;
             overflow: hidden;
         }
@@ -582,6 +620,8 @@
         .clock-interactive-canvas {
             position: relative;
             z-index: 5;
+            width: 310px;
+            height: 310px;
             touch-action: none;
             cursor: grab;
             filter: drop-shadow(0 16px 30px rgba(0,0,0,0.18));
@@ -591,10 +631,10 @@
         .clock-digital-pill {
             position: relative;
             z-index: 5;
-            background: rgba(255,255,255,0.95);
-            padding: 8px 24px;
+            background: rgba(255,255,255,0.96);
+            padding: 7px 18px 7px 20px;
             border-radius: 50px;
-            font-size: 1.25rem;
+            font-size: 1.22rem;
             font-weight: 900;
             color: #1E1B4B;
             box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 3px 0 #E2E8F0;
@@ -602,6 +642,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        .btn-mode-toggle {
+            background: #EDE9FE;
+            color: #5B21B6;
+            border: 1px solid #DDD6FE;
+            border-radius: 20px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .btn-mode-toggle:hover {
+            background: #DDD6FE;
         }
 
         .clock-guide-pill {
@@ -615,7 +669,7 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             display: inline-flex;
             align-items: center;
-            max-width: 90%;
+            max-width: 92%;
             text-align: center;
             margin-top: 12px;
         }
@@ -634,7 +688,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 540px;
+            min-height: 550px;
             border-radius: 0 0 32px 32px;
             overflow: hidden;
         }
@@ -799,18 +853,35 @@
             to { opacity: 1; transform: scale(1); }
         }
 
+        /* 6대 배움터 카드 */
         .feature-box {
             background: #FFFFFF;
             border-radius: 28px;
-            padding: 32px;
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
             border: 2px solid #F1F5F9;
             height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 34px rgba(108, 92, 231, 0.09), 0 5px 0 #DDD6FE;
+            border-color: #EDE9FE;
+        }
+        .playground-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            background: #F3EEFF;
+            color: var(--brand-purple);
+            margin-bottom: 10px;
         }
 
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
-            .shorts-toy-wrapper { max-width: 330px; }
+            .shorts-toy-wrapper { max-width: 340px; }
             .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
@@ -820,12 +891,14 @@
             .chapter-jump-btn { font-size: 0.78rem; padding: 6px 11px; }
             .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
             .math-quiz-board { padding: 18px 20px 38px 20px; }
+            .clock-interactive-canvas { width: 280px; height: 280px; }
             
             .col-op { width: 36px; font-size: 2.2rem; }
             .col-tens, .col-units { width: 58px; font-size: 2.7rem; }
             .math-row { gap: 10px; }
             .answer-slot-box { width: 58px; height: 66px; }
             .vertical-math-line { min-width: 180px; }
+            .canvas-guide-overlay { font-size: 0.72rem; padding: 3px 10px; }
         }
     </style>
 </head>
@@ -835,11 +908,11 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index-kr.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
+                <img src="mathgotchi/icon_1024_white.png" alt="매쓰고치 (MathCoco) 로고" width="36" height="36" class="me-2 rounded-3 shadow-sm">
                 <span style="font-weight: 900; letter-spacing: -0.02em;">매쓰고치</span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="메뉴 열기">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -859,12 +932,12 @@
                             🌐 한국어
                         </button>
                         <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 shadow rounded-4">
-                            <li><a class="dropdown-item active fw-bold" href="index-kr.html">한국어 (Korean)</a></li>
-                            <li><a class="dropdown-item" href="index.html">English</a></li>
+                            <li><a class="dropdown-item active fw-bold" href="index-kr.html">한국어 (매쓰고치)</a></li>
+                            <li><a class="dropdown-item" href="index.html">English (MathCoco)</a></li>
                         </ul>
                     </div>
 
-                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-clay btn-kakao btn-sm px-3">
+                    <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-kakao btn-sm px-3">
                         <i class="bi bi-chat-fill me-1"></i> 1:1 카톡 문의
                     </a>
                 </div>
@@ -881,13 +954,13 @@
                 <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 두 아이를 위해 아빠가 만든 안심 배움터
+                            👨‍👧‍👦 두 아이를 위해 아빠가 직접 만든 첫 수학 공부방
+                        </span>
+                        <span class="badge new-v16-pill px-3 py-2 rounded-pill">
+                            ✨ v1.6 신규: 시간 계산 · 시계 연산 오픈
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
-                             App Store 정식 출시
-                        </span>
-                        <span class="badge release-pill px-3 py-2 rounded-pill">
-                            ▶ Google Play 정식 출시
+                             iOS & ▶ Android 정식 출시
                         </span>
                     </div>
                     
@@ -897,12 +970,12 @@
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        지루한 주입식 암기는 이제 그만. 손가락으로 시곗바늘을 직접 돌려 24시간 원리를 체득하고, 사칙연산(덧셈·뺄셈·곱셈·나눗셈) 손글씨 풀이부터 집에서 무제한 뽑아 쓰는 맞춤형 PDF 학습지까지 놀이처럼 수학에 빠져듭니다!
+                        객관식 보기 찍기와 번거로운 이면지는 이제 그만! 손끝으로 12·24시간 시곗바늘과 <strong>시간 자(Ruler)</strong>를 비교하며 시간 계산 원리를 깨치고, 화면에 직접 쓰는 사칙연산 세로셈부터 가정용 무제한 PDF 학습지·빨간펜 풀이집까지 스스로 배우는 기쁨을 선물하세요.
                     </p>
 
                     <!-- 스토어 다운로드 버튼 그룹 -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
-                        <a href="https://apps.apple.com/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
+                        <a href="https://apps.apple.com/kr/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -920,7 +993,7 @@
                     </div>
 
                     <div class="text-muted small mt-2">
-                        🛡️ 100% 무광고 &bull; 온디바이스 개인정보 보호 &bull; 7일 안심 무료 체험
+                        🛡️ 100% 무광고 • 온디바이스 개인정보 보호 • 무료 시계 체험 + 7일 안심 무료 체험
                     </div>
                 </div>
 
@@ -944,7 +1017,7 @@
                                 <iframe id="shorts-iframe-1" 
                                         class="w-100 h-100 border-0" 
                                         src="https://www.youtube.com/embed/72GAK8m6qFQ?autoplay=1&mute=1&loop=1&playlist=72GAK8m6qFQ&playsinline=1&rel=0" 
-                                        title="매쓰고치 연산 쇼츠" 
+                                        title="매쓰고치 손글씨 연산 쇼츠" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen>
                                 </iframe>
@@ -955,7 +1028,7 @@
                                 <iframe id="shorts-iframe-2" 
                                         class="w-100 h-100 border-0" 
                                         src="https://www.youtube.com/embed/FLZHsvS_Imc?autoplay=1&mute=1&loop=1&playlist=FLZHsvS_Imc&playsinline=1&rel=0" 
-                                        title="매쓰고치 시계 쇼츠" 
+                                        title="매쓰고치 시계 읽기 쇼츠" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen>
                                 </iframe>
@@ -965,7 +1038,7 @@
                         <!-- 하단 링크 바 -->
                         <div class="d-flex justify-content-between align-items-center mt-3 px-2 small">
                             <span class="text-muted">✨ 실제 앱 구동 숏폼 영상</span>
-                            <a id="shorts-yt-link" href="https://youtube.com/shorts/72GAK8m6qFQ" target="_blank" class="badge bg-danger text-white text-decoration-none py-1 px-2 d-inline-flex align-items-center">
+                            <a id="shorts-yt-link" href="https://youtube.com/shorts/72GAK8m6qFQ" target="_blank" rel="noopener noreferrer" class="badge bg-danger text-white text-decoration-none py-1 px-2 d-inline-flex align-items-center">
                                 <i class="bi bi-youtube me-1"></i> YouTube로 보기
                             </a>
                         </div>
@@ -976,20 +1049,20 @@
         </div>
     </section>
 
-    <!-- 🖨️ v1.4 신규: 맞춤형 PDF 문제은행 생성 파트 -->
+    <!-- 맞춤형 PDF 문제은행 생성 파트 -->
     <section id="pdf-bank-section" class="pdf-showcase-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
                 <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
-                    🖨️ v1.4 대규모 업데이트 &bull; 무제한 PDF 문제은행 오픈
+                    🖨️ 태블릿과 지면 학습의 완벽한 조화 • 무제한 PDF 문제은행
                 </span>
                 <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.3;">
                     어린아이에게 태블릿으로만 가르치기 꺼려지시죠?<br>
-                    <span style="color: var(--brand-purple);">종이 문제지로도 자유롭게 뽑을 수 있도록 준비했습니다</span>
+                    <span style="color: var(--brand-purple);">종이 문제지와 빨간펜 풀이집까지 무제한 뽑아 쓰세요</span>
                 </h2>
                 <p class="text-muted mx-auto mb-4" style="max-width: 720px; line-height: 1.75; font-size: 1.02rem;">
-                    화면에서 원리를 깨친 뒤에는 연필을 쥐고 종이 위에서 차분하게 연습해 보세요.<br class="d-none d-md-inline">
-                    가정용 프린터에서 가장 편하게 출력하실 수 있도록 세세한 설정까지 빈틈없이 담았습니다.
+                    화면에서 원리를 깨친 뒤에는 연필을 쥐고 종이 위에서 차분하게 다져보세요.<br class="d-none d-md-inline">
+                    가정용 프린터에서 내 아이 수준에 딱 맞춰 출력하고, 빨간펜 세로셈 풀이집으로 손쉽게 채점할 수 있습니다.
                 </p>
 
                 <!-- 4대 핵심 맞춤 설정 안내 그리드 -->
@@ -1025,17 +1098,17 @@
                         <div class="pdf-spec-pill">
                             <div class="pdf-spec-icon">🖍️</div>
                             <div>
-                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">빨간펜 답안지 동시 출력</div>
-                                <div class="text-muted" style="font-size: 0.78rem;">풀이 과정이 담긴 정답지 포함</div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">빨간펜 풀이집 동시 생성</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">세로셈 풀이 과정이 담긴 답지</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동 · add_122_123 등 무한 확장 대응) -->
+            <!-- 실물 PDF 뷰어 쇼룸 (pdf-ko 폴더 연동) -->
             <div class="pdf-library-card" data-aos="zoom-in">
-                <!-- 1. 5대 과목별 탭 (덧셈 / 뺄셈 / 곱셈 / 나눗셈 / 시계 상시 노출) -->
+                <!-- 1. 5대 과목별 탭 -->
                 <div class="pdf-subject-tabs" id="pdf-subject-tabs">
                     <button type="button" class="pdf-subject-btn active" data-subj="add" onclick="selectPdfSubject('add', this)">
                         ➕ 덧셈 <span class="count-pill" id="count-add">1</span>
@@ -1054,17 +1127,15 @@
                     </button>
                 </div>
 
-                <!-- 2. 단계(Stage) & 번호(Number) 무한 확장 컨트롤 바 -->
+                <!-- 2. 단계(Stage) & 번호(Number) 컨트롤 바 -->
                 <div class="pdf-selector-toolbar">
                     <div class="pdf-select-group">
                         <label for="pdf-stage-select" class="small fw-bold text-secondary mb-0">단계 선택</label>
                         <select id="pdf-stage-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfStageChange()">
-                            <!-- JS가 1단계 ~ N단계를 자연수 순서로 자동 채움 -->
                         </select>
 
                         <label for="pdf-num-select" class="small fw-bold text-secondary mb-0 ms-1">유형 번호</label>
                         <select id="pdf-num-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfNumberChange()">
-                            <!-- JS가 해당 단계의 #1 ~ #N 번호를 자연수 순서로 자동 채움 -->
                         </select>
                     </div>
 
@@ -1101,7 +1172,7 @@
                         <div class="col-md-6" id="pdf-col-page2">
                             <div class="pdf-sheet-box">
                                 <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ 2페이지 : 풀이집 · 답안지</span>
+                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ 2페이지 : 빨간펜 풀이집 · 답안지</span>
                                     <span class="text-danger small fw-bold">풀이 과정 & 정답 자동 표기</span>
                                 </div>
                                 <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="클릭하면 원본 PDF가 새 창에서 열립니다">
@@ -1118,7 +1189,7 @@
                 <!-- 4. 하단 인쇄 및 원본 다운로드 액션 바 -->
                 <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
                     <span class="text-muted small">
-                        💡 위 학습지 화면을 클릭하거나 우측 버튼을 눌러 지금 바로 인쇄해 보세요!
+                        💡 위 샘플 학습지 화면을 클릭하거나 우측 버튼을 눌러 회원가입 없이 지금 바로 인쇄해 보세요!
                     </span>
                     <div class="d-flex flex-wrap gap-2">
                         <a id="pdf-open-btn" href="pdf-ko/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
@@ -1133,34 +1204,34 @@
         </div>
     </section>
 
-    <!-- 🎬 v1.3 신규 온보딩 & 시계 공부 풀버전 영상 섹션 -->
+    <!-- 온보딩 & 시계 원리 풀버전 영상 섹션 -->
     <section id="onboarding-video-section" class="longform-showcase-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
                 <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
-                    🎬 v1.3 신규 온보딩 & 시계 공부 콘텐츠 공개
+                    🎬 온보딩 & 시계 원리 학습 풀버전 공개
                 </span>
                 <h2 class="fw-bold display-6 mb-2" style="color: #1E1B4B;">
                     이 영상만 아이와 함께 보셔도,<br class="d-sm-none"> 시계를 읽기 시작합니다
                 </h2>
                 <p class="text-muted mx-auto" style="max-width: 680px; line-height: 1.7;">
-                    대학에서 강의를 준비하듯 컴퓨팅의 논리에 기반하여, 아이들이 시계와 연산에서 어려워하는 병목지점을 직접 고안해 앱에 담았습니다. 아래 <strong>시간 버튼</strong>을 누르면 원하는 장면부터 바로 보실 수 있어요!
+                    대학에서 강의를 준비하듯 컴퓨팅의 논리에 기반하여, 아이들이 시계와 연산에서 가장 어려워하는 병목지점을 직접 고안해 앱에 담았습니다. 아래 <strong>시간 버튼</strong>을 누르면 원하는 장면부터 바로 보실 수 있어요!
                 </p>
             </div>
 
             <div class="tablet-video-card" data-aos="zoom-in">
-                <!-- 16:10 태블릿 비디오 스크린 (2560x1600 무여백 비율) -->
+                <!-- 16:10 태블릿 비디오 스크린 -->
                 <div class="tablet-screen-16x10">
                     <iframe id="main-longform-iframe"
                             class="w-100 h-100 border-0"
                             src="https://www.youtube.com/embed/wf1RxHSHKQE?rel=0&playsinline=1"
-                            title="이 영상만 봐도 시계를 읽기 시작합니다 ⏰ 매쓰고치 v1.3 신규 온보딩 & 시계 공부 콘텐츠 공개"
+                            title="이 영상만 봐도 시계를 읽기 시작합니다 - 매쓰고치 온보딩 & 시계 공부 풀버전"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                     </iframe>
                 </div>
 
-                <!-- ⏱️ 중요 지점 원클릭 시간 이동 버튼바 -->
+                <!-- 중요 지점 원클릭 시간 이동 버튼바 -->
                 <div class="chapter-pills-wrap">
                     <div class="w-100 text-center small fw-bold text-secondary mb-1">
                         ⏱️ 중요 지점 바로가기 (버튼을 누르면 해당 장면으로 즉시 이동합니다)
@@ -1184,13 +1255,13 @@
                         <span class="time-badge">06:23</span> 맞춤형 보조선 & 실시간 오답 코칭
                     </button>
                     <button type="button" class="chapter-jump-btn" onclick="seekLongformVideo(451, this)">
-                        <span class="time-badge">07:31</span> 7일 무료 체험 & 얼리버드 특별가
+                        <span class="time-badge">07:31</span> 무료 체험 & 시작 안내
                     </button>
                 </div>
 
                 <!-- 하단 유튜브 직행 링크 바 -->
                 <div class="d-flex justify-content-between align-items-center mt-3 px-2 small">
-                    <span class="text-muted">📺 매쓰고치 v1.3 온보딩 & 시계 원리 풀버전 (07:50)</span>
+                    <span class="text-muted">📺 매쓰고치 온보딩 & 시계 원리 풀버전 (07:50)</span>
                     <a href="https://youtu.be/wf1RxHSHKQE" target="_blank" rel="noopener noreferrer" class="badge bg-danger text-white text-decoration-none py-1 px-2 d-inline-flex align-items-center">
                         <i class="bi bi-youtube me-1"></i> YouTube에서 크게 보기
                     </a>
@@ -1203,9 +1274,9 @@
     <section class="simulator-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">TRY IT ON WEB</span>
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">웹에서 미리 체험하기</span>
                 <h2 class="fw-bold display-6 mb-2">앱 다운로드 전, 웹에서 손맛을 느껴보세요!</h2>
-                <p class="text-muted">마우스나 손가락으로 직접 시곗바늘을 돌리고, 모눈종이 덧셈을 써보세요.</p>
+                <p class="text-muted">마우스나 손가락으로 직접 시곗바늘을 돌리고, 모눈종이 세로셈을 써보세요.</p>
             </div>
 
             <div class="row justify-content-center">
@@ -1215,10 +1286,10 @@
                         <!-- 샌드박스 탭 스위처 -->
                         <div class="sim-nav-tabs">
                             <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
-                                ⏰ 손으로 이해하는 시계
+                                ⏰ 손으로 이해하는 24시간 시계
                             </button>
                             <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
-                                ✍️ 연습장 없는 사각사각 필기 연산
+                                ✍️ 연습장 없는 손글씨 세로셈
                             </button>
                         </div>
 
@@ -1231,18 +1302,21 @@
                             <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
 
                             <div class="clock-digital-pill">
-                                <span id="clock-ampm-badge" class="badge bg-primary rounded-pill" style="font-size: 0.85rem;">오후</span>
-                                <span id="clock-digital-time" style="font-family: monospace;">03시 00분</span>
+                                <span id="clock-ampm-badge" class="badge bg-danger rounded-pill" style="font-size: 0.82rem;">오후</span>
+                                <span id="clock-digital-time" style="font-family: 'Fredoka', 'Pretendard', monospace;">03시 00분</span>
+                                <button type="button" id="clock-mode-btn" class="btn-mode-toggle" onclick="toggleClock24Mode()" title="12시간제 / 24시간제 전환">
+                                    24시 보기
+                                </button>
                             </div>
 
                             <div class="clock-guide-pill">
-                                <span>👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 하늘의 낮과 밤이 실시간으로 바뀝니다.</span>
+                                <span>👆 초록색 분침을 잡고 뱅글뱅글 돌려보세요! 해와 달이 뜨고 지며 24시간이 바뀝니다.</span>
                             </div>
 
-                            <!-- 분침 읽는 법 배우기 버튼 -->
+                            <!-- 시계 & 시간 계산 커리큘럼 버튼 -->
                             <div class="mt-3">
                                 <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
-                                    💡 분침 읽는 법 배우기
+                                    💡 시계 읽기 · 시간 계산 커리큘럼 보기
                                 </button>
                             </div>
 
@@ -1250,33 +1324,33 @@
                             <div id="clockResultOverlay" class="large-card-full-overlay">
                                 <div class="large-card-overlay-content py-2">
                                     <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
-                                        ⏰ 시계 읽기의 완벽한 솔루션
+                                        ⏰ 시계 읽기부터 시간 계산·연산까지 완성
                                     </span>
                                     <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
-                                        매쓰고치 앱을 다운받아<br>시계 바늘의 원리부터 1분 단위까지 마스터해보세요!
+                                        매쓰고치 앱에서 1분 단위 시계 읽기와<br>신규 '시간 계산·연산'까지 마스터해 보세요!
                                     </h4>
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>🎓 빈틈없는 5단계 튜토리얼:</strong><br>
-                                            <span class="text-muted">아날로그 시계의 구성 요소, 관계, 흐름, 시침 읽기, 분침 읽기까지 차근차근 완성!</span>
+                                            <strong>📏 눈으로 보는 시간 계산과 '시간 자' (v1.6 신규):</strong><br>
+                                            <span class="text-muted">12·24시간 시계와 직선 눈금 '시간 자(Ruler)'를 한눈에 보며 걸린 시간과 전·후 시각 연산까지 정복!</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>💡 친절한 시청각 오답 코칭:</strong><br>
-                                            <span class="text-muted">헷갈릴 때 "큰 3에 있으면 5씩 점프해서 15분!" 스스로 깨치는 맞춤 가이드</span>
+                                            <strong>🎓 빈틈없는 단계별 시계 읽기 & '~분 전':</strong><br>
+                                            <span class="text-muted">정각·30분·5분·1분 눈금부터 아이들이 가장 헷갈려하는 '몇 분 전' 읽기까지 차근차근 완성!</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🌀 실시간 톱니 연동:</strong><br>
-                                            <span class="text-muted">시침과 분침이 물리적으로 맞물려 돌아가며 시간의 인과관계를 직관적으로 이해</span>
+                                            <strong>🔊 친절한 시각 가이드 & '(!) 듣기 모드':</strong><br>
+                                            <span class="text-muted">막힐 땐 (!) 버튼을 눌러 단계별 풀이 힌트를 다정한 음성으로 천천히 반복해서 들을 수 있어요.</span>
                                         </div>
                                         <div class="text-dark">
                                             <strong>🐣 과일을 모아 펫을 키우는 자기주도 학습:</strong><br>
-                                            <span class="text-muted">매일 퀴즈를 풀고 모은 과일로 펫을 부화시키고 키우며 스스로 공부하는 습관 완성</span>
+                                            <span class="text-muted">매일 퀴즈를 풀고 모은 과일로 신비한 알을 돌보고 진화시키며 스스로 앱을 켜는 습관이 생깁니다.</span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                        <a href="https://apps.apple.com/kr/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
                                             <i class="bi bi-apple me-1"></i> App Store
                                         </a>
                                         <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
@@ -1370,25 +1444,25 @@
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>⚡ 120Hz 초정밀 획인식:</strong><br>
-                                            <span class="text-muted">종이 연습장 없이 화면에 쓱쓱! 아이 손글씨 궤적을 실시간 판별합니다.</span>
+                                            <strong>⚡ 보기 찍기 ZERO · 초정밀 손글씨 인식:</strong><br>
+                                            <span class="text-muted">종이 연습장 없이 화면에 쓱쓱! 아이 손글씨 궤적을 실시간으로 판별합니다.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>💡 시각 / 청각 가이드 오답 코칭:</strong><br>
-                                            <span class="text-muted">오답일 때 시각 / 청각 가이드로 아이가 스스로 학습할 수 있도록 도와줍니다.</span>
+                                            <strong>🔊 시각 오답 가이드 & 음성 '듣기 모드':</strong><br>
+                                            <span class="text-muted">받아올림·받아내림·부분곱 시각 가이드는 물론, (!) 버튼으로 단계별 풀이 설명을 음성으로 들려줍니다.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🧮 체계적 사칙연산 로드맵:</strong><br>
-                                            <span class="text-muted">덧셈, 뺄셈, 곱셈, 나눗셈과 무제한 PDF 문제지·풀이집 출력까지 하나로 완성!</span>
+                                            <strong>🧮 사칙연산 전 과정 & 무제한 PDF 학습지:</strong><br>
+                                            <span class="text-muted">덧셈, 뺄셈, 곱셈, 어림셈 나눗셈과 빨간펜 풀이집이 포함된 PDF 인쇄까지 하나로 완성!</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🃏 구구단 플래시카드 & 2048 퍼즐:</strong><br>
-                                            <span class="text-muted">단순 암기 대신 면적 분할과 거듭제곱 수 퍼즐로 수 감각을 쏙쏙!</span>
+                                            <strong>🃏 구구단 플래시카드 & 2048 수학 퍼즐:</strong><br>
+                                            <span class="text-muted">단순 암기 대신 면적 모델 플래시카드와 2의 거듭제곱 퍼즐로 수 감각을 깨웁니다.</span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                        <a href="https://apps.apple.com/kr/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
                                             <i class="bi bi-apple me-1"></i> App Store
                                         </a>
                                         <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
@@ -1408,29 +1482,62 @@
         </div>
     </section>
 
-    <!-- 3대 핵심 콘셉트 그리드 -->
+    <!-- 매쓰고치만의 6가지 특별한 배움터 -->
     <section class="py-5">
         <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">우리아이 첫 수학 공부방</span>
+                <h2 class="fw-bold display-6 mb-2" style="color: #1E1B4B;">매쓰고치만의 6가지 특별한 배움터</h2>
+                <p class="text-muted mb-0">원리를 스스로 깨치고, 억지로 시키지 않아도 매일 먼저 찾는 학습 루틴을 만듭니다.</p>
+            </div>
+
             <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">⏰</div>
-                        <h4 class="fw-bold mb-2">손끝으로 돌리는 24시간 시계</h4>
-                        <p class="text-muted small mb-0">초·분·시침이 맞물려 돌아가는 물리적 톱니 연동과 낮밤 변화를 통해 시간의 인과관계를 체득합니다.</p>
+                        <span class="playground-tag">배움터 01 • v1.6 확장</span>
+                        <div class="fs-1 mb-2">⏰</div>
+                        <h4 class="fw-bold mb-2">시계 읽기부터 시간 계산까지</h4>
+                        <p class="text-muted small mb-0">물리적 톱니 연동과 낮밤 변화, 헷갈리는 '~분 전' 읽기는 물론 12·24시간 시계와 '시간 자(Ruler)'로 걸린 시간과 시계 연산까지 정복합니다.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🧮</div>
-                        <h4 class="fw-bold mb-2">사칙연산 & 무제한 PDF 학습지</h4>
-                        <p class="text-muted small mb-0">덧셈·뺄셈·곱셈·나눗셈 손글씨 풀이는 물론, 맞춤형 PDF 문제지와 빨간펜 풀이집을 무제한 인쇄할 수 있습니다.</p>
+                        <span class="playground-tag">배움터 02 • 기초 연산 완성</span>
+                        <div class="fs-1 mb-2">✍️</div>
+                        <h4 class="fw-bold mb-2">사칙연산 손글씨 & 독학 가이드</h4>
+                        <p class="text-muted small mb-0">객관식 찍기 없이 덧셈·뺄셈·곱셈(구구단 플래시카드)·나눗셈 세로셈을 화면에 직접 쓰고, 시각 가이드와 음성 '듣기 모드'로 스스로 깨칩니다.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🎙️</div>
-                        <h4 class="fw-bold mb-2">부모 목소리 응원 & 동물 펫 성장</h4>
-                        <p class="text-muted small mb-0">엄마·아빠의 실제 육성과 사진 응원으로 성취감을 높이고, 매일 과일을 모아 펫을 키우며 자기주도 습관을 완성합니다.</p>
+                        <span class="playground-tag">배움터 03 • 가정용 프린트</span>
+                        <div class="fs-1 mb-2">🖨️</div>
+                        <h4 class="fw-bold mb-2">무제한 PDF 문제지 & 빨간펜 답지</h4>
+                        <p class="text-muted small mb-0">시계와 사칙연산 전 과정을 용지 크기(A4~A0)·문항 수·보조칸까지 맞춤 설정해 출력하고, 빨간펜 세로셈 풀이집으로 편하게 지도하세요.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <span class="playground-tag">배움터 04 • 자기주도 습관</span>
+                        <div class="fs-1 mb-2">🐣</div>
+                        <h4 class="fw-bold mb-2">알을 깨고 진화하는 동물 파트너</h4>
+                        <p class="text-muted small mb-0">매일 퀴즈를 풀고 모은 과일로 신비한 알에 온기를 주고 태엽을 감으며 멋진 동물 파트너로 부화·진화시키는 성취감을 경험합니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-box">
+                        <span class="playground-tag">배움터 05 • 가족 응원</span>
+                        <div class="fs-1 mb-2">🎙️</div>
+                        <h4 class="fw-bold mb-2">엄마 아빠 목소리 응원 스튜디오</h4>
+                        <p class="text-muted small mb-0">기계적인 효과음 대신 부모님의 따뜻한 표정 사진과 직접 녹음한 육성 칭찬이 팝업되어 아이의 자신감을 200% 북돋아 줍니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <span class="playground-tag">배움터 06 • 두뇌 & 다국어</span>
+                        <div class="fs-1 mb-2">🧩</div>
+                        <h4 class="fw-bold mb-2">1분 스피드 퀴즈 & 2048 · 5개 국어</h4>
+                        <p class="text-muted small mb-0">1분 집중 챌린지와 콤보로 순발력을 키우고, 2048 퍼즐로 거듭제곱 수 감각과 한·영·일·중(번체/간체) 5개 국어 수학 표현까지 만나보세요.</p>
                     </div>
                 </div>
             </div>
@@ -1440,27 +1547,27 @@
     <!-- 부모 안심 3대 약속 -->
     <section class="py-5 bg-white border-top border-bottom">
         <div class="container text-center">
-            <h2 class="fw-bold mb-4">부모님이 안심할 수 있는 3대 약속</h2>
+            <h2 class="fw-bold mb-4">학부모님이 100% 안심할 수 있는 3대 약속</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🚫</div>
                         <h5 class="fw-bold mb-2">100% 무광고 (Ad-Free)</h5>
-                        <p class="text-muted small mb-0">아이들의 집중을 방해하거나 유해 콘텐츠로 유도하는 배너 및 동영상 광고가 일절 없습니다.</p>
+                        <p class="text-muted small mb-0">아이들의 시야를 어지럽히거나 유해 콘텐츠로 유도하는 배너 및 동영상 광고가 일절 없습니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🔒</div>
-                        <h5 class="fw-bold mb-2">온디바이스 개인정보 보호</h5>
-                        <p class="text-muted small mb-0">회원가입이 필요 없으며 부모 음성 및 셀카는 외부 서버 업로드 없이 오직 기기에만 보관됩니다.</p>
+                        <h5 class="fw-bold mb-2">안전한 온디바이스 개인정보 보호</h5>
+                        <p class="text-muted small mb-0">회원가입이 필요 없으며, 부모님의 음성과 사진은 외부 서버로 절대 전송되지 않고 오직 기기 내부에만 보관됩니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold mb-2">부모 안심 확인 (Parental Gate)</h5>
-                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 외부 링크로 이탈하지 못하도록 구구단 부모 확인 잠금을 적용했습니다.</p>
+                        <h5 class="fw-bold mb-2">부모 안심 잠금 (Parental Gate)</h5>
+                        <p class="text-muted small mb-0">어린이가 실수로 결제하거나 설정 화면·외부 링크로 이탈하지 못하도록 곱셈 성인 인증 잠금장치가 보호합니다.</p>
                     </div>
                 </div>
             </div>
@@ -1474,10 +1581,10 @@
                 <div class="fs-1 mb-2">💬</div>
                 <h3 class="fw-bold mb-2 text-dark">1:1 문의 및 고객지원</h3>
                 <p class="text-muted mb-4 small">
-                    앱 이용 중 불편한 점, 결제 및 오류 문의 등 어떤 이야기든 편하게 남겨주시면 개발자가 직접 답변드립니다.
+                    앱 이용 중 궁금한 점, 구독·결제 문의, 개선 제안 등 어떤 이야기든 편하게 남겨주시면 개발자가 직접 빠르게 답변드립니다.
                 </p>
-                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="btn btn-clay btn-kakao btn-lg px-4">
-                    <i class="bi bi-chat-fill me-2 fs-5"></i> 1:1 카카오톡 문의하기 &rarr;
+                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-kakao btn-lg px-4">
+                    <i class="bi bi-chat-fill me-2 fs-5"></i> 1:1 카카오톡 문의하기 →
                 </a>
             </div>
         </div>
@@ -1488,14 +1595,14 @@
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
-                <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
-                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" class="text-secondary fs-4"><i class="bi bi-chat-dots-fill"></i></a>
-                <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.youtube.com/@bjw0829" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4" aria-label="ChronoLab 유튜브"><i class="bi bi-youtube"></i></a>
+                <a href="https://open.kakao.com/o/sqj5v6Ki" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4" aria-label="1:1 카카오톡 상담"><i class="bi bi-chat-dots-fill"></i></a>
+                <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4" aria-label="이메일 문의"><i class="bi bi-envelope"></i></a>
             </div>
             <p class="text-muted small mb-0">
                 © 2026 ChronoLab. All rights reserved.<br>
-                <a href="terms-mathgotchi.html" class="text-decoration-none text-muted">이용약관</a> | 
-                <a href="privacy-mathgotchi.html" class="text-decoration-none text-muted">개인정보처리방침</a>
+                <a href="terms-mathcoco.html" class="text-decoration-none text-muted">이용약관</a> | 
+                <a href="privacy-mathcoco.html" class="text-decoration-none text-muted">개인정보처리방침</a>
             </p>
         </div>
     </footer>
@@ -1509,17 +1616,12 @@
         AOS.init({ duration: 800, once: true });
 
         /* =========================================================================
-           0. v1.4 PDF 문제은행 엔진 (add_1_1 ~ clock_1_1 및 add_122_123 무한 확장 대응)
+           0. PDF 문제은행 엔진 (pdf-ko/ 및 pdf-ko/list.txt 무한 확장 연동)
            ========================================================================= */
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         const PDF_FOLDER = 'pdf-ko';
 
-        /**
-         * 📌 1) 기본 등록된 PDF 파일 목록입니다.
-         * 파일명 규칙: prefix_stage_num.pdf (예: add_1_1.pdf, sub_1_1.pdf, mul_1_1.pdf, div_1_1.pdf, clock_1_1.pdf)
-         * 확장자(.pdf)를 붙여서 적거나 생략('clock_1_1')해서 적어도 모두 자동 인식합니다.
-         */
         let PDF_KO_FILE_LIST = [
             'add_1_1.pdf',
             'sub_1_1.pdf',
@@ -1528,11 +1630,6 @@
             'clock_1_1.pdf'
         ];
 
-        /**
-         * 📌 2) 대량 파일 범위 자동 추가 헬퍼 (원하실 때 주석 해제하여 수백 개를 한 줄로 등록 가능)
-         * 사용법: addPdfRange('add' | 'sub' | 'mul' | 'div' | 'clock', 단계번호, 시작번호, 끝번호)
-         * 예시: addPdfRange('add', 122, 1, 123); -> add_122_1.pdf 부터 add_122_123.pdf 까지 자동 등록
-         */
         function addPdfRange(prefix, stage, startNum, endNum) {
             for (let n = startNum; n <= endNum; n++) {
                 PDF_KO_FILE_LIST.push(`${prefix}_${stage}_${n}.pdf`);
@@ -1552,8 +1649,9 @@
         let currentFilteredList = [];
         let currentItemIndex = 0;
         let currentPdfUrl = '';
+        let pdfRenderToken = 0;
+        let activeRenderTasks = {};
 
-        // 'add_122_123.pdf' 또는 'clock_1_1' 정규식 파서 (자릿수 무제한 지원)
         function parsePdfFileName(rawEntry) {
             let cleanEntry = rawEntry.trim().split('/').pop();
             if (!cleanEntry) return null;
@@ -1561,13 +1659,12 @@
                 cleanEntry += '.pdf';
             }
 
-            // prefix_stage_num.pdf 매칭 (예: add_1_1.pdf, clock_1_1.pdf, add_122_123.pdf)
             const match = cleanEntry.match(/^([a-zA-Z]+)_(\d+)_(\d+)\.pdf$/i);
             if (!match) return null;
 
             const rawPrefix = match[1].toLowerCase();
-            const stageNum = parseInt(match[2], 10); // 1 ~ 999999+
-            const patternNum = parseInt(match[3], 10); // 1 ~ 999999+
+            const stageNum = parseInt(match[2], 10);
+            const patternNum = parseInt(match[3], 10);
 
             const subjectKey = SUBJECT_LABEL_KO[rawPrefix] ? rawPrefix : 'add';
             const subjectKo = SUBJECT_LABEL_KO[subjectKey] || rawPrefix;
@@ -1583,7 +1680,6 @@
             };
         }
 
-        // 자연수 크기순 정렬 (1 -> 2 -> 10 -> 122 순으로 정렬 보장)
         function buildPdfCatalog(rawList) {
             const uniqueSet = new Set(rawList.map(s => s.trim()).filter(Boolean));
             const subjectOrder = { 'add': 1, 'sub': 2, 'mul': 3, 'div': 4, 'clock': 5 };
@@ -1599,7 +1695,6 @@
                     return a.num - b.num;
                 });
 
-            // 각 과목 탭 우측의 파일 개수 배지 업데이트
             ['add', 'sub', 'mul', 'div', 'clock'].forEach(subj => {
                 const count = parsedPdfCatalog.filter(x => x.subjectKey === subj).length;
                 const badgeEl = document.getElementById(`count-${subj}`);
@@ -1608,7 +1703,6 @@
         }
 
         async function initPdfLibrary() {
-            // 1순위: pdf-ko/list.txt 파일이 있으면 자동으로 읽어와 무제한 목록 구성
             try {
                 const listRes = await fetch(`${PDF_FOLDER}/list.txt`, { cache: 'no-cache' });
                 if (listRes.ok) {
@@ -1622,7 +1716,6 @@
                 // list.txt가 없으면 다음 단계로 진행
             }
 
-            // 2순위: 로컬 개발 서버 디렉토리 리스팅이 켜져 있으면 폴더 내 PDF 자동 스캔
             try {
                 const dirRes = await fetch(`./${PDF_FOLDER}/`);
                 if (dirRes.ok) {
@@ -1661,7 +1754,6 @@
                 return;
             }
 
-            // 해당 과목에 존재하는 모든 단계(Stage)를 중복 없이 오름차순 추출 (예: 1, 2, ... 122)
             const stages = [...new Set(currentFilteredList.map(item => item.stage))].sort((a, b) => a - b);
             stageSelect.innerHTML = stages.map(st => `<option value="${st}">${st}단계</option>`).join('');
 
@@ -1737,18 +1829,29 @@
             if (randBtn) randBtn.disabled = (currentFilteredList.length <= 1);
         }
 
-        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
+        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId, token) {
+            if (token !== pdfRenderToken) return;
+            if (activeRenderTasks[canvasId]) {
+                try { activeRenderTasks[canvasId].cancel(); } catch (_) {}
+            }
+
             const canvas = document.getElementById(canvasId);
             const ctx = canvas.getContext('2d');
             const page = await pdfDoc.getPage(pageNum);
+            if (token !== pdfRenderToken) return;
+
             const viewport = page.getViewport({ scale: 1.8 });
             canvas.width = viewport.width;
             canvas.height = viewport.height;
-            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+
+            const renderTask = page.render({ canvasContext: ctx, viewport: viewport });
+            activeRenderTasks[canvasId] = renderTask;
+            await renderTask.promise;
         }
 
         async function loadPdfItem(item) {
             updateNavButtons();
+            const myToken = ++pdfRenderToken;
 
             currentPdfUrl = item.url;
             document.getElementById('current-pdf-title').textContent = item.displayTitle;
@@ -1762,15 +1865,19 @@
 
             try {
                 const pdfDoc = await pdfjsLib.getDocument(item.url).promise;
-                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1');
+                if (myToken !== pdfRenderToken) return;
+
+                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1', myToken);
 
                 if (pdfDoc.numPages >= 2) {
                     colPage2.classList.remove('d-none');
-                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2');
+                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2', myToken);
                 } else {
                     colPage2.classList.add('d-none');
                 }
             } catch (err) {
+                if (err && err.name === 'RenderingCancelledException') return;
+                if (myToken !== pdfRenderToken) return;
                 console.warn('PDF 로드 확인:', err);
                 statusMsg.innerHTML = `📂 <code>${item.url}</code> 파일을 찾지 못했습니다. <code>${PDF_FOLDER}/</code> 폴더 안에 <strong>${item.fileName}</strong> 파일이 들어있는지 확인해 주세요.`;
                 statusMsg.classList.remove('d-none');
@@ -1783,7 +1890,7 @@
             }
         }
 
-        /* 1. 쇼츠 비디오 탭 전환기 (1번: 연산 유튜브 쇼츠 / 2번: 시계 유튜브 쇼츠) */
+        /* 1. 쇼츠 비디오 탭 전환기 */
         function switchShortsTab(index, btn) {
             document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -1841,36 +1948,47 @@
             if (type === 'clock') {
                 mathBox.classList.add('d-none');
                 clockBox.classList.remove('d-none');
-                renderCelestialSky();
+                resizeSkyCanvas();
+                setupClockHiDPI();
+                renderClock();
             } else {
                 clockBox.classList.add('d-none');
                 mathBox.classList.remove('d-none');
-                initMathFullCanvas();
+                initMathFullCanvas(true);
             }
         }
 
-        /* 3. 천체 캔버스 (해, 달, 별 궤적 엔진) */
+        /* 3. 천체 캔버스 (해, 달, 별 궤적 엔진 - HiDPI) */
         const skyCanvas = document.getElementById('skyCelestialCanvas');
         const skyCtx = skyCanvas.getContext('2d');
+        let skyWidthCss = 0;
+        let skyHeightCss = 0;
+
         const stars = [
-            { x: 0.12, y: 0.22, r: 2.2, p: 0.1 },
-            { x: 0.25, y: 0.45, r: 2.8, p: 0.4 },
-            { x: 0.38, y: 0.18, r: 1.8, p: 0.7 },
-            { x: 0.62, y: 0.32, r: 3.2, p: 0.2 },
-            { x: 0.75, y: 0.16, r: 2.0, p: 0.9 },
-            { x: 0.88, y: 0.38, r: 2.6, p: 0.5 },
-            { x: 0.50, y: 0.52, r: 1.8, p: 0.6 }
+            { x: 0.12, y: 0.22, r: 2.2 },
+            { x: 0.25, y: 0.45, r: 2.8 },
+            { x: 0.38, y: 0.18, r: 1.8 },
+            { x: 0.62, y: 0.32, r: 3.2 },
+            { x: 0.75, y: 0.16, r: 2.0 },
+            { x: 0.88, y: 0.38, r: 2.6 },
+            { x: 0.50, y: 0.52, r: 1.8 }
         ];
 
         function resizeSkyCanvas() {
             const container = skyCanvas.parentElement;
-            skyCanvas.width = container.clientWidth;
-            skyCanvas.height = container.clientHeight;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            skyWidthCss = container.clientWidth;
+            skyHeightCss = container.clientHeight;
+            if (!skyWidthCss || !skyHeightCss) return;
+
+            skyCanvas.width = Math.round(skyWidthCss * dpr);
+            skyCanvas.height = Math.round(skyHeightCss * dpr);
+            skyCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
         }
 
         function renderCelestialSky() {
-            const w = skyCanvas.width;
-            const h = skyCanvas.height;
+            const w = skyWidthCss;
+            const h = skyHeightCss;
             if (!w || !h) return;
 
             skyCtx.clearRect(0, 0, w, h);
@@ -1932,20 +2050,38 @@
             }
         }
 
-        /* 4. 손으로 돌리는 인터랙티브 시계 */
+        /* 4. 손으로 돌리는 인터랙티브 시계 (HiDPI + 12시/24시 보기 전환 + 연속 각도 드래그) */
         const clockCanvas = document.getElementById('interactiveClockCanvas');
         const clockCtx = clockCanvas.getContext('2d');
         const digitalTimeEl = document.getElementById('clock-digital-time');
         const ampmBadgeEl = document.getElementById('clock-ampm-badge');
+        const clockModeBtnEl = document.getElementById('clock-mode-btn');
         const skyBg = document.getElementById('sky-gradient-bg');
 
+        let clockSizeCss = 310;
         let currentHour = 15;
         let currentMinute = 0;
+        let is24HourMode = false;
         let isDraggingHand = false;
 
+        function setupClockHiDPI() {
+            const rect = clockCanvas.getBoundingClientRect();
+            const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+            clockSizeCss = rect.width > 0 ? rect.width : 310;
+            clockCanvas.width = Math.round(clockSizeCss * dpr);
+            clockCanvas.height = Math.round(clockSizeCss * dpr);
+            clockCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function toggleClock24Mode() {
+            is24HourMode = !is24HourMode;
+            clockModeBtnEl.textContent = is24HourMode ? '12시 보기' : '24시 보기';
+            renderClock();
+        }
+
         function renderClock() {
-            const w = clockCanvas.width;
-            const h = clockCanvas.height;
+            const w = clockSizeCss;
+            const h = clockSizeCss;
             const cx = w / 2;
             const cy = h / 2;
             const r = w / 2 - 14;
@@ -2000,17 +2136,24 @@
                 clockCtx.stroke();
 
                 if (isFiveMin) {
-                    const hourVal = (i === 0) ? 12 : i / 5;
-                    const isSelectedHour = (hourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    const baseHourVal = (i === 0) ? 12 : i / 5;
+                    const isSelectedHour = (baseHourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    let displayRingNum = baseHourVal;
+                    if (is24HourMode && currentHour >= 12) {
+                        displayRingNum = (baseHourVal === 12) ? 12 : baseHourVal + 12;
+                    } else if (is24HourMode && currentHour < 12 && baseHourVal === 12) {
+                        displayRingNum = 0;
+                    }
+
                     const numRadius = r * 0.65;
                     const numX = cx + numRadius * Math.cos(angle);
                     const numY = cy + numRadius * Math.sin(angle);
 
-                    clockCtx.font = isSelectedHour ? '900 20px Pretendard' : '800 17px Pretendard';
+                    clockCtx.font = isSelectedHour ? '900 19px Pretendard' : '800 16px Pretendard';
                     clockCtx.textAlign = 'center';
                     clockCtx.textBaseline = 'middle';
                     clockCtx.fillStyle = isSelectedHour ? '#5843E4' : '#1E293B';
-                    clockCtx.fillText(hourVal.toString(), numX, numY);
+                    clockCtx.fillText(displayRingNum.toString(), numX, numY);
                 }
             }
 
@@ -2143,12 +2286,12 @@
 
         function updateSkyAndDigital(h, m) {
             const isPm = h >= 12;
-            const displayH = (h % 12 === 0) ? 12 : (h % 12);
-            const padH = String(displayH).padStart(2, '0');
+            const displayH12 = (h % 12 === 0) ? 12 : (h % 12);
+            const padH = is24HourMode ? String(h).padStart(2, '0') : String(displayH12).padStart(2, '0');
             const padM = String(m).padStart(2, '0');
 
-            ampmBadgeEl.textContent = isPm ? '오후' : '오전';
-            ampmBadgeEl.className = `badge rounded-pill ${isPm ? 'bg-danger' : 'bg-primary'}`;
+            ampmBadgeEl.textContent = is24HourMode ? '24시' : (isPm ? '오후' : '오전');
+            ampmBadgeEl.className = `badge rounded-pill ${is24HourMode ? 'bg-dark' : (isPm ? 'bg-danger' : 'bg-primary')}`;
             digitalTimeEl.textContent = `${padH}시 ${padM}분`;
 
             if (h >= 6 && h < 17) {
@@ -2162,7 +2305,7 @@
             renderCelestialSky();
         }
 
-        function handleClockDrag(e) {
+        function handleClockDrag(e, isInitialTap = false) {
             const rect = clockCanvas.getBoundingClientRect();
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
             const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -2175,22 +2318,25 @@
             const oldMinute = currentMinute;
             const newMinute = Math.round(angle / 6) % 60;
 
-            if (oldMinute >= 50 && newMinute <= 10) {
-                currentHour = (currentHour + 1) % 24;
-            } else if (oldMinute <= 10 && newMinute >= 50) {
-                currentHour = (currentHour - 1 + 24) % 24;
+            if (!isInitialTap) {
+                let deltaMin = newMinute - oldMinute;
+                if (deltaMin < -30) {
+                    currentHour = (currentHour + 1) % 24;
+                } else if (deltaMin > 30) {
+                    currentHour = (currentHour - 1 + 24) % 24;
+                }
             }
 
             currentMinute = newMinute;
             renderClock();
         }
 
-        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e); });
-        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e); });
+        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e, true); });
+        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e, false); });
         window.addEventListener('mouseup', () => { isDraggingHand = false; });
 
-        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e); e.preventDefault(); }, { passive: false });
-        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
+        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e, true); e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e, false); e.preventDefault(); } }, { passive: false });
         window.addEventListener('touchend', () => { isDraggingHand = false; });
 
         function showClockOverlay() {
@@ -2200,7 +2346,7 @@
             document.getElementById('clockResultOverlay').style.display = 'none';
         }
 
-        /* 5. 세로셈 보드 3열 그리드 전체 필기 드로잉 & 전환 연출 엔진 */
+        /* 5. 세로셈 보드 필기 드로잉 엔진 (HiDPI + 모바일 스크롤 필기 보존) */
         const mathFullCanvas = document.getElementById('mathFullCanvas');
         const mathFullCtx = mathFullCanvas.getContext('2d');
         const canvasGuide = document.getElementById('canvas-guide');
@@ -2210,15 +2356,31 @@
         let isDrawing = false;
         let quizA = 38;
         let quizB = 25;
+        let lastMathBoardWidth = 0;
 
-        function initMathFullCanvas() {
-            const board = document.getElementById('mathQuizBoard');
-            mathFullCanvas.width = board.clientWidth;
-            mathFullCanvas.height = board.clientHeight;
+        function applyMathBrushStyle() {
             mathFullCtx.strokeStyle = '#2B3A4A';
             mathFullCtx.lineWidth = 4.5;
             mathFullCtx.lineCap = 'round';
             mathFullCtx.lineJoin = 'round';
+        }
+
+        function initMathFullCanvas(forceReset = false) {
+            const board = document.getElementById('mathQuizBoard');
+            const w = board.clientWidth;
+            const h = board.clientHeight;
+            if (!w || !h) return;
+
+            if (!forceReset && Math.abs(w - lastMathBoardWidth) < 4 && mathFullCanvas.width > 0) {
+                return;
+            }
+
+            const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+            mathFullCanvas.width = Math.round(w * dpr);
+            mathFullCanvas.height = Math.round(h * dpr);
+            mathFullCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            applyMathBrushStyle();
+            lastMathBoardWidth = w;
         }
 
         function generateNewMathQuiz() {
@@ -2240,7 +2402,8 @@
         }
 
         function clearMathCanvas() {
-            mathFullCtx.clearRect(0, 0, mathFullCanvas.width, mathFullCanvas.height);
+            const board = document.getElementById('mathQuizBoard');
+            mathFullCtx.clearRect(0, 0, board.clientWidth || 600, board.clientHeight || 600);
             canvasGuide.style.display = 'block';
         }
 
@@ -2298,14 +2461,18 @@
 
         window.addEventListener('resize', () => {
             resizeSkyCanvas();
-            renderCelestialSky();
+            if (!document.getElementById('sim-box-clock').classList.contains('d-none')) {
+                setupClockHiDPI();
+                renderClock();
+            }
             if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
-                initMathFullCanvas();
+                initMathFullCanvas(false);
             }
         });
 
         // 초기 실행
         resizeSkyCanvas();
+        setupClockHiDPI();
         renderClock();
         initPdfLibrary();
     </script>
