@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <title>Mathgotchi - Hands-On Clock, Early Math & Printable PDF Worksheets | ChronoLab</title>
-    <meta name="description" content="A safe, ad-free educational haven crafted by a CS professor dad. Master telling time with real 24-hour gears, solve arithmetic (+, −, ×, ÷) on screen, and print unlimited custom PDF worksheets & red-pen answer keys!">
-    <meta name="keywords" content="Mathgotchi, ChronoLab, tell time for kids, clock learning, printable math worksheets, PDF math drills, column addition, subtraction, multiplication, division, regrouping, handwriting recognition, virtual pet math, ad free kids app">
+    <title>MathCoco - Kids Math, Hands-On Clock & Printable PDF Worksheets | ChronoLab</title>
+    <meta name="description" content="Crafted with care by a CS professor dad for his two kids. Master telling time, elapsed time (v1.6), handwritten 4-operation column math, unlimited printable PDF worksheets with red-pen answer keys, and cute companions!">
+    <meta name="keywords" content="MathCoco, ChronoLab, kids math, tell time, elapsed time, time math, 24-hour clock, printable math worksheets, column addition, subtraction, multiplication flashcards, division, regrouping, handwriting math, 2048 puzzle, ad free kids app">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index.html">
@@ -27,8 +27,8 @@
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index.html">
-    <meta property="og:title" content="Mathgotchi - Hands-On Clock, Early Math & Printable Worksheets">
-    <meta property="og:description" content="No multiple-choice guessing! Kids write on screen, spin real clock gears, and print unlimited custom PDF worksheets with step-by-step solution keys.">
+    <meta property="og:title" content="MathCoco - Kids Math, Hands-On Clock & Printable Worksheets">
+    <meta property="og:description" content="Zero multiple-choice guessing! Turn linked clock gears, master Elapsed Time (v1.6), write column math on screen, and print unlimited custom PDF worksheets.">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="ChronoLab">
@@ -36,12 +36,34 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index.html">
-    <meta name="twitter:title" content="Mathgotchi - Early Math, Time & Printable PDF Worksheets">
-    <meta name="twitter:description" content="No multiple-choice guessing! Kids write on screen, spin real clock gears, and print unlimited custom PDF worksheets.">
+    <meta name="twitter:title" content="MathCoco - Kids Math, Clock & Printable PDF Worksheets">
+    <meta name="twitter:description" content="Zero multiple-choice guessing! Turn linked clock gears, master Elapsed Time (v1.6), write column math on screen, and print unlimited custom PDF worksheets.">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
 
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
     <link rel="apple-touch-icon" href="mathgotchi/icon_1024_white.png">
+
+    <!-- Structured Data (Schema.org SoftwareApplication) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MathCoco",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "iOS, iPadOS, Android",
+      "description": "Ad-free kids math and interactive clock study room featuring hands-on 24-hour gears, visual elapsed time, on-screen handwritten 4-operation column math, printable PDF worksheets with red-pen solution keys, and companion growth.",
+      "author": {
+        "@type": "Organization",
+        "name": "ChronoLab",
+        "url": "https://www.chronolaboratory.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -74,12 +96,15 @@
             font-family: 'Inter', 'Pretendard', sans-serif; 
             color: var(--text-main); 
             background-color: var(--clay-bg);
-            word-break: keep-all;
             overflow-wrap: break-word;
             -webkit-font-smoothing: antialiased;
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(255, 118, 117, 0.03) 0%, transparent 25%);
+        }
+
+        h1, h2, h3, h4 {
+            text-wrap: balance;
         }
 
         /* 3D Clay Button Base */
@@ -207,7 +232,7 @@
             background: #EDE9FE;
             color: #6D28D9;
             font-weight: 800;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             border: 1.5px solid #DDD6FE;
             box-shadow: 0 3px 0 #DDD6FE;
         }
@@ -215,14 +240,22 @@
             background: #DCFCE7;
             color: #166534;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.84rem;
             border: 1.5px solid #BBF7D0;
             box-shadow: 0 3px 0 #BBF7D0;
         }
+        .new-v16-pill {
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 800;
+            font-size: 0.84rem;
+            border: 1.5px solid #FDE68A;
+            box-shadow: 0 3px 0 #FDE68A;
+        }
         .hero-headline { 
-            font-size: clamp(2rem, 6.2vw, 3.4rem);
+            font-size: clamp(2rem, 5.8vw, 3.3rem);
             font-weight: 900; 
-            line-height: 1.25; 
+            line-height: 1.24; 
             letter-spacing: -0.02em; 
             color: #1E1B4B;
         }
@@ -292,7 +325,7 @@
             color: #FFFFFF;
         }
 
-        /* 🖨️ v1.4 Printable PDF Worksheet Bank Section */
+        /* Printable PDF Worksheet Bank Section */
         .pdf-showcase-section {
             padding: 85px 0;
             background: linear-gradient(180deg, #FFFFFF 0%, #FBF9F5 100%);
@@ -373,7 +406,7 @@
             color: #FFFFFF;
         }
 
-        /* Infinite Stage & Worksheet Selector Toolbar */
+        /* Stage & Worksheet Selector Toolbar */
         .pdf-selector-toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -509,7 +542,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 540px;
+            min-height: 550px;
             border-radius: 0 0 32px 32px;
             overflow: hidden;
         }
@@ -531,6 +564,8 @@
         .clock-interactive-canvas {
             position: relative;
             z-index: 5;
+            width: 310px;
+            height: 310px;
             touch-action: none;
             cursor: grab;
             filter: drop-shadow(0 16px 30px rgba(0,0,0,0.18));
@@ -540,8 +575,8 @@
         .clock-digital-pill {
             position: relative;
             z-index: 5;
-            background: rgba(255,255,255,0.95);
-            padding: 8px 24px;
+            background: rgba(255,255,255,0.96);
+            padding: 7px 18px 7px 20px;
             border-radius: 50px;
             font-size: 1.25rem;
             font-weight: 900;
@@ -551,6 +586,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        .btn-mode-toggle {
+            background: #EDE9FE;
+            color: #5B21B6;
+            border: 1px solid #DDD6FE;
+            border-radius: 20px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .btn-mode-toggle:hover {
+            background: #DDD6FE;
         }
 
         .clock-guide-pill {
@@ -564,7 +613,7 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             display: inline-flex;
             align-items: center;
-            max-width: 90%;
+            max-width: 92%;
             text-align: center;
             margin-top: 12px;
         }
@@ -583,7 +632,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 540px;
+            min-height: 550px;
             border-radius: 0 0 32px 32px;
             overflow: hidden;
         }
@@ -748,30 +797,49 @@
             to { opacity: 1; transform: scale(1); }
         }
 
+        /* 6 Playgrounds Cards */
         .feature-box {
             background: #FFFFFF;
             border-radius: 28px;
-            padding: 32px;
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04), 0 4px 0 #E2E8F0;
             border: 2px solid #F1F5F9;
             height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 34px rgba(108, 92, 231, 0.09), 0 5px 0 #DDD6FE;
+            border-color: #EDE9FE;
+        }
+        .playground-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            background: #F3EEFF;
+            color: var(--brand-purple);
+            margin-bottom: 10px;
         }
 
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
-            .shorts-toy-wrapper { max-width: 330px; }
+            .shorts-toy-wrapper { max-width: 340px; }
             .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
             .pdf-selector-toolbar { justify-content: center; }
             .sim-nav-btn { font-size: 0.92rem; padding: 10px 6px; }
             .math-quiz-board { padding: 18px 20px 38px 20px; }
+            .clock-interactive-canvas { width: 280px; height: 280px; }
             
             .col-op { width: 36px; font-size: 2.2rem; }
             .col-tens, .col-units { width: 58px; font-size: 2.7rem; }
             .math-row { gap: 10px; }
             .answer-slot-box { width: 58px; height: 66px; }
             .vertical-math-line { min-width: 180px; }
+            .canvas-guide-overlay { font-size: 0.72rem; padding: 3px 10px; }
         }
     </style>
 </head>
@@ -781,18 +849,18 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-dark" href="index.html">
-                <img src="mathgotchi/icon_1024_white.png" alt="Mathgotchi Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
+                <img src="mathgotchi/icon_1024_white.png" alt="MathCoco Logo" width="36" height="36" class="me-2 rounded-3 shadow-sm">
                 <span style="font-weight: 900; letter-spacing: -0.02em;">ChronoLab</span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-app-switcher me-auto ms-lg-4 mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">⏰ Mathgotchi</a>
+                        <a class="nav-link active" href="index.html">⏰ MathCoco</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="chronofit.html">🏋️ ChronoFit</a>
@@ -805,8 +873,8 @@
                             🌐 English
                         </button>
                         <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end border-0 shadow rounded-4">
-                            <li><a class="dropdown-item active fw-bold" href="index.html">English</a></li>
-                            <li><a class="dropdown-item" href="index-kr.html">한국어 (Korean)</a></li>
+                            <li><a class="dropdown-item active fw-bold" href="index.html">English (MathCoco)</a></li>
+                            <li><a class="dropdown-item" href="index-kr.html">한국어 (매쓰고치)</a></li>
                         </ul>
                     </div>
 
@@ -827,13 +895,13 @@
                 <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 Crafted with Care by a CS Professor Dad
+                            👨‍👧‍👦 Crafted by a CS Professor Dad
+                        </span>
+                        <span class="badge new-v16-pill px-3 py-2 rounded-pill">
+                            ✨ v1.6 New: Elapsed Time & Time Math
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
-                             App Store Official Release
-                        </span>
-                        <span class="badge release-pill px-3 py-2 rounded-pill">
-                            ▶ Google Play Official Release
+                             iOS & ▶ Android Official
                         </span>
                     </div>
                     
@@ -843,12 +911,12 @@
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        Say goodbye to multiple-choice guessing and scratch paper clutter. Spin real interactive clock gears to grasp 24-hour day/night cycles, write arithmetic (+, &minus;, &times;, &divide;) directly on screen, and print unlimited custom PDF worksheets at home!
+                        Skip multiple-choice guessing and scratch-paper clutter. Turn linked 12h & 24h clock gears, compare times on a linear <strong>Time Ruler</strong>, write 4-operation column math (+, −, ×, ÷) directly on screen, print unlimited custom PDF worksheets, and raise adorable companions!
                     </p>
 
                     <!-- Store Download Buttons -->
                     <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-stretch align-items-sm-center mb-3">
-                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
+                        <a href="https://apps.apple.com/us/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-appstore">
                             <i class="bi bi-apple fs-3"></i>
                             <div class="text-start" style="line-height: 1.15;">
                                 <div style="font-size: 0.68rem; opacity: 0.85;">Download on the</div>
@@ -866,7 +934,7 @@
                     </div>
 
                     <div class="text-muted small mt-2">
-                        🛡️ 100% Ad-Free &bull; On-Device Privacy Protection &bull; 7-Day Risk-Free Trial
+                        🛡️ 100% Ad-Free • Strict On-Device Privacy • Free Clock Preview + 7-Day Free Trial
                     </div>
                 </div>
 
@@ -876,10 +944,10 @@
                         <!-- Tab Buttons -->
                         <div class="shorts-pill-tabs">
                             <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
-                                ✍️ Scratch-Free Handwriting Math
+                                ✍️ Handwritten Column Math
                             </button>
                             <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
-                                ⏰ Telling Time <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">Shorts Coming Soon 🎬</span>
+                                ⏰ Clocks & Elapsed Time <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">Preview 🎬</span>
                             </button>
                         </div>
 
@@ -890,23 +958,23 @@
                                 <iframe id="shorts-iframe-1" 
                                         class="w-100 h-100 border-0" 
                                         src="https://www.youtube.com/embed/yHDBDWX4_KU?autoplay=1&mute=1&loop=1&playlist=yHDBDWX4_KU&playsinline=1&rel=0" 
-                                        title="Elementary Math: Switched to a Tablet, But Still Need Scratch Paper?" 
+                                        title="MathCoco: Handwritten Column Math Without Scratch Paper" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen>
                                 </iframe>
                             </div>
 
-                            <!-- Tab 2: Clock Shorts In-Production Notice -->
+                            <!-- Tab 2: Clock & Elapsed Time Feature Notice -->
                             <div id="shorts-box-2" class="shorts-fallback-poster d-none">
-                                <div class="fs-1 mb-2">🎬</div>
-                                <span class="badge bg-primary text-white px-3 py-1 rounded-pill fw-bold mb-2">SHORTS COMING SOON</span>
-                                <h5 class="fw-bold mb-2 text-white">Clock Learning Shorts Video in Production</h5>
-                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.6;">
-                                    <strong>The complete interactive clock feature is already live in the Mathgotchi app!</strong><br>
-                                    Our hands-on video showcasing the 24-hour day/night mechanics will be published soon.
+                                <div class="fs-1 mb-2">⏰</div>
+                                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">NEW IN MATHCOCO v1.6</span>
+                                <h5 class="fw-bold mb-2 text-white">Telling Time, Elapsed Time & Time Math</h5>
+                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.65;">
+                                    <strong>Live right now inside the MathCoco app!</strong><br>
+                                    Compare 12-hour & 24-hour clocks side by side with our linear <strong>Time Ruler</strong> to master elapsed, past, and future times.
                                 </p>
                                 <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold" onclick="document.querySelector('.simulator-section').scrollIntoView({behavior: 'smooth'})">
-                                    👇 Try the Clock Simulator Below First
+                                    👇 Try the Live Clock Simulator Below
                                 </button>
                             </div>
                         </div>
@@ -917,20 +985,20 @@
         </div>
     </section>
 
-    <!-- 🖨️ v1.4 New: Unlimited Printable PDF Worksheet Bank -->
+    <!-- Unlimited Printable PDF Worksheet Bank -->
     <section id="pdf-bank-section" class="pdf-showcase-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
                 <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
-                    🖨️ v1.4 Major Update &bull; Unlimited Printable PDF Worksheet Bank
+                    🖨️ Screen & Paper Balance • Unlimited Printable PDF Worksheet Bank
                 </span>
                 <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.3;">
                     Hesitant about screen-only learning for young kids?<br>
-                    <span style="color: var(--brand-purple);">Freely print custom paper worksheets at home!</span>
+                    <span style="color: var(--brand-purple);">Print unlimited custom worksheets & red-pen keys at home!</span>
                 </h2>
                 <p class="text-muted mx-auto mb-4" style="max-width: 740px; line-height: 1.75; font-size: 1.02rem;">
-                    After grasping concepts interactively on screen, let your child practice calmly with a real pencil on paper.<br class="d-none d-md-inline">
-                    Every detail is thoughtfully designed to make printing at home effortless and customizable.
+                    Learn interactively on screen on the go, then practice calmly with a real pencil on paper at home.<br class="d-none d-md-inline">
+                    Every detail is tailored to your child's level—complete with step-by-step red-pen solution keys for effortless grading.
                 </p>
 
                 <!-- 4 Key Customization Highlights -->
@@ -939,8 +1007,8 @@
                         <div class="pdf-spec-pill">
                             <div class="pdf-spec-icon">📐</div>
                             <div>
-                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">A4 to A0 &bull; Orientation</div>
-                                <div class="text-muted" style="font-size: 0.78rem;">Portrait or landscape sizes</div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">A4 to A0 • Orientation</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Portrait or landscape layouts</div>
                             </div>
                         </div>
                     </div>
@@ -958,7 +1026,7 @@
                             <div class="pdf-spec-icon">💡</div>
                             <div>
                                 <div class="fw-bold text-dark" style="font-size: 0.92rem;">Visual Scaffolding</div>
-                                <div class="text-muted" style="font-size: 0.78rem;">Carry-over &amp; estimation boxes</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Regrouping & estimation boxes</div>
                             </div>
                         </div>
                     </div>
@@ -966,8 +1034,8 @@
                         <div class="pdf-spec-pill">
                             <div class="pdf-spec-icon">🖍️</div>
                             <div>
-                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">Red-Pen Solution Keys</div>
-                                <div class="text-muted" style="font-size: 0.78rem;">Full step-by-step working</div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">Red-Pen Answer Keys</div>
+                                <div class="text-muted" style="font-size: 0.78rem;">Full vertical solution steps</div>
                             </div>
                         </div>
                     </div>
@@ -1000,12 +1068,10 @@
                     <div class="pdf-select-group">
                         <label for="pdf-stage-select" class="small fw-bold text-secondary mb-0">Stage</label>
                         <select id="pdf-stage-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfStageChange()">
-                            <!-- Populated dynamically in natural numeric order (Stage 1 ~ Stage N) -->
                         </select>
 
                         <label for="pdf-num-select" class="small fw-bold text-secondary mb-0 ms-1">Worksheet #</label>
                         <select id="pdf-num-select" class="form-select form-select-sm pdf-select-box" style="width: auto;" onchange="onPdfNumberChange()">
-                            <!-- Populated dynamically (#1 ~ #N) -->
                         </select>
                     </div>
 
@@ -1042,7 +1108,7 @@
                         <div class="col-md-6" id="pdf-col-page2">
                             <div class="pdf-sheet-box">
                                 <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ Page 2 : Red-Pen Solution Key</span>
+                                    <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ Page 2 : Red-Pen Answer Key</span>
                                     <span class="text-danger small fw-bold">Step-by-Step Working Included</span>
                                 </div>
                                 <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="Click to open full PDF in a new tab">
@@ -1059,11 +1125,11 @@
                 <!-- 4. Bottom Print & Download Action Bar -->
                 <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
                     <span class="text-muted small">
-                        💡 Click any worksheet page above or use the buttons on the right to print right away—no sign-up needed!
+                        💡 Click any sample page above or use the buttons on the right to print right away—no sign-up needed!
                     </span>
                     <div class="d-flex flex-wrap gap-2">
                         <a id="pdf-open-btn" href="pdf/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
-                            <i class="bi bi-printer-fill"></i> Open Full PDF &bull; Print
+                            <i class="bi bi-printer-fill"></i> Open Full PDF • Print
                         </a>
                         <a id="pdf-download-btn" href="pdf/add_1_1.pdf" download class="btn btn-clay btn-googleplay btn-sm px-3 py-2" style="min-height: 40px;">
                             <i class="bi bi-download"></i> Save PDF
@@ -1078,9 +1144,9 @@
     <section class="simulator-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">TRY IT ON WEB</span>
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">TRY MATHCOCO ON WEB</span>
                 <h2 class="fw-bold display-6 mb-2">Experience the Hands-On Feel Before Downloading!</h2>
-                <p class="text-muted">Turn the clock hands or write column addition answers with your finger or mouse.</p>
+                <p class="text-muted">Spin the linked clock hands across AM/PM or write column addition directly with your finger, stylus, or mouse.</p>
             </div>
 
             <div class="row justify-content-center">
@@ -1090,10 +1156,10 @@
                         <!-- Sandbox Nav Tabs -->
                         <div class="sim-nav-tabs">
                             <button class="sim-nav-btn active" onclick="switchSimTab('clock', this)">
-                                ⏰ Hands-On Clock Simulator
+                                ⏰ Hands-On 24h Clock Simulator
                             </button>
                             <button class="sim-nav-btn" onclick="switchSimTab('math', this)">
-                                ✍️ Scratch-Free Handwriting Math
+                                ✍️ Handwritten Column Math
                             </button>
                         </div>
 
@@ -1106,18 +1172,21 @@
                             <canvas id="interactiveClockCanvas" width="310" height="310" class="clock-interactive-canvas"></canvas>
 
                             <div class="clock-digital-pill">
-                                <span id="clock-ampm-badge" class="badge bg-danger rounded-pill" style="font-size: 0.85rem;">PM</span>
-                                <span id="clock-digital-time" style="font-family: monospace;">03:00</span>
+                                <span id="clock-ampm-badge" class="badge bg-danger rounded-pill" style="font-size: 0.82rem;">PM</span>
+                                <span id="clock-digital-time" style="font-family: 'Fredoka', monospace; letter-spacing: 0.03em;">03:00</span>
+                                <button type="button" id="clock-mode-btn" class="btn-mode-toggle" onclick="toggleClock24Mode()" title="Switch between 12-hour and 24-hour display">
+                                    24H View
+                                </button>
                             </div>
 
                             <div class="clock-guide-pill">
-                                <span>👆 Drag the green minute hand around! Watch the sky seamlessly shift between day and night.</span>
+                                <span>👆 Drag the green minute hand around! Watch the sun and moon shift seamlessly across 24 hours.</span>
                             </div>
 
                             <!-- Learn Minute Hand Button -->
                             <div class="mt-3">
                                 <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
-                                    💡 How to Read the Minute Hand
+                                    💡 Explore Full Clock & Elapsed Time Curriculum
                                 </button>
                             </div>
 
@@ -1125,33 +1194,33 @@
                             <div id="clockResultOverlay" class="large-card-full-overlay">
                                 <div class="large-card-overlay-content py-2">
                                     <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
-                                        ⏰ The Complete Time-Telling Solution
+                                        ⏰ Complete Time & Elapsed Time Curriculum
                                     </span>
                                     <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
-                                        Download Mathgotchi to master clock hands<br>from hour principles to precise 1-minute steps!
+                                        Download MathCoco to master telling time,<br>Elapsed Time & Time Math step by step!
                                     </h4>
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>🎓 5-Step Progressive Tutorial:</strong><br>
-                                            <span class="text-muted">Clock anatomy, hand relationships, time passage, reading hours, and decoding minutes.</span>
+                                            <strong>📏 Visual Elapsed Time & Time Ruler (v1.6 New):</strong><br>
+                                            <span class="text-muted">Compare 12-hour and 24-hour clocks alongside a linear Time Ruler to find elapsed, past, and future times.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>💡 Friendly Audio-Visual Hints:</strong><br>
-                                            <span class="text-muted">Confused? "When on large 3, count by 5s to 15!" Self-guided interactive coaching.</span>
+                                            <strong>🌀 Linked Gear Mechanics & 'Minutes To':</strong><br>
+                                            <span class="text-muted">See 60 seconds push 1 minute and 60 minutes advance 1 hour—and conquer tricky "minutes before the hour".</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🌀 Physical Gear Mechanics:</strong><br>
-                                            <span class="text-muted">Interlocking gears move hands in perfect sync, making the cause and effect of time crystal clear.</span>
+                                            <strong>🔊 Friendly (!) Listen Mode Coaching:</strong><br>
+                                            <span class="text-muted">Stuck on a clock or time-math problem? Tap (!) to hear calm, step-by-step voice hints at your child's pace.</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🐣 Gamified Pet Companions:</strong><br>
-                                            <span class="text-muted">Solve daily quizzes to collect fruit, hatch eggs, and evolve lovable animal friends!</span>
+                                            <strong>🐣 Hatch & Evolve Adorable Companions:</strong><br>
+                                            <span class="text-muted">Collect fruits from daily quizzes to warm mystery eggs and evolve lovable study buddies!</span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                        <a href="https://apps.apple.com/us/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
                                             <i class="bi bi-apple me-1"></i> App Store
                                         </a>
                                         <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
@@ -1216,7 +1285,7 @@
                                 </div>
 
                                 <div id="canvas-guide" class="canvas-guide-overlay">
-                                    ✍️ Write freely—from carry-over notes above to answers below!
+                                    ✍️ Write freely—from the carry circle above to the answer boxes below!
                                 </div>
                             </div>
 
@@ -1234,40 +1303,40 @@
                             <div id="mathResultOverlay" class="large-card-full-overlay">
                                 <div class="large-card-overlay-content py-2">
                                     <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-2">
-                                        🎉 Correct Answer: <span id="overlay-ans-text">63</span>
+                                        🎉 Correct Sum: <span id="overlay-ans-text">63</span>
                                     </span>
                                     <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.35;">
-                                        Download Mathgotchi to experience<br>true scratch-free handwriting math!
+                                        Download MathCoco to experience<br>real AI handwriting recognition & voice coaching!
                                     </h4>
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>⚡ 120Hz Ultra-Precise Stroke Recognition:</strong><br>
-                                            <span class="text-muted">No scratch paper required. Real-time handwriting recognition tailored for children's pencil strokes.</span>
+                                            <strong>⚡ On-Device Handwriting Recognition:</strong><br>
+                                            <span class="text-muted">Zero multiple-choice guessing! Write directly on the grid scratchpad with a finger or stylus.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>💡 Audio-Visual Step-by-Step Coaching:</strong><br>
-                                            <span class="text-muted">Stuck on an answer? Smart prompts guide kids to self-correct and understand the underlying concepts.</span>
+                                            <strong>🔊 Visual Scaffolding & (!) Listen Mode:</strong><br>
+                                            <span class="text-muted">Highlights carries, borrows, and partial products while reading step-by-step hints aloud.</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🧮 Complete 4-Operation Curriculum &amp; Printable PDFs:</strong><br>
-                                            <span class="text-muted">Addition, subtraction, multiplication, division, and unlimited custom PDF worksheets with solution keys!</span>
+                                            <strong>🧮 All 4 Operations & Printable PDFs:</strong><br>
+                                            <span class="text-muted">Addition, subtraction, visual multiplication (with Flashcards), two-digit division, plus custom PDFs!</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🃏 Visual Flashcards &amp; 2048 Math Puzzle:</strong><br>
-                                            <span class="text-muted">Explore area models, watermelon animations, and powers-of-two puzzles for intuitive number sense.</span>
+                                            <strong>🧩 2048 Math Puzzle & 5 Languages:</strong><br>
+                                            <span class="text-muted">Build number sense with powers of two and switch among English, Korean, Japanese, and Chinese.</span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-wrap gap-2 justify-content-center w-100">
-                                        <a href="https://apps.apple.com/us/app/mathgotchi-early-math-time/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
+                                        <a href="https://apps.apple.com/us/app/id6806621843" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" style="background-color: var(--brand-purple);">
                                             <i class="bi bi-apple me-1"></i> App Store
                                         </a>
                                         <a href="https://play.google.com/store/apps/details?id=com.chronolab.wooagong" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark rounded-pill px-4 fw-bold shadow-sm">
                                             <i class="bi bi-google-play me-1"></i> Google Play
                                         </a>
                                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="closeResultOverlay()">
-                                            Try Again
+                                            Try Another
                                         </button>
                                     </div>
                                 </div>
@@ -1280,29 +1349,62 @@
         </div>
     </section>
 
-    <!-- 3 Core Concepts Grid -->
+    <!-- 6 Special Learning Playgrounds of MathCoco -->
     <section class="py-5">
         <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">ALL-IN-ONE FIRST MATH STUDY ROOM</span>
+                <h2 class="fw-bold display-6 mb-2" style="color: #1E1B4B;">6 Special Learning Playgrounds of MathCoco</h2>
+                <p class="text-muted mb-0">Designed so children understand the "why" behind numbers and time—and come back every day on their own.</p>
+            </div>
+
             <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">⏰</div>
-                        <h4 class="fw-bold mb-2">Hands-On 24-Hour Clock</h4>
-                        <p class="text-muted small mb-0">Experience interlocking physical gears and real-time day/night cycles to intuitively master the cause and effect of time.</p>
+                        <span class="playground-tag">Playground 01 • v1.6 Expanded</span>
+                        <div class="fs-1 mb-2">⏰</div>
+                        <h4 class="fw-bold mb-2">Telling Time to Elapsed Time</h4>
+                        <p class="text-muted small mb-0">Turn linked clock gears across 24-hour day/night skies, conquer tricky "minutes to", and compare 12h/24h clocks with a linear Time Ruler to master elapsed & time math.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🧮</div>
-                        <h4 class="fw-bold mb-2">Complete Math &amp; Printable PDFs</h4>
-                        <p class="text-muted small mb-0">Master all 4 operations (+, &minus;, &times;, &divide;) with on-screen handwriting, plus print unlimited custom PDF worksheets and red-pen answer keys.</p>
+                        <span class="playground-tag">Playground 02 • Core Arithmetic</span>
+                        <div class="fs-1 mb-2">✍️</div>
+                        <h4 class="fw-bold mb-2">Handwriting & 4 Operations</h4>
+                        <p class="text-muted small mb-0">Solve column addition, subtraction, visual multiplication (with Flashcards), and two-digit division on screen—supported by visual guides and (!) Listen Mode voice hints.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
                     <div class="feature-box">
-                        <div class="fs-1 mb-3">🎙️</div>
-                        <h4 class="fw-bold mb-2">Parent Voice Cheers &amp; Pet Growth</h4>
-                        <p class="text-muted small mb-0">Cheer on your child with real family photos and voice recordings, while daily quiz rewards hatch and evolve adorable companions.</p>
+                        <span class="playground-tag">Playground 03 • Home Printing</span>
+                        <div class="fs-1 mb-2">🖨️</div>
+                        <h4 class="fw-bold mb-2">Custom PDFs & Red-Pen Keys</h4>
+                        <p class="text-muted small mb-0">Print unlimited clock and math worksheets (A4–A0) tailored to your child, complete with full vertical red-pen solution steps for effortless parent grading.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <span class="playground-tag">Playground 04 • Daily Habit</span>
+                        <div class="fs-1 mb-2">🐣</div>
+                        <h4 class="fw-bold mb-2">Hatch & Evolve Companions</h4>
+                        <p class="text-muted small mb-0">Use fruits earned from daily quizzes to warm mystery eggs, wind clockwork gears, feed, bathe, and evolve lovable animal companions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-box">
+                        <span class="playground-tag">Playground 05 • Family Motivation</span>
+                        <div class="fs-1 mb-2">🎙️</div>
+                        <h4 class="fw-bold mb-2">Parent Voice & Photo Studio</h4>
+                        <p class="text-muted small mb-0">Mom and Dad's smiling selfies and recorded voice cheers pop up when kids solve problems or need encouragement—stored 100% on your device.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <span class="playground-tag">Playground 06 • Brain & Global</span>
+                        <div class="fs-1 mb-2">🧩</div>
+                        <h4 class="fw-bold mb-2">1-Min Sprints, 2048 & 5 Languages</h4>
+                        <p class="text-muted small mb-0">Boost fluency with 1-minute speed challenges, explore powers of two in the 2048 puzzle, and switch among English, Korean, Japanese, and Chinese (Traditional/Simplified).</p>
                     </div>
                 </div>
             </div>
@@ -1312,27 +1414,27 @@
     <!-- Parent Assurance: 3 Safe Haven Promises -->
     <section class="py-5 bg-white border-top border-bottom">
         <div class="container text-center">
-            <h2 class="fw-bold mb-4">3 Commitments to Parents' Peace of Mind</h2>
+            <h2 class="fw-bold mb-4">3 Guarantees for Parental Peace of Mind</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🚫</div>
                         <h5 class="fw-bold mb-2">100% Ad-Free (Zero Distractions)</h5>
-                        <p class="text-muted small mb-0">No banner ads, popups, or reward videos to disrupt your child's concentration or expose them to unwanted content.</p>
+                        <p class="text-muted small mb-0">Completely free of banner ads, video pop-ups, or external trackers that disrupt your child's concentration.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🔒</div>
-                        <h5 class="fw-bold mb-2">On-Device Privacy First</h5>
-                        <p class="text-muted small mb-0">No account required. Parent audio cheers and selfies stay strictly encrypted on your local device and are NEVER uploaded.</p>
+                        <h5 class="fw-bold mb-2">Strict On-Device Privacy</h5>
+                        <p class="text-muted small mb-0">No sign-up required. Parent voice recordings, photos, and learning records stay strictly on your local device and are NEVER uploaded.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🛡️</div>
-                        <h5 class="fw-bold mb-2">Kid-Safe Parental Gate</h5>
-                        <p class="text-muted small mb-0">Equipped with math verification locks to prevent children from accidental in-app purchases or leaving the app.</p>
+                        <h5 class="fw-bold mb-2">Child-Safe Parental Gate</h5>
+                        <p class="text-muted small mb-0">Multiplication-based adult verification prevents accidental in-app purchases, settings changes, or unintended exits.</p>
                     </div>
                 </div>
             </div>
@@ -1344,12 +1446,12 @@
         <div class="container text-center">
             <div class="p-4 p-lg-5 rounded-4 bg-white border shadow-sm mx-auto" style="max-width: 680px;">
                 <div class="fs-1 mb-2">💬</div>
-                <h3 class="fw-bold mb-2 text-dark">1:1 Inquiries &amp; Support</h3>
+                <h3 class="fw-bold mb-2 text-dark">1:1 Inquiries & Developer Support</h3>
                 <p class="text-muted mb-4 small">
-                    Have questions about app usage, billing, or suggestions? Reach out directly and the developer will assist you promptly.
+                    Have questions about MathCoco features, subscriptions, or feedback? Reach out directly and the developer will assist you promptly.
                 </p>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-lg px-4">
-                    <i class="bi bi-envelope-fill me-2 fs-5"></i> Email Developer Support &rarr;
+                    <i class="bi bi-envelope-fill me-2 fs-5"></i> Email Developer Support →
                 </a>
             </div>
         </div>
@@ -1360,13 +1462,13 @@
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
-                <a href="https://www.youtube.com/@bjw0829" target="_blank" class="text-secondary fs-4"><i class="bi bi-youtube"></i></a>
-                <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.youtube.com/@bjw0829" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4" aria-label="ChronoLab YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4" aria-label="Email ChronoLab"><i class="bi bi-envelope"></i></a>
             </div>
             <p class="text-muted small mb-0">
                 © 2026 ChronoLab. All rights reserved.<br>
-                <a href="terms-mathgotchi.html" class="text-decoration-none text-muted">Terms of Service</a> | 
-                <a href="privacy-mathgotchi.html" class="text-decoration-none text-muted">Privacy Policy</a>
+                <a href="terms-mathcoco.html" class="text-decoration-none text-muted">Terms of Use (EULA)</a> | 
+                <a href="privacy-mathcoco.html" class="text-decoration-none text-muted">Privacy Policy</a>
             </p>
         </div>
     </footer>
@@ -1380,15 +1482,12 @@
         AOS.init({ duration: 800, once: true });
 
         /* =========================================================================
-           0. v1.4 Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
+           0. Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
            ========================================================================= */
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         const PDF_FOLDER = 'pdf';
 
-        /**
-         * 📌 1) Default fallback PDF list (Automatically overridden/merged with pdf/list.txt)
-         */
         let PDF_EN_FILE_LIST = [
             'add_1_1.pdf',
             'sub_1_1.pdf',
@@ -1416,8 +1515,9 @@
         let currentFilteredList = [];
         let currentItemIndex = 0;
         let currentPdfUrl = '';
+        let pdfRenderToken = 0;
+        let activeRenderTasks = {};
 
-        // Parses 'add_122_123.pdf' or 'clock_1_1' with unlimited digits
         function parsePdfFileName(rawEntry) {
             let cleanEntry = rawEntry.trim().split('/').pop();
             if (!cleanEntry) return null;
@@ -1446,7 +1546,6 @@
             };
         }
 
-        // Natural numeric sort (1 -> 2 -> 10 -> 122)
         function buildPdfCatalog(rawList) {
             const uniqueSet = new Set(rawList.map(s => s.trim()).filter(Boolean));
             const subjectOrder = { 'add': 1, 'sub': 2, 'mul': 3, 'div': 4, 'clock': 5 };
@@ -1470,7 +1569,6 @@
         }
 
         async function initPdfLibrary() {
-            // Priority 1: Load 'pdf/list.txt' automatically
             try {
                 const listRes = await fetch(`${PDF_FOLDER}/list.txt`, { cache: 'no-cache' });
                 if (listRes.ok) {
@@ -1484,7 +1582,6 @@
                 // Proceed if list.txt is not reachable
             }
 
-            // Priority 2: Auto-discover directory listing on local dev server
             try {
                 const dirRes = await fetch(`./${PDF_FOLDER}/`);
                 if (dirRes.ok) {
@@ -1598,18 +1695,29 @@
             if (randBtn) randBtn.disabled = (currentFilteredList.length <= 1);
         }
 
-        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId) {
+        async function renderPdfPageToCanvas(pdfDoc, pageNum, canvasId, token) {
+            if (token !== pdfRenderToken) return;
+            if (activeRenderTasks[canvasId]) {
+                try { activeRenderTasks[canvasId].cancel(); } catch (_) {}
+            }
+
             const canvas = document.getElementById(canvasId);
             const ctx = canvas.getContext('2d');
             const page = await pdfDoc.getPage(pageNum);
+            if (token !== pdfRenderToken) return;
+
             const viewport = page.getViewport({ scale: 1.8 });
             canvas.width = viewport.width;
             canvas.height = viewport.height;
-            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+
+            const renderTask = page.render({ canvasContext: ctx, viewport: viewport });
+            activeRenderTasks[canvasId] = renderTask;
+            await renderTask.promise;
         }
 
         async function loadPdfItem(item) {
             updateNavButtons();
+            const myToken = ++pdfRenderToken;
 
             currentPdfUrl = item.url;
             document.getElementById('current-pdf-title').textContent = item.displayTitle;
@@ -1623,15 +1731,19 @@
 
             try {
                 const pdfDoc = await pdfjsLib.getDocument(item.url).promise;
-                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1');
+                if (myToken !== pdfRenderToken) return;
+
+                await renderPdfPageToCanvas(pdfDoc, 1, 'pdfCanvasPage1', myToken);
 
                 if (pdfDoc.numPages >= 2) {
                     colPage2.classList.remove('d-none');
-                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2');
+                    await renderPdfPageToCanvas(pdfDoc, 2, 'pdfCanvasPage2', myToken);
                 } else {
                     colPage2.classList.add('d-none');
                 }
             } catch (err) {
+                if (err && err.name === 'RenderingCancelledException') return;
+                if (myToken !== pdfRenderToken) return;
                 console.warn('PDF Load Notice:', err);
                 statusMsg.innerHTML = `📂 Could not find <code>${item.url}</code>. Please make sure <strong>${item.fileName}</strong> is placed inside the <code>${PDF_FOLDER}/</code> directory.`;
                 statusMsg.classList.remove('d-none');
@@ -1672,36 +1784,47 @@
             if (type === 'clock') {
                 mathBox.classList.add('d-none');
                 clockBox.classList.remove('d-none');
-                renderCelestialSky();
+                resizeSkyCanvas();
+                setupClockHiDPI();
+                renderClock();
             } else {
                 clockBox.classList.add('d-none');
                 mathBox.classList.remove('d-none');
-                initMathFullCanvas();
+                initMathFullCanvas(true);
             }
         }
 
-        /* 3. Celestial Canvas (Sun, Moon, Stars) */
+        /* 3. Celestial Canvas (Sun, Moon, Stars - HiDPI) */
         const skyCanvas = document.getElementById('skyCelestialCanvas');
         const skyCtx = skyCanvas.getContext('2d');
+        let skyWidthCss = 0;
+        let skyHeightCss = 0;
+
         const stars = [
-            { x: 0.12, y: 0.22, r: 2.2, p: 0.1 },
-            { x: 0.25, y: 0.45, r: 2.8, p: 0.4 },
-            { x: 0.38, y: 0.18, r: 1.8, p: 0.7 },
-            { x: 0.62, y: 0.32, r: 3.2, p: 0.2 },
-            { x: 0.75, y: 0.16, r: 2.0, p: 0.9 },
-            { x: 0.88, y: 0.38, r: 2.6, p: 0.5 },
-            { x: 0.50, y: 0.52, r: 1.8, p: 0.6 }
+            { x: 0.12, y: 0.22, r: 2.2 },
+            { x: 0.25, y: 0.45, r: 2.8 },
+            { x: 0.38, y: 0.18, r: 1.8 },
+            { x: 0.62, y: 0.32, r: 3.2 },
+            { x: 0.75, y: 0.16, r: 2.0 },
+            { x: 0.88, y: 0.38, r: 2.6 },
+            { x: 0.50, y: 0.52, r: 1.8 }
         ];
 
         function resizeSkyCanvas() {
             const container = skyCanvas.parentElement;
-            skyCanvas.width = container.clientWidth;
-            skyCanvas.height = container.clientHeight;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            skyWidthCss = container.clientWidth;
+            skyHeightCss = container.clientHeight;
+            if (!skyWidthCss || !skyHeightCss) return;
+
+            skyCanvas.width = Math.round(skyWidthCss * dpr);
+            skyCanvas.height = Math.round(skyHeightCss * dpr);
+            skyCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
         }
 
         function renderCelestialSky() {
-            const w = skyCanvas.width;
-            const h = skyCanvas.height;
+            const w = skyWidthCss;
+            const h = skyHeightCss;
             if (!w || !h) return;
 
             skyCtx.clearRect(0, 0, w, h);
@@ -1763,20 +1886,38 @@
             }
         }
 
-        /* 4. Interactive Analog Clock Engine */
+        /* 4. Interactive Analog Clock Engine (HiDPI + 12H/24H Mode + Smooth Drag) */
         const clockCanvas = document.getElementById('interactiveClockCanvas');
         const clockCtx = clockCanvas.getContext('2d');
         const digitalTimeEl = document.getElementById('clock-digital-time');
         const ampmBadgeEl = document.getElementById('clock-ampm-badge');
+        const clockModeBtnEl = document.getElementById('clock-mode-btn');
         const skyBg = document.getElementById('sky-gradient-bg');
 
+        let clockSizeCss = 310;
         let currentHour = 15;
         let currentMinute = 0;
+        let is24HourMode = false;
         let isDraggingHand = false;
 
+        function setupClockHiDPI() {
+            const rect = clockCanvas.getBoundingClientRect();
+            const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+            clockSizeCss = rect.width > 0 ? rect.width : 310;
+            clockCanvas.width = Math.round(clockSizeCss * dpr);
+            clockCanvas.height = Math.round(clockSizeCss * dpr);
+            clockCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function toggleClock24Mode() {
+            is24HourMode = !is24HourMode;
+            clockModeBtnEl.textContent = is24HourMode ? '12H View' : '24H View';
+            renderClock();
+        }
+
         function renderClock() {
-            const w = clockCanvas.width;
-            const h = clockCanvas.height;
+            const w = clockSizeCss;
+            const h = clockSizeCss;
             const cx = w / 2;
             const cy = h / 2;
             const r = w / 2 - 14;
@@ -1831,17 +1972,25 @@
                 clockCtx.stroke();
 
                 if (isFiveMin) {
-                    const hourVal = (i === 0) ? 12 : i / 5;
-                    const isSelectedHour = (hourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    const baseHourVal = (i === 0) ? 12 : i / 5;
+                    const isSelectedHour = (baseHourVal === ((currentHour % 12 === 0) ? 12 : currentHour % 12));
+                    let displayRingNum = baseHourVal;
+                    if (is24HourMode && currentHour >= 12) {
+                        displayRingNum = (baseHourVal === 12) ? 12 : baseHourVal + 12;
+                        if (currentHour === 0 && baseHourVal === 12) displayRingNum = 0;
+                    } else if (is24HourMode && currentHour < 12 && baseHourVal === 12) {
+                        displayRingNum = 0;
+                    }
+
                     const numRadius = r * 0.65;
                     const numX = cx + numRadius * Math.cos(angle);
                     const numY = cy + numRadius * Math.sin(angle);
 
-                    clockCtx.font = isSelectedHour ? '900 20px Inter, Pretendard' : '800 17px Inter, Pretendard';
+                    clockCtx.font = isSelectedHour ? '900 19px Inter, Pretendard' : '800 16px Inter, Pretendard';
                     clockCtx.textAlign = 'center';
                     clockCtx.textBaseline = 'middle';
                     clockCtx.fillStyle = isSelectedHour ? '#5843E4' : '#1E293B';
-                    clockCtx.fillText(hourVal.toString(), numX, numY);
+                    clockCtx.fillText(displayRingNum.toString(), numX, numY);
                 }
             }
 
@@ -1974,12 +2123,12 @@
 
         function updateSkyAndDigital(h, m) {
             const isPm = h >= 12;
-            const displayH = (h % 12 === 0) ? 12 : (h % 12);
-            const padH = String(displayH).padStart(2, '0');
+            const displayH12 = (h % 12 === 0) ? 12 : (h % 12);
+            const padH = is24HourMode ? String(h).padStart(2, '0') : String(displayH12).padStart(2, '0');
             const padM = String(m).padStart(2, '0');
 
-            ampmBadgeEl.textContent = isPm ? 'PM' : 'AM';
-            ampmBadgeEl.className = `badge rounded-pill ${isPm ? 'bg-danger' : 'bg-primary'}`;
+            ampmBadgeEl.textContent = is24HourMode ? '24H' : (isPm ? 'PM' : 'AM');
+            ampmBadgeEl.className = `badge rounded-pill ${is24HourMode ? 'bg-dark' : (isPm ? 'bg-danger' : 'bg-primary')}`;
             digitalTimeEl.textContent = `${padH}:${padM}`;
 
             if (h >= 6 && h < 17) {
@@ -1993,7 +2142,7 @@
             renderCelestialSky();
         }
 
-        function handleClockDrag(e) {
+        function handleClockDrag(e, isInitialTap = false) {
             const rect = clockCanvas.getBoundingClientRect();
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
             const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -2006,22 +2155,25 @@
             const oldMinute = currentMinute;
             const newMinute = Math.round(angle / 6) % 60;
 
-            if (oldMinute >= 50 && newMinute <= 10) {
-                currentHour = (currentHour + 1) % 24;
-            } else if (oldMinute <= 10 && newMinute >= 50) {
-                currentHour = (currentHour - 1 + 24) % 24;
+            if (!isInitialTap) {
+                let deltaMin = newMinute - oldMinute;
+                if (deltaMin < -30) {
+                    currentHour = (currentHour + 1) % 24;
+                } else if (deltaMin > 30) {
+                    currentHour = (currentHour - 1 + 24) % 24;
+                }
             }
 
             currentMinute = newMinute;
             renderClock();
         }
 
-        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e); });
-        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e); });
+        clockCanvas.addEventListener('mousedown', (e) => { isDraggingHand = true; handleClockDrag(e, true); });
+        window.addEventListener('mousemove', (e) => { if (isDraggingHand) handleClockDrag(e, false); });
         window.addEventListener('mouseup', () => { isDraggingHand = false; });
 
-        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e); e.preventDefault(); }, { passive: false });
-        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e); e.preventDefault(); } }, { passive: false });
+        clockCanvas.addEventListener('touchstart', (e) => { isDraggingHand = true; handleClockDrag(e, true); e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchmove', (e) => { if (isDraggingHand) { handleClockDrag(e, false); e.preventDefault(); } }, { passive: false });
         window.addEventListener('touchend', () => { isDraggingHand = false; });
 
         function showClockOverlay() {
@@ -2031,7 +2183,7 @@
             document.getElementById('clockResultOverlay').style.display = 'none';
         }
 
-        /* 5. Column Addition Handwriting Engine */
+        /* 5. Column Addition Handwriting Engine (HiDPI + Resize Stroke Preservation) */
         const mathFullCanvas = document.getElementById('mathFullCanvas');
         const mathFullCtx = mathFullCanvas.getContext('2d');
         const canvasGuide = document.getElementById('canvas-guide');
@@ -2041,15 +2193,32 @@
         let isDrawing = false;
         let quizA = 38;
         let quizB = 25;
+        let lastMathBoardWidth = 0;
 
-        function initMathFullCanvas() {
-            const board = document.getElementById('mathQuizBoard');
-            mathFullCanvas.width = board.clientWidth;
-            mathFullCanvas.height = board.clientHeight;
+        function applyMathBrushStyle() {
             mathFullCtx.strokeStyle = '#2B3A4A';
             mathFullCtx.lineWidth = 4.5;
             mathFullCtx.lineCap = 'round';
             mathFullCtx.lineJoin = 'round';
+        }
+
+        function initMathFullCanvas(forceReset = false) {
+            const board = document.getElementById('mathQuizBoard');
+            const w = board.clientWidth;
+            const h = board.clientHeight;
+            if (!w || !h) return;
+
+            // Avoid wiping strokes on minor mobile address-bar vertical resize
+            if (!forceReset && Math.abs(w - lastMathBoardWidth) < 4 && mathFullCanvas.width > 0) {
+                return;
+            }
+
+            const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+            mathFullCanvas.width = Math.round(w * dpr);
+            mathFullCanvas.height = Math.round(h * dpr);
+            mathFullCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            applyMathBrushStyle();
+            lastMathBoardWidth = w;
         }
 
         function generateNewMathQuiz() {
@@ -2071,7 +2240,8 @@
         }
 
         function clearMathCanvas() {
-            mathFullCtx.clearRect(0, 0, mathFullCanvas.width, mathFullCanvas.height);
+            const board = document.getElementById('mathQuizBoard');
+            mathFullCtx.clearRect(0, 0, board.clientWidth || 600, board.clientHeight || 600);
             canvasGuide.style.display = 'block';
         }
 
@@ -2129,14 +2299,18 @@
 
         window.addEventListener('resize', () => {
             resizeSkyCanvas();
-            renderCelestialSky();
+            if (!document.getElementById('sim-box-clock').classList.contains('d-none')) {
+                setupClockHiDPI();
+                renderClock();
+            }
             if (!document.getElementById('sim-box-math').classList.contains('d-none')) {
-                initMathFullCanvas();
+                initMathFullCanvas(false);
             }
         });
 
         // Initialize On Load
         resizeSkyCanvas();
+        setupClockHiDPI();
         renderClock();
         initPdfLibrary();
     </script>
