@@ -267,7 +267,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Shorts Toy Showroom (Sequential Tab List) */
+        /* Shorts Toy Showroom (Sequential Auto-Advance Tab List) */
         .shorts-toy-wrapper {
             background: #FFFFFF;
             border-radius: 36px;
@@ -357,6 +357,12 @@
             overflow: hidden;
             position: relative;
             box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        .shorts-screen-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
         }
         .shorts-fallback-poster {
             width: 100%;
@@ -987,7 +993,7 @@
                     </div>
                 </div>
 
-                <!-- Right: Dynamic Sequential Shorts Toy Showroom -->
+                <!-- Right: Auto-Advance Sequential Shorts Toy Showroom -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
                         <!-- Dynamic Tab Bar + Prev/Next Arrows -->
@@ -1003,13 +1009,9 @@
 
                         <!-- 9:16 Screen Frame -->
                         <div class="shorts-screen-frame">
-                            <iframe id="shorts-main-iframe"
-                                    class="w-100 h-100 border-0"
-                                    src=""
-                                    title="MathCoco YouTube Shorts"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen>
-                            </iframe>
+                            <div id="shorts-player-wrap" class="w-100 h-100">
+                                <div id="shorts-player-target"></div>
+                            </div>
 
                             <!-- Optional Fallback (Displayed only if a list item's URL is left empty) -->
                             <div id="shorts-fallback-box" class="shorts-fallback-poster d-none">
@@ -1524,7 +1526,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- PDF Worksheet Bank & Simulator & Shorts Engine -->
+    <!-- PDF Worksheet Bank & Simulator & Auto-Advance Shorts Engine -->
     <script>
         AOS.init({ duration: 800, once: true });
 
@@ -1804,7 +1806,7 @@
         }
 
         /* =========================================================================
-           1. Dynamic Sequential YouTube Shorts List & Tab Switcher
+           1. Dynamic Sequential YouTube Shorts List & Auto-Advance Player
            ========================================================================= */
         const SHORTS_LIST = [
             {
@@ -1824,6 +1826,10 @@
         ];
 
         let currentShortsIdx = 0;
+        let ytShortsPlayer = null;
+        let isYtApiReady = false;
+        let isCreatingYtPlayer = false;
+        let pendingShortsVideoId = '';
 
         function extractYouTubeId(input) {
             if (!input) return '';
@@ -1841,6 +1847,89 @@
                 label: entry.label || `#${idx + 1}`,
                 url: entry.url || ''
             };
+        }
+
+        function loadYouTubeIframeAPI() {
+            if (window.YT && window.YT.Player) {
+                isYtApiReady = true;
+                if (pendingShortsVideoId) createYtShortsPlayer(pendingShortsVideoId);
+                return;
+            }
+            if (!document.getElementById('yt-iframe-api-script')) {
+                const tag = document.createElement('script');
+                tag.id = 'yt-iframe-api-script';
+                tag.src = 'https://www.youtube.com/iframe_api';
+                document.head.appendChild(tag);
+            }
+            setTimeout(() => {
+                if (!isYtApiReady && pendingShortsVideoId) {
+                    renderFallbackIframe(pendingShortsVideoId);
+                }
+            }, 3500);
+        }
+
+        window.onYouTubeIframeAPIReady = function () {
+            isYtApiReady = true;
+            if (pendingShortsVideoId) {
+                createYtShortsPlayer(pendingShortsVideoId);
+            }
+        };
+
+        function createYtShortsPlayer(videoId) {
+            if (isCreatingYtPlayer) return;
+            const target = document.getElementById('shorts-player-target');
+            if (!target) return;
+
+            isCreatingYtPlayer = true;
+            const initialId = videoId;
+
+            ytShortsPlayer = new YT.Player('shorts-player-target', {
+                host: 'https://www.youtube-nocookie.com',
+                width: '100%',
+                height: '100%',
+                videoId: initialId,
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    playsinline: 1,
+                    rel: 0
+                },
+                events: {
+                    onReady: (event) => {
+                        isCreatingYtPlayer = false;
+                        event.target.mute();
+                        if (pendingShortsVideoId && pendingShortsVideoId !== initialId) {
+                            event.target.loadVideoById(pendingShortsVideoId);
+                        } else {
+                            event.target.playVideo();
+                        }
+                    },
+                    onStateChange: (event) => {
+                        if (event.data === YT.PlayerState.ENDED) {
+                            if (SHORTS_LIST.length <= 1) {
+                                event.target.seekTo(0);
+                                event.target.playVideo();
+                            } else {
+                                const nextIdx = (currentShortsIdx + 1) % SHORTS_LIST.length;
+                                selectShortsItem(nextIdx, true);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderFallbackIframe(videoId) {
+            const wrap = document.getElementById('shorts-player-wrap');
+            if (!wrap) return;
+            wrap.innerHTML = `
+                <iframe class="w-100 h-100 border-0"
+                        src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0"
+                        title="MathCoco YouTube Shorts"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            `;
         }
 
         function initShortsShowroom() {
@@ -1867,6 +1956,7 @@
                 nextBtn.classList.remove('d-none');
             }
 
+            loadYouTubeIframeAPI();
             selectShortsItem(0, false);
         }
 
@@ -1892,17 +1982,27 @@
 
             const item = normalizeShortsEntry(SHORTS_LIST[index], index);
             const videoId = extractYouTubeId(item.url);
-            const iframe = document.getElementById('shorts-main-iframe');
+            const playerWrap = document.getElementById('shorts-player-wrap');
             const fallbackBox = document.getElementById('shorts-fallback-box');
 
             if (videoId) {
                 fallbackBox.classList.add('d-none');
-                iframe.classList.remove('d-none');
-                iframe.title = `MathCoco Shorts - ${item.label}`;
-                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0`;
+                playerWrap.classList.remove('d-none');
+                pendingShortsVideoId = videoId;
+
+                if (ytShortsPlayer && typeof ytShortsPlayer.loadVideoById === 'function') {
+                    ytShortsPlayer.loadVideoById(videoId);
+                } else if (isYtApiReady) {
+                    createYtShortsPlayer(videoId);
+                } else if (playerWrap.querySelector('iframe')) {
+                    renderFallbackIframe(videoId);
+                }
             } else {
-                iframe.src = '';
-                iframe.classList.add('d-none');
+                pendingShortsVideoId = '';
+                if (ytShortsPlayer && typeof ytShortsPlayer.stopVideo === 'function') {
+                    ytShortsPlayer.stopVideo();
+                }
+                playerWrap.classList.add('d-none');
                 fallbackBox.classList.remove('d-none');
             }
         }
