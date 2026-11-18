@@ -265,43 +265,87 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* 쇼츠 비디오 완구 쇼룸 */
+        /* 쇼츠 비디오 완구 쇼룸 (순차 자동 전환 탭 리스트) */
         .shorts-toy-wrapper {
             background: #FFFFFF;
             border-radius: 36px;
-            padding: 16px;
+            padding: 14px;
             box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
             border: 3px solid #F1F5F9;
-            max-width: 460px;
+            max-width: 390px;
             margin: 0 auto;
+        }
+        .shorts-tabs-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #F1F5F9;
+            padding: 5px;
+            border-radius: 24px;
+            margin-bottom: 12px;
         }
         .shorts-pill-tabs {
             display: flex;
-            gap: 8px;
-            background: #F1F5F9;
-            padding: 6px;
-            border-radius: 24px;
-            margin-bottom: 14px;
+            flex: 1;
+            gap: 6px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .shorts-pill-tabs::-webkit-scrollbar {
+            display: none;
         }
         .shorts-tab-btn {
-            flex: 1;
-            padding: 9px 8px;
+            flex: 1 0 auto;
+            padding: 8px 12px;
             border: none;
             background: transparent;
             font-weight: 800;
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             color: #64748B;
             border-radius: 18px;
             transition: all 0.2s ease;
-            line-height: 1.35;
-            display: flex;
+            line-height: 1.3;
+            white-space: nowrap;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .shorts-tab-btn:hover {
+            color: var(--brand-purple);
         }
         .shorts-tab-btn.active {
             background: #FFFFFF;
             color: var(--brand-purple);
             box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        .shorts-arrow-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: #FFFFFF;
+            color: #475569;
+            font-weight: 900;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.15s ease;
+        }
+        .shorts-arrow-btn:hover:not(:disabled) {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+        }
+        .shorts-arrow-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
         }
         .shorts-screen-frame {
             width: 100%;
@@ -311,6 +355,24 @@
             overflow: hidden;
             position: relative;
             box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        .shorts-screen-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+        .shorts-fallback-poster {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
+            color: #FFFFFF;
         }
 
         /* 맞춤형 PDF 문제은행 생성 파트 */
@@ -885,7 +947,7 @@
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
             .shorts-toy-wrapper { max-width: 340px; }
-            .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .shorts-tab-btn { font-size: 0.74rem; padding: 7px 10px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
             .pdf-selector-toolbar { justify-content: center; }
@@ -1003,48 +1065,45 @@
                     </div>
                 </div>
 
-                <!-- 우측: 쇼츠 듀얼 토이 쇼룸 -->
+                <!-- 우측: 순차 자동 전환 쇼츠 토이 쇼룸 -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
-                        <!-- 탭 버튼 -->
-                        <div class="shorts-pill-tabs">
-                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
-                                ✍️ 찍지 않고 쓰는 손글씨 연산
+                        <!-- 동적 탭 바 + 좌우 이동 화살표 -->
+                        <div class="shorts-tabs-header">
+                            <button type="button" id="shorts-prev-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(-1)" aria-label="이전 쇼츠">
+                                ‹
                             </button>
-                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
-                                ⏰ 손끝으로 돌리는 시계 읽기
+                            <div id="shorts-tabs-container" class="shorts-pill-tabs" role="tablist"></div>
+                            <button type="button" id="shorts-next-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(1)" aria-label="다음 쇼츠">
+                                ›
                             </button>
                         </div>
 
                         <!-- 9:16 스크린 프레임 -->
                         <div class="shorts-screen-frame">
-                            <!-- 1번 탭: 연산 유튜브 쇼츠 임베드 플레이어 -->
-                            <div id="shorts-box-1" class="w-100 h-100">
-                                <iframe id="shorts-iframe-1" 
-                                        class="w-100 h-100 border-0" 
-                                        src="https://www.youtube.com/embed/72GAK8m6qFQ?autoplay=1&mute=1&loop=1&playlist=72GAK8m6qFQ&playsinline=1&rel=0" 
-                                        title="매쓰고치 손글씨 연산 쇼츠" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
+                            <div id="shorts-player-wrap" class="w-100 h-100">
+                                <div id="shorts-player-target"></div>
                             </div>
 
-                            <!-- 2번 탭: 시계 유튜브 쇼츠 임베드 플레이어 -->
-                            <div id="shorts-box-2" class="w-100 h-100 d-none">
-                                <iframe id="shorts-iframe-2" 
-                                        class="w-100 h-100 border-0" 
-                                        src="https://www.youtube.com/embed/FLZHsvS_Imc?autoplay=1&mute=1&loop=1&playlist=FLZHsvS_Imc&playsinline=1&rel=0" 
-                                        title="매쓰고치 시계 읽기 쇼츠" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
+                            <!-- 선택적 폴백 안내 (URL이 비어있는 항목일 때만 표시) -->
+                            <div id="shorts-fallback-box" class="shorts-fallback-poster d-none">
+                                <div class="fs-1 mb-2">⏰</div>
+                                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">매쓰고치 v1.6 신규 오픈</span>
+                                <h5 class="fw-bold mb-2 text-white">시계 읽기부터 시간 계산·연산까지</h5>
+                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.65;">
+                                    <strong>지금 매쓰고치 앱에서 바로 만나보실 수 있습니다!</strong><br>
+                                    12시간·24시간 시계와 직선 눈금 <strong>시간 자(Ruler)</strong>를 나란히 비교하며 걸린 시간과 시각 연산 원리를 익혀보세요.
+                                </p>
+                                <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold" onclick="document.querySelector('.simulator-section').scrollIntoView({behavior: 'smooth'})">
+                                    👇 아래 시계 시뮬레이터 먼저 체험하기
+                                </button>
                             </div>
                         </div>
 
                         <!-- 하단 링크 바 -->
                         <div class="d-flex justify-content-between align-items-center mt-3 px-2 small">
                             <span class="text-muted">✨ 실제 앱 구동 숏폼 영상</span>
-                            <a id="shorts-yt-link" href="https://youtube.com/shorts/72GAK8m6qFQ" target="_blank" rel="noopener noreferrer" class="badge bg-danger text-white text-decoration-none py-1 px-2 d-inline-flex align-items-center">
+                            <a id="shorts-yt-link" href="https://youtube.com/shorts/Ar6pqACl5Ys" target="_blank" rel="noopener noreferrer" class="badge bg-danger text-white text-decoration-none py-1 px-2 d-inline-flex align-items-center">
                                 <i class="bi bi-youtube me-1"></i> YouTube로 보기
                             </a>
                         </div>
@@ -1617,7 +1676,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- PDF 문제은행 뷰어 & 시뮬레이터 & 쇼츠 & 롱폼 챕터 엔진 -->
+    <!-- PDF 문제은행 뷰어 & 시뮬레이터 & 자동 전환 쇼츠 & 롱폼 챕터 엔진 -->
     <script>
         AOS.init({ duration: 800, once: true });
 
@@ -1896,24 +1955,219 @@
             }
         }
 
-        /* 1. 쇼츠 비디오 탭 전환기 */
-        function switchShortsTab(index, btn) {
-            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        /* =========================================================================
+           1. 순차 자동 전환 유튜브 쇼츠 리스트 & 플레이어
+           ========================================================================= */
+        const SHORTS_LIST = [
+            {
+                label: '🗓️ 주먹 달력 기억법',
+                url: 'https://youtube.com/shorts/Ar6pqACl5Ys?feature=share'
+            },
+            {
+                label: '✖️ 구구단 플래시카드',
+                url: 'https://youtube.com/shorts/puTANFcGlXk?feature=share'
+            },
+            {
+                label: '🌙 시계와 3D 천문대',
+                url: 'https://youtube.com/shorts/QqFTiQzFWI8?feature=share'
+            },
+            {
+                label: '✍️ 오늘의 덧셈',
+                url: 'https://youtube.com/shorts/m-zv_obt-W4?feature=share'
+            }
+            // 추후 새로운 쇼츠가 올라오면 아래에 { label: '탭 이름', url: '쇼츠 링크' } 형태로 이어서 추가하세요:
+            // { label: '🖨️ PDF 학습지 출력', url: 'https://youtube.com/shorts/영상ID' },
+        ];
 
-            const box1 = document.getElementById('shorts-box-1');
-            const box2 = document.getElementById('shorts-box-2');
+        let currentShortsIdx = 0;
+        let ytShortsPlayer = null;
+        let isYtApiReady = false;
+        let isCreatingYtPlayer = false;
+        let pendingShortsVideoId = '';
+
+        function extractYouTubeId(input) {
+            if (!input) return '';
+            const trimmed = input.trim();
+            if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
+            const match = trimmed.match(/(?:shorts\/|youtu\.be\/|v=|embed\/)([a-zA-Z0-9_-]{11})/);
+            return match ? match[1] : '';
+        }
+
+        function normalizeShortsEntry(entry, idx) {
+            if (typeof entry === 'string') {
+                return { label: `#${idx + 1}`, url: entry };
+            }
+            return {
+                label: entry.label || `#${idx + 1}`,
+                url: entry.url || ''
+            };
+        }
+
+        function loadYouTubeIframeAPI() {
+            if (window.YT && window.YT.Player) {
+                isYtApiReady = true;
+                if (pendingShortsVideoId) createYtShortsPlayer(pendingShortsVideoId);
+                return;
+            }
+            if (!document.getElementById('yt-iframe-api-script')) {
+                const tag = document.createElement('script');
+                tag.id = 'yt-iframe-api-script';
+                tag.src = 'https://www.youtube.com/iframe_api';
+                document.head.appendChild(tag);
+            }
+            setTimeout(() => {
+                if (!isYtApiReady && pendingShortsVideoId) {
+                    renderFallbackIframe(pendingShortsVideoId);
+                }
+            }, 3500);
+        }
+
+        window.onYouTubeIframeAPIReady = function () {
+            isYtApiReady = true;
+            if (pendingShortsVideoId) {
+                createYtShortsPlayer(pendingShortsVideoId);
+            }
+        };
+
+        function createYtShortsPlayer(videoId) {
+            if (isCreatingYtPlayer) return;
+            const target = document.getElementById('shorts-player-target');
+            if (!target) return;
+
+            isCreatingYtPlayer = true;
+            const initialId = videoId;
+
+            ytShortsPlayer = new YT.Player('shorts-player-target', {
+                host: 'https://www.youtube-nocookie.com',
+                width: '100%',
+                height: '100%',
+                videoId: initialId,
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    playsinline: 1,
+                    rel: 0
+                },
+                events: {
+                    onReady: (event) => {
+                        isCreatingYtPlayer = false;
+                        event.target.mute();
+                        if (pendingShortsVideoId && pendingShortsVideoId !== initialId) {
+                            event.target.loadVideoById(pendingShortsVideoId);
+                        } else {
+                            event.target.playVideo();
+                        }
+                    },
+                    onStateChange: (event) => {
+                        if (event.data === YT.PlayerState.ENDED) {
+                            if (SHORTS_LIST.length <= 1) {
+                                event.target.seekTo(0);
+                                event.target.playVideo();
+                            } else {
+                                const nextIdx = (currentShortsIdx + 1) % SHORTS_LIST.length;
+                                selectShortsItem(nextIdx, true);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderFallbackIframe(videoId) {
+            const wrap = document.getElementById('shorts-player-wrap');
+            if (!wrap) return;
+            wrap.innerHTML = `
+                <iframe class="w-100 h-100 border-0"
+                        src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0"
+                        title="매쓰고치 YouTube Shorts"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            `;
+        }
+
+        function initShortsShowroom() {
+            const container = document.getElementById('shorts-tabs-container');
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (!container || SHORTS_LIST.length === 0) return;
+
+            container.innerHTML = SHORTS_LIST.map((rawEntry, idx) => {
+                const item = normalizeShortsEntry(rawEntry, idx);
+                return `
+                    <button type="button"
+                            class="shorts-tab-btn ${idx === 0 ? 'active' : ''}"
+                            role="tab"
+                            aria-selected="${idx === 0 ? 'true' : 'false'}"
+                            onclick="selectShortsItem(${idx})">
+                        ${item.label}
+                    </button>
+                `;
+            }).join('');
+
+            if (SHORTS_LIST.length >= 2) {
+                prevBtn.classList.remove('d-none');
+                nextBtn.classList.remove('d-none');
+            }
+
+            loadYouTubeIframeAPI();
+            selectShortsItem(0, false);
+        }
+
+        function selectShortsItem(index, shouldScrollTab = true) {
+            if (index < 0 || index >= SHORTS_LIST.length) return;
+            currentShortsIdx = index;
+
+            const container = document.getElementById('shorts-tabs-container');
+            const buttons = container.querySelectorAll('.shorts-tab-btn');
+            buttons.forEach((btn, i) => {
+                const isActive = (i === index);
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                if (isActive && shouldScrollTab) {
+                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            });
+
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (prevBtn) prevBtn.disabled = (index === 0);
+            if (nextBtn) nextBtn.disabled = (index === SHORTS_LIST.length - 1);
+
+            const item = normalizeShortsEntry(SHORTS_LIST[index], index);
+            const videoId = extractYouTubeId(item.url);
+            const playerWrap = document.getElementById('shorts-player-wrap');
+            const fallbackBox = document.getElementById('shorts-fallback-box');
             const ytLink = document.getElementById('shorts-yt-link');
 
-            if (index === 1) {
-                box2.classList.add('d-none');
-                box1.classList.remove('d-none');
-                if (ytLink) ytLink.href = 'https://youtube.com/shorts/72GAK8m6qFQ';
-            } else {
-                box1.classList.add('d-none');
-                box2.classList.remove('d-none');
-                if (ytLink) ytLink.href = 'https://youtube.com/shorts/FLZHsvS_Imc';
+            if (ytLink) {
+                ytLink.href = videoId ? `https://youtube.com/shorts/${videoId}` : 'https://www.youtube.com/@bjw0829';
             }
+
+            if (videoId) {
+                fallbackBox.classList.add('d-none');
+                playerWrap.classList.remove('d-none');
+                pendingShortsVideoId = videoId;
+
+                if (ytShortsPlayer && typeof ytShortsPlayer.loadVideoById === 'function') {
+                    ytShortsPlayer.loadVideoById(videoId);
+                } else if (isYtApiReady) {
+                    createYtShortsPlayer(videoId);
+                } else if (playerWrap.querySelector('iframe')) {
+                    renderFallbackIframe(videoId);
+                }
+            } else {
+                pendingShortsVideoId = '';
+                if (ytShortsPlayer && typeof ytShortsPlayer.stopVideo === 'function') {
+                    ytShortsPlayer.stopVideo();
+                }
+                playerWrap.classList.add('d-none');
+                fallbackBox.classList.remove('d-none');
+            }
+        }
+
+        function stepShortsTab(delta) {
+            selectShortsItem(currentShortsIdx + delta, true);
         }
 
         /* 1-2. 롱폼 영상 챕터 시간 이동 함수 (Video ID: wf1RxHSHKQE) */
@@ -2477,6 +2731,7 @@
         });
 
         // 초기 실행
+        initShortsShowroom();
         resizeSkyCanvas();
         setupClockHiDPI();
         renderClock();
