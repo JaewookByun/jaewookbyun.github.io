@@ -267,43 +267,87 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Shorts Toy Showroom */
+        /* Shorts Toy Showroom (Sequential Tab List) */
         .shorts-toy-wrapper {
             background: #FFFFFF;
             border-radius: 36px;
-            padding: 16px;
+            padding: 14px;
             box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
             border: 3px solid #F1F5F9;
-            max-width: 460px;
+            max-width: 390px;
             margin: 0 auto;
+        }
+        .shorts-tabs-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #F1F5F9;
+            padding: 5px;
+            border-radius: 24px;
+            margin-bottom: 12px;
         }
         .shorts-pill-tabs {
             display: flex;
-            gap: 8px;
-            background: #F1F5F9;
-            padding: 6px;
-            border-radius: 24px;
-            margin-bottom: 14px;
+            flex: 1;
+            gap: 6px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .shorts-pill-tabs::-webkit-scrollbar {
+            display: none;
         }
         .shorts-tab-btn {
-            flex: 1;
-            padding: 9px 8px;
+            flex: 1 0 auto;
+            padding: 8px 12px;
             border: none;
             background: transparent;
             font-weight: 800;
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             color: #64748B;
             border-radius: 18px;
             transition: all 0.2s ease;
-            line-height: 1.35;
-            display: flex;
+            line-height: 1.3;
+            white-space: nowrap;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .shorts-tab-btn:hover {
+            color: var(--brand-purple);
         }
         .shorts-tab-btn.active {
             background: #FFFFFF;
             color: var(--brand-purple);
             box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        .shorts-arrow-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: #FFFFFF;
+            color: #475569;
+            font-weight: 900;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.15s ease;
+        }
+        .shorts-arrow-btn:hover:not(:disabled) {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+        }
+        .shorts-arrow-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
         }
         .shorts-screen-frame {
             width: 100%;
@@ -828,7 +872,7 @@
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
             .shorts-toy-wrapper { max-width: 340px; }
-            .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .shorts-tab-btn { font-size: 0.74rem; padding: 7px 10px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
             .pdf-selector-toolbar { justify-content: center; }
@@ -943,34 +987,32 @@
                     </div>
                 </div>
 
-                <!-- Right: Shorts Toy Showroom -->
+                <!-- Right: Dynamic Sequential Shorts Toy Showroom -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
-                        <!-- Tab Buttons -->
-                        <div class="shorts-pill-tabs">
-                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
-                                ✍️ 免草稿纸・手写竖式计算
+                        <!-- Dynamic Tab Bar + Prev/Next Arrows -->
+                        <div class="shorts-tabs-header">
+                            <button type="button" id="shorts-prev-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(-1)" aria-label="上一个视频">
+                                ‹
                             </button>
-                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
-                                ⏰ 钟表与时间计算 <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">介绍 🎬</span>
+                            <div id="shorts-tabs-container" class="shorts-pill-tabs" role="tablist"></div>
+                            <button type="button" id="shorts-next-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(1)" aria-label="下一个视频">
+                                ›
                             </button>
                         </div>
 
                         <!-- 9:16 Screen Frame -->
                         <div class="shorts-screen-frame">
-                            <!-- Tab 1: Embedded Shorts Video -->
-                            <div id="shorts-box-1" class="w-100 h-100">
-                                <iframe id="shorts-iframe-1" 
-                                        class="w-100 h-100 border-0" 
-                                        src="https://www.youtube.com/embed/yHDBDWX4_KU?autoplay=1&mute=1&loop=1&playlist=yHDBDWX4_KU&playsinline=1&rel=0" 
-                                        title="MathCoco 小学数学：免草稿纸的手写竖式计算" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
-                            </div>
+                            <iframe id="shorts-main-iframe"
+                                    class="w-100 h-100 border-0"
+                                    src=""
+                                    title="MathCoco YouTube Shorts"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                            </iframe>
 
-                            <!-- Tab 2: Clock & Elapsed Time Feature Notice -->
-                            <div id="shorts-box-2" class="shorts-fallback-poster d-none">
+                            <!-- Optional Fallback (Displayed only if a list item's URL is left empty) -->
+                            <div id="shorts-fallback-box" class="shorts-fallback-poster d-none">
                                 <div class="fs-1 mb-2">⏰</div>
                                 <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">MATHCOCO v1.6 全新上线</span>
                                 <h5 class="fw-bold mb-2 text-white">从认识钟表到“时间的计算”</h5>
@@ -1761,21 +1803,112 @@
             }
         }
 
-        /* 1. Shorts Video Tab Switcher */
-        function switchShortsTab(index, btn) {
-            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const box1 = document.getElementById('shorts-box-1');
-            const box2 = document.getElementById('shorts-box-2');
-
-            if (index === 1) {
-                box2.classList.add('d-none');
-                box1.classList.remove('d-none');
-            } else {
-                box1.classList.add('d-none');
-                box2.classList.remove('d-none');
+        /* =========================================================================
+           1. Dynamic Sequential YouTube Shorts List & Tab Switcher
+           ========================================================================= */
+        const SHORTS_LIST = [
+            {
+                label: '✖️ 乘法口诀闪卡',
+                url: 'https://youtube.com/shorts/KsA-ytVW1TA?feature=share'
+            },
+            {
+                label: '🌙 钟表与3D星空',
+                url: 'https://youtube.com/shorts/fU5f1l5DAaw?feature=share'
+            },
+            {
+                label: '✍️ 每日加法练习',
+                url: 'https://youtube.com/shorts/GzCOXFkDuQQ?feature=share'
             }
+            // 后续新增短视频时，只需按顺序在下方继续添加即可（支持 { label, url } 或纯链接字符串）：
+            // { label: '🖨️ 打印PDF练习卷', url: 'https://youtube.com/shorts/在此填写视频ID' },
+        ];
+
+        let currentShortsIdx = 0;
+
+        function extractYouTubeId(input) {
+            if (!input) return '';
+            const trimmed = input.trim();
+            if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
+            const match = trimmed.match(/(?:shorts\/|youtu\.be\/|v=|embed\/)([a-zA-Z0-9_-]{11})/);
+            return match ? match[1] : '';
+        }
+
+        function normalizeShortsEntry(entry, idx) {
+            if (typeof entry === 'string') {
+                return { label: `#${idx + 1}`, url: entry };
+            }
+            return {
+                label: entry.label || `#${idx + 1}`,
+                url: entry.url || ''
+            };
+        }
+
+        function initShortsShowroom() {
+            const container = document.getElementById('shorts-tabs-container');
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (!container || SHORTS_LIST.length === 0) return;
+
+            container.innerHTML = SHORTS_LIST.map((rawEntry, idx) => {
+                const item = normalizeShortsEntry(rawEntry, idx);
+                return `
+                    <button type="button"
+                            class="shorts-tab-btn ${idx === 0 ? 'active' : ''}"
+                            role="tab"
+                            aria-selected="${idx === 0 ? 'true' : 'false'}"
+                            onclick="selectShortsItem(${idx})">
+                        ${item.label}
+                    </button>
+                `;
+            }).join('');
+
+            if (SHORTS_LIST.length >= 2) {
+                prevBtn.classList.remove('d-none');
+                nextBtn.classList.remove('d-none');
+            }
+
+            selectShortsItem(0, false);
+        }
+
+        function selectShortsItem(index, shouldScrollTab = true) {
+            if (index < 0 || index >= SHORTS_LIST.length) return;
+            currentShortsIdx = index;
+
+            const container = document.getElementById('shorts-tabs-container');
+            const buttons = container.querySelectorAll('.shorts-tab-btn');
+            buttons.forEach((btn, i) => {
+                const isActive = (i === index);
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                if (isActive && shouldScrollTab) {
+                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            });
+
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (prevBtn) prevBtn.disabled = (index === 0);
+            if (nextBtn) nextBtn.disabled = (index === SHORTS_LIST.length - 1);
+
+            const item = normalizeShortsEntry(SHORTS_LIST[index], index);
+            const videoId = extractYouTubeId(item.url);
+            const iframe = document.getElementById('shorts-main-iframe');
+            const fallbackBox = document.getElementById('shorts-fallback-box');
+
+            if (videoId) {
+                fallbackBox.classList.add('d-none');
+                iframe.classList.remove('d-none');
+                iframe.title = `MathCoco Shorts - ${item.label}`;
+                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0`;
+            } else {
+                iframe.src = '';
+                iframe.classList.add('d-none');
+                fallbackBox.classList.remove('d-none');
+            }
+        }
+
+        function stepShortsTab(delta) {
+            selectShortsItem(currentShortsIdx + delta, true);
         }
 
         /* 2. Simulator Tab Switcher (Clock vs Column Math) */
@@ -2312,6 +2445,7 @@
         });
 
         // Initialize On Load
+        initShortsShowroom();
         resizeSkyCanvas();
         setupClockHiDPI();
         renderClock();
