@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
     
-    <title>MathCoco - 兒童時鐘與數學學習、手寫直式計算與可列印 PDF 學習單 | ChronoLab</title>
+    <title>MathCoco - 兒童認識時鐘與數學啟蒙、手寫直式計算與可列印 PDF 學習單 | ChronoLab</title>
     <meta name="description" content="由資工系教授爸爸為兩個孩子親手打造的 100% 無廣告數學學習室。涵蓋 24 小時連動齒輪時鐘、時間的計算與時間尺（v1.6）、螢幕手寫四則直式運算、無限列印客製化 PDF 學習單與紅筆詳解卷！">
-    <meta name="keywords" content="MathCoco, ChronoLab, 認識時鐘, 時間的計算, 時間尺, 兒童數學, 國小數學, 可列印數學練習卷, PDF學習單, 直式加法, 減法, 九九乘法閃卡, 除法, 進位退位, 手寫辨識, 寵物養成, 無廣告兒童App">
+    <meta name="keywords" content="MathCoco, ChronoLab, 認識時鐘, 時間的計算, 時間尺, 兒童數學, 國小數學, 可列印數學練習卷, PDF學習單, 直式加法, 減法, 九九乘法閃卡, 除法, 進位借位, 手寫辨識, 寵物養成, 無廣告兒童App">
     <meta name="author" content="ChronoLab">
     
     <link rel="canonical" href="https://www.chronolaboratory.com/index-tw.html">
@@ -30,8 +30,8 @@
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.chronolaboratory.com/index-tw.html">
-    <meta property="og:title" content="MathCoco - 兒童時鐘與數學、手寫直式計算與可列印 PDF 學習單">
-    <meta property="og:description" content="告別選擇題亂猜！親手撥動連動時鐘、對照「時間尺」學會時間的計算（v1.6）、螢幕手寫四則直式，並無限列印附紅筆詳解的客製化 PDF 學習單。">
+    <meta property="og:title" content="MathCoco - 兒童認識時鐘與數學啟蒙、手寫直式與可列印 PDF 學習單">
+    <meta property="og:description" content="告別選擇題盲目亂猜！親手撥動連動時鐘、對照「時間尺」學會時間的計算（v1.6）、螢幕手寫四則直式，並無限列印附紅筆詳解的客製化 PDF 學習單。">
     <meta property="og:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:site_name" content="ChronoLab">
@@ -39,8 +39,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.chronolaboratory.com/index-tw.html">
-    <meta name="twitter:title" content="MathCoco - 兒童時鐘與數學、手寫直式與可列印 PDF 學習單">
-    <meta name="twitter:description" content="告別選擇題亂猜！親手撥動時鐘、學會時間的計算（v1.6）、螢幕手寫直式計算，並無限列印客製化 PDF 學習單。">
+    <meta name="twitter:title" content="MathCoco - 兒童時鐘與數學啟蒙、手寫直式與可列印 PDF 學習單">
+    <meta name="twitter:description" content="告別選擇題盲目亂猜！親手撥動時鐘、學會時間的計算（v1.6）、螢幕手寫直式計算，並無限列印客製化 PDF 學習單。">
     <meta name="twitter:image" content="https://www.chronolaboratory.com/mathgotchi/concept_en_1.jpg">
 
     <link rel="icon" href="mathgotchi/icon_1024_white.png" type="image/png">
@@ -55,7 +55,7 @@
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "iOS, iPadOS, Android",
       "inLanguage": "zh-Hant-TW",
-      "description": "專為幼兒與國小學童打造的 100% 無廣告時鐘與數學學習 App。結合 24 小時連動齒輪時鐘、時間尺與時間計算、螢幕手寫四則直式運算、無限列印客製化 PDF 學習單與紅筆詳解卷。",
+      "description": "專為幼兒與國小學童打造的 100% 無廣告時鐘與數學啟蒙 App。結合 24 小時連動齒輪時鐘、時間尺與時間計算、螢幕手寫四則直式運算、無限列印客製化 PDF 學習單與紅筆詳解卷。",
       "author": {
         "@type": "Organization",
         "name": "ChronoLab",
@@ -267,43 +267,87 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Shorts Toy Showroom */
+        /* Shorts Toy Showroom (Sequential Tab List) */
         .shorts-toy-wrapper {
             background: #FFFFFF;
             border-radius: 36px;
-            padding: 16px;
+            padding: 14px;
             box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
             border: 3px solid #F1F5F9;
-            max-width: 460px;
+            max-width: 390px;
             margin: 0 auto;
+        }
+        .shorts-tabs-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #F1F5F9;
+            padding: 5px;
+            border-radius: 24px;
+            margin-bottom: 12px;
         }
         .shorts-pill-tabs {
             display: flex;
-            gap: 8px;
-            background: #F1F5F9;
-            padding: 6px;
-            border-radius: 24px;
-            margin-bottom: 14px;
+            flex: 1;
+            gap: 6px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .shorts-pill-tabs::-webkit-scrollbar {
+            display: none;
         }
         .shorts-tab-btn {
-            flex: 1;
-            padding: 9px 8px;
+            flex: 1 0 auto;
+            padding: 8px 12px;
             border: none;
             background: transparent;
             font-weight: 800;
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             color: #64748B;
             border-radius: 18px;
             transition: all 0.2s ease;
-            line-height: 1.35;
-            display: flex;
+            line-height: 1.3;
+            white-space: nowrap;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .shorts-tab-btn:hover {
+            color: var(--brand-purple);
         }
         .shorts-tab-btn.active {
             background: #FFFFFF;
             color: var(--brand-purple);
             box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
+        }
+        .shorts-arrow-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: #FFFFFF;
+            color: #475569;
+            font-weight: 900;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.15s ease;
+        }
+        .shorts-arrow-btn:hover:not(:disabled) {
+            background: var(--brand-purple);
+            color: #FFFFFF;
+        }
+        .shorts-arrow-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
         }
         .shorts-screen-frame {
             width: 100%;
@@ -828,7 +872,7 @@
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
             .shorts-toy-wrapper { max-width: 340px; }
-            .shorts-tab-btn { font-size: 0.74rem; padding: 8px 4px; }
+            .shorts-tab-btn { font-size: 0.74rem; padding: 7px 10px; }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
             .pdf-selector-toolbar { justify-content: center; }
@@ -900,10 +944,10 @@
                 <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
                     <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-3">
                         <span class="badge hero-badge px-3 py-2 rounded-pill">
-                            👨‍👧‍👦 資工系教授爸爸為兩個孩子親手打造
+                            👨‍👧‍👦 資工系教授爸爸為兩個孩子用心打造
                         </span>
                         <span class="badge new-v16-pill px-3 py-2 rounded-pill">
-                            ✨ v1.6 全新功能：時間的計算・時間尺
+                            ✨ v1.6 全新登場：時間的計算・時間尺
                         </span>
                         <span class="badge release-pill px-3 py-2 rounded-pill">
                              iOS & ▶ Android 正式上架
@@ -911,12 +955,12 @@
                     </div>
                     
                     <h1 class="hero-headline mb-3">
-                        曾經害怕看時鐘與寫練習題，<br>
+                        曾經害怕看時鐘與寫算術題，<br>
                         <span class="highlight">現在孩子每天主動愛上解題！</span>
                     </h1>
                     
                     <p class="lead text-secondary mb-4" style="line-height: 1.8; font-size: 1.05rem;">
-                        告別選擇題盲目亂猜與凌亂計算紙！親手撥動 12／24 小時制連動時鐘、對照直線<strong>「時間尺」</strong>一眼搞懂時間加減；在螢幕上直接手寫四則直式運算（+、−、×、÷），還能在家無限列印客製化 PDF 學習單與孵育可愛夥伴！
+                        告別選擇題盲目亂猜與凌亂計算紙！親手撥動 12／24 小時制連動時鐘、對照直線<strong>「時間尺」</strong>一眼看懂經過時間與時鐘加減；在螢幕上直接手寫四則直式運算（+、−、×、÷），還能在家無限列印客製化 PDF 學習單與孵育可愛夥伴！
                     </p>
 
                     <!-- Store Download Buttons -->
@@ -939,38 +983,36 @@
                     </div>
 
                     <div class="text-muted small mt-2">
-                        🛡️ 100% 無廣告 • 嚴格裝置端隱私保護 • 免費體驗時鐘課程＋7 天免費試用
+                        🛡️ 100% 純淨無廣告 • 嚴格裝置端隱私保護 • 免費體驗時鐘課程＋7 天免費試用
                     </div>
                 </div>
 
-                <!-- Right: Shorts Toy Showroom -->
+                <!-- Right: Dynamic Sequential Shorts Toy Showroom -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
                     <div class="shorts-toy-wrapper">
-                        <!-- Tab Buttons -->
-                        <div class="shorts-pill-tabs">
-                            <button class="shorts-tab-btn active" onclick="switchShortsTab(1, this)">
-                                ✍️ 免計算紙・手寫直式運算
+                        <!-- Dynamic Tab Bar + Prev/Next Arrows -->
+                        <div class="shorts-tabs-header">
+                            <button type="button" id="shorts-prev-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(-1)" aria-label="上一段影片">
+                                ‹
                             </button>
-                            <button class="shorts-tab-btn" onclick="switchShortsTab(2, this)">
-                                ⏰ 時鐘與時間計算 <span class="badge bg-secondary text-white rounded-pill ms-1" style="font-size: 0.65rem;">介紹 🎬</span>
+                            <div id="shorts-tabs-container" class="shorts-pill-tabs" role="tablist"></div>
+                            <button type="button" id="shorts-next-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(1)" aria-label="下一段影片">
+                                ›
                             </button>
                         </div>
 
                         <!-- 9:16 Screen Frame -->
                         <div class="shorts-screen-frame">
-                            <!-- Tab 1: Embedded Shorts Video -->
-                            <div id="shorts-box-1" class="w-100 h-100">
-                                <iframe id="shorts-iframe-1" 
-                                        class="w-100 h-100 border-0" 
-                                        src="https://www.youtube.com/embed/yHDBDWX4_KU?autoplay=1&mute=1&loop=1&playlist=yHDBDWX4_KU&playsinline=1&rel=0" 
-                                        title="MathCoco 國小數學：免計算紙的手寫直式運算" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
-                            </div>
+                            <iframe id="shorts-main-iframe"
+                                    class="w-100 h-100 border-0"
+                                    src=""
+                                    title="MathCoco YouTube Shorts"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                            </iframe>
 
-                            <!-- Tab 2: Clock & Elapsed Time Feature Notice -->
-                            <div id="shorts-box-2" class="shorts-fallback-poster d-none">
+                            <!-- Optional Fallback (Displayed only if a list item's URL is left empty) -->
+                            <div id="shorts-fallback-box" class="shorts-fallback-poster d-none">
                                 <div class="fs-1 mb-2">⏰</div>
                                 <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">MATHCOCO v1.6 全新登場</span>
                                 <h5 class="fw-bold mb-2 text-white">從認識時鐘到「時間的計算」</h5>
@@ -995,15 +1037,15 @@
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
                 <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">
-                    🖨️ 螢幕與紙本完美互補 • 無限列印客製化 PDF 學習單
+                    🖨️ 螢幕與紙本靈活互補 • 無限列印客製化 PDF 學習單
                 </span>
                 <h2 class="fw-bold display-6 mb-3" style="color: #1E1B4B; line-height: 1.35;">
-                    擔心孩子長時間盯著螢幕嗎？<br>
+                    擔心低齡孩子長時間盯著螢幕？<br>
                     <span style="color: var(--brand-purple);">在家無限列印專屬學習單與紅筆詳解卷！</span>
                 </h2>
                 <p class="text-muted mx-auto mb-4" style="max-width: 740px; line-height: 1.75; font-size: 1.02rem;">
-                    先透過螢幕互動理解數學原理，再讓孩子拿起鉛筆在紙上靜心打好基礎。<br class="d-none d-md-inline">
-                    不只提供最終答案，更同步產生完整紅筆直式步驟解答卷，讓爸媽批改與指導超省心！
+                    先透過螢幕互動搞懂數學原理，再讓孩子拿起鉛筆在紙上靜心打好基礎。<br class="d-none d-md-inline">
+                    不只提供最終答案，更同步產生帶有完整紅筆直式步驟的解答卷，讓家長批改指導省心又高效！
                 </p>
 
                 <!-- 4 Key Customization Highlights -->
@@ -1039,7 +1081,7 @@
                         <div class="pdf-spec-pill">
                             <div class="pdf-spec-icon">🖍️</div>
                             <div>
-                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">紅筆步驟詳解卷</div>
+                                <div class="fw-bold text-dark" style="font-size: 0.92rem;">紅筆分步詳解卷</div>
                                 <div class="text-muted" style="font-size: 0.78rem;">完整呈現每一步直式計算過程</div>
                             </div>
                         </div>
@@ -1114,7 +1156,7 @@
                             <div class="pdf-sheet-box">
                                 <div class="d-flex justify-content-between align-items-center mb-2 px-1">
                                     <span class="badge bg-danger rounded-pill px-3 py-1">🖍️ 第 2 頁：紅筆詳解答案卷</span>
-                                    <span class="text-danger small fw-bold">附完整直式計算步驟</span>
+                                    <span class="text-danger small fw-bold">附完整直式分步解析</span>
                                 </div>
                                 <div class="pdf-canvas-wrap" onclick="openCurrentPdfInNewTab()" title="點擊在新分頁開啟完整 PDF">
                                     <canvas id="pdfCanvasPage2"></canvas>
@@ -1130,7 +1172,7 @@
                 <!-- 4. Bottom Print & Download Action Bar -->
                 <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mt-3 px-2">
                     <span class="text-muted small">
-                        💡 點擊上方學習單畫面或右側按鈕，免註冊即可立即開啟列印！
+                        💡 點擊上方任意學習單頁面或右側按鈕，免註冊即可立即開啟列印！
                     </span>
                     <div class="d-flex flex-wrap gap-2">
                         <a id="pdf-open-btn" href="pdf/add_1_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-clay btn-learn-minute btn-sm px-4 py-2">
@@ -1191,7 +1233,7 @@
                             <!-- Learn Minute Hand Button -->
                             <div class="mt-3">
                                 <button type="button" class="btn btn-clay btn-learn-minute" onclick="showClockOverlay()">
-                                    💡 查看完整時鐘與時間計算課程
+                                    💡 查看完整認識時鐘與時間計算課程
                                 </button>
                             </div>
 
@@ -1207,20 +1249,20 @@
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>📏 一眼看懂「時間的計算與時間尺」（v1.6 全新功能）：</strong><br>
+                                            <strong>📏 一眼看懂「時間的計算與時間尺」（v1.6 新功能）：</strong><br>
                                             <span class="text-muted">將 12／24 小時制時鐘與直線展開的「時間尺」並排對照，直覺算出經過時間與前後時刻。</span>
                                         </div>
                                         <div class="mb-2 text-dark">
                                             <strong>🌀 齒輪連動與攻克「差幾分幾點」：</strong><br>
-                                            <span class="text-muted">親手體驗秒針、分針、時針咬合連動，連最容易搞混的「幾點幾分前」也能循序漸進掌握。</span>
+                                            <span class="text-muted">親手體驗秒針、分針、時針咬合連動，連最容易搞混的「差幾分到幾點」也能循序漸進掌握。</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🔊 貼心「！」語音提示模式：</strong><br>
-                                            <span class="text-muted">遇到卡關時點擊「！」按鈕，溫柔語音會依孩子的節奏朗讀解題提示，自己學也安心。</span>
+                                            <strong>🔊 貼心「！」聽講模式語音輔導：</strong><br>
+                                            <span class="text-muted">遇到難題點擊「！」按鈕，溫柔語音會依孩子的節奏朗讀分步解題提示，獨立學習也安心。</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🐣 孵化並進化可愛動物夥伴：</strong><br>
-                                            <span class="text-muted">每天完成測驗收集水果、細心呵護神祕彩蛋，養成每天主動打開學習的好習慣！</span>
+                                            <strong>🐣 破殼孵化與進化的可愛夥伴：</strong><br>
+                                            <span class="text-muted">每天答題收集水果、細心照料神祕彩蛋，陪伴可愛動物夥伴一起成長，養成每日自學好習慣！</span>
                                         </div>
                                     </div>
 
@@ -1311,25 +1353,25 @@
                                         🎉 正確答案：<span id="overlay-ans-text">63</span>
                                     </span>
                                     <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem; line-height: 1.38;">
-                                        下載 MathCoco，體驗真正免計算紙的<br>AI 手寫直式數學與語音引導！
+                                        下載 MathCoco，體驗真正免計算紙的<br>AI 手寫直式數學與「聽講模式」輔導！
                                     </h4>
                                     
                                     <div class="p-3 bg-light rounded-4 text-start mb-3" style="width: 100%; font-size: 0.88rem; line-height: 1.6;">
                                         <div class="mb-2 text-dark">
-                                            <strong>⚡ 告別亂猜選擇題・精準手寫辨識：</strong><br>
-                                            <span class="text-muted">用手指或觸控筆直接在方格演算板上寫下直式計算過程，培養真正的解題思考力。</span>
+                                            <strong>⚡ 告別盲猜選擇題・精準手寫辨識：</strong><br>
+                                            <span class="text-muted">用手指或觸控筆直接在方格演算板上寫下直式計算步驟，培養真正的解題思維。</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🔊 視覺引導與「！」語音提示模式：</strong><br>
-                                            <span class="text-muted">清楚標示進位、退位與部分積步驟，並依孩子節奏朗讀分步解題提示。</span>
+                                            <strong>🔊 視覺引導與「！」聽講模式：</strong><br>
+                                            <span class="text-muted">清楚標示進位、借位與部分積步驟，並依孩子的節奏溫柔朗讀分步解題提示。</span>
                                         </div>
                                         <div class="mb-2 text-dark">
-                                            <strong>🧮 完整四則運算 & 無限列印學習單：</strong><br>
+                                            <strong>🧮 全面涵蓋四則運算 & 無限列印學習單：</strong><br>
                                             <span class="text-muted">涵蓋加、減、乘、二位數除法直式運算，還能無限列印 PDF 學習單與紅筆詳解卷！</span>
                                         </div>
                                         <div class="text-dark">
-                                            <strong>🃏 視覺化九九乘法閃卡 & 2048 數學拼圖：</strong><br>
-                                            <span class="text-muted">透過面積模型閃卡與 2 的次方拼圖培養直覺數感，並支援 5 國語言自由切換。</span>
+                                            <strong>🃏 視覺化九九乘法閃卡 & 2048 數字拼圖：</strong><br>
+                                            <span class="text-muted">透過面積模型閃卡與 2 的次方拼圖培養直覺數感，並支援 5 種語言自由切換。</span>
                                         </div>
                                     </div>
 
@@ -1358,9 +1400,9 @@
     <section class="py-5">
         <div class="container py-4">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">孩子的第一間數學學習室</span>
-                <h2 class="fw-bold display-6 mb-2" style="color: #1E1B4B;">MathCoco 的 6 大專屬學習樂園</h2>
-                <p class="text-muted mb-0">從看懂原理到養成每日自學好習慣，送給孩子不用催促也會主動打開的學習天地。</p>
+                <span class="badge hero-badge px-3 py-2 rounded-pill mb-2">孩子快樂的第一間數學學習室</span>
+                <h2 class="fw-bold display-6 mb-2" style="color: #1E1B4B;">MathCoco 的 6 大特色學習樂園</h2>
+                <p class="text-muted mb-0">從直覺理解原理到養成每日自學好習慣，送給孩子不用催促也會主動打開的學習天地。</p>
             </div>
 
             <div class="row g-4">
@@ -1368,16 +1410,16 @@
                     <div class="feature-box">
                         <span class="playground-tag">樂園 01 • v1.6 全新升級</span>
                         <div class="fs-1 mb-2">⏰</div>
-                        <h4 class="fw-bold mb-2">從看懂時鐘到時間的計算</h4>
-                        <p class="text-muted small mb-0">親手撥動連動指針體驗 24 小時日夜變化，輕鬆攻克「差幾分幾點」，並對照「時間尺」直覺學會經過時間與時鐘加減。</p>
+                        <h4 class="fw-bold mb-2">從認識時鐘到時間的計算</h4>
+                        <p class="text-muted small mb-0">親手撥動連動指針體驗 24 小時日夜變化，輕鬆攻克「差幾分幾點」，並對照「時間尺」直覺掌握經過時間與時鐘加減。</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-box">
-                        <span class="playground-tag">樂園 02 • 四則直式運算</span>
+                        <span class="playground-tag">樂園 02 • 四則直式計算</span>
                         <div class="fs-1 mb-2">✍️</div>
-                        <h4 class="fw-bold mb-2">智慧手寫演算板 & 語音提示</h4>
-                        <p class="text-muted small mb-0">在螢幕方格上直接手寫加、減、乘（含九九乘法閃卡）、二位數除法直式，搭配視覺進退位引導與「！」語音提示。</p>
+                        <h4 class="fw-bold mb-2">智慧手寫演算板 & 聽講模式</h4>
+                        <p class="text-muted small mb-0">在螢幕方格上直接手寫加、減、乘（含九九乘法閃卡）、二位數除法直式，配合進退位引導與「！」聽講模式語音輔導。</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
@@ -1385,31 +1427,31 @@
                         <span class="playground-tag">樂園 03 • 居家列印</span>
                         <div class="fs-1 mb-2">🖨️</div>
                         <h4 class="fw-bold mb-2">無限列印 PDF & 紅筆詳解卷</h4>
-                        <p class="text-muted small mb-0">自由設定紙張尺寸（A4-A0）、題數與估商輔助格，並同步產生完整紅筆直式解答卷，讓家長批改超省心。</p>
+                        <p class="text-muted small mb-0">自由設定紙張尺寸（A4-A0）、題數與除法「估商」輔助格，並同步產生完整紅筆直式詳解卷，檢查輔導一目了然。</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-box">
-                        <span class="playground-tag">樂園 04 • 養成每日習慣</span>
+                        <span class="playground-tag">樂園 04 • 每日自學好習慣</span>
                         <div class="fs-1 mb-2">🐣</div>
                         <h4 class="fw-bold mb-2">破殼孵化與進化的可愛夥伴</h4>
-                        <p class="text-muted small mb-0">用測驗收集的水果幫神祕彩蛋保溫、轉動發條、餵食與洗澡，在陪伴夥伴成長中養成主動學習習慣。</p>
+                        <p class="text-muted small mb-0">用答題收集的水果幫神祕彩蛋保溫、轉動發條、餵食與洗澡，在陪伴夥伴成長中養成每天主動打開學習的好習慣。</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
                     <div class="feature-box">
-                        <span class="playground-tag">樂園 05 • 家庭溫暖鼓勵</span>
+                        <span class="playground-tag">樂園 05 • 真實家庭鼓勵</span>
                         <div class="fs-1 mb-2">🎙️</div>
-                        <h4 class="fw-bold mb-2">爸媽照片與語音加油站</h4>
-                        <p class="text-muted small mb-0">每當答對題目或需要打氣時，畫面就會彈出爸媽的笑容照片與親自錄製的加油語音，100% 安全保存在本機端。</p>
+                        <h4 class="fw-bold mb-2">爸媽照片與原聲加油站</h4>
+                        <p class="text-muted small mb-0">每當答對題目或需要打氣時，畫面就會彈出爸媽的笑臉照片與親自錄製的讚美語音，100% 安全保存在裝置本機。</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-box">
-                        <span class="playground-tag">樂園 06 • 數感與多語</span>
+                        <span class="playground-tag">樂園 06 • 數感與多語言</span>
                         <div class="fs-1 mb-2">🧩</div>
-                        <h4 class="fw-bold mb-2">1 分鐘快問快答、2048 與 5 語言</h4>
-                        <p class="text-muted small mb-0">透過 1 分鐘挑戰鍛鍊心算反應力，用 2048 拼圖感受 2 的次方倍增概念，並支援繁中、英、韓、日、簡中切換。</p>
+                        <h4 class="fw-bold mb-2">1 分鐘快算、2048 與 5 語言</h4>
+                        <p class="text-muted small mb-0">透過 1 分鐘專注衝刺鍛鍊心算反應速度，用 2048 拼圖感知 2 的次方倍增規律，並支援繁中、英、韓、日、簡中切換。</p>
                     </div>
                 </div>
             </div>
@@ -1424,22 +1466,22 @@
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🚫</div>
-                        <h5 class="fw-bold mb-2">100% 無廣告干擾</h5>
-                        <p class="text-muted small mb-0">完全沒有橫幅廣告、彈出式影片或任何外部連結干擾，守護孩子的學習專注力。</p>
+                        <h5 class="fw-bold mb-2">100% 純淨無廣告</h5>
+                        <p class="text-muted small mb-0">絕無橫幅廣告、彈出式影片或任何外部干擾連結，全力守護孩子的學習專注力。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🔒</div>
                         <h5 class="fw-bold mb-2">嚴格的裝置端隱私保護</h5>
-                        <p class="text-muted small mb-0">免註冊帳號。家長錄製的加油語音與照片僅安全保存在您的裝置內，絕不上傳至外部伺服器。</p>
+                        <p class="text-muted small mb-0">免註冊帳號。家長錄製的加油語音與照片僅安全保存在您的裝置本機，絕不上傳至任何外部伺服器。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 rounded-4 bg-light h-100">
                         <div class="fs-1 mb-2">🛡️</div>
                         <h5 class="fw-bold mb-2">兒童安全家長鎖（Parental Gate）</h5>
-                        <p class="text-muted small mb-0">內建乘法驗證成人鎖定機制，防止孩子誤觸購買、更改設定或跳轉至外部連結。</p>
+                        <p class="text-muted small mb-0">內建乘法成人驗證機制，防止孩子誤觸應用程式內購買、更改設定或意外跳出 App。</p>
                     </div>
                 </div>
             </div>
@@ -1453,7 +1495,7 @@
                 <div class="fs-1 mb-2">💬</div>
                 <h3 class="fw-bold mb-2 text-dark">1:1 客服與問題回報</h3>
                 <p class="text-muted mb-4 small">
-                    對 MathCoco 的使用、訂閱或新功能有任何疑問與建議嗎？歡迎直接來信，開發者將親自為您解答。
+                    對 MathCoco 的使用、訂閱或新功能建議有任何疑問嗎？歡迎直接來信聯絡，開發者將及時為您解答。
                 </p>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="btn btn-clay btn-support-email btn-lg px-4">
                     <i class="bi bi-envelope-fill me-2 fs-5"></i> 寫信給開發者客服 →
@@ -1761,21 +1803,112 @@
             }
         }
 
-        /* 1. Shorts Video Tab Switcher */
-        function switchShortsTab(index, btn) {
-            document.querySelectorAll('.shorts-tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const box1 = document.getElementById('shorts-box-1');
-            const box2 = document.getElementById('shorts-box-2');
-
-            if (index === 1) {
-                box2.classList.add('d-none');
-                box1.classList.remove('d-none');
-            } else {
-                box1.classList.add('d-none');
-                box2.classList.remove('d-none');
+        /* =========================================================================
+           1. Dynamic Sequential YouTube Shorts List & Tab Switcher
+           ========================================================================= */
+        const SHORTS_LIST = [
+            {
+                label: '✖️ 九九乘法閃卡',
+                url: 'https://youtube.com/shorts/KsA-ytVW1TA?feature=share'
+            },
+            {
+                label: '🌙 時鐘與3D星空',
+                url: 'https://youtube.com/shorts/fU5f1l5DAaw?feature=share'
+            },
+            {
+                label: '✍️ 每日加法練習',
+                url: 'https://youtube.com/shorts/GzCOXFkDuQQ?feature=share'
             }
+            // 後續新增短片時，只需依序在下方繼續添加即可（支援 { label, url } 或純網址字串）：
+            // { label: '🖨️ 列印PDF學習單', url: 'https://youtube.com/shorts/在此填寫影片ID' },
+        ];
+
+        let currentShortsIdx = 0;
+
+        function extractYouTubeId(input) {
+            if (!input) return '';
+            const trimmed = input.trim();
+            if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
+            const match = trimmed.match(/(?:shorts\/|youtu\.be\/|v=|embed\/)([a-zA-Z0-9_-]{11})/);
+            return match ? match[1] : '';
+        }
+
+        function normalizeShortsEntry(entry, idx) {
+            if (typeof entry === 'string') {
+                return { label: `#${idx + 1}`, url: entry };
+            }
+            return {
+                label: entry.label || `#${idx + 1}`,
+                url: entry.url || ''
+            };
+        }
+
+        function initShortsShowroom() {
+            const container = document.getElementById('shorts-tabs-container');
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (!container || SHORTS_LIST.length === 0) return;
+
+            container.innerHTML = SHORTS_LIST.map((rawEntry, idx) => {
+                const item = normalizeShortsEntry(rawEntry, idx);
+                return `
+                    <button type="button"
+                            class="shorts-tab-btn ${idx === 0 ? 'active' : ''}"
+                            role="tab"
+                            aria-selected="${idx === 0 ? 'true' : 'false'}"
+                            onclick="selectShortsItem(${idx})">
+                        ${item.label}
+                    </button>
+                `;
+            }).join('');
+
+            if (SHORTS_LIST.length >= 2) {
+                prevBtn.classList.remove('d-none');
+                nextBtn.classList.remove('d-none');
+            }
+
+            selectShortsItem(0, false);
+        }
+
+        function selectShortsItem(index, shouldScrollTab = true) {
+            if (index < 0 || index >= SHORTS_LIST.length) return;
+            currentShortsIdx = index;
+
+            const container = document.getElementById('shorts-tabs-container');
+            const buttons = container.querySelectorAll('.shorts-tab-btn');
+            buttons.forEach((btn, i) => {
+                const isActive = (i === index);
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                if (isActive && shouldScrollTab) {
+                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            });
+
+            const prevBtn = document.getElementById('shorts-prev-btn');
+            const nextBtn = document.getElementById('shorts-next-btn');
+            if (prevBtn) prevBtn.disabled = (index === 0);
+            if (nextBtn) nextBtn.disabled = (index === SHORTS_LIST.length - 1);
+
+            const item = normalizeShortsEntry(SHORTS_LIST[index], index);
+            const videoId = extractYouTubeId(item.url);
+            const iframe = document.getElementById('shorts-main-iframe');
+            const fallbackBox = document.getElementById('shorts-fallback-box');
+
+            if (videoId) {
+                fallbackBox.classList.add('d-none');
+                iframe.classList.remove('d-none');
+                iframe.title = `MathCoco Shorts - ${item.label}`;
+                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0`;
+            } else {
+                iframe.src = '';
+                iframe.classList.add('d-none');
+                fallbackBox.classList.remove('d-none');
+            }
+        }
+
+        function stepShortsTab(delta) {
+            selectShortsItem(currentShortsIdx + delta, true);
         }
 
         /* 2. Simulator Tab Switcher (Clock vs Column Math) */
@@ -2312,6 +2445,7 @@
         });
 
         // Initialize On Load
+        initShortsShowroom();
         resizeSkyCanvas();
         setupClockHiDPI();
         renderClock();
