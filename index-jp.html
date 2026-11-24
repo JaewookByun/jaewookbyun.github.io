@@ -267,114 +267,215 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Shorts Toy Showroom (Sequential Auto-Advance Tab List) */
-        .shorts-toy-wrapper {
-            background: #FFFFFF;
-            border-radius: 36px;
-            padding: 14px;
-            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15), 0 6px 0 #E2E8F0;
-            border: 3px solid #F1F5F9;
-            max-width: 390px;
-            margin: 0 auto;
-        }
-        .shorts-tabs-header {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: #F1F5F9;
-            padding: 5px;
-            border-radius: 24px;
-            margin-bottom: 12px;
-        }
-        .shorts-pill-tabs {
-            display: flex;
-            flex: 1;
-            gap: 6px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-        .shorts-pill-tabs::-webkit-scrollbar {
-            display: none;
-        }
-        .shorts-tab-btn {
-            flex: 1 0 auto;
-            padding: 8px 12px;
-            border: none;
-            background: transparent;
-            font-weight: 800;
-            font-size: 0.80rem;
-            color: #64748B;
-            border-radius: 18px;
-            transition: all 0.2s ease;
-            line-height: 1.3;
-            white-space: nowrap;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            cursor: pointer;
-        }
-        .shorts-tab-btn:hover {
-            color: var(--brand-purple);
-        }
-        .shorts-tab-btn.active {
-            background: #FFFFFF;
-            color: var(--brand-purple);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06), 0 2px 0 #E2E8F0;
-        }
-        .shorts-arrow-btn {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: none;
-            background: #FFFFFF;
-            color: #475569;
-            font-weight: 900;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            transition: all 0.15s ease;
-        }
-        .shorts-arrow-btn:hover:not(:disabled) {
-            background: var(--brand-purple);
-            color: #FFFFFF;
-        }
-        .shorts-arrow-btn:disabled {
-            opacity: 0.35;
-            cursor: default;
-        }
-        .shorts-screen-frame {
+        /* Shorts 3D Peek Carousel Showroom (Click-to-Play for Valid YouTube Views) */
+        .shorts-carousel-section {
             width: 100%;
-            aspect-ratio: 9 / 16;
-            background: #0F172A;
-            border-radius: 26px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+            max-width: 540px;
+            margin: 0 auto;
+            user-select: none;
         }
-        .shorts-screen-frame iframe {
+        .shorts-carousel-stage {
+            position: relative;
+            width: 100%;
+            height: 495px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+        }
+        .shorts-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 262px;
+            aspect-ratio: 9 / 16;
+            border-radius: 30px;
+            background: #FFFFFF;
+            padding: 8px;
+            box-shadow: 0 22px 48px rgba(30, 27, 75, 0.18), 0 6px 0 #E2E8F0;
+            border: 2.5px solid #F1F5F9;
+            transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 0.35s ease,
+                        filter 0.35s ease,
+                        box-shadow 0.35s ease;
+            transform-origin: center center;
+        }
+        .shorts-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #0F172A;
+        }
+        .shorts-card-inner iframe {
             width: 100%;
             height: 100%;
             border: 0;
             display: block;
         }
-        .shorts-fallback-poster {
+        .shorts-card.is-active {
+            z-index: 10;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            box-shadow: 0 24px 54px rgba(108, 92, 231, 0.24), 0 6px 0 #DDD6FE;
+            border-color: #EDE9FE;
+        }
+        .shorts-card.is-prev {
+            z-index: 5;
+            opacity: 0.78;
+            transform: translate(calc(-50% - 148px), -50%) scale(0.82) rotate(-3deg);
+            filter: saturate(0.85);
+            cursor: pointer;
+        }
+        .shorts-card.is-next {
+            z-index: 5;
+            opacity: 0.78;
+            transform: translate(calc(-50% + 148px), -50%) scale(0.82) rotate(3deg);
+            filter: saturate(0.85);
+            cursor: pointer;
+        }
+        .shorts-card.is-prev:hover {
+            opacity: 0.95;
+            transform: translate(calc(-50% - 154px), -50%) scale(0.85) rotate(-2deg);
+        }
+        .shorts-card.is-next:hover {
+            opacity: 0.95;
+            transform: translate(calc(-50% + 154px), -50%) scale(0.85) rotate(2deg);
+        }
+        .shorts-card.is-hidden {
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+        .shorts-side-poster {
             width: 100%;
             height: 100%;
+            position: relative;
+            background: #1E1B4B;
+        }
+        .shorts-side-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .shorts-side-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15,23,42,0.12) 0%, rgba(15,23,42,0.58) 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 24px;
+            justify-content: flex-end;
+            padding: 18px 14px;
             text-align: center;
-            background: linear-gradient(180deg, #1E1B4B 0%, #312E81 100%);
+        }
+        .shorts-side-badge {
+            background: rgba(255, 255, 255, 0.94);
+            color: #1E1B4B;
+            font-size: 0.76rem;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+        }
+        .shorts-carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .shorts-arrow-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid #EDE9FE;
+            background: #FFFFFF;
+            color: var(--brand-purple);
+            font-weight: 900;
+            font-size: 1.25rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.12), 0 3px 0 #DDD6FE;
+            transition: all 0.15s ease;
+        }
+        .shorts-arrow-btn:hover {
+            background: var(--brand-purple);
             color: #FFFFFF;
+            border-color: var(--brand-purple);
+            transform: translateY(-1px);
+        }
+        .shorts-arrow-btn:active {
+            transform: translateY(2px);
+        }
+        .shorts-dots {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFFFFF;
+            padding: 7px 14px;
+            border-radius: 50px;
+            border: 1.5px solid #EDE9FE;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.08);
+        }
+        .shorts-dot-btn {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: none;
+            background: #CBD5E1;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .shorts-dot-btn.active {
+            width: 26px;
+            border-radius: 10px;
+            background: var(--brand-purple);
+        }
+        .shorts-caption-bar {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .shorts-active-pill {
+            background: #FFFFFF;
+            color: #1E1B4B;
+            border: 1.5px solid #EDE9FE;
+            font-size: 0.84rem;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 50px;
+            box-shadow: 0 3px 0 #EDE9FE;
+        }
+        .shorts-yt-link {
+            font-size: 0.80rem;
+            font-weight: 800;
+            color: #DC2626;
+            background: #FEF2F2;
+            border: 1.5px solid #FECACA;
+            padding: 6px 12px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.15s ease;
+        }
+        .shorts-yt-link:hover {
+            background: #DC2626;
+            color: #FFFFFF;
+            border-color: #DC2626;
         }
 
         /* Printable PDF Worksheet Bank Section */
@@ -877,8 +978,15 @@
 
         @media (max-width: 991.98px) {
             .hero-section { padding-top: 110px; padding-bottom: 40px; }
-            .shorts-toy-wrapper { max-width: 340px; }
-            .shorts-tab-btn { font-size: 0.74rem; padding: 7px 10px; }
+            .shorts-carousel-stage { height: 420px; }
+            .shorts-card { width: 218px; border-radius: 26px; padding: 6px; }
+            .shorts-card-inner { border-radius: 20px; }
+            .shorts-card.is-prev {
+                transform: translate(calc(-50% - 76px), -50%) scale(0.80) rotate(-3deg);
+            }
+            .shorts-card.is-next {
+                transform: translate(calc(-50% + 76px), -50%) scale(0.80) rotate(3deg);
+            }
             .pdf-library-card { padding: 14px; border-radius: 24px; }
             .pdf-paper-stage { padding: 12px; }
             .pdf-selector-toolbar { justify-content: center; }
@@ -892,6 +1000,17 @@
             .answer-slot-box { width: 58px; height: 66px; }
             .vertical-math-line { min-width: 180px; }
             .canvas-guide-overlay { font-size: 0.7rem; padding: 3px 10px; }
+        }
+
+        @media (max-width: 400px) {
+            .shorts-carousel-stage { height: 390px; }
+            .shorts-card { width: 200px; }
+            .shorts-card.is-prev {
+                transform: translate(calc(-50% - 60px), -50%) scale(0.78) rotate(-2deg);
+            }
+            .shorts-card.is-next {
+                transform: translate(calc(-50% + 60px), -50%) scale(0.78) rotate(2deg);
+            }
         }
     </style>
 </head>
@@ -941,7 +1060,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section & Shorts Toy Showroom -->
+    <!-- Hero Section & Click-to-Play 3D Shorts Carousel -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center g-4 g-lg-5">
@@ -993,39 +1112,32 @@
                     </div>
                 </div>
 
-                <!-- Right: Auto-Advance Sequential Shorts Toy Showroom -->
+                <!-- Right: Click-to-Play 3D Shorts Carousel Showroom -->
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="shorts-toy-wrapper">
-                        <!-- Dynamic Tab Bar + Prev/Next Arrows -->
-                        <div class="shorts-tabs-header">
-                            <button type="button" id="shorts-prev-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(-1)" aria-label="前のショート動画">
+                    <div class="shorts-carousel-section">
+                        <!-- 3D Peek Carousel Stage -->
+                        <div id="shorts-carousel-stage" class="shorts-carousel-stage" aria-label="MathCoco 紹介動画"></div>
+
+                        <!-- Prev / Dots / Next Controls -->
+                        <div class="shorts-carousel-controls">
+                            <button type="button" class="shorts-arrow-btn" onclick="stepShortsCarousel(-1)" aria-label="前の動画">
                                 ‹
                             </button>
-                            <div id="shorts-tabs-container" class="shorts-pill-tabs" role="tablist"></div>
-                            <button type="button" id="shorts-next-btn" class="shorts-arrow-btn d-none" onclick="stepShortsTab(1)" aria-label="次のショート動画">
+                            <div id="shorts-carousel-dots" class="shorts-dots" role="tablist" aria-label="動画を選択"></div>
+                            <button type="button" class="shorts-arrow-btn" onclick="stepShortsCarousel(1)" aria-label="次の動画">
                                 ›
                             </button>
                         </div>
 
-                        <!-- 9:16 Screen Frame -->
-                        <div class="shorts-screen-frame">
-                            <div id="shorts-player-wrap" class="w-100 h-100">
-                                <div id="shorts-player-target"></div>
-                            </div>
-
-                            <!-- Optional Fallback (Displayed only if a list item's URL is left empty) -->
-                            <div id="shorts-fallback-box" class="shorts-fallback-poster d-none">
-                                <div class="fs-1 mb-2">⏰</div>
-                                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2">v1.6 新機能公開中</span>
-                                <h5 class="fw-bold mb-2 text-white">時計の読み方から「時間の計算」まで</h5>
-                                <p class="small text-white-50 mb-3 px-3" style="line-height: 1.65;">
-                                    <strong>MathCocoアプリ内ですべて今すぐご利用いただけます！</strong><br>
-                                    12時間時計・24時間時計と直線の<strong>「時間ものさし」</strong>を並べて見比べながら、かかった時間や前後の時刻がひと目でわかります。
-                                </p>
-                                <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-bold" onclick="document.querySelector('.simulator-section').scrollIntoView({behavior: 'smooth'})">
-                                    👇 下の時計シミュレーターを試す
-                                </button>
-                            </div>
+                        <!-- Active Video Label & Direct YouTube Link -->
+                        <div class="shorts-caption-bar">
+                            <span id="shorts-active-label" class="shorts-active-pill"></span>
+                            <a id="shorts-yt-external" href="#" target="_blank" rel="noopener noreferrer" class="shorts-yt-link">
+                                <i class="bi bi-youtube"></i> YouTubeで見る
+                            </a>
+                        </div>
+                        <div class="text-center text-muted mt-2" style="font-size: 0.78rem; font-weight: 600;">
+                            ▶ 動画タップで音声付き再生 • 左右のカードで切り替え
                         </div>
                     </div>
                 </div>
@@ -1511,7 +1623,7 @@
         <div class="container text-center">
             <h5 class="fw-bold mb-3">ChronoLab</h5>
             <div class="d-flex justify-content-center gap-3 mb-4">
-                <a href="https://www.youtube.com/@bjw0829" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4" aria-label="ChronoLab YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UC-zGvD1omPF6EgnLncM4gJA" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4" aria-label="MathCoco（マスココ）公式YouTube"><i class="bi bi-youtube"></i></a>
                 <a href="mailto:chrono.lab.sole@gmail.com" class="text-secondary fs-4" aria-label="メールでお問い合わせ"><i class="bi bi-envelope"></i></a>
             </div>
             <p class="text-muted small mb-0">
@@ -1526,12 +1638,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- PDF Worksheet Bank & Simulator & Auto-Advance Shorts Engine -->
+    <!-- PDF Worksheet Bank & Simulator & Click-to-Play 3D Shorts Carousel Engine -->
     <script>
         AOS.init({ duration: 800, once: true });
 
         /* =========================================================================
-           0. Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
+0. Printable PDF Worksheet Bank Engine (Connected to 'pdf/' & 'pdf/list.txt')
            ========================================================================= */
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
@@ -1806,30 +1918,42 @@
         }
 
         /* =========================================================================
-           1. Dynamic Sequential YouTube Shorts List & Auto-Advance Player
+1. Click-to-Play 3D YouTube Shorts Carousel (Counts Real User Views)
            ========================================================================= */
         const SHORTS_LIST = [
             {
-                label: '✖️ 九九フラッシュカード',
-                url: 'https://youtube.com/shorts/CV0479yL3ig?feature=share'
+                label: '🍉 目でわかる九九 (7×8)',
+                title: '7×8、1秒で言える？丸暗記に頼らない「目でわかる九九」',
+                url: 'https://youtube.com/shorts/s28g8EQR8qI?feature=share'
             },
             {
                 label: '🌙 時計と3Dミニ天文台',
+                title: '月の形はなぜ変わる？算数アプリの中に「3Dミニ天文台」を作った理由',
                 url: 'https://youtube.com/shorts/5jijBrMwSZg?feature=share'
             },
             {
-                label: '✍️ 毎日のたし算',
-                url: 'https://youtube.com/shorts/pBtFoXRXewg?feature=share'
+                label: '✖️ 毎朝1分・8段階かけ算',
+                title: '毎朝7時・1分算数 かけ算8ステップ（MathCoco マスココ）',
+                url: 'https://youtube.com/shorts/H3sdVkdSgB0?feature=share',
+                // 2026年11月24日 20:00 (JST) 公開予定 — 公開時刻になるまで自動的に非表示になり、20:00以降に自動表示されます
+                publishAt: '2026-11-24T20:00:00+09:00'
             }
-            // 新しいショート動画を追加する際は、下に { label: 'タブ名', url: 'ショートURL' } を順に追加してください：
-            // { label: '🖨️ おうちプリント印刷', url: 'https://youtube.com/shorts/動画ID' },
         ];
 
+        let activeShortsList = [];
         let currentShortsIdx = 0;
-        let ytShortsPlayer = null;
-        let isYtApiReady = false;
-        let isCreatingYtPlayer = false;
-        let pendingShortsVideoId = '';
+        let shortsTouchStartX = 0;
+        let shortsCardEls = [];
+        let shortsDotEls = [];
+
+        function getVisibleShortsList() {
+            const nowMs = Date.now();
+            return SHORTS_LIST.filter(item => {
+                if (!item.publishAt) return true;
+                const publishMs = Date.parse(item.publishAt);
+                return isNaN(publishMs) || nowMs >= publishMs;
+            });
+        }
 
         function extractYouTubeId(input) {
             if (!input) return '';
@@ -1839,176 +1963,163 @@
             return match ? match[1] : '';
         }
 
-        function normalizeShortsEntry(entry, idx) {
-            if (typeof entry === 'string') {
-                return { label: `#${idx + 1}`, url: entry };
-            }
-            return {
-                label: entry.label || `#${idx + 1}`,
-                url: entry.url || ''
-            };
-        }
-
-        function loadYouTubeIframeAPI() {
-            if (window.YT && window.YT.Player) {
-                isYtApiReady = true;
-                if (pendingShortsVideoId) createYtShortsPlayer(pendingShortsVideoId);
-                return;
-            }
-            if (!document.getElementById('yt-iframe-api-script')) {
-                const tag = document.createElement('script');
-                tag.id = 'yt-iframe-api-script';
-                tag.src = 'https://www.youtube.com/iframe_api';
-                document.head.appendChild(tag);
-            }
-            setTimeout(() => {
-                if (!isYtApiReady && pendingShortsVideoId) {
-                    renderFallbackIframe(pendingShortsVideoId);
-                }
-            }, 3500);
-        }
-
-        window.onYouTubeIframeAPIReady = function () {
-            isYtApiReady = true;
-            if (pendingShortsVideoId) {
-                createYtShortsPlayer(pendingShortsVideoId);
-            }
-        };
-
-        function createYtShortsPlayer(videoId) {
-            if (isCreatingYtPlayer) return;
-            const target = document.getElementById('shorts-player-target');
-            if (!target) return;
-
-            isCreatingYtPlayer = true;
-            const initialId = videoId;
-
-            ytShortsPlayer = new YT.Player('shorts-player-target', {
-                host: 'https://www.youtube-nocookie.com',
-                width: '100%',
-                height: '100%',
-                videoId: initialId,
-                playerVars: {
-                    autoplay: 1,
-                    mute: 1,
-                    playsinline: 1,
-                    rel: 0
-                },
-                events: {
-                    onReady: (event) => {
-                        isCreatingYtPlayer = false;
-                        event.target.mute();
-                        if (pendingShortsVideoId && pendingShortsVideoId !== initialId) {
-                            event.target.loadVideoById(pendingShortsVideoId);
-                        } else {
-                            event.target.playVideo();
-                        }
-                    },
-                    onStateChange: (event) => {
-                        if (event.data === YT.PlayerState.ENDED) {
-                            if (SHORTS_LIST.length <= 1) {
-                                event.target.seekTo(0);
-                                event.target.playVideo();
-                            } else {
-                                const nextIdx = (currentShortsIdx + 1) % SHORTS_LIST.length;
-                                selectShortsItem(nextIdx, true);
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        function renderFallbackIframe(videoId) {
-            const wrap = document.getElementById('shorts-player-wrap');
-            if (!wrap) return;
-            wrap.innerHTML = `
-                <iframe class="w-100 h-100 border-0"
-                        src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0"
-                        title="MathCoco YouTube Shorts"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
+        function buildActiveIframeHtml(item, videoId) {
+            return `
+                <iframe
+                    src="https://www.youtube.com/embed/${videoId}?rel=0&playsinline=1"
+                    title="${item.title || item.label}"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
                 </iframe>
             `;
         }
 
-        function initShortsShowroom() {
-            const container = document.getElementById('shorts-tabs-container');
-            const prevBtn = document.getElementById('shorts-prev-btn');
-            const nextBtn = document.getElementById('shorts-next-btn');
-            if (!container || SHORTS_LIST.length === 0) return;
-
-            container.innerHTML = SHORTS_LIST.map((rawEntry, idx) => {
-                const item = normalizeShortsEntry(rawEntry, idx);
-                return `
-                    <button type="button"
-                            class="shorts-tab-btn ${idx === 0 ? 'active' : ''}"
-                            role="tab"
-                            aria-selected="${idx === 0 ? 'true' : 'false'}"
-                            onclick="selectShortsItem(${idx})">
-                        ${item.label}
-                    </button>
-                `;
-            }).join('');
-
-            if (SHORTS_LIST.length >= 2) {
-                prevBtn.classList.remove('d-none');
-                nextBtn.classList.remove('d-none');
-            }
-
-            loadYouTubeIframeAPI();
-            selectShortsItem(0, false);
+        function buildSidePosterHtml(item, videoId) {
+            return `
+                <div class="shorts-side-poster">
+                    <img src="https://i.ytimg.com/vi/${videoId}/oar2.jpg"
+                         alt="${item.label}"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://i.ytimg.com/vi/${videoId}/hqdefault.jpg';">
+                    <div class="shorts-side-overlay">
+                        <span class="shorts-side-badge">${item.label}</span>
+                    </div>
+                </div>
+            `;
         }
 
-        function selectShortsItem(index, shouldScrollTab = true) {
-            if (index < 0 || index >= SHORTS_LIST.length) return;
-            currentShortsIdx = index;
+        function updateShortsCarousel() {
+            const activeLabelEl = document.getElementById('shorts-active-label');
+            const ytExternalEl = document.getElementById('shorts-yt-external');
+            const total = activeShortsList.length;
+            if (total === 0) return;
 
-            const container = document.getElementById('shorts-tabs-container');
-            const buttons = container.querySelectorAll('.shorts-tab-btn');
-            buttons.forEach((btn, i) => {
-                const isActive = (i === index);
-                btn.classList.toggle('active', isActive);
-                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-                if (isActive && shouldScrollTab) {
-                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            const prevIdx = (currentShortsIdx - 1 + total) % total;
+            const nextIdx = (currentShortsIdx + 1) % total;
+
+            shortsCardEls.forEach((cardEl, idx) => {
+                const item = activeShortsList[idx];
+                const videoId = extractYouTubeId(item.url);
+                const innerEl = cardEl.querySelector('.shorts-card-inner');
+
+                cardEl.classList.remove('is-active', 'is-prev', 'is-next', 'is-hidden');
+
+                if (idx === currentShortsIdx) {
+                    cardEl.classList.add('is-active');
+                    cardEl.removeAttribute('role');
+                    cardEl.removeAttribute('tabindex');
+                    cardEl.removeAttribute('aria-label');
+
+                    if (cardEl.dataset.mode !== 'iframe') {
+                        innerEl.innerHTML = buildActiveIframeHtml(item, videoId);
+                        cardEl.dataset.mode = 'iframe';
+                    }
+                } else {
+                    if (total === 2) {
+                        cardEl.classList.add('is-next');
+                    } else if (idx === prevIdx) {
+                        cardEl.classList.add('is-prev');
+                    } else if (idx === nextIdx) {
+                        cardEl.classList.add('is-next');
+                    } else {
+                        cardEl.classList.add('is-hidden');
+                    }
+
+                    cardEl.setAttribute('role', 'button');
+                    cardEl.setAttribute('tabindex', '0');
+                    cardEl.setAttribute('aria-label', `${item.label}に切り替え`);
+
+                    if (cardEl.dataset.mode !== 'poster') {
+                        innerEl.innerHTML = buildSidePosterHtml(item, videoId);
+                        cardEl.dataset.mode = 'poster';
+                    }
                 }
             });
 
-            const prevBtn = document.getElementById('shorts-prev-btn');
-            const nextBtn = document.getElementById('shorts-next-btn');
-            if (prevBtn) prevBtn.disabled = (index === 0);
-            if (nextBtn) nextBtn.disabled = (index === SHORTS_LIST.length - 1);
+            shortsDotEls.forEach((dotEl, idx) => {
+                const isActive = (idx === currentShortsIdx);
+                dotEl.classList.toggle('active', isActive);
+                dotEl.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
 
-            const item = normalizeShortsEntry(SHORTS_LIST[index], index);
-            const videoId = extractYouTubeId(item.url);
-            const playerWrap = document.getElementById('shorts-player-wrap');
-            const fallbackBox = document.getElementById('shorts-fallback-box');
-
-            if (videoId) {
-                fallbackBox.classList.add('d-none');
-                playerWrap.classList.remove('d-none');
-                pendingShortsVideoId = videoId;
-
-                if (ytShortsPlayer && typeof ytShortsPlayer.loadVideoById === 'function') {
-                    ytShortsPlayer.loadVideoById(videoId);
-                } else if (isYtApiReady) {
-                    createYtShortsPlayer(videoId);
-                } else if (playerWrap.querySelector('iframe')) {
-                    renderFallbackIframe(videoId);
-                }
-            } else {
-                pendingShortsVideoId = '';
-                if (ytShortsPlayer && typeof ytShortsPlayer.stopVideo === 'function') {
-                    ytShortsPlayer.stopVideo();
-                }
-                playerWrap.classList.add('d-none');
-                fallbackBox.classList.remove('d-none');
-            }
+            const currentItem = activeShortsList[currentShortsIdx];
+            if (activeLabelEl) activeLabelEl.textContent = currentItem.label;
+            if (ytExternalEl) ytExternalEl.href = currentItem.url;
         }
 
-        function stepShortsTab(delta) {
-            selectShortsItem(currentShortsIdx + delta, true);
+        function selectShortsItem(index) {
+            const total = activeShortsList.length;
+            if (total === 0) return;
+            currentShortsIdx = ((index % total) + total) % total;
+            updateShortsCarousel();
+        }
+
+        function stepShortsCarousel(delta) {
+            selectShortsItem(currentShortsIdx + delta);
+        }
+
+        function initShortsShowroom() {
+            const stage = document.getElementById('shorts-carousel-stage');
+            const dotsWrap = document.getElementById('shorts-carousel-dots');
+            activeShortsList = getVisibleShortsList();
+            if (!stage || activeShortsList.length === 0) return;
+
+            stage.innerHTML = '';
+            shortsCardEls = activeShortsList.map((item, idx) => {
+                const cardEl = document.createElement('div');
+                cardEl.className = 'shorts-card is-hidden';
+                cardEl.dataset.idx = String(idx);
+                cardEl.dataset.mode = '';
+
+                const innerEl = document.createElement('div');
+                innerEl.className = 'shorts-card-inner';
+                cardEl.appendChild(innerEl);
+
+                cardEl.addEventListener('click', () => {
+                    if (idx !== currentShortsIdx) {
+                        selectShortsItem(idx);
+                    }
+                });
+                cardEl.addEventListener('keydown', (e) => {
+                    if (idx !== currentShortsIdx && (e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        selectShortsItem(idx);
+                    }
+                });
+
+                stage.appendChild(cardEl);
+                return cardEl;
+            });
+
+            if (dotsWrap) {
+                dotsWrap.innerHTML = '';
+                shortsDotEls = activeShortsList.map((item, idx) => {
+                    const dotBtn = document.createElement('button');
+                    dotBtn.type = 'button';
+                    dotBtn.className = 'shorts-dot-btn';
+                    dotBtn.setAttribute('role', 'tab');
+                    dotBtn.setAttribute('aria-label', item.label);
+                    dotBtn.addEventListener('click', () => selectShortsItem(idx));
+                    dotsWrap.appendChild(dotBtn);
+                    return dotBtn;
+                });
+            }
+
+            // Mobile Touch Swipe Support on Carousel Stage
+            stage.addEventListener('touchstart', (e) => {
+                shortsTouchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            stage.addEventListener('touchend', (e) => {
+                const deltaX = e.changedTouches[0].screenX - shortsTouchStartX;
+                if (Math.abs(deltaX) > 45) {
+                    stepShortsCarousel(deltaX < 0 ? 1 : -1);
+                }
+            }, { passive: true });
+
+            updateShortsCarousel();
         }
 
         /* 2. Simulator Tab Switcher (Clock vs Column Math) */
